@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-06-14 datetime="2022-06-14T04:02:03.000Z">2022-06-14</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-06-14 datetime="2022-06-14T04:02:03.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-06-15 datetime="2022-06-15T02:49:39.000Z">2022-06-15</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-06-15 datetime="2022-06-15T02:49:39.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -34,35 +34,1081 @@
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >上海书评</button>
-                  <a class="source-heading__link" href="http://thepaper.cn">Open</a>
+                  >Linux 中国◆开源社区</button>
+                  <a class="source-heading__link" href="https://linux.cn/">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="http://www.thepaper.cn/newsDetail_forward_18546542"
+                        data-accordion-key="https://linux.cn/article-14711-1.html?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss"
                         open
                       >
-                        <summary class="article-expander__title">普鸣《作与不作》《成神》讨论会｜早期中国的文明创造与超越性思维（下）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://www.thepaper.cn/newsDetail_forward_18546542">
+                        <summary class="article-expander__title">Cloudflare 有了一个新东西，它可以替代互联网上烦人的验证码</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://linux.cn/article-14711-1.html?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>陈少明、唐文明、陈壁生、李震、李健芸、何青翰、吴飞
- 来源：澎湃新闻
-                
-本文系2021年10月24日在三联书店中国美术馆店举办的普鸣《作与不作》《成神》讨论会的发言稿，由澎湃新闻记者丁雄飞整理，经作者审定。
+                              <span>不想通过正确输入 验证码CAPTCHA 来证明自己是个人类吗？Cloudflare 可能有了一个解决方案。
 
-全文分两部分刊发。下篇收录了中山大学哲学系教授陈少明、清华大学哲学系教授唐文明、清华大学哲学系教授陈壁生、清华大学新雅书院李震、北京大学哲学系李健芸、清华大学哲学系何青翰、北京大学哲学系教授吴飞的发言。
-《作与不作：早期中国对创新与技艺问题的论辩》，[美]普鸣著，杨起予译，唐鹤语校，生活·读书·新知三联书店，2020年1月出版，382页，49.00元
 
-《成神：早期中国的宇宙论、祭祀与自我神化》，[美]普鸣著，张常煊、李健芸译，李震校，生活·读书·新知三联书店，2020年1月出版，512页，58.00元
-陈少明：由“作”及“制”——兼谈中国的“道器”形上学
 
-我想从普鸣的书里引申出自已的一点想法。“作与不作”是很令人感兴趣的主题，它为中国思想史或哲学史提供了特别的视角。普鸣这本书的关键词是“作”，而在汉语的日常使用中，与“作”连在一起还有“制”，如“制作”，古人讲“制礼作乐”。普鸣不怎么谈“制”，我想就“制”的意义做点发挥，也可视为补充或对照。在古典文献里，一个常见的用法是“制器”。《易·系辞》几乎把中国文明史写成了圣人制器史：伏羲“作结绳而为罔罟，以佃以渔”，神农“斫木为耜，揉木为耒”，黄帝、尧、舜“垂衣裳”“刳木为舟，剡木为楫”“服牛乘马”“重门击柝”“断木为杵，掘地为白”“弦木为弧，剡木为矢”“易之以宫室”“易之以棺椁”“易之以书契”等等。《系辞》充分表达了制器在中国文化中的重要性，尽管后人对器本身以及制作的思想意义强调得并不太多。
 
-《作与不作》提到了自然与制作的关系问题，普鸣引述的先前西方学者和汉学家对这一问题的理解，在中西对…</span>
+互联网服务巨头 Cloudflare  前两天 宣布了 私有访问令牌Private Access Tokens 功能。这项功能旨在减少你在网络上看到的验证码数量，同时改善你的隐私。
+
+你可能已经发现，验证码在移动设备上是一种可怕的体验。通常，它们会最终会占据整个屏幕，有时甚至无法完成。
+
+作为替代方案，网站可以选择收集唯一识别数据，以证明你是人类。当然，从隐私的角度来看，这种做法是很糟糕的。如果这么做，许多重视隐私的公司都几乎无法避免他们受到 僵尸攻击bot attacks。
+
+幸运的是，私有访问令牌（PAT）的发布将改变这一点。
+
+私有访问令牌会产生什么影响？
+
+简而言之，私有访问令牌能够做到下面这些事：
+
+
+在支持的设备上减少验证码数量
+
+增强用户隐私
+
+允许网站所有者确保访问者来自真实设备
+
+
+然而，深入观察，我们可以看到私有访问令牌的影响力远不止于此。若使用传统的验证码，就有多个实体可以访问你的数据。
+
+首先，你正在访问的网站知道你的 IP 地址和你正在访问的 URL。当然，这些数据是建立连接所需的最低要求。此外，对于更高级的功能，网站还会发送一些用户代理（UA）数据，还好这些数据并不是唯一可识别的。
+
+然而，另一方，也就是验证码提供者，却可以收集更多的数据。与你要访问的网站一样，它也知道你的 IP 地址、用户代理数据和你访问的 URL。不幸的是，除此之外，他们还会收集其他数据，例如你的设备信息和交互数据。如果把这些信息，与你之前完成验证码的时间联系起来，你就会惊讶的发现，他们可以建立一个非常详细的属于你的个人资料。
+
+幸运的是，有了 Cloudflare 的私有访问令牌，你就可以完全绕过验证码，从而阻止验证码提供者收集此类数据。
+
+私有访问令牌是如何工作的？
+
+
+
+验证码的理念是集中尽可能多的数据，私人访问令牌则恰恰相反，它将数据去中心化，因此任何一方都无法唯一识别你。在你提到数据共享之前，Cloudflare 就已经特别指出了，数据不会在各方之间共享。
+
+当你访问使用 Cloudflare 和私人访问令牌的网站的时候，共有三方将处理你的数据的不同部分。
+
+
+网站。它只会知道你的 IP、URL 和用户代理，这也是建立连接所必需的。
+
+你的设备制造商。他们只会知道那些用于验证设备是否真实所需的设备数据，而不会知道你正在访问哪个网站，或你的 IP 地址是什么。验证了你的设备后，他们将生成一个令牌，该令牌将发送到 Cloudflare。
+
+Cloudflare。他们将收到这个令牌，令牌中不包含你的任何设备数据，只有制造商对它是正品的“保证”。他们知道的唯一其他数据，就是你正在访问的网站，同样，这是为你提供内容所必需的。
+
+
+通过这种方式，Cloudflare 无需接触你的数据，就可以对“你是一个人”充满信心。
+
+支持的操作系统：没有 Linux？
+
+你可能已经意识到，私人访问令牌需要特定的操作系统功能才能工作。目前，它们仅存在于苹果最新的操作系统上，即 iOS 和 iPadOS 16，以及 macOS Ventura。这是因为苹果的操作系统只在有限的硬件上运行，设备验证会更加容易。
+
+另一方面，Linux 是一种通用操作系统，旨在在各种硬件上运行。因此，我认为，在可预见的未来，它都不会支持私人访问令牌。
+
+回到苹果，我想到私人访问令牌也可能导致消费者维修设备的权利出现一些问题。例如，如果我用第三方的非正品电池更换了老旧的 iPhone 原装电池，私人访问令牌系统会特殊对待这种情况吗？
+
+如果是 Linux 手机呢？这些制造商，如 Pine64 和 Purism，可能没有支持这样一个系统的基础设施。是否可以在这些上使用私人访问令牌呢？
+
+Cloudflare 在 公告 中提到：
+
+
+我们正在积极努力让其他客户和设备制造商也使用私人访问令牌框架。每当新客户开始使用它时，从该客户进入你网站的流量将自动开始要求令牌，你的访问者将自动看到更少的验证码。
+
+
+因此，我们希望看到它被更多的设备和操作系统采用。你如何看待 Cloudflare 的私人访问令牌呢？在下面的评论中发表你的看法吧！
+
+
+via: https://news.itsfoss.com/cloudflare-pat/
+
+作者：Jacob Crume 选题：lkxed 译者：lkxed 校对：wxy
+
+本文由 LCTT 原创编译，Linux中国 荣誉推出</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Hacker News: Front Page</button>
+                  <a class="source-heading__link" href="https://news.ycombinator.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31748248"
+                        open
+                      >
+                        <summary class="article-expander__title">Palm OS developer releases source to classic games, 20 years after release</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.retrorgb.com/palm-os-developer-releases-source-to-classic-games-20-years-after-release.html">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdn.retrorgb.com/wp-content/uploads/2022/05/22142737/palmos_opensourced.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://www.retrorgb.com/palm-os-developer-releases-source-to-classic-games-20-years-after-release.html
+Comments URL: https://news.ycombinator.com/item?id&#x3D;31748248
+Points: 25
+# Comments: 2</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >top scoring links : linux</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/linux/top?sort&#x3D;top&amp;t&#x3D;day">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/vchujq/another_win_for_linux_way_to_make_life_easy/"
+                        open
+                      >
+                        <summary class="article-expander__title">Another win for Linux.... Way to make life easy.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/vchujq/another_win_for_linux_way_to_make_life_easy/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>So I had one of my best Linux moments last night.
+ I fucked it up. I run KUbuntu 22.04, NVidia, and an older 8th Gen Intel processor. (Not relevant, just because.)
+ So last night, I was playing with installing unbound/pihole on my desktop to use as a local nameserver. Nice idea right?
+ Didn&#x27;t work out the way i wanted it to, so I went back to my actual Pi and went to uninstall pihole and it ganked my system. Blew up the network stack, Xwindows...no idea what happened, spent a few minutes tinkering but realizing it had removed packages that I would need to go back to USB (or be able to get online) for I decided not to mess with it.
+ So I rebuilt last night. 30 minutes from boot-from-usb to &quot;it&#x27;s up and running&quot;, apt update/upgrade, remount my /home over the existing one, reboot again and boom. Everything is back. as I installed packages like Discord, Evolution, and the stuff I use for work, everything just worked, didn&#x27;t even have to re-log-into email. Thank god all my config information lives in my home directory and not in some mystical registry that is made to be obscure. (Security through obscurity I suspect)
+ (My /home directory lives on a second NVMe drive on the mainboard, so no matter what happens to my root drive, my docs/data is safe.)
+ And *THAT* is why I love Linux. 
+ Neofetch
+    submitted by    /u/AmSoDoneWithThisShit  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >少数派</button>
+                  <a class="source-heading__link" href="https://sspai.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://sspai.com/post/73806"
+                        open
+                      >
+                        <summary class="article-expander__title">派早报：新款 MacBook Pro 即将开始预订、微信上线群聊消息置顶功能等</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://sspai.com/post/73806">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="article/a839f9df-eecf-a475-2448-f12fb2b2c729.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>网信办发布新修订《移动互联网应用程序信息服务管理规定》，Adobe 计划为 Photoshop 网页版推出免费服务等。查看全文</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-06-14 datetime="2022-06-14T22:23:56.000Z">2022-06-14</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-06-14 datetime="2022-06-14T22:23:56.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Hacker News: Front Page</button>
+                  <a class="source-heading__link" href="https://news.ycombinator.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31746786"
+                        open
+                      >
+                        <summary class="article-expander__title">The First High-Yield, Sub-Penny Plastic Processor</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://spectrum.ieee.org/plastic-microprocessor">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://spectrum.ieee.org/media-library/at-left-a-circle-with-repeated-texture-at-right-a-textured-square-with-sections-of-different-sizes-in-different-colors-with-the-labels-alu-pc-and-branch-logic-datapath-and-internal-data-memory.png?id&#x3D;29971002&amp;width&#x3D;1200&amp;coordinates&#x3D;0%2C4%2C0%2C5&amp;height&#x3D;600" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://spectrum.ieee.org/plastic-microprocessor
+Comments URL: https://news.ycombinator.com/item?id&#x3D;31746786
+Points: 30
+# Comments: 5</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;13
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31746017"
+                        open
+                      >
+                        <summary class="article-expander__title">Kodable (YC IK12) is hiring a full-stack engineer to help us teach kids to code</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.indeed.com/jobs?q&#x3D;Kodable&amp;vjk&#x3D;cfd80509c01480ac&amp;sc&#x3D;0fcckey%3A49fe5ce38cf6d5e8%2Cq%3A%3B">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Article URL: https://www.indeed.com/jobs?q&#x3D;Kodable&amp;vjk&#x3D;cfd80509c01480ac&amp;sc&#x3D;0fcckey%3A49fe5ce38cf6d5e8%2Cq%3A%3B
+Comments URL: https://news.ycombinator.com/item?id&#x3D;31746017
+Points: 1
+# Comments: 0</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31743367"
+                        open
+                      >
+                        <summary class="article-expander__title">FDA approves first systemic treatment for alopecia areata</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.fda.gov/news-events/press-announcements/fda-approves-first-systemic-treatment-alopecia-areata">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://www.fda.gov/themes/custom/preview/img/FDA-Social-Graphic.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://www.fda.gov/news-events/press-announcements/fda-approves-first-systemic-treatment-alopecia-areata
+Comments URL: https://news.ycombinator.com/item?id&#x3D;31743367
+Points: 92
+# Comments: 67</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31742773"
+                        open
+                      >
+                        <summary class="article-expander__title">Gaia sees strange stars in most detailed Milky Way survey to date</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.esa.int/Science_Exploration/Space_Science/Gaia/Gaia_sees_strange_stars_in_most_detailed_Milky_Way_survey_to_date">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2022/06/gaia_exploring_the_multi-dimensional_milky_way/24305477-1-eng-GB/Gaia_Exploring_the_multi-dimensional_Milky_Way_pillars.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://www.esa.int/Science_Exploration/Space_Science/Gaia/Gaia_sees_strange_stars_in_most_detailed_Milky_Way_survey_to_date
+Comments URL: https://news.ycombinator.com/item?id&#x3D;31742773
+Points: 130
+# Comments: 5</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31741018"
+                        open
+                      >
+                        <summary class="article-expander__title">Show HN: My Side Project Rocks – Share and discover side projects</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://mysideproject.rocks/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://mysideproject.rocks/banner.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://mysideproject.rocks/
+Comments URL: https://news.ycombinator.com/item?id&#x3D;31741018
+Points: 162
+# Comments: 37</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31740902"
+                        open
+                      >
+                        <summary class="article-expander__title">Grafana releases OnCall open source project</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://grafana.com/blog/2022/06/14/introducing-grafana-oncall-oss-open-source/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://grafana.com/static/assets/meta/grafana-oncall-oss-open-source-meta.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://grafana.com/blog/2022/06/14/introducing-grafana-oncall-oss-open-source/
+Comments URL: https://news.ycombinator.com/item?id&#x3D;31740902
+Points: 326
+# Comments: 111</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31740724"
+                        open
+                      >
+                        <summary class="article-expander__title">Launch HN: Mintlify (YC W22) – Maintainable documentation for software teams</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://news.ycombinator.com/item?id&#x3D;31740724">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Hi HN, we’re Hahnbee and Han from Mintlify (https://www.mintlify.com/). Mintlify lets software teams easily track and manage documentation. We’re open source and our Github is at https://github.com/mintlify/mintlify.
+We worked at software companies in all stages ranging from startups to big tech, and they all had bad documentation, if it even existed at all. We decided to work on this problem and created a VS Code extension called Doc Writer which generated in-line documentation for codebases using Codex from OpenAI. Doc Writer helped people document their code more frequently and still continues to, but there were limitations. We were highly reliant on OpenAI, people didn’t want their proprietary code to be sent into the cloud, and the AI was satisfactory 80% of the time. But after diggin…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31738975"
+                        open
+                      >
+                        <summary class="article-expander__title">Firefox rolls out Total Cookie Protection by default to all users</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://blog.mozilla.org/en/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://blog.mozilla.org/wp-content/blogs.dir/278/files/2021/05/moz_explains_supercookies_blog_header_1200x800-1200x800.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://blog.mozilla.org/en/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/
+Comments URL: https://news.ycombinator.com/item?id&#x3D;31738975
+Points: 769
+# Comments: 288</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31735939"
+                        open
+                      >
+                        <summary class="article-expander__title">Write documentation first, then build</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://reproof.app/blog/document-first-then-build">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Article URL: https://reproof.app/blog/document-first-then-build
+Comments URL: https://news.ycombinator.com/item?id&#x3D;31735939
+Points: 5
+# Comments: 0</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31734934"
+                        open
+                      >
+                        <summary class="article-expander__title">If it isn&#x27;t going to work, just shut it down</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://99d.substack.com/p/if-it-isnt-going-to-work-just-shut">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://substackcdn.com/image/fetch/w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fd25ff8e3-337f-4660-8d1f-08bafbe7eb77_700x1022.jpeg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://99d.substack.com/p/if-it-isnt-going-to-work-just-shut
+Comments URL: https://news.ycombinator.com/item?id&#x3D;31734934
+Points: 97
+# Comments: 74</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31734737"
+                        open
+                      >
+                        <summary class="article-expander__title">Direct Voxel Grid Optimization</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://sunset1995.github.io/dvgo/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://sunset1995.github.io/dvgo/web_preview.jpeg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://sunset1995.github.io/dvgo/
+Comments URL: https://news.ycombinator.com/item?id&#x3D;31734737
+Points: 64
+# Comments: 15</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31734515"
+                        open
+                      >
+                        <summary class="article-expander__title">Exchanging Old Banknotes</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.bankofengland.co.uk/banknotes/exchanging-old-banknotes">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://www.bankofengland.co.uk/-/media/boe/images/banners/banner-1.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://www.bankofengland.co.uk/banknotes/exchanging-old-banknotes
+Comments URL: https://news.ycombinator.com/item?id&#x3D;31734515
+Points: 9
+# Comments: 14</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31734159"
+                        open
+                      >
+                        <summary class="article-expander__title">Survey: iPhone owners spend more, have higher incomes than Android users</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.marketingdive.com/news/survey-iphone-owners-spend-more-have-higher-incomes-than-android-users/541008/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://www.marketingdive.com/imgproxy/O8COpa6nti3DUt1hA4V15BByEIUGQLk6AKBRQp6OEDM/g:ce/rs:fill:770:364:0/bG9jYWw6Ly8vZGl2ZWltYWdlL2lQaG9uZVhTLmpwZw.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://www.marketingdive.com/news/survey-iphone-owners-spend-more-have-higher-incomes-than-android-users/541008/
+Comments URL: https://news.ycombinator.com/item?id&#x3D;31734159
+Points: 10
+# Comments: 11</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31734057"
+                        open
+                      >
+                        <summary class="article-expander__title">Amazon calls cops, fires workers in attempts to stop unionization nationwide</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.washingtonpost.com/technology/2022/06/13/amazon-union-retaliation-allegations/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src&#x3D;https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/6UAUORWEWQI6ZDH7GOYFT5GBW4.jpg&amp;w&#x3D;1440" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://www.washingtonpost.com/technology/2022/06/13/amazon-union-retaliation-allegations/
+Comments URL: https://news.ycombinator.com/item?id&#x3D;31734057
+Points: 110
+# Comments: 39</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31733673"
+                        open
+                      >
+                        <summary class="article-expander__title">Bible Semantic Search</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://share.streamlit.io/chrislee973/bible-semantic-search/main/app.py#bible-semantic-search">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Article URL: https://share.streamlit.io/chrislee973/bible-semantic-search/main/app.py#bible-semantic-search
+Comments URL: https://news.ycombinator.com/item?id&#x3D;31733673
+Points: 50
+# Comments: 16</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31733513"
+                        open
+                      >
+                        <summary class="article-expander__title">Writing is a single-player game</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.otherlife.co/singleplayer/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://www.otherlife.co/content/images/2022/06/reader-near-old-computer.jpeg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://www.otherlife.co/singleplayer/
+Comments URL: https://news.ycombinator.com/item?id&#x3D;31733513
+Points: 45
+# Comments: 9</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31733365"
+                        open
+                      >
+                        <summary class="article-expander__title">A Tiny Grammar of Graphics</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://observablehq.com/@joshpoll/vvt-gog">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://static.observableusercontent.com/thumbnail/eff21bdbd64cda66a59cee1260c59f79f28eeccacbc2a5da0584156a25d85c3b.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://observablehq.com/@joshpoll/vvt-gog
+Comments URL: https://news.ycombinator.com/item?id&#x3D;31733365
+Points: 170
+# Comments: 23</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31733285"
+                        open
+                      >
+                        <summary class="article-expander__title">“Downthem” DDoS-for-hire boss gets 2 years in prison</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://krebsonsecurity.com/2022/06/downthem-ddos-for-hire-boss-gets-2-years-in-prison/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Article URL: https://krebsonsecurity.com/2022/06/downthem-ddos-for-hire-boss-gets-2-years-in-prison/
+Comments URL: https://news.ycombinator.com/item?id&#x3D;31733285
+Points: 61
+# Comments: 33</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >top scoring links : linux</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/linux/top?sort&#x3D;top&amp;t&#x3D;day">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/vccuw9/is_makelinuxfastagaincom_maintained/"
+                        open
+                      >
+                        <summary class="article-expander__title">Is make-linux-fast-again.com maintained?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/vccuw9/is_makelinuxfastagaincom_maintained/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>With the reveal of yet another sidechannel CPU attack (https://www.hertzbleed.com/) I&#x27;m guessing that the Linux kernel developers will soon be adding some kind of mitigating code, along with a kernel command line flag that disables the mitigation.
+ On my personal laptop, I add $(curl https://make-linux-fast-again.com) into my /etc/sysconfig/grub because it&#x27;s a single-tenant machine and I don&#x27;t need all these various mitigations for L1/L2 cache snooping and stuff to be enabled. OK, maybe I should leave them enabled, but I&#x27;m free to do what I want, right?
+ Anyhow, I&#x27;m curious whether make-linux-fast-again.com is actually maintained? Or was it set up as a (useful) gag years ago and then left to rot?
+    submitted by    /u/skaven81  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/vca9fo/t2_linux_now_support_latest_firefox_on_i586_cpus/"
+                        open
+                      >
+                        <summary class="article-expander__title">t2 Linux now support latest Firefox on i586 CPUs!</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/vca9fo/t2_linux_now_support_latest_firefox_on_i586_cpus/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://external-preview.redd.it/gYBBCJsOBui6sCbqXK4AIByR-Il2iHiwgbT-dmRQF8M.jpg?auto&#x3D;webp&amp;s&#x3D;44c64fc4caaf246902f579703ee931f3f539488a" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>life is too fast? you want to slow down and digital detox? Vintage or Retro hardware? t2 Linux now got you covered with support for Firefox on CPUs as low as i586 on an otherwise i486 supporting distribution: https://www.youtube.com/watch?v&#x3D;lGxg8BmV55k (they actually support 24 CPU architectures, basically everything between ARM and RISCV64 https://t2sde.org ;-)
+    submitted by    /u/0xRENE  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/vca7wm/kde_525_released/"
+                        open
+                      >
+                        <summary class="article-expander__title">KDE 5.25 released</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/vca7wm/kde_525_released/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://external-preview.redd.it/RydqMWZS2kwRwEwPrKXfOxAI4H8P7GffAZaAbKZIxEk.jpg?auto&#x3D;webp&amp;s&#x3D;d0e459e01e56d6237256adc7acacc4857f2bf91f" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>submitted by    /u/sudobee  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/vc9nk8/myuzi_v080_spotify_alternative_now_with_playlist/"
+                        open
+                      >
+                        <summary class="article-expander__title">Myuzi v0.8.0 - Spotify alternative, now with playlist sharing</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/vc9nk8/myuzi_v080_spotify_alternative_now_with_playlist/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://external-preview.redd.it/GPnAQlf_UBnEvlTr1OmjZ4mLrwPYvRaxi7l5raFy-hE.jpg?auto&#x3D;webp&amp;s&#x3D;4155dc7a381605e65404932b1d2d81842606b28e" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Myuzi is an app for streaming music from YouTube. It doesn&#x27;t require an account, has no ads and uses GTK for its interface. A Windows version is also available.
+  
+A bunch of small changes this time. The app should feel nicer to use, and the search results should be better too. Playlist sharing is now a thing. Full changelog since my last post below.
+  
+v0.7.1:
+  
+Changed some unicode characters to support more fonts
+  
+v0.7.2:
+  
+Moved playback to a separate thread for a smoother experience
+ 
+Improved search results sorting
+ 
+Restricted Flatpak filesystem access to just ~/.config/myuzi
+ 
+ v0.8.0:
+  
+Added playlist sharing
+ 
+Added helpful popup messages
+ 
+  
+Install: AUR | Flatpak
+ Source: GitLab
+ Donations: Patreon
+    submitted by    /u/zehkira  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/vc3nod/firefox_rolls_out_total_cookie_protection_by/"
+                        open
+                      >
+                        <summary class="article-expander__title">Firefox Rolls Out Total Cookie Protection By Default To All Users</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/vc3nod/firefox_rolls_out_total_cookie_protection_by/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://external-preview.redd.it/IlUZVwRbBa_iWQ9YT4JXseNNqlvsLvtobEO-7V9hHm4.jpg?auto&#x3D;webp&amp;s&#x3D;de3305beef61aee7517696f1fb4984f16ca4927b" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>submitted by    /u/ASIC_SP  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/vc2shr/plasma_525_is_out_and_it_comes_with_improved/"
+                        open
+                      >
+                        <summary class="article-expander__title">Plasma 5.25 is out and it comes with improved support for touchpads, touchscreens with 1:1 gestures; keyboard navigation; an enhanced Overview; and advanced customization features</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/vc2shr/plasma_525_is_out_and_it_comes_with_improved/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://external-preview.redd.it/7xBFtzpi49RSo9YoNLZAh6MFHgJ4z28_0fIDujuwjVI.jpg?auto&#x3D;webp&amp;s&#x3D;878e3bff9d55ba91d8bf5e16af09ce74159ae9f1" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>submitted by    /u/Bro666  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/vc2ljz/how_many_flathub_apps_reuse_other_package_formats/"
+                        open
+                      >
+                        <summary class="article-expander__title">How many Flathub apps reuse other package formats?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/vc2ljz/how_many_flathub_apps_reuse_other_package_formats/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/abdulkareemsn  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/vbzfzg/fedora_was_added_to_the_geekbench5_benchmark_from/"
+                        open
+                      >
+                        <summary class="article-expander__title">Fedora was added to the geekbench5 benchmark from the previous post due to popular demand. (On metal, Ryzen7 4700U,16GB Dual CH). All are fresh installations. Fedora did 15% lower in the Multi-Core HTML5 test dropping its total score. There is a 5% difference between the top and bottom Multi-Core.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/vbzfzg/fedora_was_added_to_the_geekbench5_benchmark_from/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://preview.redd.it/vcbxr5eiwj591.png?auto&#x3D;webp&amp;s&#x3D;9683ee5ab01aefc84c88eb1fae837280971e8009" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>submitted by    /u/imagine_universe  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/vbzfke/i_made_a_script_to_list_all_uninstalled_flatpak/"
+                        open
+                      >
+                        <summary class="article-expander__title">I made a script to list all uninstalled Flatpak directories that can safely be removed</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/vbzfke/i_made_a_script_to_list_all_uninstalled_flatpak/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://external-preview.redd.it/4-DxLM-C2Ve3tHmVL5ITI6GRtMVG8PzzdBuCKiaabfE.jpg?auto&#x3D;webp&amp;s&#x3D;079a7260ec149880c73263d64811698adb22760a" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>submitted by    /u/DeerRepresentative91  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/vbyuec/new_joborun_images_june_14th_2022_katrina_edition/"
+                        open
+                      >
+                        <summary class="article-expander__title">New Joborun Images June 14th 2022 Katrina edition</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/vbyuec/new_joborun_images_june_14th_2022_katrina_edition/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://external-preview.redd.it/F8zBn_6y4dr6eMwDQu00IB3d0Y1-60VGRmPXmmBQBpM.jpg?auto&#x3D;webp&amp;s&#x3D;8f78ed91139a90c4e27e647f14cda0b438735d73" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>submitted by    /u/joborun  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/vbvxiv/10_years_ago_today_linus_torvalds_to_nvidia_fu_you/"
+                        open
+                      >
+                        <summary class="article-expander__title">10 Years Ago Today - Linus Torvalds to Nvidia: &quot;Fu** You&quot;</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/vbvxiv/10_years_ago_today_linus_torvalds_to_nvidia_fu_you/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://external-preview.redd.it/7TGsg13Ay6f42SS5LfPbJV6k50Iq51ae_LNqOUvkV1A.png?format&#x3D;pjpg&amp;auto&#x3D;webp&amp;s&#x3D;4f923d90caa88528d4541865e1ae1b570f537eab" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>submitted by    /u/sudo-obey  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >LWN.net</button>
+                  <a class="source-heading__link" href="https://lwn.net">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/897914/"
+                        open
+                      >
+                        <summary class="article-expander__title">The &quot;Hertzbleed&quot; vulnerability</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/897914/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Today&#x27;s branded, logo-equipped vulnerability is known as Hertzbleed; it affects x86
+processors (at least) and can be exploited in some situations to extract
+cryptographic keys from a remote server.
+
+
+	Hertzbleed takes advantage of our experiments showing that, under
+	certain circumstances, the dynamic frequency scaling of modern x86
+	processors depends on the data being processed. This means that, on
+	modern processors, the same program can run at a different CPU
+	frequency (and therefore take a different wall time) when
+	computing, for example, 2022 + 23823 compared to 2022 + 24436.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/897885/"
+                        open
+                      >
+                        <summary class="article-expander__title">More stable kernel updates</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/897885/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>5.18.4,
+5.17.15,
+5.15.47,
+5.10.122,
+5.4.198,
+4.19.247,
+4.14.283, and
+4.9.318 stable updates have all been released; each
+contains another large set of important fixes.
+
+Note that 5.17.15 will be the last release in the 5.17.x stable series.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/897263/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] Zoned storage</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/897263/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Zoned storage is a 
+form of storage that offers higher capacities by making tradeoffs in the kinds
+of writes that are allowed to the device.  It was the topic of a storage and
+filesystem session led by Luis
+Chamberlain at the
+2022 Linux Storage,
+Filesystem, Memory-management and BPF Summit (LSFMM).  Over the years,
+zoned storage has been a frequent topic at LSFMM, going back to LSFMM 2013, where 
+support for
+shingled magnetic recording (SMR) devices, which were the starting point for
+zoned storage, was discussed.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/897850/"
+                        open
+                      >
+                        <summary class="article-expander__title">&quot;Total cookie protection&quot; from Firefox</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/897850/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Mozilla has announced
+the enabling of its &quot;total cookie protection&quot; feature in all versions of
+the Firefox browser.
+
+
+	Total Cookie Protection works by creating a separate “cookie jar”
+	for each website you visit. Instead of allowing trackers to link up
+	your behavior on multiple sites, they just get to see behavior on
+	individual sites. Any time a website, or third-party content
+	embedded in a website, deposits a cookie in your browser, that
+	cookie is confined to the cookie jar assigned to only that
+	website. No other websites can reach into the cookie jars that
+	don’t belong to them and find out what the other websites’ cookies
+	know about you.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/897848/"
+                        open
+                      >
+                        <summary class="article-expander__title">Plasma 5.25.0 released</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/897848/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Version 5.25.0
+of the KDE-based Plasma desktop has been released.  New features include
+support for touchpad and touchscreen gestures, an &quot;overview&quot; mode for
+navigating between windows, additional color configuration options, and more.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/897847/"
+                        open
+                      >
+                        <summary class="article-expander__title">Security updates for Tuesday</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/897847/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Security updates have been issued by Fedora (golang-github-docker-libnetwork and moby-engine), Mageia (apache, docker-containerd, kernel, kernel-linus, nats-server, and php-smarty), Slackware (php), SUSE (gimp, grub2, thunderbird, u-boot, and xen), and Ubuntu (firefox, liblouis, ncurses, and rsync).</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
@@ -84,6 +1130,101 @@
                   <a class="source-heading__link" href="https://linux.cn/">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://linux.cn/article-14710-1.html?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss"
+                        open
+                      >
+                        <summary class="article-expander__title">硬核观察 #667 亚马逊网站今晨突发宕机 2 小时</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://linux.cn/article-14710-1.html?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>亚马逊网站今晨突发宕机 2 小时
+
+从商品量、收入规模等数据来看，亚马逊可以说是世界第一大购物平台。网络服务检测网站 Downdetector 的追踪数据证实，美东时间 6 月 13 日下午 1 点到 3 点，亚马逊主站出现了宕机，长达 2 小时。讽刺的是，根据统计显示，亚马逊多年都是全球第一大云服务供应商，已经建立了自研芯片、服务器、计算、存储、网络等软硬一体的新型计算体系架构。
+
+
+消息来源：路透社
+
+
+
+老王点评：连亚马逊这样的毫无疑问的云计算第一大厂，都保不了自己的电商网站，那么我们追求的云计算它到底可靠吗？
+
+
+
+
+K-9 邮件加入 Thunderbird 邮件旗下
+
+Thunderbird 是最好的开源邮件桌面客户端，但一直没有对应的移动客户端。如果要开发一个功能完备的移动客户端可能花费很长时间。因此，Mozilla 选择将 K-9 邮件移动客户端及其维护者收入旗下。以《神秘博士》中的机器狗命名的 K-9 也是一个开源项目，它可能是安卓上功能最丰富的电子邮件应用。目前该客户端计划中的功能包括：账号设置使用 Thunderbird 账号自动配置、支持信息过滤器，在桌面和移动版本的 Thunderbird 之间进行同步等等。不过，Thunderbird 的日历、任务、馈送等非电子邮件功能不会出现在移动应用中。
+
+
+消息来源：Thunderbird
+
+
+
+老王点评：这看起来是一件好事，强强联手。不过，希望 K-9 和 Thunderbird 的融合对两者都有利，而不是互相冲突。
+
+
+
+
+PyPI 多个软件包因拼写错误包含后门
+
+PyPI 软件包 keep 的绝大部分版本都包含合法的 Python 模块 requests，该模块用于 HTTP 请求，但 keep v.1.2 包含的模块 request（没有 s）是一个恶意程序，能从 Chrome 和 Firefox 等浏览器中窃取 cookie 和个人信息，并尝试窃取浏览器保存的登录凭证。除此以外，还有一些其它的 PyPI 软件包也存在这种安全缺陷。
+
+
+消息来源：BleepingComputer
+
+
+
+老王点评：难道这些软件包的开发人员就不做测试吗？你想想，你精心搭建的软件就是建立在一些别人随手写出来的模块之上。</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://linux.cn/article-14709-1.html?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss"
+                        open
+                      >
+                        <summary class="article-expander__title">详解在 Ubuntu 中引导到救援模式或紧急模式</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://linux.cn/article-14709-1.html?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>这篇教程将介绍如何在 Ubuntu 22.04、20.04 和 18.04 LTS 版本中引导到 救援Rescue 模式或 紧急Emergency 模式。
+
+
+你可能已经知道，在 RHEL 7 、RHEL 8 、Ubuntu 16.04 LTS 及其更新的版本的 Linux 发行版中 运行等级Runlevels 已经被 系统目标Systemd target 所替代。更多关于 运行等级Runlevel 和 系统目标Systemd targets 的信息，参考 这篇指南 。
+
+
+这篇指南是针对 Ubuntu 编写的，但是，下面所给的步骤应该也适用于大多数使用 systemd 作为默认服务管理器的 Linux 发行版。
+
+在进入主题前，让我们简单的理解：什么是 救援rescue 模式 和 紧急Emergency 模式，以及这两种模式的目的是什么。
+
+什么是救援模式？
+
+在 Linux 发行版中，救援模式等效于使用 SysV 作为默认的服务器管理器的 单用户single user 模式。在救援模式中，将挂载所有的本地文件系统，将仅启动一些重要的服务。但是，不会启动一般的服务（例如，网络服务）。
+
+救援模式在不能正常引导系统的情况下是很有用的。此外，我们可以在救援模式下执行一些重要的救援操作，例如，重新设置 root 密码 。
+
+什么是紧急模式？
+
+与救援模式相比，在紧急模式中，不会启动任何的东西。不会启动服务、不会挂载挂载点、不会建立套接字、什么都不会启动。你将所拥有的只是一个 原始的 shell 。紧急模式适用于调试目的。
+
+首先，我们将看到如何在 Ubuntu 22.04 和 20.04 LTS 发行版中引导到救援模式或紧急模式。在 Ubuntu 22.04 和 20.04 LTS 中的过程是完全相同的！
+
+在 Ubuntu 22.04 / 20.04 …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -293,27 +1434,42 @@ via: https://www.opensourceforu.com/2022/06/openinfra-foundation-launches-direc
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Hacker News: Front Page</button>
-                  <a class="source-heading__link" href="https://news.ycombinator.com/">Open</a>
+                  >少数派</button>
+                  <a class="source-heading__link" href="https://sspai.com">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31734159"
+                        data-accordion-key="https://sspai.com/post/73780"
                         open
                       >
-                        <summary class="article-expander__title">Survey: iPhone owners spend more, have higher incomes than Android users</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.marketingdive.com/news/survey-iphone-owners-spend-more-have-higher-incomes-than-android-users/541008/">
+                        <summary class="article-expander__title">少数派会员第二季，来自我们对「社群共创」的执念</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://sspai.com/post/73780">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://www.marketingdive.com/imgproxy/O8COpa6nti3DUt1hA4V15BByEIUGQLk6AKBRQp6OEDM/g:ce/rs:fill:770:364:0/bG9jYWw6Ly8vZGl2ZWltYWdlL2lQaG9uZVhTLmpwZw.jpg" loading="lazy" class="media-object__media article-image" />
+                              <img src="https://cdn.sspai.com/article/703678f9-ef44-6d56-8d74-7c6185d77cec.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
-                              <span>Article URL: https://www.marketingdive.com/news/survey-iphone-owners-spend-more-have-higher-incomes-than-android-users/541008/
-Comments URL: https://news.ycombinator.com/item?id&#x3D;31734159
-Points: 10
-# Comments: 11</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
+                              <span>变身主角，让少数派的下一个十年变得更好。查看全文</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://sspai.com/post/73800"
+                        open
+                      >
+                        <summary class="article-expander__title">不读可以先收藏 12：本月不容错过的 8 篇好文章</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://sspai.com/post/73800">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdn.sspai.com/editor/u_/cak4755b34t8b9iapndg.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>本栏目的第 12 期，我们从上一周期内推荐到首页的 80 篇文章中挑选了 8 篇值得你收藏的好文。查看全文</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -324,19 +1480,16 @@ Points: 10
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31734057"
+                        data-accordion-key="https://sspai.com/post/73773"
                         open
                       >
-                        <summary class="article-expander__title">Amazon calls cops, fires workers in attempts to stop unionization nationwide</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.washingtonpost.com/technology/2022/06/13/amazon-union-retaliation-allegations/">
+                        <summary class="article-expander__title">跟着网络视频「瞎练」之前，我建议你先理解健身动作</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://sspai.com/post/73773">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src&#x3D;https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/6UAUORWEWQI6ZDH7GOYFT5GBW4.jpg&amp;w&#x3D;1440" loading="lazy" class="media-object__media article-image" />
+                              <img src="https://cdn.sspai.com/2022/06/13/27b9146df44fb1ba2b78160944a57501.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
-                              <span>Article URL: https://www.washingtonpost.com/technology/2022/06/13/amazon-union-retaliation-allegations/
-Comments URL: https://news.ycombinator.com/item?id&#x3D;31734057
-Points: 110
-# Comments: 39</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
+                              <span>从一个常见的问题开始从一个运动小白，到一个「证书一只手数不过来」的资深体育爱好者，我经历过许多常见问题。这些问题困扰着每一个小白，也困扰过我。其中之一是这样的：在学习一个新动作的时候「找不到感觉」。我 ...查看全文</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -347,39 +1500,16 @@ Points: 110
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31733673"
+                        data-accordion-key="https://sspai.com/post/73795"
                         open
                       >
-                        <summary class="article-expander__title">Bible Semantic Search</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://share.streamlit.io/chrislee973/bible-semantic-search/main/app.py#bible-semantic-search">
+                        <summary class="article-expander__title">进一步巩固「最强」素材管理工具地位：Eagle 3.0 大更新</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://sspai.com/post/73795">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdn.sspai.com/article/46358532-628f-4c3a-0273-3176650d9181.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
-                              <span>Article URL: https://share.streamlit.io/chrislee973/bible-semantic-search/main/app.py#bible-semantic-search
-Comments URL: https://news.ycombinator.com/item?id&#x3D;31733673
-Points: 50
-# Comments: 16</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31733513"
-                        open
-                      >
-                        <summary class="article-expander__title">Writing is a single-player game</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.otherlife.co/singleplayer/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://www.otherlife.co/content/images/2022/06/reader-near-old-computer.jpeg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Article URL: https://www.otherlife.co/singleplayer/
-Comments URL: https://news.ycombinator.com/item?id&#x3D;31733513
-Points: 45
-# Comments: 9</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
+                              <span>在 3.0 版本中，Eagle 继续对其图片处理效率以及加载性能进行优化，围绕素材收集和查看的场景开发了一系列新功能。除此之外，它还为用户带来「博客」以及「资源社区」两大重要功能，让 Eagle 不再只是单纯的素材管理工具，也将通过社区给大家带来更加方便的素材探索维度。查看全文</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -390,18 +1520,36 @@ Points: 45
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31733285"
+                        data-accordion-key="https://sspai.com/post/73751"
                         open
                       >
-                        <summary class="article-expander__title">“Downthem” DDoS-for-hire boss gets 2 years in prison</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://krebsonsecurity.com/2022/06/downthem-ddos-for-hire-boss-gets-2-years-in-prison/">
+                        <summary class="article-expander__title">WWDC22 全球开发者大会期间，我们和 Tim Cook 聊了聊</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://sspai.com/post/73751">
                           <div class="article-summary-box-inner media-object">
+                              <img src="https://cdn.sspai.com/article/f18aec8d-2b3e-36ac-b5ba-f831ef89652a.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
-                              <span>Article URL: https://krebsonsecurity.com/2022/06/downthem-ddos-for-hire-boss-gets-2-years-in-prison/
-Comments URL: https://news.ycombinator.com/item?id&#x3D;31733285
-Points: 61
-# Comments: 33</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
+                              <span>中国的开发者们一直走在前沿，我认为他们还会继续壮大，我也特别期待看到开发者们开创的未来。Tim Cook 这样告诉我们。查看全文</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://sspai.com/post/73790"
+                        open
+                      >
+                        <summary class="article-expander__title">派早报：魅族科技 79.09% 股权将被收购，Google 员工称 LaMDA AI 有感知后被停职等</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://sspai.com/post/73790">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="article/171b2fec-0558-e2b8-0e3f-4723c1bb616a.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>腾讯 QQ 会员 SVIP10 已上线，Spotify 将收购 AI 语音平台 Sonantic 等。查看全文</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -422,6 +1570,26 @@ Points: 61
                   <a class="source-heading__link" href="https://github.com/guanguans/favorite-link/commits/master/README.md">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://github.com/guanguans/favorite-link/commit/071ec306f54573f7411cd40c16de947187bb1f02"
+                        open
+                      >
+                        <summary class="article-expander__title">mcuadros/ofelia: 一个 docker 作业调度程序（又名 docker 的 crontab）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://github.com/guanguans/favorite-link/commit/071ec306f54573f7411cd40c16de947187bb1f02">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://opengraph.githubassets.com/cff8ee1539c84630a4e4479746827dfb19262863569f6ecead84a14865c3ed1e/guanguans/favorite-link/commit/071ec306f54573f7411cd40c16de947187bb1f02" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>mcuadros/ofelia: 一个 docker 作业调度程序（又名 docker 的 crontab）</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -532,43 +1700,35 @@ Points: 61
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >少数派</button>
-                  <a class="source-heading__link" href="https://sspai.com">Open</a>
+                  >上海书评</button>
+                  <a class="source-heading__link" href="http://thepaper.cn">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://sspai.com/post/73751"
+                        data-accordion-key="http://www.thepaper.cn/newsDetail_forward_18546542"
                         open
                       >
-                        <summary class="article-expander__title">WWDC22 全球开发者大会期间，我们和 Tim Cook 聊了聊</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://sspai.com/post/73751">
+                        <summary class="article-expander__title">普鸣《作与不作》《成神》讨论会｜早期中国的文明创造与超越性思维（下）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://www.thepaper.cn/newsDetail_forward_18546542">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://cdn.sspai.com/article/f18aec8d-2b3e-36ac-b5ba-f831ef89652a.jpg" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
-                              <span>中国的开发者们一直走在前沿，我认为他们还会继续壮大，我也特别期待看到开发者们开创的未来。Tim Cook 这样告诉我们。查看全文</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://sspai.com/post/73790"
-                        open
-                      >
-                        <summary class="article-expander__title">派早报：魅族科技 79.09% 股权将被收购，Google 员工称 LaMDA AI 有感知后被停职等</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://sspai.com/post/73790">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="article/171b2fec-0558-e2b8-0e3f-4723c1bb616a.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>腾讯 QQ 会员 SVIP10 已上线，Spotify 将收购 AI 语音平台 Sonantic 等。查看全文</span>
+                              <span>陈少明、唐文明、陈壁生、李震、李健芸、何青翰、吴飞
+ 来源：澎湃新闻
+                
+本文系2021年10月24日在三联书店中国美术馆店举办的普鸣《作与不作》《成神》讨论会的发言稿，由澎湃新闻记者丁雄飞整理，经作者审定。
+
+全文分两部分刊发。下篇收录了中山大学哲学系教授陈少明、清华大学哲学系教授唐文明、清华大学哲学系教授陈壁生、清华大学新雅书院李震、北京大学哲学系李健芸、清华大学哲学系何青翰、北京大学哲学系教授吴飞的发言。
+《作与不作：早期中国对创新与技艺问题的论辩》，[美]普鸣著，杨起予译，唐鹤语校，生活·读书·新知三联书店，2020年1月出版，382页，49.00元
+
+《成神：早期中国的宇宙论、祭祀与自我神化》，[美]普鸣著，张常煊、李健芸译，李震校，生活·读书·新知三联书店，2020年1月出版，512页，58.00元
+陈少明：由“作”及“制”——兼谈中国的“道器”形上学
+
+我想从普鸣的书里引申出自已的一点想法。“作与不作”是很令人感兴趣的主题，它为中国思想史或哲学史提供了特别的视角。普鸣这本书的关键词是“作”，而在汉语的日常使用中，与“作”连在一起还有“制”，如“制作”，古人讲“制礼作乐”。普鸣不怎么谈“制”，我想就“制”的意义做点发挥，也可视为补充或对照。在古典文献里，一个常见的用法是“制器”。《易·系辞》几乎把中国文明史写成了圣人制器史：伏羲“作结绳而为罔罟，以佃以渔”，神农“斫木为耜，揉木为耒”，黄帝、尧、舜“垂衣裳”“刳木为舟，剡木为楫”“服牛乘马”“重门击柝”“断木为杵，掘地为白”“弦木为弧，剡木为矢”“易之以宫室”“易之以棺椁”“易之以书契”等等。《系辞》充分表达了制器在中国文化中的重要性，尽管后人对器本身以及制作的思想意义强调得并不太多。
+
+《作与不作》提到了自然与制作的关系问题，普鸣引述的先前西方学者和汉学家对这一问题的理解，在中西对…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
@@ -949,6 +2109,26 @@ Points: 196
 # Comments: 103</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;4
                                   min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;31724224"
+                        open
+                      >
+                        <summary class="article-expander__title">Quake on the Game Boy Advance [video]</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.youtube.com/watch?v&#x3D;R43k-p9XdIk">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Article URL: https://www.youtube.com/watch?v&#x3D;R43k-p9XdIk
+Comments URL: https://news.ycombinator.com/item?id&#x3D;31724224
+Points: 205
+# Comments: 65</span>
                             </span>
                           </div>
                         </a>
@@ -17902,57 +19082,10 @@ Gajim 上一个稳定版本发布已经为 20201 年 10 月份的 1.3.3，而阔
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-05-16 datetime="2022-05-16T12:04:15.000Z">2022-05-16</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-05-16 datetime="2022-05-16T12:04:15.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >书伴</button>
-                  <a class="source-heading__link" href="https://bookfere.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://bookfere.com/?p&#x3D;43620"
-                        open
-                      >
-                        <summary class="article-expander__title">[每周一书] 如何避免气候灾难《气候经济与人类未来》</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://bookfere.com/post/976.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>本书从电力、制造业、农业、交通等碳排放主要领域分析了零排放面临的挑战，可使用的技术工具以及我们需要的技术突破，并提供了一套涵盖广泛但每一步都切实可行的行动计划。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/waytoarcher/rssfeed/actions/runs/2492731339">
-        <time id="build-timestamp" datetime="2022-06-14T04:13:21.067Z">2022-06-14T04:13:21.067Z</time>
+      <a class="footer-link" href="https://github.com/waytoarcher/rssfeed/actions/runs/2499641190">
+        <time id="build-timestamp" datetime="2022-06-15T03:51:30.894Z">2022-06-15T03:51:30.894Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.14.4</a>
     </footer>
