@@ -2,10 +2,605 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://waytoarcher.github.io/rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-06-18T03:39:25.298Z</updated>
-    <generator>osmosfeed 1.14.4</generator>
+    <updated>2022-06-19T03:51:14.239Z</updated>
+    <generator>osmosfeed 1.15.0</generator>
     <link rel="alternate" href="https://waytoarcher.github.io/rssfeed/index.html"/>
     <link rel="self" href="https://waytoarcher.github.io/rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[I installed Linux on my MacBook]]></title>
+        <id>https://www.reddit.com/r/linux/comments/vfljmz/i_installed_linux_on_my_macbook/</id>
+        <link href="https://www.reddit.com/r/linux/comments/vfljmz/i_installed_linux_on_my_macbook/"/>
+        <updated>2022-06-19T02:46:52.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/pornwasmyidea  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[重新理解「好奇心」：学习动机的自救指南]]></title>
+        <id>https://sspai.com/post/72993</id>
+        <link href="https://sspai.com/post/72993"/>
+        <updated>2022-06-19T02:08:58.000Z</updated>
+        <summary type="html"><![CDATA[我们应该保持对技术的警惕，保护好「认知好奇心」。查看全文]]></summary>
+        <author>
+            <name>猴猴说话</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Police linked to hacking campaign to frame Indian activists]]></title>
+        <id>https://news.ycombinator.com/item?id=31795420</id>
+        <link href="https://www.wired.com/story/modified-elephant-planted-evidence-hacking-police/"/>
+        <updated>2022-06-19T01:50:53.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.wired.com/story/modified-elephant-planted-evidence-hacking-police/
+Comments URL: https://news.ycombinator.com/item?id=31795420
+Points: 115
+# Comments: 16]]></summary>
+        <author>
+            <name>Tozen</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[安装 Fedora 36 后一些适合中国用户的简单设置]]></title>
+        <id>https://linux.cn/article-14728-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-14728-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2022-06-19T01:25:45.000Z</updated>
+        <summary type="html"><![CDATA[Fedora 安装之后稍作一些简单优化和配置，就可以愉快的使用了。
+
+
+
+
+Fedora 是红帽系发行版中最激进的发行版。不少朋友将使用 Fedora 的人看做是红帽的小白鼠。但是 Fedora 超快的更新速度其实也为开发者提供了不少便利。本文介绍了安装 Fedora 36 后一些简单的设置，可以使你的 Fedora 更加易用一些。
+
+1、设置软件源
+
+Fedora 默认使用 Metalink 给出推荐的镜像列表，保证用户使用的镜像仓库足够新，并且能够尽快收到安全更新，从而提供更好的安全性。所以通常情况下使用默认配置即可，无需更改配置文件。
+
+不过，由于 Metalink 需要从国外的 Fedora 项目服务器上获取元信息，所以对于校园内网、无国外访问等特殊情况，Metalink 并不适用，此时可以参照清华大学 tuna 小组介绍的 方法 来修改软件源。
+
+2、更新系统
+
+激进的发行版就要有激进的用法，因此配置好软件源后第一件事就是执行系统更新、刷新存储库列表是理所当然要做的。
+
+你可以从 GNOME 软件中心执行此操作，或者使用终端操作。
+
+对于终端，只需使用以下命令：
+
+sudo dnf update
+
+
+可能需要重新启动才能完成系统更新。
+
+3、删除旧的内核以及其他不需要的旧软件包
+
+更新系统之后多半会安装新的内核，以及会出现一些无用的依赖。重新启动系统到新的内核，确保内核运转没有问题了，就可以删除旧内核以及无用的依赖了。
+
+使用以下命令就可以自动删除无用的依赖：
+
+sudo dnf autoremove
+
+
+Fedora 内核更新快，但是每次更新内核，旧的内核不会自动删除，占用硬盘空间。以前的教程删除旧内核都是先搜索，再移除要删除的版本，输入版本号也非常麻烦。使用以下命令即可一条命令删除旧内核：
+
+sudo dnf remov…]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Rolled My Own Old School Camera DVR!]]></title>
+        <id>https://www.reddit.com/r/linux/comments/vfjtb0/rolled_my_own_old_school_camera_dvr/</id>
+        <link href="https://www.reddit.com/r/linux/comments/vfjtb0/rolled_my_own_old_school_camera_dvr/"/>
+        <updated>2022-06-19T01:05:48.000Z</updated>
+        <summary type="html"><![CDATA[I have a pretty basic analog composite video camera I'm using with one of those $15 EZ Cap USB dongles. I thought it would be a pain to set up. I was pleased to find it works out of the box on an older micro PC running Linux Mint and I can grab video and audio. So then I looked into a basic script to record 24/7. ffmpeg has that covered. That and I can run it on boot up and make another script to clean up old recordings. Simple and minimalist.
+ So then I found an LCD monitor at Goodwill from 2003 for $8. It's not widescreen, component video at most, and so-so screen response. Otherwise e-waste. I didn't think that would work either. But I managed to use an HDMI to component converter and ARandR to set a 480p screen resolution and actually make the PC work with this 19 year old monitor! Now I can switch between the PC and camera feed with the monitor from a distribution amp.
+ Linux empowers users to re-use and recycle old technology and keeps it relevant. I made this whole setup for less than $100. Some stuff was free, other parts were really cheap.
+    submitted by    /u/Titan_91  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Don't use Kubernetes yet]]></title>
+        <id>https://news.ycombinator.com/item?id=31795160</id>
+        <link href="https://matt-rickard.com/dont-use-kubernetes-yet/"/>
+        <updated>2022-06-19T00:49:39.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://matt-rickard.com/dont-use-kubernetes-yet/
+Comments URL: https://news.ycombinator.com/item?id=31795160
+Points: 28
+# Comments: 26]]></summary>
+        <author>
+            <name>rckrd</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Citybound – city building game using actor-based distributed simulation]]></title>
+        <id>https://news.ycombinator.com/item?id=31794872</id>
+        <link href="https://aeplay.org/citybound"/>
+        <updated>2022-06-18T23:55:24.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://aeplay.org/citybound
+Comments URL: https://news.ycombinator.com/item?id=31794872
+Points: 103
+# Comments: 17]]></summary>
+        <author>
+            <name>pabs3</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Rust advocacy at a medium-sized startup]]></title>
+        <id>https://news.ycombinator.com/item?id=31794617</id>
+        <link href="https://briankung.dev/2022/06/14/rust-advocacy-at-a-medium-sized-startup/"/>
+        <updated>2022-06-18T23:05:40.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://briankung.dev/2022/06/14/rust-advocacy-at-a-medium-sized-startup/
+Comments URL: https://news.ycombinator.com/item?id=31794617
+Points: 16
+# Comments: 6]]></summary>
+        <author>
+            <name>lukastyrychtr</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Show HN: Control your Hyundai car with Python]]></title>
+        <id>https://news.ycombinator.com/item?id=31794481</id>
+        <link href="https://github.com/synchronizing/bluelink"/>
+        <updated>2022-06-18T22:45:51.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://github.com/synchronizing/bluelink
+Comments URL: https://news.ycombinator.com/item?id=31794481
+Points: 20
+# Comments: 3]]></summary>
+        <author>
+            <name>synchronizing</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HP DEV ONE: is this Linux laptop a Thinkpad killer?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/vfewgd/hp_dev_one_is_this_linux_laptop_a_thinkpad_killer/</id>
+        <link href="https://www.reddit.com/r/linux/comments/vfewgd/hp_dev_one_is_this_linux_laptop_a_thinkpad_killer/"/>
+        <updated>2022-06-18T20:43:25.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/hexydes  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[V Language Review]]></title>
+        <id>https://news.ycombinator.com/item?id=31793554</id>
+        <link href="https://mawfig.github.io/2022/06/18/v-lang-in-2022.html"/>
+        <updated>2022-06-18T20:31:35.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://mawfig.github.io/2022/06/18/v-lang-in-2022.html
+Comments URL: https://news.ycombinator.com/item?id=31793554
+Points: 202
+# Comments: 89]]></summary>
+        <author>
+            <name>mawfig</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Does anyone use Oracle for their personal desktop/workstation?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/vfebms/does_anyone_use_oracle_for_their_personal/</id>
+        <link href="https://www.reddit.com/r/linux/comments/vfebms/does_anyone_use_oracle_for_their_personal/"/>
+        <updated>2022-06-18T20:14:02.000Z</updated>
+        <summary type="html"><![CDATA[TL;DR - the below is background to why I'm asking. You can just skip it; it's not important.
+ This question was prompted by a discussion I got involved in on r/FindMeADistro. Somebody coming off Windows had some interesting prejudices about support and security from corporate-backed distros vs community distros (along with a poor understanding of the difference between the two). So I tried to disabuse them of some of their misunderstandings while pointing them roughly at what they were looking for: better security out of the box, and not Gnome DE because I die inside every time a new user is put off by how different it is from the Windows paradigm.
+ Their response was, So you think I should use Oracle Linux, then?
+ My instinct was to respond, Of course not, that would be silly. And then I looked into it. It's based on RHEL, so it'll probably have a preconfigured firewall and SE Linux, just like I suggested. And according to wikipedia it offers KDE as a choice at install, which RHEL ceased doing with version 8 and needs you to dig into the website for alternative .isos for Rocky or Alma. Which makes me wonder where my own prejudice against Oracle sprung from, because on the face of it I probably was recommending it.
+ So are there Oracle home desktop users? Do you guys have an active community forum?
+    submitted by    /u/drunken-acolyte  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Breaking our Latin-1 assumptions (2017)]]></title>
+        <id>https://news.ycombinator.com/item?id=31793143</id>
+        <link href="https://manishearth.github.io/blog/2017/01/15/breaking-our-latin-1-assumptions/"/>
+        <updated>2022-06-18T19:48:25.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://manishearth.github.io/blog/2017/01/15/breaking-our-latin-1-assumptions/
+Comments URL: https://news.ycombinator.com/item?id=31793143
+Points: 59
+# Comments: 14]]></summary>
+        <author>
+            <name>sundarurfriend</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Cold Showers]]></title>
+        <id>https://news.ycombinator.com/item?id=31793030</id>
+        <link href="https://github.com/hwayne/awesome-cold-showers"/>
+        <updated>2022-06-18T19:34:33.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://github.com/hwayne/awesome-cold-showers
+Comments URL: https://news.ycombinator.com/item?id=31793030
+Points: 389
+# Comments: 219]]></summary>
+        <author>
+            <name>blopeur</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Cross-compiling binaries for Windows is easier than building natively]]></title>
+        <id>https://news.ycombinator.com/item?id=31792790</id>
+        <link href="https://gist.github.com/slimsag/c01bb6508e3dfa744bf3bdafa0cfe07f"/>
+        <updated>2022-06-18T19:09:34.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://gist.github.com/slimsag/c01bb6508e3dfa744bf3bdafa0cfe07f
+Comments URL: https://news.ycombinator.com/item?id=31792790
+Points: 243
+# Comments: 174]]></summary>
+        <author>
+            <name>slimsag</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ask HN: Why are Git submodules so bad?]]></title>
+        <id>https://news.ycombinator.com/item?id=31792303</id>
+        <link href="https://news.ycombinator.com/item?id=31792303"/>
+        <updated>2022-06-18T18:11:57.000Z</updated>
+        <summary type="html"><![CDATA[I have been a git user for a long time, but I've never used Subversion or any other VCS more than a little.
+I also hardly use Git submodules, but when I do, I don't struggle.
+Yet people talk about Git submodules as though they are really hard. I presume I'm just not using them as much as other people, or that my use case for them happens to be on their happy path.
+So why are Git submodules so bad?
+Comments URL: https://news.ycombinator.com/item?id=31792303
+Points: 154
+# Comments: 125]]></summary>
+        <author>
+            <name>ghoward</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Bolt: Faster matrix and vector operations that run on compressed data]]></title>
+        <id>https://news.ycombinator.com/item?id=31792206</id>
+        <link href="https://github.com/dblalock/bolt"/>
+        <updated>2022-06-18T18:01:44.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://github.com/dblalock/bolt
+Comments URL: https://news.ycombinator.com/item?id=31792206
+Points: 129
+# Comments: 17]]></summary>
+        <author>
+            <name>febin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Basis (YC S21) Is hiring devs to help build the Figma for Data]]></title>
+        <id>https://news.ycombinator.com/item?id=31791670</id>
+        <link href="https://www.workatastartup.com/companies/basis-2"/>
+        <updated>2022-06-18T17:01:20.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.workatastartup.com/companies/basis-2
+Comments URL: https://news.ycombinator.com/item?id=31791670
+Points: 1
+# Comments: 0]]></summary>
+        <author>
+            <name>cstanley</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DOE announces breakthrough in residential cold climate heat pump technology]]></title>
+        <id>https://news.ycombinator.com/item?id=31791444</id>
+        <link href="https://www.energy.gov/articles/doe-announces-breakthrough-residential-cold-climate-heat-pump-technology"/>
+        <updated>2022-06-18T16:39:04.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.energy.gov/articles/doe-announces-breakthrough-residential-cold-climate-heat-pump-technology
+Comments URL: https://news.ycombinator.com/item?id=31791444
+Points: 428
+# Comments: 313]]></summary>
+        <author>
+            <name>josephscott</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The dissolution of Apple’s legacy design team]]></title>
+        <id>https://news.ycombinator.com/item?id=31791214</id>
+        <link href="https://www.fastcompany.com/90741719/inside-the-dissolution-of-apples-legacy-design-team"/>
+        <updated>2022-06-18T16:16:14.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.fastcompany.com/90741719/inside-the-dissolution-of-apples-legacy-design-team
+Comments URL: https://news.ycombinator.com/item?id=31791214
+Points: 223
+# Comments: 188]]></summary>
+        <author>
+            <name>Pulcinella</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why do we all fall for AI-generated language?]]></title>
+        <id>https://news.ycombinator.com/item?id=31790698</id>
+        <link href="https://twitter.com/maurice_jks/status/1537814372462039043"/>
+        <updated>2022-06-18T15:28:54.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://twitter.com/maurice_jks/status/1537814372462039043
+Comments URL: https://news.ycombinator.com/item?id=31790698
+Points: 91
+# Comments: 69]]></summary>
+        <author>
+            <name>azhenley</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Notkia: Building An Open And Linux-Powered Numpad Phone]]></title>
+        <id>https://www.reddit.com/r/linux/comments/vf7x79/notkia_building_an_open_and_linuxpowered_numpad/</id>
+        <link href="https://www.reddit.com/r/linux/comments/vf7x79/notkia_building_an_open_and_linuxpowered_numpad/"/>
+        <updated>2022-06-18T14:55:54.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/CRImier  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Magnetar, nature’s ultimate superweapon]]></title>
+        <id>https://news.ycombinator.com/item?id=31789999</id>
+        <link href="https://arstechnica.com/science/2022/06/behold-the-magnetar-natures-ultimate-superweapon/"/>
+        <updated>2022-06-18T14:14:53.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://arstechnica.com/science/2022/06/behold-the-magnetar-natures-ultimate-superweapon/
+Comments URL: https://news.ycombinator.com/item?id=31789999
+Points: 123
+# Comments: 38]]></summary>
+        <author>
+            <name>hexo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Construction is life]]></title>
+        <id>https://news.ycombinator.com/item?id=31789809</id>
+        <link href="https://kk.org/thetechnium/construction-is-life/"/>
+        <updated>2022-06-18T13:50:42.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://kk.org/thetechnium/construction-is-life/
+Comments URL: https://news.ycombinator.com/item?id=31789809
+Points: 249
+# Comments: 132]]></summary>
+        <author>
+            <name>galfarragem</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Show HN: Nimwave – build TUIs for the terminal, web, and desktop]]></title>
+        <id>https://news.ycombinator.com/item?id=31789489</id>
+        <link href="https://github.com/ansiwave/nimwave"/>
+        <updated>2022-06-18T13:06:37.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://github.com/ansiwave/nimwave
+Comments URL: https://news.ycombinator.com/item?id=31789489
+Points: 162
+# Comments: 12]]></summary>
+        <author>
+            <name>sekao</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Mitochondria and the origin of eukaryotes]]></title>
+        <id>https://news.ycombinator.com/item?id=31789045</id>
+        <link href="https://knowablemagazine.org/article/living-world/2022/mitochondria-origin-eukaryotes"/>
+        <updated>2022-06-18T11:51:09.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://knowablemagazine.org/article/living-world/2022/mitochondria-origin-eukaryotes
+Comments URL: https://news.ycombinator.com/item?id=31789045
+Points: 162
+# Comments: 67]]></summary>
+        <author>
+            <name>Tomte</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[硬核观察 #671 TikTok 已将美国用户数据转移到甲骨文]]></title>
+        <id>https://linux.cn/article-14727-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-14727-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2022-06-18T10:25:27.000Z</updated>
+        <summary type="html"><![CDATA[TikTok 已将美国用户数据转移到甲骨文
+
+TikTok 表示，将 TikTok 的所有美国用户数据存储在美国的甲骨文数据服务器上。此前，TikTok 一直将其美国用户数据存储在位于弗吉尼亚州的数据中心，并在新加坡进行备份。字节跳动希望以此来解决美国海外投资委员会对数据安全的担忧。此外，TikTok 还成立了一个有数百人的美国数据安全管理团队，作为美国用户信息的看门人，并将其与字节跳动隔离开来。甚至 TikTok 正在讨论让该团队将自主运作，不受 TikTok 的控制或监督。
+
+
+消息来源：路透社
+
+
+
+老王点评：好吧，好好去毒害他们吧。
+
+
+
+
+思科称不会修复终止支持的 VPN 路由器的零日漏洞
+
+该漏洞的 CVSS 严重性评级为 9.8（满分 10.0），影响到了四款 VPN 路由器。思科表示，他们不会发布安全更新来解决该问题，因为这些设备已不再支持，建议这些“报废”的路由器升级到较新的型号。用户除了关闭广域网接口上的远程管理外，没有其他可用的缓解措施。
+
+
+消息来源：Bleeping Computer
+
+
+
+老王点评：一句报废就丢下了所有责任，这就是商业产品。
+
+
+
+
+GNOME 项目得到了微软 FOSS 基金的 10000 美元资助
+
+微软每月都会让员工提名其所依赖的第三方开源社区项目，每轮提名 5-20 个左右的开源项目，这些项目需要采用 OSI 批准的开源许可证。投票决出者便可拿到 10000 美元的奖励，通常每月拨付 1000 美元，并持续 10 个月的时间。systemd、curl、QEMU 等也得到该捐助。捐助并不附带任何条件。
+
+
+消息来源：微软
+
+
+
+老王点评：虽然对于 GNOME 这种大型项目来说聊胜于无，但是好歹是无条件赞助的。国外的很多 IT 公司都有类似项目。
+
+
+回音
+
+
+前两天 IE 落幕 时，一幅 IE 墓碑的相片风传全网。该墓碑是 真实存在 的，出自 38 岁的韩国软件工程师郑其永，该墓碑放置于韩国庆州一家由其兄弟经营的咖啡馆屋顶上。]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Fedora KDE is a disaster on NVIDIA hardware]]></title>
+        <id>https://www.reddit.com/r/linux/comments/vf2vbh/fedora_kde_is_a_disaster_on_nvidia_hardware/</id>
+        <link href="https://www.reddit.com/r/linux/comments/vf2vbh/fedora_kde_is_a_disaster_on_nvidia_hardware/"/>
+        <updated>2022-06-18T09:51:17.000Z</updated>
+        <summary type="html"><![CDATA[I tried to install Fedora KDE on my desktop PC with an Nvidia GTX 1080 card. The desktop froze before it even got to the installer. Apparently, this is a known issue with Wayland on Nouveau drivers. Clearly, the maintainers of Fedora KDE have never bothered to test their distribution on Nvidia hardware. Either default to X11 when an Nvidia card is detected, or allow the user to boot with proprietary drivers like Manjaro does. It is honestly embarrassing that such a showstopping bug went into a major distribution and desktop environment.
+    submitted by    /u/Alex_Strgzr  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What if the De-facto FLOSS license was standard BSD with one extra clause?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/vf2g03/what_if_the_defacto_floss_license_was_standard/</id>
+        <link href="https://www.reddit.com/r/linux/comments/vf2g03/what_if_the_defacto_floss_license_was_standard/"/>
+        <updated>2022-06-18T09:19:19.000Z</updated>
+        <summary type="html"><![CDATA[If the software doesn't follow the definition of "The Four Essential Freedoms of Free Software", The software should contain this visible disclaimer: Warning: The distributor of this software is hiding changes and you should think to yourself "What do they have got to hide? Why should I trust secret changes?".
+ Example of visibility: for end user applications, a start up dialog box that could have a checkbox for the end user to disable after seeing. If a command line program, using the "--help" command switch. If it's in a library, have it be in the EULA.
+ Ok, I guess that would make it two clauses.
+    submitted by    /u/Commodore256  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[用 tmate 分享你的 Linux 终端]]></title>
+        <id>https://linux.cn/article-14726-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-14726-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2022-06-18T09:08:21.000Z</updated>
+        <summary type="html"><![CDATA[tmate 扩展了你分享 Linux 终端会话的方式。
+
+
+
+
+作为 Fedora Linux QA 团队的一员，我有时想将自己执行的一堆命令广而告之给其他开发者。如果你曾经使用过像 tmux 或 GNU Screen 这样的 终端复用器，你可能会认为这是一个挺轻松的任务。不是所有看我的示范的人都是从笔记本电脑或台式机连接到我的终端会话的，有些人可能是随手在他们的手机浏览器中打开的，因为我使用了 tmate，所以他们可以很容易地做到这一点。
+
+使用 tmate 分享 Linux 终端
+
+观看别人在 Linux 终端的工作是非常有教育意义的。你可以学到新的命令、新的工作流程，或者新的调试和自动化的方法。但要抓住你所看到的东西，以便你以后可以自己尝试，这可能很困难。你可能会借助截图或一个共享终端会话的屏幕记录，这样你就可以在以后打出每个命令。剩下的唯一选择是由演示命令的人使用 Asciinema 或 script 和 scriptreplay 等工具来记录会话。
+
+但是通过 tmate，用户可以在只读模式下或通过 SSH 分享终端。SSH 和只读会话都可以通过终端或以 HTML 网页的形式访问。
+
+当我为 Fedora QA 团队培训人员时，我使用只读模式，因为我需要运行命令并显示输出，但有了 tmate，人们可以通过从他们的浏览器复制和粘贴到文本编辑器来记录笔记。
+
+Linux tmate 上手
+
+在 Linux 上，你可以用你的包管理器安装 tmate。例如，在 Fedora 上：
+
+$ sudo dnf install tmate
+
+
+在 Debian 和类似的发行版上：
+
+$ sudo apt install tmate
+
+
+在 macOS 上，你可以用 Homebrew 或 MacPorts 安装它。如果你需要其他 Linux 发行版的说明，请参考 安装 指南。
+
+
+
+安装后，启动 tmate：
+
+$ tmate
+
+
+当 tmate 启动时，会生成链接，通过 HTTP 和 SSH 提供对终端会话的访问。每个协议都有一个只读方式，以及一个反向的 SSH 会话。
+
+下面是一个网络会话的样子：
+
+
+
+tmate 的网络控制台是 HTML5 的，因此，用户可以复制整个屏幕并粘贴到终端来运行相同的命令。
+
+保持会话
+
+你可能想知道如果你不小心关闭了你的终端会发生什么。你也可能想知道如何与不同的控制台应用共享你的终端。毕竟，tmate 是一个多路复用器，所以它应该能够保持会话，脱离并重新连接到一个会话，等等。
+
+当然，这正是 tmate 所能做到的。如果你曾经使用过 tmux，这可能是相当熟悉的。
+
+$ tmate -F -n web new-session vi console
+
+
+这个命令在 vi 中打开了 new-session，-F 选项确保会话在关闭时也能重新产生。
+
+
+
+社交复用
+
+tmate 给你带来了 tmux 或 GNU Screen 的自由度，以及与他人分享会话的能力。这是一个有价值的工具，可以教其他用户如何使用终端、演示一个新命令的功能，或调试意外的行为。它是开源的，所以请试一试！
+
+
+via: https://opensource.com/article/22/6/share-linux-terminal-tmate
+
+作者：Sumantro Mukherjee 选题：lkxed 译者：geekpi 校对：turbokernel
+
+本文由 LCTT 原创编译，Linux中国 荣誉推出]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Fedora 36 KDE Spin for a digital painting workstation: reasons and post-install guide]]></title>
+        <id>https://www.reddit.com/r/linux/comments/vf1o6s/fedora_36_kde_spin_for_a_digital_painting/</id>
+        <link href="https://www.reddit.com/r/linux/comments/vf1o6s/fedora_36_kde_spin_for_a_digital_painting/"/>
+        <updated>2022-06-18T08:21:57.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/jlpcsl  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[企业为何使用开源软件，又为何推动开源软件的发展]]></title>
+        <id>https://linux.cn/article-14725-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-14725-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2022-06-18T08:07:24.000Z</updated>
+        <summary type="html"><![CDATA[每当人们知道我在 Linux 基金会Linux Foundation 工作，他们总是会问我们的工作具体是做什么的。有时候，他们会一直问我是不是开发 Linux 操作系统的。我只能回答说，我们做的是开源软件，并试图在他们失去兴趣之前，在短短的 20 秒钟内介绍它对世界的影响力。如果他们的兴趣还在，想要进一步了解，我就会给他们深入分析一番：企业为何想参与到开源软件项目之中？它们为何会使用开源软件？没错，企业确实会这样做，无论它们有没有意识到这一点。此外，成千上万的企业会将企业内部代码捐给开源项目，为推动开源软件的进一步开发和优化投入大量的时间和资源。
+
+开源软件的使用范围有多广
+
+引用我们最近发表的一项报告《企业开源指南A Guide to Enterprise Open Source》：“开源软件open source software（OSS）改变了世界，是数字经济的支柱，数字世界的基石。从我们日常使用的互联网和移动应用到开拓未来的操作系统和编程语言，开源软件无不发挥着重要的作用，可谓是科技行业的命脉。在今天，开源软件驱动数字经济发展，推进科学技术取得突破，不断改善人们的生活水平。手机、汽车和飞机等设备，家庭、企业和政府等群体都在使用着开源软件。但就在 20 年前，开源软件还仅仅为少数人所知，它的使用也仅限于一小部分专门的爱好者。”
+
+开源软件（OSS）已经改变了我们的世界，成为我们数字经济的支柱和数字世界的基础。
+
+而它实际上：
+
+
+在各行业的 垂类软件栈vertical software stacks 中，开源软件的占比达到了 20% - 85%。
+
+超过 90% 的网站服务器和联网设备都依靠 Linux 来运行。
+
+安卓手机系统也是基于 Linux 内核。
+
+用于应用程序开发的 AMP、Appium、Dojo、jQuery、Marko、Node.js…]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WWDC22 Swift 学生挑战赛落幕，中国学生们表现亮眼]]></title>
+        <id>https://sspai.com/post/73872</id>
+        <link href="https://sspai.com/post/73872"/>
+        <updated>2022-06-18T07:48:05.000Z</updated>
+        <summary type="html"><![CDATA[WWDC22 全球开发者大会期间，少数派也有机会与此次国内的几位 Swift 学生挑战赛获奖同学聊了聊，听他们讲了讲自己的参赛经历、获奖体会。查看全文]]></summary>
+        <author>
+            <name>waychane</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[This week in KDE: non-blurry XWayland apps!]]></title>
+        <id>https://www.reddit.com/r/linux/comments/vf015h/this_week_in_kde_nonblurry_xwayland_apps/</id>
+        <link href="https://www.reddit.com/r/linux/comments/vf015h/this_week_in_kde_nonblurry_xwayland_apps/"/>
+        <updated>2022-06-18T06:24:14.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/FHEK789  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[This Week in GNOME: #48 Adaptive Calendar]]></title>
+        <id>https://www.reddit.com/r/linux/comments/vey66z/this_week_in_gnome_48_adaptive_calendar/</id>
+        <link href="https://www.reddit.com/r/linux/comments/vey66z/this_week_in_gnome_48_adaptive_calendar/"/>
+        <updated>2022-06-18T04:20:49.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/OnionStore  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[李瑞赟评《动员的力量》｜五四运动何以在上海引发轰动？]]></title>
         <id>http://www.thepaper.cn/newsDetail_forward_18538494</id>
@@ -25,6 +620,16 @@
 在“前言”中，作者主要交代了“东南集团”这一概念的界定及相关思想资源（即陈寅恪的“社…]]></summary>
         <author>
             <name>上海书评</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[从游戏种类入手，挑选你的第一款游戏鼠标]]></title>
+        <id>https://sspai.com/post/73862</id>
+        <link href="https://sspai.com/post/73862"/>
+        <updated>2022-06-18T03:00:00.000Z</updated>
+        <summary type="html"><![CDATA[618 活动的最后一天，如果你还不知道如何挑选适合自己的鼠标，不妨看看这篇文章，然后赶紧搭上 618 的末班车。查看全文]]></summary>
+        <author>
+            <name>ROB1N</name>
         </author>
     </entry>
     <entry>
@@ -359,6 +964,19 @@ Points: 34
 # Comments: 3]]></summary>
         <author>
             <name>feross</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Dato.rss: The best RSS Search experience]]></title>
+        <id>https://news.ycombinator.com/item?id=31782461</id>
+        <link href="https://github.com/davidesantangelo/dato.rss"/>
+        <updated>2022-06-17T18:36:56.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://github.com/davidesantangelo/dato.rss
+Comments URL: https://news.ycombinator.com/item?id=31782461
+Points: 32
+# Comments: 1]]></summary>
+        <author>
+            <name>thunderbong</name>
         </author>
     </entry>
     <entry>
@@ -13819,16 +14437,6 @@ ias.on('page', (event) => {
         <summary type="html"><![CDATA[作者通过讲述对经济活动中非理性行为的分析研究历程，展示了行为经济学的思想形成过程。这些关于人类“错误”行为的思考和研究，让我们对个人、商业和社会有更清晰的认识。]]></summary>
         <author>
             <name>书伴</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[科技爱好者周刊（第 207 期）：汽车行业的顶峰可能过去了]]></title>
-        <id>http://www.ruanyifeng.com/blog/2022/05/weekly-issue-207.html</id>
-        <link href="http://www.ruanyifeng.com/blog/2022/05/weekly-issue-207.html"/>
-        <updated>2022-05-20T00:25:45.000Z</updated>
-        <summary type="html"><![CDATA[这里记录每周值得分享的科技内容，周五发布。...]]></summary>
-        <author>
-            <name>阮一峰的网络日志</name>
         </author>
     </entry>
 </feed>
