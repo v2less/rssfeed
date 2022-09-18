@@ -6,6 +6,196 @@
       "siteUrl": "https://news.ycombinator.com/",
       "articles": [
         {
+          "id": "https://news.ycombinator.com/item?id=32883596",
+          "author": "whattodochange",
+          "description": "I have to find a strategy to fix this development team without managing them directly. Here is an overview:\n- this code generates more than 20 million dollars a year of revenue\n- it runs on PHP\n- it has been developed for 12 years directly on production with no source control ( hello index-new_2021-test-john_v2.php )\n- it doesn't use composer or any dependency management. It's all require_once.\n- it doesn't use any framework\n- the routing is managed exclusively as rewrites in NGInX ( the NGInX config is around 10,000 lines )\n- no code has ever been deleted. Things are just added . I gather the reason for that is because it was developed on production directly and deleting things is too risky.\n- the database structure is the same mess, no migrations, etc... When adding a column, because of the volume of data, they add a new table with a join.\n- JS and CSS is the same. Multiple versions of jQuery fighting each other depending on which page you are or even on the same page.\n- no MVC pattern of course, or whatever pattern. No templating library. It's PHP 2003 style.\n- In many places I see controllers like files making curl requests to its own rest API (via domain name, not localhost) doing oauth authorizations, etc... Just to get the menu items or list of products...\n- no caching ( but there is memcached but only used for sessions  ...)\n- team is 3 people, quite junior. One backend, one front, one iOS/android. Resistance to change is huge.\n- productivity is abysmal which is understandable. The mess is just too huge to be able to build anything.\nThis business unit has a pretty aggressive roadmap as management and HQ has no real understanding of these blockers. And post COVID, budget is really tight.\nI know a full rewrite is necessary, but how to balance it?\nComments URL: https://news.ycombinator.com/item?id=32883596\nPoints: 27\n# Comments: 34",
+          "link": "https://news.ycombinator.com/item?id=32883596",
+          "publishedOn": "2022-09-18T01:51:13.000Z",
+          "wordCount": 3978,
+          "title": "Ask HN: Inherited the worst code and tech team I have ever seen. How to fix it?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=32883471",
+          "author": "5F7bGnd6fWJ66xN",
+          "description": "Article URL: https://joylere.substack.com/p/unabridged\nComments URL: https://news.ycombinator.com/item?id=32883471\nPoints: 31\n# Comments: 4",
+          "link": "https://joylere.substack.com/p/unabridged",
+          "publishedOn": "2022-09-18T01:27:24.000Z",
+          "wordCount": 3064,
+          "title": "Everyone you meet is living a story that you know nothing about",
+          "imageUrl": "https://substackcdn.com/image/fetch/w_1200,h_600,c_limit,f_jpg,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fb5121278-1115-4572-a88b-dccbcbe7a1d7_4592x3448.jpeg"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=32882509",
+          "author": "app4soft",
+          "description": "Article URL: https://www.sundialzone.com/en/sundial\nComments URL: https://news.ycombinator.com/item?id=32882509\nPoints: 12\n# Comments: 0",
+          "link": "https://www.sundialzone.com/en/sundial",
+          "publishedOn": "2022-09-17T23:06:02.000Z",
+          "wordCount": 383,
+          "title": "How to Make a Sundial",
+          "imageUrl": "https://www.sundialzone.com/ima/south-sundial.jpg"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=32882337",
+          "author": "throwaway892238",
+          "description": "Meetup.com's webpage has been throwing 400's and 502's for two hours, and still only half their site seems responsive.\nThere is no way for me to tell Meetup that their site is down. There's no contact page, no e-mail address, no suggestion box, no chat, no nothing. I want to help them get their business online but they have made it nearly impossible. Literally the only e-mail address I have found is for their recruiting/jobs page.\nThis problem is much larger than just one website. I've seen this dozens of times on huge websites over the past two years.\nYears ago, a company I worked for was actually serving malware on their website, because a server got hacked and we had no idea. Somebody found it on a blackhat internet forum and wanted to tell us, but spent hours trying to track down a generic website contact just to let us know.\nPeople of HN: Please tell your job that their website needs a contact page, and somebody in the company who checks the emails and sends them to the right group. This isn't rocket science, y'all.\nComments URL: https://news.ycombinator.com/item?id=32882337\nPoints: 33\n# Comments: 18",
+          "link": "https://news.ycombinator.com/item?id=32882337",
+          "publishedOn": "2022-09-17T22:43:47.000Z",
+          "wordCount": 1794,
+          "title": "Tell HN: Make your company have a contact page",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=32881956",
+          "author": "cmdli",
+          "description": "Article URL: https://github.com/bulwarkid/virtual-fido\nComments URL: https://news.ycombinator.com/item?id=32881956\nPoints: 60\n# Comments: 63",
+          "link": "https://github.com/bulwarkid/virtual-fido",
+          "publishedOn": "2022-09-17T21:52:05.000Z",
+          "wordCount": 778,
+          "title": "Show HN: A virtual Yubikey device for 2FA/WebAuthN",
+          "imageUrl": "https://opengraph.githubassets.com/7b742b0596c2889a1d82055fab9ba7c22a661544f9740040ed84d8d576e345f4/bulwarkid/virtual-fido"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=32880961",
+          "author": "xenodium",
+          "description": "Article URL: https://xenodium.com/rm-important-txt-oh-sht/\nComments URL: https://news.ycombinator.com/item?id=32880961\nPoints: 43\n# Comments: 56",
+          "link": "https://xenodium.com/rm-important-txt-oh-sht/",
+          "publishedOn": "2022-09-17T19:57:11.000Z",
+          "wordCount": 1243,
+          "title": "$ rm Important.txt (uh oh)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=32880927",
+          "author": "RealStickman_",
+          "description": "Article URL: https://we.phorge.it/phame/post/view/1/going_public/\nComments URL: https://news.ycombinator.com/item?id=32880927\nPoints: 161\n# Comments: 31",
+          "link": "https://we.phorge.it/phame/post/view/1/going_public/",
+          "publishedOn": "2022-09-17T19:54:27.000Z",
+          "wordCount": 613,
+          "title": "Phorge: Going Public",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=32879848",
+          "author": "woodrush",
+          "description": "Article URL: https://woodrush.github.io/blog/lambdalisp.html\nComments URL: https://news.ycombinator.com/item?id=32879848\nPoints: 95\n# Comments: 33",
+          "link": "https://woodrush.github.io/blog/lambdalisp.html",
+          "publishedOn": "2022-09-17T18:17:57.000Z",
+          "wordCount": 11954,
+          "title": "Show HN: LambdaLisp – A Lisp interpreter that runs on lambda calculus",
+          "imageUrl": "https://woodrush.github.io/blog/assets/posts/2022-09-17/lambdalisp.png"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=32879847",
+          "author": "prismatic",
+          "description": "Article URL: https://www.atlasobscura.com/articles/beirut-explosion-glass-artifact-restoration\nComments URL: https://news.ycombinator.com/item?id=32879847\nPoints: 33\n# Comments: 11",
+          "link": "https://www.atlasobscura.com/articles/beirut-explosion-glass-artifact-restoration",
+          "publishedOn": "2022-09-17T18:17:54.000Z",
+          "wordCount": 4842,
+          "title": "Saving the Ancient Glass Artifacts Shattered in the Beirut Explosion",
+          "imageUrl": "https://img.atlasobscura.com/5q39hGagf1OgtD-oPBcUoyngT-Wa1xECTxtDJ92QIQ8/rt:fit/w:600/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL2Fzc2V0/cy8yMmEwYWNmZjdj/ZDc4ODJmMGNfSU1H/XzQ5OTkuSlBH.jpg"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=32879801",
+          "author": "yewenjie",
+          "description": "Article URL: https://explained-from-first-principles.com/number-theory/\nComments URL: https://news.ycombinator.com/item?id=32879801\nPoints: 112\n# Comments: 15",
+          "link": "https://explained-from-first-principles.com/number-theory/",
+          "publishedOn": "2022-09-17T18:12:30.000Z",
+          "wordCount": 58242,
+          "title": "Number theory explained from first principles",
+          "imageUrl": "https://explained-from-first-principles.com/pages/number-theory/generated/thumbnail.png"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=32879737",
+          "author": "malshe",
+          "description": "Article URL: https://www.wsj.com/articles/why-do-all-these-20-somethings-have-closed-captions-turned-on-11663386473\nComments URL: https://news.ycombinator.com/item?id=32879737\nPoints: 116\n# Comments: 221",
+          "link": "https://www.wsj.com/articles/why-do-all-these-20-somethings-have-closed-captions-turned-on-11663386473",
+          "publishedOn": "2022-09-17T18:06:04.000Z",
+          "wordCount": 4636,
+          "title": "Why do all these 20-somethings have closed captions turned on?",
+          "imageUrl": "https://images.wsj.net/im-617408/social"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=32879734",
+          "author": "ttesmer",
+          "description": "Article URL: https://gist.github.com/ttesmer/948df432cf46ec6db8c1e83ab59b1b21\nComments URL: https://news.ycombinator.com/item?id=32879734\nPoints: 78\n# Comments: 28",
+          "link": "https://gist.github.com/ttesmer/948df432cf46ec6db8c1e83ab59b1b21",
+          "publishedOn": "2022-09-17T18:05:47.000Z",
+          "wordCount": 802,
+          "title": "Automatic Differentiation in 38 lines of Haskell",
+          "imageUrl": "https://github.githubassets.com/images/modules/gists/gist-og-image.png"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=32879636",
+          "author": "tvrvt",
+          "description": "Article URL: https://github.com/deepmind/s6\nComments URL: https://news.ycombinator.com/item?id=32879636\nPoints: 67\n# Comments: 12",
+          "link": "https://github.com/deepmind/s6",
+          "publishedOn": "2022-09-17T17:55:36.000Z",
+          "wordCount": 5438,
+          "title": "S6: A standalone JIT compiler library for CPython",
+          "imageUrl": "https://opengraph.githubassets.com/91a42cc3e56c374e54369d5eaee01d975cef95e876e44fd32e409e37b688f3d5/deepmind/s6"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=32879551",
+          "author": "btdmaster",
+          "description": "Article URL: https://lcamtuf.coredump.cx/p0f3/\nComments URL: https://news.ycombinator.com/item?id=32879551\nPoints: 97\n# Comments: 21",
+          "link": "https://lcamtuf.coredump.cx/p0f3/",
+          "publishedOn": "2022-09-17T17:48:40.000Z",
+          "wordCount": 1043,
+          "title": "p0f: TCP Packet Fingerprinting",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=32878626",
+          "author": "valgaze",
+          "description": "Article URL: https://www.charl-e.com/\nComments URL: https://news.ycombinator.com/item?id=32878626\nPoints: 190\n# Comments: 95",
+          "link": "https://www.charl-e.com/",
+          "publishedOn": "2022-09-17T16:05:40.000Z",
+          "wordCount": 462,
+          "title": "Charl-e: “Stable Diffusion on your Mac in 1 click”",
+          "imageUrl": "https://cdn.discordapp.com/attachments/802619197934927922/1016780934864961576/painting.png"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=32878605",
+          "author": "DMell",
+          "description": "Article URL: https://acoup.blog/2022/09/16/collections-teaching-paradox-crusader-kings-iii-part-i-making-it-personal/\nComments URL: https://news.ycombinator.com/item?id=32878605\nPoints: 44\n# Comments: 15",
+          "link": "https://acoup.blog/2022/09/16/collections-teaching-paradox-crusader-kings-iii-part-i-making-it-personal/",
+          "publishedOn": "2022-09-17T16:03:44.000Z",
+          "wordCount": 19970,
+          "title": "Collections: Teaching Paradox, Crusader Kings III, Part I: Making It Personal",
+          "imageUrl": "https://i0.wp.com/acoup.blog/wp-content/uploads/2022/09/20220915233213_1.jpg?fit=1200%2C654&ssl=1"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=32878112",
+          "author": "nickt",
+          "description": "Article URL: https://github.com/mahjongg2/ZX81plus38\nComments URL: https://news.ycombinator.com/item?id=32878112\nPoints: 61\n# Comments: 23",
+          "link": "https://github.com/mahjongg2/ZX81plus38",
+          "publishedOn": "2022-09-17T15:07:20.000Z",
+          "wordCount": 2992,
+          "title": "ZX81plus38 – A ULA-less ZX81 clone",
+          "imageUrl": "https://opengraph.githubassets.com/cf24c3d7bc3c07f66bca92915e0027873e31951124f0e1c570fd534c9172498d/mahjongg2/ZX81plus38"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=32877942",
+          "author": "tomrod",
+          "description": "Article URL: https://hbr.org/2016/03/how-to-disagree-with-someone-more-powerful-than-you\nComments URL: https://news.ycombinator.com/item?id=32877942\nPoints: 101\n# Comments: 95",
+          "link": "https://hbr.org/2016/03/how-to-disagree-with-someone-more-powerful-than-you",
+          "publishedOn": "2022-09-17T14:47:33.000Z",
+          "wordCount": 3802,
+          "title": "How to disagree with someone more powerful than you (2016)",
+          "imageUrl": "https://hbr.org/resources/images/article_assets/2016/03/mar16-17-139554614.jpg"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=32877814",
+          "author": "pjmlp",
+          "description": "Article URL: https://github.com/hsutter/cppfront\nComments URL: https://news.ycombinator.com/item?id=32877814\nPoints: 412\n# Comments: 340",
+          "link": "https://github.com/hsutter/cppfront",
+          "publishedOn": "2022-09-17T14:31:36.000Z",
+          "wordCount": 5466,
+          "title": "Cppfront, Herb Sutter's proposal for a new C++ syntax",
+          "imageUrl": "https://opengraph.githubassets.com/1b4edd5e45dceab1a52c1cc735c685f7aee28457dbd845b23a31f32d4546d567/hsutter/cppfront"
+        },
+        {
           "id": "https://news.ycombinator.com/item?id=32873563",
           "author": "for_i_in_range",
           "description": "Article URL: https://scottscheper.com/letter/40/\nComments URL: https://news.ycombinator.com/item?id=32873563\nPoints: 7\n# Comments: 3",
@@ -5664,196 +5854,6 @@
           "wordCount": 47,
           "title": "Show HN: SineRider - A game about love, math, and graphing built by teenagers",
           "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=32515928",
-          "author": "zdw",
-          "description": "Article URL: https://dataswamp.org/~solene/2022-08-18-why-openbsd-documentation-is-good.html\nComments URL: https://news.ycombinator.com/item?id=32515928\nPoints: 58\n# Comments: 20",
-          "link": "https://dataswamp.org/~solene/2022-08-18-why-openbsd-documentation-is-good.html",
-          "publishedOn": "2022-08-18T23:10:42.000Z",
-          "wordCount": 1171,
-          "title": "Why is the OpenBSD documentation so good?",
-          "imageUrl": "static/img/clyagLogo.png"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=32515546",
-          "author": "snvzz",
-          "description": "Article URL: https://managarm.org/2022/08/14/aug-update.html\nComments URL: https://news.ycombinator.com/item?id=32515546\nPoints: 14\n# Comments: 2",
-          "link": "https://managarm.org/2022/08/14/aug-update.html",
-          "publishedOn": "2022-08-18T22:20:02.000Z",
-          "wordCount": 1805,
-          "title": "Managarm: August 2022 Update",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=32515511",
-          "author": "ckcheng",
-          "description": "Article URL: https://www.science.org/content/article/simple-mix-soap-and-solvent-could-help-destroy-forever-chemicals\nComments URL: https://news.ycombinator.com/item?id=32515511\nPoints: 89\n# Comments: 122",
-          "link": "https://www.science.org/content/article/simple-mix-soap-and-solvent-could-help-destroy-forever-chemicals",
-          "publishedOn": "2022-08-18T22:13:51.000Z",
-          "wordCount": 2278,
-          "title": "Simple mix of soap and solvent could help destroy ‘forever chemicals’",
-          "imageUrl": "https://www.science.org/do/10.1126/science.ade4818/abs/_20220818_on_pfas_firefighting_foam.jpg"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=32514846",
-          "author": "mrzool",
-          "description": "Article URL: https://www.damninteresting.com/to-hell-with-facebook/\nComments URL: https://news.ycombinator.com/item?id=32514846\nPoints: 194\n# Comments: 118",
-          "link": "https://www.damninteresting.com/to-hell-with-facebook/",
-          "publishedOn": "2022-08-18T21:01:57.000Z",
-          "wordCount": 5175,
-          "title": "To Hell with Facebook (2021)",
-          "imageUrl": "https://damn-8791.kxcdn.com/wp-content/uploads/2021/07/001.jpg"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=32514793",
-          "author": "krausefx",
-          "description": "Article URL: https://krausefx.com/blog/announcing-inappbrowsercom-see-what-javascript-commands-get-executed-in-an-in-app-browser\nComments URL: https://news.ycombinator.com/item?id=32514793\nPoints: 409\n# Comments: 175",
-          "link": "https://krausefx.com/blog/announcing-inappbrowsercom-see-what-javascript-commands-get-executed-in-an-in-app-browser",
-          "publishedOn": "2022-08-18T20:57:57.000Z",
-          "wordCount": 4066,
-          "title": "Inappbrowser.com: TikTok browser injects code to monitor all keystrokes and taps",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=32513927",
-          "author": "nathell",
-          "description": "Article URL: https://blog.danieljanus.pl/2022/08/18/i-love-my-gpd-micro-pc/\nComments URL: https://news.ycombinator.com/item?id=32513927\nPoints: 178\n# Comments: 111",
-          "link": "https://blog.danieljanus.pl/2022/08/18/i-love-my-gpd-micro-pc/",
-          "publishedOn": "2022-08-18T19:36:47.000Z",
-          "wordCount": 735,
-          "title": "I love my GPD Micro PC",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=32513651",
-          "author": "rahimnathwani",
-          "description": "Article URL: http://alienryderflex.com/polarizer/\nComments URL: https://news.ycombinator.com/item?id=32513651\nPoints: 78\n# Comments: 42",
-          "link": "http://alienryderflex.com/polarizer/",
-          "publishedOn": "2022-08-18T19:10:13.000Z",
-          "wordCount": 985,
-          "title": "Third-polarizing-filter experiment demystified (2004)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=32513599",
-          "author": "todsacerdoti",
-          "description": "Article URL: https://www.thezdi.com/blog/2022/8/17/but-you-told-me-you-were-safe-attacking-the-mozilla-firefox-renderer-part-1\nComments URL: https://news.ycombinator.com/item?id=32513599\nPoints: 56\n# Comments: 7",
-          "link": "https://www.thezdi.com/blog/2022/8/17/but-you-told-me-you-were-safe-attacking-the-mozilla-firefox-renderer-part-1",
-          "publishedOn": "2022-08-18T19:06:38.000Z",
-          "wordCount": 1944,
-          "title": "But You Told Me You Were Safe: Attacking the Mozilla Firefox Renderer (Part 1)",
-          "imageUrl": "http://static1.squarespace.com/static/5894c269e4fcb5e65a1ed623/58a5b38cb3db2bd67b608658/62fd3fbdcea0b95fd2ab97ee/1660836702087/nature-rock-wilderness-animal-wildlife-wild-113813-pxhere.com.jpg?format=1500w"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=32513532",
-          "author": "mogery",
-          "description": "Article URL: https://gbatemp.net/threads/90spot-spotify-for-nintendo-switch-proof-of-concept.617533/\nComments URL: https://news.ycombinator.com/item?id=32513532\nPoints: 88\n# Comments: 17",
-          "link": "https://gbatemp.net/threads/90spot-spotify-for-nintendo-switch-proof-of-concept.617533/",
-          "publishedOn": "2022-08-18T19:00:00.000Z",
-          "wordCount": 2885,
-          "title": "Unofficial Spotify Client for the Nintendo Switch (PoC)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=32513240",
-          "author": "mmastrac",
-          "description": "Article URL: https://www.youtube.com/watch?v=tDacjrSCeq4\nComments URL: https://news.ycombinator.com/item?id=32513240\nPoints: 310\n# Comments: 53",
-          "link": "https://www.youtube.com/watch?v=tDacjrSCeq4",
-          "publishedOn": "2022-08-18T18:32:13.000Z",
-          "wordCount": null,
-          "title": "Shouting in the Datacenter (2008) [video]",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=32513020",
-          "author": "samlambert",
-          "description": "Article URL: https://whytheluckystiff.net/\nComments URL: https://news.ycombinator.com/item?id=32513020\nPoints: 299\n# Comments: 92",
-          "link": "https://whytheluckystiff.net/",
-          "publishedOn": "2022-08-18T18:12:31.000Z",
-          "wordCount": 804,
-          "title": "Whytheluckystiff's original domain back as an archive",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=32512715",
-          "author": "todsacerdoti",
-          "description": "Article URL: https://azdavis.net/posts/millet/\nComments URL: https://news.ycombinator.com/item?id=32512715\nPoints: 86\n# Comments: 22",
-          "link": "https://azdavis.net/posts/millet/",
-          "publishedOn": "2022-08-18T17:45:48.000Z",
-          "wordCount": 1547,
-          "title": "Millet, a Language Server for SML",
-          "imageUrl": "https://azdavis.net/img/millet/0-logo.png"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=32511577",
-          "author": "tbarn",
-          "description": "Article URL: https://planetscale.com/blog/introducing-the-planetscale-serverless-driver-for-javascript\nComments URL: https://news.ycombinator.com/item?id=32511577\nPoints: 115\n# Comments: 39",
-          "link": "https://planetscale.com/blog/introducing-the-planetscale-serverless-driver-for-javascript",
-          "publishedOn": "2022-08-18T16:13:03.000Z",
-          "wordCount": 2519,
-          "title": "The PlanetScale serverless driver for JavaScript",
-          "imageUrl": "https://cdn.sanity.io/images/f1avhira/production/414320c33b8ad1ba1c397d58ab166105b5737241-2400x1260.png?w=1200"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=32511420",
-          "author": "nickmain",
-          "description": "Article URL: https://wingolog.org/archives/2022/08/18/just-in-time-code-generation-within-webassembly\nComments URL: https://news.ycombinator.com/item?id=32511420\nPoints: 99\n# Comments: 7",
-          "link": "https://wingolog.org/archives/2022/08/18/just-in-time-code-generation-within-webassembly",
-          "publishedOn": "2022-08-18T16:01:46.000Z",
-          "wordCount": 2905,
-          "title": "Just-in-time code generation within WebAssembly",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=32511086",
-          "author": "shantanu_sharma",
-          "description": "Article URL: https://krebsonsecurity.com/2022/08/paypal-phishing-scam-uses-invoices-sent-via-paypal/\nComments URL: https://news.ycombinator.com/item?id=32511086\nPoints: 224\n# Comments: 101",
-          "link": "https://krebsonsecurity.com/2022/08/paypal-phishing-scam-uses-invoices-sent-via-paypal/",
-          "publishedOn": "2022-08-18T15:35:06.000Z",
-          "wordCount": 3120,
-          "title": "PayPal phishing scam uses invoices sent via PayPal",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=32510759",
-          "author": "kocheez75",
-          "description": "Hi HN\nI've used a lot of vector maps in the past, and was always fascinated by the technology, so I decided to try and build one from scratch as a way to learn more about how it works, and also as a reason to (finally) learn WebGL.\nI've uploaded the source to GitHub https://github.com/kochis/webgl-map\nHope someone finds it useful / informative, and open to any feedback or tips as well. Cheers!\nComments URL: https://news.ycombinator.com/item?id=32510759\nPoints: 162\n# Comments: 31",
-          "link": "https://ckochis.com/building-a-vector-map-from-scratch",
-          "publishedOn": "2022-08-18T15:10:28.000Z",
-          "wordCount": 25779,
-          "title": "I built a vector map from scratch",
-          "imageUrl": "/images/world-mercator-viewport.png"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=32510581",
-          "author": "hnburnsy",
-          "description": "Article URL: https://www.federalreserve.gov/paymentsystems/fednow_faq.htm\nComments URL: https://news.ycombinator.com/item?id=32510581\nPoints: 200\n# Comments: 216",
-          "link": "https://www.federalreserve.gov/paymentsystems/fednow_faq.htm",
-          "publishedOn": "2022-08-18T14:58:43.000Z",
-          "wordCount": 5336,
-          "title": "FedNow FAQ",
-          "imageUrl": ""
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=32510405",
-          "author": "samwillis",
-          "description": "Article URL: https://supabase.com/blog/supabase-realtime-multiplayer-general-availability\nComments URL: https://news.ycombinator.com/item?id=32510405\nPoints: 317\n# Comments: 132",
-          "link": "https://supabase.com/blog/supabase-realtime-multiplayer-general-availability",
-          "publishedOn": "2022-08-18T14:45:20.000Z",
-          "wordCount": 9212,
-          "title": "Supabase – Realtime: Multiplayer Edition",
-          "imageUrl": "https://supabase.com/images/blog/lw5-realtime/thumb.jpg"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=32510262",
-          "author": "mountainplus",
-          "description": "Article URL: https://www.metal-archives.com/news/view/id/284\nComments URL: https://news.ycombinator.com/item?id=32510262\nPoints: 112\n# Comments: 54",
-          "link": "https://www.metal-archives.com/news/view/id/284",
-          "publishedOn": "2022-08-18T14:36:48.000Z",
-          "wordCount": null,
-          "title": "Metal Archives 20th Anniversary",
-          "imageUrl": null
         }
       ]
     },
@@ -5862,6 +5862,166 @@
       "feedUrl": "http://www.reddit.com/r/linux/top.rss?sort=top&t=day",
       "siteUrl": "https://www.reddit.com/r/linux/top?sort=top&t=day",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/linux/comments/xh3hc4/dart_machine_running_ubuntu_1004/",
+          "author": null,
+          "description": "submitted by    /u/Intelligent-Union-25  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/xh3hc4/dart_machine_running_ubuntu_1004/",
+          "publishedOn": "2022-09-18T01:29:51.000Z",
+          "wordCount": 27118,
+          "title": "Dart Machine running Ubuntu 10.04",
+          "imageUrl": "https://preview.redd.it/6xzrnjzqsio91.jpg?auto=webp&s=535930fd9cca3b2cd72e6e3a101acbeea5bcfa4a"
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/xh2y32/auto_contrast_added_to_the_librem_5/",
+          "author": null,
+          "description": "submitted by    /u/adila01  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/xh2y32/auto_contrast_added_to_the_librem_5/",
+          "publishedOn": "2022-09-18T01:03:39.000Z",
+          "wordCount": 30831,
+          "title": "Auto Contrast added to the Librem 5",
+          "imageUrl": "https://external-preview.redd.it/fDaB-f3_Z7bP4FEUvovZFxQ6LpIWLvBKE_L-fM767cc.jpg?auto=webp&s=410429eeaf56254efde887f6fa2e21261b8ac3c5"
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/xgwvfd/this_week_in_open_source_rust_in_linux_kernel_61/",
+          "author": null,
+          "description": "submitted by    /u/antsaregay  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/xgwvfd/this_week_in_open_source_rust_in_linux_kernel_61/",
+          "publishedOn": "2022-09-17T20:32:51.000Z",
+          "wordCount": 27249,
+          "title": "This week in Open Source - Rust in Linux Kernel 6.1, Fedora 37, Godot 4.0, Firefox relay phone support & more",
+          "imageUrl": "https://external-preview.redd.it/9jRc718ofA9655CB2KpLLKPILqMlo1xC-QNdlb2N3Cc.jpg?auto=webp&s=eba1535fc82ae211bdd8f3ba432924926c9da785"
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/xgvt8n/fine_tuning_stable_diffusion_images_with_cross/",
+          "author": null,
+          "description": "submitted by    /u/pwillia7  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/xgvt8n/fine_tuning_stable_diffusion_images_with_cross/",
+          "publishedOn": "2022-09-17T19:48:51.000Z",
+          "wordCount": 31347,
+          "title": "Fine Tuning Stable Diffusion Images with Cross Attention Control",
+          "imageUrl": "https://external-preview.redd.it/MMHYisnEPy_mrtIqLvCqM2NYxF2lgBHNQ-tApSkjUuQ.jpg?auto=webp&s=7cf85d5d51a7506629f9d5b6d40e4c4a9f0202e3"
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/xgvexc/new_version_of_systeroid_is_out_a_more_powerful/",
+          "author": null,
+          "description": "submitted by    /u/orhunp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/xgvexc/new_version_of_systeroid_is_out_a_more_powerful/",
+          "publishedOn": "2022-09-17T19:31:57.000Z",
+          "wordCount": 27190,
+          "title": "New version of systeroid is out! (a more powerful alternative to sysctl(8))",
+          "imageUrl": "https://preview.redd.it/92jyhz8u0ho91.gif?format=png8&s=68190c6a60e11a7ba0b309f7d133292df047f4ce"
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/xguwmi/openmandriva_rome_rolling_send_your_picture_to/",
+          "author": null,
+          "description": "submitted by    /u/DamonsLinux  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/xguwmi/openmandriva_rome_rolling_send_your_picture_to/",
+          "publishedOn": "2022-09-17T19:10:26.000Z",
+          "wordCount": 30332,
+          "title": "OpenMandriva ROME (rolling): Send your picture to backgrounds contest",
+          "imageUrl": "https://external-preview.redd.it/Nll2614uh--yrY5yyl0uuIXY3pTDT7GKvKuO5HvAnIQ.jpg?auto=webp&s=cc6de6671b06687ba8c1aeb9182fe838f9255908"
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/xgsibf/since_when_could_you_do_this_crtl_shift_e_o_space/",
+          "author": null,
+          "description": "submitted by    /u/CyberSecStudies  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/xgsibf/since_when_could_you_do_this_crtl_shift_e_o_space/",
+          "publishedOn": "2022-09-17T17:30:27.000Z",
+          "wordCount": 27627,
+          "title": "Since when could you do this? Crtl + shift + E, o, space, space… any letter works just gotta find the right code for them. Bash on rocky Linux.",
+          "imageUrl": "https://preview.redd.it/5dhi5678fgo91.jpg?auto=webp&s=457d952f6325f9a27649b6a4d8f34c27f3404a29"
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/xgoy35/floorp_browser_v1050_was_released/",
+          "author": null,
+          "description": "submitted by    /u/vleeth  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/xgoy35/floorp_browser_v1050_was_released/",
+          "publishedOn": "2022-09-17T15:08:14.000Z",
+          "wordCount": 27473,
+          "title": "Floorp Browser v.10.5.0 was released",
+          "imageUrl": "https://external-preview.redd.it/41BWDwVt2zj8hQGAvlI-pyd2vhNj1MIRqNRf-e4Tjv0.jpg?auto=webp&s=c58dd97eeef082b66b99d3fdfc2e363e2a3afcd5"
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/xgn65s/linuxs_display_brightnessbacklight_interface_is/",
+          "author": null,
+          "description": "submitted by    /u/floof_overdrive  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/xgn65s/linuxs_display_brightnessbacklight_interface_is/",
+          "publishedOn": "2022-09-17T13:55:51.000Z",
+          "wordCount": 28615,
+          "title": "Linux's Display Brightness/Backlight Interface Is Finally Being Overhauled",
+          "imageUrl": "https://external-preview.redd.it/-_oNPR8nXwcu2V9OcD9eD9vVIgVRi_rnpLR4a3kZ_Zg.jpg?auto=webp&s=1a05b15d5d595a6d0af061cafa40bbecda959a37"
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/xgmd1m/expose_local_system_accounts_via_ldap/",
+          "author": null,
+          "description": "I am currently planning to containerize some services on a home server. Some of these services shall expose the local system's user accounts (e.g., owncloud, dovecot).\n I know, I could copy the necessary files into a container upon creation or startup, but that's going to be a hassle if someone changes a password or we create a new user. So I was wondering if there's a tool that would expose an LDAP interface (read-only) and feeds its data from /etc/passwd et.al.\n I was thinking about something along the lines of https://github.com/glauth/glauth - but that tool doesn't support the exact use case, I think. Are there any alternatives?\n    submitted by    /u/choeger  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/xgmd1m/expose_local_system_accounts_via_ldap/",
+          "publishedOn": "2022-09-17T13:21:11.000Z",
+          "wordCount": 31691,
+          "title": "Expose local system accounts via LDAP",
+          "imageUrl": "https://external-preview.redd.it/bUOm5CXxb0BD7JvL3MAUFMPvda1QDESFnk5bFSiIT6U.jpg?auto=webp&s=a8fd914dc08c5228b407259df449468478d0063e"
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/xghnos/shoutout_to_timeshift_developers_i_love_your/",
+          "author": null,
+          "description": "While upgrading my system ran into disk space issues, I didn't pause to do things, but did some 3d rendering as I was in a hurry. The system partition apparently was full, basically due to the insane disk space requirements of Flatpak. At next boot nothing worked. I could get into grub, but after that I could boot into nothing, only emergency mode, but even the keyboard was not working, some kernels seemed more promising than others while booting, but ultimately nothing really did. Shit.\n At some point I gave up and decided to reinstall the system, booted a live image and thought - \"Timeshift\"? Let's try it out.\n So far I had never used it except to set it up for snapshots. In the few cases when I borked my system it usually felt like a good idea to set it up fresh anyway, so I never used Timeshift to restore :D\n Now, my system has a lot of partitions and disks and it always takes me some time to get a hang of the mountpoints again, I wasn't looking forward to that, but decided to give it a go. Well, I don't know if you have ever used Timeshift to restore a system, but imagine my surprise when Timeshift simply started, found the timeshift backup partition and suggested absolutely correctly where to put what. I was stunned - I had expected a long and thorough time of manually mapping sources and targets, but no. I double and triple checked everything, but the suggested mapping was what I wanted. I selected the last restore point and gave it a whirr. 15 minutes later I booted smoothly into my system and was done. What an experience! Timeshift restored three partitions.\n All I had to do now was solve pacman's duplicate package errors, which was a bit frustrating. Pacman should be able to solve that by itself, it should have an option. I mean, it does recognize there are duplicates, why can't it solve it??? (Option: Keep oldest / newest version or so)\n Timeshift dev team, you have a good donation coming in.\n    submitted by    /u/seehp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/xghnos/shoutout_to_timeshift_developers_i_love_your/",
+          "publishedOn": "2022-09-17T09:11:21.000Z",
+          "wordCount": 29985,
+          "title": "Shoutout to Timeshift developers: I love your application!",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/xgh52q/vcmi_a_moddable_open_source_game_engine/",
+          "author": null,
+          "description": "submitted by    /u/wiki_me  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/xgh52q/vcmi_a_moddable_open_source_game_engine/",
+          "publishedOn": "2022-09-17T08:41:05.000Z",
+          "wordCount": 29504,
+          "title": "VCMI (a moddable open source game engine recreation of Heroes of Might and Magic III) releases 1.0",
+          "imageUrl": "https://external-preview.redd.it/ZG-Ec2YNsiI-Z6vSZLEJLyTHIqKd-SwLsLfb9OF-bXM.jpg?auto=webp&s=4e766bcef1d353d7582ab37b8f6f73d1b1cf5424"
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/xggv29/has_wsl_made_windows_more_closer_to_being_more/",
+          "author": null,
+          "description": "Since Linux is UNIX-like and the Linux kernel is shipping with Windows, has it made Windows more closer to being more like Linux as an OS?\n I am curious to hear your thoughts since WSL is now being used by developers that would have previously chosen Linux. Even for DevOps and Docker, WSL has been great for that.\n Thank you to those who answer! I appreciate all the answers! :)\n    submitted by    /u/jazilzaim  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/xggv29/has_wsl_made_windows_more_closer_to_being_more/",
+          "publishedOn": "2022-09-17T08:24:05.000Z",
+          "wordCount": 28645,
+          "title": "Has WSL made Windows more closer to being more like Linux?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/xggqw6/donating_to_foss_projects_is_the_most_important/",
+          "author": null,
+          "description": "A quick reminder that donating. Even just a dollar, to your favorite FOSS projects has a huge impact. Just think of how much money you have saved using these softwares. You can also do like me and donate a small amount every month.\n    submitted by    /u/Pizza-pen  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/xggqw6/donating_to_foss_projects_is_the_most_important/",
+          "publishedOn": "2022-09-17T08:17:23.000Z",
+          "wordCount": 29330,
+          "title": "Donating to FOSS projects is the most important thing you can do!",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/xgfuqs/best_compatible_apps_extensions_and_tweaks_for/",
+          "author": null,
+          "description": "I recently installed Fedora 36 on my Lenovo Yoga 7 5800u laptop. I expected some drawbacks in Linux compatibility as I was switching from Windows 11. So the fingerprint sensor doesn't have support, when I flip my screen and select a editable field the on screen keyboard doesn't pop up either and some other neat features Windows 11 provided for a convertible were missing too. It left me thinking what can I do to improve my experience of running Linux on my convertible laptop. Hence this thread, please feel free to drop in Linux tweaks, extensions or even your favorite apps that provide good support for touch or convertible laptops.\n ​\n Warm regards to everyone.\n    submitted by    /u/StupidVetala  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/xgfuqs/best_compatible_apps_extensions_and_tweaks_for/",
+          "publishedOn": "2022-09-17T07:23:51.000Z",
+          "wordCount": 27723,
+          "title": "Best compatible apps, extensions and tweaks for Linux on convertible laptops",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/xgco5l/which_music_streaming_service_do_you_guys_use/",
+          "author": null,
+          "description": "I've used YouTube music for most of my life but recently got better audio equipment and well uh, a lot of it isn't that great\n I took the 90 day Amazon Music free trial option and I've been loving it on my phone, the quality is much better, but it seems like there's no way to get it to play HD music on Linux? Only the desktop app seems to support it so I'm stuck with SD music on Linux\n So I was wondering what music streaming services work well with Linux, if any. Would prefer a desktop app (though I don't mind if it's a third party app) and HD music. Bonus points if they have a free trial and/or a student discount and decent recommendations\n Thanks everyone!\n    submitted by    /u/Cuddlyaxe  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/xgco5l/which_music_streaming_service_do_you_guys_use/",
+          "publishedOn": "2022-09-17T04:34:33.000Z",
+          "wordCount": 32844,
+          "title": "Which music streaming service do you guys use?",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/linux/comments/xg6j58/the_perils_of_pinning_lwnnet/",
           "author": null,
@@ -9351,156 +9511,6 @@
           "wordCount": 28768,
           "title": "TIL gnome-system-monitor only supports 1024 CPUs",
           "imageUrl": "https://preview.redd.it/k7csm1m01pi91.png?auto=webp&s=ba2036af086d76839da99ddf14491b530accac5e"
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/wse5qt/gcc_122_released_over_70_bug_fixes/",
-          "author": null,
-          "description": "submitted by    /u/rhy0lite  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/wse5qt/gcc_122_released_over_70_bug_fixes/",
-          "publishedOn": "2022-08-19T13:33:29.000Z",
-          "wordCount": 27537,
-          "title": "GCC 12.2 Released. Over 70 bug fixes.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/wsd7vk/everyone_hates_chromeosso_why_not_create_a/",
-          "author": null,
-          "description": "One thing I haven't seen is a re-roll of this concept, using Firefox or ungoogled Chromium. Or even Googled Chromium or Edge. Put just enough Linux and DE underneath it to support it, use FUSE to access a cloud filesystem (you could even use rclone to support multiple different ones) you could even use a WM, make it goof proof, and put it out there as an alternative to ChromeOS FLEX. I know people dislike ChromeOS for a variety of reasons, but complaining about it doesn't help when there isn't an alternative to offer.\n    submitted by    /u/npaladin2000  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/wsd7vk/everyone_hates_chromeosso_why_not_create_a/",
-          "publishedOn": "2022-08-19T12:49:56.000Z",
-          "wordCount": 29245,
-          "title": "Everyone hates ChromeOS...so why not create a competitor?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/wsc1zp/whats_a_kernel_headers_package_anyway/",
-          "author": null,
-          "description": "submitted by    /u/speckz  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/wsc1zp/whats_a_kernel_headers_package_anyway/",
-          "publishedOn": "2022-08-19T11:53:10.000Z",
-          "wordCount": 27953,
-          "title": "What’s a kernel headers package anyway",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/wsbysq/mdns_for_linux/",
-          "author": null,
-          "description": "submitted by    /u/speckz  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/wsbysq/mdns_for_linux/",
-          "publishedOn": "2022-08-19T11:48:45.000Z",
-          "wordCount": 27053,
-          "title": "mDNS for Linux",
-          "imageUrl": "https://external-preview.redd.it/GeTQFOAepBEJ47toxGxO6f_vf2QWbx_oFV3S3atwEhI.jpg?auto=webp&s=95e6a560850959ee676b1ac457930d495ec34cbb"
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/ws2s9w/how_is_linux_more_secure_from_hackers_if_its_open/",
-          "author": null,
-          "description": "If Linux is open source software, wouldn’t that leave it vulnerable to a hacker?\n I am learning about Linux for one of my classes. I understand that Linux is more secure due to privileges, but what I don’t understand is how it can be more secure when anyone can modify the OS code for it. Can someone explain to me how this works?\n    submitted by    /u/Temporary_Peach_7023  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/ws2s9w/how_is_linux_more_secure_from_hackers_if_its_open/",
-          "publishedOn": "2022-08-19T03:02:44.000Z",
-          "wordCount": 39956,
-          "title": "How is Linux more secure from hackers if it’s open source?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/ws0rd8/the_french_speaking_linux_sub_is_back_join/",
-          "author": null,
-          "description": "This is the return of r/Linuxfr !!! \n We are back, we are open to everyone as soon as you can speak the minimum required french but you are welcome if you're still learning. \n Since the french community is obviously smaller than the international one, we've merged r/unixporn r/linuxquestions r/linuxmemes r/linux_gaming r/linuxhardware and many many more in a flair format.\n If you know some folks that may be interested tell them we're here.\n If you want to have a french localisation for your app or a wiki you should start here. \n Did you know that Lubuntu, Manjaroo and Lakka have french origins !\n    submitted by    /u/Le_Tintouin  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/ws0rd8/the_french_speaking_linux_sub_is_back_join/",
-          "publishedOn": "2022-08-19T01:28:11.000Z",
-          "wordCount": 27968,
-          "title": "The french speaking linux sub is back ! Join r/Linuxfr now !",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/wrzthk/ot_flac_is_a_really_clever_file_format_why_cant/",
-          "author": null,
-          "description": "submitted by    /u/small_kimono  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/wrzthk/ot_flac_is_a_really_clever_file_format_why_cant/",
-          "publishedOn": "2022-08-19T00:42:53.000Z",
-          "wordCount": 28033,
-          "title": "OT: FLAC is a really clever file format. Why can't everything be that clever?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/wrzqa6/heredocument_bug_fix_for_now/",
-          "author": null,
-          "description": "TL;DR: Create a symbolic link from a RAM drive to /tmp.\n  \nhere-document is a feature of the terminal which creates a file named sh-thd-*(some numbers)* in the temporary directory whenever the autocompletion feature (tab) is used on a directory (but not individual command parameters). The problem is that the feature becomes inoperable if the computer runs out of disk space, when the terminal might be necessary to move files elsewhere. Then, it spouts the error bash: cannot create temp file for here-document: No space left on device. Sometimes it does so twice for each \"↹ tab\" button press.\n So far, the only solution I could find is replacing /tmp with a symbolic link to a RAM drive directory. This is done by (1) Creating a RAM drive if one does not already have one, (2) renaming /tmp to something else like /tmp2 to move it out of the way, and (3) ln --symbolic /media/username/RAMdrive /tmp (or which ever user name and RAM drive directory name). \n Perhaps the temporary directory location can be changed on operating system level, but that would require a reboot. Sadly, there is no known solution which can only change the here-document path without having to change the entire temporary directory.\n    submitted by    /u/ThrowAway237s  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/wrzqa6/heredocument_bug_fix_for_now/",
-          "publishedOn": "2022-08-19T00:38:33.000Z",
-          "wordCount": 27575,
-          "title": "here-document bug fix (for now)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/wryzvn/i_have_a_google_cloud_debian_server_with_32gb/",
-          "author": null,
-          "description": "I got my hands on a GCP server with 32GB memory. I have no ideas what to do with this, any ideas? Not interested in a mail server or a VPN. Any other ideas are encouraged. Thanks.\n Also, if there are any cool things you'd like me to do, let me know. I'll be sure to do them.\n    submitted by    /u/atomthedeveloper  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/wryzvn/i_have_a_google_cloud_debian_server_with_32gb/",
-          "publishedOn": "2022-08-19T00:03:14.000Z",
-          "wordCount": 32474,
-          "title": "I have a Google Cloud Debian server with 32GB memory",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/wrvt4c/cpux_equivalent_to_windows_cpuz_question_what_do/",
-          "author": null,
-          "description": "The CPU-X app provides user with two benchmarks: Prime Numbers (slow) and Prime Numbers (fast). \n Ran them, they gave me result numbers. But what do they mean exactly?\n https://x0rg.github.io/CPU-X\n    submitted by    /u/algoth-niska  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/wrvt4c/cpux_equivalent_to_windows_cpuz_question_what_do/",
-          "publishedOn": "2022-08-18T21:45:39.000Z",
-          "wordCount": 27524,
-          "title": "CPU-X (equivalent to Windows' CPU-Z) question: what do the \"Prime numbers\" in benchmark test mean?",
-          "imageUrl": "https://external-preview.redd.it/OEvBJ_BDMmjzAAjJZkAIPvmridhV8x22iZs_hZjY0G8.jpg?auto=webp&s=4854b2d6231e30e3b288581595720a177210907f"
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/wrrogr/here_is_my_solution_for_quick_compression_with_gs/",
-          "author": null,
-          "description": "PDFcomp and its history\n Hello, in my spare time I started developing a script that radically simplifies the use of gs for compressing pdfs, a very useful practice for archiving or if you have to send it by mail and the maximum is 2Mb. \n The fact is that this idea came to me when I was attending the second semester of industrial electrical engineering, because the pdfs that I had to archive on my Mac were many and therefore I developed an sh script to fix it in the most elegant way possible.\n Where can the script be found?\n The script can be found on my github repo because in my mania to share source code that one also got in the way, so it's available on github\n Link: https://github.com/NF02/pdfcomp\n How can you support me?\n Well, simple you can do it in two ways: - the first is by starting to follow me on Github and sharing both my youtube channel and my project or by contributing directly to the development of the project; - The second is by making me a small symbolic donation on my ko-fi account, because with that system you will not get rich but at least they are extra income that I can invest in case of any breakdowns or if I need to hire a collaborator in a heavy period. link: https://ko-fi.com/nfvblog\n    submitted by    /u/NFVblog  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/wrrogr/here_is_my_solution_for_quick_compression_with_gs/",
-          "publishedOn": "2022-08-18T18:59:21.000Z",
-          "wordCount": 27517,
-          "title": "Here is my solution for quick compression with GS [ghostscript]",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/wrqp53/endeavouros_a_kinder_gentler_terminalcentrism/",
-          "author": null,
-          "description": "I've been thinking abhout writing this for a while, and with Manjaro having issues again, I thought maybe some of the Manjaro users might be looking for a new landing spot, and thismight help with the decision process.\n I know the first thing people think when they read \"terminal centric\" is a bunch of terminal sessions, typing commands to update, to install, to configure, not a GUI in sight. I certainly thought that, and still do to some degree. Some people find that intimidating, and some find it interesting. And while we're long past the concept of typing a memory address to excecute the code in that memory address, terminals still have the connotation of being \"hard\" for those less experienced.\n EndeavourOS proves there's a middle ground. Yes, there is a way to make the terminal, if no…",
-          "link": "https://www.reddit.com/r/linux/comments/wrqp53/endeavouros_a_kinder_gentler_terminalcentrism/",
-          "publishedOn": "2022-08-18T18:18:30.000Z",
-          "wordCount": 32199,
-          "title": "EndeavourOS: A kinder, gentler terminal-centrism",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/wrq4zh/why_remote_desktop_applications_lack_wayland/",
-          "author": null,
-          "description": "Since many distros switched to Wayland as a default display server I was expecting that at least some remote desktop software would support it, but so far I have not found fully working solution: \n  \nAnydesk does not support at all\n Nomachine “supports” it by disabling Wayland (at least in my case on Fedora 36 with Gnome)\n Teamviewer has experimental support, which requires you be in front of your computer to grant access, which renders it unusable as a remote desktop\n default Gnome Remote Desktop does not have remote login yet, which makes it unusable if you forgot to log in to gnome session. Also, it requires gnome extension, so it works properly after logging in. \n  \nIt all makes me wonder what makes it so hard to get working remote desktop in Wayland? Or is it just because of demand lack?\n    submitted by    /u/NoMore9gag  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/wrq4zh/why_remote_desktop_applications_lack_wayland/",
-          "publishedOn": "2022-08-18T17:56:12.000Z",
-          "wordCount": 28328,
-          "title": "Why remote desktop applications lack Wayland support?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/wrnx47/linux_distros_marketing_and_mainstream_social/",
-          "author": null,
-          "description": "This will probably be a controversial take, specially after seeing the reactions in the comments of the post that inspired me to start this marketing journey, but adapting to mainstream social media (in this case TikTok, Instagram, Twitter, YouTube and Facebook) is absolutely necessary if we ever hope to reach a bigger audience, and it's one of the main places almost all distros are lacking. I'm trying to help change that, and so can you.\n I'm a Fedora Linux contributor and recently became part of its marketing team, and the first project I'm taking is the Social media plan one, more specifically leading the Instagram revamping efforts, and for that I needed a lot of market research on how our competitors are handling their social media profiles. And here's the thing, while tech giants (Go…",
-          "link": "https://www.reddit.com/r/linux/comments/wrnx47/linux_distros_marketing_and_mainstream_social/",
-          "publishedOn": "2022-08-18T16:26:58.000Z",
-          "wordCount": 36705,
-          "title": "Linux distros' marketing and mainstream social media",
-          "imageUrl": "https://external-preview.redd.it/LiJiC7hWEqlBuZb9rQP12oIbgzZnr81FWRLoEUogMo0.jpg?auto=webp&s=3ff200977605ac8d8f6038168b84a27c7c458062"
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/wrn723/tcm_security_offering_linux_101_for_1_through/",
-          "author": null,
-          "description": "submitted by    /u/Intelligent-Will-255  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/wrn723/tcm_security_offering_linux_101_for_1_through/",
-          "publishedOn": "2022-08-18T15:58:20.000Z",
-          "wordCount": 27376,
-          "title": "TCM Security offering Linux 101 for $1 through August 22nd - I have no affiliation with the org, just passing along for anyone that would be interested. Coupon code: DOLLARANDADREAM",
-          "imageUrl": "https://external-preview.redd.it/qK1ZmuLtFqcD1ckjo-9O3BTicaezH7RYR4t4G0msLh8.jpg?auto=webp&s=3350414ef7ac2476ff86f0c03aa22db5da612b94"
         }
       ]
     },
@@ -9548,16 +9558,6 @@
           "wordCount": 904,
           "title": "科技爱好者周刊（第 220 期）：人工智能的机会在哪里",
           "imageUrl": null
-        },
-        {
-          "id": "http://www.ruanyifeng.com/blog/2022/08/weekly-issue-219.html",
-          "author": null,
-          "description": "这里记录每周值得分享的科技内容，周五发布。...",
-          "link": "http://www.ruanyifeng.com/blog/2022/08/weekly-issue-219.html",
-          "publishedOn": "2022-08-19T00:21:03.000Z",
-          "wordCount": 777,
-          "title": "科技爱好者周刊（第 219 期）：如何防止帐号被黑",
-          "imageUrl": null
         }
       ]
     },
@@ -9566,6 +9566,36 @@
       "feedUrl": "https://sspai.com/feed",
       "siteUrl": "https://sspai.com",
       "articles": [
+        {
+          "id": "https://sspai.com/post/75744",
+          "author": "宛潼",
+          "description": "经过多个版本的测试，watchOS9的正式版也于9月13日和AppleWatch用户正式见面。只要你的手表是AppleWatchSE、AppleWatchSeries4及更新的表款，那么就可以通过运行 ...查看全文",
+          "link": "https://sspai.com/post/75744",
+          "publishedOn": "2022-09-17T07:00:00.000Z",
+          "wordCount": 804,
+          "title": "更新 watchOS 9 正式版后，这些功能值得一试",
+          "imageUrl": "https://cdn.sspai.com/article/fba6c6fa-4b4e-3a25-db5b-d483299366b6.png"
+        },
+        {
+          "id": "https://sspai.com/post/75762",
+          "author": "两颗皮蛋",
+          "description": "4800W 的相机表现怎么样？灵动岛好不好用？AOD 都能显示什么？不管发布会讲没讲到的，我都尽可能为大家将一一解答。查看全文",
+          "link": "https://sspai.com/post/75762",
+          "publishedOn": "2022-09-17T03:35:04.000Z",
+          "wordCount": 720,
+          "title": "AOD、灵动岛、相机，这才是 Pro 的完全体？iPhone 14 Pro 首发体验",
+          "imageUrl": "https://cdn.sspai.com/article/041b93ef-1b54-5330-b768-f100dd666f15.jpg"
+        },
+        {
+          "id": "https://sspai.com/post/75448",
+          "author": "数字工具组",
+          "description": "毕业论文该如何顺利完成开题、写作和答辩环节？我们请到了有二十余年学术经验的 @玉树芝兰 开出这份避坑指南。查看全文",
+          "link": "https://sspai.com/post/75448",
+          "publishedOn": "2022-09-17T03:00:00.000Z",
+          "wordCount": 522,
+          "title": "一派·Podcast | 毕业论文避坑指南",
+          "imageUrl": "https://cdn.sspai.com/article/d9f9e5ba-aacd-baa9-2f4c-d12696bd4d3a.png"
+        },
         {
           "id": "https://sspai.com/post/75760",
           "author": "少数派编辑部",
@@ -10755,66 +10785,6 @@
           "wordCount": 834,
           "title": "重新认识拼音与发音：聊聊汉语拼音与注音符号方案的差异",
           "imageUrl": "https://cdn.sspai.com/editor/u_/cbvlo7lb34t842nbna1g"
-        },
-        {
-          "id": "https://sspai.com/prime/story/pi-weekly-005",
-          "author": "PlatyHsu",
-          "description": "在如今新工具层出不穷、令人眼花缭乱的情况下，一个产品以怎样的方式、态度和水平去设计主页、撰写文档和提供支持，本身就是一个很有效的筛选标准。\n[......]\n查看全文\n本文为会员文章，出自《单篇文章》，订阅后可阅读全文。",
-          "link": "https://sspai.com/prime/story/pi-weekly-005",
-          "publishedOn": "2022-08-19T11:58:15.000Z",
-          "wordCount": 981,
-          "title": "派周报 | 本周会员内容提要；跑题：小处不可随便",
-          "imageUrl": "https://cdn.sspai.com/article/58c71f86-fb3a-65d3-fa70-98754de85007.png"
-        },
-        {
-          "id": "https://sspai.com/post/75245",
-          "author": "少数派编辑部",
-          "description": "☕️TL;DR近期佳作推荐：[电影]壮志凌云：独行侠、[美剧]医院五日、[电影]新神榜：杨戬、[综艺]快乐再出发、[日剧]被捡到的男人、[美剧]好想做一次第三季几则精彩预告：TV动画《DoItYour ...查看全文",
-          "link": "https://sspai.com/post/75245",
-          "publishedOn": "2022-08-19T09:37:02.000Z",
-          "wordCount": 762,
-          "title": "本周看什么 | 最近值得一看的 6 部作品",
-          "imageUrl": "https://cdn.sspai.com/article/862bec9b-7557-ded7-4bca-a59e5ebf0cd6.png"
-        },
-        {
-          "id": "https://sspai.com/post/75244",
-          "author": "北鸮",
-          "description": "如果需要与台湾地区的朋友交流，比如想看懂注音梗与他们采用的缩写，或是想尝试注音输入法，了解注音符号显然有所帮助。查看全文",
-          "link": "https://sspai.com/post/75244",
-          "publishedOn": "2022-08-19T09:00:00.000Z",
-          "wordCount": 683,
-          "title": "一日一技 | 从这些记忆技巧开始，你也能学会注音输入法",
-          "imageUrl": "https://cdn.sspai.com/2022/08/19/cf83889e08eea12a174efb26574f6f24.jpg"
-        },
-        {
-          "id": "https://sspai.com/post/75219",
-          "author": "两颗皮蛋",
-          "description": "未来是不是还有更多的可能性呢，其实我是非常非常期待的。查看全文",
-          "link": "https://sspai.com/post/75219",
-          "publishedOn": "2022-08-19T08:05:05.000Z",
-          "wordCount": 681,
-          "title": "苹果与游戏开发者之间的黑盒",
-          "imageUrl": "https://cdn.sspai.com/2022/08/18/04476bcc1a89cb1d26e188ac9a17d26f.jpg"
-        },
-        {
-          "id": "https://sspai.com/post/75159",
-          "author": "朱近野",
-          "description": "Matrix首页推荐Matrix是少数派的写作社区，我们主张分享真实的产品体验，有实用价值的经验与思考。我们会不定期挑选Matrix最优质的文章，展示来自用户的最真实的体验和观点。文章代表作者个人观点 ...查看全文",
-          "link": "https://sspai.com/post/75159",
-          "publishedOn": "2022-08-19T03:22:13.000Z",
-          "wordCount": 637,
-          "title": "游牧教室的数字文具盒：主体为本，舒适第一",
-          "imageUrl": "https://cdn.sspai.com/article/ad6b7636-dcbf-062f-96e0-3a730f33eac8.jpg"
-        },
-        {
-          "id": "https://sspai.com/post/75230",
-          "author": "少数派编辑部",
-          "description": "海盗船发布 MP700 PCIe 5.0 SSD，UFS 4.0 协议正式公布等查看全文",
-          "link": "https://sspai.com/post/75230",
-          "publishedOn": "2022-08-19T01:01:54.000Z",
-          "wordCount": 871,
-          "title": "派早报：联想新品发布会、Windows 11 小部件现在可以在任务栏触发通知",
-          "imageUrl": "article/26409cde-3a68-5803-d95b-c54ba792977d.png"
         }
       ]
     },
@@ -10829,6 +10799,16 @@
       "feedUrl": "https://feeds.feedburner.com/bookfere",
       "siteUrl": "https://bookfere.com",
       "articles": [
+        {
+          "id": "https://bookfere.com/?p=46292",
+          "author": "书伴",
+          "description": "在 2022 全新入门版 Kindle 发布后不久，亚马逊上架了存储容量为 16GB 的 Kindle Paperwhite 5 设备，其它配置不变。广告版售价为 149.99 美元，无广告版售价为 169.99 美元，相比 8GB 版本分别加价 10 美元。",
+          "link": "https://bookfere.com/post/1011.html",
+          "publishedOn": "2022-09-17T05:07:32.000Z",
+          "wordCount": 554,
+          "title": "升级款 Kindle Paperwhite 5  存储容量提升至 16GB",
+          "imageUrl": null
+        },
         {
           "id": "https://bookfere.com/?p=46141",
           "author": "书伴",
@@ -10932,6 +10912,16 @@
       "feedUrl": "https://linux.cn/rss.xml",
       "siteUrl": "https://linux.cn/",
       "articles": [
+        {
+          "id": "https://linux.cn/article-15040-1.html?utm_source=rss&utm_medium=rss",
+          "author": "linux@linux.cn (linux)",
+          "description": "Facebook 在数百万台服务器上使用 Kpatch 内核实时补丁\n\r\n内核实时补丁允许内核在运行时安全地实施就地修补，而无需为了升级内核而进行冗长的开机自检（POST）和启动过程。Facebook 采用的是红帽的 Kpatch 方案，已经在其数百万台服务器上进行了部署。除了 Kpatch 方案之外，其它的内核实时补丁方案还有 SUSE 维护的 kGraft 和 Oracle 的 Ksplice 方案。Facebook 还分享了他们在应用过程中遇到的各种问题。\n\r\n\r\n消息来源：Phoronix\n\r\n\r\n\r\n老王点评：这是我听到的内核实时补丁最大规模的部署了，看起来已经可以在大规模生产环境使用了。Facebook 的经验可以学习一下。\n\r\n\r\n\n\r\n黑客使用木马版 PuTTY SSH 客户端植入后门\n\r\n安全公司报告，黑客组织在一次针对媒体公司的钓鱼攻击中使用了木马版 PuTTY SSH 客户端。PuTTY 是流行的开源 SSH 客户端。攻击者首先向目标发送邮件提供亚马逊的工作机会，后续通信中发送了包含了 IP 地址和登陆凭证以及木马版的 PuTTY 的文件。攻击者诱骗受害者打开文件运行木马版本以进行技能评估。但该版本含有恶意载荷，会部署和安装后门程序。\n\r\n\r\n消息来源：Mandiant\n\r\n\r\n\r\n老王点评：PuTTY 是一个小巧而流行的 SSH 客户端，但是一定要使用一个干净的。很多人在临时使用 SSH 时，都会去网上随便搜索一个 PuTTY 下载使用，这种往往是有木马的。\n\r\n\r\n\n\r\nLastPass 表示在驱逐前已被入侵内部系统 4 天\n\r\n今年 8 月，LastPass 被入侵，入侵者使用多因素身份验证成功通过了身份验证，从而访问了内部开发环境。但 LastPass 表示，“系统设计和控制阻止了威胁行为者访问任何客户数据或加密密码库”。这很可能是因为只有构建发布团队才能将代码从开发环境推送到产品环境，而它们是“物理分离，没有直接连接”的。\n\r\n\r\n消息来源：BleepingComputer\n\r\n\r\n\r\n老王点评：虽然入口被突破，但是内部损失有限，这说明良好的内部 IT 环境还是相当重要的。",
+          "link": "https://linux.cn/article-15040-1.html?utm_source=rss&utm_medium=rss",
+          "publishedOn": "2022-09-17T08:12:17.000Z",
+          "wordCount": 489,
+          "title": "硬核观察 #762 Facebook 在数百万台服务器上使用 Kpatch 内核实时补丁",
+          "imageUrl": null
+        },
         {
           "id": "https://linux.cn/article-15039-1.html?utm_source=rss&utm_medium=rss",
           "author": "linux@linux.cn (linux)",
@@ -11831,36 +11821,6 @@
           "wordCount": 527,
           "title": "外媒点评：deepin 23 将引入新的软件包格式和存储库",
           "imageUrl": null
-        },
-        {
-          "id": "https://linux.cn/article-14947-1.html?utm_source=rss&utm_medium=rss",
-          "author": "linux@linux.cn (linux)",
-          "description": "本教程介绍了如何实时监控 Linux 日志文件（桌面、服务器或应用）以进行诊断和故障排除。\n\r\n\r\n当你在 Linux 桌面、服务器或任何应用中遇到问题时，你首先会查看单独的日志文件。日志文件通常是文本流和来自应用的带有时间戳的消息。它可以帮助你缩小特定问题的范围，并使你能够找到问题的原因。它还可以帮助从网络获得帮助。\n\r\n一般来说，所有的日志文件都位于 /var/log。此目录包含特定应用和服务的扩展名为 .log 的日志文件，它还包含了其他含有日志的独立目录。\n\r\n\n\r\n所以，如果你想监控一堆日志文件或特定的一个，这里有一些方法可以做到。\n\r\nLinux 实时监控日志文件\n\r\n使用 tail 命令\n\r\ntail 命令是实时跟踪日志文件的最基本方式。特别是如果你在只有终端而没有 GUI 的服务器中。这很有帮助。\n\r\n基本语法如下：\n\r\ntail /path/to/log/file\r\n\n\r\n用法：\n\r\n\n\r\n可以使用开关 -f 跟踪实时更新的日志文件。例如，如果要关注 syslog，可以使用以下命令。\n\r\ntail -f /var/log/syslog\r\n\n\r\n你可以使用单个命令监控多个日志文件：\n\r\ntail -f /var/log/syslog /var/log/dmesg\r\n\n\r\n如果要监视 HTTP 或 sftp 或任何服务器，可以在此命令中使用它们各自的日志文件。\n\r\n请记住，上述命令需要管理员权限。\n\r\n使用 lnav（日志文件浏览器）\n\r\n\n\r\nlnav 是一个出色的程序，你可以用它来用彩色编码的信息以更有条理的方式监控日志文件。在 Linux 系统中，这个工具不是默认安装的。你可以用下面的命令来安装它：\n\r\nUbuntu：\n\r\nsudo apt install lnav\r\n\n\r\nFedora：\n\r\nsudo dnf install lnav\r\n\n\r\nlnav 的好处在于，如果你不想安装它，你可以下载其预编译的可执行文件并在任何地方运行它，甚至可以从 U 盘上运行。无需设置，并加载了功能。使用 lnav，你可以通过 SQL 查询日志文件，以及其他很酷的功能，你可以在其官方网站上学习。\n\r\n安装后，你可以在具有管理员权限的终端上运行 lnav，它会默认显示 /var/log 中的所有日志并开始实时监控。\n\r\n关于 systemd 的 journalctl 的一个说明\n\r\n当今所有现代 Linux 发行版都主要使用 systemd。 systemd 提供了运行 Linux 操作系统的基本框架和组件。 systemd 通过 journalctl 提供日志服务，这有助于管理来自所有 systemd 服务的日志。你还可以使用以下命令实时监控各个 systemd 服务和日志。\n\r\njournalctl -f\r\n\n\r\n以下是一些特定的 journalctl 命令，可用于多种情况。你可以将这些与上面的 -f 选项结合使用以开始实时监控。\n\r\n对于紧急系统消息，请使用：\n\r\njournalctl -p 0\r\n\n\r\n显示带有解释的错误：\n\r\njournalctl -xb -p 3\r\n\n\r\n使用时间控制过滤：\n\r\njournalctl --since \"2022-12-04 06:00:00\"\r\njournalctl --since \"2022-12-03\" --until \"2022-12-05 03:00:00\"\r\njournalctl --since yesterday\r\njournalctl --since 09:00 --until \"1 hour ago\"\r\n\n\r\n如果你想了解更多关于 journalctl 的详细信息，我已经在这写了份 指南。\n\r\n结束语\n\r\n我希望这些命令和技巧可以帮助你找到桌面或服务器中问题/错误的根本原因。有关更多详细信息，你可以随时参考手册页并使用各种选项。如果你对本文有任何意见或想法，请使用下面的评论栏告诉我。\n\r\n干杯。\n\r\n\r\nvia: https://www.debugpoint.com/monitor-log-files-real-time/\n\r\n作者：Arindam 选题：lkxed 译者：geekpi 校对：wxy\n\r\n本文由 LCTT 原创编译，Linux中国 荣誉推出",
-          "link": "https://linux.cn/article-14947-1.html?utm_source=rss&utm_medium=rss",
-          "publishedOn": "2022-08-19T11:46:00.000Z",
-          "wordCount": 570,
-          "title": "如何在 Linux 中实时监控日志文件（桌面和服务器）",
-          "imageUrl": null
-        },
-        {
-          "id": "https://linux.cn/article-14946-1.html?utm_source=rss&utm_medium=rss",
-          "author": "linux@linux.cn (linux)",
-          "description": "听别的电脑放歌会崩溃的笔记本电脑\n\r\n微软的一位工程师分享了一个 Windows XP 时代的故事：某些型号的笔记本电脑在播放珍妮·杰克逊的上世纪八十年代的热门音乐视频《节奏国度》时会崩溃。更离奇的是相邻的一台未播放音乐的笔记本电脑也崩溃了。原因是《节奏国度》中的音频与某款笔记本硬盘发生共振，会干扰其运行。该 bug 被赋予了正式的 CVE 编号 CVE-2022-38392。还好这些电脑是 2005 年上市的，基本上已经淘汰。\n\r\n\r\n消息来源：ARS Technica\n\r\n\r\n\r\n老王点评：这音乐太劲爆了，笔记本电脑脆弱的小心脏受不了。\n\r\n\r\n\n\r\n骗子利用带有微软徽标的 U 盘来诈骗\n\r\n一位安全顾问称，接到了一个印刷有微软品牌的欺诈 U 盘。该 U 盘被包装在一个 Office 2021 专业版的纸盒内。当用户将该 U 盘插入他们的电脑之后，就会弹出一条假的警告信息，告知用户他们的系统中存在病毒，并提示受害者拨打技术支持电话，这显然是骗子使用的号码。然后，骗子要求受害者安装一个远程访问程序来接管系统。\n\r\n\r\n消息来源：Sky News\n\r\n\r\n\r\n老王点评：这诈骗真是用心了，还专门弄了包装盒和印刷了徽标的 U 盘。\n\r\n\r\n\n\r\nDDoS 攻击新纪录：每秒请求超过 4600 万次\n\r\n今年 6 月，Cloudflare 报告遭遇了有史以来最大规模的 DDoS 网络攻击，峰值每秒请求高达 2600 万次。这刷新了 2021 年 8 月创下的 1720 万次和 2022 年 4 月创下的 1530 万次。不过谷歌最近披露的一个数据创造了新纪录：峰值达到了每秒 4600 万次。攻击于 6 月 1 日凌晨开始，速度为每秒 1 万次请求，但在 8 分钟后升至每秒 10 万次请求，此时 Cloud Armor 自适应保护启动。两分钟后，每秒请求数增加到 4600 万。攻击在 69 分钟内消失了，可能是因为被 Cloud Armor 挫败而没有达到预期的效果。\n\r\n\r\n消息来源：The Register\n\r\n\r\n\r\n老王点评：如果没有云服务商的 DDoS 防护服务，任谁也扛不住这种强度的攻击啊。",
-          "link": "https://linux.cn/article-14946-1.html?utm_source=rss&utm_medium=rss",
-          "publishedOn": "2022-08-19T11:33:52.000Z",
-          "wordCount": 507,
-          "title": "硬核观察 #733 听别的电脑放歌会崩溃的笔记本电脑",
-          "imageUrl": null
-        },
-        {
-          "id": "https://linux.cn/article-14945-1.html?utm_source=rss&utm_medium=rss",
-          "author": "linux@linux.cn (linux)",
-          "description": "1993 年，游戏开发公司 id Software 发行了一款第一人称射击游戏 《毁灭战士DOOM》，游戏一经发行迅速爆火。在今天看来，《毁灭战士》可谓有史以来最具影响力的游戏之一。\n\r\n《毁灭战士》发行之后的第十年（2003 年），记者 大卫·库什纳David Kushner 出版了一本关于 id Software 的书，书名为《Doom 启示录Masters of Doom》，后被奉为记录毁灭战士创作史的典范读物。几年前我曾读过这本书，如今内容已记得不太真切了，但是书中有一个关于 id Software 首席程序员 约翰·卡马克John Carmack 的故事，我印象特别深刻。这里只对故事做粗略描述（具体情节请往下阅读）。实际上，早在《毁灭战士》开发前期，卡马克就发现自己为这款游戏编写的 3D 渲染器在渲染某些关卡时慢得像爬一样。对于《毁灭战士》这一对动感和速度有着相当高要求的射击游戏来说，这是一个非常严重的问题。意识到了这一问题的严重性，卡马克需要一个更加有效的渲染算法，于是他开始阅读相关论文。最后，他实现了一种叫做“二叉空间分割binary space partitioning（BSP）”的技术，极大地提升了《毁灭战士》游戏引擎的运行速度，而这项技术此前从未用于电子游戏当中。\n\r\n一直以来，我对这个故事的印象十分深刻。卡马克将学术前沿研究运用于电子游戏之中，我觉得这正是他之所以成为传奇人物的原因。无论从哪个角度来看，卡马克都应该是电子游戏行业中人尽皆知的典型的天才程序员，只不过上面这个故事是我最先能够想到的理由。\n\r\n显而易见，“二叉空间分割”这个术语听起来就是难度相当高的课题，能够自行阅读论文并将其付诸实施实属不易，所以这个故事给我留下了深刻的印象。我一直认为卡马克的做法十分具有创见性，不过由于我既不懂二叉空间分割到底是怎样的一项技术，也不晓得这项技术在当时究竟有…",
-          "link": "https://linux.cn/article-14945-1.html?utm_source=rss&utm_medium=rss",
-          "publishedOn": "2022-08-19T08:15:49.000Z",
-          "wordCount": 981,
-          "title": "在《毁灭战士》中应用二叉空间分割（BSP）是何等天才之举？",
-          "imageUrl": null
         }
       ]
     },
@@ -11869,6 +11829,16 @@
       "feedUrl": "http://feeds.feedburner.com/williamlong",
       "siteUrl": "https://www.williamlong.info/",
       "articles": [
+        {
+          "id": "https://www.williamlong.info/archives/6925.html",
+          "author": "user@gmail.com (guest)",
+          "description": "《澳门日报》15日称，去年5月初澳门健康码连续两天遭受境外网络攻击，导致部分人无法转换粤康码，珠澳出入境大受影响，关口一度人流拥挤。9月14日，修改《维护国家安全法》最后一场业界咨询举行。保安司司长黄少泽特别谈及去年5月这起事件，他说，经调查发现这是来自欧美地区的持续性攻击，多达300多万次。特区政府认为这并非普通的网络攻击，明显是想影响澳门的整体社会运作。\n\r\n\r\n　　黄少泽称，维护国安不仅是特区的宪制责任，也是包括澳门居民在内的全中国人民的法定责任，而关键基础设施与民生息息相关，以信息系统而言，一旦遭到网络攻击，严重者可对国家造成致命打击。为此，特区政府于2019年年底出台网络安全法，依法对澳门关键基础设施的信息系统开展防范性的安全管理，通过维护澳门网络安全，助力筑牢国家总体安全屏障。司警局局长薛仲明称，澳门每天都遭到大大小小的网络攻击，去年平均每分钟约受到3.4次攻击。\n\r\n\r\n　　今年8月22日，澳门特区政府宣布就修订《维护国家安全法》，即日起至10月5日展开公众咨询。修改《维护国家安全法》咨询文本建议增订教唆或支持叛乱罪，把与叛国、分裂国家或颠覆犯罪相关的教唆或帮助行为独立成罪；增补涉及公然和直接煽动他人参与危害国家稳定的骚乱的罪状，予以惩处；加重窃取国家机密罪的处罚；并把颠覆中央人民政府罪，修订为颠覆国家政权罪；增加试图推翻等罪，涵盖其他非暴力非法手段做出的颠覆行为。\n\r\n\r\n　　来源：环球时报\n\r\n\r\n　　微评：我觉得，健康码被攻击，主要应该是IT技术人员的锅。\n\r\n\r\n　　健康码这种系统要防止网络攻击，我一个外行都能想出很简单的应对方法：根据IP地址和位置信息，澳门以外的IP和位置拒绝访问。试问这么设置之后，欧美地区的黑客还怎么进行攻击呢？\n\r\n\r\n　　健康码系统的开发，应该有好几年了，这么多年还解决不了这么基础的安全问题，这还不是技术人员的水平问题吗？",
+          "link": "https://www.williamlong.info/archives/6925.html",
+          "publishedOn": "2022-09-15T14:32:54.000Z",
+          "wordCount": 95,
+          "title": "澳门称健康码遭来自欧美地区300多万次攻击",
+          "imageUrl": null
+        },
         {
           "id": "https://www.williamlong.info/archives/6924.html",
           "author": "user@gmail.com (guest)",
@@ -12805,46 +12775,6 @@
           "wordCount": 140,
           "title": "A set of stable kernels",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/904892/",
-          "author": "corbet",
-          "description": "It is fair to say that some projects are rather more concerned about\npreserving ABI compatibility than others; the GNU C Library (glibc) project \nstands out even among those that put a lot of effort into preserving\ninterface stability,\nSo it may be a bit surprising that a recent glibc change is being\nblamed for breaking a number of applications, most of which are proprietary\ngames.  There is, it seems, a class of glibc changes that can break\napplications, but which are not deemed to be ABI changes.",
-          "link": "https://lwn.net/Articles/904892/",
-          "publishedOn": "2022-08-19T14:28:29.000Z",
-          "wordCount": null,
-          "title": "[$] The ABI status of ELF hash tables",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/905265/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (ruby-tzinfo), Mageia (nvidia-current and nvidia390), SUSE (python-PyYAML, ucode-intel, and zlib), and Ubuntu (linux-aws, postgresql-10, postgresql-12, postgresql-14, and rsync).",
-          "link": "https://lwn.net/Articles/905265/",
-          "publishedOn": "2022-08-19T13:43:19.000Z",
-          "wordCount": 176,
-          "title": "Security updates for Friday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/904776/",
-          "author": "corbet",
-          "description": "There was a time when care had to be taking when buying hardware if the\ngoal was to run Linux on it.  The situation has improved considerably in\nrecent decades, and unsupported hardware is more the exception than the\nrule.  That has, for many years, been especially true of Intel hardware;\nthat company has made a point of ensuring that its offerings work with\nLinux.  So it is a bit surprising that the IPU6 image processor shipped\nwith Alder Lake CPUs\nlacks support in Linux, and is unlikely to get it anytime soon.  The\nproblem highlighted here goes beyond just Intel, though.",
-          "link": "https://lwn.net/Articles/904776/",
-          "publishedOn": "2022-08-18T14:26:21.000Z",
-          "wordCount": null,
-          "title": "[$] The growing image-processor unpleasantness",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/905088/",
-          "author": "jake",
-          "description": "The Document Foundation has announced the release of LibreOffice 7.4 Community, which is the community-supported version of the open-source office suite. Version 7.4 comes with new features for the suite as a whole (WebP and EMZ/WMZ support, ...), the Writer word-processor (better change tracking and hyphenation settings, ...), the Calc spreadsheet (16K columns, ...), and more. \"Development is now focused on interoperability with Microsoft’s proprietary file formats, and many new features are targeted at users migrating from MS Office\".  More information can be found in the release notes.",
-          "link": "https://lwn.net/Articles/905088/",
-          "publishedOn": "2022-08-18T14:19:20.000Z",
-          "wordCount": 203,
-          "title": "LibreOffice 7.4 Community released",
-          "imageUrl": null
         }
       ]
     },
@@ -12853,6 +12783,76 @@
       "feedUrl": "https://rsshub.app/github/file/guanguans/favorite-link/master/README.md",
       "siteUrl": "https://github.com/guanguans/favorite-link/commits/master/README.md",
       "articles": [
+        {
+          "id": "https://github.com/guanguans/favorite-link/commit/3e55681820705f2e7cce6d61492de82a58f64216",
+          "author": "guanguans",
+          "description": "marshallbrekka/go-u2fhost: 在客户端使用 U2F USB 设备的 Go 库",
+          "link": "https://github.com/guanguans/favorite-link/commit/3e55681820705f2e7cce6d61492de82a58f64216",
+          "publishedOn": "2022-09-17T13:42:46.000Z",
+          "wordCount": 425,
+          "title": "marshallbrekka/go-u2fhost: 在客户端使用 U2F USB 设备的 Go 库",
+          "imageUrl": "https://opengraph.githubassets.com/b29987dbd00f0391a9571a1c535a6d9beb15ee39118458d8b01bd85b5eaf5171/guanguans/favorite-link/commit/3e55681820705f2e7cce6d61492de82a58f64216"
+        },
+        {
+          "id": "https://github.com/guanguans/favorite-link/commit/e6e3b4670ae489dcad957cd7c880fedc9e923c7b",
+          "author": "guanguans",
+          "description": "Monarobase/country-list: 具有所有语言和数据格式的名称和 ISO 3166-1 代码的所有国家/地区列表",
+          "link": "https://github.com/guanguans/favorite-link/commit/e6e3b4670ae489dcad957cd7c880fedc9e923c7b",
+          "publishedOn": "2022-09-17T13:38:50.000Z",
+          "wordCount": 422,
+          "title": "Monarobase/country-list: 具有所有语言和数据格式的名称和 ISO 3166-1 代码的所有国家/地区列表",
+          "imageUrl": "https://opengraph.githubassets.com/38152b55fb4f7612b5afb1734a244b64dd8360040fd6e6aa8f8a43b3a29dad85/guanguans/favorite-link/commit/e6e3b4670ae489dcad957cd7c880fedc9e923c7b"
+        },
+        {
+          "id": "https://github.com/guanguans/favorite-link/commit/a103beba0f322e35f8d1128bb6df893144156543",
+          "author": "guanguans",
+          "description": "C-Sto/BananaPhone: 它是 Hells 的 Go 变体(直接调用 windows 内核函数，但是来自 Go!)C-Sto/BananaPhone: 它是 Hells 的 Go 变体(直接调用 windows 内核函数，但是来自 Go!)",
+          "link": "https://github.com/guanguans/favorite-link/commit/a103beba0f322e35f8d1128bb6df893144156543",
+          "publishedOn": "2022-09-17T13:38:00.000Z",
+          "wordCount": 441,
+          "title": "C-Sto/BananaPhone: 它是 Hells 的 Go 变体(直接调用 windows 内核函数，但是来自 Go!)C-Sto/BananaPhone: 它是 Hells 的 Go 变体(直接调用 windows 内核函数，...",
+          "imageUrl": "https://opengraph.githubassets.com/3ac6881295b730cb8dac5dda0c8dec49171aaa09cd0c506a305cb2e3229818fb/guanguans/favorite-link/commit/a103beba0f322e35f8d1128bb6df893144156543"
+        },
+        {
+          "id": "https://github.com/guanguans/favorite-link/commit/1620f05ea88ae439bd41b2b17f4b34aff6e92a76",
+          "author": "guanguans",
+          "description": "huandu/go-clone: 深入彻底地克隆任何 Go 数据结构。",
+          "link": "https://github.com/guanguans/favorite-link/commit/1620f05ea88ae439bd41b2b17f4b34aff6e92a76",
+          "publishedOn": "2022-09-17T13:32:54.000Z",
+          "wordCount": 421,
+          "title": "huandu/go-clone: 深入彻底地克隆任何 Go 数据结构。",
+          "imageUrl": "https://opengraph.githubassets.com/419f0aa68879fae891271ff06901c0d2d1fc32ef88b5dc41b6d4f7abef3f0a2a/guanguans/favorite-link/commit/1620f05ea88ae439bd41b2b17f4b34aff6e92a76"
+        },
+        {
+          "id": "https://github.com/guanguans/favorite-link/commit/67e5d826b0c859e128356446c0d6ea0f8f3f68d0",
+          "author": "guanguans",
+          "description": "fogleman/gg: 使用简单 API 在 Go 中进行 2D 渲染。",
+          "link": "https://github.com/guanguans/favorite-link/commit/67e5d826b0c859e128356446c0d6ea0f8f3f68d0",
+          "publishedOn": "2022-09-17T13:32:14.000Z",
+          "wordCount": 428,
+          "title": "fogleman/gg: 使用简单 API 在 Go 中进行 2D 渲染。",
+          "imageUrl": "https://opengraph.githubassets.com/d440e032bd3999d2a4a247f6627081cff7d127034d1de8f09f189482ef60212a/guanguans/favorite-link/commit/67e5d826b0c859e128356446c0d6ea0f8f3f68d0"
+        },
+        {
+          "id": "https://github.com/guanguans/favorite-link/commit/50e3e79a5b561616b088c843c4415c204b63b156",
+          "author": "guanguans",
+          "description": "使用简单 API 在 Go 中进行 2D 渲染。",
+          "link": "https://github.com/guanguans/favorite-link/commit/50e3e79a5b561616b088c843c4415c204b63b156",
+          "publishedOn": "2022-09-17T13:31:43.000Z",
+          "wordCount": 417,
+          "title": "使用简单 API 在 Go 中进行 2D 渲染。",
+          "imageUrl": "https://opengraph.githubassets.com/c8d7c71fc2fbc8548f87c5265d7efb146bd3ab05ed7d48a822911557e4af0bba/guanguans/favorite-link/commit/50e3e79a5b561616b088c843c4415c204b63b156"
+        },
+        {
+          "id": "https://github.com/guanguans/favorite-link/commit/1ddb03b3b828b9e2e048f12b9b1b4745f38edd8b",
+          "author": "guanguans",
+          "description": "kartik-v/yii2-grid: 增强的 GridView 和 Yii Framework 2.0 的各种实用程序",
+          "link": "https://github.com/guanguans/favorite-link/commit/1ddb03b3b828b9e2e048f12b9b1b4745f38edd8b",
+          "publishedOn": "2022-09-17T13:29:56.000Z",
+          "wordCount": 411,
+          "title": "kartik-v/yii2-grid: 增强的 GridView 和 Yii Framework 2.0 的各种实用程序",
+          "imageUrl": "https://opengraph.githubassets.com/a072b3dad557cf0b2befc16f86165b7ff561dc9596df822845a8fbb2f49edf46/guanguans/favorite-link/commit/1ddb03b3b828b9e2e048f12b9b1b4745f38edd8b"
+        },
         {
           "id": "https://github.com/guanguans/favorite-link/commit/31d86ca767fca560b4c2f5f1cb85fb08146a7f54",
           "author": "guanguans",
@@ -13712,76 +13712,6 @@
           "wordCount": 362,
           "title": "recode-sh/cli: 一个 CLI，可在几秒钟内在您的云提供商帐户中创建远程开发环境",
           "imageUrl": "https://opengraph.githubassets.com/9cba0450490a3d2761576fccf39b5e2323c320cb63b9f9bf60a5e9942d3e3ecf/guanguans/favorite-link/commit/10fd34e4bf8f8204fc669810bc15335ef56abce2"
-        },
-        {
-          "id": "https://github.com/guanguans/favorite-link/commit/b36abcb96cf3830dabd7de886b5751c07fcc27f2",
-          "author": "guanguans",
-          "description": "ayntgl/discordo: 轻量级、安全且功能丰富的 Discord 终端客户端",
-          "link": "https://github.com/guanguans/favorite-link/commit/b36abcb96cf3830dabd7de886b5751c07fcc27f2",
-          "publishedOn": "2022-08-19T01:57:30.000Z",
-          "wordCount": 376,
-          "title": "ayntgl/discordo: 轻量级、安全且功能丰富的 Discord 终端客户端",
-          "imageUrl": "https://opengraph.githubassets.com/44dec42fc52aa988b4df05123078cbea279b548356ef504d5965cf4a314d372c/guanguans/favorite-link/commit/b36abcb96cf3830dabd7de886b5751c07fcc27f2"
-        },
-        {
-          "id": "https://github.com/guanguans/favorite-link/commit/633bf8f8611d1582fae271a217ec1f0dcea1f8c6",
-          "author": "guanguans",
-          "description": "yenche123/podcast-together: 跟你的好友一起实时在线听播客！",
-          "link": "https://github.com/guanguans/favorite-link/commit/633bf8f8611d1582fae271a217ec1f0dcea1f8c6",
-          "publishedOn": "2022-08-19T01:56:08.000Z",
-          "wordCount": 373,
-          "title": "yenche123/podcast-together: 跟你的好友一起实时在线听播客！",
-          "imageUrl": "https://opengraph.githubassets.com/50f559329fef7a6f9d0b558c9d9e52e98e5b523119312cfdc266e0e1ed259da7/guanguans/favorite-link/commit/633bf8f8611d1582fae271a217ec1f0dcea1f8c6"
-        },
-        {
-          "id": "https://github.com/guanguans/favorite-link/commit/99d323e4807d58fa3f3fd9229773ecaeafa9e785",
-          "author": "guanguans",
-          "description": "go-cmd/cmd: Go 中的非阻塞外部命令，具有流式输出和并发安全访问",
-          "link": "https://github.com/guanguans/favorite-link/commit/99d323e4807d58fa3f3fd9229773ecaeafa9e785",
-          "publishedOn": "2022-08-19T01:55:06.000Z",
-          "wordCount": 379,
-          "title": "go-cmd/cmd: Go 中的非阻塞外部命令，具有流式输出和并发安全访问",
-          "imageUrl": "https://opengraph.githubassets.com/e29ccaea7618365d56e6af4451ee88bdb162344084540e4d86d861130ee4cbb2/guanguans/favorite-link/commit/99d323e4807d58fa3f3fd9229773ecaeafa9e785"
-        },
-        {
-          "id": "https://github.com/guanguans/favorite-link/commit/6b2db9af5e4e390dc1bc5ec6095d1e20a6d5cc92",
-          "author": "guanguans",
-          "description": "michael-rubel/laravel-enhanced-pipeline: 具有 DB 事务支持、事件和其他方法的 Laravel 管道",
-          "link": "https://github.com/guanguans/favorite-link/commit/6b2db9af5e4e390dc1bc5ec6095d1e20a6d5cc92",
-          "publishedOn": "2022-08-19T01:54:19.000Z",
-          "wordCount": 384,
-          "title": "michael-rubel/laravel-enhanced-pipeline: 具有 DB 事务支持、事件和其他方法的 Laravel 管道",
-          "imageUrl": "https://opengraph.githubassets.com/0cc2d1a78d89688e61e81876800e1da66e3071a54975306d4745673376a79381/guanguans/favorite-link/commit/6b2db9af5e4e390dc1bc5ec6095d1e20a6d5cc92"
-        },
-        {
-          "id": "https://github.com/guanguans/favorite-link/commit/fddb347965974b038283f1c59d5488483b12c1b5",
-          "author": "guanguans",
-          "description": "discord-php/DiscordPHP: 与流行的消息应用程序 Discord 交互的 API",
-          "link": "https://github.com/guanguans/favorite-link/commit/fddb347965974b038283f1c59d5488483b12c1b5",
-          "publishedOn": "2022-08-19T01:52:00.000Z",
-          "wordCount": 379,
-          "title": "discord-php/DiscordPHP: 与流行的消息应用程序 Discord 交互的 API",
-          "imageUrl": "https://opengraph.githubassets.com/61988c253c7c7c8bcd3e16ce6d763e83ea48b7d088514f4a9328daf50db13274/guanguans/favorite-link/commit/fddb347965974b038283f1c59d5488483b12c1b5"
-        },
-        {
-          "id": "https://github.com/guanguans/favorite-link/commit/3300676bf6e7f0582fc6c068acef2f469bc49295",
-          "author": "guanguans",
-          "description": "nadar/php-composer-reader: 一个 PHP 库，用于读取和操作 composer.json 文件。",
-          "link": "https://github.com/guanguans/favorite-link/commit/3300676bf6e7f0582fc6c068acef2f469bc49295",
-          "publishedOn": "2022-08-19T01:50:02.000Z",
-          "wordCount": 375,
-          "title": "nadar/php-composer-reader: 一个 PHP 库，用于读取和操作 composer.json 文件。",
-          "imageUrl": "https://opengraph.githubassets.com/585ab93f46d1efca3292ae7ed62683a7d4725cf2bc3ca20bb34005b057642e58/guanguans/favorite-link/commit/3300676bf6e7f0582fc6c068acef2f469bc49295"
-        },
-        {
-          "id": "https://github.com/guanguans/favorite-link/commit/a602ace2fa6a974adcd2c58a8227016dd51413cd",
-          "author": "guanguans",
-          "description": "Lakr233/ActionBee: 一种可编程的纸板动作触发器",
-          "link": "https://github.com/guanguans/favorite-link/commit/a602ace2fa6a974adcd2c58a8227016dd51413cd",
-          "publishedOn": "2022-08-19T01:44:33.000Z",
-          "wordCount": 360,
-          "title": "Lakr233/ActionBee: 一种可编程的纸板动作触发器",
-          "imageUrl": "https://opengraph.githubassets.com/cf6b6c0caa59a2fd0491e0af8721088af19b48c130d86ead252eb70caaddb62b/guanguans/favorite-link/commit/a602ace2fa6a974adcd2c58a8227016dd51413cd"
         }
       ]
     }

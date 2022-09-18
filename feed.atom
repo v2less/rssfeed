@@ -2,10 +2,630 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://waytoarcher.github.io/rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-09-17T02:04:34.276Z</updated>
+    <updated>2022-09-18T02:28:48.487Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://waytoarcher.github.io/rssfeed/index.html"/>
     <link rel="self" href="https://waytoarcher.github.io/rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Ask HN: Inherited the worst code and tech team I have ever seen. How to fix it?]]></title>
+        <id>https://news.ycombinator.com/item?id=32883596</id>
+        <link href="https://news.ycombinator.com/item?id=32883596"/>
+        <updated>2022-09-18T01:51:13.000Z</updated>
+        <summary type="html"><![CDATA[I have to find a strategy to fix this development team without managing them directly. Here is an overview:
+- this code generates more than 20 million dollars a year of revenue
+- it runs on PHP
+- it has been developed for 12 years directly on production with no source control ( hello index-new_2021-test-john_v2.php )
+- it doesn't use composer or any dependency management. It's all require_once.
+- it doesn't use any framework
+- the routing is managed exclusively as rewrites in NGInX ( the NGInX config is around 10,000 lines )
+- no code has ever been deleted. Things are just added . I gather the reason for that is because it was developed on production directly and deleting things is too risky.
+- the database structure is the same mess, no migrations, etc... When adding a column, because of the volume of data, they add a new table with a join.
+- JS and CSS is the same. Multiple versions of jQuery fighting each other depending on which page you are or even on the same page.
+- no MVC pattern of course, or whatever pattern. No templating library. It's PHP 2003 style.
+- In many places I see controllers like files making curl requests to its own rest API (via domain name, not localhost) doing oauth authorizations, etc... Just to get the menu items or list of products...
+- no caching ( but there is memcached but only used for sessions  ...)
+- team is 3 people, quite junior. One backend, one front, one iOS/android. Resistance to change is huge.
+- productivity is abysmal which is understandable. The mess is just too huge to be able to build anything.
+This business unit has a pretty aggressive roadmap as management and HQ has no real understanding of these blockers. And post COVID, budget is really tight.
+I know a full rewrite is necessary, but how to balance it?
+Comments URL: https://news.ycombinator.com/item?id=32883596
+Points: 27
+# Comments: 34]]></summary>
+        <author>
+            <name>whattodochange</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Dart Machine running Ubuntu 10.04]]></title>
+        <id>https://www.reddit.com/r/linux/comments/xh3hc4/dart_machine_running_ubuntu_1004/</id>
+        <link href="https://www.reddit.com/r/linux/comments/xh3hc4/dart_machine_running_ubuntu_1004/"/>
+        <updated>2022-09-18T01:29:51.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Intelligent-Union-25  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Everyone you meet is living a story that you know nothing about]]></title>
+        <id>https://news.ycombinator.com/item?id=32883471</id>
+        <link href="https://joylere.substack.com/p/unabridged"/>
+        <updated>2022-09-18T01:27:24.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://joylere.substack.com/p/unabridged
+Comments URL: https://news.ycombinator.com/item?id=32883471
+Points: 31
+# Comments: 4]]></summary>
+        <author>
+            <name>5F7bGnd6fWJ66xN</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Auto Contrast added to the Librem 5]]></title>
+        <id>https://www.reddit.com/r/linux/comments/xh2y32/auto_contrast_added_to_the_librem_5/</id>
+        <link href="https://www.reddit.com/r/linux/comments/xh2y32/auto_contrast_added_to_the_librem_5/"/>
+        <updated>2022-09-18T01:03:39.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/adila01  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to Make a Sundial]]></title>
+        <id>https://news.ycombinator.com/item?id=32882509</id>
+        <link href="https://www.sundialzone.com/en/sundial"/>
+        <updated>2022-09-17T23:06:02.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.sundialzone.com/en/sundial
+Comments URL: https://news.ycombinator.com/item?id=32882509
+Points: 12
+# Comments: 0]]></summary>
+        <author>
+            <name>app4soft</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Tell HN: Make your company have a contact page]]></title>
+        <id>https://news.ycombinator.com/item?id=32882337</id>
+        <link href="https://news.ycombinator.com/item?id=32882337"/>
+        <updated>2022-09-17T22:43:47.000Z</updated>
+        <summary type="html"><![CDATA[Meetup.com's webpage has been throwing 400's and 502's for two hours, and still only half their site seems responsive.
+There is no way for me to tell Meetup that their site is down. There's no contact page, no e-mail address, no suggestion box, no chat, no nothing. I want to help them get their business online but they have made it nearly impossible. Literally the only e-mail address I have found is for their recruiting/jobs page.
+This problem is much larger than just one website. I've seen this dozens of times on huge websites over the past two years.
+Years ago, a company I worked for was actually serving malware on their website, because a server got hacked and we had no idea. Somebody found it on a blackhat internet forum and wanted to tell us, but spent hours trying to track down a generic website contact just to let us know.
+People of HN: Please tell your job that their website needs a contact page, and somebody in the company who checks the emails and sends them to the right group. This isn't rocket science, y'all.
+Comments URL: https://news.ycombinator.com/item?id=32882337
+Points: 33
+# Comments: 18]]></summary>
+        <author>
+            <name>throwaway892238</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Show HN: A virtual Yubikey device for 2FA/WebAuthN]]></title>
+        <id>https://news.ycombinator.com/item?id=32881956</id>
+        <link href="https://github.com/bulwarkid/virtual-fido"/>
+        <updated>2022-09-17T21:52:05.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://github.com/bulwarkid/virtual-fido
+Comments URL: https://news.ycombinator.com/item?id=32881956
+Points: 60
+# Comments: 63]]></summary>
+        <author>
+            <name>cmdli</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[This week in Open Source - Rust in Linux Kernel 6.1, Fedora 37, Godot 4.0, Firefox relay phone support & more]]></title>
+        <id>https://www.reddit.com/r/linux/comments/xgwvfd/this_week_in_open_source_rust_in_linux_kernel_61/</id>
+        <link href="https://www.reddit.com/r/linux/comments/xgwvfd/this_week_in_open_source_rust_in_linux_kernel_61/"/>
+        <updated>2022-09-17T20:32:51.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/antsaregay  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[$ rm Important.txt (uh oh)]]></title>
+        <id>https://news.ycombinator.com/item?id=32880961</id>
+        <link href="https://xenodium.com/rm-important-txt-oh-sht/"/>
+        <updated>2022-09-17T19:57:11.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://xenodium.com/rm-important-txt-oh-sht/
+Comments URL: https://news.ycombinator.com/item?id=32880961
+Points: 43
+# Comments: 56]]></summary>
+        <author>
+            <name>xenodium</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Phorge: Going Public]]></title>
+        <id>https://news.ycombinator.com/item?id=32880927</id>
+        <link href="https://we.phorge.it/phame/post/view/1/going_public/"/>
+        <updated>2022-09-17T19:54:27.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://we.phorge.it/phame/post/view/1/going_public/
+Comments URL: https://news.ycombinator.com/item?id=32880927
+Points: 161
+# Comments: 31]]></summary>
+        <author>
+            <name>RealStickman_</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Fine Tuning Stable Diffusion Images with Cross Attention Control]]></title>
+        <id>https://www.reddit.com/r/linux/comments/xgvt8n/fine_tuning_stable_diffusion_images_with_cross/</id>
+        <link href="https://www.reddit.com/r/linux/comments/xgvt8n/fine_tuning_stable_diffusion_images_with_cross/"/>
+        <updated>2022-09-17T19:48:51.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/pwillia7  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[New version of systeroid is out! (a more powerful alternative to sysctl(8))]]></title>
+        <id>https://www.reddit.com/r/linux/comments/xgvexc/new_version_of_systeroid_is_out_a_more_powerful/</id>
+        <link href="https://www.reddit.com/r/linux/comments/xgvexc/new_version_of_systeroid_is_out_a_more_powerful/"/>
+        <updated>2022-09-17T19:31:57.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/orhunp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenMandriva ROME (rolling): Send your picture to backgrounds contest]]></title>
+        <id>https://www.reddit.com/r/linux/comments/xguwmi/openmandriva_rome_rolling_send_your_picture_to/</id>
+        <link href="https://www.reddit.com/r/linux/comments/xguwmi/openmandriva_rome_rolling_send_your_picture_to/"/>
+        <updated>2022-09-17T19:10:26.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/DamonsLinux  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Show HN: LambdaLisp – A Lisp interpreter that runs on lambda calculus]]></title>
+        <id>https://news.ycombinator.com/item?id=32879848</id>
+        <link href="https://woodrush.github.io/blog/lambdalisp.html"/>
+        <updated>2022-09-17T18:17:57.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://woodrush.github.io/blog/lambdalisp.html
+Comments URL: https://news.ycombinator.com/item?id=32879848
+Points: 95
+# Comments: 33]]></summary>
+        <author>
+            <name>woodrush</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Saving the Ancient Glass Artifacts Shattered in the Beirut Explosion]]></title>
+        <id>https://news.ycombinator.com/item?id=32879847</id>
+        <link href="https://www.atlasobscura.com/articles/beirut-explosion-glass-artifact-restoration"/>
+        <updated>2022-09-17T18:17:54.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.atlasobscura.com/articles/beirut-explosion-glass-artifact-restoration
+Comments URL: https://news.ycombinator.com/item?id=32879847
+Points: 33
+# Comments: 11]]></summary>
+        <author>
+            <name>prismatic</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Number theory explained from first principles]]></title>
+        <id>https://news.ycombinator.com/item?id=32879801</id>
+        <link href="https://explained-from-first-principles.com/number-theory/"/>
+        <updated>2022-09-17T18:12:30.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://explained-from-first-principles.com/number-theory/
+Comments URL: https://news.ycombinator.com/item?id=32879801
+Points: 112
+# Comments: 15]]></summary>
+        <author>
+            <name>yewenjie</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why do all these 20-somethings have closed captions turned on?]]></title>
+        <id>https://news.ycombinator.com/item?id=32879737</id>
+        <link href="https://www.wsj.com/articles/why-do-all-these-20-somethings-have-closed-captions-turned-on-11663386473"/>
+        <updated>2022-09-17T18:06:04.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.wsj.com/articles/why-do-all-these-20-somethings-have-closed-captions-turned-on-11663386473
+Comments URL: https://news.ycombinator.com/item?id=32879737
+Points: 116
+# Comments: 221]]></summary>
+        <author>
+            <name>malshe</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Automatic Differentiation in 38 lines of Haskell]]></title>
+        <id>https://news.ycombinator.com/item?id=32879734</id>
+        <link href="https://gist.github.com/ttesmer/948df432cf46ec6db8c1e83ab59b1b21"/>
+        <updated>2022-09-17T18:05:47.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://gist.github.com/ttesmer/948df432cf46ec6db8c1e83ab59b1b21
+Comments URL: https://news.ycombinator.com/item?id=32879734
+Points: 78
+# Comments: 28]]></summary>
+        <author>
+            <name>ttesmer</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[S6: A standalone JIT compiler library for CPython]]></title>
+        <id>https://news.ycombinator.com/item?id=32879636</id>
+        <link href="https://github.com/deepmind/s6"/>
+        <updated>2022-09-17T17:55:36.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://github.com/deepmind/s6
+Comments URL: https://news.ycombinator.com/item?id=32879636
+Points: 67
+# Comments: 12]]></summary>
+        <author>
+            <name>tvrvt</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[p0f: TCP Packet Fingerprinting]]></title>
+        <id>https://news.ycombinator.com/item?id=32879551</id>
+        <link href="https://lcamtuf.coredump.cx/p0f3/"/>
+        <updated>2022-09-17T17:48:40.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://lcamtuf.coredump.cx/p0f3/
+Comments URL: https://news.ycombinator.com/item?id=32879551
+Points: 97
+# Comments: 21]]></summary>
+        <author>
+            <name>btdmaster</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Since when could you do this? Crtl + shift + E, o, space, space… any letter works just gotta find the right code for them. Bash on rocky Linux.]]></title>
+        <id>https://www.reddit.com/r/linux/comments/xgsibf/since_when_could_you_do_this_crtl_shift_e_o_space/</id>
+        <link href="https://www.reddit.com/r/linux/comments/xgsibf/since_when_could_you_do_this_crtl_shift_e_o_space/"/>
+        <updated>2022-09-17T17:30:27.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/CyberSecStudies  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Charl-e: “Stable Diffusion on your Mac in 1 click”]]></title>
+        <id>https://news.ycombinator.com/item?id=32878626</id>
+        <link href="https://www.charl-e.com/"/>
+        <updated>2022-09-17T16:05:40.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.charl-e.com/
+Comments URL: https://news.ycombinator.com/item?id=32878626
+Points: 190
+# Comments: 95]]></summary>
+        <author>
+            <name>valgaze</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Collections: Teaching Paradox, Crusader Kings III, Part I: Making It Personal]]></title>
+        <id>https://news.ycombinator.com/item?id=32878605</id>
+        <link href="https://acoup.blog/2022/09/16/collections-teaching-paradox-crusader-kings-iii-part-i-making-it-personal/"/>
+        <updated>2022-09-17T16:03:44.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://acoup.blog/2022/09/16/collections-teaching-paradox-crusader-kings-iii-part-i-making-it-personal/
+Comments URL: https://news.ycombinator.com/item?id=32878605
+Points: 44
+# Comments: 15]]></summary>
+        <author>
+            <name>DMell</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Floorp Browser v.10.5.0 was released]]></title>
+        <id>https://www.reddit.com/r/linux/comments/xgoy35/floorp_browser_v1050_was_released/</id>
+        <link href="https://www.reddit.com/r/linux/comments/xgoy35/floorp_browser_v1050_was_released/"/>
+        <updated>2022-09-17T15:08:14.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/vleeth  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ZX81plus38 – A ULA-less ZX81 clone]]></title>
+        <id>https://news.ycombinator.com/item?id=32878112</id>
+        <link href="https://github.com/mahjongg2/ZX81plus38"/>
+        <updated>2022-09-17T15:07:20.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://github.com/mahjongg2/ZX81plus38
+Comments URL: https://news.ycombinator.com/item?id=32878112
+Points: 61
+# Comments: 23]]></summary>
+        <author>
+            <name>nickt</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to disagree with someone more powerful than you (2016)]]></title>
+        <id>https://news.ycombinator.com/item?id=32877942</id>
+        <link href="https://hbr.org/2016/03/how-to-disagree-with-someone-more-powerful-than-you"/>
+        <updated>2022-09-17T14:47:33.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://hbr.org/2016/03/how-to-disagree-with-someone-more-powerful-than-you
+Comments URL: https://news.ycombinator.com/item?id=32877942
+Points: 101
+# Comments: 95]]></summary>
+        <author>
+            <name>tomrod</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Cppfront, Herb Sutter's proposal for a new C++ syntax]]></title>
+        <id>https://news.ycombinator.com/item?id=32877814</id>
+        <link href="https://github.com/hsutter/cppfront"/>
+        <updated>2022-09-17T14:31:36.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://github.com/hsutter/cppfront
+Comments URL: https://news.ycombinator.com/item?id=32877814
+Points: 412
+# Comments: 340]]></summary>
+        <author>
+            <name>pjmlp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Linux's Display Brightness/Backlight Interface Is Finally Being Overhauled]]></title>
+        <id>https://www.reddit.com/r/linux/comments/xgn65s/linuxs_display_brightnessbacklight_interface_is/</id>
+        <link href="https://www.reddit.com/r/linux/comments/xgn65s/linuxs_display_brightnessbacklight_interface_is/"/>
+        <updated>2022-09-17T13:55:51.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/floof_overdrive  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[marshallbrekka/go-u2fhost: 在客户端使用 U2F USB 设备的 Go 库]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/3e55681820705f2e7cce6d61492de82a58f64216</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/3e55681820705f2e7cce6d61492de82a58f64216"/>
+        <updated>2022-09-17T13:42:46.000Z</updated>
+        <summary type="html"><![CDATA[marshallbrekka/go-u2fhost: 在客户端使用 U2F USB 设备的 Go 库]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Monarobase/country-list: 具有所有语言和数据格式的名称和 ISO 3166-1 代码的所有国家/地区列表]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/e6e3b4670ae489dcad957cd7c880fedc9e923c7b</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/e6e3b4670ae489dcad957cd7c880fedc9e923c7b"/>
+        <updated>2022-09-17T13:38:50.000Z</updated>
+        <summary type="html"><![CDATA[Monarobase/country-list: 具有所有语言和数据格式的名称和 ISO 3166-1 代码的所有国家/地区列表]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C-Sto/BananaPhone: 它是 Hells 的 Go 变体(直接调用 windows 内核函数，但是来自 Go!)C-Sto/BananaPhone: 它是 Hells 的 Go 变体(直接调用 windows 内核函数，...]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/a103beba0f322e35f8d1128bb6df893144156543</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/a103beba0f322e35f8d1128bb6df893144156543"/>
+        <updated>2022-09-17T13:38:00.000Z</updated>
+        <summary type="html"><![CDATA[C-Sto/BananaPhone: 它是 Hells 的 Go 变体(直接调用 windows 内核函数，但是来自 Go!)C-Sto/BananaPhone: 它是 Hells 的 Go 变体(直接调用 windows 内核函数，但是来自 Go!)]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[huandu/go-clone: 深入彻底地克隆任何 Go 数据结构。]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/1620f05ea88ae439bd41b2b17f4b34aff6e92a76</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/1620f05ea88ae439bd41b2b17f4b34aff6e92a76"/>
+        <updated>2022-09-17T13:32:54.000Z</updated>
+        <summary type="html"><![CDATA[huandu/go-clone: 深入彻底地克隆任何 Go 数据结构。]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[fogleman/gg: 使用简单 API 在 Go 中进行 2D 渲染。]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/67e5d826b0c859e128356446c0d6ea0f8f3f68d0</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/67e5d826b0c859e128356446c0d6ea0f8f3f68d0"/>
+        <updated>2022-09-17T13:32:14.000Z</updated>
+        <summary type="html"><![CDATA[fogleman/gg: 使用简单 API 在 Go 中进行 2D 渲染。]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用简单 API 在 Go 中进行 2D 渲染。]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/50e3e79a5b561616b088c843c4415c204b63b156</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/50e3e79a5b561616b088c843c4415c204b63b156"/>
+        <updated>2022-09-17T13:31:43.000Z</updated>
+        <summary type="html"><![CDATA[使用简单 API 在 Go 中进行 2D 渲染。]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[kartik-v/yii2-grid: 增强的 GridView 和 Yii Framework 2.0 的各种实用程序]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/1ddb03b3b828b9e2e048f12b9b1b4745f38edd8b</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/1ddb03b3b828b9e2e048f12b9b1b4745f38edd8b"/>
+        <updated>2022-09-17T13:29:56.000Z</updated>
+        <summary type="html"><![CDATA[kartik-v/yii2-grid: 增强的 GridView 和 Yii Framework 2.0 的各种实用程序]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Expose local system accounts via LDAP]]></title>
+        <id>https://www.reddit.com/r/linux/comments/xgmd1m/expose_local_system_accounts_via_ldap/</id>
+        <link href="https://www.reddit.com/r/linux/comments/xgmd1m/expose_local_system_accounts_via_ldap/"/>
+        <updated>2022-09-17T13:21:11.000Z</updated>
+        <summary type="html"><![CDATA[I am currently planning to containerize some services on a home server. Some of these services shall expose the local system's user accounts (e.g., owncloud, dovecot).
+ I know, I could copy the necessary files into a container upon creation or startup, but that's going to be a hassle if someone changes a password or we create a new user. So I was wondering if there's a tool that would expose an LDAP interface (read-only) and feeds its data from /etc/passwd et.al.
+ I was thinking about something along the lines of https://github.com/glauth/glauth - but that tool doesn't support the exact use case, I think. Are there any alternatives?
+    submitted by    /u/choeger  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Shoutout to Timeshift developers: I love your application!]]></title>
+        <id>https://www.reddit.com/r/linux/comments/xghnos/shoutout_to_timeshift_developers_i_love_your/</id>
+        <link href="https://www.reddit.com/r/linux/comments/xghnos/shoutout_to_timeshift_developers_i_love_your/"/>
+        <updated>2022-09-17T09:11:21.000Z</updated>
+        <summary type="html"><![CDATA[While upgrading my system ran into disk space issues, I didn't pause to do things, but did some 3d rendering as I was in a hurry. The system partition apparently was full, basically due to the insane disk space requirements of Flatpak. At next boot nothing worked. I could get into grub, but after that I could boot into nothing, only emergency mode, but even the keyboard was not working, some kernels seemed more promising than others while booting, but ultimately nothing really did. Shit.
+ At some point I gave up and decided to reinstall the system, booted a live image and thought - "Timeshift"? Let's try it out.
+ So far I had never used it except to set it up for snapshots. In the few cases when I borked my system it usually felt like a good idea to set it up fresh anyway, so I never used Timeshift to restore :D
+ Now, my system has a lot of partitions and disks and it always takes me some time to get a hang of the mountpoints again, I wasn't looking forward to that, but decided to give it a go. Well, I don't know if you have ever used Timeshift to restore a system, but imagine my surprise when Timeshift simply started, found the timeshift backup partition and suggested absolutely correctly where to put what. I was stunned - I had expected a long and thorough time of manually mapping sources and targets, but no. I double and triple checked everything, but the suggested mapping was what I wanted. I selected the last restore point and gave it a whirr. 15 minutes later I booted smoothly into my system and was done. What an experience! Timeshift restored three partitions.
+ All I had to do now was solve pacman's duplicate package errors, which was a bit frustrating. Pacman should be able to solve that by itself, it should have an option. I mean, it does recognize there are duplicates, why can't it solve it??? (Option: Keep oldest / newest version or so)
+ Timeshift dev team, you have a good donation coming in.
+    submitted by    /u/seehp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VCMI (a moddable open source game engine recreation of Heroes of Might and Magic III) releases 1.0]]></title>
+        <id>https://www.reddit.com/r/linux/comments/xgh52q/vcmi_a_moddable_open_source_game_engine/</id>
+        <link href="https://www.reddit.com/r/linux/comments/xgh52q/vcmi_a_moddable_open_source_game_engine/"/>
+        <updated>2022-09-17T08:41:05.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/wiki_me  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Has WSL made Windows more closer to being more like Linux?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/xggv29/has_wsl_made_windows_more_closer_to_being_more/</id>
+        <link href="https://www.reddit.com/r/linux/comments/xggv29/has_wsl_made_windows_more_closer_to_being_more/"/>
+        <updated>2022-09-17T08:24:05.000Z</updated>
+        <summary type="html"><![CDATA[Since Linux is UNIX-like and the Linux kernel is shipping with Windows, has it made Windows more closer to being more like Linux as an OS?
+ I am curious to hear your thoughts since WSL is now being used by developers that would have previously chosen Linux. Even for DevOps and Docker, WSL has been great for that.
+ Thank you to those who answer! I appreciate all the answers! :)
+    submitted by    /u/jazilzaim  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Donating to FOSS projects is the most important thing you can do!]]></title>
+        <id>https://www.reddit.com/r/linux/comments/xggqw6/donating_to_foss_projects_is_the_most_important/</id>
+        <link href="https://www.reddit.com/r/linux/comments/xggqw6/donating_to_foss_projects_is_the_most_important/"/>
+        <updated>2022-09-17T08:17:23.000Z</updated>
+        <summary type="html"><![CDATA[A quick reminder that donating. Even just a dollar, to your favorite FOSS projects has a huge impact. Just think of how much money you have saved using these softwares. You can also do like me and donate a small amount every month.
+    submitted by    /u/Pizza-pen  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[硬核观察 #762 Facebook 在数百万台服务器上使用 Kpatch 内核实时补丁]]></title>
+        <id>https://linux.cn/article-15040-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-15040-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2022-09-17T08:12:17.000Z</updated>
+        <summary type="html"><![CDATA[Facebook 在数百万台服务器上使用 Kpatch 内核实时补丁
+
+内核实时补丁允许内核在运行时安全地实施就地修补，而无需为了升级内核而进行冗长的开机自检（POST）和启动过程。Facebook 采用的是红帽的 Kpatch 方案，已经在其数百万台服务器上进行了部署。除了 Kpatch 方案之外，其它的内核实时补丁方案还有 SUSE 维护的 kGraft 和 Oracle 的 Ksplice 方案。Facebook 还分享了他们在应用过程中遇到的各种问题。
+
+
+消息来源：Phoronix
+
+
+
+老王点评：这是我听到的内核实时补丁最大规模的部署了，看起来已经可以在大规模生产环境使用了。Facebook 的经验可以学习一下。
+
+
+
+
+黑客使用木马版 PuTTY SSH 客户端植入后门
+
+安全公司报告，黑客组织在一次针对媒体公司的钓鱼攻击中使用了木马版 PuTTY SSH 客户端。PuTTY 是流行的开源 SSH 客户端。攻击者首先向目标发送邮件提供亚马逊的工作机会，后续通信中发送了包含了 IP 地址和登陆凭证以及木马版的 PuTTY 的文件。攻击者诱骗受害者打开文件运行木马版本以进行技能评估。但该版本含有恶意载荷，会部署和安装后门程序。
+
+
+消息来源：Mandiant
+
+
+
+老王点评：PuTTY 是一个小巧而流行的 SSH 客户端，但是一定要使用一个干净的。很多人在临时使用 SSH 时，都会去网上随便搜索一个 PuTTY 下载使用，这种往往是有木马的。
+
+
+
+
+LastPass 表示在驱逐前已被入侵内部系统 4 天
+
+今年 8 月，LastPass 被入侵，入侵者使用多因素身份验证成功通过了身份验证，从而访问了内部开发环境。但 LastPass 表示，“系统设计和控制阻止了威胁行为者访问任何客户数据或加密密码库”。这很可能是因为只有构建发布团队才能将代码从开发环境推送到产品环境，而它们是“物理分离，没有直接连接”的。
+
+
+消息来源：BleepingComputer
+
+
+
+老王点评：虽然入口被突破，但是内部损失有限，这说明良好的内部 IT 环境还是相当重要的。]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Best compatible apps, extensions and tweaks for Linux on convertible laptops]]></title>
+        <id>https://www.reddit.com/r/linux/comments/xgfuqs/best_compatible_apps_extensions_and_tweaks_for/</id>
+        <link href="https://www.reddit.com/r/linux/comments/xgfuqs/best_compatible_apps_extensions_and_tweaks_for/"/>
+        <updated>2022-09-17T07:23:51.000Z</updated>
+        <summary type="html"><![CDATA[I recently installed Fedora 36 on my Lenovo Yoga 7 5800u laptop. I expected some drawbacks in Linux compatibility as I was switching from Windows 11. So the fingerprint sensor doesn't have support, when I flip my screen and select a editable field the on screen keyboard doesn't pop up either and some other neat features Windows 11 provided for a convertible were missing too. It left me thinking what can I do to improve my experience of running Linux on my convertible laptop. Hence this thread, please feel free to drop in Linux tweaks, extensions or even your favorite apps that provide good support for touch or convertible laptops.
+ ​
+ Warm regards to everyone.
+    submitted by    /u/StupidVetala  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[更新 watchOS 9 正式版后，这些功能值得一试]]></title>
+        <id>https://sspai.com/post/75744</id>
+        <link href="https://sspai.com/post/75744"/>
+        <updated>2022-09-17T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[经过多个版本的测试，watchOS9的正式版也于9月13日和AppleWatch用户正式见面。只要你的手表是AppleWatchSE、AppleWatchSeries4及更新的表款，那么就可以通过运行 ...查看全文]]></summary>
+        <author>
+            <name>宛潼</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[升级款 Kindle Paperwhite 5  存储容量提升至 16GB]]></title>
+        <id>https://bookfere.com/?p=46292</id>
+        <link href="https://bookfere.com/post/1011.html"/>
+        <updated>2022-09-17T05:07:32.000Z</updated>
+        <summary type="html"><![CDATA[在 2022 全新入门版 Kindle 发布后不久，亚马逊上架了存储容量为 16GB 的 Kindle Paperwhite 5 设备，其它配置不变。广告版售价为 149.99 美元，无广告版售价为 169.99 美元，相比 8GB 版本分别加价 10 美元。]]></summary>
+        <author>
+            <name>书伴</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Which music streaming service do you guys use?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/xgco5l/which_music_streaming_service_do_you_guys_use/</id>
+        <link href="https://www.reddit.com/r/linux/comments/xgco5l/which_music_streaming_service_do_you_guys_use/"/>
+        <updated>2022-09-17T04:34:33.000Z</updated>
+        <summary type="html"><![CDATA[I've used YouTube music for most of my life but recently got better audio equipment and well uh, a lot of it isn't that great
+ I took the 90 day Amazon Music free trial option and I've been loving it on my phone, the quality is much better, but it seems like there's no way to get it to play HD music on Linux? Only the desktop app seems to support it so I'm stuck with SD music on Linux
+ So I was wondering what music streaming services work well with Linux, if any. Would prefer a desktop app (though I don't mind if it's a third party app) and HD music. Bonus points if they have a free trial and/or a student discount and decent recommendations
+ Thanks everyone!
+    submitted by    /u/Cuddlyaxe  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AOD、灵动岛、相机，这才是 Pro 的完全体？iPhone 14 Pro 首发体验]]></title>
+        <id>https://sspai.com/post/75762</id>
+        <link href="https://sspai.com/post/75762"/>
+        <updated>2022-09-17T03:35:04.000Z</updated>
+        <summary type="html"><![CDATA[4800W 的相机表现怎么样？灵动岛好不好用？AOD 都能显示什么？不管发布会讲没讲到的，我都尽可能为大家将一一解答。查看全文]]></summary>
+        <author>
+            <name>两颗皮蛋</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[一派·Podcast | 毕业论文避坑指南]]></title>
+        <id>https://sspai.com/post/75448</id>
+        <link href="https://sspai.com/post/75448"/>
+        <updated>2022-09-17T03:00:00.000Z</updated>
+        <summary type="html"><![CDATA[毕业论文该如何顺利完成开题、写作和答辩环节？我们请到了有二十余年学术经验的 @玉树芝兰 开出这份避坑指南。查看全文]]></summary>
+        <author>
+            <name>数字工具组</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[“The Suck” (Learning Anything by Writing It Out by Hand)]]></title>
         <id>https://news.ycombinator.com/item?id=32873563</id>
@@ -1168,6 +1788,34 @@ via: https://www.debugpoint.com/dark-mode-browser/
 本文由 LCTT 原创编译，Linux中国 荣誉推出]]></summary>
         <author>
             <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[澳门称健康码遭来自欧美地区300多万次攻击]]></title>
+        <id>https://www.williamlong.info/archives/6925.html</id>
+        <link href="https://www.williamlong.info/archives/6925.html"/>
+        <updated>2022-09-15T14:32:54.000Z</updated>
+        <summary type="html"><![CDATA[《澳门日报》15日称，去年5月初澳门健康码连续两天遭受境外网络攻击，导致部分人无法转换粤康码，珠澳出入境大受影响，关口一度人流拥挤。9月14日，修改《维护国家安全法》最后一场业界咨询举行。保安司司长黄少泽特别谈及去年5月这起事件，他说，经调查发现这是来自欧美地区的持续性攻击，多达300多万次。特区政府认为这并非普通的网络攻击，明显是想影响澳门的整体社会运作。
+
+
+　　黄少泽称，维护国安不仅是特区的宪制责任，也是包括澳门居民在内的全中国人民的法定责任，而关键基础设施与民生息息相关，以信息系统而言，一旦遭到网络攻击，严重者可对国家造成致命打击。为此，特区政府于2019年年底出台网络安全法，依法对澳门关键基础设施的信息系统开展防范性的安全管理，通过维护澳门网络安全，助力筑牢国家总体安全屏障。司警局局长薛仲明称，澳门每天都遭到大大小小的网络攻击，去年平均每分钟约受到3.4次攻击。
+
+
+　　今年8月22日，澳门特区政府宣布就修订《维护国家安全法》，即日起至10月5日展开公众咨询。修改《维护国家安全法》咨询文本建议增订教唆或支持叛乱罪，把与叛国、分裂国家或颠覆犯罪相关的教唆或帮助行为独立成罪；增补涉及公然和直接煽动他人参与危害国家稳定的骚乱的罪状，予以惩处；加重窃取国家机密罪的处罚；并把颠覆中央人民政府罪，修订为颠覆国家政权罪；增加试图推翻等罪，涵盖其他非暴力非法手段做出的颠覆行为。
+
+
+　　来源：环球时报
+
+
+　　微评：我觉得，健康码被攻击，主要应该是IT技术人员的锅。
+
+
+　　健康码这种系统要防止网络攻击，我一个外行都能想出很简单的应对方法：根据IP地址和位置信息，澳门以外的IP和位置拒绝访问。试问这么设置之后，欧美地区的黑客还怎么进行攻击呢？
+
+
+　　健康码系统的开发，应该有好几年了，这么多年还解决不了这么基础的安全问题，这还不是技术人员的水平问题吗？]]></summary>
+        <author>
+            <name>user@gmail.com (guest)</name>
         </author>
     </entry>
     <entry>
@@ -21626,828 +22274,6 @@ Points: 194
 # Comments: 44]]></summary>
         <author>
             <name>ClaireBookworm</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] The ABI status of ELF hash tables]]></title>
-        <id>https://lwn.net/Articles/904892/</id>
-        <link href="https://lwn.net/Articles/904892/"/>
-        <updated>2022-08-19T14:28:29.000Z</updated>
-        <summary type="html"><![CDATA[It is fair to say that some projects are rather more concerned about
-preserving ABI compatibility than others; the GNU C Library (glibc) project 
-stands out even among those that put a lot of effort into preserving
-interface stability,
-So it may be a bit surprising that a recent glibc change is being
-blamed for breaking a number of applications, most of which are proprietary
-games.  There is, it seems, a class of glibc changes that can break
-applications, but which are not deemed to be ABI changes.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Friday]]></title>
-        <id>https://lwn.net/Articles/905265/</id>
-        <link href="https://lwn.net/Articles/905265/"/>
-        <updated>2022-08-19T13:43:19.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Debian (ruby-tzinfo), Mageia (nvidia-current and nvidia390), SUSE (python-PyYAML, ucode-intel, and zlib), and Ubuntu (linux-aws, postgresql-10, postgresql-12, postgresql-14, and rsync).]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[GCC 12.2 Released. Over 70 bug fixes.]]></title>
-        <id>https://www.reddit.com/r/linux/comments/wse5qt/gcc_122_released_over_70_bug_fixes/</id>
-        <link href="https://www.reddit.com/r/linux/comments/wse5qt/gcc_122_released_over_70_bug_fixes/"/>
-        <updated>2022-08-19T13:33:29.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/rhy0lite  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Everyone hates ChromeOS...so why not create a competitor?]]></title>
-        <id>https://www.reddit.com/r/linux/comments/wsd7vk/everyone_hates_chromeosso_why_not_create_a/</id>
-        <link href="https://www.reddit.com/r/linux/comments/wsd7vk/everyone_hates_chromeosso_why_not_create_a/"/>
-        <updated>2022-08-19T12:49:56.000Z</updated>
-        <summary type="html"><![CDATA[One thing I haven't seen is a re-roll of this concept, using Firefox or ungoogled Chromium. Or even Googled Chromium or Edge. Put just enough Linux and DE underneath it to support it, use FUSE to access a cloud filesystem (you could even use rclone to support multiple different ones) you could even use a WM, make it goof proof, and put it out there as an alternative to ChromeOS FLEX. I know people dislike ChromeOS for a variety of reasons, but complaining about it doesn't help when there isn't an alternative to offer.
-    submitted by    /u/npaladin2000  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[派周报 | 本周会员内容提要；跑题：小处不可随便]]></title>
-        <id>https://sspai.com/prime/story/pi-weekly-005</id>
-        <link href="https://sspai.com/prime/story/pi-weekly-005"/>
-        <updated>2022-08-19T11:58:15.000Z</updated>
-        <summary type="html"><![CDATA[在如今新工具层出不穷、令人眼花缭乱的情况下，一个产品以怎样的方式、态度和水平去设计主页、撰写文档和提供支持，本身就是一个很有效的筛选标准。
-[......]
-查看全文
-本文为会员文章，出自《单篇文章》，订阅后可阅读全文。]]></summary>
-        <author>
-            <name>PlatyHsu</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[What’s a kernel headers package anyway]]></title>
-        <id>https://www.reddit.com/r/linux/comments/wsc1zp/whats_a_kernel_headers_package_anyway/</id>
-        <link href="https://www.reddit.com/r/linux/comments/wsc1zp/whats_a_kernel_headers_package_anyway/"/>
-        <updated>2022-08-19T11:53:10.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/speckz  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[mDNS for Linux]]></title>
-        <id>https://www.reddit.com/r/linux/comments/wsbysq/mdns_for_linux/</id>
-        <link href="https://www.reddit.com/r/linux/comments/wsbysq/mdns_for_linux/"/>
-        <updated>2022-08-19T11:48:45.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/speckz  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[如何在 Linux 中实时监控日志文件（桌面和服务器）]]></title>
-        <id>https://linux.cn/article-14947-1.html?utm_source=rss&amp;utm_medium=rss</id>
-        <link href="https://linux.cn/article-14947-1.html?utm_source=rss&amp;utm_medium=rss"/>
-        <updated>2022-08-19T11:46:00.000Z</updated>
-        <summary type="html"><![CDATA[本教程介绍了如何实时监控 Linux 日志文件（桌面、服务器或应用）以进行诊断和故障排除。
-
-
-当你在 Linux 桌面、服务器或任何应用中遇到问题时，你首先会查看单独的日志文件。日志文件通常是文本流和来自应用的带有时间戳的消息。它可以帮助你缩小特定问题的范围，并使你能够找到问题的原因。它还可以帮助从网络获得帮助。
-
-一般来说，所有的日志文件都位于 /var/log。此目录包含特定应用和服务的扩展名为 .log 的日志文件，它还包含了其他含有日志的独立目录。
-
-
-
-所以，如果你想监控一堆日志文件或特定的一个，这里有一些方法可以做到。
-
-Linux 实时监控日志文件
-
-使用 tail 命令
-
-tail 命令是实时跟踪日志文件的最基本方式。特别是如果你在只有终端而没有 GUI 的服务器中。这很有帮助。
-
-基本语法如下：
-
-tail /path/to/log/file
-
-
-用法：
-
-
-
-可以使用开关 -f 跟踪实时更新的日志文件。例如，如果要关注 syslog，可以使用以下命令。
-
-tail -f /var/log/syslog
-
-
-你可以使用单个命令监控多个日志文件：
-
-tail -f /var/log/syslog /var/log/dmesg
-
-
-如果要监视 HTTP 或 sftp 或任何服务器，可以在此命令中使用它们各自的日志文件。
-
-请记住，上述命令需要管理员权限。
-
-使用 lnav（日志文件浏览器）
-
-
-
-lnav 是一个出色的程序，你可以用它来用彩色编码的信息以更有条理的方式监控日志文件。在 Linux 系统中，这个工具不是默认安装的。你可以用下面的命令来安装它：
-
-Ubuntu：
-
-sudo apt install lnav
-
-
-Fedora：
-
-sudo dnf install lnav
-
-
-lnav 的好处在于，如果你不想安装它，你可以下载其预编译的可执行文件并在任何地方运行它，甚至可以从 U 盘上运行。无需设置，并加载了功能。使用 lnav，你可以通过 SQL 查询日志文件，以及其他很酷的功能，你可以在其官方网站上学习。
-
-安装后，你可以在具有管理员权限的终端上运行 lnav，它会默认显示 /var/log 中的所有日志并开始实时监控。
-
-关于 systemd 的 journalctl 的一个说明
-
-当今所有现代 Linux 发行版都主要使用 systemd。 systemd 提供了运行 Linux 操作系统的基本框架和组件。 systemd 通过 journalctl 提供日志服务，这有助于管理来自所有 systemd 服务的日志。你还可以使用以下命令实时监控各个 systemd 服务和日志。
-
-journalctl -f
-
-
-以下是一些特定的 journalctl 命令，可用于多种情况。你可以将这些与上面的 -f 选项结合使用以开始实时监控。
-
-对于紧急系统消息，请使用：
-
-journalctl -p 0
-
-
-显示带有解释的错误：
-
-journalctl -xb -p 3
-
-
-使用时间控制过滤：
-
-journalctl --since "2022-12-04 06:00:00"
-journalctl --since "2022-12-03" --until "2022-12-05 03:00:00"
-journalctl --since yesterday
-journalctl --since 09:00 --until "1 hour ago"
-
-
-如果你想了解更多关于 journalctl 的详细信息，我已经在这写了份 指南。
-
-结束语
-
-我希望这些命令和技巧可以帮助你找到桌面或服务器中问题/错误的根本原因。有关更多详细信息，你可以随时参考手册页并使用各种选项。如果你对本文有任何意见或想法，请使用下面的评论栏告诉我。
-
-干杯。
-
-
-via: https://www.debugpoint.com/monitor-log-files-real-time/
-
-作者：Arindam 选题：lkxed 译者：geekpi 校对：wxy
-
-本文由 LCTT 原创编译，Linux中国 荣誉推出]]></summary>
-        <author>
-            <name>linux@linux.cn (linux)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[硬核观察 #733 听别的电脑放歌会崩溃的笔记本电脑]]></title>
-        <id>https://linux.cn/article-14946-1.html?utm_source=rss&amp;utm_medium=rss</id>
-        <link href="https://linux.cn/article-14946-1.html?utm_source=rss&amp;utm_medium=rss"/>
-        <updated>2022-08-19T11:33:52.000Z</updated>
-        <summary type="html"><![CDATA[听别的电脑放歌会崩溃的笔记本电脑
-
-微软的一位工程师分享了一个 Windows XP 时代的故事：某些型号的笔记本电脑在播放珍妮·杰克逊的上世纪八十年代的热门音乐视频《节奏国度》时会崩溃。更离奇的是相邻的一台未播放音乐的笔记本电脑也崩溃了。原因是《节奏国度》中的音频与某款笔记本硬盘发生共振，会干扰其运行。该 bug 被赋予了正式的 CVE 编号 CVE-2022-38392。还好这些电脑是 2005 年上市的，基本上已经淘汰。
-
-
-消息来源：ARS Technica
-
-
-
-老王点评：这音乐太劲爆了，笔记本电脑脆弱的小心脏受不了。
-
-
-
-
-骗子利用带有微软徽标的 U 盘来诈骗
-
-一位安全顾问称，接到了一个印刷有微软品牌的欺诈 U 盘。该 U 盘被包装在一个 Office 2021 专业版的纸盒内。当用户将该 U 盘插入他们的电脑之后，就会弹出一条假的警告信息，告知用户他们的系统中存在病毒，并提示受害者拨打技术支持电话，这显然是骗子使用的号码。然后，骗子要求受害者安装一个远程访问程序来接管系统。
-
-
-消息来源：Sky News
-
-
-
-老王点评：这诈骗真是用心了，还专门弄了包装盒和印刷了徽标的 U 盘。
-
-
-
-
-DDoS 攻击新纪录：每秒请求超过 4600 万次
-
-今年 6 月，Cloudflare 报告遭遇了有史以来最大规模的 DDoS 网络攻击，峰值每秒请求高达 2600 万次。这刷新了 2021 年 8 月创下的 1720 万次和 2022 年 4 月创下的 1530 万次。不过谷歌最近披露的一个数据创造了新纪录：峰值达到了每秒 4600 万次。攻击于 6 月 1 日凌晨开始，速度为每秒 1 万次请求，但在 8 分钟后升至每秒 10 万次请求，此时 Cloud Armor 自适应保护启动。两分钟后，每秒请求数增加到 4600 万。攻击在 69 分钟内消失了，可能是因为被 Cloud Armor 挫败而没有达到预期的效果。
-
-
-消息来源：The Register
-
-
-
-老王点评：如果没有云服务商的 DDoS 防护服务，任谁也扛不住这种强度的攻击啊。]]></summary>
-        <author>
-            <name>linux@linux.cn (linux)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[本周看什么 | 最近值得一看的 6 部作品]]></title>
-        <id>https://sspai.com/post/75245</id>
-        <link href="https://sspai.com/post/75245"/>
-        <updated>2022-08-19T09:37:02.000Z</updated>
-        <summary type="html"><![CDATA[☕️TL;DR近期佳作推荐：[电影]壮志凌云：独行侠、[美剧]医院五日、[电影]新神榜：杨戬、[综艺]快乐再出发、[日剧]被捡到的男人、[美剧]好想做一次第三季几则精彩预告：TV动画《DoItYour ...查看全文]]></summary>
-        <author>
-            <name>少数派编辑部</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[一日一技 | 从这些记忆技巧开始，你也能学会注音输入法]]></title>
-        <id>https://sspai.com/post/75244</id>
-        <link href="https://sspai.com/post/75244"/>
-        <updated>2022-08-19T09:00:00.000Z</updated>
-        <summary type="html"><![CDATA[如果需要与台湾地区的朋友交流，比如想看懂注音梗与他们采用的缩写，或是想尝试注音输入法，了解注音符号显然有所帮助。查看全文]]></summary>
-        <author>
-            <name>北鸮</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[在《毁灭战士》中应用二叉空间分割（BSP）是何等天才之举？]]></title>
-        <id>https://linux.cn/article-14945-1.html?utm_source=rss&amp;utm_medium=rss</id>
-        <link href="https://linux.cn/article-14945-1.html?utm_source=rss&amp;utm_medium=rss"/>
-        <updated>2022-08-19T08:15:49.000Z</updated>
-        <summary type="html"><![CDATA[1993 年，游戏开发公司 id Software 发行了一款第一人称射击游戏 《毁灭战士DOOM》，游戏一经发行迅速爆火。在今天看来，《毁灭战士》可谓有史以来最具影响力的游戏之一。
-
-《毁灭战士》发行之后的第十年（2003 年），记者 大卫·库什纳David Kushner 出版了一本关于 id Software 的书，书名为《Doom 启示录Masters of Doom》，后被奉为记录毁灭战士创作史的典范读物。几年前我曾读过这本书，如今内容已记得不太真切了，但是书中有一个关于 id Software 首席程序员 约翰·卡马克John Carmack 的故事，我印象特别深刻。这里只对故事做粗略描述（具体情节请往下阅读）。实际上，早在《毁灭战士》开发前期，卡马克就发现自己为这款游戏编写的 3D 渲染器在渲染某些关卡时慢得像爬一样。对于《毁灭战士》这一对动感和速度有着相当高要求的射击游戏来说，这是一个非常严重的问题。意识到了这一问题的严重性，卡马克需要一个更加有效的渲染算法，于是他开始阅读相关论文。最后，他实现了一种叫做“二叉空间分割binary space partitioning（BSP）”的技术，极大地提升了《毁灭战士》游戏引擎的运行速度，而这项技术此前从未用于电子游戏当中。
-
-一直以来，我对这个故事的印象十分深刻。卡马克将学术前沿研究运用于电子游戏之中，我觉得这正是他之所以成为传奇人物的原因。无论从哪个角度来看，卡马克都应该是电子游戏行业中人尽皆知的典型的天才程序员，只不过上面这个故事是我最先能够想到的理由。
-
-显而易见，“二叉空间分割”这个术语听起来就是难度相当高的课题，能够自行阅读论文并将其付诸实施实属不易，所以这个故事给我留下了深刻的印象。我一直认为卡马克的做法十分具有创见性，不过由于我既不懂二叉空间分割到底是怎样的一项技术，也不晓得这项技术在当时究竟有…]]></summary>
-        <author>
-            <name>linux@linux.cn (linux)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[苹果与游戏开发者之间的黑盒]]></title>
-        <id>https://sspai.com/post/75219</id>
-        <link href="https://sspai.com/post/75219"/>
-        <updated>2022-08-19T08:05:05.000Z</updated>
-        <summary type="html"><![CDATA[未来是不是还有更多的可能性呢，其实我是非常非常期待的。查看全文]]></summary>
-        <author>
-            <name>两颗皮蛋</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[游牧教室的数字文具盒：主体为本，舒适第一]]></title>
-        <id>https://sspai.com/post/75159</id>
-        <link href="https://sspai.com/post/75159"/>
-        <updated>2022-08-19T03:22:13.000Z</updated>
-        <summary type="html"><![CDATA[Matrix首页推荐Matrix是少数派的写作社区，我们主张分享真实的产品体验，有实用价值的经验与思考。我们会不定期挑选Matrix最优质的文章，展示来自用户的最真实的体验和观点。文章代表作者个人观点 ...查看全文]]></summary>
-        <author>
-            <name>朱近野</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How is Linux more secure from hackers if it’s open source?]]></title>
-        <id>https://www.reddit.com/r/linux/comments/ws2s9w/how_is_linux_more_secure_from_hackers_if_its_open/</id>
-        <link href="https://www.reddit.com/r/linux/comments/ws2s9w/how_is_linux_more_secure_from_hackers_if_its_open/"/>
-        <updated>2022-08-19T03:02:44.000Z</updated>
-        <summary type="html"><![CDATA[If Linux is open source software, wouldn’t that leave it vulnerable to a hacker?
- I am learning about Linux for one of my classes. I understand that Linux is more secure due to privileges, but what I don’t understand is how it can be more secure when anyone can modify the OS code for it. Can someone explain to me how this works?
-    submitted by    /u/Temporary_Peach_7023  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ayntgl/discordo: 轻量级、安全且功能丰富的 Discord 终端客户端]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/b36abcb96cf3830dabd7de886b5751c07fcc27f2</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/b36abcb96cf3830dabd7de886b5751c07fcc27f2"/>
-        <updated>2022-08-19T01:57:30.000Z</updated>
-        <summary type="html"><![CDATA[ayntgl/discordo: 轻量级、安全且功能丰富的 Discord 终端客户端]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[yenche123/podcast-together: 跟你的好友一起实时在线听播客！]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/633bf8f8611d1582fae271a217ec1f0dcea1f8c6</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/633bf8f8611d1582fae271a217ec1f0dcea1f8c6"/>
-        <updated>2022-08-19T01:56:08.000Z</updated>
-        <summary type="html"><![CDATA[yenche123/podcast-together: 跟你的好友一起实时在线听播客！]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[go-cmd/cmd: Go 中的非阻塞外部命令，具有流式输出和并发安全访问]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/99d323e4807d58fa3f3fd9229773ecaeafa9e785</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/99d323e4807d58fa3f3fd9229773ecaeafa9e785"/>
-        <updated>2022-08-19T01:55:06.000Z</updated>
-        <summary type="html"><![CDATA[go-cmd/cmd: Go 中的非阻塞外部命令，具有流式输出和并发安全访问]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[michael-rubel/laravel-enhanced-pipeline: 具有 DB 事务支持、事件和其他方法的 Laravel 管道]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/6b2db9af5e4e390dc1bc5ec6095d1e20a6d5cc92</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/6b2db9af5e4e390dc1bc5ec6095d1e20a6d5cc92"/>
-        <updated>2022-08-19T01:54:19.000Z</updated>
-        <summary type="html"><![CDATA[michael-rubel/laravel-enhanced-pipeline: 具有 DB 事务支持、事件和其他方法的 Laravel 管道]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[discord-php/DiscordPHP: 与流行的消息应用程序 Discord 交互的 API]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/fddb347965974b038283f1c59d5488483b12c1b5</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/fddb347965974b038283f1c59d5488483b12c1b5"/>
-        <updated>2022-08-19T01:52:00.000Z</updated>
-        <summary type="html"><![CDATA[discord-php/DiscordPHP: 与流行的消息应用程序 Discord 交互的 API]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[nadar/php-composer-reader: 一个 PHP 库，用于读取和操作 composer.json 文件。]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/3300676bf6e7f0582fc6c068acef2f469bc49295</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/3300676bf6e7f0582fc6c068acef2f469bc49295"/>
-        <updated>2022-08-19T01:50:02.000Z</updated>
-        <summary type="html"><![CDATA[nadar/php-composer-reader: 一个 PHP 库，用于读取和操作 composer.json 文件。]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Lakr233/ActionBee: 一种可编程的纸板动作触发器]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/a602ace2fa6a974adcd2c58a8227016dd51413cd</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/a602ace2fa6a974adcd2c58a8227016dd51413cd"/>
-        <updated>2022-08-19T01:44:33.000Z</updated>
-        <summary type="html"><![CDATA[Lakr233/ActionBee: 一种可编程的纸板动作触发器]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The french speaking linux sub is back ! Join r/Linuxfr now !]]></title>
-        <id>https://www.reddit.com/r/linux/comments/ws0rd8/the_french_speaking_linux_sub_is_back_join/</id>
-        <link href="https://www.reddit.com/r/linux/comments/ws0rd8/the_french_speaking_linux_sub_is_back_join/"/>
-        <updated>2022-08-19T01:28:11.000Z</updated>
-        <summary type="html"><![CDATA[This is the return of r/Linuxfr !!! 
- We are back, we are open to everyone as soon as you can speak the minimum required french but you are welcome if you're still learning. 
- Since the french community is obviously smaller than the international one, we've merged r/unixporn r/linuxquestions r/linuxmemes r/linux_gaming r/linuxhardware and many many more in a flair format.
- If you know some folks that may be interested tell them we're here.
- If you want to have a french localisation for your app or a wiki you should start here. 
- Did you know that Lubuntu, Manjaroo and Lakka have french origins !
-    submitted by    /u/Le_Tintouin  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[派早报：联想新品发布会、Windows 11 小部件现在可以在任务栏触发通知]]></title>
-        <id>https://sspai.com/post/75230</id>
-        <link href="https://sspai.com/post/75230"/>
-        <updated>2022-08-19T01:01:54.000Z</updated>
-        <summary type="html"><![CDATA[海盗船发布 MP700 PCIe 5.0 SSD，UFS 4.0 协议正式公布等查看全文]]></summary>
-        <author>
-            <name>少数派编辑部</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[OT: FLAC is a really clever file format. Why can't everything be that clever?]]></title>
-        <id>https://www.reddit.com/r/linux/comments/wrzthk/ot_flac_is_a_really_clever_file_format_why_cant/</id>
-        <link href="https://www.reddit.com/r/linux/comments/wrzthk/ot_flac_is_a_really_clever_file_format_why_cant/"/>
-        <updated>2022-08-19T00:42:53.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/small_kimono  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[here-document bug fix (for now)]]></title>
-        <id>https://www.reddit.com/r/linux/comments/wrzqa6/heredocument_bug_fix_for_now/</id>
-        <link href="https://www.reddit.com/r/linux/comments/wrzqa6/heredocument_bug_fix_for_now/"/>
-        <updated>2022-08-19T00:38:33.000Z</updated>
-        <summary type="html"><![CDATA[TL;DR: Create a symbolic link from a RAM drive to /tmp.
-  
-here-document is a feature of the terminal which creates a file named sh-thd-*(some numbers)* in the temporary directory whenever the autocompletion feature (tab) is used on a directory (but not individual command parameters). The problem is that the feature becomes inoperable if the computer runs out of disk space, when the terminal might be necessary to move files elsewhere. Then, it spouts the error bash: cannot create temp file for here-document: No space left on device. Sometimes it does so twice for each "↹ tab" button press.
- So far, the only solution I could find is replacing /tmp with a symbolic link to a RAM drive directory. This is done by (1) Creating a RAM drive if one does not already have one, (2) renaming /tmp to something else like /tmp2 to move it out of the way, and (3) ln --symbolic /media/username/RAMdrive /tmp (or which ever user name and RAM drive directory name). 
- Perhaps the temporary directory location can be changed on operating system level, but that would require a reboot. Sadly, there is no known solution which can only change the here-document path without having to change the entire temporary directory.
-    submitted by    /u/ThrowAway237s  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[科技爱好者周刊（第 219 期）：如何防止帐号被黑]]></title>
-        <id>http://www.ruanyifeng.com/blog/2022/08/weekly-issue-219.html</id>
-        <link href="http://www.ruanyifeng.com/blog/2022/08/weekly-issue-219.html"/>
-        <updated>2022-08-19T00:21:03.000Z</updated>
-        <summary type="html"><![CDATA[这里记录每周值得分享的科技内容，周五发布。...]]></summary>
-        <author>
-            <name>阮一峰的网络日志</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[I have a Google Cloud Debian server with 32GB memory]]></title>
-        <id>https://www.reddit.com/r/linux/comments/wryzvn/i_have_a_google_cloud_debian_server_with_32gb/</id>
-        <link href="https://www.reddit.com/r/linux/comments/wryzvn/i_have_a_google_cloud_debian_server_with_32gb/"/>
-        <updated>2022-08-19T00:03:14.000Z</updated>
-        <summary type="html"><![CDATA[I got my hands on a GCP server with 32GB memory. I have no ideas what to do with this, any ideas? Not interested in a mail server or a VPN. Any other ideas are encouraged. Thanks.
- Also, if there are any cool things you'd like me to do, let me know. I'll be sure to do them.
-    submitted by    /u/atomthedeveloper  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Why is the OpenBSD documentation so good?]]></title>
-        <id>https://news.ycombinator.com/item?id=32515928</id>
-        <link href="https://dataswamp.org/~solene/2022-08-18-why-openbsd-documentation-is-good.html"/>
-        <updated>2022-08-18T23:10:42.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://dataswamp.org/~solene/2022-08-18-why-openbsd-documentation-is-good.html
-Comments URL: https://news.ycombinator.com/item?id=32515928
-Points: 58
-# Comments: 20]]></summary>
-        <author>
-            <name>zdw</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Managarm: August 2022 Update]]></title>
-        <id>https://news.ycombinator.com/item?id=32515546</id>
-        <link href="https://managarm.org/2022/08/14/aug-update.html"/>
-        <updated>2022-08-18T22:20:02.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://managarm.org/2022/08/14/aug-update.html
-Comments URL: https://news.ycombinator.com/item?id=32515546
-Points: 14
-# Comments: 2]]></summary>
-        <author>
-            <name>snvzz</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Simple mix of soap and solvent could help destroy ‘forever chemicals’]]></title>
-        <id>https://news.ycombinator.com/item?id=32515511</id>
-        <link href="https://www.science.org/content/article/simple-mix-soap-and-solvent-could-help-destroy-forever-chemicals"/>
-        <updated>2022-08-18T22:13:51.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.science.org/content/article/simple-mix-soap-and-solvent-could-help-destroy-forever-chemicals
-Comments URL: https://news.ycombinator.com/item?id=32515511
-Points: 89
-# Comments: 122]]></summary>
-        <author>
-            <name>ckcheng</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CPU-X (equivalent to Windows' CPU-Z) question: what do the "Prime numbers" in benchmark test mean?]]></title>
-        <id>https://www.reddit.com/r/linux/comments/wrvt4c/cpux_equivalent_to_windows_cpuz_question_what_do/</id>
-        <link href="https://www.reddit.com/r/linux/comments/wrvt4c/cpux_equivalent_to_windows_cpuz_question_what_do/"/>
-        <updated>2022-08-18T21:45:39.000Z</updated>
-        <summary type="html"><![CDATA[The CPU-X app provides user with two benchmarks: Prime Numbers (slow) and Prime Numbers (fast). 
- Ran them, they gave me result numbers. But what do they mean exactly?
- https://x0rg.github.io/CPU-X
-    submitted by    /u/algoth-niska  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[To Hell with Facebook (2021)]]></title>
-        <id>https://news.ycombinator.com/item?id=32514846</id>
-        <link href="https://www.damninteresting.com/to-hell-with-facebook/"/>
-        <updated>2022-08-18T21:01:57.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.damninteresting.com/to-hell-with-facebook/
-Comments URL: https://news.ycombinator.com/item?id=32514846
-Points: 194
-# Comments: 118]]></summary>
-        <author>
-            <name>mrzool</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Inappbrowser.com: TikTok browser injects code to monitor all keystrokes and taps]]></title>
-        <id>https://news.ycombinator.com/item?id=32514793</id>
-        <link href="https://krausefx.com/blog/announcing-inappbrowsercom-see-what-javascript-commands-get-executed-in-an-in-app-browser"/>
-        <updated>2022-08-18T20:57:57.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://krausefx.com/blog/announcing-inappbrowsercom-see-what-javascript-commands-get-executed-in-an-in-app-browser
-Comments URL: https://news.ycombinator.com/item?id=32514793
-Points: 409
-# Comments: 175]]></summary>
-        <author>
-            <name>krausefx</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[I love my GPD Micro PC]]></title>
-        <id>https://news.ycombinator.com/item?id=32513927</id>
-        <link href="https://blog.danieljanus.pl/2022/08/18/i-love-my-gpd-micro-pc/"/>
-        <updated>2022-08-18T19:36:47.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://blog.danieljanus.pl/2022/08/18/i-love-my-gpd-micro-pc/
-Comments URL: https://news.ycombinator.com/item?id=32513927
-Points: 178
-# Comments: 111]]></summary>
-        <author>
-            <name>nathell</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Third-polarizing-filter experiment demystified (2004)]]></title>
-        <id>https://news.ycombinator.com/item?id=32513651</id>
-        <link href="http://alienryderflex.com/polarizer/"/>
-        <updated>2022-08-18T19:10:13.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: http://alienryderflex.com/polarizer/
-Comments URL: https://news.ycombinator.com/item?id=32513651
-Points: 78
-# Comments: 42]]></summary>
-        <author>
-            <name>rahimnathwani</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[But You Told Me You Were Safe: Attacking the Mozilla Firefox Renderer (Part 1)]]></title>
-        <id>https://news.ycombinator.com/item?id=32513599</id>
-        <link href="https://www.thezdi.com/blog/2022/8/17/but-you-told-me-you-were-safe-attacking-the-mozilla-firefox-renderer-part-1"/>
-        <updated>2022-08-18T19:06:38.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.thezdi.com/blog/2022/8/17/but-you-told-me-you-were-safe-attacking-the-mozilla-firefox-renderer-part-1
-Comments URL: https://news.ycombinator.com/item?id=32513599
-Points: 56
-# Comments: 7]]></summary>
-        <author>
-            <name>todsacerdoti</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Unofficial Spotify Client for the Nintendo Switch (PoC)]]></title>
-        <id>https://news.ycombinator.com/item?id=32513532</id>
-        <link href="https://gbatemp.net/threads/90spot-spotify-for-nintendo-switch-proof-of-concept.617533/"/>
-        <updated>2022-08-18T19:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://gbatemp.net/threads/90spot-spotify-for-nintendo-switch-proof-of-concept.617533/
-Comments URL: https://news.ycombinator.com/item?id=32513532
-Points: 88
-# Comments: 17]]></summary>
-        <author>
-            <name>mogery</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Here is my solution for quick compression with GS [ghostscript]]]></title>
-        <id>https://www.reddit.com/r/linux/comments/wrrogr/here_is_my_solution_for_quick_compression_with_gs/</id>
-        <link href="https://www.reddit.com/r/linux/comments/wrrogr/here_is_my_solution_for_quick_compression_with_gs/"/>
-        <updated>2022-08-18T18:59:21.000Z</updated>
-        <summary type="html"><![CDATA[PDFcomp and its history
- Hello, in my spare time I started developing a script that radically simplifies the use of gs for compressing pdfs, a very useful practice for archiving or if you have to send it by mail and the maximum is 2Mb. 
- The fact is that this idea came to me when I was attending the second semester of industrial electrical engineering, because the pdfs that I had to archive on my Mac were many and therefore I developed an sh script to fix it in the most elegant way possible.
- Where can the script be found?
- The script can be found on my github repo because in my mania to share source code that one also got in the way, so it's available on github
- Link: https://github.com/NF02/pdfcomp
- How can you support me?
- Well, simple you can do it in two ways: - the first is by starting to follow me on Github and sharing both my youtube channel and my project or by contributing directly to the development of the project; - The second is by making me a small symbolic donation on my ko-fi account, because with that system you will not get rich but at least they are extra income that I can invest in case of any breakdowns or if I need to hire a collaborator in a heavy period. link: https://ko-fi.com/nfvblog
-    submitted by    /u/NFVblog  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Shouting in the Datacenter (2008) [video]]]></title>
-        <id>https://news.ycombinator.com/item?id=32513240</id>
-        <link href="https://www.youtube.com/watch?v=tDacjrSCeq4"/>
-        <updated>2022-08-18T18:32:13.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.youtube.com/watch?v=tDacjrSCeq4
-Comments URL: https://news.ycombinator.com/item?id=32513240
-Points: 310
-# Comments: 53]]></summary>
-        <author>
-            <name>mmastrac</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[EndeavourOS: A kinder, gentler terminal-centrism]]></title>
-        <id>https://www.reddit.com/r/linux/comments/wrqp53/endeavouros_a_kinder_gentler_terminalcentrism/</id>
-        <link href="https://www.reddit.com/r/linux/comments/wrqp53/endeavouros_a_kinder_gentler_terminalcentrism/"/>
-        <updated>2022-08-18T18:18:30.000Z</updated>
-        <summary type="html"><![CDATA[I've been thinking abhout writing this for a while, and with Manjaro having issues again, I thought maybe some of the Manjaro users might be looking for a new landing spot, and thismight help with the decision process.
- I know the first thing people think when they read "terminal centric" is a bunch of terminal sessions, typing commands to update, to install, to configure, not a GUI in sight. I certainly thought that, and still do to some degree. Some people find that intimidating, and some find it interesting. And while we're long past the concept of typing a memory address to excecute the code in that memory address, terminals still have the connotation of being "hard" for those less experienced.
- EndeavourOS proves there's a middle ground. Yes, there is a way to make the terminal, if no…]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Whytheluckystiff's original domain back as an archive]]></title>
-        <id>https://news.ycombinator.com/item?id=32513020</id>
-        <link href="https://whytheluckystiff.net/"/>
-        <updated>2022-08-18T18:12:31.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://whytheluckystiff.net/
-Comments URL: https://news.ycombinator.com/item?id=32513020
-Points: 299
-# Comments: 92]]></summary>
-        <author>
-            <name>samlambert</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Why remote desktop applications lack Wayland support?]]></title>
-        <id>https://www.reddit.com/r/linux/comments/wrq4zh/why_remote_desktop_applications_lack_wayland/</id>
-        <link href="https://www.reddit.com/r/linux/comments/wrq4zh/why_remote_desktop_applications_lack_wayland/"/>
-        <updated>2022-08-18T17:56:12.000Z</updated>
-        <summary type="html"><![CDATA[Since many distros switched to Wayland as a default display server I was expecting that at least some remote desktop software would support it, but so far I have not found fully working solution: 
-  
-Anydesk does not support at all
- Nomachine “supports” it by disabling Wayland (at least in my case on Fedora 36 with Gnome)
- Teamviewer has experimental support, which requires you be in front of your computer to grant access, which renders it unusable as a remote desktop
- default Gnome Remote Desktop does not have remote login yet, which makes it unusable if you forgot to log in to gnome session. Also, it requires gnome extension, so it works properly after logging in. 
-  
-It all makes me wonder what makes it so hard to get working remote desktop in Wayland? Or is it just because of demand lack?
-    submitted by    /u/NoMore9gag  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Millet, a Language Server for SML]]></title>
-        <id>https://news.ycombinator.com/item?id=32512715</id>
-        <link href="https://azdavis.net/posts/millet/"/>
-        <updated>2022-08-18T17:45:48.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://azdavis.net/posts/millet/
-Comments URL: https://news.ycombinator.com/item?id=32512715
-Points: 86
-# Comments: 22]]></summary>
-        <author>
-            <name>todsacerdoti</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Linux distros' marketing and mainstream social media]]></title>
-        <id>https://www.reddit.com/r/linux/comments/wrnx47/linux_distros_marketing_and_mainstream_social/</id>
-        <link href="https://www.reddit.com/r/linux/comments/wrnx47/linux_distros_marketing_and_mainstream_social/"/>
-        <updated>2022-08-18T16:26:58.000Z</updated>
-        <summary type="html"><![CDATA[This will probably be a controversial take, specially after seeing the reactions in the comments of the post that inspired me to start this marketing journey, but adapting to mainstream social media (in this case TikTok, Instagram, Twitter, YouTube and Facebook) is absolutely necessary if we ever hope to reach a bigger audience, and it's one of the main places almost all distros are lacking. I'm trying to help change that, and so can you.
- I'm a Fedora Linux contributor and recently became part of its marketing team, and the first project I'm taking is the Social media plan one, more specifically leading the Instagram revamping efforts, and for that I needed a lot of market research on how our competitors are handling their social media profiles. And here's the thing, while tech giants (Go…]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The PlanetScale serverless driver for JavaScript]]></title>
-        <id>https://news.ycombinator.com/item?id=32511577</id>
-        <link href="https://planetscale.com/blog/introducing-the-planetscale-serverless-driver-for-javascript"/>
-        <updated>2022-08-18T16:13:03.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://planetscale.com/blog/introducing-the-planetscale-serverless-driver-for-javascript
-Comments URL: https://news.ycombinator.com/item?id=32511577
-Points: 115
-# Comments: 39]]></summary>
-        <author>
-            <name>tbarn</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Just-in-time code generation within WebAssembly]]></title>
-        <id>https://news.ycombinator.com/item?id=32511420</id>
-        <link href="https://wingolog.org/archives/2022/08/18/just-in-time-code-generation-within-webassembly"/>
-        <updated>2022-08-18T16:01:46.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://wingolog.org/archives/2022/08/18/just-in-time-code-generation-within-webassembly
-Comments URL: https://news.ycombinator.com/item?id=32511420
-Points: 99
-# Comments: 7]]></summary>
-        <author>
-            <name>nickmain</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TCM Security offering Linux 101 for $1 through August 22nd - I have no affiliation with the org, just passing along for anyone that would be interested. Coupon code: DOLLARANDADREAM]]></title>
-        <id>https://www.reddit.com/r/linux/comments/wrn723/tcm_security_offering_linux_101_for_1_through/</id>
-        <link href="https://www.reddit.com/r/linux/comments/wrn723/tcm_security_offering_linux_101_for_1_through/"/>
-        <updated>2022-08-18T15:58:20.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/Intelligent-Will-255  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PayPal phishing scam uses invoices sent via PayPal]]></title>
-        <id>https://news.ycombinator.com/item?id=32511086</id>
-        <link href="https://krebsonsecurity.com/2022/08/paypal-phishing-scam-uses-invoices-sent-via-paypal/"/>
-        <updated>2022-08-18T15:35:06.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://krebsonsecurity.com/2022/08/paypal-phishing-scam-uses-invoices-sent-via-paypal/
-Comments URL: https://news.ycombinator.com/item?id=32511086
-Points: 224
-# Comments: 101]]></summary>
-        <author>
-            <name>shantanu_sharma</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[I built a vector map from scratch]]></title>
-        <id>https://news.ycombinator.com/item?id=32510759</id>
-        <link href="https://ckochis.com/building-a-vector-map-from-scratch"/>
-        <updated>2022-08-18T15:10:28.000Z</updated>
-        <summary type="html"><![CDATA[Hi HN
-I've used a lot of vector maps in the past, and was always fascinated by the technology, so I decided to try and build one from scratch as a way to learn more about how it works, and also as a reason to (finally) learn WebGL.
-I've uploaded the source to GitHub https://github.com/kochis/webgl-map
-Hope someone finds it useful / informative, and open to any feedback or tips as well. Cheers!
-Comments URL: https://news.ycombinator.com/item?id=32510759
-Points: 162
-# Comments: 31]]></summary>
-        <author>
-            <name>kocheez75</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[FedNow FAQ]]></title>
-        <id>https://news.ycombinator.com/item?id=32510581</id>
-        <link href="https://www.federalreserve.gov/paymentsystems/fednow_faq.htm"/>
-        <updated>2022-08-18T14:58:43.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.federalreserve.gov/paymentsystems/fednow_faq.htm
-Comments URL: https://news.ycombinator.com/item?id=32510581
-Points: 200
-# Comments: 216]]></summary>
-        <author>
-            <name>hnburnsy</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Supabase – Realtime: Multiplayer Edition]]></title>
-        <id>https://news.ycombinator.com/item?id=32510405</id>
-        <link href="https://supabase.com/blog/supabase-realtime-multiplayer-general-availability"/>
-        <updated>2022-08-18T14:45:20.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://supabase.com/blog/supabase-realtime-multiplayer-general-availability
-Comments URL: https://news.ycombinator.com/item?id=32510405
-Points: 317
-# Comments: 132]]></summary>
-        <author>
-            <name>samwillis</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Metal Archives 20th Anniversary]]></title>
-        <id>https://news.ycombinator.com/item?id=32510262</id>
-        <link href="https://www.metal-archives.com/news/view/id/284"/>
-        <updated>2022-08-18T14:36:48.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.metal-archives.com/news/view/id/284
-Comments URL: https://news.ycombinator.com/item?id=32510262
-Points: 112
-# Comments: 54]]></summary>
-        <author>
-            <name>mountainplus</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] The growing image-processor unpleasantness]]></title>
-        <id>https://lwn.net/Articles/904776/</id>
-        <link href="https://lwn.net/Articles/904776/"/>
-        <updated>2022-08-18T14:26:21.000Z</updated>
-        <summary type="html"><![CDATA[There was a time when care had to be taking when buying hardware if the
-goal was to run Linux on it.  The situation has improved considerably in
-recent decades, and unsupported hardware is more the exception than the
-rule.  That has, for many years, been especially true of Intel hardware;
-that company has made a point of ensuring that its offerings work with
-Linux.  So it is a bit surprising that the IPU6 image processor shipped
-with Alder Lake CPUs
-lacks support in Linux, and is unlikely to get it anytime soon.  The
-problem highlighted here goes beyond just Intel, though.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[LibreOffice 7.4 Community released]]></title>
-        <id>https://lwn.net/Articles/905088/</id>
-        <link href="https://lwn.net/Articles/905088/"/>
-        <updated>2022-08-18T14:19:20.000Z</updated>
-        <summary type="html"><![CDATA[The Document Foundation has announced the release of LibreOffice 7.4 Community, which is the community-supported version of the open-source office suite. Version 7.4 comes with new features for the suite as a whole (WebP and EMZ/WMZ support, ...), the Writer word-processor (better change tracking and hyphenation settings, ...), the Calc spreadsheet (16K columns, ...), and more. "Development is now focused on interoperability with Microsoft’s proprietary file formats, and many new features are targeted at users migrating from MS Office".  More information can be found in the release notes.]]></summary>
-        <author>
-            <name>jake</name>
         </author>
     </entry>
 </feed>
