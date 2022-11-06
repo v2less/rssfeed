@@ -2,10 +2,767 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://waytoarcher.github.io/rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-11-05T01:51:03.252Z</updated>
+    <updated>2022-11-06T01:53:32.380Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://waytoarcher.github.io/rssfeed/index.html"/>
     <link rel="self" href="https://waytoarcher.github.io/rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[NASA Puts Jet Propulsion Lab on Blast over Psyche Mission Failures]]></title>
+        <id>https://news.ycombinator.com/item?id=33487598</id>
+        <link href="https://futurism.com/the-byte/nasa-jpl-psyche-independent-review"/>
+        <updated>2022-11-06T00:55:36.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://futurism.com/the-byte/nasa-jpl-psyche-independent-review
+Comments URL: https://news.ycombinator.com/item?id=33487598
+Points: 22
+# Comments: 11]]></summary>
+        <author>
+            <name>zeristor</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Any accessibility packages that mimic the 'Hover Text' feature on Mac?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/ync12l/any_accessibility_packages_that_mimic_the_hover/</id>
+        <link href="https://www.reddit.com/r/linux/comments/ync12l/any_accessibility_packages_that_mimic_the_hover/"/>
+        <updated>2022-11-06T00:44:34.000Z</updated>
+        <summary type="html"><![CDATA[I live with minor visual impairment and while I generally have no problems seeing what's on my screen I occasionally find myself having to strain or lean in for smaller UI elements. I've tried altering the dpi and system wide font settings but I end up missing the extra screen real estate too much.
+ I've found the Hover Text accessibility feature on Mac to be the perfect solution for this; it renders whatever text your mouse is currently hovering over at a high resolution as long as a key is held down, and I believe the font and contrast can be customized. So far I can't find any such equivalents in my system's package database. The programs I have tried all spawn a persistent window that takes up significant amounts of space, and rather than rendering just the text they instead blow up everything in a specific screen region, resulting in highly pixelated text obscured by irrelevant background noise.
+ If a package doesn't already exist for it I would be willing to figure something out myself, even despite a lack of experience. The closest approximation I can think of off-hand would be to make a custom script that spawns an xzoom window on key-press, but that seems kind of fiddly and doesn't address the issue of the pixelated text. Is there a small cli program I can use to grab just the text string itself? Any other solutions or ideas would be greatly appreciated.
+    submitted by    /u/GroovyGoyim  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[如何清理 Snap 版本以释放磁盘空间]]></title>
+        <id>https://linux.cn/article-15219-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-15219-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2022-11-06T00:29:00.000Z</updated>
+        <summary type="html"><![CDATA[这个带有脚本的快速指南有助于清理旧的 Snap 版本并释放 Ubuntu 系统中的一些磁盘空间。
+
+
+我正在使用的 Ubuntu 测试系统中的磁盘空间不足。因此，我通过 GNOME 的磁盘使用分析器进行调查，以找出哪个包正在消耗宝贵的 SSD 空间。除了通常的缓存和主目录，令我惊讶的是，我发现 Snap 和 Flatpak 消耗了大量的存储空间。
+
+
+
+尽管如此，我始终坚持一个规则：除非必要，否则不要使用 Snap 或 Flatpak。这主要是因为它们的安装尺寸和其他问题。我更喜欢原生 deb 和 rpm 包。多年来，我在这个测试系统中安装和移除了一定数量的 Snap 包。
+
+但卸载后还有问题。Snap 在系统中保留了一些残留文件，一般用户不知道。
+
+所以我打开了 Snap 文件夹 /var/lib/snapd/snaps，发现 Snap 保留了以前安装/卸载的软件包的旧版本。
+
+例如，在下图中，你可以看到 GNOME 3.28、3.34 和 Wine 都被删除了。但它们还在那里。发生这种情况是因为 Snap 的设计，它在正确卸载后保留已卸载软件包的版本。
+
+
+
+或者，你可以在终端中使用：
+
+snap list --all
+
+
+
+
+对于保留的版本，默认值为 3。这意味着 Snap 会保留每个软件包的三个旧版本，包括活动版本。如果你对磁盘空间没有限制，这是可以的。
+
+但是对于服务器和其他情况，这很容易遇到成本问题，它会消耗你的磁盘空间。
+
+但是，你可以使用以下命令轻松修改计数。该值可以在 2 到 20 之间。
+
+sudo snap set system refresh.retain=2
+
+
+清理 Snap 版本
+
+在 SuperUser 的一篇文章中，Canonical 的前工程经理 Popey 提供了一个简单的脚本，它可以清理旧版本的 Snaps 并保留最新版本。
+
+这是我们将用来清理 Snap 的脚本。
+
+#!/bin/bash
+#Removes old revisions of snaps
+#CLOSE ALL SNAPS BEFORE RUNNING THIS
+set -eu
+LANG=en_US.UTF-8 snap list --all | awk '/disabled/{print $1, $3}' |
+while read snapname revision; do
+    snap remove "$snapname" --revision="$revision"
+done
+
+
+将上面的脚本以 .sh 扩展名保存在一个目录中（例如 clean_snap.sh），赋予它可执行权限并运行。
+
+chmod +x clean_snap.sh
+
+
+当我运行脚本后，它减少了很多磁盘空间。该脚本还将显示要删除的包的名称。
+
+
+
+
+
+结束语
+
+对于 Snap 的设计效率如何，人们总是争论不休。许多人说，它的设计是坏的，是臃肿的，是消耗系统资源的。这种说法的某些部分是真实的，我不会否认它。如果实施和加强得当，整个沙盒应用的概念是很好的。但我相信，与 Snap 相比，Flatpak 工作做得更好。
+
+也就是说，我希望这可以帮助你清理一些磁盘空间。尽管它只在 Ubuntu 中进行了测试，但它应该适用于所有支持 Snap 的 Linux 发行版。
+
+此外，请查看我们关于 如何清理 Ubuntu 的指南以及其他步骤。
+
+最后，如果你要清理 Flatpak 应用，请参阅 这篇指南。
+
+
+via: https://www.debugpoint.com/clean-up-snap/
+
+作者：Arindam 选题：lkxed 译者：geekpi 校对：wxy
+
+本文由 LCTT 原创编译，Linux中国 荣誉推出]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DIY Van Building with 8020 Extruded Aluminum]]></title>
+        <id>https://news.ycombinator.com/item?id=33487271</id>
+        <link href="https://engineerswhovanlife.com/extruded-aluminum-van-build-guide/"/>
+        <updated>2022-11-06T00:02:02.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://engineerswhovanlife.com/extruded-aluminum-van-build-guide/
+Comments URL: https://news.ycombinator.com/item?id=33487271
+Points: 6
+# Comments: 3]]></summary>
+        <author>
+            <name>walterbell</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Bashing new myths about digital nomads]]></title>
+        <id>https://news.ycombinator.com/item?id=33487211</id>
+        <link href="https://www.computerworld.com/article/3676669/bashing-4-new-myths-about-digital-nomads.html"/>
+        <updated>2022-11-05T23:53:59.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.computerworld.com/article/3676669/bashing-4-new-myths-about-digital-nomads.html
+Comments URL: https://news.ycombinator.com/item?id=33487211
+Points: 4
+# Comments: 0]]></summary>
+        <author>
+            <name>ohjeez</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Thoughts on the “Guard” Proposal for Go's Error Handling]]></title>
+        <id>https://news.ycombinator.com/item?id=33487178</id>
+        <link href="https://wagslane.dev/posts/guard-keyword-error-handling-golang/"/>
+        <updated>2022-11-05T23:48:53.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://wagslane.dev/posts/guard-keyword-error-handling-golang/
+Comments URL: https://news.ycombinator.com/item?id=33487178
+Points: 16
+# Comments: 12]]></summary>
+        <author>
+            <name>AlphaSite</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Anscombe's Quartet]]></title>
+        <id>https://news.ycombinator.com/item?id=33486949</id>
+        <link href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet"/>
+        <updated>2022-11-05T23:12:56.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://en.wikipedia.org/wiki/Anscombe%27s_quartet
+Comments URL: https://news.ycombinator.com/item?id=33486949
+Points: 4
+# Comments: 0]]></summary>
+        <author>
+            <name>tosh</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ask HN: My political party knows I haven't voted yet. How?]]></title>
+        <id>https://news.ycombinator.com/item?id=33486702</id>
+        <link href="https://news.ycombinator.com/item?id=33486702"/>
+        <updated>2022-11-05T22:41:46.000Z</updated>
+        <summary type="html"><![CDATA[California; just got the SMS.  How TF are they being notified of my voting activity?
+Comments URL: https://news.ycombinator.com/item?id=33486702
+Points: 23
+# Comments: 28]]></summary>
+        <author>
+            <name>everybodyknows</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pathfinding Visualizer]]></title>
+        <id>https://news.ycombinator.com/item?id=33486633</id>
+        <link href="https://pathfinding-visualizer-nu.vercel.app/"/>
+        <updated>2022-11-05T22:34:45.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://pathfinding-visualizer-nu.vercel.app/
+Comments URL: https://news.ycombinator.com/item?id=33486633
+Points: 96
+# Comments: 16]]></summary>
+        <author>
+            <name>eoinbarr</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Mastodon Explained]]></title>
+        <id>https://news.ycombinator.com/item?id=33486497</id>
+        <link href="https://mastodon.ie/@Ciaraioch/109287818715515862"/>
+        <updated>2022-11-05T22:18:05.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://mastodon.ie/@Ciaraioch/109287818715515862
+Comments URL: https://news.ycombinator.com/item?id=33486497
+Points: 125
+# Comments: 82]]></summary>
+        <author>
+            <name>ano-ther</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[3D OpenStreetMap]]></title>
+        <id>https://news.ycombinator.com/item?id=33485985</id>
+        <link href="https://demo.f4map.com/"/>
+        <updated>2022-11-05T21:26:27.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://demo.f4map.com
+Comments URL: https://news.ycombinator.com/item?id=33485985
+Points: 90
+# Comments: 22]]></summary>
+        <author>
+            <name>faebi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Microsoft sued for open-source piracy through GitHub Copilot]]></title>
+        <id>https://news.ycombinator.com/item?id=33485544</id>
+        <link href="https://www.bleepingcomputer.com/news/security/microsoft-sued-for-open-source-piracy-through-github-copilot/"/>
+        <updated>2022-11-05T20:49:50.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.bleepingcomputer.com/news/security/microsoft-sued-for-open-source-piracy-through-github-copilot/
+Comments URL: https://news.ycombinator.com/item?id=33485544
+Points: 127
+# Comments: 75]]></summary>
+        <author>
+            <name>redbell</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Big Linux - Historical Brazilian Linux Distribution - Now Based On Manjaro]]></title>
+        <id>https://www.reddit.com/r/linux/comments/yn4f2d/big_linux_historical_brazilian_linux_distribution/</id>
+        <link href="https://www.reddit.com/r/linux/comments/yn4f2d/big_linux_historical_brazilian_linux_distribution/"/>
+        <updated>2022-11-05T19:57:09.000Z</updated>
+        <summary type="html"><![CDATA[Back in 2003, there was a Brazilian distro called Kurumin, made by Carlos Eduardo Morimoto, which was a LiveCD based on Knoppix.
+ It was incredibly famous and many people here had their first experience with Linux with this distro.
+ In 2004, another project was started with the idea of expanding Kurumin... Big Linux.
+ The then-new project was and still is, lead by Bruno Gonçalves, known as Big Bruno.
+ In fact, in the very beginning, Big Linux was just a remastered Kurumin with more preinstalled stuff.
+ Kurumin has been defunct since 2008. 
+ But Big Linux remains active, has been, for 18 years. Although the project went dormant and almost got discontinued several times.
+ It was based on Debian until 2021, when it was rebased to Manjaro (and by extension, to Arch Linux).
+ Which means it's now a full blown rolling-release distro which packs the latest and greatest versions of almost all packages, including Linux 6.0.6 kernel and KDE Plasma 5.26.2 
+ It has its own artwork, in-house built tools, and a few custom desktop layouts to choose from. And of course has a ton of preinstalled software (living up to its name)!
+ The system is, as expected, due to its Manjaro base, very stable and fluid!
+ ​
+ Big Linux Project Home Page
+ ​
+ Big Linux Manjaro - Default Desktop
+ Dolphin and Big Linux Control Center
+ About Window
+ In-House Built App Store
+ Custom Desktop Layouts
+    submitted by    /u/OutcastByChoice  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[This Week in Open Source - Rust 1.65, Mozilla ventures, Linux Lite 6.2, Godot Foundation & more]]></title>
+        <id>https://www.reddit.com/r/linux/comments/yn1cw9/this_week_in_open_source_rust_165_mozilla/</id>
+        <link href="https://www.reddit.com/r/linux/comments/yn1cw9/this_week_in_open_source_rust_165_mozilla/"/>
+        <updated>2022-11-05T18:01:51.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/antsaregay  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Engineered ‘Superplant’ Cleans Indoor Air Like 30 Regular Plants]]></title>
+        <id>https://news.ycombinator.com/item?id=33483372</id>
+        <link href="https://singularityhub.com/2022/11/02/this-engineered-superplant-cleans-indoor-air-like-30-regular-plants/"/>
+        <updated>2022-11-05T17:12:30.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://singularityhub.com/2022/11/02/this-engineered-superplant-cleans-indoor-air-like-30-regular-plants/
+Comments URL: https://news.ycombinator.com/item?id=33483372
+Points: 196
+# Comments: 107]]></summary>
+        <author>
+            <name>andsoitis</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Physical Warp Drives (2021)]]></title>
+        <id>https://news.ycombinator.com/item?id=33483285</id>
+        <link href="https://iopscience.iop.org/article/10.1088/1361-6382/abdf6e"/>
+        <updated>2022-11-05T17:02:47.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://iopscience.iop.org/article/10.1088/1361-6382/abdf6e
+Comments URL: https://news.ycombinator.com/item?id=33483285
+Points: 59
+# Comments: 53]]></summary>
+        <author>
+            <name>JPLeRouzic</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Negative 2000 Lines of Code (1982)]]></title>
+        <id>https://news.ycombinator.com/item?id=33483165</id>
+        <link href="https://www.folklore.org/StoryView.py?story=Negative_2000_Lines_Of_Code.txt"/>
+        <updated>2022-11-05T16:48:58.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.folklore.org/StoryView.py?story=Negative_2000_Lines_Of_Code.txt
+Comments URL: https://news.ycombinator.com/item?id=33483165
+Points: 244
+# Comments: 127]]></summary>
+        <author>
+            <name>pvillano</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Creating a pick and place control board with the RP2040]]></title>
+        <id>https://news.ycombinator.com/item?id=33483141</id>
+        <link href="https://blog.thea.codes/starfish-a-control-board-with-the-rp2040/"/>
+        <updated>2022-11-05T16:46:06.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://blog.thea.codes/starfish-a-control-board-with-the-rp2040/
+Comments URL: https://news.ycombinator.com/item?id=33483141
+Points: 128
+# Comments: 15]]></summary>
+        <author>
+            <name>scottwick</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A Step by Step Backpropagation Example (2015)]]></title>
+        <id>https://news.ycombinator.com/item?id=33482968</id>
+        <link href="https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/"/>
+        <updated>2022-11-05T16:27:01.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/
+Comments URL: https://news.ycombinator.com/item?id=33482968
+Points: 90
+# Comments: 10]]></summary>
+        <author>
+            <name>bryan0</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Zebras of all stripes repel biting flies at close range]]></title>
+        <id>https://news.ycombinator.com/item?id=33482961</id>
+        <link href="https://www.nature.com/articles/s41598-022-22333-7"/>
+        <updated>2022-11-05T16:26:22.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.nature.com/articles/s41598-022-22333-7
+Comments URL: https://news.ycombinator.com/item?id=33482961
+Points: 94
+# Comments: 49]]></summary>
+        <author>
+            <name>jarenmf</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[World’s largest exoskeleton mech suit inspires a new sport]]></title>
+        <id>https://news.ycombinator.com/item?id=33482865</id>
+        <link href="https://tvpworld.com/61613436/worlds-largest-exoskeleton-mech-suit-inspires-a-new-sport"/>
+        <updated>2022-11-05T16:16:30.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://tvpworld.com/61613436/worlds-largest-exoskeleton-mech-suit-inspires-a-new-sport
+Comments URL: https://news.ycombinator.com/item?id=33482865
+Points: 85
+# Comments: 48]]></summary>
+        <author>
+            <name>mardiyah</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[New version gpu-viewer v1.43 release .. Just a Minor update]]></title>
+        <id>https://www.reddit.com/r/linux/comments/ymxh0y/new_version_gpuviewer_v143_release_just_a_minor/</id>
+        <link href="https://www.reddit.com/r/linux/comments/ymxh0y/new_version_gpuviewer_v143_release_just_a_minor/"/>
+        <updated>2022-11-05T15:39:25.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/neothenoone  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[php-build/php-build: 构建 PHP，以便可以并行使用多个版本。]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/43c97085cc293b1a20fc5723ee22a2675f6b3b82</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/43c97085cc293b1a20fc5723ee22a2675f6b3b82"/>
+        <updated>2022-11-05T15:31:47.000Z</updated>
+        <summary type="html"><![CDATA[php-build/php-build: 构建 PHP，以便可以并行使用多个版本。]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ask HN: Working in a VR Headset?]]></title>
+        <id>https://news.ycombinator.com/item?id=33482215</id>
+        <link href="https://news.ycombinator.com/item?id=33482215"/>
+        <updated>2022-11-05T15:11:35.000Z</updated>
+        <summary type="html"><![CDATA[I am working full remote right now(programming/gamedev) and I travel several times a year for periods of up to two months. Because of specifics of my job I need to have a powerful workstation(I mostly need a powerful CPU) and I am comfortable with at least two 27" monitors. Traveling with that much stuff is only possible with a car, and even then the whole setup takes too much space.
+Laptops are getting there with the compute power, but the 27" monitors aren't getting any smaller. Meta Quest Pro(which seems to be the top of the line now) has been just released and even tho it is somewhat pricey($1500), it still costs as much as three good 27" monitors.
+Does anyone have any useful experience to share on working in a VR headset? Is it comfortable for longer periods of time? How is it on the eyes?
+Comments URL: https://news.ycombinator.com/item?id=33482215
+Points: 139
+# Comments: 207]]></summary>
+        <author>
+            <name>penetrarthur</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Yellowstone to Yukon Conservation Initiative]]></title>
+        <id>https://news.ycombinator.com/item?id=33482196</id>
+        <link href="https://y2y.net/"/>
+        <updated>2022-11-05T15:09:09.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://y2y.net/
+Comments URL: https://news.ycombinator.com/item?id=33482196
+Points: 87
+# Comments: 44]]></summary>
+        <author>
+            <name>Amorymeltzer</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The RS-232 protocol [video]]]></title>
+        <id>https://news.ycombinator.com/item?id=33482166</id>
+        <link href="https://www.youtube.com/watch?v=AHYNxpqKqwo"/>
+        <updated>2022-11-05T15:06:07.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.youtube.com/watch?v=AHYNxpqKqwo
+Comments URL: https://news.ycombinator.com/item?id=33482166
+Points: 270
+# Comments: 76]]></summary>
+        <author>
+            <name>EgoIncarnate</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Flatseal is incredible. It's a GUI that let you manage all the permissions that you want to give to each app installed via Flatpak. It's VERY good.]]></title>
+        <id>https://www.reddit.com/r/linux/comments/ymth3a/flatseal_is_incredible_its_a_gui_that_let_you/</id>
+        <link href="https://www.reddit.com/r/linux/comments/ymth3a/flatseal_is_incredible_its_a_gui_that_let_you/"/>
+        <updated>2022-11-05T13:09:13.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/allexj  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ihatemoney.org - free and open source shared expenses manager]]></title>
+        <id>https://www.reddit.com/r/linux/comments/ymrvvv/ihatemoneyorg_free_and_open_source_shared/</id>
+        <link href="https://www.reddit.com/r/linux/comments/ymrvvv/ihatemoneyorg_free_and_open_source_shared/"/>
+        <updated>2022-11-05T11:56:19.000Z</updated>
+        <summary type="html"><![CDATA[Recently, I stumbled upon ihatemoney.org - a free and open source shared expenses manager and I found it great. It lets you create a group of members to manage settlements between them.
+ The service has both a web app and mobile apps (Android and iOS) and does not even require registration! This is a breath of fresh air because other apps like this will require an app to be downloaded on your phone, a registration and possibly a paid upgrade if you don't want ads.
+ Decided to share it here because the developers doubt the significance of this app.
+ There is a demo instance available for everyone to fiddle with - try it, no more guessing how much money you owe to whom on a group trip.
+    submitted by    /u/ifeeltiredboss  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[硬核观察 #811 用“古代”计算机建造可演奏的手风琴]]></title>
+        <id>https://linux.cn/article-15218-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-15218-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2022-11-05T08:52:00.000Z</updated>
+        <summary type="html"><![CDATA[用“古代”计算机建造可演奏的手风琴
+
+一位工程师用两台不带显示器的 Commodore 64 “古代”电脑作为键盘，用五寸软盘粘在一起作为风箱，制作了一台可以演奏的手风琴。这个项目采用了大量定制的软件和硬件黑科技。通过测量风箱挤压时通过的空气噪音并转换为信号。Commodore 电脑本身没有音频设备，音频信号是通过插孔输出发声的。Commodore 64 是有史以来最畅销的电脑，于 1982 年开始生产。
+
+
+消息来源：Ars Technica
+
+
+
+老王点评：有钱有闲的人才能做出来这些“无聊”项目。而为生活，甚至是为基本的生存需求而努力的人是不配谈这些的。有感而发，唉。
+
+
+
+
+Web 之父说 Web3 根本不是互联网
+
+发明 Web 的蒂姆·伯纳斯-李在里斯本周五举行的 Web 峰会上表示，“真正的 Web3 的名字被以太坊的人拿去做区块链的东西，这真是一个耻辱。事实上，Web3 根本就不是 Web。”Web3 是科技界的一个模糊的术语，用来描述一个假设的未来版本的互联网，它比今天更去中心化，而不被各大巨头所支配。他认为需要澄清 Web 3 和 Web 3.0，并开发了自己的 Web 3.0 项目 Solid。
+
+
+消息来源：CNBC
+
+
+
+老王点评：名词并不重要，重要的真正有用，依我看，Solid 也是空中楼阁，未必比以太坊等 Web 3 项目有希望。
+
+
+
+
+OpenAI 将为 10 家 AI 初创企业各提供 100 万美元支持
+
+开发了 GPT-3 和 DALL-E 2 等人工智能系统的 OpenAI，推出了一个新项目，为早期人工智能初创企业提供资金和访问 OpenAI 技术和资源。OpenAI 去年宣布了 1 亿美元的创业资金，得到了微软和其他合作伙伴的支持。OpenAI 表示，申请“不要求事先有人工智能系统的工作经验。”
+
+
+消息来源：Tech Crunch
+
+
+
+老王点评： AI 行业现在是投资热点，这一波 AI 热看来还不会过期。]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[This week in KDE: Big brain KRunner]]></title>
+        <id>https://www.reddit.com/r/linux/comments/ymnu6c/this_week_in_kde_big_brain_krunner/</id>
+        <link href="https://www.reddit.com/r/linux/comments/ymnu6c/this_week_in_kde_big_brain_krunner/"/>
+        <updated>2022-11-05T08:07:05.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/kyentei  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[在 Ubuntu 上安装 WoeUSB 来创建一个可启动 Windows USB]]></title>
+        <id>https://linux.cn/article-15217-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-15217-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2022-11-05T07:10:38.000Z</updated>
+        <summary type="html"><![CDATA[想在 Linux 上创建一个可启动 Windows USB ？Ventoy 是一个很好的选择。
+
+
+但是，在 Ventoy 出道之前，WoeUSB 是用于创建可启动 Windows USB 的首选工具。原版 WoeUSB 工程在 2014 年左右香消玉损。
+
+鉴于其流行程度，一位新的开发者接过了将其起死回生的任务。因此，WoeUSB-ng 诞生了。在这里，“ng” 是 新生代new generation 的缩写。换句话说，WoeUSB-ng 是新生代的 WoeUSB 。但是，因为原版的工具已经不存在了，我将 WoeUSB-ng 描述为 WoeUSB 。
+
+在这篇教程中，我将向你展示如何在 Ubuntu Linux 上安装 WoeUSB 。我也将分享使用 WoeUSB 来创建可启动 Windows USB 的步骤。
+
+但是，在此之前，让我们快速查看这个令人惊叹的工具的特色。
+
+WoeUSB
+
+
+
+WoeUSB 是一个简单的工具，其唯一的目的是 在 Linux 上创建可启动 Windows USB 。
+
+原版 WoeUSB 是一个 shell 脚本。这个原版 WoeUSB 被使用 Python 重写为 WoeUSB-ng ，它可以安装在你的系统上，并且通过命令行或 GUI 界面。
+
+特色：
+
+
+支持老式 PC 启动或 UEFI 启动
+
+支持 FAT32 和 NTFS 文件系统
+
+支持使用物理安装盘或磁盘镜像作为源
+
+它可以用于 Windows Vista 及其更高版本的任意语言或变体版本
+
+老式的 MBR/IBM PC 兼容启动模式
+
+本机 UEFI 启动支持 Windows 7 及其更高版本的镜像（仅限于将 FAT 文件系统作为目标的情况）
+
+
+在 Ubuntu 和其它的 Linux 发行版上安装 WoeUSB
+
+Arch Linux …]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[从两千到两万：双十一相机购买指南]]></title>
+        <id>https://sspai.com/post/76342</id>
+        <link href="https://sspai.com/post/76342"/>
+        <updated>2022-11-05T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[祝顺利买到心仪的相机，多出好片。查看全文]]></summary>
+        <author>
+            <name>Hermanchannn</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[马斯克回应推特裁员：公司每天亏损，裁员别无选择]]></title>
+        <id>https://www.williamlong.info/archives/6982.html</id>
+        <link href="https://www.williamlong.info/archives/6982.html"/>
+        <updated>2022-11-05T06:47:11.000Z</updated>
+        <summary type="html"><![CDATA[据福布斯网站11月4日报道，社交媒体公司推特3日晚在加州联邦法院遭到集体诉讼，被控违反联邦和州劳工法，未能在4日计划大规模裁员之前向其员工通知到位。据悉，推特计划裁员一半。
+
+
+据英国天空新闻网报道，埃隆·马斯克当地时间11月4日在推特发文回应推特公司裁员一事，马斯克在推特中写道：“关于推特公司裁员，不幸的是，当公司每天亏损超过400万美元时，这别无选择。每个离开的人都得到了3个月的遣散费，这比法律要求的高出50%。”
+
+
+美国亿万富翁埃隆·马斯克近期完成了对推特的收购交易，此前有媒体曝光，他计划裁员50%。综合英国路透社、美国全国广播公司（NBC）最新报道，推特公司当地时间3日晚间向员工发布电子邮件通告，公司方将从4日早上开始通过电子邮件方式告知员工是否被裁员。
+
+
+推特发送裁员通知，员工“一片混乱”
+
+
+全球首富、特斯拉CEO埃隆·马斯克近期完成了对推特的收购交易。有媒体曝光，他计划裁员50%。综合英国路透社、美国全国广播公司（NBC）最新报道，推特公司当地时间3日晚间向员工发布电子邮件通告，公司方将从4日早上开始通过电子邮件方式告知员工是否被裁员。
+
+
+据环球网援引NBC报道，推特通告称，“我们认识到这将影响到一些为推特做出了宝贵贡献的人，但不幸的是，为确保公司成功发展，这一（裁员）行动是有必要的。”
+
+
+报道还称，一名推特员工透露，11月3日的这封电子邮件是在马斯克于当地时间10月27日收购推特后，推特工作人员首次收到来自公司的联系。关于这封邮件的影响，这名员工还说："完全是一片混乱，一屋子（人）都崩溃了，所有人都在盯着这封邮件。”
+
+
+推特公司还表示，该公司的办公室将被暂时关闭，暂停任何门禁卡等证件的访问权限，以“帮助确保每名员工以及推特系统和客户数据的安全”。
+
+
+值得注意的是，推特员工当地时间3日在美国旧金山联邦法院提起集体诉讼，指控推特在没有给予足够通知的情况下启动大规模裁员，违反联邦和加州法律。
+
+
+在马斯克完成收购后，他对推特的改造计划受到关注，多家外媒报道称，他计划裁员50%。新加坡《联合早报》称，早些时候有消息称推特被收购后将裁员75%，但马斯克对此予以否认。不过，葛伯川崎财富和投资管理公司首席执行官戈贝尔说，管理马斯克资产的家族办公室负责人伯查尔告诉他，推特即将进行裁员，“预计大约有50%的人会被解雇”。
+
+
+《华盛顿邮报》称，据知情人士透露，推特员工总数超过7000人，马斯克团队正在决定第一轮裁员计划，目标是裁掉约1/4的员工。
+
+
+美国多家大型科技公司宣布裁员
+
+
+宣布裁员的远不止推特一家公司，受通货膨胀加剧和经济形势恶化的影响，美国多家大型科技公司当地时间3日宣布裁员或暂停招聘。
+
+
+据中新社消息，总部位于美国旧金山的在线支付公司Stripe首席执行官帕特里克·科里森3日在给员工的备忘录中说，公司将裁员14%。根据该备忘录，Stripe将把员工人数减少至约7000人，这意味着本轮裁员将影响约1100人。
+
+
+科里森说，在通货膨胀加剧、经济衰退、利率上升、能源危机、投资预算紧缩和创业资金短缺的影响之下，裁员是必要的。
+
+
+出行共享公司Lyft当日也宣布了裁员计划。在发给员工的备忘录中，Lyft首席执行官洛根·格林和总裁约翰·齐默表示，公司将裁员13%，所有部门都将受到影响。Lyft有5000多名员工，公司在3日提交的一份文件中确认了“解雇约683名员工”的计划。
+
+
+美国有线电视新闻网报道称，亚马逊3日表示，受经济环境影响，公司计划暂停招聘数月。另外，谷歌母公司“字母表”、脸书母公司元宇宙平台等大型科技公司也纷纷加大了成本控制的力度。
+
+
+稿源：国际在线]]></summary>
+        <author>
+            <name>user@gmail.com (guest)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[如何满足小众的录屏需求？自己配置 FFmpeg 解决问题]]></title>
+        <id>https://sspai.com/post/76637</id>
+        <link href="https://sspai.com/post/76637"/>
+        <updated>2022-11-05T03:00:00.000Z</updated>
+        <summary type="html"><![CDATA[当所有的录屏应用都无法满足我时，我的目光投向了那个最终极的命令行工具，FFmpeg。查看全文]]></summary>
+        <author>
+            <name>清顺</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[如何检查： 是 Xorg 还是 Wayland 显示服务器？]]></title>
+        <id>https://linux.cn/article-15216-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-15216-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2022-11-05T02:29:32.000Z</updated>
+        <summary type="html"><![CDATA[以下是快速检查在运行 Xorg 还是 Wayland 显示服务器的方法。
+
+
+随着时间的推移，现代 Wayland 显示服务器正在进入所有 Linux 发行版。尽管老旧的 Xorg 仍然能用并且会继续存在，但 Wayland 无疑在安全性和其他性能方面更好。
+
+但是，Xorg 不会很快完全淘汰。可能永远不会。
+
+如果你在运行任何 Linux 发行版，如何检查运行的是 Xorg 还是 Wayland？下面是方法。
+
+Wayland 或 Xorg：你在运行哪一个？
+
+在你的 Linux 发行版（例如 Ubuntu、Fedora、Arch 等）中打开一个终端窗口（CTRL+ALT+T）。
+
+然后输入以下命令并回车：
+
+echo $XDG_SESSION_TYPE
+
+
+命令输出会告诉你当前会话是 Wayland 还是 Xorg（X11）。
+
+[debugpoint@fedora ~]$ echo $XDG_SESSION_TYPEwayland
+
+
+
+
+这很简单。但是，还有其他方法。
+
+其他方法
+
+使用设置
+
+如果你需要图形方法，请打开你的 Linux 发行版的设置应用。在关于部分，你应该看到某个标签下中的 Wayland/X11。
+
+例如，在 GNOME 设置中，你可以在 “窗口子系统Windowing system” 下找到它，如下图所示：
+
+
+
+使用会话值
+
+你还可以使用 systemd 登录管理器 loginctl 找到它。请记住，它仅适用于基于 systemd 的系统。
+
+打开终端并运行以下命令。你可以看到会话 id 值。在此示例中为 c2：
+
+loginctl
+
+
+现在，将会话 ID 传递给以下命令以获取显示服务器类型。确保将 c2 更改为你的系统规格。
+
+loginctl show-session c2 -p Type
+
+
+
+
+总结
+
+这些是你可以确定在 Linux 系统中运行的是 Systemd 还是 Xorg 的一些方法。你还可以在 shell 脚本中使用上述命令来实现进一步的流程自动化。
+
+祝好。
+
+
+via: https://www.debugpoint.com/check-wayland-or-xorg/
+
+作者：Arindam 选题：lkxed 译者：geekpi 校对：wxy
+
+本文由 LCTT 原创编译，Linux中国 荣誉推出]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[libdecor (library for client-side decorators on Wayland) just merged support for using GTK decorators!]]></title>
+        <id>https://www.reddit.com/r/linux/comments/ymh5ob/libdecor_library_for_clientside_decorators_on/</id>
+        <link href="https://www.reddit.com/r/linux/comments/ymh5ob/libdecor_library_for_clientside_decorators_on/"/>
+        <updated>2022-11-05T02:00:13.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/TheBrokenRail-Dev  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[12 个对新手最重要的 Linux 命令]]></title>
+        <id>https://linux.cn/article-15215-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-15215-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2022-11-05T01:23:10.000Z</updated>
+        <summary type="html"><![CDATA[我向所有的 Linux 初学者推荐以下这些命令。
+
+
+
+
+在使用 Linux 命令行时，很容易就会迷失方向，这可能会导致灾难性的后果：我有一次使用删除命令 rm 删除文件，然而删除之后我才意识到我刚刚是删除了计算机的引导目录。后来，我学会了使用 pwd 命令，来知道当前在文件系统的哪个目录下；并且我使用了 trashy 和 trash-cli 这一命令行回收站工具（LCTT 译注：在删除文件时 trash-cli 会充当中间人，将文件先“删除”到桌面上的垃圾箱中，能够通过垃圾箱或通过终端的 trash 命令，来恢复垃圾箱中已删除的文件。）
+
+当我刚开始使用 Linux 时，我有一个放在桌子上的“速查表”，它就是《101 条你应该知道的 Linux 命令》，我在管理 Linux 服务器时能参考速查表上面的这些命令。随着我越来越熟悉这些命令，我越来越精通服务器管理了。
+
+以下是我认为最有用的 12 个 Linux 命令。
+
+1、打印工作目录（pwd）
+
+pwd 命令会打印出你的工作目录。换句话来说，它输出你当前所在目录的路径。pwd 命令有两种选项：-L 或 --logical（即逻辑路径）用来打印当前的目录路径（不解析符号链接），-P 或 --physial（即物理路径）会打印出解析符号链接后的物理目录。（LCTT 译注：你可以进一步阅读我们翻译的 另一篇文章。）
+
+2、创建目录（mkdir）
+
+使用 mkdir 命令来创建一个新目录，是非常容易的。以下命令，创建了一个名为 example 目录（若 example 已存在，则无法创建）：
+
+$ mkdir example
+
+
+你也可以在嵌套地创建目录及其子目录：
+
+$ mkdir -p example/one/two
+
+
+如果目录 example 和目录 one 都已存在，则仅会创建目录 two…]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Intel plans to rival TSMC and Samsung as a chip supplier]]></title>
         <id>https://news.ycombinator.com/item?id=33475749</id>
@@ -22655,640 +23412,6 @@ more significant changes to come.]]></summary>
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[硬核观察 #782 谷歌十年处理了 60 亿个“盗版”链接]]></title>
-        <id>https://linux.cn/article-15115-1.html?utm_source=rss&amp;utm_medium=rss</id>
-        <link href="https://linux.cn/article-15115-1.html?utm_source=rss&amp;utm_medium=rss"/>
-        <updated>2022-10-07T10:32:31.000Z</updated>
-        <summary type="html"><![CDATA[谷歌十年处理了 60 亿个“盗版”链接
-
-来自 32 万个版权所有者的撤销请求已经提交了 60 亿个 URL，谷歌已经批准了大多数请求。最活跃的十个组织总共报告了近 25 亿个 URL，而其中 40% 的删除请求涉及到 400 个域名。谷歌正在跟内容所有者合作，以在其索引之前将侵权网站列入黑名单。谷歌曾积极反对任何第三方限制网络索引的努力。现在，谷歌正在自愿跟这些第三方合作，并接受那些尚未被搜索引擎索引的链接的删除请求。
-
-
-消息来源：Tech Spot
-
-
-
-老王点评：反盗版当然是对的，但是这种撤销请求越来越有被滥用的迹象。
-
-
-
-
-19% 的钓鱼邮件绕过微软 Defender
-
-Avanan 的新研究表明，微软 Defender 的钓鱼邮件漏报率为 18.8%，而在 2020 年，这一比例是 10.8%。专门设计的金融类钓鱼邮件的漏报率甚至高达 42%。同时，Defender 将 7% 的钓鱼邮件当做垃圾邮件而没有识别为钓鱼邮件。不过，Defender 可以捕捉到 90% 的未知恶意软件，也能过滤 98% 的大宗商业邮件。
-
-
-消息来源：avanan
-
-
-
-老王点评：这个漏报率还是挺高的，我使用 gmail 的体验看似乎漏报更低。
-
-
-
-
-波士顿动力公司承诺不将其机器人武器化
-
-包括波士顿动力公司在内的六家机器人公司发表公开信，承诺不支持其产品的武器化，并呼吁该行业的其他公司也这样做。他们说，在可能的情况下，他们将审查客户的计划，希望避免那些将机器人变成武器的人，此外还将探索可以防止这种使用的技术特征。
-
-
-消息来源：axios
-
-
-
-老王点评：这似乎不是道德约束能解决的问题，机器人武器化是早晚的事。]]></summary>
-        <author>
-            <name>linux@linux.cn (linux)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Working with Btrfs – General Concepts]]></title>
-        <id>https://www.reddit.com/r/linux/comments/xxvd5z/working_with_btrfs_general_concepts/</id>
-        <link href="https://www.reddit.com/r/linux/comments/xxvd5z/working_with_btrfs_general_concepts/"/>
-        <updated>2022-10-07T10:19:52.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/jlpcsl  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Control Centre for KDE is HERE!]]></title>
-        <id>https://www.reddit.com/r/linux/comments/xxtwv6/control_centre_for_kde_is_here/</id>
-        <link href="https://www.reddit.com/r/linux/comments/xxtwv6/control_centre_for_kde_is_here/"/>
-        <updated>2022-10-07T08:49:08.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/haxguru  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Transmission 4.0.0-beta.1 is out with so many changes and new features that there's too many to list in one title!]]></title>
-        <id>https://www.reddit.com/r/linux/comments/xxttgz/transmission_400beta1_is_out_with_so_many_changes/</id>
-        <link href="https://www.reddit.com/r/linux/comments/xxttgz/transmission_400beta1_is_out_with_so_many_changes/"/>
-        <updated>2022-10-07T08:42:28.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/foundfootagefan  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[你不曾想到的奇妙用处，「在线会议」还有这些新玩法]]></title>
-        <id>https://sspai.com/post/76043</id>
-        <link href="https://sspai.com/post/76043"/>
-        <updated>2022-10-07T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[这几年疫情原因，线上会议逐渐成为大家日常生活场景之一。比如公司内开会、跨公司内外，亦或是各种丰富多样的线上分享。在线会议的存在，可谓是给人们提供了最直接又方便的连接。除了开会和分享，其实在线会议也可以 ...查看全文]]></summary>
-        <author>
-            <name>胖鱼要进步</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[A discussion on printk() [LWN.net] ... Deep dive!!]]></title>
-        <id>https://www.reddit.com/r/linux/comments/xxs7pn/a_discussion_on_printk_lwnnet_deep_dive/</id>
-        <link href="https://www.reddit.com/r/linux/comments/xxs7pn/a_discussion_on_printk_lwnnet_deep_dive/"/>
-        <updated>2022-10-07T06:58:44.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/unixbhaskar  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[More Arm SoCs, Smartphones (including PinePhone Pro!) & NVIDIA Control Backbone Bus Enabled With Linux 6.1]]></title>
-        <id>https://www.reddit.com/r/linux/comments/xxpb3t/more_arm_socs_smartphones_including_pinephone_pro/</id>
-        <link href="https://www.reddit.com/r/linux/comments/xxpb3t/more_arm_socs_smartphones_including_pinephone_pro/"/>
-        <updated>2022-10-07T04:13:49.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/oklopfer  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Google 的新手机和第一款手表，讲的是你已经听过的老故事]]></title>
-        <id>https://sspai.com/post/76051</id>
-        <link href="https://sspai.com/post/76051"/>
-        <updated>2022-10-07T04:00:31.000Z</updated>
-        <summary type="html"><![CDATA[Google 秋季硬件发布会回顾。查看全文]]></summary>
-        <author>
-            <name>克莱德</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[一个适用于苹果芯片的原生 Linux GPU 驱动程序几乎就绪！]]></title>
-        <id>https://linux.cn/article-15114-1.html?utm_source=rss&amp;utm_medium=rss</id>
-        <link href="https://linux.cn/article-15114-1.html?utm_source=rss&amp;utm_medium=rss"/>
-        <updated>2022-10-07T02:29:00.000Z</updated>
-        <summary type="html"><![CDATA[苹果 M1 上的原生 Linux GPU 驱动？它就快来了！
-
-
-
-
-让 Linux 在 苹果芯片Apple Silicon 设备上工作是我们很多人的愿望!
-
-感谢 Asahi Linux 项目，它现在对测试者来说已经成为现实。当然，它还没有准备好进入最佳时期，但如果你是一个资深 Linux 用户，你现在就可以在苹果 M1/M2 设备上尝试 Linux。
-
-现在，Linux 开发者 Asahi Lina 的一个令人兴奋的进展引起了我们所有人的注意。
-
-我们可能会比预期更早地拥有一个用 Rust 编写的原生 GPU 驱动程序。
-
-所以，这意味着什么？
-
-几个月前，Asahi Lina 加入了 Asahi Linux 项目，并开始 开发一个驱动程序原型 以在 Linux 上运行图形应用程序。
-
-现在，通过更多的调整和一些来自 Asahi Lina 对 M1 GPU 硬件接口的逆向工程的惊人的贡献，她已经成功地在苹果 M1 芯片上运行了 GNOME、KDE 应用程序，做到了在 Firefox 上播放 YouTube 等事情！
-
-以下是她 推特 的内容：
-
-
-GNOME 运行了！！Firefox 浏览器可以运行！你可以看 YouTube，玩 Neverball，运行 KDE 应用程序，以及更多！! 没有崩溃！！！
-
-在苹果 M1 的原生 Linux GPU 驱动上！!
-
-
-需要注意的是，这还没有在苹果 M2 上测试过。
-
-这里还有个视频，你可以看到它运行的情况：
-
-
-
-
-她还解释说：
-
-
-我使用了一个糟糕的黑科技来解决一个稳定性问题，这影响了性能，但它证明了这是唯一剩下的主要问题！一旦我把它修复好了，我们就会有完整的性能和稳定性！然后就只剩下 Mesa 驱动程序的修复了！！！
-
-
-当然，这还只是处于早期的开发，我们甚至没有在 Linux 内核中拥有 Rust 实现。所以，当 Rust 开始进入主线版本时，也就是 Linux 内核 6.1 或更新版本时，你可能会看到它越来越接近现实。
-
-尽管如此，这对 Asahi Linux 来说是一个不可思议的里程碑。随着一些发展，用户一定急于在苹果芯片设备上尝试 Linux。
-
-
-via: https://news.itsfoss.com/linux-gpu-driver-apple/
-
-作者：Ankush Das 选题：lkxed 译者：KevinZonda 校对：wxy
-
-本文由 LCTT 原创编译，Linux中国 荣誉推出]]></summary>
-        <author>
-            <name>linux@linux.cn (linux)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Why doesn't Bash's `set -e` do what I expected?]]></title>
-        <id>https://news.ycombinator.com/item?id=33116310</id>
-        <link href="http://mywiki.wooledge.org/BashFAQ/105"/>
-        <updated>2022-10-07T01:19:23.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: http://mywiki.wooledge.org/BashFAQ/105
-Comments URL: https://news.ycombinator.com/item?id=33116310
-Points: 3
-# Comments: 2]]></summary>
-        <author>
-            <name>gurjeet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[哦，不！Fedora 正在放弃对流行的视频编解码器的支持]]></title>
-        <id>https://linux.cn/article-15113-1.html?utm_source=rss&amp;utm_medium=rss</id>
-        <link href="https://linux.cn/article-15113-1.html?utm_source=rss&amp;utm_medium=rss"/>
-        <updated>2022-10-07T01:15:49.000Z</updated>
-        <summary type="html"><![CDATA[Fedora 37（和 36）可能不再允许你使用一些流行的编解码器来方便地使用视频的图形加速功能。
-
-
-
-
-Fedora 是一个流行的 Linux 发行版，迎合了那些希望在他们的工作站（和服务器）上使用最先进技术的用户。
-
-它没有搭载任何专有组件，默认情况下坚持使用完全开源的软件库。
-
-虽然这对一些人来说已经很不方便了，但现在看来，另一个变化可能会困扰期待 Fedora 37 的用户。
-
-最近在 Fedora 上的一个 Mesa 的提交 告诉我们，由于法律问题，H.264、H.265 和 VC-1 编解码器的视频加速 API（VAAPI）的支持已经被禁用。
-
-这一变化可能也会被回传到 Fedora 36。
-
-
-💡 H.264 是大多数视频行业使用的主流视频编解码器。
-
-例如，苹果公司广泛使用 H.264 编解码器，用于 iPhone 手机拍摄的照片和视频。你可以阅读此 文档 来了解更多。
-
-
-Fedora 项目论坛的一位成员 首先发现 了 Fedora 中的这一变化，他将其描述为 “F36 的一大退步”。
-
-这对 Fedora 用户来说是坏消息吗？
-
-是的，基本上是的。
-
-主要是，它将影响使用开源驱动程序的 AMD GPU 用户，阻止他们使用 GPU 加速 来播放需要使用这些编解码器的视频内容。
-
-此外，它还会影响到 任何使用开源图形驱动的用户，即使他们在英特尔芯片上运行 iGPU。Fedora 开发者还没有对此提供任何澄清，但你可以自己测试一下。
-
-如果你在英伟达显卡上使用专有驱动程序，你就没有什么可担心的。
-
-运行旧硬件的用户也可能有问题，他们的系统可能不支持这些编解码器。
-
-这些编解码器最常用在你从 BT 或各种服务中下载的视频中，这些视频还没有转移到更新一代的编解码器（如 AV1 和 VP9）。
-
-我相信，这是互联网上的大部分视频的情况。
-
-一些流媒体平台也使用这些编解码器在其各自的平台上提供内容，这可能导致用户在试图通过其服务访问内容时面临问题。
-
-这是否影响到每个人？
-
-如果你是那些观看 YouTube 视频的人，不使用任何需要这些编解码器的视频的平台或下载它们，你就不会有任何问题。
-
-Fedora 正在避免法律上的麻烦
-
-还没有人起诉 Fedora 或强迫他们这样做。然而，正如 Phoronix 所指出的，Mesa 的一个变化最近允许开发者选择性地禁用编解码器，以帮助避免法律纠纷和软件专利冲突。
-
-因此，为了避免法律上的混乱，Fedora 进行了这一改变。
-
-H.264 和 H.265 的专利属于一家名为 MPEG LA 的公司，该公司专门用于持有视频编解码器和显示标准领域的专利。
-
-而 VC-1 的专利属于 SMPTE，这是一个由媒体和娱乐机构的专业人士管理的团体。
-
-考虑到用户在购买显卡时已经支付了使用这些编解码器的许可，我们仍然不确定为什么会这样。你可以在 Fedora 的法律列表会话 中阅读更多相关信息。
-
-可能的解决方法是什么？
-
-显然，你必须依赖基于 CPU 的解码了。当然，你也可以使用官方或第三方的 Mesa 构建版本。
-
-Flatpak 应用程序可能允许你观看图形加速的视频内容而没有问题。但是，这要取决于软件的维护者。
-
-但是，对于大多数用户来说，这可能是一个不方便的解决方案。
-
-另一个解决方法可能是在旨在包含第三方应用程序的 RPM Fusion 仓库中单独包含支持 VAAPI 的编解码器。
-
-然而，负责 Fedora RPM Fusion 仓库的开发者对维护 Fedora Mesa 3D 的复刻版本不感兴趣。该开发者提到：
-
-
-rpmfusion 基本上没有兴趣去打包和维护它，而且保持仓库与 Fedora 同步对我来说也不是一个优先事项。
-
-
-
-
-💬 你对 Fedora 的这一变化有什么看法？请在下面的评论中告诉我们你的想法。
-
-
-via: https://news.itsfoss.com/fedora-drops-vaapi-codec/
-
-作者：Sourav Rudra 选题：lkxed 译者：wxy 校对：wxy
-
-本文由 LCTT 原创编译，Linux中国 荣誉推出]]></summary>
-        <author>
-            <name>linux@linux.cn (linux)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Ask HN: What content/knowledge is most important?]]></title>
-        <id>https://news.ycombinator.com/item?id=33116230</id>
-        <link href="https://news.ycombinator.com/item?id=33116230"/>
-        <updated>2022-10-07T01:09:14.000Z</updated>
-        <summary type="html"><![CDATA[Let's assume you could store a computer along with a few terabytes of external storage inside a faraday cage. In the event of a disaster, you also have the ability to generate enough power to use the computer.
-What content/knowledge would you choose to store on the device and why?
-Comments URL: https://news.ycombinator.com/item?id=33116230
-Points: 7
-# Comments: 5]]></summary>
-        <author>
-            <name>KennyFromIT</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Show HN: Lambda-8cc – An x86 C compiler written in untyped lambda calculus]]></title>
-        <id>https://news.ycombinator.com/item?id=33115719</id>
-        <link href="https://github.com/woodrush/lambda-8cc"/>
-        <updated>2022-10-06T23:53:11.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://github.com/woodrush/lambda-8cc
-Comments URL: https://news.ycombinator.com/item?id=33115719
-Points: 49
-# Comments: 3]]></summary>
-        <author>
-            <name>woodrush</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Recreating macOS’s Drift Screensaver with Rust and WASM]]></title>
-        <id>https://news.ycombinator.com/item?id=33115647</id>
-        <link href="https://github.com/sandydoo/flux"/>
-        <updated>2022-10-06T23:44:17.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://github.com/sandydoo/flux
-Comments URL: https://news.ycombinator.com/item?id=33115647
-Points: 22
-# Comments: 2]]></summary>
-        <author>
-            <name>Whitespace</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Upgrade to Linux]]></title>
-        <id>https://www.reddit.com/r/linux/comments/xxjgsw/upgrade_to_linux/</id>
-        <link href="https://www.reddit.com/r/linux/comments/xxjgsw/upgrade_to_linux/"/>
-        <updated>2022-10-06T23:23:34.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/koavf  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Upgrade to Linux]]></title>
-        <id>https://news.ycombinator.com/item?id=33114870</id>
-        <link href="https://www.upgradetolinux.com/"/>
-        <updated>2022-10-06T22:20:28.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.upgradetolinux.com/
-Comments URL: https://news.ycombinator.com/item?id=33114870
-Points: 90
-# Comments: 75]]></summary>
-        <author>
-            <name>pabs3</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Dormant spores decide to wake-up by counting in their sleep using electricity]]></title>
-        <id>https://news.ycombinator.com/item?id=33114869</id>
-        <link href="https://www.science.org/doi/10.1126/science.abl7484"/>
-        <updated>2022-10-06T22:20:25.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.science.org/doi/10.1126/science.abl7484
-Comments URL: https://news.ycombinator.com/item?id=33114869
-Points: 56
-# Comments: 25]]></summary>
-        <author>
-            <name>respinal</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[BYU profs create new nuclear reactor to produce nuclear energy more safely]]></title>
-        <id>https://news.ycombinator.com/item?id=33114284</id>
-        <link href="https://news.byu.edu/byu-profs-create-safer-system-to-produce-nuclear-energy"/>
-        <updated>2022-10-06T21:24:53.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://news.byu.edu/byu-profs-create-safer-system-to-produce-nuclear-energy
-Comments URL: https://news.ycombinator.com/item?id=33114284
-Points: 99
-# Comments: 92]]></summary>
-        <author>
-            <name>sergiotapia</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How to Download All of Wikipedia onto a USB Flash Drive]]></title>
-        <id>https://news.ycombinator.com/item?id=33114107</id>
-        <link href="https://planetofthepaul.com/wikipedia-download-usb-flash/"/>
-        <updated>2022-10-06T21:06:11.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://planetofthepaul.com/wikipedia-download-usb-flash/
-Comments URL: https://news.ycombinator.com/item?id=33114107
-Points: 191
-# Comments: 110]]></summary>
-        <author>
-            <name>bubblehack3r</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Decision Trees in Python: Predicting Diabetes – Statistically Relevant]]></title>
-        <id>https://news.ycombinator.com/item?id=33114074</id>
-        <link href="https://statisticallyrelevant.com/decision-trees-in-python-predicting-diabetes/"/>
-        <updated>2022-10-06T21:03:28.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://statisticallyrelevant.com/decision-trees-in-python-predicting-diabetes/
-Comments URL: https://news.ycombinator.com/item?id=33114074
-Points: 43
-# Comments: 5]]></summary>
-        <author>
-            <name>rbanffy</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hightouch (YC S19) Is Hiring an Engineering Manager]]></title>
-        <id>https://news.ycombinator.com/item?id=33114040</id>
-        <link href="https://news.ycombinator.com/item?id=33114040"/>
-        <updated>2022-10-06T21:00:30.000Z</updated>
-        <summary type="html"><![CDATA[Hightouch provides a low-code/no-code (SQL/UI) tool that enables syncing of company data to nearly 100 different SaaS tools across uses cases like marketing, sales, growth, and finance. Many business teams already use data visualization tools like Looker or Tableau, but now these teams can use Hightouch to take automated actions based on data, all in the same tools they already use.
-We are looking for an Engineering Manager to lead our Core Team. Check out the details here:
-https://boards.greenhouse.io/hightouch/jobs/4580317004
-Comments URL: https://news.ycombinator.com/item?id=33114040
-Points: 1
-# Comments: 0]]></summary>
-        <author>
-            <name>joshwget</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[What are some of the programming tools you have built up?]]></title>
-        <id>https://www.reddit.com/r/linux/comments/xxfl8p/what_are_some_of_the_programming_tools_you_have/</id>
-        <link href="https://www.reddit.com/r/linux/comments/xxfl8p/what_are_some_of_the_programming_tools_you_have/"/>
-        <updated>2022-10-06T20:36:22.000Z</updated>
-        <summary type="html"><![CDATA[I've always felt like one of the beautiful things about Linux is setting up tools and commands to perfect your workspace. Find that you are accessing a directory often? Add it to your path! Commonly using a long command? Create a bash alias! Need a tool to do some work? Go find an open source project (or start one)!
- Anyway, I just want to hear what sort of things you all have done to create your perfect and efficient programming environment (or just using linux environment)?
- For me, one thing I've done is add a bash alias for git-adog which translate to git log --all --decorate --oneline --graph so I can easily checkout the status of various branches. I've also got common ssh connections hooked up.
-    submitted by    /u/WackoDesperado2055  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Granting Pardon for the Offense of Simple Possession of Marijuana]]></title>
-        <id>https://news.ycombinator.com/item?id=33113569</id>
-        <link href="https://www.whitehouse.gov/briefing-room/presidential-actions/2022/10/06/granting-pardon-for-the-offense-of-simple-possession-of-marijuana/"/>
-        <updated>2022-10-06T20:22:54.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.whitehouse.gov/briefing-room/presidential-actions/2022/10/06/granting-pardon-for-the-offense-of-simple-possession-of-marijuana/
-Comments URL: https://news.ycombinator.com/item?id=33113569
-Points: 476
-# Comments: 344]]></summary>
-        <author>
-            <name>9wzYQbTYsAIc</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The non-linear workdays changing the shape of productivity]]></title>
-        <id>https://news.ycombinator.com/item?id=33113309</id>
-        <link href="https://www.bbc.com/worklife/article/20220928-the-non-linear-workdays-changing-the-shape-of-productivity"/>
-        <updated>2022-10-06T20:02:45.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.bbc.com/worklife/article/20220928-the-non-linear-workdays-changing-the-shape-of-productivity
-Comments URL: https://news.ycombinator.com/item?id=33113309
-Points: 45
-# Comments: 42]]></summary>
-        <author>
-            <name>mustafabisic1</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Staff Engineer Archetypes (2020)]]></title>
-        <id>https://news.ycombinator.com/item?id=33112915</id>
-        <link href="https://lethain.com/staff-engineer-archetypes/"/>
-        <updated>2022-10-06T19:34:06.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://lethain.com/staff-engineer-archetypes/
-Comments URL: https://news.ycombinator.com/item?id=33112915
-Points: 227
-# Comments: 173]]></summary>
-        <author>
-            <name>arkj</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] Fingerprinting systems with TCP source-port selection]]></title>
-        <id>https://lwn.net/Articles/910435/</id>
-        <link href="https://lwn.net/Articles/910435/"/>
-        <updated>2022-10-06T17:58:27.000Z</updated>
-        <summary type="html"><![CDATA[Back in May 2022, a mysterious set of patches titled insufficient TCP
-source port randomness crossed the mailing lists and was subsequently
-merged (at -rc6) into the 5.18 kernel.  Little information was available at
-the time about why significant changes to the networking stack needed to be
-made so late in the development cycle.  That situation has
-finally changed with the publication of this paper by Moshe Kol,
-Amit Klein, and Yossi Gilad.  It seems that the way the kernel chose port
-numbers for outgoing network connections made it possible to uniquely
-fingerprint users.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[React Modern Audio Player]]></title>
-        <id>https://news.ycombinator.com/item?id=33111389</id>
-        <link href="https://www.npmjs.com/package/react-modern-audio-player"/>
-        <updated>2022-10-06T17:41:04.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.npmjs.com/package/react-modern-audio-player
-Comments URL: https://news.ycombinator.com/item?id=33111389
-Points: 51
-# Comments: 13]]></summary>
-        <author>
-            <name>musgravite</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The Future of the Web Is on the Edge]]></title>
-        <id>https://news.ycombinator.com/item?id=33110973</id>
-        <link href="https://deno.com/blog/the-future-of-web-is-on-the-edge"/>
-        <updated>2022-10-06T17:08:50.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://deno.com/blog/the-future-of-web-is-on-the-edge
-Comments URL: https://news.ycombinator.com/item?id=33110973
-Points: 161
-# Comments: 143]]></summary>
-        <author>
-            <name>0xedb</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Interactive Submarine Cable Map]]></title>
-        <id>https://news.ycombinator.com/item?id=33110478</id>
-        <link href="https://www.submarinecablemap.com/"/>
-        <updated>2022-10-06T16:35:47.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.submarinecablemap.com/
-Comments URL: https://news.ycombinator.com/item?id=33110478
-Points: 140
-# Comments: 40]]></summary>
-        <author>
-            <name>gnososphere</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[蚂蚁集团回应支付宝高新企业认证被撤销]]></title>
-        <id>https://www.williamlong.info/archives/6953.html</id>
-        <link href="https://www.williamlong.info/archives/6953.html"/>
-        <updated>2022-10-06T16:10:12.000Z</updated>
-        <summary type="html"><![CDATA[10月6日下午消息，近期，上海市高新技术企业认定指导小组公告了2022年第一批撤销高新技术企业资格企业名单，包括上海数字证书认证中心有限公司、上海优也信息科技有限公司、支付宝（中国）网络科技有限公司、上海行麒机电科技有限公司在内的14家企业在名单中，引发媒体关注。
-
-
-对于撤销高新企业资格认证一事，蚂蚁集团相关人士回应表示，支付宝（中国）在上海高新技术企业资格到期后，没有再主动申请。支付宝（中国）是蚂蚁旗下支付牌照公司，其研发支出仅占蚂蚁整体研发支出的一部分。蚂蚁集团2021年研发费用188亿元，在全国工商联“民企研发投入榜单”中排名第六。集团研发投入连续3年增长率超39%，近两年加大了对隐私计算、区块链、数据库、安全风控等基础技术领域的投入。
-
-
-为扶持和鼓励高新技术企业发展，科技部、财政部、国家税总局制定了《高新技术企业认定管理办法》，并开展高新技术企业认定工作。根据规定，高新技术企业认定采用企业主动申报制，认证资格有效期为3年，在此期间，企业享受税收优惠政策。资格期满，不提出复审申请或复审不合格的，其高新技术企业资格到期自动失效，除无法享受税收优惠外，不会产生其他影响。
-
-
-有业内人士评价指出，高新技术企业的认定是企业主动申请制，一些集团企业将研发投入支出调整到其他业务板块，或许会选择主动放弃申请。事实上，没有高新技术企业资质仅能说明公司不再享受税收优惠。
-
-
-稿源：新浪网]]></summary>
-        <author>
-            <name>user@gmail.com (guest)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[A Universal Cancer Treatment?]]></title>
-        <id>https://news.ycombinator.com/item?id=33109633</id>
-        <link href="https://nautil.us/a-universal-cancer-treatment-241231/"/>
-        <updated>2022-10-06T15:38:16.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://nautil.us/a-universal-cancer-treatment-241231/
-Comments URL: https://news.ycombinator.com/item?id=33109633
-Points: 264
-# Comments: 79]]></summary>
-        <author>
-            <name>WithinReason</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Vulkan Render-Queues and how they Sync]]></title>
-        <id>https://www.reddit.com/r/linux/comments/xx85ur/vulkan_renderqueues_and_how_they_sync/</id>
-        <link href="https://www.reddit.com/r/linux/comments/xx85ur/vulkan_renderqueues_and_how_they_sync/"/>
-        <updated>2022-10-06T15:32:46.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/speckz  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Zerocal – A Serverless Calendar App in Rust]]></title>
-        <id>https://news.ycombinator.com/item?id=33109513</id>
-        <link href="https://endler.dev/2022/zerocal/"/>
-        <updated>2022-10-06T15:28:42.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://endler.dev/2022/zerocal/
-Comments URL: https://news.ycombinator.com/item?id=33109513
-Points: 124
-# Comments: 44]]></summary>
-        <author>
-            <name>omn1</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Open Source P2P Mesh Network with Kernel WireGuard and SSO+MFA]]></title>
-        <id>https://www.reddit.com/r/linux/comments/xx7wbh/open_source_p2p_mesh_network_with_kernel/</id>
-        <link href="https://www.reddit.com/r/linux/comments/xx7wbh/open_source_p2p_mesh_network_with_kernel/"/>
-        <updated>2022-10-06T15:21:31.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/wiretrustee  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[A working implementation of text-to-3D DreamFusion, powered by Stable Diffusion]]></title>
-        <id>https://news.ycombinator.com/item?id=33109243</id>
-        <link href="https://github.com/ashawkey/stable-dreamfusion"/>
-        <updated>2022-10-06T15:12:33.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://github.com/ashawkey/stable-dreamfusion
-Comments URL: https://news.ycombinator.com/item?id=33109243
-Points: 232
-# Comments: 59]]></summary>
-        <author>
-            <name>nopinsight</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[LibreSSL 3.6.0 released]]></title>
-        <id>https://www.reddit.com/r/linux/comments/xx7kq2/libressl_360_released/</id>
-        <link href="https://www.reddit.com/r/linux/comments/xx7kq2/libressl_360_released/"/>
-        <updated>2022-10-06T15:08:07.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/Kevlar-700  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Celsius Execs Cashed Out $40M in Crypto Before Halting Withdrawals for Customers]]></title>
-        <id>https://news.ycombinator.com/item?id=33109070</id>
-        <link href="https://gizmodo.com/celsius-execs-cashed-out-bitcoin-price-crypto-ponzi-1849623526"/>
-        <updated>2022-10-06T15:00:02.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://gizmodo.com/celsius-execs-cashed-out-bitcoin-price-crypto-ponzi-1849623526
-Comments URL: https://news.ycombinator.com/item?id=33109070
-Points: 403
-# Comments: 228]]></summary>
-        <author>
-            <name>ekpyrotic</name>
         </author>
     </entry>
 </feed>
