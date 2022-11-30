@@ -2,10 +2,487 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://waytoarcher.github.io/rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-11-29T01:27:26.300Z</updated>
+    <updated>2022-11-30T01:27:44.787Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://waytoarcher.github.io/rssfeed/index.html"/>
     <link rel="self" href="https://waytoarcher.github.io/rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[[Off-Topic]Rereading: The Soul of a New Machine by Tracy Kidder ..I have my well-thumbed copy ...a must read]]></title>
+        <id>https://www.reddit.com/r/linux/comments/z89sps/offtopicrereading_the_soul_of_a_new_machine_by/</id>
+        <link href="https://www.reddit.com/r/linux/comments/z89sps/offtopicrereading_the_soul_of_a_new_machine_by/"/>
+        <updated>2022-11-29T23:24:57.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/unixbhaskar  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[If you find many blank pages in a scanned book PDF test them with an internet browser]]></title>
+        <id>https://www.reddit.com/r/linux/comments/z87dlh/if_you_find_many_blank_pages_in_a_scanned_book/</id>
+        <link href="https://www.reddit.com/r/linux/comments/z87dlh/if_you_find_many_blank_pages_in_a_scanned_book/"/>
+        <updated>2022-11-29T21:52:08.000Z</updated>
+        <summary type="html"><![CDATA[There is a bug with poppler that makes main Linux PDF viewers fail to display some pages in scanned books saved as PDF.
+ https://preview.redd.it/2gsfd62smy2a1.png?width=1130&format=png&auto=webp&s=1e0d1acac866621bb80140fd5835366cd1124e7b
+ Okular, qpdfview, Evince, Atril, xpdf are affected. But internet browsers (except Falkon!), and other PDF viewers (WPS PDF, LibreOffice Draw, ImageMagick, mupdf, gv, PDF Studio Viewer, Foxit, Master PDF) are not affected.
+ Such PDF pages/files have some obscure variations or defaults that cannot be handled by poppler. They can be fixed by printing them "as pdf" in Firefox or other browsers (in Chrome, Vivaldi, Opera you have to select "print to image" too) or in PDF viewers that can see in the first place the otherwise blank pages and are able to print to file/pdf: 
+ * PDF Studio Viewer has the option "print to file"
+ * Master PDF Editor has the option "System print", and under there it's the needed option
+    submitted by    /u/cipricusss  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Microblogging with ActivityPub]]></title>
+        <id>https://lwn.net/Articles/916154/</id>
+        <link href="https://lwn.net/Articles/916154/"/>
+        <updated>2022-11-29T21:11:15.000Z</updated>
+        <summary type="html"><![CDATA[As of late, concerns about the future of Twitter have caused many of its
+users to seek alternatives.  Amid this upheaval, an open-source
+microblogging service called Mastodon has received a great deal of
+attention.  Mastodon is not reliant on any single company or central
+authority to run its servers; anyone can run their own.  Servers communicate
+with each other, allowing people on different servers to send each other
+messages and follow each other's posts.  Mastodon doesn't just talk to
+itself, though; it can exchange messages with anything that speaks the ActivityPub protocol.
+There are many such implementations, so someone who wants to deploy their own
+microblogging service enjoys a variety of choices.]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A solution to the CSD controversy]]></title>
+        <id>https://www.reddit.com/r/linux/comments/z838lq/a_solution_to_the_csd_controversy/</id>
+        <link href="https://www.reddit.com/r/linux/comments/z838lq/a_solution_to_the_csd_controversy/"/>
+        <updated>2022-11-29T19:19:35.000Z</updated>
+        <summary type="html"><![CDATA[For anyone who's unaware, CSD refers to "Client-Side Decoration", such as GTK headerbars. I have an idea for a specification that apps could use to describe a layout of widgets (butons, sliders, checkboxes, menus, etc) to the window manager/compositor, which could then draw it on the titlebar of the app. This combines the benifits of both CSD and no-CSD, but most importantly it makes everyone happy.
+ Originally, I went to the XDG mailing list and asked them if it could become a spec, and gave some examples of how it could benifit a couple of desktop environments I mentioned. Basially all the told me is that "GNOME probably won't add support for that" and "GTK headerbars won't work with that design". After a bit of arguing I basically said "Ok, then it can still benifit other desktop enviro…]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[One liner to find block device of LUKS encrypted root partition]]></title>
+        <id>https://www.reddit.com/r/linux/comments/z82maj/one_liner_to_find_block_device_of_luks_encrypted/</id>
+        <link href="https://www.reddit.com/r/linux/comments/z82maj/one_liner_to_find_block_device_of_luks_encrypted/"/>
+        <updated>2022-11-29T18:56:48.000Z</updated>
+        <summary type="html"><![CDATA[Simple and as the statement says, you dont need to track down dependencies to reach block device name of your root partition:
+ sudo dmsetup ls --tree --table devname -o blkdevname,compact | grep $(mount | awk '/on / / {n=split($1,a,"/"); print a[n]}') | awk '{print $(NF-1)}' | tr -d "<>"
+    submitted by    /u/Phys-Tech  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Lina: Tales of the M1 GPU]]></title>
+        <id>https://lwn.net/Articles/916208/</id>
+        <link href="https://lwn.net/Articles/916208/"/>
+        <updated>2022-11-29T17:17:46.000Z</updated>
+        <summary type="html"><![CDATA[Asahi Lina gives a detailed
+update on progress toward a graphics driver for Apple M1 hardware.
+
+
+	There is still a long road ahead! The UAPI that we are using right
+	now is still a prototype, and there are a lot of new features that
+	need to be added or redesigned in order to support a full Vulkan
+	driver in the future. Since Linux mandates that the UAPI needs to
+	remain stable and backwards compatible across versions (unlike
+	macOS), that means that the kernel driver will not be heading
+	upstream for many months, until we have a more complete
+	understanding of the GPU rendering parameters and have implemented
+	all the new design features needed by Vulkan.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Tales of the M1 GPU - Asahi Linux]]></title>
+        <id>https://www.reddit.com/r/linux/comments/z7zl2j/tales_of_the_m1_gpu_asahi_linux/</id>
+        <link href="https://www.reddit.com/r/linux/comments/z7zl2j/tales_of_the_m1_gpu_asahi_linux/"/>
+        <updated>2022-11-29T17:03:41.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/shab-re  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[For the first time, I've had almost a perfect experience with Wayland on a 3080]]></title>
+        <id>https://www.reddit.com/r/linux/comments/z7x986/for_the_first_time_ive_had_almost_a_perfect/</id>
+        <link href="https://www.reddit.com/r/linux/comments/z7x986/for_the_first_time_ive_had_almost_a_perfect/"/>
+        <updated>2022-11-29T15:34:00.000Z</updated>
+        <summary type="html"><![CDATA[Setup Info: Gnome Wayland, OpenSUSE Tumbleweed, Latest Nvidia Drivers, 3080
+ So every couple of weeks or so, I kept trying Wayland to see how it's working, and I never dreamt of being able to use Wayland for at least another year. This is because I have always had severe graphical problems, visual glitches and intense lags.
+ However, about 48 hours ago I decided to switch to Wayland once again and try it, and what do you know, I've actually had almost 0 problems (And the ones I had were so rare and minor).
+ So for once, I am actually using Wayland and loving it. Might be worth trying Wayland again if you have been in my shoes. (Haven't had much luck with KDE Wayland still)
+ Thank you, everyone who has worked to have it working like it is now.
+    submitted by    /u/Drostina  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Cartier-Tilet: Emacs 29 is nigh]]></title>
+        <id>https://lwn.net/Articles/916201/</id>
+        <link href="https://lwn.net/Articles/916201/"/>
+        <updated>2022-11-29T15:25:37.000Z</updated>
+        <summary type="html"><![CDATA[Lucien Cartier-Tilet looks
+forward to the upcoming Emacs 29 release.
+
+
+	In case you didn’t know, Emacs’ current syntax highlighting is
+	currently based on a system of regexes. Although it is not the
+	worst thing to use, it’s not the best either, and it can become
+	quite slow on larger files.
+
+	TreeSitter parses programming languages based into a concrete
+	syntax tree. From there, not only can syntax highlighting can be
+	done at high speed, but a much deeper analysis of the code is
+	possible and actions such sa syntax manipulation can also be
+	achieved since the syntax tree itself is available as an object
+	which can be manipulated!]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[ANNOUNCE] wayland-protocols 1.31]]></title>
+        <id>https://www.reddit.com/r/linux/comments/z7w3df/announce_waylandprotocols_131/</id>
+        <link href="https://www.reddit.com/r/linux/comments/z7w3df/announce_waylandprotocols_131/"/>
+        <updated>2022-11-29T14:48:54.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/bl4ck_goku  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Tuesday]]></title>
+        <id>https://lwn.net/Articles/916189/</id>
+        <link href="https://lwn.net/Articles/916189/"/>
+        <updated>2022-11-29T12:56:24.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (frr, gerbv, mujs, and twisted), Fedora (nodejs and python-virtualbmc), Oracle (dotnet7.0, kernel, kernel-container, krb5, varnish, and varnish:6), SUSE (busybox, python3, tiff, and tomcat), and Ubuntu (harfbuzz).]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[选对插件，让简悦也可以重器轻用]]></title>
+        <id>https://sspai.com/post/75567</id>
+        <link href="https://sspai.com/post/75567"/>
+        <updated>2022-11-29T09:59:07.000Z</updated>
+        <summary type="html"><![CDATA[本文是简悦开发者的 Kenshin 所写的特约文章。在播客部分，他与我们分享了简悦的设计哲学，以及自己作为独立开发者的心得。在文章部分，他向我们介绍了诸多优秀插件，帮助新上手简悦的用户能快速上手。
+[......]
+查看全文
+本文为付费栏目文章，出自《 59 分钟就上手简悦 2.0》，订阅后可阅读全文。]]></summary>
+        <author>
+            <name>Kenshin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Fractional scaling got merged into wayland. What does this mean for KDE?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/z7pc61/fractional_scaling_got_merged_into_wayland_what/</id>
+        <link href="https://www.reddit.com/r/linux/comments/z7pc61/fractional_scaling_got_merged_into_wayland_what/"/>
+        <updated>2022-11-29T09:42:46.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/water_aspirant  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[硬核观察 #835 互联网档案馆上线 PalmPilot 仿真项目]]></title>
+        <id>https://linux.cn/article-15301-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-15301-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2022-11-29T09:24:39.000Z</updated>
+        <summary type="html"><![CDATA[互联网档案馆上线 PalmPilot 仿真项目
+
+在曾经领袖了 PDA 市场的 Palm 公司于 2011 年被惠普公司关闭之前，PalmPilot 已经走向衰落很多年。但是在上世纪之交使用过 Palm 的人都对它有着深刻的印象。上周，互联网档案馆上传了一个 Palm OS 应用程序的数据库，总共包含大约 560 个程序，介绍了 Palm 发展的历程。
+
+
+消息来源：Engadget
+
+
+
+老王点评：谁也没想到未来不是 PDA，而是智能手机。
+
+
+
+
+爱普生将结束激光打印机销售
+
+爱普生本月宣布，它将在 2026 年之前结束激光打印机硬件的销售和分销，理由是可持续性问题。该公司称，在环境方面，喷墨打印机比激光打印机有更大的潜力来实现有意义的进步。爱普生的无热喷墨技术通过使用机械能将墨水喷到页面上，消耗的电力比激光打印机更少。
+
+
+消息来源：The Register
+
+
+
+老王点评：我对这个理由表示怀疑。
+
+
+
+
+印度使用 AI 来对抗垃圾短信
+
+印度电信管理局之前采用区块链技术来消除垃圾短信，但效果不尽如人意。这个由区块链驱动的应用程序记录了超过 25 万个进行电话营销活动的主要实体的细节，使印度境内的客户对垃圾短信的投诉减少了 60%，但仍有大量投诉。印度电信管理局准备实施新的检测系统，利用人工智能和机器语言对标题和信息模板进行智能清洗等等。
+
+
+消息来源：The Register
+
+
+
+老王点评：从垃圾广告出现的那一天开始，就是一场永恒的对抗。]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Running Shell in Builder | Jakub Steiner]]></title>
+        <id>https://www.reddit.com/r/linux/comments/z7ofu5/running_shell_in_builder_jakub_steiner/</id>
+        <link href="https://www.reddit.com/r/linux/comments/z7ofu5/running_shell_in_builder_jakub_steiner/"/>
+        <updated>2022-11-29T08:54:56.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/xaedoplay  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[macOS 替代品 helloSystem 0.7.0 正在增强稳定性]]></title>
+        <id>https://linux.cn/article-15300-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-15300-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2022-11-29T08:04:00.000Z</updated>
+        <summary type="html"><![CDATA[随着 helloSystem 0.7.0 的发布和更多内部工作，helloSystem 正在增强稳定性，为 macOS 提供一个“开源”的替代方案。
+
+
+helloSystem 是一个基于 FreeBSD 的轻量级操作系统，旨在为 macOS 提供一个“开源”的替代方案。helloSystem 的主要目标是提供一个易于安装和使用的，真正“开源”的 FreeBSD 替代方案。此外，该团队还专注于从 macOS 转换过来的用户，他们可以舒适的使用类似的桌面，而不会受到系统锁定或 Linux 发行版的复杂性的影响。
+
+考虑到 BSD 系统中的硬件支持，开发这样的操作系统需要时间。团队正在努力从零创建一个桌面 - “hellodesktop”。用 C++ 编写的 hellodesktop 和其他改进正在进行中。
+
+
+
+helloSystem 0.7.0
+
+在 2021 年底，该团队发布了最新一个稳定版本，基于 FreeBSD 13.0 的 helloSystem 0.7.0，并且目前正在将系统移植到 FreeBSD 13.1 和 14 版本。
+
+除此之外，一些新功能也可以在系统中工作了；这是一个总览：
+
+
+由 FreeBSD 13.0 驱动
+
+通过更新的启动时间和压缩的 UFS 文件系统改进的现场介质Live Media
+
+将 ISO 镜像大小减少到 800 MB，以适合 CD
+
+与 Ventoy USB creator 兼容
+
+支持英伟达 GPU，包括旧型号
+
+在目标分区安装时添加了 exFAT 支持
+
+增加了 KDE 开发的 Falkon 浏览器，附带了下载和安装 Chromium 和 Firefox 的附加菜单项
+
+系统提示音
+
+支持通过笔记本电脑键盘的专用键控制亮度和音量
+
+
+
+
+除了上述内容之外，helloSystem 0.7.0 中还添加了一个新部分，以让你可以提前了解团队正在开发的功能。未来版本中将到来的一些最酷的功能包括：
+
+
+BSD 中的 Debian 运行时安装程序，以在 BSD 中运行 Linux 应用程序！
+
+一个独立的应用程序，用于下载应用程序。
+
+新的更新实用程序
+
+
+此外，0.7.0 中还修复了一些错误并更新了翻译。
+
+
+
+话虽如此，但它仍然需要大量的时间才能成为易于使用的 BSD 变体和 macOS 的“开源”替代方案。自从我 首次报道 以来，已经在图形安装程序，桌面应用程序和错误修复方面进行了巨大的更新。我希望它在随着 2023 年移植到 FreeBSD 14 之后，会变得更加主流。
+
+下载
+
+如果你想在真实的硬件上尝试它，请先进行备份然后尝试。此外，helloSystem 现在完全兼容 VirtualBox 之类的虚拟机。你可以试试。如果你在 VirtualBox 中尝试，请确保将 CPU 更改为 64 位。
+
+官方下载链接（包括 helloSystem 0.7.0 稳定版）可在 此页面 上找到，或者您可以使用下面的链接获取 ISO。
+
+
+下载 helloSystem 0.7.0
+
+
+如果你想为测试、开发或任何其他事情做出贡献，请 访问 GitHub 页面以获取详细信息。
+
+
+via: https://www.debugpoint.com/hellosystem-0-7-0/
+
+作者：Arindam 选题：lkxed 译者：Cubik65536 校对：wxy
+
+本文由 LCTT 原创编译，Linux中国 荣誉推出]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[详解在 Ubuntu 从外部存储库安装软件包]]></title>
+        <id>https://linux.cn/article-15299-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-15299-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2022-11-29T07:44:12.000Z</updated>
+        <summary type="html"><![CDATA[你大概知道怎么在 Ubuntu 中使用 apt 命令安装软件包。那些软件包都是来自 Ubuntu 的官方存储库。
+
+那第三方或者外部存储库呢？不，我这里并不是要讲 PPA。
+
+早晚你会碰到那种至少四行的安装说明：你需要安装名为 apt-transport-https 的包、操作一下 GPG 和 源列表source list 之后，你才能正常安装软件包。
+
+没有什么印象的话，那我分享一个 在 Ubuntu 上安装最新版本的 Yarn 的例子：
+
+sudo apt install apt-transport-https curl
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+sudo sh -c 'echo "deb https://dl.yarnpkg.com/debian/ stable main" >> /etc/apt/sources.list.d/yarn.list'
+sudo apt update && sudo apt install yarn
+
+
+当你需要直接从开发者那里安装编程工具的时候，大概率会碰到这种安装方式。
+
+许多人只是按照说明进行操作，并不会去思考其中的原理。这也没什么不对，但了解该过程实际上可以提升你在这方面的知识，而且有助于之后排除故障。
+
+我来解释一下这些代码背后的逻辑。
+
+理解从外部存储库安装的过程
+
+在你继续往下阅读之前，我强烈建议你先看看下面这两篇文章，方便理解后续的概念：
+
+
+什么是 Ubuntu 中的存储库
+
+什么是 Ubuntu 中 PPA
+
+
+为了让你有点印象，这里有一张软件包存储库和 Linux 中的包管理器 的图片。
+
+
+
+整件事情其实就是在系统中添加一个新的外部存储库。这样，你就可以从这个新…]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What do you think about the Fydetab Duo tablet]]></title>
+        <id>https://www.reddit.com/r/linux/comments/z7mitb/what_do_you_think_about_the_fydetab_duo_tablet/</id>
+        <link href="https://www.reddit.com/r/linux/comments/z7mitb/what_do_you_think_about_the_fydetab_duo_tablet/"/>
+        <updated>2022-11-29T07:11:52.000Z</updated>
+        <summary type="html"><![CDATA[Hi, I am planning on buying a Linux system so that I could take my projects with me while I travel. I travel a lot and I thought this tablet fydetab would be good. But the internal storage is only 128 GB and the ram is again only 8 GB. What’s your comments ?
+    submitted by    /u/theiotdeveloper  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最大化利用租房空间，我的十平米卧室布置思路]]></title>
+        <id>https://sspai.com/post/77031</id>
+        <link href="https://sspai.com/post/77031"/>
+        <updated>2022-11-29T07:00:06.000Z</updated>
+        <summary type="html"><![CDATA[我卧室的面积却因为起居室的挤占而显得并不宽敞，总共也只有不 10 平米的面积，那么，它是如何容纳下一张一米八的大床和桌子，以及一米六的大衣柜的？查看全文]]></summary>
+        <author>
+            <name>宛潼</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[App Store Awards 2022 年度大奖出炉，我们和获奖开发者聊了聊]]></title>
+        <id>https://sspai.com/post/77038</id>
+        <link href="https://sspai.com/post/77038"/>
+        <updated>2022-11-29T05:22:47.000Z</updated>
+        <summary type="html"><![CDATA[App Store Awards 年度 App 奖项评选结果出炉，中国开发者继续展现精彩表现。查看全文]]></summary>
+        <author>
+            <name>waychane</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[《周书》专题｜薛海波：“关陇集团”理论与西魏北周史研究的反思]]></title>
+        <id>https://www.thepaper.cn/newsDetail_forward_20882408</id>
+        <link href="https://www.thepaper.cn/newsDetail_forward_20882408"/>
+        <updated>2022-11-29T04:02:05.000Z</updated>
+        <summary type="html"><![CDATA[《周书》修订本，中华书局，2022年11月版
+
+二十世纪四十年代陈寅恪先生提出“关陇集团”理论后，包括西魏北周史在内的中古史研究，基本沿“关陇集团”理论展开，形成了深厚学术积累。简而言之，“关陇集团”理论，即指北魏末西入关中的武川镇豪帅宇文泰，在占领关中后，将所占地区内胡汉族群、土著，通过以府兵制为主的“关中物质本位政策”和“周礼官制”为主的“关中文化本位政策”，融合成为拥有共同利益、与东魏北齐、萧梁对抗，建立北周隋唐，延续至唐高宗前期的政治集团。笔者拟就“关陇集团”理论来源、应用到西魏北周史研究中所遇到的问题，谈一下自己的思考。
+一、“关陇集团”理论是对宋明史家研究成果的继承和发挥
+脱胎于西魏北周的隋唐统一中国，创中古盛世，因此，传统史家十分重视西魏北周史研究，陈寅恪曾感慨“宋贤史学，今古罕匹”（陈寅恪：《隋唐制度渊源略论稿》，《陈寅恪集》，北京生活·读书·新知三联出版社2009年版，148页，以下简称《略论稿》）。陈寅恪“关陇集团”理论的形成，与宋明传统史家研究关系密切。宋人叶适指出宇文泰如王莽，行周官真正目的是要篡西魏，“王莽篡而作大诰，泰用周礼亦然，岂从周之伪者固当尔耶？”（《习学记言序目》，中华书局1977年版，521页，以下简称《记言》）正因如此，宇文泰在用周官设置官职时，仍杂用北魏及秦汉以后官职名称，遵循北魏末权臣尔朱荣以柱国掌握朝政的先例，自称柱国。这使其所行周官显得不伦不类，“而绰方与之法象周公，龟兹王褚煟所讥（非驴非马），依然故在，是真可笑矣！”（《记言》，524页）宋人胡寅《读史管见》卷十四《敬帝·太平元年条》也持此种看法，“今宇文氏之制，何所考哉？至于《周官》之属，有不当设而设者，有不当属而属者，其舛驳甚众”。明人王夫之也指出，宇文泰行周官只是借用周官名目，实现其篡权企图，徒有其表，“泰自以为周公，逆者丧心肆志之恒也”，“高洋之篡也，梁、陈之偷也，宇…]]></summary>
+        <author>
+            <name>上海书评</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[挑战也是机遇，从环境设计实例谈 AI 辅助设计的前景]]></title>
+        <id>https://sspai.com/post/77005</id>
+        <link href="https://sspai.com/post/77005"/>
+        <updated>2022-11-29T03:27:38.000Z</updated>
+        <summary type="html"><![CDATA[Matrix首页推荐Matrix是少数派的写作社区，我们主张分享真实的产品体验，有实用价值的经验与思考。我们会不定期挑选Matrix最优质的文章，展示来自用户的最真实的体验和观点。文章代表作者个人观点 ...查看全文]]></summary>
+        <author>
+            <name>樊川_MinusType</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[github/go-pipe: 用于在 Go 应用程序中轻松构建管道的包]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/6e773b33dea0dccec995f4cfd020f9129192682c</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/6e773b33dea0dccec995f4cfd020f9129192682c"/>
+        <updated>2022-11-29T01:49:17.000Z</updated>
+        <summary type="html"><![CDATA[github/go-pipe: 用于在 Go 应用程序中轻松构建管道的包]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[beringresearch/macpine: MacOS 上的轻量级 Linux VM]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/f2cbef2c9c18efe16e5a0647063e354399723e58</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/f2cbef2c9c18efe16e5a0647063e354399723e58"/>
+        <updated>2022-11-29T01:42:38.000Z</updated>
+        <summary type="html"><![CDATA[beringresearch/macpine: MacOS 上的轻量级 Linux VM]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[costela/wesher: Wireguard 覆盖网状网络管理器]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/c14ef95b8768b7c0a68f279f804d1ca4b9ad0564</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/c14ef95b8768b7c0a68f279f804d1ca4b9ad0564"/>
+        <updated>2022-11-29T01:41:51.000Z</updated>
+        <summary type="html"><![CDATA[costela/wesher: Wireguard 覆盖网状网络管理器]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[laravie/serialize-queries: 可序列化的 Laravel 查询生成器]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/b9198ce74158912271bb341f300ae2b9c0634494</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/b9198ce74158912271bb341f300ae2b9c0634494"/>
+        <updated>2022-11-29T01:34:35.000Z</updated>
+        <summary type="html"><![CDATA[laravie/serialize-queries: 可序列化的 Laravel 查询生成器]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[派早报：苹果撤下推特广告投放，瑞典一国有基金起诉微软与动视暴雪等]]></title>
+        <id>https://sspai.com/post/77034</id>
+        <link href="https://sspai.com/post/77034"/>
+        <updated>2022-11-29T01:01:48.000Z</updated>
+        <summary type="html"><![CDATA[马斯克称推特用户注册达到历史高峰，OpenAI 创造了《我的世界》游玩 AI 等查看全文]]></summary>
+        <author>
+            <name>少数派编辑部</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Yet another try at the BPF program allocator [LWN.net]]]></title>
         <id>https://www.reddit.com/r/linux/comments/z7b13v/yet_another_try_at_the_bpf_program_allocator/</id>
@@ -999,6 +1476,37 @@ Points: 306
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[马斯克透露Twitter 2.0：新增长推文、视频、支付等功能]]></title>
+        <id>https://www.williamlong.info/archives/7004.html</id>
+        <link href="https://www.williamlong.info/archives/7004.html"/>
+        <updated>2022-11-27T13:38:13.000Z</updated>
+        <summary type="html"><![CDATA[当地时间11月26日，推特首席执行官埃隆·马斯克表示，该社交媒体平台的新用户注册数量达到了“历史最高水平”，并对推特2.0计划的部分内容进行了介绍。
+
+
+据马斯克在推特上分享了该公司的多张用户数据分析走势图显示，截至11月16日的7天内，推特新用户注册人数平均每日超200万，比2021年同期增长66%。用户活跃时间也达到了历史最高水平，在截至11月15日的7天内，平均每天有近80亿分钟的活跃时间，同比增加了30%。马斯克还预计推特在未来12到18个月内月活跃用户数将超过10亿。
+
+
+不仅如此，马斯克还分享了推特2.0“万能应用”(everthing app)的部分内容，根据PPT介绍，在Twitter 2.0中，软件将加入包括长推文、视频、支付、加密私信等功能，并在蓝标认证和广告服务等方面做出优化。
+
+
+不难看出，马斯克将此前大量的想法融入了Twitter 2.0中，试图将其从一个社交平台“改造”为一个综合性平台。
+
+
+马斯克还称，推特正在应对广告收入下滑的情况。由于部分广告商因用户身份验证等新规则而离开推特，包括通用汽车、大众汽车公司等大公司暂停在平台投放广告，致使该公司广告收入大幅下滑。
+
+
+据了解，数百名推特员工已经离开这家陷入困境的公司，此前马斯克发出最后通牒，要求员工签署“长时间高强度工作”的协议，否则就离开公司。
+
+
+值得一提的是，该公司在11月初裁掉了一半员工，包括负责沟通、内容策划、人权和机器学习伦理的团队，以及一些产品和工程团队。
+
+
+来源：智通财经网]]></summary>
+        <author>
+            <name>user@gmail.com (guest)</name>
         </author>
     </entry>
     <entry>
@@ -22115,679 +22623,6 @@ Points: 139
 # Comments: 72]]></summary>
         <author>
             <name>bauerpl</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[传中信计划组建财团或收购腾讯股票]]></title>
-        <id>https://www.williamlong.info/archives/6977.html</id>
-        <link href="https://www.williamlong.info/archives/6977.html"/>
-        <updated>2022-10-31T13:09:38.000Z</updated>
-        <summary type="html"><![CDATA[据第一财经，日前有市场传闻称，以中信为首的财团正在接洽腾讯南非大股东，拟全额收购其手中的腾讯股票，拿下腾讯控股权。
-
-
-此前腾讯发布财报显示，腾讯控股今年上半年收入2695.05亿元，同比下滑1%；净利润420.32亿元，同比重挫53%。而根据腾讯2022年中期报告，其第一大股东MIH TC由南非报业集团Naspers全资子公司Prosus所控制。经过多轮减持，南非报业集团Naspers对腾讯持股比例已经从最初的46%降至当前的27.99%。腾讯股价在2022年以来大跌，不过，若要收购其大股东手中的股票，中信仍要支出大约5000多亿港元。
-
-
-面对Naspers持续不断的减持，目前腾讯公司一直在出资回购，并且已经耗资一千多亿港元来承接Naspers的巨大抛盘，但如果要让腾讯继续掏钱回购剩下的6000亿港元股权，确实也有很大的难度。南非大股东持有腾讯28%股份，约合700亿美元，一家财团拿下可能有点困难，但是要是几家国资共同发起收购也不是不可能。
-
-
-来源：第一财经]]></summary>
-        <author>
-            <name>user@gmail.com (guest)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Intel Core i5 13600K Linux Performance Review]]></title>
-        <id>https://www.reddit.com/r/linux/comments/yi9xl5/intel_core_i5_13600k_linux_performance_review/</id>
-        <link href="https://www.reddit.com/r/linux/comments/yi9xl5/intel_core_i5_13600k_linux_performance_review/"/>
-        <updated>2022-10-31T12:04:41.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/HardwareRaidIsDead  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Packaging Rust for Fedora]]></title>
-        <id>https://www.reddit.com/r/linux/comments/yi9cnv/packaging_rust_for_fedora/</id>
-        <link href="https://www.reddit.com/r/linux/comments/yi9cnv/packaging_rust_for_fedora/"/>
-        <updated>2022-10-31T11:41:25.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/robin-m  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[每周一书]《破碎的生活》时代动荡中普通人的命运]]></title>
-        <id>https://bookfere.com/?p=47037</id>
-        <link href="https://bookfere.com/post/1024.html"/>
-        <updated>2022-10-31T11:15:07.000Z</updated>
-        <summary type="html"><![CDATA[20 世纪 20 年代出生的德国人，经历了纳粹的统治、第二次世界大战、大屠杀、战后重建、冷战分裂，以及柏林墙倒塌后的统一与复苏。本书基于七十多部自传和回忆录的一手叙述，生动地展示普通民众在时代动荡中的颠沛命运。]]></summary>
-        <author>
-            <name>书伴</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[为什么我爱 Chromebook：当然是因为它是一个 Linux 桌面系统]]></title>
-        <id>https://linux.cn/article-15198-1.html?utm_source=rss&amp;utm_medium=rss</id>
-        <link href="https://linux.cn/article-15198-1.html?utm_source=rss&amp;utm_medium=rss"/>
-        <updated>2022-10-31T10:27:00.000Z</updated>
-        <summary type="html"><![CDATA[我们喜欢强力的机器，但有时是为了更快地启动和运行。
-
-
-
-
-我喜欢 Linux 桌面这件事对任何读过我作品的人来说都不会感到惊讶。我的意思是，我曾经是一个早已消失的出版物《Linux 桌面》的主要作者和编辑。那么，为什么我在底特律召开的 Kubecon 北美峰会上，在我的惠普 Chromebook x360 上写这篇文章呢？
-
-很简单，因为 Chrome OS 是一个 Linux 发行版。以前是，以后也是。
-
-而这让一些 Linux 粉丝很恼火。他们对 Linux 桌面未来的设想是让每个人都“运行 Ubuntu，不是 Fedora 或 Arch Linux！”，“拜托，Linux Mint 才是赢家”，“MX Linux”，“现实点吧！使用 openSUSE Tumbleweed！” 等等，不一而足。有 上千种 Linux 发行版，这就是我们永远不会看到他们的 “Linux 桌面消灭 Windows” 的梦想实现的一个重要原因。
-
-但 Chromebook 不同。当然，Chromebook 的销售已经 崩溃 了，但部分原因是 Chromebook 太皮实耐用了。与 Windows 机器不同的是，Windows 机器的寿命大概是三年，而我有的 Chromebook 已经运行了七年了。
-
-的确，它们的 自动更新到期（AUE）日期 已经成为过去了，所以我不能再获得自动更新。但是，那又怎样？甚至谷歌也 承认 你可以在它们的平均五年到期日期之后继续使用它们。
-
-而如果是 Windows，那就不一样了。任何仍在运行 Windows 7 的人都是邀请黑客来黑他，除非他们购买了 扩展安全更新（ESU）合同。而且，即使是这样，ESU 也将在 2023 年 1 月结束。
-
-然而，Chrome OS 呢？与每个月都有重大安全补丁的 Windows 不同，Chrome OS 的严…]]></summary>
-        <author>
-            <name>linux@linux.cn (linux)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[当海尔也来做扫拖机器人，它用起来怎么样？]]></title>
-        <id>https://sspai.com/post/76513</id>
-        <link href="https://sspai.com/post/76513"/>
-        <updated>2022-10-31T09:53:48.000Z</updated>
-        <summary type="html"><![CDATA[先回答标题里的问题：和想象中的一样。如果要极限追溯扫地机器人的历史，八十年代中叶起时就已经问世，但直到2016年左右它才开始在国内市场展露头脚，彼时我就坚信它早晚会成为诸如冰箱洗衣机这样的「家庭必备」 ...查看全文]]></summary>
-        <author>
-            <name>Microhoo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[派评 | 近期值得关注的 App]]></title>
-        <id>https://sspai.com/post/76526</id>
-        <link href="https://sspai.com/post/76526"/>
-        <updated>2022-10-31T09:44:00.000Z</updated>
-        <summary type="html"><![CDATA[你可以通过文章目录快速跳转到你感兴趣的内容。如果发现了其它感兴趣的 App 或者关注的话题，也欢迎在评论区和我们进行讨论。查看全文]]></summary>
-        <author>
-            <name>少数派编辑部</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[上新、折扣、满赠，付费栏目开启三重双十一限时优惠]]></title>
-        <id>https://sspai.com/post/76495</id>
-        <link href="https://sspai.com/post/76495"/>
-        <updated>2022-10-31T09:24:25.000Z</updated>
-        <summary type="html"><![CDATA[上新、折扣、满赠，付费栏目开启三重双十一限时优惠查看全文]]></summary>
-        <author>
-            <name>数字工具组</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Local refurb shop sells USBs with Linux]]></title>
-        <id>https://www.reddit.com/r/linux/comments/yi5eva/local_refurb_shop_sells_usbs_with_linux/</id>
-        <link href="https://www.reddit.com/r/linux/comments/yi5eva/local_refurb_shop_sells_usbs_with_linux/"/>
-        <updated>2022-10-31T08:52:26.000Z</updated>
-        <summary type="html"><![CDATA[A local refurb shop sells refurbished computers with Linux installed, but they also sell merch branded with Tux and Debian logos, as well as USBs with different Linux distros. Is that legal?
- I'm not sure if it's allowed to post links to webshops. I can post it if you want to see for yourself.
- Edit: Thanks for all your comments. I just noticed that the site has some links on the bottom of every page that explain what Linux is and give proper credit, so I guess everything is above board.
- ​
-    submitted by    /u/sjarri  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[属于「表哥表姐」的电竞项目：这个锦标赛把 Excel 玩出花]]></title>
-        <id>https://sspai.com/post/76501</id>
-        <link href="https://sspai.com/post/76501"/>
-        <updated>2022-10-31T08:00:00.000Z</updated>
-        <summary type="html"><![CDATA[这场 ESPN 直播的电竞赛事，主角是我们人人都见过的 Excel。查看全文]]></summary>
-        <author>
-            <name>Log924</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[满赠红包封面，还有周边上新，双十一为你种草这些新品]]></title>
-        <id>https://sspai.com/post/76409</id>
-        <link href="https://sspai.com/post/76409"/>
-        <updated>2022-10-31T07:00:34.000Z</updated>
-        <summary type="html"><![CDATA[恰逢双十一，我们为你准备了两款全新的红包封面，没有了春节的喜庆元素，更适合日常生活中使用。查看全文]]></summary>
-        <author>
-            <name>吃派的水獭</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[本月玩什么 | 守望先锋「归来」、维多利亚 3、蓓优妮塔 3、MARVEL SNAP]]></title>
-        <id>https://sspai.com/post/76498</id>
-        <link href="https://sspai.com/post/76498"/>
-        <updated>2022-10-31T06:30:00.000Z</updated>
-        <summary type="html"><![CDATA[「我收到了召唤，我必须回应。一如既往。」查看全文]]></summary>
-        <author>
-            <name>板斧</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[善用 iCloud 共享图库，多人回忆轻松收藏]]></title>
-        <id>https://sspai.com/post/76477</id>
-        <link href="https://sspai.com/post/76477"/>
-        <updated>2022-10-31T03:18:50.000Z</updated>
-        <summary type="html"><![CDATA[iCloud共享照片图库（iCloudSharedPhotoLibrary）是随iOS16.1和macOSVentura推出的新功能。根据官方介绍，共享照片图库「可让你和另外最多五位用户在单独的iCl ...查看全文]]></summary>
-        <author>
-            <name>scomper</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[硬核观察 #806 谷歌给出了废弃 JPEG-XL 的理由：不爱了]]></title>
-        <id>https://linux.cn/article-15197-1.html?utm_source=rss&amp;utm_medium=rss</id>
-        <link href="https://linux.cn/article-15197-1.html?utm_source=rss&amp;utm_medium=rss"/>
-        <updated>2022-10-31T02:16:47.000Z</updated>
-        <summary type="html"><![CDATA[谷歌给出了废弃 JPEG-XL 的理由：不爱了
-
-昨天我们 报道 过，谷歌准备在 Chrome 110 中废弃 JPEG-XL 的实验性支持。对此，谷歌的一位工程师给出了他们的理由：实验性标志和代码不应该无限期地保留下去；整个生态系统没有足够的兴趣继续实验；新的图像格式并没有带来足够的增量优势；减少维护负担。而事实上，JPEG-XL d 比特流在 2020 年底才被冻结，文件格式在去年才被标准化，编码系统在今年早些时候才被标准化。
-
-
-消息来源：Phoronix
-
-
-
-老王点评：分手就分手，这些都是借口~~
-
-
-
-
-国外网友发现他的猫在“使用”百度
-
-一位国外网友给自己的猫买了一个自动喂食器，但是他发现这个喂食器每隔五分钟就会解析一下 baidu.com 的域名。经过研究，原来这个带有摄像头、WiFi 功能和云端服务的物联网设备，会通过解析 baidu.com 来判断网络联通性。而这是硬编码到其设备代码中的，并且使用了过期的解析库。至于为什么会解析百度而不是谷歌，显然这是一台中国生产的物联网设备。
-
-
-消息来源：SANS
-
-
-
-老王点评：这就是产地证明……
-
-
-
-
-苹果公司增加了漏洞赏金，但不准备针对之前的操作系统
-
-苹果安全博客带来了修订后的漏洞赏金的消息，有些漏洞赏金最高是以前最高赏金的两倍，一个零点击远程攻击链的理论最高赏金可达 200 万美元。但与此同时，苹果已经表示，旧的操作系统版本可能无法获得所有已知安全问题的修复。
-
-
-消息来源：The Register
-
-
-
-老王点评：虽然说是苹果的操作系统是免费升级，但是老设备是不能一直升级下去的，所以，换新设备吧。]]></summary>
-        <author>
-            <name>linux@linux.cn (linux)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[flyingmutant/rand: 快速、高质量的替代 math/rand 和 golang.org/x/exp/rand]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/3dee76b2c487c675ff30f8fdf797d9e1ba04b0d4</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/3dee76b2c487c675ff30f8fdf797d9e1ba04b0d4"/>
-        <updated>2022-10-31T02:10:13.000Z</updated>
-        <summary type="html"><![CDATA[flyingmutant/rand: 快速、高质量的替代 math/rand 和 golang.org/x/exp/rand]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[komodorio/helm-dashboard: Helm Dashboard 插件提供了一种 UI 驱动的方式来查看已安装的 Helm 图表、查看其修订历史和相应的 k8s 资源。]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/70057fa44c94216f3e709a752c6e31b9c3672255</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/70057fa44c94216f3e709a752c6e31b9c3672255"/>
-        <updated>2022-10-31T02:05:09.000Z</updated>
-        <summary type="html"><![CDATA[komodorio/helm-dashboard: Helm Dashboard 插件提供了一种 UI 驱动的方式来查看已安装的 Helm 图表、查看其修订历史和相应的 k8s 资源。]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[skoro/yii2-admin-template: Yii2 应用程序模板。]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/449ea08cf92eb6690b7861b97ed6d77f160ff194</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/449ea08cf92eb6690b7861b97ed6d77f160ff194"/>
-        <updated>2022-10-31T01:59:47.000Z</updated>
-        <summary type="html"><![CDATA[skoro/yii2-admin-template: Yii2 应用程序模板。]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[skoro/php-tkui: 仅使用 PHP 构建本机桌面应用程序]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/782af03ce6ac92b64b587cc4a08a67ec2d3197ec</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/782af03ce6ac92b64b587cc4a08a67ec2d3197ec"/>
-        <updated>2022-10-31T01:50:03.000Z</updated>
-        <summary type="html"><![CDATA[skoro/php-tkui: 仅使用 PHP 构建本机桌面应用程序]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[leonelquinteros/gotext: Go (Golang) GNU gettext 实用程序包]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/647e4cf5255a35407d226e392117f044f958432f</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/647e4cf5255a35407d226e392117f044f958432f"/>
-        <updated>2022-10-31T01:48:01.000Z</updated>
-        <summary type="html"><![CDATA[leonelquinteros/gotext: Go (Golang) GNU gettext 实用程序包]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[aglipanci/laravel-eloquent-case: Laravel 查询生成器的 CASE 语句支持。]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/b909b0b744eff52725d1a5c9a9c33053c3b21129</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/b909b0b744eff52725d1a5c9a9c33053c3b21129"/>
-        <updated>2022-10-31T01:45:23.000Z</updated>
-        <summary type="html"><![CDATA[aglipanci/laravel-eloquent-case: Laravel 查询生成器的 CASE 语句支持。]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Twitter is planning to start charging $20 per month for verification]]></title>
-        <id>https://news.ycombinator.com/item?id=33400828</id>
-        <link href="https://www.theverge.com/2022/10/30/23431931/twitter-paid-verification-elon-musk-blue-monthly-subscription"/>
-        <updated>2022-10-31T01:03:58.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.theverge.com/2022/10/30/23431931/twitter-paid-verification-elon-musk-blue-monthly-subscription
-Comments URL: https://news.ycombinator.com/item?id=33400828
-Points: 43
-# Comments: 39]]></summary>
-        <author>
-            <name>mfiguiere</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[派早报：马斯克完成推特收购、Adobe 从旗下软件中删除潘通色卡等]]></title>
-        <id>https://sspai.com/post/76486</id>
-        <link href="https://sspai.com/post/76486"/>
-        <updated>2022-10-31T00:41:52.000Z</updated>
-        <summary type="html"><![CDATA[你可能错过的新鲜事马斯克完成推特收购10月27日，马斯克完成对推特的收购，为一次反复波折的收购案画上句号。马斯克最初在4月份同意以440亿美元的价格收购推特，不久后以推特对机器人账号数量陈述不实等为由 ...查看全文]]></summary>
-        <author>
-            <name>少数派编辑部</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Tips for setting home directory permissions]]></title>
-        <id>https://www.reddit.com/r/linux/comments/yhvge9/tips_for_setting_home_directory_permissions/</id>
-        <link href="https://www.reddit.com/r/linux/comments/yhvge9/tips_for_setting_home_directory_permissions/"/>
-        <updated>2022-10-31T00:28:51.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/daemonpenguin  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Kernel prepatch 6.1-rc3]]></title>
-        <id>https://lwn.net/Articles/913122/</id>
-        <link href="https://lwn.net/Articles/913122/"/>
-        <updated>2022-10-31T00:02:33.000Z</updated>
-        <summary type="html"><![CDATA[The 6.1-rc3 kernel prepatch is out for
-testing.
-
-
-	So while rc2 was just _way_ bigger than usual, rc3 is only a bit
-	larger than an average rc3 release is. But it's still on the
-	largish side. I hope that things start calming down, and we'll
-	start seeing the size of these rc's shrink. Please?]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[English Sparkling Wines Challenge the Supremacy of Champagne, via Climate Change]]></title>
-        <id>https://news.ycombinator.com/item?id=33400192</id>
-        <link href="https://www.smithsonianmag.com/science-nature/english-sparkling-wines-challenge-supremacy-champagne-francethanks-climate-change-180974057/"/>
-        <updated>2022-10-30T23:34:12.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.smithsonianmag.com/science-nature/english-sparkling-wines-challenge-supremacy-champagne-francethanks-climate-change-180974057/
-Comments URL: https://news.ycombinator.com/item?id=33400192
-Points: 14
-# Comments: 8]]></summary>
-        <author>
-            <name>rntn</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Google set to deprecate JPEG XL support in Chrome 110]]></title>
-        <id>https://news.ycombinator.com/item?id=33399940</id>
-        <link href="https://www.phoronix.com/news/Chrome-Dropping-JPEG-XL-Reasons"/>
-        <updated>2022-10-30T23:01:21.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.phoronix.com/news/Chrome-Dropping-JPEG-XL-Reasons
-Comments URL: https://news.ycombinator.com/item?id=33399940
-Points: 57
-# Comments: 19]]></summary>
-        <author>
-            <name>berkut</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Star Trek (1964) [pdf]]]></title>
-        <id>https://news.ycombinator.com/item?id=33399896</id>
-        <link href="http://leethomson.myzen.co.uk/Star_Trek/1_Original_Series/Star_Trek_Pitch.pdf"/>
-        <updated>2022-10-30T22:57:30.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: http://leethomson.myzen.co.uk/Star_Trek/1_Original_Series/Star_Trek_Pitch.pdf
-Comments URL: https://news.ycombinator.com/item?id=33399896
-Points: 65
-# Comments: 17]]></summary>
-        <author>
-            <name>spking</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The real reason to tweak your kernel is for the jokes.]]></title>
-        <id>https://www.reddit.com/r/linux/comments/yhshys/the_real_reason_to_tweak_your_kernel_is_for_the/</id>
-        <link href="https://www.reddit.com/r/linux/comments/yhshys/the_real_reason_to_tweak_your_kernel_is_for_the/"/>
-        <updated>2022-10-30T22:43:14.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/TangoDrango  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PwshPaint: A pixel art editor for the terminal in PowerShell]]></title>
-        <id>https://news.ycombinator.com/item?id=33399632</id>
-        <link href="https://github.com/ShaunLawrie/PwshPaint"/>
-        <updated>2022-10-30T22:29:24.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://github.com/ShaunLawrie/PwshPaint
-Comments URL: https://news.ycombinator.com/item?id=33399632
-Points: 32
-# Comments: 6]]></summary>
-        <author>
-            <name>thunderbong</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AT Protocol Overview]]></title>
-        <id>https://news.ycombinator.com/item?id=33399402</id>
-        <link href="https://atproto.com/guides/overview"/>
-        <updated>2022-10-30T22:12:12.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://atproto.com/guides/overview
-Comments URL: https://news.ycombinator.com/item?id=33399402
-Points: 17
-# Comments: 8]]></summary>
-        <author>
-            <name>pr337h4m</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Ent: An Entity Framework for Go]]></title>
-        <id>https://news.ycombinator.com/item?id=33398806</id>
-        <link href="https://github.com/ent/ent"/>
-        <updated>2022-10-30T21:16:39.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://github.com/ent/ent
-Comments URL: https://news.ycombinator.com/item?id=33398806
-Points: 76
-# Comments: 28]]></summary>
-        <author>
-            <name>thunderbong</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[If one GUI's not enough for your SPARC workstation, try four]]></title>
-        <id>https://news.ycombinator.com/item?id=33398600</id>
-        <link href="http://oldvcr.blogspot.com/2022/10/if-one-guis-not-enough-for-your-sparc.html"/>
-        <updated>2022-10-30T20:58:35.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: http://oldvcr.blogspot.com/2022/10/if-one-guis-not-enough-for-your-sparc.html
-Comments URL: https://news.ycombinator.com/item?id=33398600
-Points: 71
-# Comments: 33]]></summary>
-        <author>
-            <name>zdw</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Marten: a Crystal web framework]]></title>
-        <id>https://news.ycombinator.com/item?id=33398253</id>
-        <link href="https://martenframework.com/"/>
-        <updated>2022-10-30T20:22:30.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://martenframework.com
-Comments URL: https://news.ycombinator.com/item?id=33398253
-Points: 120
-# Comments: 50]]></summary>
-        <author>
-            <name>ellmetha</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How Iran can track and control protesters’ phones: hacked documents]]></title>
-        <id>https://news.ycombinator.com/item?id=33398134</id>
-        <link href="https://theintercept.com/2022/10/28/iran-protests-phone-surveillance/"/>
-        <updated>2022-10-30T20:07:25.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://theintercept.com/2022/10/28/iran-protests-phone-surveillance/
-Comments URL: https://news.ycombinator.com/item?id=33398134
-Points: 103
-# Comments: 13]]></summary>
-        <author>
-            <name>wstrange</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[A 23-byte “hello, world” program assembled with DEBUG.EXE in MS-DOS]]></title>
-        <id>https://news.ycombinator.com/item?id=33398130</id>
-        <link href="https://github.com/susam/hello"/>
-        <updated>2022-10-30T20:07:09.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://github.com/susam/hello
-Comments URL: https://news.ycombinator.com/item?id=33398130
-Points: 101
-# Comments: 55]]></summary>
-        <author>
-            <name>susam</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Find your Twitter friends on Mastodon]]></title>
-        <id>https://news.ycombinator.com/item?id=33397677</id>
-        <link href="https://twitodon.com/"/>
-        <updated>2022-10-30T19:22:49.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://twitodon.com/
-Comments URL: https://news.ycombinator.com/item?id=33397677
-Points: 357
-# Comments: 195]]></summary>
-        <author>
-            <name>srvmshr</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Techniques which allow the sharing of data whilst keeping it secure]]></title>
-        <id>https://news.ycombinator.com/item?id=33397634</id>
-        <link href="https://www.theguardian.com/technology/2022/oct/29/privacy-problem-tech-enhancing-data-political-legal"/>
-        <updated>2022-10-30T19:18:09.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.theguardian.com/technology/2022/oct/29/privacy-problem-tech-enhancing-data-political-legal
-Comments URL: https://news.ycombinator.com/item?id=33397634
-Points: 45
-# Comments: 6]]></summary>
-        <author>
-            <name>jinnko</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Why Tesla removed radar and ultrasonic sensors [video]]]></title>
-        <id>https://news.ycombinator.com/item?id=33397093</id>
-        <link href="https://www.youtube.com/watch?v=_W1JBAfV4Io"/>
-        <updated>2022-10-30T18:18:03.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.youtube.com/watch?v=_W1JBAfV4Io
-Comments URL: https://news.ycombinator.com/item?id=33397093
-Points: 114
-# Comments: 176]]></summary>
-        <author>
-            <name>shekhar101</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Reversible and irreversible decisions (2018)]]></title>
-        <id>https://news.ycombinator.com/item?id=33397060</id>
-        <link href="https://fs.blog/reversible-irreversible-decisions/"/>
-        <updated>2022-10-30T18:15:18.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://fs.blog/reversible-irreversible-decisions/
-Comments URL: https://news.ycombinator.com/item?id=33397060
-Points: 75
-# Comments: 23]]></summary>
-        <author>
-            <name>durmonski</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Optimizing images with the HTML <picture> tag]]></title>
-        <id>https://news.ycombinator.com/item?id=33397054</id>
-        <link href="https://jfhr.me/optimizing-images-with-the-html-picture-tag/"/>
-        <updated>2022-10-30T18:14:51.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://jfhr.me/optimizing-images-with-the-html-picture-tag/
-Comments URL: https://news.ycombinator.com/item?id=33397054
-Points: 61
-# Comments: 38]]></summary>
-        <author>
-            <name>jfhr</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Show HN: Open-source user onboarding and KYC flow made with Svelte (~50kb)]]></title>
-        <id>https://news.ycombinator.com/item?id=33396982</id>
-        <link href="https://github.com/ballerine-io/ballerine"/>
-        <updated>2022-10-30T18:08:37.000Z</updated>
-        <summary type="html"><![CDATA[Hi everyone, We’re building an open-source identity and risk management platform and we’ve just released the first chunk of code, a fully customizable KYC flow & UI, to the public.
-We’ve chosen to use Svelte so our flows would be lightweight (it is ~50kb gzipped).
-Next up:
-- Adding forms and components for it to be used as a full onboarding flow.
-- Releasing an open-source case management dashboard, for manual approval of users.
-- Releasing an open-source rule engine, to help automate decisions.
-We’d love to hear your feedback, suggestions, or any question you’ve got.
-And if the rest of the project is relevant or interesting to you, follow us and, we’ll update you once new things are available.
-Thanks!
-Comments URL: https://news.ycombinator.com/item?id=33396982
-Points: 183
-# Comments: 28]]></summary>
-        <author>
-            <name>alonp99</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Show HN: Generate quiz questions using AI]]></title>
-        <id>https://news.ycombinator.com/item?id=33396942</id>
-        <link href="https://quizgecko.com/"/>
-        <updated>2022-10-30T18:04:32.000Z</updated>
-        <summary type="html"><![CDATA[One of the coolest things I've been able to get GPT-3 to do is generate questions based on a piece of text.
-So, I built a simple site to help others do the same. Hopefully, this can be useful to teachers, trainers, or just anyone who wants to create a fun and unique quiz.
-Comments URL: https://news.ycombinator.com/item?id=33396942
-Points: 53
-# Comments: 15]]></summary>
-        <author>
-            <name>jwblackwell</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Diode: Build, program, and simulate hardware projects in the browser]]></title>
-        <id>https://news.ycombinator.com/item?id=33396792</id>
-        <link href="https://www.withdiode.com/"/>
-        <updated>2022-10-30T17:51:19.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.withdiode.com/
-Comments URL: https://news.ycombinator.com/item?id=33396792
-Points: 61
-# Comments: 10]]></summary>
-        <author>
-            <name>bookofjoe</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[SVG text layout for Krita - development update]]></title>
-        <id>https://www.reddit.com/r/linux/comments/yhki0f/svg_text_layout_for_krita_development_update/</id>
-        <link href="https://www.reddit.com/r/linux/comments/yhki0f/svg_text_layout_for_krita_development_update/"/>
-        <updated>2022-10-30T17:35:08.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/raghukamath  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The Linux Process Journey — “zswap-shrink”]]></title>
-        <id>https://www.reddit.com/r/linux/comments/yhhtpo/the_linux_process_journey_zswapshrink/</id>
-        <link href="https://www.reddit.com/r/linux/comments/yhhtpo/the_linux_process_journey_zswapshrink/"/>
-        <updated>2022-10-30T15:59:52.000Z</updated>
-        <summary type="html"><![CDATA[Based on the kernel source code zswap is a backend for frontswap. Frontswap provides a “transcendent memory” interface for swap pages. In some cases we can get increased performance by saving swapped pages in RAM (or a RAM-like device) and not on disk as swap partition\swapfile (https://www.kernel.org/doc/html/v4.18/vm/frontswap.html). The frontends are usually implemented in the kernel while the backend is implemented as a kernel module (as we will show soon). Zswap takes pages that are in the process of being swapped out and attempts to compress and store them in a RAM-based memory pool. (https://elixir.bootlin.com/linux/latest/source/mm/zswap.c).
- We can say that zswap trades CPU cycles for potentially reduced swap I/O. A significant performance improvement can happen in case the reads from the swap device are much slower than the reads from the compressed cache (https://www.kernel.org/doc/html/v4.18/vm/zswap.html). The “zswap_frontswap_store” is the function that attempts to compress and store a single page (https://elixir.bootlin.com/linux/v6.1-rc2/source/mm/zswap.c#L1097).
- The kernel thread “zswap-shrink” is created created based on a workqueue (https://elixir.bootlin.com/linux/v6.1-rc2/source/mm/zswap.c#L1511). On my VM (Ubuntu 22.04.1) zswap is compiled part of the kernel itself and not as a separate “*.ko” (kernel module). You can see in the screenshot below that it does not appear in the output of “lsmod” and is marked as builtin (look at the filename field) in the output of “modinfo”.
- For more information like the compression used by zswap (the default one is lzo) and other parameters that can be configured for zswap I suggest reading the following link https://wiki.archlinux.org/title/zswap. You can also read the parameters on “/sys/module/zswap/parameters”
- https://preview.redd.it/mdepm164uyw91.jpg?width=831&format=pjpg&auto=webp&s=6253b482d1208381743cd3a8320e7022fb7ffa0b
-    submitted by    /u/boutnaru  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[FOSS graphing calculator?]]></title>
-        <id>https://www.reddit.com/r/linux/comments/yhho8l/foss_graphing_calculator/</id>
-        <link href="https://www.reddit.com/r/linux/comments/yhho8l/foss_graphing_calculator/"/>
-        <updated>2022-10-30T15:53:26.000Z</updated>
-        <summary type="html"><![CDATA[My fellow Linux Kings and Queens,
- I am in pre-calc for a Computer Science degree. Does anyone have a go-to scientific graphing calculator I should install?
- And if not, maybe we should make one.
- Thank you for your time.
-    submitted by    /u/brodoyouevenscript  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Analysis of an Ad Hijacking which occurred yesterday targetting GIMP]]></title>
-        <id>https://www.reddit.com/r/linux/comments/yhh0lv/analysis_of_an_ad_hijacking_which_occurred/</id>
-        <link href="https://www.reddit.com/r/linux/comments/yhh0lv/analysis_of_an_ad_hijacking_which_occurred/"/>
-        <updated>2022-10-30T15:26:08.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/Remote_Tap_7099  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[富士康回应郑州园区疫情：做好有序返乡服务]]></title>
-        <id>https://www.williamlong.info/archives/6976.html</id>
-        <link href="https://www.williamlong.info/archives/6976.html"/>
-        <updated>2022-10-30T13:47:55.000Z</updated>
-        <summary type="html"><![CDATA[10月30日傍晚，针对郑州园区疫情状况，富士康科技集团最新发布四点说明。富士康表示，在当前疫情形势下，如何做好园区20余万员工的照护与安全保障是一场“持久战”，也关注到了外界对富士康的关心，恳请各界给予理解和支持。
-
-
-此外，今日下午，“郑州发布”连发两条消息，通告“富士康给员工连发三条关爱通知：去留自愿，做好保障，并附上返乡乘车地点和电话”，以及“全力以赴确保富士康员工顺利安全返乡”。
-
-
-针对郑州园区疫情状况，富士康科技集团发布了四点说明:
-
-
-
-1、我们深知，在当前疫情形势下，如何做好园区20余万员工的照护与安全保障是一场“持久战”，也关注到了外界对富士康的关心，恳请各界给予理解和支持。
-
-
-2、照护员工是集团经营的首要原则。当前，在地方政府的指导下，集团郑州园区正持续落实防疫措施，实施了闭环管理、点对点通勤、每日核酸及抗原筛查、免费为员工提供三餐、增设24小时关爱热线、志愿者服务等员工关爱举措，并持续为员工提供最新的防疫信息及宣导。
-
-
-3、针对园区内的同仁，在符合防疫安全生产规范下，集团会全力保障员工生产安全及健康照护；由政府统筹管理的爱心观察区员工，集团也会尽最大努力，持续协调地方政府，为员工提供必要的物资供给与生活保障；目前园区内相关物资供应充足，会待疫情逐步稳定后，恢复先前因防疫而暂停的堂食等正常措施，以提高员工生活的便利性与满意度；针对部分有返乡意愿的员工，园区已联合政府统一组织人员和车辆，从今日起做好员工点对点有序返乡服务。
-
-
-4、郑州园区与政府配合防疫，目前状况已在逐步控制之中，集团也会协调其他厂区产能备援，以降低可能的影响。
-
-
-
-据“郑州发布”微信公众号最新消息，10月30日，记者从郑州航空港区疫情防控指挥部获悉，富士康将统一组织人员和车辆，全力以赴确保富士康员工顺利安全返乡。
-
-
-对于近期一些有返乡意愿的员工，本着充分尊重员工意愿的原则，航空港区积极与相关员工输出地政府沟通和协调，在严格落实疫情防控规定的前提下，安排公安、交通、属地办事处和富士康企业，统一组织人员和车辆，启动员工点对点返乡工作。
-
-
-在返乡前，充分尊重员工的去留意愿，与企业员工进行充分沟通，去留自愿，并做好点对点保障。按照疫情防控规定，加强返乡员工做好个人防护，安排核酸检测，协调省内相关地区做好接收，点对点闭环运输车辆，确保员工安全有序返乡。
-
-
-对于自愿留在企业生产生活的员工，将进一步优化、细化各项疫情防控措施，定期对厂区、员工宿舍消毒，在确保安全的前提下，全力组织好企业无疫情车间厂区的生产。同时，将积极做好在企员工的食宿、核酸检测、身体健康保障等工作，为员工提供医疗及关爱服务，开放线上、线下各类咨询渠道，竭尽全力为员工提供后勤服务及关爱保障。
-
-
-稿源：证券时报]]></summary>
-        <author>
-            <name>user@gmail.com (guest)</name>
         </author>
     </entry>
     <entry>
