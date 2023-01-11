@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-01-10 datetime="2023-01-10T00:50:04.000Z">2023-01-10</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-01-10 datetime="2023-01-10T00:50:04.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-01-11 datetime="2023-01-11T01:00:28.000Z">2023-01-11</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-01-11 datetime="2023-01-11T01:00:28.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -38,6 +38,524 @@
                   <a class="source-heading__link" href="https://news.ycombinator.com/">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;34333638"
+                        open
+                      >
+                        <summary class="article-expander__title">What Happens When a CPU Starts</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lateblt.tripod.com/bit68.txt">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Article URL: https://lateblt.tripod.com/bit68.txt
+Comments URL: https://news.ycombinator.com/item?id&#x3D;34333638
+Points: 7
+# Comments: 0</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;34333477"
+                        open
+                      >
+                        <summary class="article-expander__title">A US federal agency is considering a ban on gas stoves</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.cnn.com/2023/01/09/business/gas-stove-ban-federal-agency/index.html">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://media.cnn.com/api/v1/images/stellar/prod/220128124028-natural-gas-stove-file.jpg?c&#x3D;16x9&amp;q&#x3D;w_800,c_fill" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://www.cnn.com/2023/01/09/business/gas-stove-ban-federal-agency/index.html
+Comments URL: https://news.ycombinator.com/item?id&#x3D;34333477
+Points: 20
+# Comments: 13</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;78
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;34333282"
+                        open
+                      >
+                        <summary class="article-expander__title">HTML with Superpowers: An Introduction to Web Components</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://htmlwithsuperpowers.netlify.app/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Article URL: https://htmlwithsuperpowers.netlify.app/
+Comments URL: https://news.ycombinator.com/item?id&#x3D;34333282
+Points: 11
+# Comments: 1</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >top scoring links : linux</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/linux/top?sort&#x3D;top&amp;t&#x3D;day">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/108qtd2/fixing_gpu_hangs_on_intel_hd_graphics_520_and/"
+                        open
+                      >
+                        <summary class="article-expander__title">Fixing GPU Hangs on Intel HD Graphics 520 (and maybe other iGPUs)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/108qtd2/fixing_gpu_hangs_on_intel_hd_graphics_520_and/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>tldr: Set environment variable MESA_LOADER_DRIVER_OVERRIDE&#x3D;i965 on /etc/environment
+ ​
+ Hello! I&#x27;m making this post in case someone out there, like me, is having trouble with the HD Graphics 520 crashing when under heavy load and hopefully this might also work for other iGPUs suffering from the same issue.
+ Usually when doing GPU heavy tasks, your desktop might freeze for a few seconds or even crash the entire session (if you&#x27;re unlucky). You&#x27;ll get an error like this one on dmesg:
+ i915 0000:00:02.0: [drm] GPU HANG: ecode 9:1:85dffffb, in Xorg [2300]
+ For me this only happens when using the Iris driver which is the default for my card, changing it to the old i965 driver seems to not only have fixed the issue but reduced GPU usage when OBS is running.
+ The only thing you&#x27;ll need is to set an environment variable: MESA_LOADER_DRIVER_OVERRIDE
+ Open the file /etc/environment as root with any text editor (with sudo nano or sudo vim) and add this to a new line: MESA_LOADER_DRIVER_OVERRIDE&#x3D;i965
+ This will set the variable for every user on the machine (at least on Ubuntu 22.04) so that anyone logging into any session will be using the old driver instead of the Iris one.
+ Now log off and log back in and hope it fixes the problem for you. This works with both X.Org and Wayland. This variable can also be set individually for any applications that might have problems with the Iris driver like SDL-only PPSSPP.
+    submitted by    /u/Tridan05  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;51
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-01-10 datetime="2023-01-10T23:58:07.000Z">2023-01-10</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-01-10 datetime="2023-01-10T23:58:07.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Hacker News: Front Page</button>
+                  <a class="source-heading__link" href="https://news.ycombinator.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;34333210"
+                        open
+                      >
+                        <summary class="article-expander__title">Crypto.com Will Delist Tether in Canada</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://decrypt.co/118812/crypto-com-delist-tether-canada">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://img.decrypt.co/insecure/rs:fill:1024:512:1:0/plain/https://cdn.decrypt.co/wp-content/uploads/2020/06/shutterstock_1234593457-gID_1.jpg@png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://decrypt.co/118812/crypto-com-delist-tether-canada
+Comments URL: https://news.ycombinator.com/item?id&#x3D;34333210
+Points: 42
+# Comments: 13</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;27
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;34333176"
+                        open
+                      >
+                        <summary class="article-expander__title">Show HN: usbc.wtf – an article and quiz to find the right USB-C cable</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://usbc.wtf/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Article URL: https://usbc.wtf/
+Comments URL: https://news.ycombinator.com/item?id&#x3D;34333176
+Points: 6
+# Comments: 2</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;34332932"
+                        open
+                      >
+                        <summary class="article-expander__title">The Remarkable Emptiness of Existence</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://nautil.us/the-remarkable-emptiness-of-existence-256323/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://assets.nautil.us/sites/3/nautilus/EZ5HLMYp-Sutter_HERO.png?auto&#x3D;compress&amp;fm&#x3D;png&amp;ixlib&#x3D;php-3.3.1" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://nautil.us/the-remarkable-emptiness-of-existence-256323/
+Comments URL: https://news.ycombinator.com/item?id&#x3D;34332932
+Points: 21
+# Comments: 10</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;24
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;34332820"
+                        open
+                      >
+                        <summary class="article-expander__title">In Lebanon, solar power is booming</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.sapiens.org/culture/lebanon-solar-power/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://www.sapiens.org/app/uploads/2023/01/01_Electricity-Lines_Beirut-Lebanon-1024x683.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://www.sapiens.org/culture/lebanon-solar-power/
+Comments URL: https://news.ycombinator.com/item?id&#x3D;34332820
+Points: 42
+# Comments: 10</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;34332135"
+                        open
+                      >
+                        <summary class="article-expander__title">MuscleWiki: Find exercises that work specific muscles</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://musclewiki.com/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://musclewiki.com/static/images/og-image.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://musclewiki.com/
+Comments URL: https://news.ycombinator.com/item?id&#x3D;34332135
+Points: 24
+# Comments: 0</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;34332114"
+                        open
+                      >
+                        <summary class="article-expander__title">NeevaAI</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://neeva.com/blog/introducing-neevaai">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdn.sanity.io/images/c22bu2bx/marketing-site/57087bce41dbc5f2f62b2821601eff0827d6c37a-3200x1160.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://neeva.com/blog/introducing-neevaai
+Comments URL: https://news.ycombinator.com/item?id&#x3D;34332114
+Points: 116
+# Comments: 46</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;34331479"
+                        open
+                      >
+                        <summary class="article-expander__title">Researchers identify protein that helps skin cancer spread</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.qmul.ac.uk/media/news/2022/smd/researchers-identify-protein-that-helps-skin-cancer-spread-throughout-the-body.html">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://www.qmul.ac.uk/media/qmul/media/news/items/smd/2022/640-x-410-MAX_2019-11-13_WM983B_4.ims---2019-11-13_WM983B_4.ims-Resolution-Level-1-1-1[92].jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://www.qmul.ac.uk/media/news/2022/smd/researchers-identify-protein-that-helps-skin-cancer-spread-throughout-the-body.html
+Comments URL: https://news.ycombinator.com/item?id&#x3D;34331479
+Points: 53
+# Comments: 14</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;34331412"
+                        open
+                      >
+                        <summary class="article-expander__title">Jerry (YC S17) Is Hiring VP / Director of Engineering</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://jobs.ashbyhq.com/Jerry/2e30b90f-a707-4f50-9b7d-d27c841a238a">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Article URL: https://jobs.ashbyhq.com/Jerry/2e30b90f-a707-4f50-9b7d-d27c841a238a
+Comments URL: https://news.ycombinator.com/item?id&#x3D;34331412
+Points: 1
+# Comments: 0</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;34331225"
+                        open
+                      >
+                        <summary class="article-expander__title">Bringing MathML back to Chromium</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.igalia.com/2023/01/10/Igalia-Brings-MathML-Back-to-Chromium.html">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://www.igalia.com/assets/i/logo200x200Margin.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://www.igalia.com/2023/01/10/Igalia-Brings-MathML-Back-to-Chromium.html
+Comments URL: https://news.ycombinator.com/item?id&#x3D;34331225
+Points: 104
+# Comments: 47</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;34331216"
+                        open
+                      >
+                        <summary class="article-expander__title">Be where your business is</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://steveblank.com/2023/01/10/be-where-your-business-is/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://s0.wp.com/i/blank.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://steveblank.com/2023/01/10/be-where-your-business-is/
+Comments URL: https://news.ycombinator.com/item?id&#x3D;34331216
+Points: 72
+# Comments: 30</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;12
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;34331144"
+                        open
+                      >
+                        <summary class="article-expander__title">The source code for Duelyst, a digital collectible card game</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://github.com/open-duelyst/duelyst">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://opengraph.githubassets.com/2640da208c836fddcd3bdd6cb489bb58d05fecc6cbed85fb73945e0d2045e8bb/open-duelyst/duelyst" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://github.com/open-duelyst/duelyst
+Comments URL: https://news.ycombinator.com/item?id&#x3D;34331144
+Points: 63
+# Comments: 14</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;34330722"
+                        open
+                      >
+                        <summary class="article-expander__title">The DSA-2000 Radio Survey Telescope</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.deepsynoptic.org/overview">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="http://static1.squarespace.com/static/614f008bdbba3159ac98c058/t/6183fb150257c81a1f0618ff/1636039445593/DSAlogo.png?format&#x3D;1500w" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://www.deepsynoptic.org/overview
+Comments URL: https://news.ycombinator.com/item?id&#x3D;34330722
+Points: 28
+# Comments: 1</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;34329988"
+                        open
+                      >
+                        <summary class="article-expander__title">Pirate Weather: A free, open, and documented forecast API</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://pirateweather.net/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Article URL: https://pirateweather.net/
+Comments URL: https://news.ycombinator.com/item?id&#x3D;34329988
+Points: 604
+# Comments: 108</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;34329201"
+                        open
+                      >
+                        <summary class="article-expander__title">8086 Processor&#x27;s microcode pipeline from die analysis</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.righto.com/2023/01/the-8086-processors-microcode-pipeline.html">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://lh3.googleusercontent.com/blogger_img_proxy/ANbyha30MC9Gmz_48HJ2wJsKBtXgy8SIBAAcc_z9xNIfaWKOqO7fxtikFz7QL0_XbIx8CiVvoiJoasuzyFCVWeCKoKReN1zciKbib2bv-2MrTq7w39IADNQuAFmdfhLd3CxER-j8XLgwaG0&#x3D;w1200-h630-p-k-no-nu" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://www.righto.com/2023/01/the-8086-processors-microcode-pipeline.html
+Comments URL: https://news.ycombinator.com/item?id&#x3D;34329201
+Points: 97
+# Comments: 18</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;25
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;34328069"
+                        open
+                      >
+                        <summary class="article-expander__title">Theory-building and why employee churn is lethal to software companies</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.baldurbjarnason.com/2022/theory-building/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Article URL: https://www.baldurbjarnason.com/2022/theory-building/
+Comments URL: https://news.ycombinator.com/item?id&#x3D;34328069
+Points: 364
+# Comments: 237</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;25
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;34327759"
+                        open
+                      >
+                        <summary class="article-expander__title">How Microsoft attempted to make the Xbox 360 dashboard load faster</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://eaton-works.com/2023/01/09/how-microsoft-attempted-to-make-the-xbox-360-dashboard-load-faster/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://eaton-works.com/ew-og.png?cb&#x3D;28e58c15" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://eaton-works.com/2023/01/09/how-microsoft-attempted-to-make-the-xbox-360-dashboard-load-faster/
+Comments URL: https://news.ycombinator.com/item?id&#x3D;34327759
+Points: 112
+# Comments: 37</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;15
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;34327453"
+                        open
+                      >
+                        <summary class="article-expander__title">The Tyranny of ‘The Plan&#x27; (2013)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://chrisgagne.com/1255/mary-poppendiecks-the-tyranny-of-the-plan/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://chrisgagne.com/wp-content/uploads/2012/09/1000569931_BqVtF-M.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Article URL: https://chrisgagne.com/1255/mary-poppendiecks-the-tyranny-of-the-plan/
+Comments URL: https://news.ycombinator.com/item?id&#x3D;34327453
+Points: 96
+# Comments: 38</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;39
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -125,6 +643,297 @@ Points: 5
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/108ol4u/uploaded_a_new_script_to_my_github_repo/"
+                        open
+                      >
+                        <summary class="article-expander__title">Uploaded a new Script to my Github Repo - MatrixInfo.sh</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/108ol4u/uploaded_a_new_script_to_my_github_repo/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://external-preview.redd.it/akBXAGjpYcX8pKdWIBsXlYI3BZrecYSrqWlUsFrXDZ0.jpg?auto&#x3D;webp&amp;v&#x3D;enabled&amp;s&#x3D;c1b04d76eb38bf0ed9753c7cc493bd15a3e62074" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>I&#x27;ve just added a new script to my repo on github. Matrixinfo.sh Display neo-matrix with a welcome message and the prints some useful information. Please be careful about sharing the output info. It include public IP and some system information.
+ https://github.com/randomxusr/Linux-Scripts
+    submitted by    /u/RandomXUsr  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;50
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/108mt57/automatic_setup/"
+                        open
+                      >
+                        <summary class="article-expander__title">Automatic setup</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/108mt57/automatic_setup/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://external-preview.redd.it/TCgS3k9bbeYo251NQG19loa4GhF5H3gYjKlxjb5whg4.jpg?auto&#x3D;webp&amp;v&#x3D;enabled&amp;s&#x3D;434c200057590badd6321837524ae271aefba155" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Hey guys, 
+ When I started with Linux I used to write everything that I downloaded so when my system crashed and I did not find how to repair it, I would reinstall it. The list was beneficial. I decided why not make a script in my dotfiles so that when I was installing Linux to some other PC It would be really easy to run just one command and everything will be installed automatically. Maybe you did that, too. However, let me share it, and let&#x27;s help some who did not think of this.
+ Here is the repo:
+ https://github.com/Fildo7525/dotfiles
+ PS: I use Ubuntu.
+    submitted by    /u/Fildo7525  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;50
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/108mbtv/i_wrote_a_tui_snake_game_in_bash_v51/"
+                        open
+                      >
+                        <summary class="article-expander__title">I wrote a TUI snake game in BASH v5.1+</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/108mbtv/i_wrote_a_tui_snake_game_in_bash_v51/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://preview.redd.it/5us2ffedxbba1.gif?format&#x3D;png8&amp;s&#x3D;b2839e9be0fb2ac5b8463c2f6a9f139b19efbb65" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>submitted by    /u/wick3dr0se  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;51
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/108k1da/linux_namespaces_ipc_namespace/"
+                        open
+                      >
+                        <summary class="article-expander__title">Linux - namespaces: IPC namespace</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/108k1da/linux_namespaces_ipc_namespace/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://external-preview.redd.it/vn9xqobLly2OK60B51J-v2sfBhrpDgqaCFufaEI66y4.jpg?auto&#x3D;webp&amp;v&#x3D;enabled&amp;s&#x3D;d36488c7c2bf9de378c77ded963efe17a81073b6" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>In the first part of the series we have talked generally about what are namespace and what we can do with them - in case you want to go over it you can use the following link https://medium.com/@boutnaru/linux-namespaces-part-1-dcee9c40fb68. Now we are going to deep dive into the IPC (inter process communication) namespace.
+ The goal of the IPC namespace is to isolate between different IPC resources like message queues, semaphores and shared memory. We are talking both on System V IPC objects (https://man7.org/linux/man-pages/man7/sysvipc.7.html) and POSIX message queues (https://man7.org/linux/man-pages/man7/mq_overview.7.html). In order to use “IPC namespaces” the kernel should be compiled with CONFIG_IPC_NS enabled (https://man7.org/linux/man-pages/man7/ipc_namespaces.7.html). 
+ We can use “/proc” in order to retrieve information about the different IPC objects in an “IPC namespace”. Regarding POSIX message queues we have “/proc/sys/fs/mqueue”. In case of System V IPC objects we have “/proc/sysvipc” and specific file in “/proc/sys/kernel” (msgmax, msgmnb, msgmni, sem, shmall, shmmax, shmmni, and shm_rmid_forced). For more information I suggest reading proc’s man page (https://man7.org/linux/man-pages/man5/proc.5.html). 
+ Lastly, all IPC objects created in an “IPC namespace” are visible only to all processes/tasks that are members of the same namespace - as shown in the screenshot below. In the demonstration the namespace was created using “unshare” (https://man7.org/linux/man-pages/man1/unshare.1.html), the IPC resource was created using “ipcmk” (https://man7.org/linux/man-pages/man1/ipcmk.1.html) and the show information about System V IPC resources using “ipcs” (https://man7.org/linux/man-pages/man1/ipcs.1.html). 
+ ​
+ https://preview.redd.it/renh07yyz9ba1.png?width&#x3D;599&amp;format&#x3D;png&amp;auto&#x3D;webp&amp;s&#x3D;149cb4ec62c86902d32b3ba7c91f2a2289e334af
+    submitted by    /u/boutnaru  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;54
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/108j6qe/anyone_else_thinks_most_linux_devs_are_handling/"
+                        open
+                      >
+                        <summary class="article-expander__title">Anyone else thinks most Linux devs are handling this h264 codec thing in the worst way possible?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/108j6qe/anyone_else_thinks_most_linux_devs_are_handling/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>First, Fedora just breaks VAAPI encoding without providing a workaround first, as if no one needed that on production. Then, other distros followed but at least some of them provided alternative solutions.
+ Now OBS just released an update that REMOVED VAAPI from the Flatpak. For a software that relies so much on hardware encoding (even with the bad Linux support they have), an issue like this should be something that all devs must think before doing. Flatpak can use runtimes, so if the runtime they use breaks the program then don&#x27;t update the runtime.
+ Meanwhile Windows users got new hardware encoding options that actually work. I don&#x27;t get why we started this journey against the desktop Linux right when it was getting somewhere.
+    submitted by    /u/Talkys  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;57
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/108iq8w/intel_xeon_platinum_8490h_sapphire_rapids/"
+                        open
+                      >
+                        <summary class="article-expander__title">Intel Xeon Platinum 8490H &quot;Sapphire Rapids&quot; Performance Benchmarks Review</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/108iq8w/intel_xeon_platinum_8490h_sapphire_rapids/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://external-preview.redd.it/oigQ8ed-9bJJC_pDXPbL3dkARFjgLCesmmXpq7cDGmw.jpg?auto&#x3D;webp&amp;v&#x3D;enabled&amp;s&#x3D;8cd8c3583ef96bd866f13eacdbf3f6ebb5b27356" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>submitted by    /u/twlja  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;56
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/108fcm9/veloren_the_open_world_rpg_had_its_014_release/"
+                        open
+                      >
+                        <summary class="article-expander__title">Veloren, the open world RPG had its 0.14 release</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/108fcm9/veloren_the_open_world_rpg_had_its_014_release/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://external-preview.redd.it/t24b0ypcUkMyK3l1Z4wu0HD9woQ7EpSaWFkey0JzWcw.jpg?auto&#x3D;webp&amp;s&#x3D;964e5f74a8a420fac8eddaf1aa3130bc6c2a3fff" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>submitted by    /u/PossiblyLinux127  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;50
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/108ewxa/building_a_distro_from_the_ground_up/"
+                        open
+                      >
+                        <summary class="article-expander__title">Building a Distro From The Ground Up</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/108ewxa/building_a_distro_from_the_ground_up/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://external-preview.redd.it/oQ9FQqs7wK8TB2bIzOq9dR6VxkYLBPS7Uc5bxWXfAuM.jpg?auto&#x3D;webp&amp;s&#x3D;8465eda56a3c5a3799fdad49d869dec1ae163af4" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>submitted by    /u/dlorenc  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;50
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/108dv7c/collecting_opinions_for_best_ppc_distro/"
+                        open
+                      >
+                        <summary class="article-expander__title">Collecting opinions for best PPC distro</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/108dv7c/collecting_opinions_for_best_ppc_distro/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>I worked for Apple many years ago, and due to this have ended up with many old PowerPC &amp; 68k Macs in my possession. I’ve dutifully moved them from place to place over the years, mostly due to my desire to not seem them end up in a landfill, but I’d like to actually utilize at least a few of them. 
+ Most are laptops, like a PowerBook 100 and a few of those colourful, toilet-seat-shaped iBook G3’s, but I also have some desktop machines that I believe still have some useful life left in them, but MacOS abandoned them decades ago, in most cases. 
+ If I wanted to resurrect these old dinosaurs with a passably-modern, Linux-based OS, what distribution would you suggest I look at first? I’m more concerned about the PowerPC machines, but I’d also love some advice about the Motorola 68k machines. 
+ Thanks in advance for any guidance you’re able to provide.
+ EDIT: I’ve fallen into that age-old trap of using the word ‘Linux’ as a catch-all that just means “Unix-like FOSS Operating System”. My bad; I’ll try to do better in the future:) It’d definitely be at least slightly better/easier for me overall if it were truly Linux-based, but I’m not averse to looking into BSD; I had already anticipated that this project would involve building quite a great deal of what I want from source anyway.
+    submitted by    /u/plaidverb  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;55
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/108cwl0/phosh_2022_in_retrospect/"
+                        open
+                      >
+                        <summary class="article-expander__title">Phosh 2022 in Retrospect</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/108cwl0/phosh_2022_in_retrospect/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://external-preview.redd.it/KaZLecS-JcMO34MinB4cnWr18mOp7945zte4B8Qc5oM.jpg?auto&#x3D;webp&amp;s&#x3D;d83a358ee4a9de23fdafaa8856cba784b1dc47b5" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>submitted by    /u/Adwaitian  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;49
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/108cnv2/exclusive_say_goodbye_to_bloated_closed_source/"
+                        open
+                      >
+                        <summary class="article-expander__title">Exclusive(?!) : Say goodbye to bloated, closed source software – CoolerMaster to release new, open source version of it’s software with API integration – and it can work with other coolers too!</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/108cnv2/exclusive_say_goodbye_to_bloated_closed_source/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/gdarruda  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;51
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/108avzx/linux_preparing_to_disable_drivers_for_microsofts/"
+                        open
+                      >
+                        <summary class="article-expander__title">Linux Preparing To Disable Drivers For Microsoft&#x27;s RNDIS Protocol</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/108avzx/linux_preparing_to_disable_drivers_for_microsofts/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://external-preview.redd.it/N7N5zNyr2VJe9_0VY3UFFsye57Upphbn9enwDsXMTUQ.jpg?auto&#x3D;webp&amp;s&#x3D;5eafba95e6170dd8a07589b5caa9416a096ed9a4" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>submitted by    /u/Realistic-Plant3957  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;61
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/linux/comments/1081zxr/tuxpusher_a_foss_coin_pusher_game_for_linux/"
+                        open
+                      >
+                        <summary class="article-expander__title">TuxPusher, a FOSS Coin Pusher game for Linux!</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/1081zxr/tuxpusher_a_foss_coin_pusher_game_for_linux/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://external-preview.redd.it/UZhPxGxtIjRhWKOXGIDes6WifUocz2SobuOlDa0qy68.png?format&#x3D;pjpg&amp;auto&#x3D;webp&amp;s&#x3D;75321130edf356ee75a5b47fedab468546a243f9" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>submitted by    /u/SirFletch  
+ [link]   [comments]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;55
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://www.reddit.com/r/linux/comments/107vf24/what_is_mglru_and_what_are_some_greater/"
                         open
                       >
@@ -136,6 +945,665 @@ Points: 5
     submitted by    /u/PuebloPhillipe  
  [link]   [comments]</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;49
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >LWN.net</button>
+                  <a class="source-heading__link" href="https://lwn.net">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/919426/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] Formalizing f-strings</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/919426/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Python&#x27;s formatted strings, or &quot;f-strings&quot;, came relatively late to the
+language, but have become a popular feature.  F-strings allow a compact
+representation for the common task of interpolating program data into
+strings, often in order to output them in some fashion.  Some
+restrictions were placed on f-strings to simplify the implementation of
+them, but those restrictions are not really needed anymore and, in
+fact, are complicating the CPython parser.  That has led to a Python
+Enhancement Proposal (PEP) to formalize the syntax of f-strings for the
+benefit of Python users while simplifying the maintenance of the
+interpreter itself.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/919563/"
+                        open
+                      >
+                        <summary class="article-expander__title">PEP 703: Making the Python global interpreter lock optional</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/919563/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>In late 2021, LWN covered a plan to
+eliminate the Python global interpreter lock (GIL), thus improving the
+language&#x27;s thread-level concurrency.  This plan has now been codified as PEP 703, which includes
+an extensive discussion of the changes that would be made.
+
+
+	The global interpreter lock will remain the default for CPython
+	builds and python.org downloads. A new build configuration flag,
+	--without-gil will be added to the configure script that
+	will build CPython without the global interpreter lock.
+
+
+The posting of a PEP is only one step in a long path toward integrating
+this change into the CPython interpreter; expect some extended discussions
+over the coming months.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/919543/"
+                        open
+                      >
+                        <summary class="article-expander__title">Security updates for Tuesday</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/919543/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Security updates have been issued by Debian (libtasn1-6), Fedora (nautilus), Oracle (kernel, kernel-container, nodejs:14, tigervnc, and xorg-x11-server), Red Hat (grub2, nodejs:14, tigervnc, and xorg-x11-server), Scientific Linux (tigervnc and xorg-x11-server), SUSE (systemd), and Ubuntu (firefox, linux-aws, linux-aws-5.15, linux-azure, linux-azure-5.15, linux-azure-fde, linux-azure, w3m, and webkit2gtk).</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >少数派</button>
+                  <a class="source-heading__link" href="https://sspai.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://sspai.com/post/77734"
+                        open
+                      >
+                        <summary class="article-expander__title">一份价格，双份收货 | 年底小目标：彻底搞定 PPT，兔年解放你自己</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://sspai.com/post/77734">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdn.sspai.com/2023/1/10/article/8e201e93-6c8c-15e9-9c9a-b1d765a41c36.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>📬省流公告板春节活动时间：即日起至2023年1月29日一份价格，双份收货：少数派联合电子工业出版社推出PPTer效率礼包：79元栏目《生产力超频：科学做好PPT的三个步骤》+79.9元纸质图书《揭秘P ...查看全文</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://sspai.com/post/77676"
+                        open
+                      >
+                        <summary class="article-expander__title">春节将至，归乡路上用它拨开「世界迷雾」</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://sspai.com/post/77676">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdn.sspai.com/2023/1/10/article/06830b78-9d42-32dc-ce75-91d98da3bbc0.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>时隔 5 年之久，老牌的记录足迹应用《世界迷雾》迎来了大版本更新。世界迷雾 3.0 版本主要带来的变化，是 UI 界面的更新：新增了导航栏，重新设计「地图相机」，应用内的地图、护照、徽章等板块以更加现代化的方式展示。查看全文</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://sspai.com/post/77695"
+                        open
+                      >
+                        <summary class="article-expander__title">听歌，我们是认真的：一首歌的创作笔记</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://sspai.com/post/77695">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdn.sspai.com/2023/1/10/article/a8bb6e68-f97c-fdc8-208a-e3c2484d2087.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>每个人都有自己听歌的方式，有自己喜欢的音乐类型……所有的音乐诉求，到最后无非就是「感动」二字。查看全文</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://sspai.com/post/77705"
+                        open
+                      >
+                        <summary class="article-expander__title">在充满套路的「极速版」赚钱 App 上，我们能赚多少钱？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://sspai.com/post/77705">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdn.sspai.com/2023/01/09/e86c6fcee85127a91d460480fe05a70a.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>钱是个好东西，谁不想赚呢？查看全文</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://sspai.com/post/77735"
+                        open
+                      >
+                        <summary class="article-expander__title">派早报：腾讯游戏发布限玩日历，Steam 同时在线人数破千万等</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://sspai.com/post/77735">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="2023/1/10/article/e9499c4c-1ee9-1288-cdaa-ef293148553f.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>BlackBerry 宣布在汽车软件开发中支持 Rust 语言，Intel 发布全新 U300 系列处理器等。查看全文</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Linux 中国◆开源社区</button>
+                  <a class="source-heading__link" href="https://linux.cn/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://linux.cn/article-15432-1.html?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss"
+                        open
+                      >
+                        <summary class="article-expander__title">Oh My Zsh 和 Powerlevel10k：天作之合</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://linux.cn/article-15432-1.html?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>这是一篇快速而简单的指南，用 Oh My Zsh 和 Powerlevel10k 主题改造你的 Zsh 终端 Shell，使其在 Ubuntu 和其他 Linux 发行版中看起来很酷。
+
+
+
+
+大多数 Linux 发行版中的默认 Shell 是 Bash。Bash 是一个可靠的和传统的工具。然而，它缺乏一些自定义功能，比如漂亮的颜色、光标支持等等。
+
+你可以使用另一个 Shell，即 Zsh 来得到更多的设置调整，并帮助你扩展你的 Bash Shell 体验。
+
+这个简单的指南解释了如何安装 Zsh、Oh My Zsh 并应用 Powerlevel10k 主题。
+
+Oh My Zsh 和 Powerlevel10k 安装和配置指南
+
+1、安装 Zsh 和改变 Shell
+
+打开一个终端，使用以下适用于你的发行版的命令安装 Zsh。
+
+Ubuntu、Debian、Linux Mint 和所有相关的发行版：
+
+sudo apt install zsh
+
+
+Fedora：
+
+sudo dnf install zsh
+
+
+Arch：
+
+pacman -S zsh
+
+
+安装完成后，找出 Zsh 的安装路径：
+
+whereis zsh
+
+
+然后使用当前用户的 Zsh 可执行路径改变 Shell。
+
+chsh -s /usr/bin/zsh 
+
+
+
+
+关闭并再次打开终端。然后你应该看到 Zsh 的首次设置。选择选项 2。它将用一个默认的主题改变你的 Shell 提示符的外观，如下图所示：
+
+
+
+2、安装 Oh My Zsh
+
+Oh My Zsh 是一套可以进一步定制 Zsh 的脚本。
+
+首先，我们将从 GitHub 上下载 Oh My Zsh 脚本来安装它。如果你有 wget 和 git 软件包，那就最好了。如果还没有…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://linux.cn/article-15431-1.html?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss"
+                        open
+                      >
+                        <summary class="article-expander__title">硬核观察 #877 微软准备将 AI 聊天机器人添加到 Word 和电子邮件中</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://linux.cn/article-15431-1.html?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>微软准备将 AI 聊天机器人添加到 Word 和电子邮件中
+
+据报道，微软已经讨论在 Word、PowerPoint、Outlook 等应用程序中加入 OpenAI 的人工智能，以便客户能够使用简单的提示自动生成文本。这一举措可能会改变超过 10 亿人编写文档、演示文稿和电子邮件的方式。工程师们正在开发在客户数据上训练这些模型的方法，并保证这些数据不会泄露给其他客户或落入不良分子手中。
+
+
+消息来源：The Information
+
+
+
+老王点评：让我想一下，或许以后可以就写个提纲，Word 就可以替你补充大段看起来没什么问题的文字？这简直是灌水的福音。
+
+
+
+
+艺术家担心 Adobe 追踪其设计过程来训练 AI
+
+前两天我们 报道 过，Adobe 创意云服务的隐私条款让用户担心其创作被用来训练 Adobe 的生成性 AI。这一讨论在 Twitter 上吸引了数百万次浏览和数千次转发。但是除了对图像、音乐、视频等创作被利用的担心之外，艺术家们还担心 Photoshop 和其他 Adobe 产品追踪其应用的使用，以了解创作者是如何工作的。也就是说，窃取平面设计师在几十年的工作中形成的流程和行动。一个复杂、曲折的艺术过程变得有可能被自动化。
+
+
+消息来源：Fast Company
+
+
+
+老王点评：如果是真的，那么平面设计师或艺术家们也将很快被人工智能取代。我们说的 AI 的消息够多了，总感觉我们处在 AI 爆发前夜，或许明天一切你想得到、想不到的工作都会因 AI 而改变。
+
+
+
+
+动态三重缓冲有望加入 GNOME 44
+
+两年多来，Canonical 一直在为 GNOME 桌面的 Mutter 合成器研究动态三重缓冲。这种按需的三重缓冲可以极大地提高桌面性能，特别是在使用英特尔集成显卡和树莓派板卡的情况下。虽然三重缓冲的实现还没有被上游化，但从 Ubuntu 22.04 LTS 开始就把这些补丁作为他们发行的 Mutter 包的一部分，Debian 等发行版也一直携带该补丁。开发人员表示动态三重缓冲有望会被 GNOME 44 上游纳入。GNOME 44.0 稳定版将于 3 月 22 日发布。
+
+
+消息来源：Phoronix
+
+
+
+老王点评：这对低性能显卡真是一件好事。相比 GNOME、KDE 的各种花哨改进，我更愿意看到它们在性能和稳定性等底层的进展。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://linux.cn/article-15430-1.html?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss"
+                        open
+                      >
+                        <summary class="article-expander__title">who 命令的解释与示例</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://linux.cn/article-15430-1.html?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>这里是一个关于理解 Linux 中 who 命令的初学者指南，并带有几个例子。
+
+
+这篇文章是 Linux 命令学习系列的一部分。
+
+who 命令
+
+Linux 中的 who 命令用于显示当前登录到系统中的用户的信息。它显示用户的登录名，用户登录的终端，用户登录的时间，以及远程主机名（如果有）。
+
+语法
+
+下面是 who 命令的基本语法：
+
+who [OPTION]... [ FILE | ARG1 ARG2 ]
+
+
+各种 who 命令和开关的例子
+
+默认情况下，who 读取文件 /var/run/utmp，其中包含当前登录的用户的信息。如果没有指定选项，它会显示每个用户的登录名、终端和登录时间。
+
+who
+
+
+它给出了以下输出。你可以看到它显示了登录名是 debugpoint，终端 ID tty2 和登录的日期和时间。
+
+debugpoint tty2 2023-01-01 11:22 (tty2)
+
+
+
+
+然而，如果你在虚拟机中运行上述命令，你应该看到同样的情况，但终端 ID 将是 x11 服务器的显示名称，即 :0。
+
+❯ who
+debugpoint :0 2023-01-01 23:36 (:0)
+
+
+要显示当前用户的用户名和信息，使用下面的方法：
+
+whoami
+
+
+使用 -b 选项查看最后一次系统启动时间：
+
+❯ who -b
+system boot 2023-01-01 23:36
+
+
+显示当前系统中登录的用户数：
+
+❯ who -q
+debugpoint
+users&#x3D;1
+
+
+所有上述命令与 -H 选项配对时，你会有一个更好的含标题行的信息，如下所示：
+
+who -H
+
+NAME LINE TIME COMMENT
+debugpoint tty2 2023-01-01 11:22 (tty2)
+
+
+如果你想在 Linux 中显示与 who 命令有关的所有信息，请使用选项 -a：
+
+who -aH
+
+NAME LINE TIME IDLE PID COMMENT EXIT
+system boot 2023-01-01 11:19
+run-level 5 2023-01-01 11:19
+debugpoint + tty2 2023-01-01 11:22 13:26 2042 (tty2)
+
+
+像往常一样，你可以使用下面的重定向将 who 命令的输出保存到任何文件：
+
+who &gt; user_details.txt
+
+
+who 命令选项的例子总结
+
+下面是一些 who 命令的例子和它们的解释：
+
+下面是一些可以与 who 命令一起使用的选项：
+
+
+-a: 显示每个用户的主机名、登录时间和进程
+
+-b: 显示上次系统启动的时间
+
+-d: 显示死进程（已终止但未从 utmp 文件中删除的进程）
+
+-H: 显示标题行
+
+-l: 显示长格式的登录进程
+
+-m: 只显示在 ARG1 ARG2 指定的终端上登录的用户的名字和行。
+
+-q: 显示已登录用户的数量
+
+-u: 显示拥有未脱离进程的用户的信息
+
+-w: 显示已经登录的用户信息，格式与 utmp 文件相同
+
+
+总结
+
+我希望这篇文章能够帮助你了解 who 命令及其基本原理。你也可以阅读 who 手册页来了解更多。如果你有任何问题，请告诉我。
+
+
+via: https://www.debugpoint.com/who-command-linux/
+
+作者：Arindam 选题：lkxed 译者：geekpi 校对：wxy
+
+本文由 LCTT 原创编译，Linux中国 荣誉推出</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >书伴</button>
+                  <a class="source-heading__link" href="https://bookfere.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://bookfere.com/?p&#x3D;47863"
+                        open
+                      >
+                        <summary class="article-expander__title">[每周一书]《支配与抵抗艺术》无权者与有权者之间的对抗</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://bookfere.com/post/1044.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>本书推出了“潜隐剧本”这一概括底层行为选择和意识形态特征的分析性概念。相对于“公开剧本”，发生在后台的话语、姿态与实践代表着他们对支配者的某种权力批判。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >上海书评</button>
+                  <a class="source-heading__link" href="http://thepaper.cn">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.thepaper.cn/newsDetail_forward_21473947"
+                        open
+                      >
+                        <summary class="article-expander__title">熊远报评《清代中国的法与审判》丨清代民事审判中的情·理·法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.thepaper.cn/newsDetail_forward_21473947">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>《清代中国的法与审判》，[日]滋贺秀三著，创文社，1984年版
+
+
+滋贺秀三（1921-2008）
+
+在社会正常运转、一切相安无事或者按部就班的情况下，秩序或社会秩序是一个不被意识到的抽象概念。一旦出现如大面积传染病造成的连锁性社会危机，或因特定要素发生战争之类的冲突，社会秩序、维持秩序的诉求和努力、秩序的力量等观念、需求、实体组织与支撑要素以及复杂的结构立即凸显出来。凡事有例可依，顺理成章就是秩序状态或者社会秩序化的结果，意味着背后的社会习惯、规则、制度以及支撑这些习惯、规则、制度正常运转的文化价值、意识形态和相关社会组织系统的复合性力量持续发挥作用。
+为构建一个井然有序的社会，无论是站在政治顶端的当权者，怀抱修齐治平理想的官僚与学者，还是负有家族村社之责的家父长与村野长老，在思想文化、制度规则、组织人事、社会习惯与风俗方面作了千年以上的努力。但是中国文明得以绳绳不绝，其秩序究竟是以什么原理，按照什么规则构建、维持？制度、规则通过什么层级、组织系统来执行，底层社会的纠纷经过什么样的环节与政治、社会性权力系统的介入获得解决？即社会秩序的制度结构与实际运用等问题，是致力于传统中国制度史与法制史学者具有魅力的研究领域。
+在学术上专门讨论这些问题的中国法制史学科的形成与发展过程中，日本的东洋法制史学具有非常重要的位置。立基于近代人文社会科学理论与方法的中国历史学和法制史学始于二十世纪初，在构建中国历史学与法制史学框架的过程中，日本的“东洋史”与“东洋法制史”学者在某种意义上具有奠基之功。在中国法制史学领域，如果说宫崎道三郎与中田薰的开拓性研究处于草创期，那么仁井田陞以唐律令的复原与解释为出发点，承接了宫崎与中田等的成果，比较系统地展开了中国法史学研究，拓宽了中国法制史领域，滋贺秀三则是其后日本中国法制史研究的代表性学者。
+作为滋贺教授研究生涯后期成果的巅峰，《清代中国的法与审判》…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >月光博客</button>
+                  <a class="source-heading__link" href="https://www.williamlong.info/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.williamlong.info/archives/7048.html"
+                        open
+                      >
+                        <summary class="article-expander__title">苹果宣布送iPhone或iPad新用户6个月iCloud+</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.williamlong.info/archives/7048.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>苹果公司宣布，近期购买并激活新iPhone或iPad的新订阅用户，可免费获取6个月iCloud+服务。符合该优惠条件的设备是指2023年1月1日起，在中国大陆范围内，从苹果官方或其授权经销商处购买，并已经运行iOS 14或iPadOS 14系统的新iPhone或iPad。简而言之，就是今年1月之后购买激活iPhone或iPad的用户。
+
+
+虽然苹果提到“现有iCloud+付费用户无法享受此优惠”，但其实“停用 iCloud+ 服务三个月以上的原订阅用户也可享受这一优惠”，也就老用户停用一段时间也可以享受优惠。
+
+
+符合条件的用户在激活设备48小时内会在系统内收到推送通知，在90天内点击即可兑换优惠。
+
+
+6个月免费期结束后，iCloud+订阅将按中国大陆地区当前定价自动续订。用户在结束前取消订阅即可。
+
+
+iCloud是苹果自有的私有云空间服务，2011发布。它将苹果的不同硬件和软件与云端数据结合，可在云端存储照片，应用，日历，文档等数据，并通过Apple ID自动同步。起步是免费的5GB空间。并具备200GB——2TB等不同容量的收费档位。
+
+
+2021年6月，苹果在其全球开发者大会上宣布，iCloud正式升级为iCloud+品牌，同时更加强调用户隐私保护。
+
+
+相比iCloud，“iCloud+”服务具有更多进阶功能，如“隐藏邮件地址”和 HomeKit 安防视频支持。此外，用户可通过家人共享与家庭成员共享最大2TB的存储空间。
+
+
+这是苹果尝试将其硬件+服务绑定的新尝试，此前，Apple Music也有类似活动。让新用户免费体验一段时间的苹果流媒音乐服务。
+
+
+稿源：新浪数码</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >GitHub File - guanguans/favorite-link/master/README.md</button>
+                  <a class="source-heading__link" href="https://github.com/guanguans/favorite-link/commits/master/README.md">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://github.com/guanguans/favorite-link/commit/e272f55ead5e2ed95fd36a2b0ea8057901db223e"
+                        open
+                      >
+                        <summary class="article-expander__title">abhinav/doc2go: 你的 Go 项目的文档，待办。</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://github.com/guanguans/favorite-link/commit/e272f55ead5e2ed95fd36a2b0ea8057901db223e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://opengraph.githubassets.com/49fc5b7055d6a2be7d73db22346442c9e4fe34f12e5b23df8d5f3a92e5ba7622/guanguans/favorite-link/commit/e272f55ead5e2ed95fd36a2b0ea8057901db223e" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>abhinav/doc2go: 你的 Go 项目的文档，待办。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://github.com/guanguans/favorite-link/commit/e34e592ade057ab661c0117562ec2ceee55d859b"
+                        open
+                      >
+                        <summary class="article-expander__title">joohoi/acme-dns: 有限的 DNS 服务器与 RESTful HTTP API，以处理 ACME DNS 挑战(挑战)容易和安全。</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://github.com/guanguans/favorite-link/commit/e34e592ade057ab661c0117562ec2ceee55d859b">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://opengraph.githubassets.com/c246b4f9d01b7dc8e1a233cb46d040949e23d728c6409c8eadc7d4a3843f16f6/guanguans/favorite-link/commit/e34e592ade057ab661c0117562ec2ceee55d859b" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>joohoi/acme-dns: 有限的 DNS 服务器与 RESTful HTTP API，以处理 ACME DNS 挑战(挑战)容易和安全。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -3533,6 +5001,64 @@ via: https://debugpointnews.com/nitrux-2-6-0-release/
                 </section>
               </section>
             </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >月光博客</button>
+                  <a class="source-heading__link" href="https://www.williamlong.info/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.williamlong.info/archives/7045.html"
+                        open
+                      >
+                        <summary class="article-expander__title">李彦宏：马化腾谈的问题百度都有</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.williamlong.info/archives/7045.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>继腾讯CEO马化腾、京东集团董事局主席刘强东对公司问题进行“把脉”后，百度创始人、董事长兼首席执行官李彦宏也在2022年12月末的一次内部交流中，指出公司存在的诸多问题。
+
+
+1月6日，“李彦宏称百度内部腐败问题吓死人”登上微博热搜。媒体报道称，有员工在“简单之约”会议上询问李彦宏是否关注到马化腾的内部讲话，此前马化腾在2022年内部员工大会上，谈及了业务部门改革表面、追求大数字营收、内部贪腐“触目惊心”等问题。
+
+
+“腾讯的那些问题，百度也都有。”李彦宏回答道，百度集团资深副总裁崔珊珊则补充，反腐的例子百度也经常看到，也是“吓死人”。
+
+
+“简单之约”是百度每季度的全员会，通过直播的方式，管理层在线解答员工关心的问题，但李彦宏并非次次参加。
+
+
+从澎湃新闻获悉的一份《简单之约：谈机会谈挑战，新思考新要求》的文字综述内容来看，李彦宏对员工谈要求，重申商业本质，细究收入质量；谈导向，让员工提升认知高度，做市场真正需要的技术。
+
+
+谈及百度的机会与挑战，李彦宏说，百度在人工智能技术上的投入，让公司逐步看到各种各样的机会。产品也好，功能也好，怎样把技术转化成市场需要的东西是属于百度的机会，但百度对于市场的敏感度是不是最好的，他存疑。“我们还是有很多功课要做、很多课要补。”李彦宏说。
+
+
+一个明星业务70%多都是转售，和贸易公司有什么区别？
+
+
+百度的三大增长引擎分别是移动生态、智能云、智能驾驶，李彦宏也一直在多个公开场合谈及百度在研发上的投入。
+
+
+谈及上述业务，李彦宏说：“百度在第二、第三增长曲线上的投入，不管是在百度收入中的占比、还是利润占比都可能更大一些，我们的研发强度、研发占整个收入的比例是比腾讯高的。我们信这个，虽然也觉得现在亏钱亏得很厉害，但相信未来它会有相应的回报。”
+
+
+数据显示，百度进入人工智能领域10年，累计研发投入超过10…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -4780,6 +6306,58 @@ wazero: now has website</span>
                               <span>tidwall/box: 在 Go 中高效(有效)的框值。针对原语(原始)、字符串和字节片进行了优化。</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >月光博客</button>
+                  <a class="source-heading__link" href="https://www.williamlong.info/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.williamlong.info/archives/7044.html"
+                        open
+                      >
+                        <summary class="article-expander__title">TikTok推出限制给成人观众观看的功能</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.williamlong.info/archives/7044.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>TikTok宣布扩大其观众控制功能，使创作者能够将他们的视频限制给成人观众观看。在这次扩展之前，仅限成人的观众控制功能仅适用于TikTok Live。现在，该公司也将该功能引入其短视频。
+
+
+TikTok在一篇博客文章中写道：&quot;我们已经开始将我们的观众控制功能带给短视频的创作者，并将在未来几周内将该功能扩展到全球。要明确的是：我们的政策仍然完全适用于使用这一功能的创作者，我们将删除包含裸体和其他违反我们社区准则的内容。&quot;
+
+
+与TikTok上的成人直播一样，视频的18岁以上限制设置并不是创作者展示成人内容的一种方式，因为这些内容仍然受该应用政策的约束。相反，TikTok认为该设定是创作者防止未成年人接触到针对成人观众或可能对他们不感兴趣的内容的一种方式。当TikTok推出仅限成人的直播服务时，该公司表示，该设置可用于那些想分享更适合18岁以上人群的喜剧内容的创作者。或者，创作者可能想谈一谈艰难的生活经历，知道对话仅限于成年人会感到更舒服。
+
+
+受众控制设置的扩大，是因为TikTok之前说过，它想开始识别哪些内容适合于年轻和年长的青少年，而不是成年人。TikTok曾说，它正在开发一个系统，以识别和限制某些类型的内容被青少年访问，它将开始要求创作者说明他们的内容何时更适合于成人观众。我们现在看到，该应用程序的受众控制功能正在实践中。
+
+
+TikTok还宣布，它正在推出其边际暗示模式的下一个迭代版本，该模式可以自动识别性暴露、暗示性或边界内容。TikTok的边际暗示模型的下一次迭代预计将更好地检测此类内容。
+
+
+这些公告是TikTok更广泛地推动加强其应用程序的青少年安全功能的一部分。 去年，TikTok推出了&quot;内容级别&quot;，以防止某些具有更成熟或复杂主题的内容接触到青少年。作为这些努力的一部分，TikTok表示，仅在过去30天里，它就阻止了青少年账户观看超过100万个具有明显性暗示的视频。
+
+
+儿童和青少年安全是TikTok面临重大审查的一个领域，不仅来自监管机构和立法者，也来自家长。例如，去年一群家长起诉了TikTok，因为他们的孩子在尝试了据称在TikTok上看到的危险挑战后模仿并身亡。
+
+
+稿源：cnBeta</span>
                             </span>
                           </div>
                         </a>
@@ -37460,157 +39038,6 @@ In the new drop down, the bluetooth toggle doesn&#x27;t give you an option to ac
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/linux/comments/zjyvuk/please_usetest_the_299x_versions_of_gimp/"
-                        open
-                      >
-                        <summary class="article-expander__title">Please use/test the 2.99.x versions of gimp</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/zjyvuk/please_usetest_the_299x_versions_of_gimp/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://external-preview.redd.it/WUG6G-EBRZc2JbwJbgyN8AeVJTrONZdI0DX2ax7NieI.jpg?auto&#x3D;webp&amp;s&#x3D;d5ff31e28cda970fd9723cc896684eb3334d262a" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>submitted by    /u/osayami  
- [link]   [comments]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;58
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/linux/comments/zjvcci/pulsar_successor_of_the_atom_editor/"
-                        open
-                      >
-                        <summary class="article-expander__title">Pulsar - Successor of the Atom Editor</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/zjvcci/pulsar_successor_of_the_atom_editor/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>submitted by    /u/FryBoyter  
- [link]   [comments]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;53
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/linux/comments/zjsd7t/yet_another_why_i_went_back_from_sway_wayland_to/"
-                        open
-                      >
-                        <summary class="article-expander__title">Yet another &quot;Why I went back from Sway (Wayland) to i3 (X11)&quot; post</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/zjsd7t/yet_another_why_i_went_back_from_sway_wayland_to/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://external-preview.redd.it/_NfwH0WVvPL7YNfv6X9iAXLympTvcbGzfQxln7dF6xw.png?auto&#x3D;webp&amp;s&#x3D;a672cfa8c37c66f0f2e06e78a834538d26dee262" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>After daily driving i3 for quite a while now, I have decided to finally try out Sway (and Wayland). To be fair, there was no reason for me to leave the i3 ,my setup works just fine , but I wanted to see what the fuss was about, try out &quot;the latest and greatest&quot;, and maybe pave a way to me finally getting some HiDPI monitors.
- So, I installed Sway onto my computer, spent several days recreating my setup and then spent couple of weeks using it as my daily driver. Over time I have encountered many issues, small and large and I have managed to find the workaround for most of them, but in the end several issues irked me enough that I have decided to go back to i3 (and X11).
- Following are the descriptions of the most annoying/surprising issues that I have faced.
- No Monitor Mirroring
- This was …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;74
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/linux/comments/zjpf40/linux_namespaces_time_namespace/"
-                        open
-                      >
-                        <summary class="article-expander__title">Linux - namespaces: Time namespace</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/zjpf40/linux_namespaces_time_namespace/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://external-preview.redd.it/vn9xqobLly2OK60B51J-v2sfBhrpDgqaCFufaEI66y4.jpg?auto&#x3D;webp&amp;s&#x3D;e34afd05cbe66ddecbbf5df04f10df822b91c520" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>In the first part of the series we have talked generally about what are namespace and what we can do with them - in case you want to go over it you can use the following link https://medium.com/@boutnaru/linux-namespaces-part-1-dcee9c40fb68. Now we are going to deep dive into the time namespaces.
- By using time namespaces we can separate/isolate/segregate and thus virtualize the values of two system clocks (https://man7.org/linux/man-pages/man7/time_namespaces.7.html). We are talking about “CLOCK_MONOTONIC” and “CLOCK_BOOTTIME”.
- “CLOCK_MONOTONIC” goal is to represent an absolute elapsed wall-clock time since some arbitrary, fixed point in the past. It is important to understand that it isn&#x27;t affected by changes in the system time-of-day clock. As opposed to “CLOCK_REALTIME” which can chan…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;58
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/linux/comments/zjngdg/what_are_peoples_favorite_free_and_open_source/"
-                        open
-                      >
-                        <summary class="article-expander__title">What are peoples favorite free and open source software</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/zjngdg/what_are_peoples_favorite_free_and_open_source/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>For me i use vim and git daily on an arch linux system. I really love having a foss system. Git and vim have proved very useful and gcc/clang (i use gcc more) is nice for my c projects. Arch is wonderful as a distro imo
- I use Firefox as my browser of choice so there is that too. Obs is nice although my computer struggles with streaming and games at the same time because its underpowered. I can keep going but i think people get the point. I want to know what others use a lot and think is good
- Wow there are so many wonderful responses. I have a lot to check out. Thank you all for responding. I wasn&#x27;t expecting more than 3 replies so this is really neat
-    submitted by    /u/loonathefloofyfox  
- [link]   [comments]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;62
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/linux/comments/zjj4a3/ibackep_backup_and_restore_your_iphone_ipad_with/"
-                        open
-                      >
-                        <summary class="article-expander__title">iBackep - Backup and Restore your iPhone &amp; iPad (with encryption) using this lightweight GUI manager</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/zjj4a3/ibackep_backup_and_restore_your_iphone_ipad_with/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://external-preview.redd.it/fzOxrMKr0HwzrMbtzsNWI5I2KLt_qre8eowJJQMDpWQ.jpg?auto&#x3D;webp&amp;s&#x3D;c39608ce9045f709b10871cd379370c3ba8d41f1" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>submitted by    /u/redromnon  
- [link]   [comments]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;54
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/linux/comments/zjhra9/cursor_scaling_on_wayland_is_not_there_yet/"
-                        open
-                      >
-                        <summary class="article-expander__title">Cursor scaling on Wayland is not there yet</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/zjhra9/cursor_scaling_on_wayland_is_not_there_yet/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>I recently started following the Learn OpenGL tutorial and noticed that when I create a window with GLFW in the Wayland GNOME session the cursor becomes much larger when hovering over the window. This is because a Wayland client is expected to define its own pointer (cursor) and that seems to lead to inconsistencies between implementations. I do not have a problem with CSD being default on Wayland (I even prefer it when done really well, like Telegram Desktop, or any GTK app with GtkHeaderBar) but the cursor switching scale while moving it over surfaces (windows) is much more jarring.
- I decided to investigate how different Wayland client implementations behave with cursor scaling across 4 different Wayland compositors at different scale factors to get an overview of the situation. Below a…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;53
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -38142,1142 +39569,6 @@ kernel for 2022.  Read on for a look at where the work in 6.1 came from.</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/917690/"
-                        open
-                      >
-                        <summary class="article-expander__title">Security updates for Monday</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/917690/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Security updates have been issued by Debian (cacti, grub2, hsqldb, node-eventsource, and openexr), Fedora (bcel, keylime, rust-capnp, rust-sequoia-octopus-librnp, xfce4-screenshooter, and xfce4-settings), Oracle (nodejs:18), Scientific Linux (grub2), Slackware (libarchive), SUSE (go1.18, go1.19, nautilus, opera, python-slixmpp, and samba), and Ubuntu (python2.7, python3.5, qemu, and squid3).</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/917646/"
-                        open
-                      >
-                        <summary class="article-expander__title">OpenShot 3.0 released</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/917646/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Version
-3.0 of the OpenShot video editor is out.
-
-
-	One of the largest and most noticeable changes to OpenShot 3.0 is
-	our improved video preview, resulting in smoother video preview and
-	fewer freezes and pauses during previewing. But to understand why
-	things are so much smoother, we need to look deeper into our
-	decoding engine. We have rearchitected our decoder to be much more
-	resilient to missing packets, missing timestamps, and better
-	understanding when we are missing video or audio data, so we can
-	move on without pausing.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/917504/"
-                        open
-                      >
-                        <summary class="article-expander__title">The 6.1 kernel is out</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/917504/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Linus has released the 6.1 kernel; he is preparing for a tricky holiday merge window:
-
-So here we are, a week late, but last week was nice and slow, and I&#x27;m
-much happier about the state of 6.1 than I was a couple of weeks ago
-when things didn&#x27;t seem to be slowing down.
-
-Of course, that means that now we have the merge window from hell,
-just before the holidays, with me having some pre-holiday travel
-coming up too. So while delaying things for a week was the right thing
-to do, it does make the timing for the 6.2 merge window awkward.
-
-
-
-Headline features in 6.1 include
-reworked, LLVM-based control-flow
-integrity,
-initial support for kernel development in
-Rust,
-support for destructive BPF programs,
-some significant io_uring performance improvements,
-better user-space control over transparent
-huge-page creation,
-improved memory-tiering support,
-fundamental memory-management rewrites in the form of the multi-generational LRU and the maple tree data structure,
-the kernel
-memory sanitizer,
-and much more.  See the LWN merge-window summaries (part 1, part 2)  and the KernelNewbies 6.1 page for
-more information.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Linux 中国◆开源社区</button>
-                  <a class="source-heading__link" href="https://linux.cn/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://linux.cn/article-15342-1.html?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss"
-                        open
-                      >
-                        <summary class="article-expander__title">硬核观察 #848 Linux 6.1 发布，拉开 Rust 进入 Linux 内核的大幕</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://linux.cn/article-15342-1.html?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Linux 6.1 发布，拉开 Rust 进入 Linux 内核的大幕
-
-上周末，Linus Torvalds 发布了 Linux 内核 6.1，并开启了 6.2 的合并窗口。之所以专门提到 6.1 这个版本，是因为这个版本更具有里程碑意义。在 6.1 中，首次初步支持了 Rust，对 MGLRU 页面回收算法进行了大修，以及很多重要的特性和驱动更新。在 6.1 中没有任何供终端用户使用的 Rust 功能，而且在 6.2 中也将如此，会继续增加对开发者有用的功能，不会引入任何新的 Rust 编写的硬件驱动之类的东西。
-
-
-消息来源：Phoronix
-
-
-
-老王点评：终于尘埃落定了，以后随着内核中 Rust 代码的增多，Linux 内核的安全应该会上一个等级，就像安卓一样。
-
-
-
-
-AlphaCode 是如何在编程竞赛中超过一半的程序员
-
-AlphaCode 首先使用了 GitHub 上的庞大代码库进行训练，熟悉语法和编码规范。然后收集编程竞赛的数千个问题，训练它将问题描述翻译到代码。当遇到新问题时，AlphaCode 会编写出多达百万个候选编程方案，然后过滤掉不好的。它只保留通过测试用例的 1% 程序。为了进一步缩小范围，它会根据程序的输出与虚拟输入的相似性分群，从最大的群开始逐一递交程序，直到找到成功的程序或达到最大递交限额的 10 个程序。经过训练 AlphaCode 解决了 34% 的指定问题。
-
-
-消息来源：《科学》杂志
-
-
-
-老王点评：虽然是针对编程竞赛做的专门训练，但是完全可以针对某一类特定场景的需求进行编程，乃至于可以覆盖大多数常用场景的编程。我认为 AI 编程的时代的到来可能比我们大多数人预期的要快。
-
-
-
-
-亚马逊计划干掉条形码
-
-亚马逊称，条形码很难找到，而且可能被贴在形状怪异的产品上，这是机器人不能很好地解决的问题。因此，该公司说它有一个干掉条形码的计划。亚马逊利用仓库中物品的照片训练了一个计算机模型，让机器人在捡起和翻转物品时识别物品。这个被称为多模式识别的系统并不打算很快完全取代条形码，但该公司表示，它加快了处理包裹的时间。
-
-
-消息来源：CNET
-
-
-
-老王点评：确实，随着人工智能的发展，条形码可能就成了过渡性技术了。
-
-
-回音
-
-
-Chrome 110 中 取消 了对 JPEG-XL 的 支持，用户和开发者反对无效。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://linux.cn/article-15341-1.html?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss"
-                        open
-                      >
-                        <summary class="article-expander__title">如何在 Linux 中找到一个进程 ID 并杀死它</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://linux.cn/article-15341-1.html?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>一个简单的教学展示，教你如何找到正在运行中的进程 ID 并杀死它，你可以使用终端或者 GUI，这个方法适用于各类 Linux 发行版。
-
-
-你的 Linux 系统中运行的应用可能会让你的电脑变慢，特别是你的电脑配置较低的时候。在 Linux （以及所有其他 OS）中，程序或者应用都携带一个特别的 PID （进程 ID）可供你简单地分辨它们。
-
-然而，大部分 Linux 初学者用户并不知道如何在 Linux 中寻找运行中的进程并杀死它。在这篇指南中，我们将会解释用不同的方法以杀死 Linux 中的运行进程。这包括了使用终端和 GUI 的方法。
-
-记住，你只应该杀死未响应的进程，或者你发现应用无法被正常关闭 （针对基于 GUI 的应用）。
-
-如何在 Linux 中找到 PID 并杀掉它们
-
-在这一部分中，我们首先应该先学会如何找到运行进程的 PID，然后再学习用以杀掉它们的命令：
-
-找到正在运行中的进程
-
-你可以使用命令 top 来列出所有正在进行中的进程和它们的 PID，以及其他细节。程序 top 在所有 Linux 发行版和所有基于 Unix 的系统中都是默认安装了的。
-
-top
-
-
-
-
-同样地，你可以执行命令 ps 附带额外选项来获取某个指定的进程的 PID。例如，你可以使用以下命令来获得 firefox 的 PID。
-
-ps -el | grep -i firefox
-
-
-
-
-现在你已经找到 PID 了，让我们看看你该如何杀掉它。
-
-杀死运行中的进程
-
-使用以下命令，你可以通过进程的名字或者 PID 来杀掉这个正在运行中的进程：
-
-
-killall：通过运行进程的名字来杀死进程
-
-kill：通过 PID 来杀死进程
-
-
-现在，让我们首先使用进程 killall 通过 Firefox 这个名字来杀死它的，命令如下：
-
-kil…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://linux.cn/article-15340-1.html?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss"
-                        open
-                      >
-                        <summary class="article-expander__title">为什么你要在 Linux 上尝试 Nemo 文件管理器？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://linux.cn/article-15340-1.html?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Nemo 感觉像是更新版的 GNOME 2 文件管理器。我喜欢它，我觉得你也会喜欢它。
-
-
-计算机是一个奇特的文件柜，里面装满了虚拟文件夹和文件，等待着被引用、交叉引用、编辑、更新、保存、复制、移动、重命名和归类。在本文中，我将介绍一下 Linux 系统的文件管理器。
-
-Cinnamon 项目是使用 GNOME 3 的组件重新实现的 GNOME 2。最终，它的差异足以成为一个真正的分叉，如今，Cinnamon 桌面使用 GTK3 库和 GNOME 3 关键应用的分叉版本来创建一个“经典”的 GNOME 体验。对传统的 GNOME 体验做出贡献的组件之一是 Nemo，它是一个基于 GNOME 2 版本的 Nautilus 的文件管理器。
-
-在 Linux 上安装 Nemo
-
-Nemo 的源代码 在线提供，但它需要 cinnamon-desktop 来构建，所以安装 Nemo 最简单的方法是直接安装 Cinnamon。
-
-在 Fedora、Mageia 和类似的系统上：
-
-$ sudo dnf install cinnamon-desktop
-
-
-在 Linux Mint、Debian 和类似系统上：
-
-$ sudo dnf install cinnamon-desktop-environment
-
-
-当然，作为该桌面的发源地，Linux Mint 也预装了 Cinnamon。
-
-一个熟悉的界面
-
-如果你已经习惯了 GNOME，无论是过去的还是现在的，那么 Nemo 从一开始就让你有一种回家的感觉。它有一个熟悉的外观和感觉，在类似的地方有按钮和选项，你很可能会认出它们。
-
-
-
-将视图控制按钮放在右上方的 GNOME 式惯例被保留了下来，你可以使用这些按钮快速地将你的文件视图从大图标切换到详细列表或紧凑视图。那里还有一个搜索功能，以及在可编辑文本和按钮之间切换位置栏的选项。
-
-可编辑的 URI 栏有时被低估了。这是一个简单的设计决定，但它可以是一个有助于提高效率的巨大功能。这就像在每个窗口的顶部有一个单行终端，你可以在那里输入你的系统的任何目标位置，并立即被带到那里。而且你甚至不需要输入 cd。
-
-在左上角，有导航按钮：向上、向前和向后。与许多 Linux 文件管理器一样，你可以用 Alt 键加上适当的 箭头 键，而放弃使用这些按钮。
-
-侧面窗格显示了重要文件夹的列表（主目录、文档、下载等），可以通过点击窗口底部的一个按钮来隐藏或显示。
-
-熟悉但不一样
-
-Nemo 的舒适性和熟悉性并不意味着它只是无意识地模仿 Nautilus。Nemo 有一系列不错的功能，感觉很独特。其中大部分都在 偏好设置Preferences 中，以下是我最喜欢的几个：
-
-
-窗口标题中显示全路径Full path in window title：这是我最喜欢的功能。不要再怀疑你在文件系统中的位置了。让你的窗口标题告诉你。
-
-单击或双击Single or double click：如果你是一个长期的 KDE 用户，你可能会发现单次点击打开一个文件是很新鲜的。有了 Nemo，你可以这样选择。
-
-双击来重命名Double-click to rename：如果你使用单击来打开，为什么不重新利用双击来重命名呢？
-
-在新窗口中打开每个文件夹Open each folder in a new window：操作系统为每一个打开的文件夹打开一个新的窗口。
-
-插件Plugins：Nemo 有能力调用动作、脚本和扩展。有些已经包括在内，有改变桌面背景、创建启动器和挂载归档的动作。其他的还没有被创建，但这种可扩展性对开源是至关重要的。
-
-
-一切近在咫尺
-
-在 Linux Mint 上使用 Nemo 几周后，一个有趣的特征让我眼前一亮。似乎 Nemo 可以，或者通过快速配置可以，让我最常使用的所有东西都近在咫尺。许多功能，我承认，我不知道我是否需要，直到 Nemo 让我轻松点击才知道。你可能会说，我是为了满足 Nemo 的设计而改变了我的使用方式，也许情况确实如此。但是，当这种体验是如此令人愉快和有效时，这有什么关系呢？
-
-Nemo 是一个很好的文件管理器。它让人想起了 GNOME 2 的时代，但其更新和设计选择让人有一种新鲜的感觉。如果你喜欢 Thunar 或 Nautilus，你会喜欢 Nemo。
-
-
-via: https://opensource.com/article/22/12/linux-file-manager-nemo
-
-作者：Seth Kenlon 选题：lkxed 译者：geekpi 校对：wxy
-
-本文由 LCTT 原创编译，Linux中国 荣誉推出</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >少数派</button>
-                  <a class="source-heading__link" href="https://sspai.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://sspai.com/post/77243"
-                        open
-                      >
-                        <summary class="article-expander__title">派评 | 近期值得关注的 App</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://sspai.com/post/77243">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdn.sspai.com/article/c30d9e8a-0fb3-4149-f30b-adebbd95b492.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>你可以通过文章目录快速跳转到你感兴趣的内容。如果发现了其它感兴趣的 App 或者关注的话题，也欢迎在评论区和我们进行讨论。查看全文</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://sspai.com/post/77239"
-                        open
-                      >
-                        <summary class="article-expander__title">锁住专注力，让心流成为你的效率「推进器」</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://sspai.com/post/77239">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdn.sspai.com/article/6da975fa-e967-d7ac-c116-dedd999478a1.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>我们的工作、生活中，总会遇到大量的任务：明天要交一份论文、后天要赶一份报告……这些任务或轻或重，或缓或急，但总会令我们倍感焦虑。你或许也遇到过这样的情况：每天忙东忙西，却总感觉自己没有利用好时间；花了 ...查看全文</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://sspai.com/post/77233"
-                        open
-                      >
-                        <summary class="article-expander__title">咖啡地图 | 总被忽视但正在迅速崛起的墨西哥咖啡豆</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://sspai.com/post/77233">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdn.sspai.com/article/6f4ebece-6117-f1de-b89d-a9a52a85199f.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>《咖啡地图》系列已经完成了，但还有一个产地我很纠结，那就是墨西哥。这个产区很特殊，近两年，出现了很多优秀的豆子，因此补充一个番外，介绍一下这个产地。同时你也可以作为整个《咖啡地图》系列的目录收藏，我会 ...查看全文</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://sspai.com/post/77215"
-                        open
-                      >
-                        <summary class="article-expander__title">双十二想拥有一台新电脑？这些小巧灵活兼顾的 NUC 值得一看</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://sspai.com/post/77215">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdn.sspai.com/article/e1f564cf-b056-2e1a-0b44-8d9f7fc6ff87.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>NUC 的魅力在于轻巧的机身带来的便携性、一定的模块化组装带来的 DIY 乐趣。如果你恰好希望购买一套这样的电脑，这篇也许可以帮助到你。查看全文</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://sspai.com/post/77197"
-                        open
-                      >
-                        <summary class="article-expander__title">如何在 Notion 建立多级标签体系</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://sspai.com/post/77197">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdn.sspai.com/2022/12/09/747fbd99f7f976bf293bd82a9b4569c1.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>连接过去，连接现在，连接未来。查看全文</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://sspai.com/post/77224"
-                        open
-                      >
-                        <summary class="article-expander__title">派早报：小米 13 系列发布，《互联网信息服务深度合成管理规定》发布等</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://sspai.com/post/77224">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="article/1e543371-c01f-2843-460e-67343024fc90.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>你可能错过的新鲜事小米发布多款新品12月11日晚，小米发布了包括小米13和小米13Pro在内的多款新品。小米13和小米13Pro均配备台积电4nm工艺制程的骁龙8Gen2芯片，运行基于Android1 ...查看全文</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >上海书评</button>
-                  <a class="source-heading__link" href="http://thepaper.cn">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.thepaper.cn/newsDetail_forward_21122028"
-                        open
-                      >
-                        <summary class="article-expander__title">陈浩宇读《自然法与政治法原理》｜布拉马克与“追求幸福的权利”</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.thepaper.cn/newsDetail_forward_21122028">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>《自然法与政治法原理》，[瑞士]让-雅克·布拉马克著，陈浩宇译，商务印书馆，2022年8月出版，703页，126.00元
-
-一
-1776年，美国革命者在大陆会议表决通过了由杰斐逊主导撰写《独立宣言》。在面向世界各国陈述殖民地脱离大不列颠的理由时，《宣言》诉诸了在十七、十八世纪流行的自然法与自然权利的理论。其中第二段指出：“我们认为下面这些真理是自明的：造物者创造了平等的个人，并赋予他们若干不可转让的权利，其中包括生命、自由和追求幸福的权利。为了保障这些权利，才在人们之间成立了政府。”《宣言》认为，一旦政府背离这些目的，人民就有权改变或废除它。在卡尔·贝克尔看来，《宣言》实际上是通过阐述一套普遍性的政治哲学，来为殖民地的反叛提供道德和法律上的正当基础。这种政治哲学无疑主要来源于约翰·洛克，《宣言》最具理论性的第二段几乎完整表述了洛克有关同意和革命的政治理论，因此甚至为杰斐逊招来了剽窃《政府论》的指控。
-但是，若我们细察《宣言》列举的那三项“不可转让的权利”，出人意料的是，它们并非洛克惯常并列的“生命、自由和财产”。相反，财产权在这里被替换成了“追求幸福的权利”。“追求幸福”（Pursuit of Happiness）这个表述来自何处，它又是如何进入《宣言》文本的，便成了一个颇具意味的问题。在追索这一表述之起源的过程中，研究者逐渐锁定了不同的目标。事实上，洛克本人也使用过“追求幸福”这个表述，尽管不是和生命与自由并列，其他一些候选人还包括威廉·沃拉斯顿（William Wollaston）、塞缪尔·约翰逊等等。戴维•伍顿（David Wootton）最近在研究中通过检索“早期英文图书在线”（Early English Books Online）等数据库，一下子将这个名单扩展到包括坎伯兰（Richard Cumberland）、弗格森（Adam Ferguson）、休谟在内的一百…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >GitHub File - guanguans/favorite-link/master/README.md</button>
-                  <a class="source-heading__link" href="https://github.com/guanguans/favorite-link/commits/master/README.md">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://github.com/guanguans/favorite-link/commit/53177043c8164bf0776e4457de477c4c30337cd2"
-                        open
-                      >
-                        <summary class="article-expander__title">cornelk/hashmap: 为最快的读取访问而优化的 Golang 无锁线程安全 HashMap。</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://github.com/guanguans/favorite-link/commit/53177043c8164bf0776e4457de477c4c30337cd2">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://opengraph.githubassets.com/7dfbf3d24be7c61d1f9357658d29968a2502d4f937a3cfdb5f829f2a2da45c63/guanguans/favorite-link/commit/53177043c8164bf0776e4457de477c4c30337cd2" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>cornelk/hashmap: 为最快的读取访问而优化的 Golang 无锁线程安全 HashMap。</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://github.com/guanguans/favorite-link/commit/436be4994b100ec98828e0eb8d5a6b1b76702f99"
-                        open
-                      >
-                        <summary class="article-expander__title">WendellAdriel/laravel-validated-dto: 具有 Laravel 应用程序验证的数据传输对象</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://github.com/guanguans/favorite-link/commit/436be4994b100ec98828e0eb8d5a6b1b76702f99">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://opengraph.githubassets.com/ba6579b368afbe76a1d36dd87bbcb7abaef970b653f93145a2439dc0360b38cc/guanguans/favorite-link/commit/436be4994b100ec98828e0eb8d5a6b1b76702f99" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>WendellAdriel/laravel-validated-dto: 具有 Laravel 应用程序验证的数据传输对象</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://github.com/guanguans/favorite-link/commit/0ee7fcf26d586af1d2f682047c8cceb01c5783ac"
-                        open
-                      >
-                        <summary class="article-expander__title">ymz-ncnk/musgo: 为 Golang 提供序列化和验证支持</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://github.com/guanguans/favorite-link/commit/0ee7fcf26d586af1d2f682047c8cceb01c5783ac">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://opengraph.githubassets.com/9d155cb283c7fa9b3c36d5d72979c9c464c3e1ec241023a79541a282cc5d9f4a/guanguans/favorite-link/commit/0ee7fcf26d586af1d2f682047c8cceb01c5783ac" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>ymz-ncnk/musgo: 为 Golang 提供序列化和验证支持</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-12-11 datetime="2022-12-11T23:52:38.000Z">2022-12-11</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-12-11 datetime="2022-12-11T23:52:38.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >top scoring links : linux</button>
-                  <a class="source-heading__link" href="https://www.reddit.com/r/linux/top?sort&#x3D;top&amp;t&#x3D;day">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/linux/comments/zjf8l1/amd_7900_xtx_launch_support/"
-                        open
-                      >
-                        <summary class="article-expander__title">AMD 7900 XTX Launch Support?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/zjf8l1/amd_7900_xtx_launch_support/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Hey guys,
- ​
- So this will be my first time updating my graphics card while using Linux. I intend to get an AMD RX 7900 XTX on launch. Are AMD cards typically supported on Linux at launch, or is there usually a wait before it&#x27;s supported? Any feedback would be appreciated!
-    submitted by    /u/Y2K_350  
- [link]   [comments]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;50
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/linux/comments/zjcx0b/linux_kernel_61_released_with_initial_rust_code/"
-                        open
-                      >
-                        <summary class="article-expander__title">Linux Kernel 6.1 Released with Initial Rust Code</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/zjcx0b/linux_kernel_61_released_with_initial_rust_code/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>submitted by    /u/reptilot  
- [link]   [comments]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;53
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/linux/comments/zj30uo/fedora_budgie_spin_change_proposal_now_submitted/"
-                        open
-                      >
-                        <summary class="article-expander__title">Fedora Budgie Spin Change Proposal now submitted for F38!</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/zj30uo/fedora_budgie_spin_change_proposal_now_submitted/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>submitted by    /u/JoshStrobl  
- [link]   [comments]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;55
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/linux/comments/zj2ugx/getting_started_with_tmux/"
-                        open
-                      >
-                        <summary class="article-expander__title">Getting started with tmux</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/zj2ugx/getting_started_with_tmux/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://external-preview.redd.it/aawlqkrb1dXmCSOV48TU4xzqjnOh15x4nMIDEIE8cUk.jpg?auto&#x3D;webp&amp;s&#x3D;64856c48d0e40d35746977bbe9ad398680ae8e44" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>submitted by    /u/ouyawei  
- [link]   [comments]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;52
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/linux/comments/zj1vfu/box64_x86x86_64_emulation_for_arm_on_asahi_with/"
-                        open
-                      >
-                        <summary class="article-expander__title">Box64 (x86/x86_64 emulation for arm) on Asahi with the experimental GPU drivers.</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/linux/comments/zj1vfu/box64_x86x86_64_emulation_for_arm_on_asahi_with/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>submitted by    /u/Misicks0349  
- [link]   [comments]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;50
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Hacker News: Front Page</button>
-                  <a class="source-heading__link" href="https://news.ycombinator.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;33948535"
-                        open
-                      >
-                        <summary class="article-expander__title">Carvana sees 98% of its market value evaporate</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.businessinsider.com/used-vehicle-retailer-carvana-bankruptcy-car-buyers-inventory-2022-12">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://i.insider.com/6393589f8580f70019f82ebc?width&#x3D;1200&amp;format&#x3D;jpeg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Article URL: https://www.businessinsider.com/used-vehicle-retailer-carvana-bankruptcy-car-buyers-inventory-2022-12
-Comments URL: https://news.ycombinator.com/item?id&#x3D;33948535
-Points: 70
-# Comments: 55</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;33948243"
-                        open
-                      >
-                        <summary class="article-expander__title">Japanese Manga are being eclipsed by Korean webtoons</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.economist.com/asia/2022/12/08/japanese-manga-are-being-eclipsed-by-korean-webtoons">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://www.economist.com/img/b/1280/720/90/media-assets/image/20221210_ASP003.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Article URL: https://www.economist.com/asia/2022/12/08/japanese-manga-are-being-eclipsed-by-korean-webtoons
-Comments URL: https://news.ycombinator.com/item?id&#x3D;33948243
-Points: 30
-# Comments: 23</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;27
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;33947820"
-                        open
-                      >
-                        <summary class="article-expander__title">Is Dark Mode Good for Your Eyes? (2020)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://kevquirk.com/is-dark-mode-such-a-good-idea/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdn.kevquirk.com/wp-content/uploads/2020/04/night-light-gnome-1024x613.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Article URL: https://kevquirk.com/is-dark-mode-such-a-good-idea/
-Comments URL: https://news.ycombinator.com/item?id&#x3D;33947820
-Points: 86
-# Comments: 81</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;33947761"
-                        open
-                      >
-                        <summary class="article-expander__title">‘Diablo IV’ developers work long hours, bracing for impending release</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.washingtonpost.com/video-games/2022/12/08/diablo-iv-release-date-crunch/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src&#x3D;https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/NYODU5RN25ADHCHDX5TTTD2NFU.jpeg&amp;w&#x3D;1440" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Article URL: https://www.washingtonpost.com/video-games/2022/12/08/diablo-iv-release-date-crunch/
-Comments URL: https://news.ycombinator.com/item?id&#x3D;33947761
-Points: 62
-# Comments: 42</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;42
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;33947618"
-                        open
-                      >
-                        <summary class="article-expander__title">Creating aerial imagery with a bike helmet camera (GoPro) and OpenDroneMap</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://jakecoppinger.com/2022/12/creating-aerial-imagery-with-a-bike-helmet-camera-and-opendronemap/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://jakecoppinger.com/wp-content/uploads/2022/12/blender-perspective-scaled.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Article URL: https://jakecoppinger.com/2022/12/creating-aerial-imagery-with-a-bike-helmet-camera-and-opendronemap/
-Comments URL: https://news.ycombinator.com/item?id&#x3D;33947618
-Points: 76
-# Comments: 11</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;33947454"
-                        open
-                      >
-                        <summary class="article-expander__title">OneSignal (YC S11) Is Hiring a Product Engineer</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://onesignal.com/careers/4004540006">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://media.onesignal.com/cms/_1200x630_crop_center-center_82_none/onesignal.jpg?mtime&#x3D;1666043174" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Article URL: https://onesignal.com/careers/4004540006
-Comments URL: https://news.ycombinator.com/item?id&#x3D;33947454
-Points: 1
-# Comments: 0</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;33947312"
-                        open
-                      >
-                        <summary class="article-expander__title">Using GPT3 to Interpret Dreams</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.nightcap.guru/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Article URL: https://www.nightcap.guru/
-Comments URL: https://news.ycombinator.com/item?id&#x3D;33947312
-Points: 84
-# Comments: 29</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;33947087"
-                        open
-                      >
-                        <summary class="article-expander__title">GPT based tool that writes the commit message for you</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://github.com/KanHarI/gpt-commit-summarizer">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://opengraph.githubassets.com/cea69f7b07f54644f82ea2163117e005bebe0f13f8b748723d4e19441b76d3dc/KanHarI/gpt-commit-summarizer" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Article URL: https://github.com/KanHarI/gpt-commit-summarizer
-Comments URL: https://news.ycombinator.com/item?id&#x3D;33947087
-Points: 121
-# Comments: 64</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;33946933"
-                        open
-                      >
-                        <summary class="article-expander__title">Beyond Functional Programming: The Verse Programming Language [pdf]</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://simon.peytonjones.org/assets/pdfs/haskell-exchange-22.pdf">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Article URL: https://simon.peytonjones.org/assets/pdfs/haskell-exchange-22.pdf
-Comments URL: https://news.ycombinator.com/item?id&#x3D;33946933
-Points: 220
-# Comments: 119</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;266
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;33946824"
-                        open
-                      >
-                        <summary class="article-expander__title">Getting a Psion 5 palmtop from 1997 online via PPP (and a Raspberry Pi)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.kianryan.co.uk/2022-11-28-psion-sidecar-ppp-modem-and-terminal/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://www.kianryan.co.uk/assets/images/2022/12/02/sidecar_hamsterdance.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Article URL: https://www.kianryan.co.uk/2022-11-28-psion-sidecar-ppp-modem-and-terminal/
-Comments URL: https://news.ycombinator.com/item?id&#x3D;33946824
-Points: 51
-# Comments: 3</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;33946431"
-                        open
-                      >
-                        <summary class="article-expander__title">Video games made in the USSR</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.rbth.com/lifestyle/332384-video-games-soviet-russian-tetris">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://mf.b37mrtl.ru/rbthmedia/images/2020.07/article/5efcf4eb85600a6ece556cdf.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Article URL: https://www.rbth.com/lifestyle/332384-video-games-soviet-russian-tetris
-Comments URL: https://news.ycombinator.com/item?id&#x3D;33946431
-Points: 95
-# Comments: 98</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;33946425"
-                        open
-                      >
-                        <summary class="article-expander__title">VR robots are building railways in Japan</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://virtualuncle.com/2022/04/26/giant-vr-robots-are-building-railways-in-japan/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://i0.wp.com/vrscout.com/wp-content/uploads/2022/04/JapanVRRobotTrain_4.jpeg?resize&#x3D;800%2C566&amp;ssl&#x3D;1" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Article URL: https://virtualuncle.com/2022/04/26/giant-vr-robots-are-building-railways-in-japan/
-Comments URL: https://news.ycombinator.com/item?id&#x3D;33946425
-Points: 114
-# Comments: 28</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;33946026"
-                        open
-                      >
-                        <summary class="article-expander__title">A data-centric introduction to computing</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://dcic-world.org/2022-08-28/index.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Article URL: https://dcic-world.org/2022-08-28/index.html
-Comments URL: https://news.ycombinator.com/item?id&#x3D;33946026
-Points: 47
-# Comments: 2</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;33945704"
-                        open
-                      >
-                        <summary class="article-expander__title">What&#x27;s wrong with social science and how to fix it (2020)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://fantasticanachronism.com/2020/09/11/whats-wrong-with-social-science-and-how-to-fix-it/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://fantasticanachronism.com/images/skimmed_twitter_card.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Article URL: https://fantasticanachronism.com/2020/09/11/whats-wrong-with-social-science-and-how-to-fix-it/
-Comments URL: https://news.ycombinator.com/item?id&#x3D;33945704
-Points: 100
-# Comments: 70</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;26
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;33945219"
-                        open
-                      >
-                        <summary class="article-expander__title">Elastic UI – Component library for data-driven web apps</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://elastic.github.io/eui/#/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://repository-images.githubusercontent.com/107422373/b6180480-a1d7-11eb-8a3c-902086232aa7" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Article URL: https://elastic.github.io/eui/#/
-Comments URL: https://news.ycombinator.com/item?id&#x3D;33945219
-Points: 63
-# Comments: 26</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;33945115"
-                        open
-                      >
-                        <summary class="article-expander__title">I found a bug in SQLite</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.philipotoole.com/how-i-found-a-bug-in-sqlite/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://www.philipotoole.com/wp-content/uploads/2022/12/bug.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Article URL: https://www.philipotoole.com/how-i-found-a-bug-in-sqlite/
-Comments URL: https://news.ycombinator.com/item?id&#x3D;33945115
-Points: 334
-# Comments: 85</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;33944772"
-                        open
-                      >
-                        <summary class="article-expander__title">VPN by Google One security assessment</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://research.nccgroup.com/2022/12/09/public-report-vpn-by-google-one-security-assessment/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://i0.wp.com/research.nccgroup.com/wp-content/uploads/2020/07/cropped-Gwl5Lrim_400x400-1.jpg?fit&#x3D;512%2C512&amp;ssl&#x3D;1" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Article URL: https://research.nccgroup.com/2022/12/09/public-report-vpn-by-google-one-security-assessment/
-Comments URL: https://news.ycombinator.com/item?id&#x3D;33944772
-Points: 136
-# Comments: 118</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;33944767"
-                        open
-                      >
-                        <summary class="article-expander__title">LTA Research’s Pathfinder 1</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://spectrum.ieee.org/airship">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://spectrum.ieee.org/media-library/people-are-arranged-around-the-rear-end-of-a-white-cylindrical-airship-above-a-white-floor-and-inside-of-a-large-aircraft-hange.jpg?id&#x3D;32252504&amp;width&#x3D;1200&amp;height&#x3D;600&amp;coordinates&#x3D;0%2C183%2C0%2C184" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Article URL: https://spectrum.ieee.org/airship
-Comments URL: https://news.ycombinator.com/item?id&#x3D;33944767
-Points: 86
-# Comments: 76</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;35
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://news.ycombinator.com/item?id&#x3D;33944271"
-                        open
-                      >
-                        <summary class="article-expander__title">Richard Hipp Speaks Out on SQLite (2019) [pdf]</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://sigmodrecord.org/publications/sigmodRecord/1906/pdfs/06_Profiles_Hipp.pdf">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Article URL: https://sigmodrecord.org/publications/sigmodRecord/1906/pdfs/06_Profiles_Hipp.pdf
-Comments URL: https://news.ycombinator.com/item?id&#x3D;33944271
-Points: 102
-# Comments: 37</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;281
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -39567,8 +39858,8 @@ Points: 102
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/waytoarcher/rssfeed/actions/runs/3879286849">
-        <time id="build-timestamp" datetime="2023-01-10T01:23:35.519Z">2023-01-10T01:23:35.519Z</time>
+      <a class="footer-link" href="https://github.com/waytoarcher/rssfeed/actions/runs/3888755499">
+        <time id="build-timestamp" datetime="2023-01-11T01:20:58.217Z">2023-01-11T01:20:58.217Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
