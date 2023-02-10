@@ -2,10 +2,667 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://v2less.github.io/rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-02-09T01:21:57.931Z</updated>
+    <updated>2023-02-10T01:26:14.765Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://v2less.github.io/rssfeed/index.html"/>
     <link rel="self" href="https://v2less.github.io/rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[A new way to build with Large Language Models]]></title>
+        <id>https://news.ycombinator.com/item?id=34734040</id>
+        <link href="https://blog.fixie.ai/introducing-fixie-ai-a-new-way-to-build-with-large-language-models-d4e1aeee6b81"/>
+        <updated>2023-02-10T00:47:57.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://blog.fixie.ai/introducing-fixie-ai-a-new-way-to-build-with-large-language-models-d4e1aeee6b81
+Comments URL: https://news.ycombinator.com/item?id=34734040
+Points: 3
+# Comments: 0]]></summary>
+        <author>
+            <name>azhenley</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[systemd 日志维护指南（附实例）]]></title>
+        <id>https://linux.cn/article-15526-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-15526-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2023-02-09T23:29:00.000Z</updated>
+        <summary type="html"><![CDATA[systemd 内置了很多管理系统日志的功能。在本指南中，我们将介绍如何管理系统日志，并对其采取轮换、归档和清除日志等操作。我们还解释了手动系统日志清理方法和使用配置文件的变化。
+
+
+如果你的 Linux 发行版支持 systemd，那么从启动时开始，它每秒钟都会从系统的所有进程和应用程序中收集日志。所有这些日志事件都由 systemd 的 journald 守护程序管理。journald 收集所有的日志（信息、警告、错误等），并将其作为二进制数据存储在磁盘文件中。
+
+由于日志保留在磁盘中，而且每秒钟都在收集，所以它占用了巨大的磁盘空间；特别是对于旧的系统、服务器来说。例如，在我的一个运行了一年左右的测试系统中，日志文件的大小是 GB 级的。
+
+如果你管理多个系统、服务器，建议一定要正确管理 journald 日志，以便高效运行。让我们来看看如何管理日志文件。
+
+systemd 日志维护
+
+使用 systemd 的 journalctl 工具，你可以查询这些日志，对其进行各种操作。例如，查看不同启动时的日志文件，检查特定进程或应用程序的最后警告和错误。如果你对这些不了解，我建议你在学习本指南之前先快速浏览一下此教程：使用 journalctl 查看和分析 systemd 日志（附实例） 》。
+
+物理日记的日志文件在哪里？
+
+systemd 的 journald 守护进程在每次启动时都会收集日志。这意味着，它根据启动情况对日志文件进行分类。
+
+日志以二进制形式存储在路径 /var/log/journal，文件夹为机器 ID。
+
+比如说：
+
+
+
+
+
+另外，请记住，根据系统配置，运行时日志文件被存储在 /run/log/journal/。而这些在每次启动时都会被删除。
+
+我可以手动删除日志文件吗？
+
+你可以，但不要这样做。相反，请按照下面的说明，使用…]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Dragon’s Lair Overhaul Black Edition (1/16th scale)]]></title>
+        <id>https://news.ycombinator.com/item?id=34733164</id>
+        <link href="https://newwavetoys.com/products/dragons-lair-x-replicade-overhaul-black"/>
+        <updated>2023-02-09T23:20:54.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://newwavetoys.com/products/dragons-lair-x-replicade-overhaul-black
+Comments URL: https://news.ycombinator.com/item?id=34733164
+Points: 14
+# Comments: 13]]></summary>
+        <author>
+            <name>sys32768</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Temple Student Strike Turns Ugly as School Ends Some Tuition Aid]]></title>
+        <id>https://news.ycombinator.com/item?id=34733023</id>
+        <link href="https://www.phillymag.com/news/2023/02/08/temple-strike-philadelphia/"/>
+        <updated>2023-02-09T23:05:31.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.phillymag.com/news/2023/02/08/temple-strike-philadelphia/
+Comments URL: https://news.ycombinator.com/item?id=34733023
+Points: 147
+# Comments: 117]]></summary>
+        <author>
+            <name>elashri</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[通过编写嵌入式系统入门边缘计算]]></title>
+        <id>https://linux.cn/article-15525-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-15525-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2023-02-09T22:57:55.000Z</updated>
+        <summary type="html"><![CDATA[用于操控无线调制解调器的 AT 设备包是 RTOS 最流行的扩展功能之一。
+
+
+RTOS 是一个开源的 嵌入式设备操作系统，由 RT-Thread 开发。它为开发者提供了标准化的、友好的基础架构，开发者可以基于各种设备编写代码，它包含大量有用的类库和工具包，使开发过程更加便捷。
+
+RTOS 使用的是模块方式，以便于扩展，这一点跟 Linux 类似。各种软件包可以让开发者将 RTOS 用于任何想要的目标设备。RTOS 最常用的一种扩展是 AT 设备包，它包含各种不同 AT 设备（例如调制解调器）的移植文件和示例代码。
+
+在超过 62,000 次下载中（截止至撰写本文时），最流行的 RTOS 扩展之一是 AT 设备包，其中包括用于不同 AT 设备的移植文件和示例代码。
+
+关于 AT 命令
+
+起初，AT 命令是一个协议，用于控制拨号调制解调器。随着调制解调器技术发展到较高的带宽，它仍然可以用作轻量级而高效的设备控制协议，主流的移动电话厂商也联手开发了一系列 AT 命令，用于控制移动电话上的 GSM 模块。
+
+如今，AT 命令仍然在网络通信领域具有通用性，很多设备，例如 WiFi、蓝牙、4G，都支持 AT 命令。
+
+如果你正在创建用于边缘计算输入、监控或物联网（IoT）的专用设备，则你可能接触到一些 RTOS 支持的 AT 设备，包括 ESP8266、ESP32、M26、MC20、RW007、MW31、SIM800C、W60X、SIM76XX、A9/A9G、BC26、AIR720、ME3616、M 6315、BC28 和 EC200X。
+
+RT-Thread 包含套接字抽象层（SAL）组件，SAL 实现了多种网络协议和接口的抽象，为上层提供了一系列标准的 BSD 套接字 API。SAL 进而接管了 AT 的套接字接口，所以开发者只需要考虑网络应用层提供的网络接口。…]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Tools and Debugging Presentations]]></title>
+        <id>https://www.reddit.com/r/linux/comments/10y8r2u/tools_and_debugging_presentations/</id>
+        <link href="https://www.reddit.com/r/linux/comments/10y8r2u/tools_and_debugging_presentations/"/>
+        <updated>2023-02-09T22:46:16.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/unixbhaskar  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[British Rail’s short experiment with travelling pubs (2020)]]></title>
+        <id>https://news.ycombinator.com/item?id=34731942</id>
+        <link href="https://www.ianvisits.co.uk/articles/british-rails-short-experiment-with-travelling-pubs-36068/"/>
+        <updated>2023-02-09T21:41:21.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.ianvisits.co.uk/articles/british-rails-short-experiment-with-travelling-pubs-36068/
+Comments URL: https://news.ycombinator.com/item?id=34731942
+Points: 29
+# Comments: 23]]></summary>
+        <author>
+            <name>zeristor</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Scientists document two separate reservoirs of latent HIV in patients]]></title>
+        <id>https://news.ycombinator.com/item?id=34731857</id>
+        <link href="https://www.unc.edu/posts/2023/02/08/scientists-document-two-separate-reservoirs-of-latent-hiv-in-patients/"/>
+        <updated>2023-02-09T21:35:09.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.unc.edu/posts/2023/02/08/scientists-document-two-separate-reservoirs-of-latent-hiv-in-patients/
+Comments URL: https://news.ycombinator.com/item?id=34731857
+Points: 37
+# Comments: 6]]></summary>
+        <author>
+            <name>gmays</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Image Compression with Singular Value Decomposition]]></title>
+        <id>https://news.ycombinator.com/item?id=34731679</id>
+        <link href="http://timbaumann.info/svd-image-compression-demo/"/>
+        <updated>2023-02-09T21:22:02.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: http://timbaumann.info/svd-image-compression-demo/
+Comments URL: https://news.ycombinator.com/item?id=34731679
+Points: 58
+# Comments: 22]]></summary>
+        <author>
+            <name>egorpv</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What is the open source situation in China?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/10y5tz2/what_is_the_open_source_situation_in_china/</id>
+        <link href="https://www.reddit.com/r/linux/comments/10y5tz2/what_is_the_open_source_situation_in_china/"/>
+        <updated>2023-02-09T20:51:42.000Z</updated>
+        <summary type="html"><![CDATA[There are a lot of Chinese linux distros like deepin, ubuntu kylin, UOS and some more. They are really polished and very pretty. China also wants to replace over 50 million computers with Linux. So i wonder, how popular is linux in China? So i did a ddg search and didn't find much of use. I even went to a Chinese youtube like site called bilibili. And after all my privacy disappeared faster than the prote- anyways, i didnt find anything useful there either. I did a search on searx for Chinese computers with linux. And huwawei is selling laptops with deepin in Chia, which is pretty neat. But how popular is linux in china? How many know about it there? How many devices come with linux preinstalled? So many questions.
+    submitted by    /u/Pepper-pencil  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Show HN: boxxy – Control where Linux programs put files, without symlinks]]></title>
+        <id>https://news.ycombinator.com/item?id=34730520</id>
+        <link href="https://github.com/queer/boxxy"/>
+        <updated>2023-02-09T20:04:54.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://github.com/queer/boxxy
+Comments URL: https://news.ycombinator.com/item?id=34730520
+Points: 191
+# Comments: 116]]></summary>
+        <author>
+            <name>notamy</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I made a thing: aliasman - cross-shell (POSIX-compliant) alias manager for bash, zsh, and fish]]></title>
+        <id>https://www.reddit.com/r/linux/comments/10y4fv0/i_made_a_thing_aliasman_crossshell_posixcompliant/</id>
+        <link href="https://www.reddit.com/r/linux/comments/10y4fv0/i_made_a_thing_aliasman_crossshell_posixcompliant/"/>
+        <updated>2023-02-09T19:57:10.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/coolaj86  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Oxide and the Chamber of Mysteries [video]]]></title>
+        <id>https://news.ycombinator.com/item?id=34730337</id>
+        <link href="https://www.youtube.com/watch?v=NVZ80_tbkbc"/>
+        <updated>2023-02-09T19:55:39.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.youtube.com/watch?v=NVZ80_tbkbc
+Comments URL: https://news.ycombinator.com/item?id=34730337
+Points: 69
+# Comments: 14]]></summary>
+        <author>
+            <name>bcantrill</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Show HN: I made a tool that turns screenshots into dramatically angled photos]]></title>
+        <id>https://news.ycombinator.com/item?id=34729849</id>
+        <link href="https://www.screenstab.com/editor/"/>
+        <updated>2023-02-09T19:28:59.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.screenstab.com/editor/
+Comments URL: https://news.ycombinator.com/item?id=34729849
+Points: 149
+# Comments: 96]]></summary>
+        <author>
+            <name>mikaelaast</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI Joins Hunt for ET: Study Finds 8 Potential Alien Signals]]></title>
+        <id>https://news.ycombinator.com/item?id=34729360</id>
+        <link href="https://blogs.nvidia.com/blog/2023/02/06/ai-potential-alien-signals/"/>
+        <updated>2023-02-09T19:04:04.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://blogs.nvidia.com/blog/2023/02/06/ai-potential-alien-signals/
+Comments URL: https://news.ycombinator.com/item?id=34729360
+Points: 115
+# Comments: 112]]></summary>
+        <author>
+            <name>bcaulfield</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Solar panels disguised as terracotta tiles in Pompeii]]></title>
+        <id>https://news.ycombinator.com/item?id=34729026</id>
+        <link href="https://www.theartnewspaper.com/2023/02/06/ancient-pompeii-site-installs-invisible-solar-panels-that-look-like-roman-terracotta-tiles"/>
+        <updated>2023-02-09T18:45:31.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.theartnewspaper.com/2023/02/06/ancient-pompeii-site-installs-invisible-solar-panels-that-look-like-roman-terracotta-tiles
+Comments URL: https://news.ycombinator.com/item?id=34729026
+Points: 167
+# Comments: 48]]></summary>
+        <author>
+            <name>odewahn</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A pair of stable kernels]]></title>
+        <id>https://lwn.net/Articles/922811/</id>
+        <link href="https://lwn.net/Articles/922811/"/>
+        <updated>2023-02-09T18:15:24.000Z</updated>
+        <summary type="html"><![CDATA[The 6.1.11 and 5.15.93 stable kernel updates have been
+released; each contains another set of important fixes.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The $20 an hour Cessna 172 experiment (2020)]]></title>
+        <id>https://news.ycombinator.com/item?id=34728405</id>
+        <link href="https://airfactsjournal.com/2020/11/the-20-an-hour-cessna-172-experiment/"/>
+        <updated>2023-02-09T18:07:56.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://airfactsjournal.com/2020/11/the-20-an-hour-cessna-172-experiment/
+Comments URL: https://news.ycombinator.com/item?id=34728405
+Points: 276
+# Comments: 207]]></summary>
+        <author>
+            <name>BWStearns</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Rust Implementation Of GNU Coreutils Is Becoming Remarkably Robust]]></title>
+        <id>https://www.reddit.com/r/linux/comments/10y18b2/the_rust_implementation_of_gnu_coreutils_is/</id>
+        <link href="https://www.reddit.com/r/linux/comments/10y18b2/the_rust_implementation_of_gnu_coreutils_is/"/>
+        <updated>2023-02-09T17:56:05.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Iuse_arch_btw  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Show HN: PodText.ai – Search anything said on a podcast, highlight text to play]]></title>
+        <id>https://news.ycombinator.com/item?id=34727695</id>
+        <link href="https://podtext.ai/"/>
+        <updated>2023-02-09T17:33:01.000Z</updated>
+        <summary type="html"><![CDATA[Hi HN, wanted to share a project that I’ve been working on recently.
+PodText allows users to find anything said on a podcast. You can also listen and share clips to a specific part of the podcast audio, simply by highlighting the text of that part. Currently there are just over 25k podcast episodes and I’m adding a lot more in the coming weeks (yes my GPU bill is painful).
+In order to monetize it, I’m building a sponsorship database to help sponsors find podcasts and vice versa. This will be sold in the form of a $99/month “PodText Business” subscription. I bet I could charge a lot more to large sponsors but I’ll tweak that as I talk to potential customers.
+Right now the UI is very bare bones (doesn’t even have pagination) but I’ll polish it once the data pipeline is working well. Please let me know if you run into any bugs or have any questions about the site or business model.
+PS: I'm a regular on HN using my real name but can't post under that account since my employer will fire me if they found out about this project :-)
+Comments URL: https://news.ycombinator.com/item?id=34727695
+Points: 96
+# Comments: 38]]></summary>
+        <author>
+            <name>anonbuilder</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Progressively Enhanced Turbo Native Apps in the App Store]]></title>
+        <id>https://news.ycombinator.com/item?id=34727648</id>
+        <link href="https://masilotti.com/progressively-enhanced-turbo-native-apps-in-the-app-store/"/>
+        <updated>2023-02-09T17:31:20.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://masilotti.com/progressively-enhanced-turbo-native-apps-in-the-app-store/
+Comments URL: https://news.ycombinator.com/item?id=34727648
+Points: 55
+# Comments: 30]]></summary>
+        <author>
+            <name>joemasilotti</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Top Linux and open-source leaders join the Rocky Enterprise Software Foundation board.]]></title>
+        <id>https://www.reddit.com/r/linux/comments/10y0kdk/top_linux_and_opensource_leaders_join_the_rocky/</id>
+        <link href="https://www.reddit.com/r/linux/comments/10y0kdk/top_linux_and_opensource_leaders_join_the_rocky/"/>
+        <updated>2023-02-09T17:30:52.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/CrankyBear  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Sabre/dav: open-source CardDAV, CalDAV and WebDAV server]]></title>
+        <id>https://news.ycombinator.com/item?id=34727223</id>
+        <link href="https://sabre.io/"/>
+        <updated>2023-02-09T17:08:27.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://sabre.io/
+Comments URL: https://news.ycombinator.com/item?id=34727223
+Points: 107
+# Comments: 30]]></summary>
+        <author>
+            <name>kretaceous</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Online Safety Bill: An attack on encryption]]></title>
+        <id>https://news.ycombinator.com/item?id=34727082</id>
+        <link href="https://element.io/blog/the-online-safety-bill-an-attack-on-encryption/"/>
+        <updated>2023-02-09T17:00:16.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://element.io/blog/the-online-safety-bill-an-attack-on-encryption/
+Comments URL: https://news.ycombinator.com/item?id=34727082
+Points: 320
+# Comments: 126]]></summary>
+        <author>
+            <name>Arathorn</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[There Are Only Four Billion Floats–So Test Them All (2014)]]></title>
+        <id>https://news.ycombinator.com/item?id=34726919</id>
+        <link href="https://randomascii.wordpress.com/2014/01/27/theres-only-four-billion-floatsso-test-them-all/"/>
+        <updated>2023-02-09T16:51:17.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://randomascii.wordpress.com/2014/01/27/theres-only-four-billion-floatsso-test-them-all/
+Comments URL: https://news.ycombinator.com/item?id=34726919
+Points: 128
+# Comments: 28]]></summary>
+        <author>
+            <name>albrewer</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The future of Thunderbird]]></title>
+        <id>https://lwn.net/Articles/922793/</id>
+        <link href="https://lwn.net/Articles/922793/"/>
+        <updated>2023-02-09T16:43:47.000Z</updated>
+        <summary type="html"><![CDATA[The Thunderbird email client blog has a
+plan for where the project is going.
+
+
+	Throughout the next 3 years, the Thunderbird project is aiming at
+	these primary objectives:
+
+ Make the code base leaner and more reliable, rewrite ancient code,
+remove technical debt.
+ Rebuild the interface from scratch to create a consistent design
+system, as well as developing and maintaining an adaptable and extremely
+customizable user interface.
+ Switch to a monthly release schedule.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GitHub to lay off 10% and close all offices]]></title>
+        <id>https://news.ycombinator.com/item?id=34726735</id>
+        <link href="https://twitter.com/webology/status/1623722731819659269"/>
+        <updated>2023-02-09T16:41:50.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://twitter.com/webology/status/1623722731819659269
+Comments URL: https://news.ycombinator.com/item?id=34726735
+Points: 579
+# Comments: 252]]></summary>
+        <author>
+            <name>pbnjay</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Free software and fiduciary duty]]></title>
+        <id>https://lwn.net/Articles/922545/</id>
+        <link href="https://lwn.net/Articles/922545/"/>
+        <updated>2023-02-09T16:36:52.000Z</updated>
+        <summary type="html"><![CDATA[Serial litigant Craig Wright recently won
+a procedural ruling in a London court that allows a
+multi-billion-dollar Bitcoin-related lawsuit to proceed.  This case has
+raised a fair amount of concern within the free-software community, where
+it is seen as threatening the "no warranty" language included in almost
+every free-software license.  As it happens, this case does not actually
+involve that language, but it has some potentially worrisome implications
+anyway.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A GPT in 60 Lines of NumPy]]></title>
+        <id>https://news.ycombinator.com/item?id=34726115</id>
+        <link href="https://jaykmody.com/blog/gpt-from-scratch/"/>
+        <updated>2023-02-09T16:08:18.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://jaykmody.com/blog/gpt-from-scratch/
+Comments URL: https://news.ycombinator.com/item?id=34726115
+Points: 832
+# Comments: 115]]></summary>
+        <author>
+            <name>squidhunter</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Future Of Thunderbird: Why We're Rebuilding From The Ground Up]]></title>
+        <id>https://www.reddit.com/r/linux/comments/10xy2zo/the_future_of_thunderbird_why_were_rebuilding/</id>
+        <link href="https://www.reddit.com/r/linux/comments/10xy2zo/the_future_of_thunderbird_why_were_rebuilding/"/>
+        <updated>2023-02-09T15:52:06.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/hookedOnDemBooks  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Thursday]]></title>
+        <id>https://lwn.net/Articles/922756/</id>
+        <link href="https://lwn.net/Articles/922756/"/>
+        <updated>2023-02-09T14:43:39.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (chromium, libsdl2, and wireshark), Fedora (pesign, tpm2-tss, and webkitgtk), Oracle (hsqldb, krb5, libksba, tigervnc, and tigervnc and xorg-x11-server), Red Hat (openvswitch2.13, openvswitch2.15, openvswitch2.16, openvswitch2.17, rh-varnish6-varnish, tigervnc, and tigervnc and xorg-x11-server), Scientific Linux (tigervnc and xorg-x11-server), and SUSE (apache2, apache2-mod_security2, apr-util, netatalk, podman, python-swift3, rubygem-globalid, syslog-ng, and thunderbird).]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A story on how using `grep` on a whole disk can save you if you ever erase a text file by mistake]]></title>
+        <id>https://www.reddit.com/r/linux/comments/10xvrli/a_story_on_how_using_grep_on_a_whole_disk_can/</id>
+        <link href="https://www.reddit.com/r/linux/comments/10xvrli/a_story_on_how_using_grep_on_a_whole_disk_can/"/>
+        <updated>2023-02-09T14:14:38.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/ptilouk  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The State of Developer Conferences | Remote Synthesis]]></title>
+        <id>https://www.reddit.com/r/linux/comments/10xu3j5/the_state_of_developer_conferences_remote/</id>
+        <link href="https://www.reddit.com/r/linux/comments/10xu3j5/the_state_of_developer_conferences_remote/"/>
+        <updated>2023-02-09T12:56:46.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Kuhluh  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[硬核观察 #907 微软的新必应拒绝为工作写求职信]]></title>
+        <id>https://linux.cn/article-15524-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-15524-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2023-02-09T12:48:30.000Z</updated>
+        <summary type="html"><![CDATA[微软的新必应拒绝为工作写求职信
+
+在微软对少数人开放由 ChatGPT 支持的 新必应 后，一位测试者发现，当他要求新必应为一个社交媒体内容制作人职位写一封求职信时，它断然拒绝这样做：“我很抱歉，但我不能为你写求职信。这将是不道德的，对其他申请人不公平。”而是给出了一些提示和几个求职信写作资源的链接。
+
+
+消息来源：Business Insider
+
+
+
+老王点评：我该说这个 AI 是人性化呢，还是找借口呢？
+
+
+
+
+美国 NIST 公布物联网数据保护的获奖加密算法
+
+NIST 的“轻量级密码学 ”项目开始于 2019 年，以寻找最佳算法来保护硬件资源有限的小型物联网设备。NIST 表示，所有 10 个入围者都表现出了卓越的性能，在不引起安全问题的情况下超越了设定的标准，这使得最后的选择非常困难。ASCON 最终被选为获胜者，因为它很灵活，涵盖了七个家族、节能、在弱硬件上速度快，而且对短信息的开销低。NIST 还认为该算法经受住了时间的考验，它是在 2014 年开发的。
+
+
+消息来源：Bleeping Computer
+
+
+
+老王点评：值得关注，我发现 NIST 在加密管理方面做了很多工作，相比之下……或许是我不知道吧。
+
+
+
+
+安卓 14 将正式禁止安装旧的应用程序
+
+计划在今年下半年发布的安卓 14 将阻止安装旧的安卓应用。新的 API 和增加的安全、隐私或后台处理限制可能会破坏旧的应用程序，但安卓的向后兼容系统使这些旧的应用程序继续运行。应用程序可以通过 “目标 SDK” 标志声明它们支持的最新安卓版本。但对于恶意软件，把目标放在一个非常老的安卓版本上，虽然获得更少的功能，但也将受到更少的安全和隐私限制。安卓 14 的这个限制足够宽松，不应该给任何人带来问题：任何针对 8 年前的安卓 6 或以下系统的应用程序都将被阻止。
+
+
+消息来源：Ars Technica
+
+
+
+老王点评：这应该不是问题，一些非常老的安卓应用几乎都应该被淘汰了。]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[新玩意 135｜少数派的作者们最近买了啥？]]></title>
+        <id>https://sspai.com/post/78204</id>
+        <link href="https://sspai.com/post/78204"/>
+        <updated>2023-02-09T09:24:29.000Z</updated>
+        <summary type="html"><![CDATA[关于栏目为了满足读者们对于《新玩意》栏目加更的需求，机器人特地邀请了Matrix作者们也来聊聊自己近期购买的新奇产品。喜欢本栏目的话，欢迎充电或评论文章来表达自己的喜爱，你的每一次真心夸赞或建议，都是 ...查看全文]]></summary>
+        <author>
+            <name>Matrix机器人</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ubuntu Philosophy]]></title>
+        <id>https://www.reddit.com/r/linux/comments/10xq8xi/ubuntu_philosophy/</id>
+        <link href="https://www.reddit.com/r/linux/comments/10xq8xi/ubuntu_philosophy/"/>
+        <updated>2023-02-09T09:09:13.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/filisterr  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[为什么你的 Android 系统比 Windows 还大？]]></title>
+        <id>https://sspai.com/post/78205</id>
+        <link href="https://sspai.com/post/78205"/>
+        <updated>2023-02-09T07:59:03.000Z</updated>
+        <summary type="html"><![CDATA[一言以蔽之：什么都「爱省事做减法」的 Android 系统，最后整出了一个体型巨大的「系统空间」存储占用。查看全文]]></summary>
+        <author>
+            <name>路中南</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[beta.flathub.org now has a verified apps section]]></title>
+        <id>https://www.reddit.com/r/linux/comments/10xones/betaflathuborg_now_has_a_verified_apps_section/</id>
+        <link href="https://www.reddit.com/r/linux/comments/10xones/betaflathuborg_now_has_a_verified_apps_section/"/>
+        <updated>2023-02-09T07:28:38.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/giannidunk  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[胶片还是数码：浅议摄影的「真实性」]]></title>
+        <id>https://sspai.com/post/78070</id>
+        <link href="https://sspai.com/post/78070"/>
+        <updated>2023-02-09T06:28:35.000Z</updated>
+        <summary type="html"><![CDATA[将自己的感知借助摄影师的镜头沉浸到另一个个体的时空碎片中，以此获得另一种生命的体验。我认为，这或许就是摄影最大的魅力所在了。查看全文]]></summary>
+        <author>
+            <name>啦苏LASU</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Beginner's Guide to Linkers]]></title>
+        <id>https://www.reddit.com/r/linux/comments/10xn19n/beginners_guide_to_linkers/</id>
+        <link href="https://www.reddit.com/r/linux/comments/10xn19n/beginners_guide_to_linkers/"/>
+        <updated>2023-02-09T05:58:03.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/unixbhaskar  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[李公明｜一周书记：如何重返新文学价值的……历史现场]]></title>
+        <id>https://www.thepaper.cn/newsDetail_forward_21836393</id>
+        <link href="https://www.thepaper.cn/newsDetail_forward_21836393"/>
+        <updated>2023-02-09T05:02:09.000Z</updated>
+        <summary type="html"><![CDATA[《垒建新文学价值的河床（1923-1937）》，姚玳玫著，北京大学出版社，2022年10月版，564页，98.00元
+
+近日读姚玳玫教授的新著《垒建新文学价值的河床：1923-1937》（北京大学出版社，2022年10 月），对于思考如何重返新文学价值的历史现场、拓展中国现代文学史的研究视角等问题，颇受启发。重返文学价值论的思考，但不只是在理论概念和价值意义上的申论，而是重返历史现场，回眸中国新文学曾经的多元、互动、自由的生态，其深刻意义是证成一种不甘熄灭的文学理想。
+本书书名直陈有关新文学的价值论述是该书的核心议题，其意涵亦值得思考，在“绪论”中作者对此有清晰的阐释。“河床”原意是河流之下的地貌构造，这里意指在时代潮流中的新文学价值的基础状貌与方向。选择1923-1937年作为研究时段，作者的理由是：就新文学的自我成长而言，《新青年》时代至北伐之前的草创期成果青涩，真正可供新文学运用的价值规则尚未形成；1937年至1949年十年间的战争与生存环境阻碍了文学的正常发展；1920年代中期至抗日战争前的十年，正是新文学自我确立、迅速成长的黄金时段。进而言之，“1920-1930年代，新文学正处不受学科体制束缚的自律自治阶段，其价值体系构建是一种自我构建，充满多种可能性，呈现着多层价值坐标的错综交汇”（绪论，第1页）。更具体来看， “新文学经过近十年草创期的实践积累之后进入其相对成熟阶段。与此同时，社会革命潮流的冲击，政治思潮的干扰，1928年革命文学运动的强势介入，某种程度上扭转了其原来的发展方向，也激发了其自我生存的内部活力。在多方抗衡中，新文学依然立足、成熟、壮硕，引领创作的主流，赋予文学以基本的价值认知”（第2页）。经受强势力量的冲击、干预、介入，而能继续作为文学主流而立足和发展，这是新文学内在生命力的顽强表征。作者在新文学发展的时段比较中发现所具有的内在性与时代性特征，…]]></summary>
+        <author>
+            <name>上海书评</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[赵晶｜刘子健先生的早年经历与旅美心境]]></title>
+        <id>https://www.thepaper.cn/newsDetail_forward_21830551</id>
+        <link href="https://www.thepaper.cn/newsDetail_forward_21830551"/>
+        <updated>2023-02-09T05:02:09.000Z</updated>
+        <summary type="html"><![CDATA[近年来，已故宋史名家刘子健先生有关王安石、欧阳修的研究陆续被译介出版，台北联经出版公司也重印了他绝版多年的《两宋史研究汇编》，这位具有传奇色彩的旅美学者在谢世近三十年之际又重新引起汉语知识界的重视，可见其著述的生命力。
+
+刘先生的照片转自
+Journal of Song-Yuan Studies, No.25,1995
+
+上海师范大学的虞云国先生对刘先生颇加推重，近三年来，通过访谈、导读、讲座等方式，不断向学界、公众介绍其人其学，可谓不遗余力。如《商丘师范学院学报》2021年第11期曾刊登其文《刘子健的学术生涯与故国情怀》，后略加删订，作为刘子健著、张钰翰译《宋代中国的改革——王安石及其新政》（上海人民出版社2022年）一书的“导读”上篇。此文经各大公众号先后推送，流传甚广。
+期刊版《刘子健的学术生涯与故国情怀》（92页）称“刘子健，原籍贵州省贵阳市，1919年12月19日生在上海。他在1936年入读清华大学，次年7月，抗日战争全面爆发，北平沦陷……转入燕京大学继续学业……1940年，刘子健获得学士学位，留校担任助理，兼任中国大学讲师”，内有脚注（未见于“导读版”）称“刘子健的出生地唯见于周明之《刘子健先生传略兼论旅美华裔文史专业者的历程》，载《宋史研究集》35辑，兰台出版社2005年版，第485-505页”。
+覆按周文，关于上引内容，有如下记述：“刘子健先生原籍贵州贵阳。一九一九年十二月十九日生于上海，一九三六年入清华大学。这时华北的局势在日本的侵略之下日益恶化，清华乃于次年十月西迁湖南长沙。刘先生没有随校西迁，而转学燕京大学，于一九四一年得学士学位……一九四四年至四五年在中国大学以讲师资格任教，次年转至燕京大学任中国历史和中国文学讲师。”（485-486页）
+对读虞、周二文，自然会产生两点疑惑：刘先生获得学士学位的年份是1940年还是1941年？他毕业后是留燕京大学担任…]]></summary>
+        <author>
+            <name>上海书评</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[年度征文 | 我用 Figma / Figside / 浩客，无代码搭了个人官网]]></title>
+        <id>https://sspai.com/post/78088</id>
+        <link href="https://sspai.com/post/78088"/>
+        <updated>2023-02-09T03:28:03.000Z</updated>
+        <summary type="html"><![CDATA[我第一版的个人说明书也在 Notion，直到我发现了一个免写代码将设计稿转前端静态页面的代码方法之后，这个人就开始卷了。查看全文]]></summary>
+        <author>
+            <name>高拉</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] LWN.net Weekly Edition for February 9, 2023]]></title>
+        <id>https://lwn.net/Articles/921958/</id>
+        <link href="https://lwn.net/Articles/921958/"/>
+        <updated>2023-02-09T01:55:36.000Z</updated>
+        <summary type="html"><![CDATA[The LWN.net Weekly Edition for February 9, 2023 is available.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[sheepla/pingu: 🐧ping 命令但使用 pingu]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/044941b67a5e3826a997b4d887c4fa4c1f214044</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/044941b67a5e3826a997b4d887c4fa4c1f214044"/>
+        <updated>2023-02-09T01:50:45.000Z</updated>
+        <summary type="html"><![CDATA[sheepla/pingu: 🐧ping 命令但使用 pingu]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[hyperf/gotask: Go 中 Swole TaskWorker 的快速替代]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/f89d8d94ca425b3bf12ae59bfb0ee891ed2a6522</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/f89d8d94ca425b3bf12ae59bfb0ee891ed2a6522"/>
+        <updated>2023-02-09T01:44:16.000Z</updated>
+        <summary type="html"><![CDATA[hyperf/gotask: Go 中 Swole TaskWorker 的快速替代]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[派早报：佳能发布 EOS 系列新品、任天堂召开新一轮直面会等]]></title>
+        <id>https://sspai.com/post/78203</id>
+        <link href="https://sspai.com/post/78203"/>
+        <updated>2023-02-09T00:40:43.000Z</updated>
+        <summary type="html"><![CDATA[理想推出 L7 五座 SUV、《铃芽之旅》大陆定档 3 月 24 日等。查看全文]]></summary>
+        <author>
+            <name>少数派编辑部</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Andrej Karpathy Is Joining OpenAI Again]]></title>
         <id>https://news.ycombinator.com/item?id=34717866</id>
@@ -21881,894 +22538,6 @@ Apple Business Connect 是一款全新的免费工具，让企业可以在地点
         <link href="https://lwn.net/Articles/919649/"/>
         <updated>2023-01-11T14:18:25.000Z</updated>
         <summary type="html"><![CDATA[Security updates have been issued by Debian (exiv2, hsqldb, libjettison-java, ruby-sinatra, and viewvc), Fedora (golang-github-docker, mbedtls, and vim), Gentoo (alpine, commons-text, jupyter_core, liblouis, mbedtls, ntfs3g, protobuf-java, scikit-learn, and twisted), Red Hat (kernel and kpatch-patch), SUSE (rubygem-activerecord-5.2, tiff, and webkit2gtk3), and Ubuntu (dotnet6, linux-azure-5.4, linux-azure-fde, linux-gcp, linux-oracle, linux-ibm, and linux-oem-5.17, linux-oem-6.0).]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[I've been having problems with nvidia-powerd using 100% CPU so I've created a small script to automatically restart it if it does so. Thought others might find it useful as well]]></title>
-        <id>https://www.reddit.com/r/linux/comments/10936w7/ive_been_having_problems_with_nvidiapowerd_using/</id>
-        <link href="https://www.reddit.com/r/linux/comments/10936w7/ive_been_having_problems_with_nvidiapowerd_using/"/>
-        <updated>2023-01-11T12:10:10.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/confused_pupper  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[RemoteApp-like functionality with xrdp?]]></title>
-        <id>https://www.reddit.com/r/linux/comments/1092p3y/remoteapplike_functionality_with_xrdp/</id>
-        <link href="https://www.reddit.com/r/linux/comments/1092p3y/remoteapplike_functionality_with_xrdp/"/>
-        <updated>2023-01-11T11:41:36.000Z</updated>
-        <summary type="html"><![CDATA[is that possible to achieve? To "publish" and run only one app only from the xrdp server? (Windows clients, Centos7 server) 
- Current RD server is running on Windows as well, but were about to have our licenses expired, throwing money on the problem is one "solution" we would like to avoid if possible...
-    submitted by    /u/GZ23  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[硬核观察 #878 微软准备向 OpenAI 追投 100 亿美元]]></title>
-        <id>https://linux.cn/article-15436-1.html?utm_source=rss&amp;utm_medium=rss</id>
-        <link href="https://linux.cn/article-15436-1.html?utm_source=rss&amp;utm_medium=rss"/>
-        <updated>2023-01-11T10:23:34.000Z</updated>
-        <summary type="html"><![CDATA[微软准备向 OpenAI 追投 100 亿美元
-
-OpenAI 开发了聊天机器人原型 ChatGPT 和文本图像创作工具 DALL-E。微软此前已经向 OpenAI 投资了 10 亿美元，如果再追投 100 亿美元，OpenAI 将达到 290 亿美元估值。根据融资条款，一旦 OpenAI 找到方法从 ChatGPT 等产品上赚钱，微软将获得利润的四分之三，直到收回初始投资，之后微软将拥有 OpenAI 的 49% 的股份。
-
-
-消息来源：路透社
-
-
-
-老王点评：这应该是微软近年来不多的最成功的投资之一。
-
-
-
-
-Mastodon 用户活跃度下降三成
-
-在 Twitter 被收购前，Mastodon 有大约 50 万活跃用户。之后，Mastodon 在 11 月份涌入了大量用户，到 12 月初它的活跃用户数达到了 250 万。据 Mastodon 统计，活跃用户数量自高峰期以来已经下降了 30% 以上，并且正在继续缓慢下降，1 月第一周约有 180 万活跃用户。许多从 Twitter 转移到 Mastodon 的用户可能重新回到了 Twitter，但仍然有很多用户留了下来。
-
-
-消息来源：卫报
-
-
-
-老王点评：虽然略有回落，但是 Mastodon 应该还会更好，我在考虑是不是也搭建一个服务器。
-
-
-
-
-苹果应用商店的开发者迄今已赚取了 3200 亿美元
-
-苹果公司今天分享了其订阅业务和全球应用程序商店的最新情况，指出自 2008 年以来，苹果公司已经向应用程序开发人员支付了创纪录的 3200 亿美元。苹果表示，它现在拥有超过 9 亿的苹果服务的付费用户，每周有来自全球 175 个地区的超过 6.5 亿访客访问其应用商店。
-
-
-消息来源：Tech Crunch
-
-
-
-老王点评：无论如何，苹果应用商店开创了一个新的时代。]]></summary>
-        <author>
-            <name>linux@linux.cn (linux)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Surprised by the support from HP for its printers on Linux]]></title>
-        <id>https://www.reddit.com/r/linux/comments/109183x/surprised_by_the_support_from_hp_for_its_printers/</id>
-        <link href="https://www.reddit.com/r/linux/comments/109183x/surprised_by_the_support_from_hp_for_its_printers/"/>
-        <updated>2023-01-11T10:08:56.000Z</updated>
-        <summary type="html"><![CDATA[Made the full switch to linux not too long ago and I thought setting up my printer under linux would be a PITA. I was kind of blown away by the support HP has for its printers on machines running linux (https://developers.hp.com/hp-linux-imaging-and-printing). Everything works fine, even the advanced functions like double sided printing etc. 
- ​
- Just wanted to say thank you for your work, that's all.
-    submitted by    /u/JMT37  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[万字试读 02 | 图表、母版和快捷键，今年一整年都会用得上的 PPT 技巧]]></title>
-        <id>https://sspai.com/post/77606</id>
-        <link href="https://sspai.com/post/77606"/>
-        <updated>2023-01-11T10:01:52.000Z</updated>
-        <summary type="html"><![CDATA[付费栏目万字试读「万字试读」是体验少数派付费栏目内容的最佳方式。我们希望用一万字的篇幅，系统、深度地分享有价值的内容，让少数派读者可以享受获得新知的愉悦。本期「万字试读」内容选自电子工业出版社再版新书 ...查看全文]]></summary>
-        <author>
-            <name>数字工具组</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[全场景创新，这些厉害的 openEuler 技术创新，你值得拥有]]></title>
-        <id>https://linux.cn/article-15435-1.html?utm_source=rss&amp;utm_medium=rss</id>
-        <link href="https://linux.cn/article-15435-1.html?utm_source=rss&amp;utm_medium=rss"/>
-        <updated>2023-01-11T09:05:00.000Z</updated>
-        <summary type="html"><![CDATA[在刚刚结束的 openEuler Summit 2022 上，华为服务器 OS 首席架构师、openEuler 社区技术委员会委员熊伟为广大开发者介绍了 openEuler 在过去 3 年的成就和成果。而其中最值得关注的是，openEuler 在云、服务器、边缘计算、嵌入式等四大场景下的八个技术方向的创新。
-
-用熊伟博士的话来说，“在过去的三年里，openEuler 深入行业和产业，用八个技术方向的纵深创新，引领全场景的产业领先”。接下来，作为一个一直关注开源操作系统的技术人，我分享一下我的理解。
-
-可编程内核：系统调度的极限追求
-
-首先介绍一下可编程内核。
-
-我们知道，内核是一个操作系统的核心。对于我们所熟悉的 PC 和服务器，由于对资源的消耗和性能的需求没有那么的敏感，无需毫厘必争，所以往往不太需要在内核层面做删减，正常使用即可。删减内核功能的成本可能远高于增加内存的成本。
-
-但对于资源消耗和成本更加敏感的边缘计算、嵌入式设备来说，每一丝的资源占有，都是难以估量的成本。对于资源集群量级极大的云计算场景而言，每 0.1% 的性能优化，对于整个集群而言，都是十分可观的收益。一个可编程的内核相比于模块化的内核，为生产环境下的优化提供了更多的可能性 —— 工程师可以根据业务的实际变化，随时调整内核的实现和策略，从而优化系统的性能。
-
-在这种情况下，对于内核进行组装，支持可编程能力，就变得极其重要。openEuler 创新性地借鉴了社区当中 eBPF 的思想，并在此基础之上，将内核的机制和框架进行了分离，将框架内置到内核，实现的功能和策略则可以在开发完成后，注入到内核中即可实现对内核二次编程的效果。
-
-说起来简单，但在具体落实层面，openEuler 做了不少的工作来达成这个目标：
-
-
-
-openEuler 在系统内核层面，提供了编写用户态策略的基础库函数和可配…]]></summary>
-        <author>
-            <name>linux@linux.cn (linux)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[MySQL 字符串指南]]></title>
-        <id>https://linux.cn/article-15434-1.html?utm_source=rss&amp;utm_medium=rss</id>
-        <link href="https://linux.cn/article-15434-1.html?utm_source=rss&amp;utm_medium=rss"/>
-        <updated>2023-01-11T08:14:12.000Z</updated>
-        <summary type="html"><![CDATA[了解 MySQL 如何存储和显示你的字符串变量，以便你能更好地控制你的数据。
-
-
-字符串是你在 MySQL 中使用的最常见的数据类型之一。许多用户在他们的数据库中插入和读取字符串，而没有认真地了解过它们。本文旨在让你深入了解 MySQL 如何存储和显示你的字符串变量，以便你能更好地控制你的数据。
-
-你可以把字符串分成两类：二进制和非二进制。你可能在大多数时候想到的是非二进制字符串。非二进制字符串有字符集和排序的不同。另一方面，二进制字符串存储诸如 MP3 文件或图像等东西。即使你在二进制字符串中存储了一个词，比如“歌曲”，它的存储方式也与非二进制字符串不同。
-
-我将重点讨论非二进制字符串。MySQL 中的所有非二进制字符串都与字符集和排序相关。字符串的字符集控制哪些字符可以存储在字符串中，而它的排序方式控制当你显示字符串时如何排序。
-
-字符集
-
-要查看你系统中的字符集，请运行以下命令：
-
-SHOW CHARACTER SET;
-
-
-这个命令将输出四列数据，包括字符集：
-
-
-名称
-
-简要描述
-
-默认的排序方式
-
-字符集中每个字符的最大尺寸
-
-
-MySQL 过去默认为 latin1 字符集，但自 8.0 版以来，默认为 utf8mb4。现在的默认排序方式是 utf8mb4_0900_ai_ci。ai 表示该排序对音调不敏感（ á = a），而 ci 则指定它对大小写不敏感（a = A）。
-
-不同的字符集将其字符存储在内存中不同大小的块中。例如，从上面的命令可以看出，存储在 utf8mb4 的字符被存储在 1 到 4 个字节大小的内存中。如果你想看看一个字符串是否包含多字节的字符，你可以使用 CHAR_LENGTH() 和 LENGTH() 函数。CHAR_LENGTH() 显示一个字符串包含多少个字符，而 LENGTH() 显示一个字符串有多少…]]></summary>
-        <author>
-            <name>linux@linux.cn (linux)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Apple 推出 iCloud+ 订阅优惠，这些是你可能会关心的问题]]></title>
-        <id>https://sspai.com/post/77758</id>
-        <link href="https://sspai.com/post/77758"/>
-        <updated>2023-01-11T08:05:40.000Z</updated>
-        <summary type="html"><![CDATA[1月11日，Apple发布新闻稿《Apple庆祝在娱乐领域取得突破性成就的一年》，Apple服务业务高级副总裁EddyCue在新闻稿中回顾了2022年Apple旗下各项服务取得的进展与成绩。其中值得关 ...查看全文]]></summary>
-        <author>
-            <name>waychane</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[新一年的健康生活，从这些饮食与运动知识开始]]></title>
-        <id>https://sspai.com/post/77719</id>
-        <link href="https://sspai.com/post/77719"/>
-        <updated>2023-01-11T06:30:00.000Z</updated>
-        <summary type="html"><![CDATA[「身体健康」是最质朴的祝福，也是最基本的期待，但往往又是最艰难吟唱的进行曲。当我们开始喊着「要自律」的时候，也通常是这件事即将被放弃的时候，毕竟当你向身边那些均衡饮食、坚持运动的自律之人讨教如何持之以 ...查看全文]]></summary>
-        <author>
-            <name>少数派编辑部</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[WSL (Windows Subsystem for Linux) abandonment - I tried]]></title>
-        <id>https://www.reddit.com/r/linux/comments/108vvob/wsl_windows_subsystem_for_linux_abandonment_i/</id>
-        <link href="https://www.reddit.com/r/linux/comments/108vvob/wsl_windows_subsystem_for_linux_abandonment_i/"/>
-        <updated>2023-01-11T04:50:46.000Z</updated>
-        <summary type="html"><![CDATA[I had high hopes for wsl (Windows Subsystem for Linux) but even wsl2 doesn't seem ready for prime time in terms of support for graphics and sound. I require openGL driver and sound support and spent hours trying to get wsl 1 OR 2 working on my system with latest Nvidia drivers for my 980GTX graphics card. It works perfectly with the X.org mesa software emulation of OpenGL but for my needs I need GPU support for graphics. Everything else seems to work beautifully but unfortunately, I won't be able to use this platform if I can't get GPU graphics working.
- Has anyone had better luck than I ?
-    submitted by    /u/964racer  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[What Happens When A CPU Starts]]></title>
-        <id>https://www.reddit.com/r/linux/comments/108v0wd/what_happens_when_a_cpu_starts/</id>
-        <link href="https://www.reddit.com/r/linux/comments/108v0wd/what_happens_when_a_cpu_starts/"/>
-        <updated>2023-01-11T04:08:00.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/unixbhaskar  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[景蜀慧丨杜甫《蜀相》诗的隐微内涵]]></title>
-        <id>https://www.thepaper.cn/newsDetail_forward_21473977</id>
-        <link href="https://www.thepaper.cn/newsDetail_forward_21473977"/>
-        <updated>2023-01-11T04:02:06.000Z</updated>
-        <summary type="html"><![CDATA[公元759年岁暮（乾元二年十二月底），杜甫经历近一个月的艰难跋涉，自秦州抵达成都。
-初到成都，面对陌生的异乡景色与人事，他写下《成都府》一诗：
-翳翳桑榆日，照我征衣裳。我行山川异，忽在天一方。但逢新人民，未卜见故乡。大江东流去，游子日月长。曾城填华屋，季冬树木苍。喧然名都会，吹箫间笙簧。信美无与适，侧身望川梁。鸟雀夜各归，中原杳茫茫。初月出不高，众星尚争光。自古有羁旅，我何苦哀伤。
-成都自秦以来一直为蜀郡治所。唐初改蜀郡为益州，置总管府。剑南西川节度使亦治成都。天宝初从益州又改回蜀郡。安史之乱后，玄宗避难成都，从天宝十五年（至德元年756）至至德二年年底（757），玄宗在成都驻跸一年多，“至德二年十月，驾回西京，改蜀郡为成都府，长史为尹”（《旧唐书·地理志》六）。
-蜀地开发很早，境内稻菽桑麻盐铁水利资源都极其丰富。《汉书·地理志》说巴蜀“土地肥美，有江水沃野，山林竹木疏食果实之饶”。由于地理优势，战乱较少，社会经济发展，人民生活相对安定富庶。安史之乱中，关陇、中原甚至江南地区均受到侵扰和破坏，只有蜀地为流亡的皇帝和朝廷百官，以及因战乱流离失所的百姓提供了一个避难的场所。玄宗入蜀后，在成都留驻了将近一年半时间，并且在此遥控朝政，成都一度成为另一个政治中心。虽然此时玄宗已回到长安，但皇帝驻跸带来的影响还在，这一点也是杜甫在同谷失据后选择入蜀到成都的重要考虑。
-面对乱世中这样一座繁华富足的都市，诗人的感慨强烈而复杂。有秦岭为屏障，深冬的成都依然树木葱郁，令北来的旅人眼目为之清新。而在四方战乱之中，成都的繁荣和逸乐更让杜甫有种时空错置之感。杜甫的行程，是从北面抵成都，再折向城市西南方向。他的观察目光，也由远及近，从野外行至近郭，人烟渐渐稠密，看到许多风俗、语音都和关陇故乡完全不同的人民。江水蜿蜒东去，像诗人异乡游子的生活完全看不到尽头。“信美无与适”，杜甫此时的心情，如同汉末从战乱…]]></summary>
-        <author>
-            <name>上海书评</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Google Chrome fixed the slow scroll speed on Linux in version 109]]></title>
-        <id>https://www.reddit.com/r/linux/comments/108ufjp/google_chrome_fixed_the_slow_scroll_speed_on/</id>
-        <link href="https://www.reddit.com/r/linux/comments/108ufjp/google_chrome_fixed_the_slow_scroll_speed_on/"/>
-        <updated>2023-01-11T03:39:24.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/apatheticonion  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[年度征文｜把人生活成旷野，我的「焦虑盒子」笔记系统]]></title>
-        <id>https://sspai.com/post/77685</id>
-        <link href="https://sspai.com/post/77685"/>
-        <updated>2023-01-11T03:29:04.000Z</updated>
-        <summary type="html"><![CDATA[编注：本文是少数派2022年度征文活动的入围文章。本文仅代表作者本人观点，少数派对标题和排版略作调整。今年我们采用了更加依赖用户反馈数据的奖金结算机制，充电、收藏和阅读量都将不同程度地影响文章的最终排 ...查看全文]]></summary>
-        <author>
-            <name>花生酱先生</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Ubuntu's Real-Time Kernel Approaching GA Status]]></title>
-        <id>https://www.reddit.com/r/linux/comments/108trlg/ubuntus_realtime_kernel_approaching_ga_status/</id>
-        <link href="https://www.reddit.com/r/linux/comments/108trlg/ubuntus_realtime_kernel_approaching_ga_status/"/>
-        <updated>2023-01-11T03:07:29.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/Realistic-Plant3957  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[酷冷至尊（CoolerMaster）的 MasterPlus 软件即将开源]]></title>
-        <id>https://linux.cn/article-15433-1.html?utm_source=rss&amp;utm_medium=rss</id>
-        <link href="https://linux.cn/article-15433-1.html?utm_source=rss&amp;utm_medium=rss"/>
-        <updated>2023-01-11T02:54:14.000Z</updated>
-        <summary type="html"><![CDATA[MasterPlus 将被彻底改造并推出开源版本？听起来不错！
-
-
-
-
-大多数游戏/外设软件套装要么是专有的，要么是没有对 Linux 的官方支持。
-
-因此，我们必须不断寻找开源工具来配置我们的硬件以获得原生功能。
-
-像 Piper、OpenRGB、Solaar 等在这些情况下都很有用。
-
-但是，有时候，即使是这些也是不够的。
-
-幸运的是，酷冷至尊（CoolerMaster） 已经决定发布其 MasterPlus 软件的开源版本，旨在为其散热器和第三方的散热器提供服务。
-
-虽然这并不能保证它可以用在 Linux 系统上，但我们绝对可以期待它。
-
-此举也应该鼓励雷蛇和罗技这样公司考虑制作精简过的开源工具。
-
-让我们看看酷冷至尊打算怎么做。
-
-MasterPlus 开源版本：我们目前所知的情况
-
-
-
-酷冷至尊在最近的 CES 2023 活动中透露了他们计划发布新的 MasterPlus 开源版本。感谢来自 Boring Text Reviews 的 Albert 让我们注意到了这一点。
-
-预期会有什么？ 对 MasterPlus 软件进行了全面的重新设计，有一个 API 插件系统，允许非酷冷至尊散热器与之整合。
-
-他们已经澄清，酷冷至尊的独有功能不能配合其他散热器一起工作。因此，诸如检测 AIO 散热器的泄漏或计算 PSU 的效率等，都不能对第三方产品进行跟踪。
-
-相反，该应用程序将只支持读取基本的性能信息，如温度和风扇速度，并能够配置 ARGB 设备。
-
-如果你问我，这总比没有好。 而且，如果你的系统碰巧使用了酷冷至尊的组件，这对你来说是一个令人兴奋的消息！
-
-酷冷至尊还展示了 API 系统的潜在应用，让它与一个照片应用程序挂钩，用它来控制集成在电脑机箱侧面的辅助显示器。
-
-此外，他们还介绍了其软件的全面云整合。但遗憾的是，这部分不会开源。
-
-什么时候？ 我们还没有 MasterPlus 开源的具体发布日期。
-
-但是，如果让我猜，2023 年的某个时候是最好的选择。
-
-💬 即使该工具没有被确认可以在 Linux 上工作，对开源工具来说也是一个好的开始，不是吗？你怎么看？
-
-
-via: https://news.itsfoss.com/coolermaster-open-source-software/
-
-作者：Sourav Rudra 选题：lkxed 译者：wxy 校对：wxy
-
-本文由 LCTT 原创编译，Linux中国 荣誉推出]]></summary>
-        <author>
-            <name>linux@linux.cn (linux)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[johnstevenson/winbox-args: 用于转义命令行参数的 PHP 函数]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/c5dd8cb2401089e06baa4fcb0ebf230e8252bcb6</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/c5dd8cb2401089e06baa4fcb0ebf230e8252bcb6"/>
-        <updated>2023-01-11T01:58:44.000Z</updated>
-        <summary type="html"><![CDATA[johnstevenson/winbox-args: 用于转义命令行参数的 PHP 函数]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ircmaxell/FFIMe: FFI 包装器库和标头解析器！]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/8f08c596b892aad28308d68c747c118a58586acf</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/8f08c596b892aad28308d68c747c118a58586acf"/>
-        <updated>2023-01-11T01:56:10.000Z</updated>
-        <summary type="html"><![CDATA[ircmaxell/FFIMe: FFI 包装器库和标头解析器！]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[benbjohnson/immutable: Go 的不可变集合]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/f47d99a16e014f9b14ac0632e97aac440d24a05b</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/f47d99a16e014f9b14ac0632e97aac440d24a05b"/>
-        <updated>2023-01-11T01:54:49.000Z</updated>
-        <summary type="html"><![CDATA[benbjohnson/immutable: Go 的不可变集合]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PHP 中的控制流图实现]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/a543751dedca0444a4ee7e12917b59df33438d58</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/a543751dedca0444a4ee7e12917b59df33438d58"/>
-        <updated>2023-01-11T01:51:36.000Z</updated>
-        <summary type="html"><![CDATA[PHP 中的控制流图实现]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[jetpack-io/devbox: 即时(即时)、简单和可预见(可预见性)的开发环境]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/65680c53273e72d8b9b726c04ca5f94372762629</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/65680c53273e72d8b9b726c04ca5f94372762629"/>
-        <updated>2023-01-11T01:50:32.000Z</updated>
-        <summary type="html"><![CDATA[jetpack-io/devbox: 即时(即时)、简单和可预见(可预见性)的开发环境]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[underthestars-zhy/IconChanger: 只需在 macOS 上更改应用程序的图标即可。 只需点击一下。]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/ef1fe440e7b9cc1c0659c88abb1646a79740abf0</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/ef1fe440e7b9cc1c0659c88abb1646a79740abf0"/>
-        <updated>2023-01-11T01:47:04.000Z</updated>
-        <summary type="html"><![CDATA[underthestars-zhy/IconChanger: 只需在 macOS 上更改应用程序的图标即可。 只需点击一下。]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Junk porn]]></title>
-        <id>https://www.reddit.com/r/linux/comments/108rhz8/junk_porn/</id>
-        <link href="https://www.reddit.com/r/linux/comments/108rhz8/junk_porn/"/>
-        <updated>2023-01-11T01:26:15.000Z</updated>
-        <summary type="html"><![CDATA[Obviously Linux shenanigans enables breathing new life into things that’d otherwise be long dead.
- My daily driver is a 2015 MacBook Pro with a problematic logic board I pulled out of an abandoned hoard. The SSD isn’t even fastened so it just bounces around all willy nilly. It can’t successfully run or install MacOS. But I still get a solid 3 hours battery life at full normal usage incl web browsing, a couple Teams meetings etc.
- I run a weekly backup/update/reboot with anacron and make no effort to stop that from triggering whenever it wants to. If it happens during a meeting I just let it, because it reboots so fast I’m back in the meeting in no time and just say “Sorry, disconnected.” Typing pw to decrypt is like 75% of the whole reboot time.
- Its logic board problem seems to mostly affect its ability to properly power certain hardware components esp when it goes through different power states, along with some erratic charging behavior. So I just have it power off on lid switch.
- I really didn’t expect much from this heap but it works great! Super snappy, super reliable for my needs. And it has a TIMER TO TURN OFF THE KEYBOARD LIGHT WHEN IDLE which isn’t even available on cutting edge Apples. (Unless they added that finally…)
- Who else has trash junkboxes that keep on crushing it?
-    submitted by    /u/Glittering-Lab-2234  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[What Happens When a CPU Starts]]></title>
-        <id>https://news.ycombinator.com/item?id=34333638</id>
-        <link href="https://lateblt.tripod.com/bit68.txt"/>
-        <updated>2023-01-11T01:00:28.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://lateblt.tripod.com/bit68.txt
-Comments URL: https://news.ycombinator.com/item?id=34333638
-Points: 7
-# Comments: 0]]></summary>
-        <author>
-            <name>nowandlater</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Fixing GPU Hangs on Intel HD Graphics 520 (and maybe other iGPUs)]]></title>
-        <id>https://www.reddit.com/r/linux/comments/108qtd2/fixing_gpu_hangs_on_intel_hd_graphics_520_and/</id>
-        <link href="https://www.reddit.com/r/linux/comments/108qtd2/fixing_gpu_hangs_on_intel_hd_graphics_520_and/"/>
-        <updated>2023-01-11T00:56:03.000Z</updated>
-        <summary type="html"><![CDATA[tldr: Set environment variable MESA_LOADER_DRIVER_OVERRIDE=i965 on /etc/environment
- ​
- Hello! I'm making this post in case someone out there, like me, is having trouble with the HD Graphics 520 crashing when under heavy load and hopefully this might also work for other iGPUs suffering from the same issue.
- Usually when doing GPU heavy tasks, your desktop might freeze for a few seconds or even crash the entire session (if you're unlucky). You'll get an error like this one on dmesg:
- i915 0000:00:02.0: [drm] GPU HANG: ecode 9:1:85dffffb, in Xorg [2300]
- For me this only happens when using the Iris driver which is the default for my card, changing it to the old i965 driver seems to not only have fixed the issue but reduced GPU usage when OBS is running.
- The only thing you'll need is to set an environment variable: MESA_LOADER_DRIVER_OVERRIDE
- Open the file /etc/environment as root with any text editor (with sudo nano or sudo vim) and add this to a new line: MESA_LOADER_DRIVER_OVERRIDE=i965
- This will set the variable for every user on the machine (at least on Ubuntu 22.04) so that anyone logging into any session will be using the old driver instead of the Iris one.
- Now log off and log back in and hope it fixes the problem for you. This works with both X.Org and Wayland. This variable can also be set individually for any applications that might have problems with the Iris driver like SDL-only PPSSPP.
-    submitted by    /u/Tridan05  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[派早报：大疆发布轻量旅拍稳定器 RS 3 Mini、Apple 推出 iCloud+ 新订阅用户优惠等]]></title>
-        <id>https://sspai.com/post/77753</id>
-        <link href="https://sspai.com/post/77753"/>
-        <updated>2023-01-11T00:44:59.000Z</updated>
-        <summary type="html"><![CDATA[理光推出 GR III 相机日记版特别限量套装，京东图书与当当网签订战略合作协议等。查看全文]]></summary>
-        <author>
-            <name>少数派编辑部</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[A US federal agency is considering a ban on gas stoves]]></title>
-        <id>https://news.ycombinator.com/item?id=34333477</id>
-        <link href="https://www.cnn.com/2023/01/09/business/gas-stove-ban-federal-agency/index.html"/>
-        <updated>2023-01-11T00:30:56.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.cnn.com/2023/01/09/business/gas-stove-ban-federal-agency/index.html
-Comments URL: https://news.ycombinator.com/item?id=34333477
-Points: 20
-# Comments: 13]]></summary>
-        <author>
-            <name>bluedino</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[HTML with Superpowers: An Introduction to Web Components]]></title>
-        <id>https://news.ycombinator.com/item?id=34333282</id>
-        <link href="https://htmlwithsuperpowers.netlify.app/"/>
-        <updated>2023-01-11T00:06:38.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://htmlwithsuperpowers.netlify.app/
-Comments URL: https://news.ycombinator.com/item?id=34333282
-Points: 11
-# Comments: 1]]></summary>
-        <author>
-            <name>lysergia</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Crypto.com Will Delist Tether in Canada]]></title>
-        <id>https://news.ycombinator.com/item?id=34333210</id>
-        <link href="https://decrypt.co/118812/crypto-com-delist-tether-canada"/>
-        <updated>2023-01-10T23:58:07.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://decrypt.co/118812/crypto-com-delist-tether-canada
-Comments URL: https://news.ycombinator.com/item?id=34333210
-Points: 42
-# Comments: 13]]></summary>
-        <author>
-            <name>lxm</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Show HN: usbc.wtf – an article and quiz to find the right USB-C cable]]></title>
-        <id>https://news.ycombinator.com/item?id=34333176</id>
-        <link href="https://usbc.wtf/"/>
-        <updated>2023-01-10T23:55:02.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://usbc.wtf/
-Comments URL: https://news.ycombinator.com/item?id=34333176
-Points: 6
-# Comments: 2]]></summary>
-        <author>
-            <name>ryanhn</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The Remarkable Emptiness of Existence]]></title>
-        <id>https://news.ycombinator.com/item?id=34332932</id>
-        <link href="https://nautil.us/the-remarkable-emptiness-of-existence-256323/"/>
-        <updated>2023-01-10T23:26:15.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://nautil.us/the-remarkable-emptiness-of-existence-256323/
-Comments URL: https://news.ycombinator.com/item?id=34332932
-Points: 21
-# Comments: 10]]></summary>
-        <author>
-            <name>origgm</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Uploaded a new Script to my Github Repo - MatrixInfo.sh]]></title>
-        <id>https://www.reddit.com/r/linux/comments/108ol4u/uploaded_a_new_script_to_my_github_repo/</id>
-        <link href="https://www.reddit.com/r/linux/comments/108ol4u/uploaded_a_new_script_to_my_github_repo/"/>
-        <updated>2023-01-10T23:24:22.000Z</updated>
-        <summary type="html"><![CDATA[I've just added a new script to my repo on github. Matrixinfo.sh Display neo-matrix with a welcome message and the prints some useful information. Please be careful about sharing the output info. It include public IP and some system information.
- https://github.com/randomxusr/Linux-Scripts
-    submitted by    /u/RandomXUsr  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[In Lebanon, solar power is booming]]></title>
-        <id>https://news.ycombinator.com/item?id=34332820</id>
-        <link href="https://www.sapiens.org/culture/lebanon-solar-power/"/>
-        <updated>2023-01-10T23:13:04.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.sapiens.org/culture/lebanon-solar-power/
-Comments URL: https://news.ycombinator.com/item?id=34332820
-Points: 42
-# Comments: 10]]></summary>
-        <author>
-            <name>miohtama</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Automatic setup]]></title>
-        <id>https://www.reddit.com/r/linux/comments/108mt57/automatic_setup/</id>
-        <link href="https://www.reddit.com/r/linux/comments/108mt57/automatic_setup/"/>
-        <updated>2023-01-10T22:16:38.000Z</updated>
-        <summary type="html"><![CDATA[Hey guys, 
- When I started with Linux I used to write everything that I downloaded so when my system crashed and I did not find how to repair it, I would reinstall it. The list was beneficial. I decided why not make a script in my dotfiles so that when I was installing Linux to some other PC It would be really easy to run just one command and everything will be installed automatically. Maybe you did that, too. However, let me share it, and let's help some who did not think of this.
- Here is the repo:
- https://github.com/Fildo7525/dotfiles
- PS: I use Ubuntu.
-    submitted by    /u/Fildo7525  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[I wrote a TUI snake game in BASH v5.1+]]></title>
-        <id>https://www.reddit.com/r/linux/comments/108mbtv/i_wrote_a_tui_snake_game_in_bash_v51/</id>
-        <link href="https://www.reddit.com/r/linux/comments/108mbtv/i_wrote_a_tui_snake_game_in_bash_v51/"/>
-        <updated>2023-01-10T21:58:19.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/wick3dr0se  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[MuscleWiki: Find exercises that work specific muscles]]></title>
-        <id>https://news.ycombinator.com/item?id=34332135</id>
-        <link href="https://musclewiki.com/"/>
-        <updated>2023-01-10T21:56:48.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://musclewiki.com/
-Comments URL: https://news.ycombinator.com/item?id=34332135
-Points: 24
-# Comments: 0]]></summary>
-        <author>
-            <name>spacebuffer</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[NeevaAI]]></title>
-        <id>https://news.ycombinator.com/item?id=34332114</id>
-        <link href="https://neeva.com/blog/introducing-neevaai"/>
-        <updated>2023-01-10T21:55:01.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://neeva.com/blog/introducing-neevaai
-Comments URL: https://news.ycombinator.com/item?id=34332114
-Points: 116
-# Comments: 46]]></summary>
-        <author>
-            <name>corentin88</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] Formalizing f-strings]]></title>
-        <id>https://lwn.net/Articles/919426/</id>
-        <link href="https://lwn.net/Articles/919426/"/>
-        <updated>2023-01-10T21:36:35.000Z</updated>
-        <summary type="html"><![CDATA[Python's formatted strings, or "f-strings", came relatively late to the
-language, but have become a popular feature.  F-strings allow a compact
-representation for the common task of interpolating program data into
-strings, often in order to output them in some fashion.  Some
-restrictions were placed on f-strings to simplify the implementation of
-them, but those restrictions are not really needed anymore and, in
-fact, are complicating the CPython parser.  That has led to a Python
-Enhancement Proposal (PEP) to formalize the syntax of f-strings for the
-benefit of Python users while simplifying the maintenance of the
-interpreter itself.]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Researchers identify protein that helps skin cancer spread]]></title>
-        <id>https://news.ycombinator.com/item?id=34331479</id>
-        <link href="https://www.qmul.ac.uk/media/news/2022/smd/researchers-identify-protein-that-helps-skin-cancer-spread-throughout-the-body.html"/>
-        <updated>2023-01-10T21:05:22.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.qmul.ac.uk/media/news/2022/smd/researchers-identify-protein-that-helps-skin-cancer-spread-throughout-the-body.html
-Comments URL: https://news.ycombinator.com/item?id=34331479
-Points: 53
-# Comments: 14]]></summary>
-        <author>
-            <name>gmays</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Jerry (YC S17) Is Hiring VP / Director of Engineering]]></title>
-        <id>https://news.ycombinator.com/item?id=34331412</id>
-        <link href="https://jobs.ashbyhq.com/Jerry/2e30b90f-a707-4f50-9b7d-d27c841a238a"/>
-        <updated>2023-01-10T21:00:44.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://jobs.ashbyhq.com/Jerry/2e30b90f-a707-4f50-9b7d-d27c841a238a
-Comments URL: https://news.ycombinator.com/item?id=34331412
-Points: 1
-# Comments: 0]]></summary>
-        <author>
-            <name>linaz</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Bringing MathML back to Chromium]]></title>
-        <id>https://news.ycombinator.com/item?id=34331225</id>
-        <link href="https://www.igalia.com/2023/01/10/Igalia-Brings-MathML-Back-to-Chromium.html"/>
-        <updated>2023-01-10T20:46:03.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.igalia.com/2023/01/10/Igalia-Brings-MathML-Back-to-Chromium.html
-Comments URL: https://news.ycombinator.com/item?id=34331225
-Points: 104
-# Comments: 47]]></summary>
-        <author>
-            <name>ubavic</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Be where your business is]]></title>
-        <id>https://news.ycombinator.com/item?id=34331216</id>
-        <link href="https://steveblank.com/2023/01/10/be-where-your-business-is/"/>
-        <updated>2023-01-10T20:45:06.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://steveblank.com/2023/01/10/be-where-your-business-is/
-Comments URL: https://news.ycombinator.com/item?id=34331216
-Points: 72
-# Comments: 30]]></summary>
-        <author>
-            <name>rmason</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The source code for Duelyst, a digital collectible card game]]></title>
-        <id>https://news.ycombinator.com/item?id=34331144</id>
-        <link href="https://github.com/open-duelyst/duelyst"/>
-        <updated>2023-01-10T20:38:58.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://github.com/open-duelyst/duelyst
-Comments URL: https://news.ycombinator.com/item?id=34331144
-Points: 63
-# Comments: 14]]></summary>
-        <author>
-            <name>haunter</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Linux - namespaces: IPC namespace]]></title>
-        <id>https://www.reddit.com/r/linux/comments/108k1da/linux_namespaces_ipc_namespace/</id>
-        <link href="https://www.reddit.com/r/linux/comments/108k1da/linux_namespaces_ipc_namespace/"/>
-        <updated>2023-01-10T20:29:25.000Z</updated>
-        <summary type="html"><![CDATA[In the first part of the series we have talked generally about what are namespace and what we can do with them - in case you want to go over it you can use the following link https://medium.com/@boutnaru/linux-namespaces-part-1-dcee9c40fb68. Now we are going to deep dive into the IPC (inter process communication) namespace.
- The goal of the IPC namespace is to isolate between different IPC resources like message queues, semaphores and shared memory. We are talking both on System V IPC objects (https://man7.org/linux/man-pages/man7/sysvipc.7.html) and POSIX message queues (https://man7.org/linux/man-pages/man7/mq_overview.7.html). In order to use “IPC namespaces” the kernel should be compiled with CONFIG_IPC_NS enabled (https://man7.org/linux/man-pages/man7/ipc_namespaces.7.html). 
- We can use “/proc” in order to retrieve information about the different IPC objects in an “IPC namespace”. Regarding POSIX message queues we have “/proc/sys/fs/mqueue”. In case of System V IPC objects we have “/proc/sysvipc” and specific file in “/proc/sys/kernel” (msgmax, msgmnb, msgmni, sem, shmall, shmmax, shmmni, and shm_rmid_forced). For more information I suggest reading proc’s man page (https://man7.org/linux/man-pages/man5/proc.5.html). 
- Lastly, all IPC objects created in an “IPC namespace” are visible only to all processes/tasks that are members of the same namespace - as shown in the screenshot below. In the demonstration the namespace was created using “unshare” (https://man7.org/linux/man-pages/man1/unshare.1.html), the IPC resource was created using “ipcmk” (https://man7.org/linux/man-pages/man1/ipcmk.1.html) and the show information about System V IPC resources using “ipcs” (https://man7.org/linux/man-pages/man1/ipcs.1.html). 
- ​
- https://preview.redd.it/renh07yyz9ba1.png?width=599&format=png&auto=webp&s=149cb4ec62c86902d32b3ba7c91f2a2289e334af
-    submitted by    /u/boutnaru  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The DSA-2000 Radio Survey Telescope]]></title>
-        <id>https://news.ycombinator.com/item?id=34330722</id>
-        <link href="https://www.deepsynoptic.org/overview"/>
-        <updated>2023-01-10T20:05:46.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.deepsynoptic.org/overview
-Comments URL: https://news.ycombinator.com/item?id=34330722
-Points: 28
-# Comments: 1]]></summary>
-        <author>
-            <name>geox</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Anyone else thinks most Linux devs are handling this h264 codec thing in the worst way possible?]]></title>
-        <id>https://www.reddit.com/r/linux/comments/108j6qe/anyone_else_thinks_most_linux_devs_are_handling/</id>
-        <link href="https://www.reddit.com/r/linux/comments/108j6qe/anyone_else_thinks_most_linux_devs_are_handling/"/>
-        <updated>2023-01-10T19:56:38.000Z</updated>
-        <summary type="html"><![CDATA[First, Fedora just breaks VAAPI encoding without providing a workaround first, as if no one needed that on production. Then, other distros followed but at least some of them provided alternative solutions.
- Now OBS just released an update that REMOVED VAAPI from the Flatpak. For a software that relies so much on hardware encoding (even with the bad Linux support they have), an issue like this should be something that all devs must think before doing. Flatpak can use runtimes, so if the runtime they use breaks the program then don't update the runtime.
- Meanwhile Windows users got new hardware encoding options that actually work. I don't get why we started this journey against the desktop Linux right when it was getting somewhere.
-    submitted by    /u/Talkys  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Intel Xeon Platinum 8490H "Sapphire Rapids" Performance Benchmarks Review]]></title>
-        <id>https://www.reddit.com/r/linux/comments/108iq8w/intel_xeon_platinum_8490h_sapphire_rapids/</id>
-        <link href="https://www.reddit.com/r/linux/comments/108iq8w/intel_xeon_platinum_8490h_sapphire_rapids/"/>
-        <updated>2023-01-10T19:38:17.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/twlja  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pirate Weather: A free, open, and documented forecast API]]></title>
-        <id>https://news.ycombinator.com/item?id=34329988</id>
-        <link href="https://pirateweather.net/"/>
-        <updated>2023-01-10T19:15:31.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://pirateweather.net/
-Comments URL: https://news.ycombinator.com/item?id=34329988
-Points: 604
-# Comments: 108]]></summary>
-        <author>
-            <name>calebegg</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[8086 Processor's microcode pipeline from die analysis]]></title>
-        <id>https://news.ycombinator.com/item?id=34329201</id>
-        <link href="https://www.righto.com/2023/01/the-8086-processors-microcode-pipeline.html"/>
-        <updated>2023-01-10T18:26:29.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.righto.com/2023/01/the-8086-processors-microcode-pipeline.html
-Comments URL: https://news.ycombinator.com/item?id=34329201
-Points: 97
-# Comments: 18]]></summary>
-        <author>
-            <name>picture</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Veloren, the open world RPG had its 0.14 release]]></title>
-        <id>https://www.reddit.com/r/linux/comments/108fcm9/veloren_the_open_world_rpg_had_its_014_release/</id>
-        <link href="https://www.reddit.com/r/linux/comments/108fcm9/veloren_the_open_world_rpg_had_its_014_release/"/>
-        <updated>2023-01-10T17:22:49.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/PossiblyLinux127  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Theory-building and why employee churn is lethal to software companies]]></title>
-        <id>https://news.ycombinator.com/item?id=34328069</id>
-        <link href="https://www.baldurbjarnason.com/2022/theory-building/"/>
-        <updated>2023-01-10T17:13:06.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.baldurbjarnason.com/2022/theory-building/
-Comments URL: https://news.ycombinator.com/item?id=34328069
-Points: 364
-# Comments: 237]]></summary>
-        <author>
-            <name>bwestergard</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Building a Distro From The Ground Up]]></title>
-        <id>https://www.reddit.com/r/linux/comments/108ewxa/building_a_distro_from_the_ground_up/</id>
-        <link href="https://www.reddit.com/r/linux/comments/108ewxa/building_a_distro_from_the_ground_up/"/>
-        <updated>2023-01-10T17:05:59.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/dlorenc  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How Microsoft attempted to make the Xbox 360 dashboard load faster]]></title>
-        <id>https://news.ycombinator.com/item?id=34327759</id>
-        <link href="https://eaton-works.com/2023/01/09/how-microsoft-attempted-to-make-the-xbox-360-dashboard-load-faster/"/>
-        <updated>2023-01-10T16:56:09.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://eaton-works.com/2023/01/09/how-microsoft-attempted-to-make-the-xbox-360-dashboard-load-faster/
-Comments URL: https://news.ycombinator.com/item?id=34327759
-Points: 112
-# Comments: 37]]></summary>
-        <author>
-            <name>whalesalad</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PEP 703: Making the Python global interpreter lock optional]]></title>
-        <id>https://lwn.net/Articles/919563/</id>
-        <link href="https://lwn.net/Articles/919563/"/>
-        <updated>2023-01-10T16:39:49.000Z</updated>
-        <summary type="html"><![CDATA[In late 2021, LWN covered a plan to
-eliminate the Python global interpreter lock (GIL), thus improving the
-language's thread-level concurrency.  This plan has now been codified as PEP 703, which includes
-an extensive discussion of the changes that would be made.
-
-
-	The global interpreter lock will remain the default for CPython
-	builds and python.org downloads. A new build configuration flag,
-	--without-gil will be added to the configure script that
-	will build CPython without the global interpreter lock.
-
-
-The posting of a PEP is only one step in a long path toward integrating
-this change into the CPython interpreter; expect some extended discussions
-over the coming months.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The Tyranny of ‘The Plan' (2013)]]></title>
-        <id>https://news.ycombinator.com/item?id=34327453</id>
-        <link href="https://chrisgagne.com/1255/mary-poppendiecks-the-tyranny-of-the-plan/"/>
-        <updated>2023-01-10T16:36:35.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://chrisgagne.com/1255/mary-poppendiecks-the-tyranny-of-the-plan/
-Comments URL: https://news.ycombinator.com/item?id=34327453
-Points: 96
-# Comments: 38]]></summary>
-        <author>
-            <name>cangencer</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Collecting opinions for best PPC distro]]></title>
-        <id>https://www.reddit.com/r/linux/comments/108dv7c/collecting_opinions_for_best_ppc_distro/</id>
-        <link href="https://www.reddit.com/r/linux/comments/108dv7c/collecting_opinions_for_best_ppc_distro/"/>
-        <updated>2023-01-10T16:23:30.000Z</updated>
-        <summary type="html"><![CDATA[I worked for Apple many years ago, and due to this have ended up with many old PowerPC & 68k Macs in my possession. I’ve dutifully moved them from place to place over the years, mostly due to my desire to not seem them end up in a landfill, but I’d like to actually utilize at least a few of them. 
- Most are laptops, like a PowerBook 100 and a few of those colourful, toilet-seat-shaped iBook G3’s, but I also have some desktop machines that I believe still have some useful life left in them, but MacOS abandoned them decades ago, in most cases. 
- If I wanted to resurrect these old dinosaurs with a passably-modern, Linux-based OS, what distribution would you suggest I look at first? I’m more concerned about the PowerPC machines, but I’d also love some advice about the Motorola 68k machines. 
- Thanks in advance for any guidance you’re able to provide.
- EDIT: I’ve fallen into that age-old trap of using the word ‘Linux’ as a catch-all that just means “Unix-like FOSS Operating System”. My bad; I’ll try to do better in the future:) It’d definitely be at least slightly better/easier for me overall if it were truly Linux-based, but I’m not averse to looking into BSD; I had already anticipated that this project would involve building quite a great deal of what I want from source anyway.
-    submitted by    /u/plaidverb  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Phosh 2022 in Retrospect]]></title>
-        <id>https://www.reddit.com/r/linux/comments/108cwl0/phosh_2022_in_retrospect/</id>
-        <link href="https://www.reddit.com/r/linux/comments/108cwl0/phosh_2022_in_retrospect/"/>
-        <updated>2023-01-10T15:43:49.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/Adwaitian  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Exclusive(?!) : Say goodbye to bloated, closed source software – CoolerMaster to release new, open source version of it’s software with API integration – and it can work with other coolers too!]]></title>
-        <id>https://www.reddit.com/r/linux/comments/108cnv2/exclusive_say_goodbye_to_bloated_closed_source/</id>
-        <link href="https://www.reddit.com/r/linux/comments/108cnv2/exclusive_say_goodbye_to_bloated_closed_source/"/>
-        <updated>2023-01-10T15:33:30.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/gdarruda  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Linux Preparing To Disable Drivers For Microsoft's RNDIS Protocol]]></title>
-        <id>https://www.reddit.com/r/linux/comments/108avzx/linux_preparing_to_disable_drivers_for_microsofts/</id>
-        <link href="https://www.reddit.com/r/linux/comments/108avzx/linux_preparing_to_disable_drivers_for_microsofts/"/>
-        <updated>2023-01-10T14:16:35.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/Realistic-Plant3957  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Tuesday]]></title>
-        <id>https://lwn.net/Articles/919543/</id>
-        <link href="https://lwn.net/Articles/919543/"/>
-        <updated>2023-01-10T14:05:57.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Debian (libtasn1-6), Fedora (nautilus), Oracle (kernel, kernel-container, nodejs:14, tigervnc, and xorg-x11-server), Red Hat (grub2, nodejs:14, tigervnc, and xorg-x11-server), Scientific Linux (tigervnc and xorg-x11-server), SUSE (systemd), and Ubuntu (firefox, linux-aws, linux-aws-5.15, linux-azure, linux-azure-5.15, linux-azure-fde, linux-azure, w3m, and webkit2gtk).]]></summary>
         <author>
             <name>corbet</name>
         </author>
