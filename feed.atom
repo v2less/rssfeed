@@ -2,10 +2,918 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://v2less.github.io/rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-03-16T01:22:02.662Z</updated>
+    <updated>2023-03-17T01:19:41.179Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://v2less.github.io/rssfeed/index.html"/>
     <link rel="self" href="https://v2less.github.io/rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Show HN: GPT Repo Loader – load entire code repos into GPT prompts]]></title>
+        <id>https://news.ycombinator.com/item?id=35191303</id>
+        <link href="https://github.com/mpoon/gpt-repository-loader"/>
+        <updated>2023-03-17T00:59:54.000Z</updated>
+        <summary type="html"><![CDATA[I was getting tired of copy/pasting reams of code into GPT-4 to give it context before I asked it to help me, so I started this small tool. In a nutshell, gpt-repository-loader will spit out file paths and file contents in a prompt-friendly format. You can also use .gptignore to ignore files/folders that are irrelevant to your prompt.
+gpt-repository-loader as-is works pretty well in helping me achieve better responses. Eventually, I thought it would be cute to load itself into GPT-4 and have GPT-4 improve it. I was honestly surprised by PR#17. GPT-4 was able to write a valid an example repo and an expected output and throw in a small curveball by adjusting .gptignore. I did tell GPT the output file format in two places: 1.) in the preamble when I prompted it to make a PR for issue #16 and 2.) as a string in gpt_repository_loader.py, both of which are indirect ways to infer how to build a functional test. However, I don't think I explained to GPT in English anywhere on how .gptignore works at all!
+I wonder how far GPT-4 can take this repo. Here is the process I'm following for developing:
+- Open an issue describing the improvement to make
+- Construct a prompt - start with using gpt_repository_loader.py on this repo to generate the repository context, then append the text of the opened issue after the --END-- line.
+- Try not to edit any code GPT-4 generates. If there is something wrong, continue to prompt GPT to fix whatever it is.
+- Create a feature branch on the issue and create a pull request based on GPT's response.
+- Have a maintainer review, approve, and merge.
+I am going to try to automate the steps above as much as possible. Really curious how tight the feedback loop will eventually get before something breaks!
+Comments URL: https://news.ycombinator.com/item?id=35191303
+Points: 6
+# Comments: 0]]></summary>
+        <author>
+            <name>mpoon</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[U.S. Copyright Office Issues Statement on Works Containing AI-Generated Material]]></title>
+        <id>https://news.ycombinator.com/item?id=35191206</id>
+        <link href="https://www.federalregister.gov/documents/2023/03/16/2023-05321/copyright-registration-guidance-works-containing-material-generated-by-artificial-intelligence"/>
+        <updated>2023-03-17T00:49:39.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.federalregister.gov/documents/2023/03/16/2023-05321/copyright-registration-guidance-works-containing-material-generated-by-artificial-intelligence
+Comments URL: https://news.ycombinator.com/item?id=35191206
+Points: 21
+# Comments: 1]]></summary>
+        <author>
+            <name>nagonago</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Template – A Simple Framework for Webapps]]></title>
+        <id>https://news.ycombinator.com/item?id=35191183</id>
+        <link href="https://github.com/retrohacker/template"/>
+        <updated>2023-03-17T00:46:55.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://github.com/retrohacker/template
+Comments URL: https://news.ycombinator.com/item?id=35191183
+Points: 4
+# Comments: 0]]></summary>
+        <author>
+            <name>stefankuehnel</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[National Weather Service EBS]]></title>
+        <id>https://www.reddit.com/r/linux/comments/11tbqzc/national_weather_service_ebs/</id>
+        <link href="https://www.reddit.com/r/linux/comments/11tbqzc/national_weather_service_ebs/"/>
+        <updated>2023-03-17T00:32:25.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/96Retribution  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Old terminal calculator program someone else possibly knows?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/11tbqmw/old_terminal_calculator_program_someone_else/</id>
+        <link href="https://www.reddit.com/r/linux/comments/11tbqmw/old_terminal_calculator_program_someone_else/"/>
+        <updated>2023-03-17T00:32:02.000Z</updated>
+        <summary type="html"><![CDATA[I have been searching for a calculator tool that I found a long time ago the main feature I have not been able to find is that as you are doing a reverse polish notation calculation it builds a visual "pretty" representation. I assume it must use latex behind the scene to create such pretty formulas however I cannot for the life of me find it or another alternative that works in the terminal and doesn't actually output unrendered/raw latex
+ Does anyone know of the project? It was hosted on github
+ However
+    submitted by    /u/eat_those_lemons  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[My Thoughts on “Bad Code”]]></title>
+        <id>https://news.ycombinator.com/item?id=35190830</id>
+        <link href="https://twitter.com/tsoding/status/1632038724044201985"/>
+        <updated>2023-03-17T00:11:35.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://twitter.com/tsoding/status/1632038724044201985
+Comments URL: https://news.ycombinator.com/item?id=35190830
+Points: 8
+# Comments: 1]]></summary>
+        <author>
+            <name>djoldman</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Google: Turn off VoLTE, Wi-Fi calling: severe Exynos modem vulnerabilities]]></title>
+        <id>https://news.ycombinator.com/item?id=35190811</id>
+        <link href="https://9to5google.com/2023/03/16/google-exynos-modem-vulnerabilities/"/>
+        <updated>2023-03-17T00:09:51.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://9to5google.com/2023/03/16/google-exynos-modem-vulnerabilities/
+Comments URL: https://news.ycombinator.com/item?id=35190811
+Points: 57
+# Comments: 8]]></summary>
+        <author>
+            <name>dmitrygr</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[硬核观察 #943 20 年后，《第二人生》将在移动端推出]]></title>
+        <id>https://linux.cn/article-15635-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-15635-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2023-03-17T00:04:22.000Z</updated>
+        <summary type="html"><![CDATA[20 年后，《第二人生》将在移动端推出
+
+信不信由你，《第二人生》一直在持续运行。现在它第一次来到了移动领域，事实上，这将是《第二人生》首次以任何形式扩展到 PC 之外。其背后的 Linden Lab 分享了一段介绍视频，并宣布移动应用程序的测试版将在今年某个时候推出。
+
+
+消息来源：Ars Technica
+
+
+
+老王点评：还有人记得《第二人生》吗？
+
+
+
+
+Meta AI 创建了一个更大规模的预测蛋白质数据库
+
+Meta 公司的研究部门 Meta AI 使用被称为 ESMFold 的新人工智能计算机程序创建了一个包含 6.17 亿个预测蛋白质的公共数据库。使用人工智能来预测蛋白质结构，不仅有望提高现有药物和候选药物的疗效，还有助于发现可以治疗那些一直无法治愈的疾病的分子。此前，Alphabet 的子公司 DeepMind 开发的 AlphaFold 的数据库有 2.14 亿个预测的蛋白质。Meta 公司称，ESMFold 比 AlphaFold 快 60 倍，但精确度较低。ESMFold 数据库更大，因为它是从以前没有研究过的基因序列中进行预测的。
+
+
+消息来源：《华尔街日报》
+
+
+
+老王点评：这是 AI 更严肃的场景，或许不如 ChatGPT 那样引人注目。
+
+
+
+
+微软将 AI 助手加入其 Microsoft 365 中
+
+微软今天宣布为其 Microsoft 365 应用程序和服务提供一个新的人工智能驱动的 Copilot 助手，旨在协助人们生成文档、电子邮件、演示文稿等等。Copilot 由 OpenAI 的 GPT-4 驱动，作为一个聊天机器人出现在侧边栏，允许 Office 用户召唤它来生成文档中的文本，根据 Word 文档创建 PowerPoint 演示文稿等。
+
+
+消息来源：The Verge
+
+
+
+老王点评：至少看起来这种能被 AI 辅助或取代的工作有点岌岌可危。]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[KDE is better at achieving Gnome goal]]></title>
+        <id>https://www.reddit.com/r/linux/comments/11tao7b/kde_is_better_at_achieving_gnome_goal/</id>
+        <link href="https://www.reddit.com/r/linux/comments/11tao7b/kde_is_better_at_achieving_gnome_goal/"/>
+        <updated>2023-03-16T23:54:44.000Z</updated>
+        <summary type="html"><![CDATA[Welp, whenever I see discussion about Gnome and KDE it basically comes down to "Gnome is simpler but KDE is more customizable". I tend to switch my DE/WM pretty frequently between Gnome, KDE and DWM (yeah, I'm a weirdo). And as much as I love all of them, I'm always amused by this paradox that despite of Gnome goal of being super simple DE, at the end of the night KDE is actually simpler in a lot of ways. Let's just compare setting your own keybinding in both DEs. In case of Gnome you just get a popup for a terminal command to put. In case of KDE you get a window, where you choose app and action. Next one, I had issues with drag'n'drop in file roller for a pretty long time in many distros few years back (Gnome 3 days). And when it finally worked, it's currently borked once again after Gnome 40 release. Never had such an issue, as borked basic functionality of their own app in KDE 5. And yet KDE manage that on top of their (also stupid simple) customizability. Even for the developers, Qt, at very least from my experience, manage to be simpler. Things like connecting phone via KDE connect or built in clipboard manager might be consider more of a feature, but that's yet another thing that kinda makes KDE simpler in some way, as it's more functional by default. And yet that's all, as I said earlier on top of not only stupid simple DE customization where you have built in downloader for themes, plasmoids and even SDDM themes but also very simple apps customization. So IMO - KDE is both simpler AND more customizable. But what Gnome's better at is workflow as their default is actually really, really great while in KDE in my experience you either use more or less windows-like workflow either end up with somewhat rough and unpolished state. What do you think about it?
+    submitted by    /u/nawo266  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Starlink V2 Satellites in Trouble]]></title>
+        <id>https://news.ycombinator.com/item?id=35190631</id>
+        <link href="https://twitter.com/TMFAssociates/status/1636436007837941770"/>
+        <updated>2023-03-16T23:49:42.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://twitter.com/TMFAssociates/status/1636436007837941770
+Comments URL: https://news.ycombinator.com/item?id=35190631
+Points: 46
+# Comments: 3]]></summary>
+        <author>
+            <name>drmpeg</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[kNOME is LIVE.]]></title>
+        <id>https://www.reddit.com/r/linux/comments/11ta9b2/knome_is_live/</id>
+        <link href="https://www.reddit.com/r/linux/comments/11ta9b2/knome_is_live/"/>
+        <updated>2023-03-16T23:37:36.000Z</updated>
+        <summary type="html"><![CDATA[Ok, here goes.
+ ...................
+ Screenshots:
+ https://imgur.com/umEB5A5
+ https://imgur.com/kz5OVHY
+ ....................
+ MD5: 32294faa74487d383892da30f89d3ec0
+ ISO Download / Manifest / README: 
+ https://pastebin.com/eBFznmtN
+ ....................
+ **Welcome to kNOME!!**
+ kNOME is not a "distro", a Desktop Environment, or anything even remotely official. It is just a bare-bones Debian installation using the GNOME desktop environment, where most GNOME apps have been replaced by KDE apps. It's been tweaked for privacy, aesthetics and functionality and burned to an ISO. It can be used in live mode or installed** to a disk. (see "INSTALLATION NOTES" below)
+ kNOME is built on top of Debian Sid: the rolling, "unstable" branch of Debian. Why Sid, you ask? I got tired of Ubuntu derivatives a…]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I just helped create the first jailbreak for ChatGPT-4]]></title>
+        <id>https://news.ycombinator.com/item?id=35190383</id>
+        <link href="https://twitter.com/alexalbert__/status/1636488551817965568"/>
+        <updated>2023-03-16T23:24:43.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://twitter.com/alexalbert__/status/1636488551817965568
+Comments URL: https://news.ycombinator.com/item?id=35190383
+Points: 89
+# Comments: 60]]></summary>
+        <author>
+            <name>rafiste</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How did Dennis Ritchie Produce his PhD Thesis? A Typographical Mystery ....(Stole it from Colin Ian King's share on another channel)]]></title>
+        <id>https://www.reddit.com/r/linux/comments/11t9ls5/how_did_dennis_ritchie_produce_his_phd_thesis_a/</id>
+        <link href="https://www.reddit.com/r/linux/comments/11t9ls5/how_did_dennis_ritchie_produce_his_phd_thesis_a/"/>
+        <updated>2023-03-16T23:13:23.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/unixbhaskar  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[America’s bad bet on expanding legal sports gambling]]></title>
+        <id>https://news.ycombinator.com/item?id=35189982</id>
+        <link href="https://www.vox.com/23641580/draftkings-fanduel-sports-betting-gambling-problems-march-madness"/>
+        <updated>2023-03-16T22:46:55.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.vox.com/23641580/draftkings-fanduel-sports-betting-gambling-problems-march-madness
+Comments URL: https://news.ycombinator.com/item?id=35189982
+Points: 43
+# Comments: 24]]></summary>
+        <author>
+            <name>pseudolus</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Tons of uranium missing from Libyan site, IAEA tells member states]]></title>
+        <id>https://news.ycombinator.com/item?id=35189858</id>
+        <link href="https://www.reuters.com/markets/commodities/tons-uranium-missing-libyan-site-iaea-tells-member-states-2023-03-15/"/>
+        <updated>2023-03-16T22:36:51.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.reuters.com/markets/commodities/tons-uranium-missing-libyan-site-iaea-tells-member-states-2023-03-15/
+Comments URL: https://news.ycombinator.com/item?id=35189858
+Points: 42
+# Comments: 34]]></summary>
+        <author>
+            <name>perihelions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[We built an exceedingly polite AI dog that answers questions about your APIs]]></title>
+        <id>https://news.ycombinator.com/item?id=35189854</id>
+        <link href="https://www.akitasoftware.com/blog-posts/we-built-an-exceedingly-polite-ai-dog-that-answers-questions-about-your-apis"/>
+        <updated>2023-03-16T22:36:47.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.akitasoftware.com/blog-posts/we-built-an-exceedingly-polite-ai-dog-that-answers-questions-about-your-apis
+Comments URL: https://news.ycombinator.com/item?id=35189854
+Points: 61
+# Comments: 36]]></summary>
+        <author>
+            <name>eob</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Transformers.js]]></title>
+        <id>https://news.ycombinator.com/item?id=35189794</id>
+        <link href="https://xenova.github.io/transformers.js/"/>
+        <updated>2023-03-16T22:31:46.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://xenova.github.io/transformers.js/
+Comments URL: https://news.ycombinator.com/item?id=35189794
+Points: 126
+# Comments: 31]]></summary>
+        <author>
+            <name>skilled</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Heroku Status – Dashboard/API Offline]]></title>
+        <id>https://news.ycombinator.com/item?id=35189441</id>
+        <link href="https://status.heroku.com/incidents/2524"/>
+        <updated>2023-03-16T22:05:19.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://status.heroku.com/incidents/2524
+Comments URL: https://news.ycombinator.com/item?id=35189441
+Points: 48
+# Comments: 40]]></summary>
+        <author>
+            <name>craigkerstiens</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CompTia Practice Cert wrong answer?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/11t7qe0/comptia_practice_cert_wrong_answer/</id>
+        <link href="https://www.reddit.com/r/linux/comments/11t7qe0/comptia_practice_cert_wrong_answer/"/>
+        <updated>2023-03-16T22:03:01.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Sonny_Marlo  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Free data-center heat is allegedly saving a struggling public pool $24K a year]]></title>
+        <id>https://news.ycombinator.com/item?id=35189083</id>
+        <link href="https://arstechnica.com/information-technology/2023/03/free-data-center-heat-is-allegedly-saving-a-struggling-public-pool-24k-a-year/"/>
+        <updated>2023-03-16T21:39:07.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://arstechnica.com/information-technology/2023/03/free-data-center-heat-is-allegedly-saving-a-struggling-public-pool-24k-a-year/
+Comments URL: https://news.ycombinator.com/item?id=35189083
+Points: 63
+# Comments: 13]]></summary>
+        <author>
+            <name>exz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Bandcamp Unionizes]]></title>
+        <id>https://news.ycombinator.com/item?id=35188953</id>
+        <link href="https://www.bandcampunited.org/"/>
+        <updated>2023-03-16T21:30:05.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.bandcampunited.org
+Comments URL: https://news.ycombinator.com/item?id=35188953
+Points: 233
+# Comments: 98]]></summary>
+        <author>
+            <name>panic</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I've switched to windows]]></title>
+        <id>https://www.reddit.com/r/linux/comments/11t4r1x/ive_switched_to_windows/</id>
+        <link href="https://www.reddit.com/r/linux/comments/11t4r1x/ive_switched_to_windows/"/>
+        <updated>2023-03-16T20:07:43.000Z</updated>
+        <summary type="html"><![CDATA[After a solid trial with linux for the last 5 months or so and i have concluded that I'm fed up with it.
+ Half of the time i spend fidgeting with the settings rather than getting actual work done. I know that really this is my fault but I can't help but feel that the many errors and issues I've had with it amplify this. I just take twice as long to do something that should be a very simple task and it's always a little more time than windows to get stuff done.
+ The breaking point was a couple of days ago where GRUB broke on me for the THIRD time and i wasn't able to recover it no matter how hard i tried. Ive never had to enter the BIOS more with any OS than with linux, and honestly I don't think it's even worth it anymore considering I've installed ghost spectre which runs on even less ram than my linux install, and takes all of the windows spyware out.
+ I gave it a chance at least though!
+    submitted by    /u/Jukul  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[We apologize. We did a terrible job announcing the end of Docker Free Teams]]></title>
+        <id>https://news.ycombinator.com/item?id=35187250</id>
+        <link href="https://www.docker.com/blog/we-apologize-we-did-a-terrible-job-announcing-the-end-of-docker-free-teams/"/>
+        <updated>2023-03-16T19:41:08.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.docker.com/blog/we-apologize-we-did-a-terrible-job-announcing-the-end-of-docker-free-teams/
+Comments URL: https://news.ycombinator.com/item?id=35187250
+Points: 448
+# Comments: 225]]></summary>
+        <author>
+            <name>mmbleh</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing react.dev]]></title>
+        <id>https://news.ycombinator.com/item?id=35186812</id>
+        <link href="https://react.dev/blog/2023/03/16/introducing-react-dev"/>
+        <updated>2023-03-16T19:11:08.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://react.dev/blog/2023/03/16/introducing-react-dev
+Comments URL: https://news.ycombinator.com/item?id=35186812
+Points: 444
+# Comments: 279]]></summary>
+        <author>
+            <name>clessg</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FCC orders phone companies to block scam text messages]]></title>
+        <id>https://news.ycombinator.com/item?id=35186621</id>
+        <link href="https://arstechnica.com/tech-policy/2023/03/fcc-orders-phone-companies-to-block-scam-text-messages/"/>
+        <updated>2023-03-16T18:56:58.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://arstechnica.com/tech-policy/2023/03/fcc-orders-phone-companies-to-block-scam-text-messages/
+Comments URL: https://news.ycombinator.com/item?id=35186621
+Points: 231
+# Comments: 96]]></summary>
+        <author>
+            <name>mfiguiere</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Docopt.sh – Command-Line Argument Parser for Bash 3.2, 4, and 5]]></title>
+        <id>https://news.ycombinator.com/item?id=35186462</id>
+        <link href="https://github.com/andsens/docopt.sh"/>
+        <updated>2023-03-16T18:46:26.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://github.com/andsens/docopt.sh
+Comments URL: https://news.ycombinator.com/item?id=35186462
+Points: 58
+# Comments: 6]]></summary>
+        <author>
+            <name>stefankuehnel</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Low-cost open source device can measure air pollution anywhere]]></title>
+        <id>https://news.ycombinator.com/item?id=35186431</id>
+        <link href="https://news.mit.edu/2023/low-cost-device-can-measure-air-pollution-anywhere-0316"/>
+        <updated>2023-03-16T18:44:10.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://news.mit.edu/2023/low-cost-device-can-measure-air-pollution-anywhere-0316
+Comments URL: https://news.ycombinator.com/item?id=35186431
+Points: 130
+# Comments: 46]]></summary>
+        <author>
+            <name>GavCo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Project Orion]]></title>
+        <id>https://news.ycombinator.com/item?id=35185851</id>
+        <link href="https://en.wikipedia.org/wiki/Project_Orion_(nuclear_propulsion)"/>
+        <updated>2023-03-16T18:09:12.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://en.wikipedia.org/wiki/Project_Orion_(nuclear_propulsion)
+Comments URL: https://news.ycombinator.com/item?id=35185851
+Points: 84
+# Comments: 48]]></summary>
+        <author>
+            <name>tosh</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon Linux 2023 released]]></title>
+        <id>https://lwn.net/Articles/926332/</id>
+        <link href="https://lwn.net/Articles/926332/"/>
+        <updated>2023-03-16T16:44:01.000Z</updated>
+        <summary type="html"><![CDATA[Amazon has released
+a new version of its vaguely Fedora-based, cloud-optimized
+distribution.
+
+
+	Last—and this policy is by far my favorite—Amazon Linux provides
+	you with deterministic updates through versioned repositories, a
+	flexible and consistent update mechanism. The distribution locks to
+	a specific version of the Amazon Linux package repository, giving
+	you control over how and when you absorb updates. By default, and
+	in contrast with Amazon Linux 2, a dnf update command
+	will not update your installed packages.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SFC: John Deere's ongoing GPL violations: What's next]]></title>
+        <id>https://lwn.net/Articles/926330/</id>
+        <link href="https://lwn.net/Articles/926330/"/>
+        <updated>2023-03-16T16:26:50.000Z</updated>
+        <summary type="html"><![CDATA[The Software Freedom Conservancy calls
+out John Deere for failure to comply with the GPL and preventing
+farmers from repairing their own equipment.
+
+
+	 This is a serious issue that goes far beyond one person wanting to
+	 fix their printer software, or install an alternative firmware on
+	 a luxury device. It has far-reaching implications for all farmers'
+	 livelihoods, for food security throughout the world, and for how
+	 we as a society choose to reward those who make our lives better,
+	 or stand in the way of empowering everyone to improve the world.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[云开发人员需要了解的硬件知识]]></title>
+        <id>https://linux.cn/article-15634-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-15634-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2023-03-16T15:58:52.000Z</updated>
+        <summary type="html"><![CDATA[云无处不在，所以硬件比以往任何时候都更加关键。
+
+
+我们很容易忘记技术人员所取得的进步。在 2000 年代初期，大多数本地用户组（LUG）定期举行安装节。那时，要配置一台机器来很好地运行 Linux，我们必须了解有关硬件的详细信息以及如何配置它。现在，将近二十年后，有了一个项目，其核心理想是让一台计算机运行 Linux 就像 API 调用一样简单。在这个新世界中，运维人员和开发者等不再需要担心服务器中的硬件。这种变化对下一代的运维人员和开发者产生了深远的影响。
+
+在计算机技术的早期，你不得不经常接触硬件。如果计算机需要更多内存，你只需添加它即可。随着时间的推移，技术也有了很大的发展。这最终使运维人员远离硬件。过去需要去数据中心一趟，现在变成了远程操作硬件的支持工单。最终，硬件被完全摆脱了。相反，你现在可以通过简单的命令召唤和摧毁“服务器”，而不必再担心硬件问题。
+
+这里是真正的真相：硬件的存在是因为需要它来为云提供动力。但是，云到底是什么？
+
+为什么硬件对云至关重要
+
+云是建立在利用抽象集中的基础资源之上的。它的范围可以从简单的在你的 家庭实验室 中运行几个虚拟机的管理程序，到复杂的包括定制服务器、网络设备、容器和从头开始设计的专注于规模效率的技术。
+
+它们是模糊的。它们在进化。
+
+今天那些进入技术领域的人没有那些更有经验的开发人员实践经验。许多人从最早与计算机交互时就接受过使用云的培训。他们不知道不用按钮来更改内存分配的世界。他们可以将注意力转移到技术栈的更高层次。然而，如果不了解他们所使用的基础架构所建立的基础，他们就会含蓄地放弃学习栈较低级别（包括硬件）的机会。这里没有说错，因为云基础设施的实施者和运维人员已经做出了特定的选择，有意让他们的产品更易于使用。
+
+这意味着现在，你比以往任何时候都更需要有意识地考虑在选择使用云技术时你或其他人做出的权衡。大多数人在收到第一份超额的云账单或第一次因“吵闹的邻居”造成的中断之前，不会知道已经做出了哪些权衡。企业能否信任他们的供应商做出最适合他们运营的权衡？供应商会建议更有效或更有利可图的服务吗？让买家（或工程师！）当心。
+
+有意识地考虑权衡取舍需要从多个角度审视你的要求和目标。基础设施决策和其中的权衡是该项目的整个过程、设计或使用模型所固有的。这就是为什么必须尽快计划它们的原因。必须考虑多种不同的路径，以便为你的项目找到一个合适的归宿。
+
+首先是要实现的目标或提供的服务的轴心。这可能伴随着速度、质量或性能方面的要求。这本身可以驱动许多变量。你可能需要专用硬件（例如 GPU）才能以可接受的速度处理请求。此负载是否需要自动缩放？当然，这些路径是交织在一起的。问题已经跳转到“我的钱包会自动缩放吗？”
+
+业务需求是要考虑的另一部分。你的项目可能有特定的安全或合规性要求，这些要求规定了数据的存储位置。邻近相关服务也是一个潜在的问题。这包括确保与附近证券交易所的 低延迟连接 或能够提供高质量的本地视频缓存作为内容交付网络（CDN）的一部分。
+
+然后是最后一部分，即所提供服务的价值和成本：一个人希望或可以花多少钱来满足要求。这与第一条路径紧密相关。你的业务是“什么”以及你的业务“如何”运作。这可以像你的企业更喜欢资本支出还是更喜欢运营支出一样普通。
+
+当看到这些选项时，很容易看到改变任何一个变量都会开始改变其他变量。它们在本质上是相互交织的，一些技术可能允许这些变量动态变化。如果不了解较低层次的底层，你就有可能采取推动这种动态计费模式的路径。对一些人来说，这是首选。对其他人来说，这可能是令人恐惧的。
+
+尽管在现代技术栈中，学习特定的硬件知识已变得更加可有可无，但我们希望这篇文章能鼓励你去研究你可能在不知不觉中错过的东西。硬件的改进是功能交付和效率提高的一个重要部分，将计算机从房间大小的怪物缩小到小到可以植入人体内。我们希望你花时间停下来，学习并考虑你的下一个项目将在什么硬件平台上运行，即使你不控制它。
+
+如果你是一个还没有把头从云端拿出来的学生，去找一台 旧电脑，安装一根内存，挑战自己，学习新东西。
+
+
+via: https://opensource.com/article/23/3/cloud-hardware
+
+作者：Jay Faulkner 选题：lkxed 译者：geekpi 校对：wxy
+
+本文由 LCTT 原创编译，Linux中国 荣誉推出]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[March 2023 Libreboot release expected soon]]></title>
+        <id>https://www.reddit.com/r/linux/comments/11sxxic/march_2023_libreboot_release_expected_soon/</id>
+        <link href="https://www.reddit.com/r/linux/comments/11sxxic/march_2023_libreboot_release_expected_soon/"/>
+        <updated>2023-03-16T15:53:34.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/libreleah  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[不编写代码也可以为开源项目做出贡献]]></title>
+        <id>https://linux.cn/article-15633-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-15633-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2023-03-16T15:17:07.000Z</updated>
+        <summary type="html"><![CDATA[如果你想通过非代码贡献成为一个提交者，或者没有时间做代码贡献，那么第一步就是加入社区。
+
+
+对于不同的人来说，开源“社区”意味着不同的东西。我认为开源有点像“爱情”，因为它是关于人和关系的。把开源当作一个社区，因为没有人，就没有源代码，无论是开源还是闭源。
+
+我是 Apache DolphinScheduler 社区的成员。由于该项目有意保持低代码，因此它吸引了许多 非软件开发人员。有时，那些不编写代码的人不确定是否有一种有意义的方式来为主要由源代码组成的开源项目做出贡献。我的经验告诉我，有，我将在本文中解释原因。
+
+向社区做出贡献
+
+在 Apache DolphinScheduler 项目中，我主要负责全球运营、影响力和社区关怀。
+
+一些人会说项目是树而开源是土壤。这是一个恰当的比喻，它说明了积极培育你想要帮助成长的东西的重要性。
+
+我有一个更简单的想法：尽一切可能使其变得更好。
+
+一个社区需要不断的关注，不是因为它很贪心，而是因为它是生活的一部分。社区是你身边的人，无论是物理空间还是在线空间。
+
+自从加入开源社区以来，我已经独立发起并组织了一些活动，包括：
+
+
+平均每月在中国举办一次会议。
+
+建议社区参与大数据领域内的技术分享。
+
+协调了中国“大数据”领域几乎所有的开源项目，与这些社区进行了个别访问和交流。
+
+
+在我看来，一个优秀的项目应该在一个良好的生态系统中成长。社区需要走出去，交换想法，分享资源，并与其他优秀的社区合作。每个人都应该感受到社区在工作中带来的好处。
+
+我的海外扩张遵循相同的模式。当然，由于文化和语言的差异，这样做很困难。这需要耗费精力，但这是值得的。
+
+到目前为止，我们已经在包括美国、印度、新加坡、德国、法国、芬兰等国家成功举办了会议。
+
+所以我如何为 DolphinScheduler 做出贡献？我是否向项目提交代…]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenSSH 9.3 released]]></title>
+        <id>https://lwn.net/Articles/926321/</id>
+        <link href="https://lwn.net/Articles/926321/"/>
+        <updated>2023-03-16T14:30:42.000Z</updated>
+        <summary type="html"><![CDATA[OpenSSH 9.3 has been released.  It includes a couple of security fixes, as
+well as adding an option for hash-algorithm selection to
+ssh-keygen and an option that allows configuration checking
+without actually loading any private keys.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Zero-copy I/O for ublk, three different ways]]></title>
+        <id>https://lwn.net/Articles/926118/</id>
+        <link href="https://lwn.net/Articles/926118/"/>
+        <updated>2023-03-16T14:22:54.000Z</updated>
+        <summary type="html"><![CDATA[The ublk subsystem enables the creation of
+user-space block drivers that communicate with the kernel using io_uring.  Drivers implemented this way show
+some promise with regard to performance, but there is a bottleneck in the
+way: copying data between the kernel and the user-space driver's address
+space.  It is thus not surprising that there is interest in implementing
+zero-copy I/O for ublk.  The mailing lists have recently seen three
+different proposals for how this could be done.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Linux Kernel Networking Driver Development Impacted By Russian Sanctions]]></title>
+        <id>https://www.reddit.com/r/linux/comments/11sv7gc/linux_kernel_networking_driver_development/</id>
+        <link href="https://www.reddit.com/r/linux/comments/11sv7gc/linux_kernel_networking_driver_development/"/>
+        <updated>2023-03-16T14:08:38.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/ThinClientRevolution  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[As a DevOps, hope we share the same opinion]]></title>
+        <id>https://www.reddit.com/r/linux/comments/11sukjm/as_a_devops_hope_we_share_the_same_opinion/</id>
+        <link href="https://www.reddit.com/r/linux/comments/11sukjm/as_a_devops_hope_we_share_the_same_opinion/"/>
+        <updated>2023-03-16T13:43:48.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/neoneat  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ken Thompson reveals he is moving from macOS to Linux (Raspian) [video]]]></title>
+        <id>https://www.reddit.com/r/linux/comments/11ssras/ken_thompson_reveals_he_is_moving_from_macos_to/</id>
+        <link href="https://www.reddit.com/r/linux/comments/11ssras/ken_thompson_reveals_he_is_moving_from_macos_to/"/>
+        <updated>2023-03-16T12:29:30.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/j11g  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Thursday]]></title>
+        <id>https://lwn.net/Articles/926289/</id>
+        <link href="https://lwn.net/Articles/926289/"/>
+        <updated>2023-03-16T11:56:36.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (firefox-esr and pcre2), Oracle (nss), Red Hat (kpatch-patch and nss), SUSE (java-11-openjdk, kernel, and python310), and Ubuntu (emacs24, ffmpeg, firefox, imagemagick, libphp-phpmailer, librecad, and openjpeg2).]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[硬核观察 #942 Docker Hub 将删除所有没有付钱的开源组织的镜像]]></title>
+        <id>https://linux.cn/article-15632-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-15632-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2023-03-16T10:25:21.000Z</updated>
+        <summary type="html"><![CDATA[Docker Hub 将删除所有没有付钱的开源组织的镜像
+
+Docker 要求以“组织”名义开设账号的用户升级到付费的团队方案，每年 420 美元，否则其账号将被删除，其名下的 Docker 镜像也将被删除。Docker Hub 被很多开源项目用于发布镜像，许多项目依赖于这些免费的镜像，如果这些镜像被删除，意味这些免费用户的系统会崩溃。Docker 的 CTO 甚至说他们“将关闭那些不交钱的账户，并且不允许其他人接管这个名字”。此举引发了巨大争议，很多人开始将其镜像迁移出 Docker 转到其它平台或自行托管。
+
+
+消息来源：Alex Ellis
+
+
+
+老王点评：Docker 公司越来越背离开源，这不但解决不了其商业发展问题，而且是自绝其路。
+
+
+
+
+AI 棋手刺激人类棋手进步
+
+根据一项研究，在 DeepMind 的 AlphaGo 击败最强大的人类棋手之后，人类棋手通过与 AI 棋手对弈而取得了显著进步。研究人员使用了一种被称为“决策质量指数”（DQI）的指标，该指标用于评估一步棋的质量，如果没有尝试与之前的动作相结合，即认为一个动作是“新颖的”。分析发现，1950 年至 2015 年间，围棋水平的改善相对较小，年度 DQI 中值在 -0.2 至 0.2 之间波动。而在 2016 年后，DQI 跃升，2018 年至 2021 年间的中值超过 0.7。
+
+
+消息来源：《科学美国人》
+
+
+
+老王点评：这样看起来，在 AI 这条鲶鱼的威胁下，人类可能会被激发新潜力。
+
+
+
+
+勒索软件攻击已进入一个令人发指的新阶段
+
+今年 2 月，BlackCat 勒索团伙攻击了美国宾州的一个医生诊所，这次攻击涉及一个与放射肿瘤学治疗有关的病人照片系统。在被拒绝支付赎金后，勒索团伙威胁发布了三张癌症患者接受放疗的截图和七份包括患者信息的文件。还有一个例子是，另外一个勒索团伙公布了从一所学校窃取的样本数据，泄露的截图包括手写笔记的扫描件，其中描述了对侵犯的指控，以及参与该事件的男女学生的名字。
+
+
+消息来源：Ars Technica
+
+
+
+老王点评：作恶的人，没有底线并不值得惊讶。]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[新玩意 139｜少数派的编辑们最近买了啥？]]></title>
+        <id>https://sspai.com/post/78886</id>
+        <link href="https://sspai.com/post/78886"/>
+        <updated>2023-03-16T09:11:42.000Z</updated>
+        <summary type="html"><![CDATA[关于栏目很多读者都会好奇少数派的编辑们到底平时都「买了啥」。我们希望通过「编辑部的新玩意」介绍编辑部成员们最近在用的新奇产品，让他们自己来谈谈这些新玩意的使用体验究竟如何。内容声明：《新玩意》栏目如含 ...查看全文]]></summary>
+        <author>
+            <name>少数派编辑部</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon Linux 2023, a Cloud-Optimized Linux Distribution with Long-Term Support]]></title>
+        <id>https://www.reddit.com/r/linux/comments/11sortp/amazon_linux_2023_a_cloudoptimized_linux/</id>
+        <link href="https://www.reddit.com/r/linux/comments/11sortp/amazon_linux_2023_a_cloudoptimized_linux/"/>
+        <updated>2023-03-16T09:06:40.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/mariuz  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Faster JSON-RPC on Linux kernel 5.19+ with io_uring and simdjson]]></title>
+        <id>https://www.reddit.com/r/linux/comments/11so90t/faster_jsonrpc_on_linux_kernel_519_with_io_uring/</id>
+        <link href="https://www.reddit.com/r/linux/comments/11so90t/faster_jsonrpc_on_linux_kernel_519_with_io_uring/"/>
+        <updated>2023-03-16T08:35:04.000Z</updated>
+        <summary type="html"><![CDATA[There is plenty of networking libraries, but they hardly benefit from the newest and most remarkable features in the Linux kernel. Since kernel 5.19, several new io_uring calls are available to those avoiding system calls on the hot paths. We combined that with a bunch of SIMD-accelerated libraries and applied it to the most straightforward RPC protocol out there, open-sourcing a backend library for C and Python. The results are ridiculous, being much faster than gRPC and up to 100x faster than Python-native FastAPI, even with a single-threaded UJRPC server.
+  
+ Setup 🔁 Server Latency w 1 client Throughput w 32 clients 
+  
+ Fast API over REST ❌ 🐍 1'203 μs 3'184 rps 
+  Fast API over WebSocket ✅ 🐍 86 μs 11'356 rps ¹ 
+  gRPC ² ✅ 🐍 164 μs 9'849 rps 
+       
+  UJRPC with POSIX ❌ C 62 μs 79'000 rps 
+  UJRPC with io_uring ✅ 🐍 23 μs 43'000 rps 
+  UJRPC with io_uring ✅ C 22 μs 231'000 rps 
+ 
+ We invite everyone to check out our sources on GitHub and use UJRPC in your next application!
+  
+PS: We have a few more crazy Linux-oriented projects in our GitHub Unum-Cloud organization and we would appreciate a 🌟 😉
+  
+   submitted by    /u/ashvar  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[重置并非万无一失：设备转手前不能忽视的一件小事]]></title>
+        <id>https://sspai.com/post/66237</id>
+        <link href="https://sspai.com/post/66237"/>
+        <updated>2023-03-16T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[出售、赠送或折抵你的设备之前，别忘记彻底清除你的数据。查看全文]]></summary>
+        <author>
+            <name>广陵止息</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Anyone using ChatGPT for Linux? How reliable is it?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/11slbtz/anyone_using_chatgpt_for_linux_how_reliable_is_it/</id>
+        <link href="https://www.reddit.com/r/linux/comments/11slbtz/anyone_using_chatgpt_for_linux_how_reliable_is_it/"/>
+        <updated>2023-03-16T05:36:20.000Z</updated>
+        <summary type="html"><![CDATA[I'm still playing around with it, it knows a lot, but I don't know how much of the commands it generates are correct?
+ e.g. I asked - 'commands to install and configure zram, enable logs in ram, and move /tmp to ram' and got 
+ # Set up zram sudo sed -i 's/zram/#zram/' /etc/fstab # comment out any existing zram entries sudo tee -a /etc/fstab > /dev/null << EOT zram-config zramswap swappiness=100 EOT sudo reboot # reboot the system to activate zram # Enable logs in RAM sudo mkdir /var/log/journal # create directory for logs sudo systemd-tmpfiles --create --prefix /var/log/journal # create directory structure for persistent storage sudo systemctl restart systemd-journald # restart systemd-journald to activate changes # Move /tmp to RAM sudo tee -a /etc/fstab > /dev/null << EOT tmpfs /tmp tmpf…]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[李公明︱一周书记：“问题之书”中的“呼号”与……写书的人]]></title>
+        <id>https://www.thepaper.cn/newsDetail_forward_22309684</id>
+        <link href="https://www.thepaper.cn/newsDetail_forward_22309684"/>
+        <updated>2023-03-16T04:02:16.000Z</updated>
+        <summary type="html"><![CDATA[《问题之书（上下）》，[法]埃德蒙·雅贝斯，刘楠祺译，广西师范大学出版社/纯粹Pura，2020年12月版，1008页，172.00元
+
+阅读法国著名作家、思想家埃德蒙·雅贝斯（Edmond Jabès，1912-1991）的《问题之书》（原书名: Le Livre des questions，1963-1873；刘楠祺译，广西师范大学出版社，2020年12月），本身就是一个问题：上下两卷共一千多页的厚重之书，一部跨学科、跨文本、无中心、无边界、不属于任何文类但却包罗各种文类、词语在发声与沉默之间奔突、 页面上的印刷符号在虚空与紧密之间随意分布的文本，应该以什么方式打开？作者究竟是在对话还是自语？读起来究竟是话题太沉重还是思绪太轻盈？实际上还要考虑到在作者前后十余年的写作中，这部《问题之书》分五本先后出版，是前后总共十五卷的雅贝斯“问题之书系列”的前七卷，了解原书的这一写作与出版情况有助于我们以一种始终是流动的、不断完成和生长的目光来进入阅读。
+“如何阅读”本来不是什么问题，想怎么读就怎么读，但是这部“问题之书”确实首先会让读者思考“读”这个问题。美国诗人保罗·奥斯特（Paul Auster）1992年在其随笔集《饥饿的艺术》（L'Art de lafaim）中这样评价雅贝斯的独特文体：“既非小说，也非诗歌，既非文论，又非戏剧，但又是所有这些形式的混合体；文本自身作为一个整体，无尽地游移于人物和对话之间，在情感充溢的抒情、散文体的评论以及歌谣和格言间穿梭，好似整个文本系由各种碎片拼接而成，却又不时地回归到作者提出的中心问题上来，即如何言说不可言说者。这个问题，既是犹太人的燔祭，也是文学本身。雅贝斯以其傲人的想象力纵身一跃，令二者珠联璧合。”（《问题之书》下册，译后记，527页）话说得已经比较明白。但是读进去很快就会发现遇到的还不仅仅是作者的独特文体、文风问题，而是更有某种属…]]></summary>
+        <author>
+            <name>上海书评</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[高华鑫｜大江健三郎与他的“敌人”]]></title>
+        <id>https://www.thepaper.cn/newsDetail_forward_22307570</id>
+        <link href="https://www.thepaper.cn/newsDetail_forward_22307570"/>
+        <updated>2023-03-16T04:02:16.000Z</updated>
+        <summary type="html"><![CDATA[大江健三郎（1935.1.31－2023.3.3）
+
+2023年3月3日，日本作家大江健三郎先生离开了这个世界。
+大江先生不仅仅是日本第二位诺奖作家，或许也是“大写”的文学在日本最后的代表。这不是说在他之后再无杰出的作家，而是指“文学”本身在社会中的位置已经变了。读者不再有兴趣从几行字、几页纸里寻求整个地球的重量，作者也不再试图以几段故事、几个形象来通向全部历史的总体。这样的事业对人对己都是不折不扣的苦行。大江先生也许是日本最后一名坚定的苦行者。他的离去意味着什么，对每个关心日本文学现状的人，都是不得不思考的问题。尽管大江先生的毕生事业绝非三言两语可以概括，但作为一名从他的著作中受益良多的读者，我感到有义务在自己的脑海中试着勾勒这位大作家的“全体像”，以完成某种私人化的悼念。这样的描绘注定挂一漏万，不过或许可以成为对作家本人的文学方法的致敬。因为大江先生自己的创作中始终流露出这样一种信念：即使是最微小、最偶然、最琐碎的事物，也可以借助想象力的飞跃通向世界的“全体”。
+在1969年与作家高桥和巳的一次对谈中，大江先生提到，他的小说构思往往始于一个极度鲜明而并无确定意义的形象，继而像滚雪球一般膨胀起来。例如，最开始他心中可能只有这样一个场景：一个肥胖的男人，深夜在卧室里啃食油腻的猪蹄。而在建构自己心中的大江先生的“全体像”时，我不期然地遇到了一个同样强烈鲜明的印象，它来自小说《被偷换的孩子》：一个刚刚步入老年的男人，身材矮小但双肩颇宽，由于坚持体育锻炼，臂膀上的肌肉仍然结实——这男人蹲在厨房的地面上，艰难地宰杀一只硕大的甲鱼。由于未曾亲眼见过大江先生，每次想象他的面貌时，我的思绪都会回到这个奇怪的原点。正如大江先生后期的许多其他作品一样，这部小说的主人公也是“长江古义人”，他身上带有作家本人的影子。但是，这个场面之所以令人难以忘怀，毋宁说是由于作者的灵魂似乎在此分裂开来，一半在…]]></summary>
+        <author>
+            <name>上海书评</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[上新、秒杀、折扣、满赠，付费栏目开启十一周年大促]]></title>
+        <id>https://sspai.com/post/78875</id>
+        <link href="https://sspai.com/post/78875"/>
+        <updated>2023-03-16T03:30:00.000Z</updated>
+        <summary type="html"><![CDATA[⏰活动时间：即日起-3月19日🎁活动内容：重磅上新：《学得会的快捷指令》栏目上架，带你零基础入门苹果效率魔法；限时秒杀：6款热门栏目冰点价秒杀，先下单先赚到，每日9点更新；极限折扣：全场最低5折起，领 ...查看全文]]></summary>
+        <author>
+            <name>数字工具组</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Transmission 4.0.2 has been released with another round of bugfixes per a faster release schedule]]></title>
+        <id>https://www.reddit.com/r/linux/comments/11si9ue/transmission_402_has_been_released_with_another/</id>
+        <link href="https://www.reddit.com/r/linux/comments/11si9ue/transmission_402_has_been_released_with_another/"/>
+        <updated>2023-03-16T03:01:01.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/foundfootagefan  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] LWN.net Weekly Edition for March 16, 2023]]></title>
+        <id>https://lwn.net/Articles/925724/</id>
+        <link href="https://lwn.net/Articles/925724/"/>
+        <updated>2023-03-16T02:16:30.000Z</updated>
+        <summary type="html"><![CDATA[The LWN.net Weekly Edition for March 16, 2023 is available.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[eko/gocache: ☔️ 一个完整的 Go 缓存库，为您带来多种管理缓存的方式]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/1a5a2b3739782809396970e9ca19fcf533f812fc</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/1a5a2b3739782809396970e9ca19fcf533f812fc"/>
+        <updated>2023-03-16T01:39:32.000Z</updated>
+        <summary type="html"><![CDATA[eko/gocache: ☔️ 一个完整的 Go 缓存库，为您带来多种管理缓存的方式]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[jpillora/overseer: Go (golang) 中的可监控、优雅重启、自升级二进制文件]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/1055c837ad749fbc2ec72419e10f7eb41270571a</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/1055c837ad749fbc2ec72419e10f7eb41270571a"/>
+        <updated>2023-03-16T01:38:48.000Z</updated>
+        <summary type="html"><![CDATA[jpillora/overseer: Go (golang) 中的可监控、优雅重启、自升级二进制文件]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[devoption/codexa: Codexa 是一个使用 Laravel 框架构建的文档系统]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/1eb91a7959b61c8621b21281b0210d3a2c4acb20</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/1eb91a7959b61c8621b21281b0210d3a2c4acb20"/>
+        <updated>2023-03-16T01:38:12.000Z</updated>
+        <summary type="html"><![CDATA[devoption/codexa: Codexa 是一个使用 Laravel 框架构建的文档系统]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[TimoKoerber/laravel-one-time-operations: 部署后运行一次操作 - 就像迁移一样！]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/94f920356f228731d53245a78a66846ff7000979</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/94f920356f228731d53245a78a66846ff7000979"/>
+        <updated>2023-03-16T01:37:35.000Z</updated>
+        <summary type="html"><![CDATA[TimoKoerber/laravel-one-time-operations: 部署后运行一次操作 - 就像迁移一样！]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[rawilk/laravel-settings: 将 Laravel 应用程序设置存储在数据库中。]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/6a3a98b92ad4f41e0308b9b68af98620e40225c0</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/6a3a98b92ad4f41e0308b9b68af98620e40225c0"/>
+        <updated>2023-03-16T01:36:39.000Z</updated>
+        <summary type="html"><![CDATA[rawilk/laravel-settings: 将 Laravel 应用程序设置存储在数据库中。]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[世界上只有两个 Linux 发行版：Arch Linux 与其它]]></title>
+        <id>https://linux.cn/article-15631-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-15631-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2023-03-16T01:16:00.000Z</updated>
+        <summary type="html"><![CDATA[如果你打算把 Arch Linux 作为日常用机，你应该考虑一下 Arch Linux 与其他发行版的不同优点。下面是一个快速比较。
+
+
+如果你考虑改用 Linux，你会接触到数百个 Linux 发行版。每个 Linux 发行版都有其独特的功能、优势和劣势。
+
+它们为用户提供了独特的功能、工具和界面的选择，以满足不同的需求。如果你想和 Arch Linux 进行比较，选择合适的 Linux 发行版，这可能会让人不知所措。
+
+在这篇文章中，我将重点介绍 Arch Linux，它是最受欢迎的 Linux 发行版之一，并将它与其他流行的 Linux 发行版进行比较。
+
+关于 Arch Linux 的一些说明
+
+Arch Linux 是一个轻量级和高度可定制的 Linux 发行版，最初发布于 2002 年。与其他流行的发行版不同，Arch Linux 是一个简约的发行版，采用自己动手（DIY）的方式。它是为中高级 Linux 用户设计的，他们喜欢控制和灵活性而不是易用性。
+
+Arch Linux 遵循滚动发布模式，这意味着你可以经常用最新的软件包更新你的系统。
+
+Arch Linux 的优点
+
+Arch Linux 有很多优点。然而，一个发行版到底好不好取决于你的使用情况或品味。这因人而异。但在我看来，Arch Linux 比其他 Linux 发行版有几个优势，比如：
+
+
+轻量级和快速（原装版的 Arch，尤其是带有 Xfce 桌面的）
+
+灵活性和定制化
+
+最新的软件包
+
+可靠和稳定（如果正确使用和维护的话）
+
+通过 Arch 用户仓库Arch User Repository（AUR）收集最广泛的软件包
+
+通过测试软件仓库和安装提供开发包
+
+
+现在，让我们简单了解一下主要和流行的 Linux 发行版。
+
+其他主要发行版的简要概述
+
+Ubunt…]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[派早报：多邻国推出基于 GPT 的订阅服务、flomo 拟收购幕布等]]></title>
+        <id>https://sspai.com/post/78880</id>
+        <link href="https://sspai.com/post/78880"/>
+        <updated>2023-03-16T00:42:29.000Z</updated>
+        <summary type="html"><![CDATA[群晖推出 DiskStation DS423+、网络空间安全协会公布 App 个人信息收集情况等。查看全文]]></summary>
+        <author>
+            <name>少数派编辑部</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[BlindAI API: An open-source and privacy-first OpenAI alternative]]></title>
         <id>https://news.ycombinator.com/item?id=35175973</id>
@@ -21542,695 +22450,6 @@ browsers and GPU sandboxing on Windows systems.]]></summary>
 老王点评：不重要，但这是一个时代落幕的里程碑之一。]]></summary>
         <author>
             <name>linux@linux.cn (linux)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[跟着我们的新指南学习开发 WebAssembly]]></title>
-        <id>https://linux.cn/article-15541-1.html?utm_source=rss&amp;utm_medium=rss</id>
-        <link href="https://linux.cn/article-15541-1.html?utm_source=rss&amp;utm_medium=rss"/>
-        <updated>2023-02-15T12:40:36.000Z</updated>
-        <summary type="html"><![CDATA[使用 WebAssembly 开发有很多不同的方向，这取决于你已经知道的东西和你想建立的东西。
-
-
-在过去的几十年里，Web 浏览器作为最流行的跨平台应用经久不衰。从另一个角度看浏览器，它是最受欢迎的应用交付平台之一。想想你使用的所有网站，它们取代了你过去用桌面上运行的软件进行的活动。你仍然在使用软件，但你是通过浏览器来访问它，而且是在别人的 Linux 服务器上运行。在优化我们所有人使用的软件的永恒努力中，软件开发世界早在 2019 年就引入了 WebAssembly，作为通过 Web 浏览器运行编译代码的一种方式。应用的性能比以往任何时候都要好，而且可以生成 WebAssembly 编码的语言远不只是通常的 PHP、Python 和 JavaScript。
-
-一个目标和一种语言
-
-关于 WebAssembly 的一个强大但也最令人困惑的地方是，“WebAssembly” 这个词既指一种语言，也指一个目标。WebAssembly 是一种汇编语言，但没有多少人选择直接用汇编写代码。即使是汇编语言，最终也会被转换为二进制格式，这也是计算机运行代码的要求。这种二进制格式也被称为 WebAssembly。不过这很好，因为这意味着你可以用你选择的语言来写一些最终以 WebAssembly 交付的东西，包括 C、C++、Rust、Javascript 和其他许多语言。
-
-进入 WebAssembly 的途径是 Emscripten，这是一个 LLVM 编译器工具链，可以从你的代码中产生 WebAssembly。
-
-安装 Emscripten
-
-要在你的 Linux 或 macOS 电脑上安装 Emscripten，请使用 Git：
-
-$ git clone https://github.com/emscripten-core/emsdk.git
-
-
-改变目录进入 emsdk 目录并运行安装命令:
-
-$ ./emsdk install latest
-$ ./emsdk activate latest
-
-
-Emscripten 工具链中的所有内容都安装在 emsdk 目录下，对系统的其他部分没有影响。由于这个原因，在使用 emsdk 之前，你必须 源引source 它的环境：
-
-$ source ./emsdk_env.sh
-
-
-如果你打算经常使用 emsdk，你也可以在 .bashrc 中加入环境设置脚本。
-
-要在 Windows 上安装 Emscripten，你可以在 WSL 环境下运行 Linux。
-
-请访问 Emscripten 网站 了解更多安装信息。
-
-Hello World
-
-下面是一个用 C++ 编写的简单的 “Hello World” 应用。
-
-#include <iostream>
-
-using namespace std;
-
-int main() {
-    cout << "Hello world";
-    return 0;
-}
-
-
-先把它作为你的系统的标准二进制文件来测试：
-
-$ g++ hello.cpp -o world
-$ ./world
-Hello world
-
-
-看到它像预期的那样工作，用 emcc 把它构建为 WebAssembly：
-
-$ emcc hello.cpp -o world.html
-
-
-最后，用 emrun 运行它：
-
-$ emrun ./world.html
-
-
-emrun 工具是一个用于本地测试的方便命令。当你在服务器上托管你的应用时，emrun 就没有必要了。
-
-学习更多关于 WebAssembly 的知识
-
-使用 WebAssembly 开发可以有很多不同的方向，这取决于你已经知道的东西和你想建立的东西。如果你了解 C 或 C++，那么你可以用这些来写你的项目。如果你正在学习 Rust，那么你可以使用 Rust。甚至 Python 代码也可以使用 Pyodide 模块来作为 WebAssembly 运行。你有很多选择，而且没有错误的开始方式（甚至有 COBOL 到 WebAssembly 的编译器）。如果你渴望开始使用 WebAssembly，
-
-
-请下载我们免费的电子书
-
-
-
-via: https://opensource.com/article/23/2/webassembly-guide
-
-作者：Seth Kenlon 选题：lkxed 译者：geekpi 校对：wxy
-
-本文由 LCTT 原创编译，Linux中国 荣誉推出]]></summary>
-        <author>
-            <name>linux@linux.cn (linux)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Linux Looks To Retire Itanium/IA64 Support - Phoronix]]></title>
-        <id>https://www.reddit.com/r/linux/comments/112x055/linux_looks_to_retire_itaniumia64_support_phoronix/</id>
-        <link href="https://www.reddit.com/r/linux/comments/112x055/linux_looks_to_retire_itaniumia64_support_phoronix/"/>
-        <updated>2023-02-15T12:35:07.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/tuxfan77  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[家用咖啡手册 01 |  咖啡种类这么多，到底有什么不同？]]></title>
-        <id>https://sspai.com/post/78230</id>
-        <link href="https://sspai.com/post/78230"/>
-        <updated>2023-02-15T09:30:25.000Z</updated>
-        <summary type="html"><![CDATA[前不久，刚刚完成了与咖啡豆相关的《咖啡地图》系列，感兴趣的朋友们可以先去了解一下咖啡产地背后的故事。这次准备开一个新系列。新系列我命名为《家用咖啡手册》，我觉得比较符合以下几类朋友参考，应该会帮助你解 ...查看全文]]></summary>
-        <author>
-            <name>老林还年少</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[正确认识、高效利用：如何成为 ChatGPT 的受益者？]]></title>
-        <id>https://sspai.com/post/78289</id>
-        <link href="https://sspai.com/post/78289"/>
-        <updated>2023-02-15T08:08:36.000Z</updated>
-        <summary type="html"><![CDATA[你觉得 ChatGPT 毫无新意难堪大用，可能会错失竞争优势；你觉得 ChatGPT 无所不能，也会癫狂而后深深失望。查看全文]]></summary>
-        <author>
-            <name>玉树芝兰</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[放过微信放过自己，跨设备传文件还有这些姿势]]></title>
-        <id>https://sspai.com/post/78334</id>
-        <link href="https://sspai.com/post/78334"/>
-        <updated>2023-02-15T06:32:13.000Z</updated>
-        <summary type="html"><![CDATA[至少从桌前的本地传输开始，我们可以真正的「不将就」一次，让专门的软件来做专业的事。查看全文]]></summary>
-        <author>
-            <name>PostMeridy</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[陆建德｜万航渡口夕阳斜——《师竹斋诗草》中的人与事]]></title>
-        <id>https://www.thepaper.cn/newsDetail_forward_21922968</id>
-        <link href="https://www.thepaper.cn/newsDetail_forward_21922968"/>
-        <updated>2023-02-15T05:02:09.000Z</updated>
-        <summary type="html"><![CDATA[笔者有一册薄薄的《师竹斋诗草》（以下简称《诗草》），无书衣和牌记，共二十六叶，其中“序”两叶，“题词”一叶。社科院文学所的同事郭道平博士在网上搜索一番后告知，此书未见国内图书馆收藏，或为“海内孤本”。《诗草》是三十二开的机制有光纸线装石印本，手写软体字，大概是百年前自费印行的。近一百五十篇诗作按创作时间排列，首末两首作于甲申（1884年）和辛酉（1921年）。作者署名“古吴李文明毓兰”（以下称李文明），曾是上海圣约翰大学国文教师，与他唱和的人士大都是同校的教员和校友，其中不乏颇有名气者，如上海《寓言报》主编、书画家、《万国通史》合译者之一曹曾涵（字恂卿）。这一群体少年时习举子业，功名蹭蹬，未能在传统意义上扬名于世。但是他们在中国现代化最关键的发源地见证并参与了新式教育，即使有点边缘，还是很可敬佩的。《诗草》反映出不少清末民初上海和苏南的人文地理景观，也算是沪宁地区的乡邦文献。出版前，李文明为方便读者在诗行中夹了不少很有用的自注。
-
-《师竹斋诗草》，作者署名“古吴李文明毓兰”
-
-“序”作者分别为青浦徐可均桐君、嘉定王焘曾彦生和上海潘绅书卿，前两位“共事约翰已近十年”。他们比作者小一辈，应邀作序时（应在上世纪二十年代初）李文明早已从圣约翰退休。徐可均在“序”中写道：“毓兰仁丈先生家金陵，红羊后入籍元和。今则卜筑沪上有年。其哲嗣墨西（按：李文明长子李翰绶字墨西）及其弟砚南均毕业于约翰大学，为文科学士，女公子翰娟亦毕业于玛丽亚女学，皆克自树立，有以博堂上欢。晨昏之奉，甘旨之供，罔不备至。岁时伏腊，辄闻其设家宴，烹羊煲羔，以斗酒为老人寿。先生故善饮，顾而乐之，每为浮一大白。”李文明本是金陵人，“红羊后入籍元和”。清代有元和县署，位于今天的苏州元和路。“红羊”也称“红羊劫”，在此指洪秀全、杨秀清率领的太平天国军队1853年春杀入江宁。照传统说法，丙午丁未年必有大灾大难，故有“丙午丁未之…]]></summary>
-        <author>
-            <name>上海书评</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[OpenAI CEO：ChatGPT不是人类的“就业杀手”]]></title>
-        <id>https://www.williamlong.info/archives/7084.html</id>
-        <link href="https://www.williamlong.info/archives/7084.html"/>
-        <updated>2023-02-15T04:23:45.000Z</updated>
-        <summary type="html"><![CDATA[2月15日晚间消息，据报道，OpenAI CEO萨姆·奥特曼（Sam Altman）今日安抚外界的担忧，称人工智能聊天机器人ChatGPT不会成为人类的“就业杀手”。ChatGPT是由OpenAI研发的一款人工智能聊天机器人，一经推出就迅速成为了全球关注的焦点。在短短两个多月的时间里，积累了1亿多用户。
-
-
-多年来，特斯拉CEO埃隆·马斯克（Elon Musk）一直警告我们，称人工智能总有一天会超越人类。2020年，马斯克表示，人工智能有可能在五年内超越人类。如今看来，这一天可能会比我们想象的更早到来，这还要归功于ChatGPT。
-
-
-业内人士称，ChatGPT将成为十年来最具颠覆性的技术，使几乎所有工作岗位都面临被机器人取代的风险。在短短几周的时间内，ChatGPT就已经通过了医疗、法律和商业专业的入学和毕业考试，同时还能以莎士比亚的风格写散文和诗歌。
-
-
-有测试用户称，ChatGPT在客户支持、创建培训文档、制定企业战略、编写故障排除指南等诸多方面的表现也非常出色。通过使用大数据集进行训练，ChatGPT模仿人类智慧的能力，只会随着时间的推移而变得更加强大。
-
-
-面对社会上的激烈辩论，OpenAI CEO奥特曼试图安抚人们的担忧，称ChatGPT和其他类似的机器人，将使人类变得更加自由。在这一过程中，还会让一些人获得经济收益。奥特曼说：“我认为，人工智能将成为经济赋权的最大力量，也是许多人致富的最大力量。”
-
-
-显然，并不是所有人都同意奥特曼的这一乐观“推销”。研究公司Creative Strategy首席分析师奥利维尔·布兰查德（Olivier Blanchard）认为：“人工智能也可能是我们在有生之年被剥夺公民权利的最大力量。”例如，人类可能突然就被淘汰了，或者慢慢地被大规模淘汰。
-
-
-2017年底，马斯克曾表示，短期内人工智能最直接的威胁是取代人类工作。在未来20年，驾驶人员的工作将被人工智能所颠覆。之后，全球12%至15%的劳动力将因为人工智能而失业。
-
-
-马斯克还认为，人类将来需要与机器相结合，成为一种“半机械人”，从而避免在人工智能时代被淘汰。为此，马斯克还专门成立一家人工智能创业公司Neuralink，研究人机接口。
-
-
-苹果公司联合创始人史蒂夫·沃兹尼亚克（Steve Wozniak）上周曾表示，ChatGPT确实令人印象深刻，但它也可能犯下一些可怕的错误，因为它不懂得人性。
-
-
-稿源：新浪网]]></summary>
-        <author>
-            <name>user@gmail.com (guest)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[年度征文 | 把阅读作为方法：从选书到笔记的经验分享]]></title>
-        <id>https://sspai.com/post/78133</id>
-        <link href="https://sspai.com/post/78133"/>
-        <updated>2023-02-15T03:34:58.000Z</updated>
-        <summary type="html"><![CDATA[我想，每个人或许总会在某个时刻遇到类似的情况：有一个很感兴趣的事情，有一个困扰你的问题，然而网上的答案不能让你满意，周围也没有合适的伙伴来讨论。但是还有书籍。查看全文]]></summary>
-        <author>
-            <name>yuchen_lea</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[mtlynch/picoshare: 用于共享图像和其他文件的极简主义、易于托管的服务]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/0f2ef5ebad14f229e09733ccdda87caad93df624</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/0f2ef5ebad14f229e09733ccdda87caad93df624"/>
-        <updated>2023-02-15T01:40:32.000Z</updated>
-        <summary type="html"><![CDATA[mtlynch/picoshare: 用于共享图像和其他文件的极简主义、易于托管的服务]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[minio/selfupdate: 构建自我更新的 Go 程序]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/50be19ce3fddec64bceb38d57d8bb3dfb229ea68</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/50be19ce3fddec64bceb38d57d8bb3dfb229ea68"/>
-        <updated>2023-02-15T01:40:06.000Z</updated>
-        <summary type="html"><![CDATA[minio/selfupdate: 构建自我更新的 Go 程序]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[wagslane/go-rabbitmq: 提供重新连接逻辑和合理默认值的 streadway/amqp 包装器]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/4f52c31ae3c5834295c92b8ea102e89bdf214668</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/4f52c31ae3c5834295c92b8ea102e89bdf214668"/>
-        <updated>2023-02-15T01:39:47.000Z</updated>
-        <summary type="html"><![CDATA[wagslane/go-rabbitmq: 提供重新连接逻辑和合理默认值的 streadway/amqp 包装器]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[zdharma-continuum/fast-syntax-highlighting: ZSH 的功能丰富的语法突出显示]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/2e9c8bd7f60e6a9bfeda368455b21e1305fd99e5</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/2e9c8bd7f60e6a9bfeda368455b21e1305fd99e5"/>
-        <updated>2023-02-15T01:38:00.000Z</updated>
-        <summary type="html"><![CDATA[zdharma-continuum/fast-syntax-highlighting: ZSH 的功能丰富的语法突出显示]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[llychao/m3u8-downloader: 一个M3U8 视频下载(M3U8 downloader)工具。]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/055042c93fbcda9f235bc7e564f151ac8cb899a0</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/055042c93fbcda9f235bc7e564f151ac8cb899a0"/>
-        <updated>2023-02-15T01:36:51.000Z</updated>
-        <summary type="html"><![CDATA[llychao/m3u8-downloader: 一个M3U8 视频下载(M3U8 downloader)工具。]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[派早报：三星 Galaxy S23 系列国行版发布、特斯拉京东官方旗舰店上线等]]></title>
-        <id>https://sspai.com/post/78328</id>
-        <link href="https://sspai.com/post/78328"/>
-        <updated>2023-02-15T01:07:06.000Z</updated>
-        <summary type="html"><![CDATA[Google 面向 Android 设备推出「隐私沙盒」测试版，三星宣布与 Natural Cycles 合作等。查看全文]]></summary>
-        <author>
-            <name>少数派编辑部</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Berkshire dumps shares in TSMC, banks; increases Apple stake]]></title>
-        <id>https://news.ycombinator.com/item?id=34798408</id>
-        <link href="https://www.reuters.com/business/buffetts-berkshire-reduces-stake-activision-blizzard-2023-02-14/"/>
-        <updated>2023-02-15T00:37:23.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.reuters.com/business/buffetts-berkshire-reduces-stake-activision-blizzard-2023-02-14/
-Comments URL: https://news.ycombinator.com/item?id=34798408
-Points: 17
-# Comments: 5]]></summary>
-        <author>
-            <name>mfiguiere</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[SkillzTruth - Proof of concept demonstrating how to cheat on Skillz apps]]></title>
-        <id>https://news.ycombinator.com/item?id=34798018</id>
-        <link href="https://www.skillztruth.com/"/>
-        <updated>2023-02-14T23:55:39.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.skillztruth.com/
-Comments URL: https://news.ycombinator.com/item?id=34798018
-Points: 133
-# Comments: 33]]></summary>
-        <author>
-            <name>brianhama</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[What if we had a shared pool of donations for open source projects?]]></title>
-        <id>https://www.reddit.com/r/linux/comments/112j7y2/what_if_we_had_a_shared_pool_of_donations_for/</id>
-        <link href="https://www.reddit.com/r/linux/comments/112j7y2/what_if_we_had_a_shared_pool_of_donations_for/"/>
-        <updated>2023-02-14T23:18:25.000Z</updated>
-        <summary type="html"><![CDATA[I feel like there should be a collective fund for all the open source projects we love to join, then even if 10% of users donated just a dollar a month, every project would have a life-changing amount of funding, kind of like open-sats but for all software, not just crypto software (not a crypto shill, but the Linux Unplugged podcast LOVES Bitcoin and hates everything else crypto for the same reasons you do) It's a lot cheaper and easier to donate $1 to one thing than $1 to many things. It seems weird to me that this isn't a thing. I feel like if people just donated even a dollar a month to something like that it could make some big change. But what are you guys think? Do you think something like that would make sense? Do you think we should make an effort to create something like that?
-    submitted by    /u/Indolent_Bard  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Dis This: Disassemble Python code online]]></title>
-        <id>https://news.ycombinator.com/item?id=34797620</id>
-        <link href="http://blog.pamelafox.org/2023/02/dis-this-disassemble-python-code-online.html"/>
-        <updated>2023-02-14T23:16:12.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: http://blog.pamelafox.org/2023/02/dis-this-disassemble-python-code-online.html
-Comments URL: https://news.ycombinator.com/item?id=34797620
-Points: 14
-# Comments: 3]]></summary>
-        <author>
-            <name>ingve</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Saving Energy: Home Server That Automatically Suspends to RAM and Wakes Up Again]]></title>
-        <id>https://news.ycombinator.com/item?id=34797592</id>
-        <link href="https://maximiliangolla.com/blog/2022-10-wol-plex-server/"/>
-        <updated>2023-02-14T23:13:26.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://maximiliangolla.com/blog/2022-10-wol-plex-server/
-Comments URL: https://news.ycombinator.com/item?id=34797592
-Points: 19
-# Comments: 3]]></summary>
-        <author>
-            <name>root5</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[EU Parliament confirms 2035 ban on new petrol and diesel cars]]></title>
-        <id>https://news.ycombinator.com/item?id=34797524</id>
-        <link href="https://www.autocar.co.uk/car-news/new-cars/eu-parliament-confirms-2035-ban-new-petrol-and-diesel-cars"/>
-        <updated>2023-02-14T23:06:56.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.autocar.co.uk/car-news/new-cars/eu-parliament-confirms-2035-ban-new-petrol-and-diesel-cars
-Comments URL: https://news.ycombinator.com/item?id=34797524
-Points: 21
-# Comments: 14]]></summary>
-        <author>
-            <name>clouddrover</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Is it legal to make a distribution with a proprietary user interface?]]></title>
-        <id>https://www.reddit.com/r/linux/comments/112i5zv/is_it_legal_to_make_a_distribution_with_a/</id>
-        <link href="https://www.reddit.com/r/linux/comments/112i5zv/is_it_legal_to_make_a_distribution_with_a/"/>
-        <updated>2023-02-14T22:32:22.000Z</updated>
-        <summary type="html"><![CDATA[I feel like the answer to this would be yes, but I'm not sure.
- Of course doing something like distributing a proprietary fork of a GPLv3ed package is illegal, but can I make a distribution, say a Debian fork, where I ship a proprietary user interface? I think this is legal because most distributions ship proprietary software (most distributions ship linux-libre as opposed to upstream linux for example).
-    submitted by    /u/rafulafu  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[What Is ChatGPT Doing and Why Does It Work?]]></title>
-        <id>https://news.ycombinator.com/item?id=34796611</id>
-        <link href="https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/"/>
-        <updated>2023-02-14T21:48:59.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/
-Comments URL: https://news.ycombinator.com/item?id=34796611
-Points: 181
-# Comments: 73]]></summary>
-        <author>
-            <name>washedup</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Alovoa is now on Flathub!]]></title>
-        <id>https://www.reddit.com/r/linux/comments/112gsyf/alovoa_is_now_on_flathub/</id>
-        <link href="https://www.reddit.com/r/linux/comments/112gsyf/alovoa_is_now_on_flathub/"/>
-        <updated>2023-02-14T21:33:58.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/Nonononoki  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The Case for Frameworks]]></title>
-        <id>https://news.ycombinator.com/item?id=34796277</id>
-        <link href="https://seldo.com/posts/the_case_for_frameworks"/>
-        <updated>2023-02-14T21:26:39.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://seldo.com/posts/the_case_for_frameworks
-Comments URL: https://news.ycombinator.com/item?id=34796277
-Points: 53
-# Comments: 20]]></summary>
-        <author>
-            <name>jacobr</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Compact holographic sound fields enable rapid one-step assembly of matter in 3D]]></title>
-        <id>https://news.ycombinator.com/item?id=34795527</id>
-        <link href="https://www.science.org/doi/10.1126/sciadv.adf6182"/>
-        <updated>2023-02-14T20:32:35.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.science.org/doi/10.1126/sciadv.adf6182
-Comments URL: https://news.ycombinator.com/item?id=34795527
-Points: 165
-# Comments: 31]]></summary>
-        <author>
-            <name>taubek</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Show HN: I built a little online drum machine using 808 style samples]]></title>
-        <id>https://news.ycombinator.com/item?id=34795155</id>
-        <link href="https://peel.fm/"/>
-        <updated>2023-02-14T20:04:12.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://peel.fm
-Comments URL: https://news.ycombinator.com/item?id=34795155
-Points: 165
-# Comments: 55]]></summary>
-        <author>
-            <name>berkcebi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] An overview of single-purpose Linux distributions]]></title>
-        <id>https://lwn.net/Articles/922968/</id>
-        <link href="https://lwn.net/Articles/922968/"/>
-        <updated>2023-02-14T20:00:47.000Z</updated>
-        <summary type="html"><![CDATA[Many people, when they are installing a Linux distribution for a single
-purpose such as 
-running containers, would prefer an install-and-forget
-type of deployment. At FOSDEM 2023 in Brussels, several
-projects of this minimal Linux distribution type were presented. Fedora
-CoreOS, Ubuntu Core, openSUSE MicroOS, and Bottlerocket OS
-all tackle this problem in their own way. The talks at FOSDEM gave an
-interesting overview of how these projects differ in their approaches.]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Two stable kernels — and maybe a third]]></title>
-        <id>https://lwn.net/Articles/923306/</id>
-        <link href="https://lwn.net/Articles/923306/"/>
-        <updated>2023-02-14T19:06:46.000Z</updated>
-        <summary type="html"><![CDATA[The
-6.1.12 and
-5.15.94
-stable kernel updates have been released, each with the usual set of
-important fixes. There is also a 5.10.168 release in the works, but it ran
-into some snags in the
-review process; it can be expected shortly.
-
-Another set of updates, containing the mitigations for the just-disclosed
-cross-thread
-return-address prediction vulnerability (yet another Spectre variant
-that affects AMD processors), can be expected soon.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Disinfection with Far-UV (222 nm Ultraviolet light) (2020) [pdf]]]></title>
-        <id>https://news.ycombinator.com/item?id=34794273</id>
-        <link href="https://www.boeing.com/confident-travel/downloads/CAP-3_Disinfection_with_Far-UV.pdf"/>
-        <updated>2023-02-14T19:02:01.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.boeing.com/confident-travel/downloads/CAP-3_Disinfection_with_Far-UV.pdf
-Comments URL: https://news.ycombinator.com/item?id=34794273
-Points: 82
-# Comments: 83]]></summary>
-        <author>
-            <name>deegles</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[SS United States, the fastest passenger liner ever built]]></title>
-        <id>https://news.ycombinator.com/item?id=34794144</id>
-        <link href="https://lflank.wordpress.com/2023/02/14/ss-united-states/"/>
-        <updated>2023-02-14T18:54:38.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://lflank.wordpress.com/2023/02/14/ss-united-states/
-Comments URL: https://news.ycombinator.com/item?id=34794144
-Points: 74
-# Comments: 44]]></summary>
-        <author>
-            <name>dxs</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[WebContainer API]]></title>
-        <id>https://news.ycombinator.com/item?id=34793858</id>
-        <link href="https://webcontainers.io/"/>
-        <updated>2023-02-14T18:35:03.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://webcontainers.io/
-Comments URL: https://news.ycombinator.com/item?id=34793858
-Points: 58
-# Comments: 17]]></summary>
-        <author>
-            <name>mingw__</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Build your own fast, persistent KV store]]></title>
-        <id>https://news.ycombinator.com/item?id=34793714</id>
-        <link href="https://dinesh.wiki/posts/build-your-own-persistent-kv-store/"/>
-        <updated>2023-02-14T18:27:08.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://dinesh.wiki/posts/build-your-own-persistent-kv-store/
-Comments URL: https://news.ycombinator.com/item?id=34793714
-Points: 104
-# Comments: 19]]></summary>
-        <author>
-            <name>dineshgowda24</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Firefox 110.0 released]]></title>
-        <id>https://www.reddit.com/r/linux/comments/112c3ne/firefox_1100_released/</id>
-        <link href="https://www.reddit.com/r/linux/comments/112c3ne/firefox_1100_released/"/>
-        <updated>2023-02-14T18:15:36.000Z</updated>
-        <summary type="html"><![CDATA[https://www.mozilla.org/firefox/110.0/releasenotes/
- ​
- Version 110.0, first offered to Release channel users on February 14, 2023
- ​
- New:
- ​
-  
-It's now possible to import bookmarks, history and passwords not only from Edge, Chrome or Safari but also from Opera, Opera GX, and Vivaldi for all the folks who want to move over to Firefox instead!
- GPU sandboxing has been enabled on Windows.
- Note: A bug in the popular X-Mouse Button Control (XMBC) tool may cause mouse wheel scrolling to stop working. The author(s) are working on an update. Meanwhile, scrolling can be restored by reconfiguring XMBC: either disable the Make scroll wheel scroll window under cursor option in the global settings, or enable the Disable scroll window under cursor option if using a custom profile for Firefox.
- On Wi…]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TurboTLS: TLS connection establishment with 1 less round trip]]></title>
-        <id>https://news.ycombinator.com/item?id=34793411</id>
-        <link href="https://arxiv.org/abs/2302.05311"/>
-        <updated>2023-02-14T18:10:04.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://arxiv.org/abs/2302.05311
-Comments URL: https://news.ycombinator.com/item?id=34793411
-Points: 84
-# Comments: 32]]></summary>
-        <author>
-            <name>yuedongze</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How Spotify's podcast bet went wrong]]></title>
-        <id>https://news.ycombinator.com/item?id=34793116</id>
-        <link href="https://www.semafor.com/article/02/12/2023/how-spotifys-podcast-bet-went-wrong"/>
-        <updated>2023-02-14T17:53:35.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.semafor.com/article/02/12/2023/how-spotifys-podcast-bet-went-wrong
-Comments URL: https://news.ycombinator.com/item?id=34793116
-Points: 190
-# Comments: 301]]></summary>
-        <author>
-            <name>lxm</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Boom is out! 5.27 Summary review]]></title>
-        <id>https://www.reddit.com/r/linux/comments/112b9i1/boom_is_out_527_summary_review/</id>
-        <link href="https://www.reddit.com/r/linux/comments/112b9i1/boom_is_out_527_summary_review/"/>
-        <updated>2023-02-14T17:40:38.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/oker_braus  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The art of the shadow: How painters have gotten it wrong for centuries]]></title>
-        <id>https://news.ycombinator.com/item?id=34792916</id>
-        <link href="https://thereader.mitpress.mit.edu/the-art-of-the-shadow-how-painters-have-gotten-it-wrong-for-centuries/"/>
-        <updated>2023-02-14T17:38:18.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://thereader.mitpress.mit.edu/the-art-of-the-shadow-how-painters-have-gotten-it-wrong-for-centuries/
-Comments URL: https://news.ycombinator.com/item?id=34792916
-Points: 145
-# Comments: 48]]></summary>
-        <author>
-            <name>webmaven</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[We should encourage people who want to switch to linux but can't to spoof their user agent to contribute to linux marketshare!]]></title>
-        <id>https://www.reddit.com/r/linux/comments/1129xkm/we_should_encourage_people_who_want_to_switch_to/</id>
-        <link href="https://www.reddit.com/r/linux/comments/1129xkm/we_should_encourage_people_who_want_to_switch_to/"/>
-        <updated>2023-02-14T16:45:02.000Z</updated>
-        <summary type="html"><![CDATA[Many people who want so switch to linux cant. However, we all still want to contribute to Linux marketshare. So even if somebody cant switch to linux, they can still support its growth by spoofing their user agent to make it look like they use linux! And we linux users should also avoid spoofing our user agents, or at least the OS. All the pther stuff we can spoof. That way we can incentivize devs to port to linux and further bridge the compatibility gap
- Peace
-    submitted by    /u/Pepper-pencil  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Microsoft's AI Bing also generated factual errors at launch]]></title>
-        <id>https://news.ycombinator.com/item?id=34791558</id>
-        <link href="https://www.theregister.com/2023/02/14/microsoft_ai_bing_error/"/>
-        <updated>2023-02-14T16:17:45.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.theregister.com/2023/02/14/microsoft_ai_bing_error/
-Comments URL: https://news.ycombinator.com/item?id=34791558
-Points: 227
-# Comments: 166]]></summary>
-        <author>
-            <name>isaacfrond</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Normalization of Deviance (2015)]]></title>
-        <id>https://news.ycombinator.com/item?id=34791106</id>
-        <link href="https://danluu.com/wat/"/>
-        <updated>2023-02-14T15:52:49.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://danluu.com/wat/
-Comments URL: https://news.ycombinator.com/item?id=34791106
-Points: 323
-# Comments: 159]]></summary>
-        <author>
-            <name>akshaykarthik</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Get Started with Open Source Formal Verification [video]]]></title>
-        <id>https://news.ycombinator.com/item?id=34791015</id>
-        <link href="https://fosdem.org/2023/schedule/event/open_source_formal_verification/"/>
-        <updated>2023-02-14T15:47:44.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://fosdem.org/2023/schedule/event/open_source_formal_verification/
-Comments URL: https://news.ycombinator.com/item?id=34791015
-Points: 51
-# Comments: 2]]></summary>
-        <author>
-            <name>0rzech</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[One of the joys of using Linux is learning and figuring things out. What have you learned lately that you'd like to share?]]></title>
-        <id>https://www.reddit.com/r/linux/comments/1128fub/one_of_the_joys_of_using_linux_is_learning_and/</id>
-        <link href="https://www.reddit.com/r/linux/comments/1128fub/one_of_the_joys_of_using_linux_is_learning_and/"/>
-        <updated>2023-02-14T15:42:17.000Z</updated>
-        <summary type="html"><![CDATA[I find the figuring things out part of Linux to be very rewarding on a personal level. Please share so others can learn more!
- "Linux is only free if your time has no value." - Jamie Zawinski
- "Time you enjoy wasting is not wasted time." - Marthe Troly-Curtin
- "Nothing is a waste of time if you use the experience wisely." - Auguste Rodin
-    submitted by    /u/bsx  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Show HN: Screenshot.Rocks: Open-source browser and mobile screenshot mockup tool]]></title>
-        <id>https://news.ycombinator.com/item?id=34790781</id>
-        <link href="https://screenshot.rocks/"/>
-        <updated>2023-02-14T15:35:04.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://screenshot.rocks
-Comments URL: https://news.ycombinator.com/item?id=34790781
-Points: 67
-# Comments: 20]]></summary>
-        <author>
-            <name>dignite</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Repurposing e-waste: turning a TV set-top box into a Linux computer]]></title>
-        <id>https://www.reddit.com/r/linux/comments/1127neo/repurposing_ewaste_turning_a_tv_settop_box_into_a/</id>
-        <link href="https://www.reddit.com/r/linux/comments/1127neo/repurposing_ewaste_turning_a_tv_settop_box_into_a/"/>
-        <updated>2023-02-14T15:09:05.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/speckz  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Tuesday]]></title>
-        <id>https://lwn.net/Articles/923267/</id>
-        <link href="https://lwn.net/Articles/923267/"/>
-        <updated>2023-02-14T14:52:48.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Debian (imagemagick), Fedora (xml-security-c), Red Hat (grub2), SUSE (chromium, freerdp, libbpf, and python-setuptools), and Ubuntu (fig2dev and python-django).]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Thunderbird 115 Supernova Preview: The New Folder Pane]]></title>
-        <id>https://www.reddit.com/r/linux/comments/1126j56/thunderbird_115_supernova_preview_the_new_folder/</id>
-        <link href="https://www.reddit.com/r/linux/comments/1126j56/thunderbird_115_supernova_preview_the_new_folder/"/>
-        <updated>2023-02-14T14:21:50.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/Peckemys  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Mouse acceleration profiles were just merged in GNOME Settings!]]></title>
-        <id>https://www.reddit.com/r/linux/comments/112662l/mouse_acceleration_profiles_were_just_merged_in/</id>
-        <link href="https://www.reddit.com/r/linux/comments/112662l/mouse_acceleration_profiles_were_just_merged_in/"/>
-        <updated>2023-02-14T14:05:39.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/TheEvilSkely  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
         </author>
     </entry>
     <entry>
