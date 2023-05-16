@@ -6,6 +6,206 @@
       "siteUrl": "https://news.ycombinator.com/",
       "articles": [
         {
+          "id": "https://news.ycombinator.com/item?id=35956581",
+          "author": "alagu",
+          "description": "Article URL: https://www.ycombinator.com/companies/peoplebox/jobs/kpFkrzX-principal-engineer\nComments URL: https://news.ycombinator.com/item?id=35956581\nPoints: 1\n# Comments: 0",
+          "link": "https://www.ycombinator.com/companies/peoplebox/jobs/kpFkrzX-principal-engineer",
+          "publishedOn": "2023-05-16T01:01:01.000Z",
+          "wordCount": 2530,
+          "title": "Peoplebox (YC S22) Is Hiring a Principal Engineer (Back End)",
+          "imageUrl": "/images/original/missing.png"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=35956394",
+          "author": "MichaelMoser123",
+          "description": "Article URL: https://www.axios.com/2023/05/15/ev-electric-vehicles-gas-trucks-suvs-cars-aging\nComments URL: https://news.ycombinator.com/item?id=35956394\nPoints: 8\n# Comments: 6",
+          "link": "https://www.axios.com/2023/05/15/ev-electric-vehicles-gas-trucks-suvs-cars-aging",
+          "publishedOn": "2023-05-16T00:29:01.000Z",
+          "wordCount": null,
+          "title": "Average age of a car in the US is more than 13 years",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=35956353",
+          "author": "lxm",
+          "description": "Article URL: https://www.npr.org/sections/health-shots/2023/05/15/1175889585/hospitals-create-police-forces-to-stem-growing-violence-against-staff\nComments URL: https://news.ycombinator.com/item?id=35956353\nPoints: 23\n# Comments: 12",
+          "link": "https://www.npr.org/sections/health-shots/2023/05/15/1175889585/hospitals-create-police-forces-to-stem-growing-violence-against-staff",
+          "publishedOn": "2023-05-16T00:22:56.000Z",
+          "wordCount": 2123,
+          "title": "More hospitals create police forces",
+          "imageUrl": "https://media.npr.org/assets/img/2023/05/12/gettyimages-1252572938_wide-5bc0a7af39df0f4f6188fd2998230f7790b8476c-s1400-c100.jpg"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=35956346",
+          "author": "SirLJ",
+          "description": "Article URL: https://www.latimes.com/business/story/2023-05-10/column-these-are-the-companies-whose-thirst-for-profits-drove-inflation-higher\nComments URL: https://news.ycombinator.com/item?id=35956346\nPoints: 9\n# Comments: 0",
+          "link": "https://www.latimes.com/business/story/2023-05-10/column-these-are-the-companies-whose-thirst-for-profits-drove-inflation-higher",
+          "publishedOn": "2023-05-16T00:22:10.000Z",
+          "wordCount": 6533,
+          "title": "Companies cynically used global crises for profits – and brought inflation",
+          "imageUrl": "https://ca-times.brightspotcdn.com/dims4/default/99f43f8/2147483647/strip/true/crop/4000x2100+0+283/resize/1200x630!/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fcf%2F24%2F861055c743a8902d5d9b9613761f%2Fhttps-delivery.gettyimages.com%2Fdownloads%2F1238626626"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=35956333",
+          "author": "SirLJ",
+          "description": "Article URL: https://www.bloomberg.com/news/articles/2023-05-11/ken-griffin-s-hand-picked-math-prodigy-peng-zhao-runs-market-making-empire\nComments URL: https://news.ycombinator.com/item?id=35956333\nPoints: 6\n# Comments: 0",
+          "link": "https://www.bloomberg.com/news/articles/2023-05-11/ken-griffin-s-hand-picked-math-prodigy-peng-zhao-runs-market-making-empire",
+          "publishedOn": "2023-05-16T00:20:47.000Z",
+          "wordCount": 576,
+          "title": "Ken Griffin’s Hand-Picked Math Prodigy Runs Market-Making Empire",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=35956287",
+          "author": "kleineshertz",
+          "description": "I started thinking about this approach after working on a large-scale project for a major financial company where our group developed a distributed in-house data processing solution. On a regular basis, it ingested a few gigabytes of financial data and, within a tight SLA time limit, produced a lot of enriched/aggregated/validated data for a number of customers. Sometimes, source data had errors, so operators with domain knowledge had to verify data validity at some checkpoints, immediately make corrections, and re-run parts of the workflow manually. The solution involved complex web service orchestration, custom database and was very demanding on the infrastructure availability.\nCapillaries is a built from scratch, open-source Go solution that does just that: ingests data and applies user-defined transforms - Go one-liner expressions, Python formulas, joins, aggregations, denormalization - using Cassandra for intermediate data storage and RabbitMQ for task scheduling. End users just have to provide:\n- source data in CSV files;\n- Capillaries script (JSON file) that defines the workflow and the transforms;\n- Python code that performs complex calculations (only if needed).\nThe whole data processing pipeline can be split into separate runs that can be started independently and re-run by the user if needed.\nThe goal is to build a platform that is tolerant to database and processing node failures, and allows users to focus on data transform logic and data quality control.\n“Getting started” Docker-based demo calculates ARK funds performance, using EOD holdings and transactions data acquired from public sources. There are also integration tests that use non-financial data. There is a test deploy tool that uses Openstack API for provisioning in the cloud.\nComments URL: https://news.ycombinator.com/item?id=35956287\nPoints: 6\n# Comments: 2",
+          "link": "https://capillaries.io/",
+          "publishedOn": "2023-05-16T00:13:53.000Z",
+          "wordCount": 231,
+          "title": "Show HN: Capillaries: Distributed data processing with Go and Cassandra",
+          "imageUrl": "http://capillaries.io/i/logo.svg"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=35956144",
+          "author": "jdmark",
+          "description": "Article URL: https://www.baesystems.com/en/article/first-magma-flight-trials\nComments URL: https://news.ycombinator.com/item?id=35956144\nPoints: 19\n# Comments: 6",
+          "link": "https://www.baesystems.com/en/article/first-magma-flight-trials",
+          "publishedOn": "2023-05-15T23:54:18.000Z",
+          "wordCount": 1329,
+          "title": "Successful first flight trial completion of unmanned aerial vehicle, MAGMA",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=35955706",
+          "author": "fhaltmayer",
+          "description": "Article URL: https://www.theguardian.com/environment/2023/may/09/contact-lenses-pfas-forever-chemicals\nComments URL: https://news.ycombinator.com/item?id=35955706\nPoints: 41\n# Comments: 57",
+          "link": "https://www.theguardian.com/environment/2023/may/09/contact-lenses-pfas-forever-chemicals",
+          "publishedOn": "2023-05-15T23:03:58.000Z",
+          "wordCount": 4845,
+          "title": "Many soft contact lenses in US made up of PFAS, research suggests",
+          "imageUrl": "https://i.guim.co.uk/img/media/1fc8590651ca8685a7dfba851f10851f60833d1b/0_106_3200_1921/master/3200.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=08f2a95f16c9eb72f9daa38f22005914"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=35955155",
+          "author": "bkopic",
+          "description": "Article URL: https://github.com/hat-open/hat-syslog\nComments URL: https://news.ycombinator.com/item?id=35955155\nPoints: 15\n# Comments: 2",
+          "link": "https://github.com/hat-open/hat-syslog",
+          "publishedOn": "2023-05-15T22:05:49.000Z",
+          "wordCount": 1175,
+          "title": "Show HN: Hat-syslog – Syslog Server with real time web UI",
+          "imageUrl": "https://opengraph.githubassets.com/2eb801f38571ba28c71e36186f8244a64d6dcf8f363f16145978705681bfa117/hat-open/hat-syslog"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=35955089",
+          "author": "bikenaga",
+          "description": "Article URL: https://www.hcn.org/articles/south-non-native-species-a-weed-is-swallowing-the-sonoran-desert\nComments URL: https://news.ycombinator.com/item?id=35955089\nPoints: 16\n# Comments: 2",
+          "link": "https://www.hcn.org/articles/south-non-native-species-a-weed-is-swallowing-the-sonoran-desert",
+          "publishedOn": "2023-05-15T22:00:30.000Z",
+          "wordCount": 1279,
+          "title": "A weed is swallowing the Sonoran Desert",
+          "imageUrl": "https://www.hcn.org/articles/south-non-native-species-a-weed-is-swallowing-the-sonoran-desert/bigimage_large"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=35955062",
+          "author": "bpierre",
+          "description": "Article URL: https://www.amygoodchild.com/blog/computer-art-50s-and-60s\nComments URL: https://news.ycombinator.com/item?id=35955062\nPoints: 66\n# Comments: 4",
+          "link": "https://www.amygoodchild.com/blog/computer-art-50s-and-60s",
+          "publishedOn": "2023-05-15T21:57:52.000Z",
+          "wordCount": 5782,
+          "title": "Early Computer Art in the 50s and 60s",
+          "imageUrl": "http://static1.squarespace.com/static/5f33cddd6aff255aabb0c6cd/5f37d09b551f154577577f01/6459586fc50a732c95d4f88d/1684158859017/whitney+3.png?format=1500w"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=35954481",
+          "author": "belter",
+          "description": "Article URL: https://arxiv.org/abs/2305.06161\nComments URL: https://news.ycombinator.com/item?id=35954481\nPoints: 128\n# Comments: 47",
+          "link": "https://arxiv.org/abs/2305.06161",
+          "publishedOn": "2023-05-15T21:06:05.000Z",
+          "wordCount": 805,
+          "title": "StarCoder and StarCoderBase: 15.5B parameter models with 8K context length",
+          "imageUrl": "https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=35954422",
+          "author": "freerk",
+          "description": "Article URL: https://www.kaspersky.com/blog/fake-trezor-hardware-crypto-wallet/48155/\nComments URL: https://news.ycombinator.com/item?id=35954422\nPoints: 147\n# Comments: 85",
+          "link": "https://www.kaspersky.com/blog/fake-trezor-hardware-crypto-wallet/48155/",
+          "publishedOn": "2023-05-15T21:01:20.000Z",
+          "wordCount": 2658,
+          "title": "Case study: fake hardware cryptowallet",
+          "imageUrl": "https://media.kasperskydaily.com/wp-content/uploads/sites/92/2023/05/10060227/fake-trezor-hardware-crypto-wallet-featured.jpg"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=35954259",
+          "author": "janandonly",
+          "description": "Article URL: http://www.janromme.com/2023/05/ChaptGPT-transaltion-of-Akkadian-texts.html\nComments URL: https://news.ycombinator.com/item?id=35954259\nPoints: 73\n# Comments: 32",
+          "link": "http://www.janromme.com/2023/05/ChaptGPT-transaltion-of-Akkadian-texts.html",
+          "publishedOn": "2023-05-15T20:46:28.000Z",
+          "wordCount": 3143,
+          "title": "Translating Akkadian clay tablets with ChatGPT?",
+          "imageUrl": "https://lh3.googleusercontent.com/blogger_img_proxy/AByxGDT9cI_DvNyCQNJrFhcAa-m9U1NwaKGT9zaXF9srMEsuboFSnrXEaRpouYsuKwK7BpQa9tVE25C3qwSbrthfHNVvRxFwmfEyDd2cJebhmafncbv1wb0yzQjmKszRKg=w1200-h630-p-k-no-nu"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=35954208",
+          "author": "geox",
+          "description": "Article URL: https://www.nih.gov/news-events/news-releases/clinical-trial-mrna-universal-influenza-vaccine-candidate-begins\nComments URL: https://news.ycombinator.com/item?id=35954208\nPoints: 105\n# Comments: 72",
+          "link": "https://www.nih.gov/news-events/news-releases/clinical-trial-mrna-universal-influenza-vaccine-candidate-begins",
+          "publishedOn": "2023-05-15T20:42:54.000Z",
+          "wordCount": 1487,
+          "title": "Clinical trial of mRNA universal influenza vaccine candidate begins",
+          "imageUrl": "https://www.nih.gov/sites/default/files/news-events/news-releases/2023/20230515-niaid.jpg"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=35953286",
+          "author": "Alifatisk",
+          "description": "Article URL: https://openprocessing.org/sketch/1575230/\nComments URL: https://news.ycombinator.com/item?id=35953286\nPoints: 159\n# Comments: 84",
+          "link": "https://openprocessing.org/sketch/1575230/",
+          "publishedOn": "2023-05-15T19:23:54.000Z",
+          "wordCount": 6613,
+          "title": "random(random(random(random())))",
+          "imageUrl": "https://openprocessing.org/sketch/1575230/thumbnail"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=35952206",
+          "author": "conductor",
+          "description": "Article URL: https://github.com/SysSec-KAIST/LTESniffer\nComments URL: https://news.ycombinator.com/item?id=35952206\nPoints: 181\n# Comments: 31",
+          "link": "https://github.com/SysSec-KAIST/LTESniffer",
+          "publishedOn": "2023-05-15T18:08:55.000Z",
+          "wordCount": 3051,
+          "title": "LTESniffer – An Open-Source LTE Downlink/Uplink Eavesdropper",
+          "imageUrl": "https://opengraph.githubassets.com/e698cbd62b54af40ddc25b1fa33177983034557796ba922a1bee186d484b0fcd/SysSec-KAIST/LTESniffer"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=35951867",
+          "author": "snvzz",
+          "description": "Article URL: https://forum.rvspace.org/t/unlocking-new-possibilities-starfive-visionfive-2-sbc-now-supports-tianocore-edk-ii-uefi/2779\nComments URL: https://news.ycombinator.com/item?id=35951867\nPoints: 32\n# Comments: 21",
+          "link": "https://forum.rvspace.org/t/unlocking-new-possibilities-starfive-visionfive-2-sbc-now-supports-tianocore-edk-ii-uefi/2779",
+          "publishedOn": "2023-05-15T17:47:12.000Z",
+          "wordCount": 529,
+          "title": "StarFive VisionFive 2 SBC Now Supports TianoCore EDK II (UEFI)",
+          "imageUrl": "http://forum.rvspace.org/uploads/default/optimized/2X/4/4616ff9b4c4992f8fc936dfa8f8f69b2dea9f37c_2_1024x306.png"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=35950716",
+          "author": "DerekBickerton",
+          "description": "Article URL: https://dynomight.net/procrastination/\nComments URL: https://news.ycombinator.com/item?id=35950716\nPoints: 233\n# Comments: 60",
+          "link": "https://dynomight.net/procrastination/",
+          "publishedOn": "2023-05-15T16:23:18.000Z",
+          "wordCount": 2816,
+          "title": "Taxonomy of Procrastination",
+          "imageUrl": "https://dynomight.net/img/procrastination/table.jpg"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=35949368",
+          "author": "mikece",
+          "description": "Article URL: https://www.infoq.com/news/2023/05/gcc13-c2x-features/\nComments URL: https://news.ycombinator.com/item?id=35949368\nPoints: 97\n# Comments: 76",
+          "link": "https://www.infoq.com/news/2023/05/gcc13-c2x-features/",
+          "publishedOn": "2023-05-15T15:06:10.000Z",
+          "wordCount": 7312,
+          "title": "GCC 13 Supports New C2x Features, Including Nullptr, Enhanced Enumerations",
+          "imageUrl": "https://res.infoq.com/news/2023/05/gcc13-c2x-features/en/headerimage/gcc-13-c2x-1684159306183.jpeg"
+        },
+        {
           "id": "https://news.ycombinator.com/item?id=35942707",
           "author": "deepzn",
           "description": "Article URL: https://apnews.com/article/settlement-fake-public-comments-net-neutrality-ae1f69a1f5415d9f77a41f07c3f6c358\nComments URL: https://news.ycombinator.com/item?id=35942707\nPoints: 7\n# Comments: 1",
@@ -5584,206 +5784,6 @@
           "wordCount": 42130,
           "title": "The Battle over Techno’s Origins",
           "imageUrl": "https://media.newyorker.com/photos/643872916c1b3caf9264c723/16:9/w_1280,c_limit/Brown-Techno-Dj-3.jpg"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=35586008",
-          "author": "albertzeyer",
-          "description": "Article URL: https://github.com/albertz/mouse-scroll-wheel-acceleration-userspace\nComments URL: https://news.ycombinator.com/item?id=35586008\nPoints: 5\n# Comments: 1",
-          "link": "https://github.com/albertz/mouse-scroll-wheel-acceleration-userspace",
-          "publishedOn": "2023-04-16T00:22:52.000Z",
-          "wordCount": 1274,
-          "title": "Mouse scroll wheel acceleration, implemented in user space",
-          "imageUrl": "https://opengraph.githubassets.com/3419b161abf7f2c1d54909a974ecc2d6e9574ef89709d7fac4f0429be4bbf5c7/albertz/mouse-scroll-wheel-acceleration-userspace"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=35585174",
-          "author": "1vuio0pswjnm7",
-          "description": "Article URL: https://ia601707.us.archive.org/28/items/gov.uscourts.cand.364454/gov.uscourts.cand.364454.385.0.pdf\nComments URL: https://news.ycombinator.com/item?id=35585174\nPoints: 83\n# Comments: 44",
-          "link": "https://ia601707.us.archive.org/28/items/gov.uscourts.cand.364454/gov.uscourts.cand.364454.385.0.pdf",
-          "publishedOn": "2023-04-15T22:19:26.000Z",
-          "wordCount": 11511,
-          "title": "Google CEO: “can we change the setting of this group to history-off” [pdf]",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=35585117",
-          "author": "sherlockxu",
-          "description": "Article URL: https://opencoreventures.com/blog/2023-04-red-hat-model-only-worked-red-hat/\nComments URL: https://news.ycombinator.com/item?id=35585117\nPoints: 76\n# Comments: 26",
-          "link": "https://opencoreventures.com/blog/2023-04-red-hat-model-only-worked-red-hat/",
-          "publishedOn": "2023-04-15T22:13:04.000Z",
-          "wordCount": 1437,
-          "title": "The Red Hat model only worked for Red Hat",
-          "imageUrl": "https://opencoreventures.com/blog/2023-04-red-hat-model-only-worked-red-hat/feature.png"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=35584898",
-          "author": "amichail",
-          "description": "Article URL: https://www.businessinsider.com/uber-amazon-pay-using-ai-different-wages-same-work-discrimination-2023-4\nComments URL: https://news.ycombinator.com/item?id=35584898\nPoints: 64\n# Comments: 39",
-          "link": "https://www.businessinsider.com/uber-amazon-pay-using-ai-different-wages-same-work-discrimination-2023-4",
-          "publishedOn": "2023-04-15T21:49:39.000Z",
-          "wordCount": 4652,
-          "title": "Uber, Amazon use AI to pay people different wages for same work: Study",
-          "imageUrl": "https://i.insider.com/6436edd1ca216e0018213ec0?width=1200&format=jpeg"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=35584866",
-          "author": "PStamatiou",
-          "description": "Article URL: https://paulstamatiou.com/digital-clutter/\nComments URL: https://news.ycombinator.com/item?id=35584866\nPoints: 50\n# Comments: 27",
-          "link": "https://paulstamatiou.com/digital-clutter/",
-          "publishedOn": "2023-04-15T21:44:56.000Z",
-          "wordCount": 2241,
-          "title": "Digital clutter: Learning to let go and stop hoarding terabytes",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=35584650",
-          "author": "dosshell",
-          "description": "Article URL: http://blog.pkh.me/p/13-the-ffmpeg-libav-situation.html\nComments URL: https://news.ycombinator.com/item?id=35584650\nPoints: 28\n# Comments: 16",
-          "link": "http://blog.pkh.me/p/13-the-ffmpeg-libav-situation.html",
-          "publishedOn": "2023-04-15T21:21:53.000Z",
-          "wordCount": 2601,
-          "title": "The FFmpeg/Libav situation (2012)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=35584533",
-          "author": "JNRowe",
-          "description": "Article URL: https://changelog.complete.org/archives/10478-easily-accessing-all-your-stuff-with-a-zero-trust-mesh-vpn\nComments URL: https://news.ycombinator.com/item?id=35584533\nPoints: 38\n# Comments: 11",
-          "link": "https://changelog.complete.org/archives/10478-easily-accessing-all-your-stuff-with-a-zero-trust-mesh-vpn",
-          "publishedOn": "2023-04-15T21:08:11.000Z",
-          "wordCount": null,
-          "title": "Easily accessing all your stuff with a zero-trust mesh VPN",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=35584317",
-          "author": "ofou",
-          "description": "Article URL: https://lifearchitect.ai/chinchilla/\nComments URL: https://news.ycombinator.com/item?id=35584317\nPoints: 33\n# Comments: 23",
-          "link": "https://lifearchitect.ai/chinchilla/",
-          "publishedOn": "2023-04-15T20:39:20.000Z",
-          "wordCount": 3044,
-          "title": "33TB of text data for a 1T-parameter model",
-          "imageUrl": "https://s10251.pcdn.co/wp-content/uploads/2023/02/2023-chinchilla-photo-0.jpg"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=35584272",
-          "author": "belter",
-          "description": "Article URL: https://www.ft.com/content/c331b279-00e5-4e7d-954f-468f4ee44c31\nComments URL: https://news.ycombinator.com/item?id=35584272\nPoints: 126\n# Comments: 85",
-          "link": "https://www.ft.com/content/c331b279-00e5-4e7d-954f-468f4ee44c31",
-          "publishedOn": "2023-04-15T20:32:57.000Z",
-          "wordCount": 2274,
-          "title": "Yeah, about that active comeback...",
-          "imageUrl": "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F9edc1bd1-49d4-4d2d-b8fc-67ce83a0b8da.jpg?source=next-opengraph&fit=scale-down&width=900"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=35584187",
-          "author": "082349872349872",
-          "description": "Article URL: http://gabarro.org/ccn/algebraic_graph_calculus.html\nComments URL: https://news.ycombinator.com/item?id=35584187\nPoints: 67\n# Comments: 8",
-          "link": "http://gabarro.org/ccn/algebraic_graph_calculus.html",
-          "publishedOn": "2023-04-15T20:22:54.000Z",
-          "wordCount": 3847,
-          "title": "Algebraic graph calculus (2021)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=35583743",
-          "author": "mfiguiere",
-          "description": "Article URL: https://twitter.com/TechEmails/status/1647317806697050112\nComments URL: https://news.ycombinator.com/item?id=35583743\nPoints: 143\n# Comments: 112",
-          "link": "https://twitter.com/TechEmails/status/1647317806697050112",
-          "publishedOn": "2023-04-15T19:22:18.000Z",
-          "wordCount": 509,
-          "title": "Microsoft execs on Apple's music store (2003)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=35583412",
-          "author": "ilamont",
-          "description": "Article URL: https://www.aircargonews.net/airlines/freighter-operator/us-doj-charges-10-with-defrauding-polar-air-cargo-worldwide/\nComments URL: https://news.ycombinator.com/item?id=35583412\nPoints: 96\n# Comments: 34",
-          "link": "https://www.aircargonews.net/airlines/freighter-operator/us-doj-charges-10-with-defrauding-polar-air-cargo-worldwide/",
-          "publishedOn": "2023-04-15T18:47:59.000Z",
-          "wordCount": null,
-          "title": "DOJ charges 10 with fraud in global air freight kickback scheme",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=35583349",
-          "author": "summarity",
-          "description": "Article URL: https://github.com/mlc-ai/web-llm\nComments URL: https://news.ycombinator.com/item?id=35583349\nPoints: 128\n# Comments: 44",
-          "link": "https://github.com/mlc-ai/web-llm",
-          "publishedOn": "2023-04-15T18:42:09.000Z",
-          "wordCount": 1831,
-          "title": "Web LLM – WebGPU Powered Inference of Large Language Models",
-          "imageUrl": "https://opengraph.githubassets.com/d041337c4157e351fb8dbb99c1b3b1db4b4c42f55015921228eb4d7ae2ef8d7f/mlc-ai/web-llm"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=35583228",
-          "author": "hot_gril",
-          "description": "Article URL: https://www.lofiatc.com/?icao=KLAX\nComments URL: https://news.ycombinator.com/item?id=35583228\nPoints: 351\n# Comments: 82",
-          "link": "https://www.lofiatc.com/?icao=KLAX",
-          "publishedOn": "2023-04-15T18:28:23.000Z",
-          "wordCount": 63,
-          "title": "Lofi air traffic control – LAX",
-          "imageUrl": "/assets/banner.png"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=35582798",
-          "author": "oger",
-          "description": "Article URL: https://github.com/vanhoefm/macstealer\nComments URL: https://news.ycombinator.com/item?id=35582798\nPoints: 51\n# Comments: 10",
-          "link": "https://github.com/vanhoefm/macstealer",
-          "publishedOn": "2023-04-15T17:46:25.000Z",
-          "wordCount": 5929,
-          "title": "MacStealer allows for WiFi client isolation bypasses",
-          "imageUrl": "https://opengraph.githubassets.com/febc59ffaa7d382d0858a074ad6dd4366e06ce0b3cf23888ac203a7bb21181f6/vanhoefm/macstealer"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=35582417",
-          "author": "pps",
-          "description": "Article URL: https://www.ykilcher.com/OA_Paper_2023_04_15.pdf\nComments URL: https://news.ycombinator.com/item?id=35582417\nPoints: 151\n# Comments: 37",
-          "link": "https://www.ykilcher.com/OA_Paper_2023_04_15.pdf",
-          "publishedOn": "2023-04-15T17:04:33.000Z",
-          "wordCount": 1671,
-          "title": "OpenAssistant Conversations – Democratizing Large Language Model Alignment [pdf]",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=35582084",
-          "author": "mscharrer",
-          "description": "Article URL: http://gabarro.org/ccn/gen_fourier.html\nComments URL: https://news.ycombinator.com/item?id=35582084\nPoints: 81\n# Comments: 12",
-          "link": "http://gabarro.org/ccn/gen_fourier.html",
-          "publishedOn": "2023-04-15T16:27:59.000Z",
-          "wordCount": 5731,
-          "title": "Generalizations of Fourier analysis (2021)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=35582079",
-          "author": "alexzeitler",
-          "description": "Article URL: https://exercism.org/\nComments URL: https://news.ycombinator.com/item?id=35582079\nPoints: 84\n# Comments: 8",
-          "link": "https://exercism.org/",
-          "publishedOn": "2023-04-15T16:27:35.000Z",
-          "wordCount": 675,
-          "title": "Exercism – learn programming languages for free",
-          "imageUrl": "https://dg8krxphbh767.cloudfront.net/meta/og.png"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=35581768",
-          "author": "zdw",
-          "description": "Article URL: https://github.com/m-ender/hexagony\nComments URL: https://news.ycombinator.com/item?id=35581768\nPoints: 180\n# Comments: 30",
-          "link": "https://github.com/m-ender/hexagony",
-          "publishedOn": "2023-04-15T15:54:07.000Z",
-          "wordCount": 2923,
-          "title": "Hexagony: A two-dimensional, hexagonal programming language",
-          "imageUrl": "https://opengraph.githubassets.com/c636732b4a5790ea37c906b9685377fd82cd9d4f8d926895b51512269fee148e/m-ender/hexagony"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=35580959",
-          "author": "santiagobasulto",
-          "description": "Article URL: https://github.com/santiagobasulto/ipython-gpt\nComments URL: https://news.ycombinator.com/item?id=35580959\nPoints: 118\n# Comments: 21",
-          "link": "https://github.com/santiagobasulto/ipython-gpt",
-          "publishedOn": "2023-04-15T14:33:43.000Z",
-          "wordCount": 1010,
-          "title": "Show HN: IPython-GPT, a Jupyter/IPython Interface to Chat GPT",
-          "imageUrl": "https://opengraph.githubassets.com/539f91f23404b489f10a6f0004e9bfeac76456a08302aaf328b6829578fbba8e/santiagobasulto/ipython-gpt"
         }
       ]
     },
@@ -5792,6 +5792,96 @@
       "feedUrl": "http://www.reddit.com/r/linux/top.rss?sort=top&t=day",
       "siteUrl": "https://www.reddit.com/r/linux/top?sort=top&t=day",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/linux/comments/13ipqhq/the_best_praise_i_can_give_wayland_is_that_after/",
+          "author": null,
+          "description": "It's not like that for everyone yet, but it's pretty sweet in the sweet spot. \n The only thing I've consistently missed is the absence of a barrier server, but it's never been a big enough part of my workflow to be worth staying on X. It may have been a rockier process than its creators envisioned in 2008 for reasons largely beyond the community's control, but I believe Wayland is destined to be forgotten in the best possible way.\n    submitted by    /u/featherfurl  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/13ipqhq/the_best_praise_i_can_give_wayland_is_that_after/",
+          "publishedOn": "2023-05-16T00:30:23.000Z",
+          "wordCount": 2327,
+          "title": "The best praise I can give Wayland is that after switching from i3 to sway about a year ago I notice its presence less than X.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/13imk1r/introducing_escambo_an_httpbased_api_testing/",
+          "author": null,
+          "description": "submitted by    /u/CleoMenemezis  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/13imk1r/introducing_escambo_an_httpbased_api_testing/",
+          "publishedOn": "2023-05-15T22:20:45.000Z",
+          "wordCount": 2254,
+          "title": "Introducing Escambo, an HTTP-based API testing application for GNOME.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/13ig1jl/rgnome_mods_lock_discussion_about_console_due/",
+          "author": null,
+          "description": "submitted by    /u/joshuaklinger  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/13ig1jl/rgnome_mods_lock_discussion_about_console_due/",
+          "publishedOn": "2023-05-15T18:26:35.000Z",
+          "wordCount": 2241,
+          "title": "/r/GNOME mods lock discussion about Console due criticism",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/13if1nq/ideas_for_activities_for_a_university_linux_club/",
+          "author": null,
+          "description": "Hi everyone,\n My university didn't have any Linux or FOSS related clubs, so I kinda ended up founding one. But after almost a year of club establishment, I've realized that people (here uni students) don't really care about Linux or FOSS. Even though they use FOSS programs or services, they don't know or don't want to know more.\n Furthermore, we don't have enough members or activity. I thought maybe managing a wiki for students might help. But I couldn't find free hosting that also allows for some control over who can edit (like limiting it to .edu emails).\n So thinking maybe other people have more ideas, or there are other Linux related clubs from other universities that we can collaborate with, I'm posting this.\n Some ideas that I have, but we don't have many man power to do it: - Maintain a wiki with Linux+FOSS things for students, - Encourage contributions to open source, - Encourage publishing term-projects and other projects with open source license in cloud, - Maybe somehow connect contributions to volunteer hours that other clubs do for physical volunteer activities, etc.\n Also, what do you people think would interest students that haven't heard about Linux or only heard the stereotype to be interested.\n    submitted by    /u/thevoidzero  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/13if1nq/ideas_for_activities_for_a_university_linux_club/",
+          "publishedOn": "2023-05-15T17:49:36.000Z",
+          "wordCount": 2432,
+          "title": "Ideas for activities for a University Linux Club",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/13idh51/haiku_added_to_riscv_ecosystem_landscape/",
+          "author": null,
+          "description": "submitted by    /u/win8linux  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/13idh51/haiku_added_to_riscv_ecosystem_landscape/",
+          "publishedOn": "2023-05-15T16:53:15.000Z",
+          "wordCount": 2248,
+          "title": "Haiku added to RISC-V Ecosystem Landscape",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/13hxqig/runwhenidle_linux_utility_that_can_automatically/",
+          "author": null,
+          "description": "submitted by    /u/perk11  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/13hxqig/runwhenidle_linux_utility_that_can_automatically/",
+          "publishedOn": "2023-05-15T04:38:40.000Z",
+          "wordCount": 2259,
+          "title": "runwhenidle - Linux utility that can automatically pause a computationally-intensive command when user is in front of a computer and resume it when they are away.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/13hwi3z/sha2gitcom_brings_code_hosting_to_secure_sha2_git/",
+          "author": null,
+          "description": "submitted by    /u/blueomg  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/13hwi3z/sha2gitcom_brings_code_hosting_to_secure_sha2_git/",
+          "publishedOn": "2023-05-15T03:39:37.000Z",
+          "wordCount": 2231,
+          "title": "Sha2git.com brings code hosting to secure SHA-2 Git repositories",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/13huww5/sunshine_and_moonlight_airplay_for_your_linux/",
+          "author": null,
+          "description": "submitted by    /u/gplanon  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/13huww5/sunshine_and_moonlight_airplay_for_your_linux/",
+          "publishedOn": "2023-05-15T02:28:14.000Z",
+          "wordCount": 2231,
+          "title": "Sunshine and Moonlight - Airplay for your Linux Desktop",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/13htz0d/snoop_a_linux_utility_to_snoop_around_your_files/",
+          "author": null,
+          "description": "submitted by    /u/Tough_Chance_5541  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/13htz0d/snoop_a_linux_utility_to_snoop_around_your_files/",
+          "publishedOn": "2023-05-15T01:46:29.000Z",
+          "wordCount": 2243,
+          "title": "Snoop | a Linux utility to snoop around your files",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/linux/comments/13hrt8n/tips_for_finding_reverse_package_dependencies/",
           "author": null,
@@ -9451,116 +9541,6 @@
           "wordCount": 2116,
           "title": "Elevate Your Terraform Game: Helpful Tools for Linux Users",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/12o74cd/sigstore_protects_apt_archives_aptverify/",
-          "author": null,
-          "description": "submitted by    /u/dlorenc  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/12o74cd/sigstore_protects_apt_archives_aptverify/",
-          "publishedOn": "2023-04-16T12:37:56.000Z",
-          "wordCount": 2112,
-          "title": "Sigstore protects Apt archives: apt-verify & apt-sigstore",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/12o5937/ever_seen_a_neofetch_on_real_hardware/",
-          "author": null,
-          "description": "submitted by    /u/bumblebee_69  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/12o5937/ever_seen_a_neofetch_on_real_hardware/",
-          "publishedOn": "2023-04-16T11:18:57.000Z",
-          "wordCount": 2160,
-          "title": "Ever seen a neofetch on REAL HARDWARE?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/12o1agp/the_birth_of_linux_as_told_by_linus_himself_one/",
-          "author": null,
-          "description": "OP's Note: First of all, I found this at Internet Archive hidden away on CDROM full of text files from 1995. If you can, contribute to the Internet Archive.\n Path: unlinfo.unl.edu!moe.ksu.ksu.edu!zaphod.mps.ohio-state.edu!caen!uunet!mcsun!news.funet.fi!hydra!klaava!torvalds From: torvalds@klaava.Helsinki.FI (Linus Benedict Torvalds) Newsgroups: comp.os.linux Subject: Birthday (was Re: Uptime found. Thanks to all) Message-ID: <1992Jul31.221520.27288@klaava.Helsinki.FI> Date: 31 Jul 92 22:15:20 GMT References: <1992Jul30.211132.20101@cc.umontreal.ca> Organization: University of Helsinki Lines: 398 In article <1992Jul30.211132.20101@cc.umontreal.ca> duperval@ERE.UMontreal.CA (Duperval Laurent) writes: > >P.S. BTW, noone answered yet: when is Linux's birthday? Let's have a >party! I couldn't f…",
-          "link": "https://www.reddit.com/r/linux/comments/12o1agp/the_birth_of_linux_as_told_by_linus_himself_one/",
-          "publishedOn": "2023-04-16T08:33:33.000Z",
-          "wordCount": 5427,
-          "title": "The Birth of Linux (As told by Linus himself one year later)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/12o0afy/did_you_know_you_can_preview_audiovideo_files_in/",
-          "author": null,
-          "description": "I really didn't know about this feature. Why it is not mentioned anywhere?\n You can easily click on a file of most formats (Including audio and video formats) and press on the space button; then a little pop-up window will pop up and shows a preview of your file.\n ​\n Previewing an audio file in Nautilus\n It seems to be due to a project, called Sushi, being available through a package with a same name depending on your distro.\n    submitted by    /u/Simpleboy_ir  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/12o0afy/did_you_know_you_can_preview_audiovideo_files_in/",
-          "publishedOn": "2023-04-16T07:51:52.000Z",
-          "wordCount": 2187,
-          "title": "Did you know, you can preview audio/video files in Nautilus?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/12nwmvd/the_red_hat_model_only_worked_for_red_hat/",
-          "author": null,
-          "description": "submitted by    /u/CobaltOne  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/12nwmvd/the_red_hat_model_only_worked_for_red_hat/",
-          "publishedOn": "2023-04-16T05:23:43.000Z",
-          "wordCount": 2119,
-          "title": "The Red Hat model only worked for Red Hat",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/12nsd1z/telegraph_a_simple_morse_translator_by_fkinoshita/",
-          "author": null,
-          "description": "https://github.com/fkinoshita/Telegraph\n This application can write and decode Morse code.\n It's written in Python and uses libadwaita.\n Currently, you can get it on Flatpak and the AUR.\n    submitted by    /u/wanna_play_r5  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/12nsd1z/telegraph_a_simple_morse_translator_by_fkinoshita/",
-          "publishedOn": "2023-04-16T02:48:23.000Z",
-          "wordCount": 2133,
-          "title": "Telegraph - a simple Morse translator by fkinoshita.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/12nqi1w/fsearch_everything_voidtools_fast_searching/",
-          "author": null,
-          "description": "submitted by    /u/BenL90  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/12nqi1w/fsearch_everything_voidtools_fast_searching/",
-          "publishedOn": "2023-04-16T01:41:42.000Z",
-          "wordCount": 14831,
-          "title": "FSearch - Everything Voidtools Fast Searching Alternative for Linux",
-          "imageUrl": "https://external-preview.redd.it/IE4RKwbpszIIYV926pioOssSPhhTRilr4bgkndoQcSc.jpg?auto=webp&v=enabled&s=e0b329c0cb32425e62ee9e7d63f2387974824e61"
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/12no4w7/version_115_of_the_c_middleware_writer/",
-          "author": null,
-          "description": "Hi. I'm happy to announce that version 1.15 of the C++ Middleware Writer (CMW) is available with: \n Support for more data types for message lengths. Previously message lengths were always 4 bytes. I used this, for example, to reduce the size of the type used for message lengths between the front and middle tiers of the CMW from 4 bytes to 2 bytes.\n Support for std::variant.\n The middle tier is Linux-only now rather than POSIX/poll based. After porting the back tier of the CMW from kevent to io_uring, I decided to use io_uring in the middle tier also.\n Refactoring and bug fixes.\n As ever, suggestions for upcoming releases are welcome. One thing I've been thinking about is making the software available on flathub.\n    submitted by    /u/Middlewarian  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/12no4w7/version_115_of_the_c_middleware_writer/",
-          "publishedOn": "2023-04-16T00:13:53.000Z",
-          "wordCount": 13673,
-          "title": "Version 1.15 of the C++ Middleware Writer",
-          "imageUrl": "https://external-preview.redd.it/L1LSUaf_oFtsUpJ9T0WsFf4_d9dZIL7iVIhCDE60LQs.jpg?auto=webp&v=enabled&s=9d3cf9c736193709739a2d640108d144434d090f"
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/12nnqi4/lfcs_setting_up_a_dhcp_server/",
-          "author": null,
-          "description": "submitted by    /u/Homeowner_BBQ  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/12nnqi4/lfcs_setting_up_a_dhcp_server/",
-          "publishedOn": "2023-04-16T00:00:01.000Z",
-          "wordCount": 2112,
-          "title": "LFCS – Setting up a DHCP Server",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/12ndt7u/righting_the_ship/",
-          "author": null,
-          "description": "submitted by    /u/JoshStrobl  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/12ndt7u/righting_the_ship/",
-          "publishedOn": "2023-04-15T18:30:09.000Z",
-          "wordCount": 2573,
-          "title": "Righting the Ship",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/12ncjq1/announcing_mds_v0142_a_shredding_machine_for/",
-          "author": null,
-          "description": "submitted by    /u/kovacs_s_sleeve  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/12ncjq1/announcing_mds_v0142_a_shredding_machine_for/",
-          "publishedOn": "2023-04-15T17:49:05.000Z",
-          "wordCount": 2106,
-          "title": "Announcing mds v0.14.2: a shredding machine for markdown documents",
-          "imageUrl": null
         }
       ]
     },
@@ -9636,6 +9616,56 @@
       "feedUrl": "https://sspai.com/feed",
       "siteUrl": "https://sspai.com",
       "articles": [
+        {
+          "id": "https://sspai.com/prime/story/zouzhe-230515",
+          "author": "克莱德",
+          "description": "Android 14 在 Google I/O 上短暂亮相，戏份不多、但更新内容其实不少；以及近期的泛 Android 资讯速报：OPPO 芯片团队突然宣布解散，微软欲联合三星、Mozilla「围剿」Google 搜索以及 Pixel Fold 无法完全展开的小彩蛋。查看全文\n本文为会员文章，出自《单篇文章》，订阅后可阅读全文。",
+          "link": "https://sspai.com/prime/story/zouzhe-230515",
+          "publishedOn": "2023-05-15T11:19:10.000Z",
+          "wordCount": 966,
+          "title": "戏份不多、更新不少的 Android 14，以及近期泛 Android 资讯速报",
+          "imageUrl": "https://cdn.sspai.com/5/15/2023/article/807ea10b-4f02-343a-3960-459b87fe64b1.png"
+        },
+        {
+          "id": "https://sspai.com/post/79821",
+          "author": "少数派编辑部",
+          "description": "你可以通过文章目录快速跳转到你感兴趣的内容。如果发现了其它感兴趣的 App 或者关注的话题，也欢迎在评论区和我们进行讨论。查看全文",
+          "link": "https://sspai.com/post/79821",
+          "publishedOn": "2023-05-15T10:14:33.000Z",
+          "wordCount": 1018,
+          "title": "派评 | 近期值得关注的 App",
+          "imageUrl": "https://cdn.sspai.com/2023/5/15/article/fed8555e-1f7a-a89b-38ad-43388efdfa4f.png"
+        },
+        {
+          "id": "https://sspai.com/post/79795",
+          "author": "Microhoo",
+          "description": "当我们讨论「怎么样才能拍好」时，结果只能是被设备、技术和景象裹挟吗？可不可以让「自我」参与进来？查看全文",
+          "link": "https://sspai.com/post/79795",
+          "publishedOn": "2023-05-15T07:00:55.000Z",
+          "wordCount": 693,
+          "title": "在不同焦段里跋涉，把情绪拍给别人听：风光摄影指北",
+          "imageUrl": "https://cdn.sspai.com/2023/5/14/article/07f3202f-de82-8eeb-8d20-11ae330188c4.JPG"
+        },
+        {
+          "id": "https://sspai.com/post/79800",
+          "author": "玉树芝兰",
+          "description": "现在，你只需要和 Code Interpreter 对话，就能把这样的分析结果保质保量快速做出来，甚至比数据分析师基础入门水平都要靠谱，不亦乐乎？查看全文",
+          "link": "https://sspai.com/post/79800",
+          "publishedOn": "2023-05-15T03:30:29.000Z",
+          "wordCount": 803,
+          "title": "数据太多不知从何下手？ChatGPT 新功能帮你自动分析",
+          "imageUrl": "https://cdn.sspai.com/2023/05/14/7e760c34efca3ad8de9fb76be98d07d9.png"
+        },
+        {
+          "id": "https://sspai.com/post/79799",
+          "author": "少数派编辑部",
+          "description": "你可能错过的新鲜事推特任命新CEO5月12日，马斯克通过一则推文宣布，任命原NBCUniversal全球广告主管LindaYaccarino为推特新任CEO。马斯克称，Yaccarino将主要关注业务 ...查看全文",
+          "link": "https://sspai.com/post/79799",
+          "publishedOn": "2023-05-15T00:58:15.000Z",
+          "wordCount": 846,
+          "title": "派早报：推特任命新 CEO，特斯拉召回强制单踏板功能",
+          "imageUrl": "https://cdn.sspai.com/5/14/2023/article/5d7e6ac3-9338-39c3-bce7-4d8abd3c75d4.png"
+        },
         {
           "id": "https://sspai.com/post/79803",
           "author": "板斧",
@@ -10734,6 +10764,26 @@
       "siteUrl": "http://thepaper.cn",
       "articles": [
         {
+          "id": "https://www.thepaper.cn/newsDetail_forward_23077695",
+          "author": null,
+          "description": "去年六月，译经收尾，圣录（kethuvim）的后半部分即五小卷、《但以理书》和后史（两记一志）终于完工。自二零零二年写《创世记》故事，开始译注摩西五经，屈指算来，恰好做了二十年。\n本想趁热打铁，写一组文章，研究圣录诸篇的。内子道：还是先把《贝奥武甫》修订了吧，读者催问好久了。这个顺序也有道理，按照做学问先难后易的原则。记得钱默存先生有言，文字工作，编大部头教材简单，论文次之；注释稍难，但遇上拦路虎，尚可不注或作“待考”；最难的是翻译，连一个字都逃不过去。当然他说的是认真的翻译。\n于是把《贝奥武甫》的几种新老注本翻出来，读了一遍，顺带温习了相关历史文献。觉得译文可修订处不少，有些表达和专名需要重新斟酌，注评部分则应大大扩充。这里面有一个缘故。八十年代，经外文所好友申慧辉介绍，同北京三联沈昌文先生联系出书的时候，国内出版业还很困难，纸张紧缺。从前著书也不兴添许多注释，跟现在不一样。所以我注评只写了一百一十五条，沈先生照单全收，已经打破惯例了。\n\n《贝奥武甫：古英语史诗》，冯象译注，生活·读书·新知三联书店，1992年6月出版，221页，4.40元\n\n古英语史诗《贝奥武甫》是英国文学的开山鼻祖，盎格鲁-撒克逊文明的第一座丰碑，位列欧洲中世纪四大史诗之首（其余三部是《罗兰之歌》《尼伯龙之歌》《熙德之歌》），在英语世界，属于大学生中学生必读的经典。翻译经典，做好不容易；我的体会，是一辈子的事业。下面就说说这番事业的缘起和求学之路上的几位老师——都是几十年前的事了，这些天因为重读他们的著作，就一幕幕又回来眼前——尤其是我的博士导师班生（Larry D. Benson）先生，那“一颗幽默、洒脱又不失虔敬的灵魂”（《先知书》前言）。\n*\n我是六八届初中生，“老三届”的尾巴，只念了一年书就“文革”了。下乡去到云南“插队落户”，自学外语，当了中学教师。回想起来，少年不更事，却也不太怕艰苦和病痛…",
+          "link": "https://www.thepaper.cn/newsDetail_forward_23077695",
+          "publishedOn": "2023-05-15T03:02:08.000Z",
+          "wordCount": null,
+          "title": "冯象｜译经典·写时代·忆师恩",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.thepaper.cn/newsDetail_forward_23077710",
+          "author": null,
+          "description": "《贝奥武甫：古英语史诗》，冯象译注，生活·读书·新知三联书店，1992年6月出版，221页，4.40元\n\n《贝奥武甫》初版的译注，大约始于一九八七年秋，八九年春完成，次年元月定稿付梓。那段时间挺忙，一边作博士论文，一边翻译史诗，还给旅美学人办的《九州学刊》供稿，写一组论中世纪文学的书评。第一篇《他选择了上帝的光明》，评耶鲁英文系罗宾逊教授的新著（如今已是“贝学”经典）《贝奥武甫与同位文体》，日期作八七年九月，正是为译注做的准备。现在想想，年轻的时候，真是精力充沛。\n一九九二年暑假回国调研探亲，在上海与同学聚会。有位淘古董的老友跟我说，他囤了二十本《贝奥武甫》。我问有何道理。他说，看版权页，这书只印了三千册，现在严重缺纸，不会重印了。将来市面上价钱肯定大涨。一晃三十年过去，想必老友的预言没错。\n初版的装帧简朴大方，我蛮喜欢。还有一个属于个人偏好的理由：书是铅字排版的，笔画的粗细，字距跟标点的疏密，看上去比电脑排的舒服。这事可能多数读者不会留意，但我对色彩线条的细微变化比较敏感，小时候爱画画，养成的习惯。书刊何时全部变成电脑排版的，记不得了，网上说是一九九三年。前一阵子有则新闻，复旦还是哪一所大学，一老教授去世后藏书没地方搁，堆在弄堂口，让路人随意拿，然后就论斤卖了。我估计，再过三十年，存世的铅字版书籍，散落民间的就不多了。所以最后，这书的初版可能真有点收藏价值呢。\n此次增订，书的大结构未变。原以为两三个月即可竣事，做起来才发现远远不够，因为很多资料得重新查阅（当然温书也是乐趣）。这样，从去年八月起，史诗的译文从头至尾修改了三遍；注评扩充了四倍，覆盖所有重要的校补、异文异读、神话典故、历史背景、沙迦传说同疑难诗句的解读。五个附录（《血战费恩堡》残卷、贝学小辞典、重构大事年表、人名族名地名表和三国王室谱系）皆有订正或重写。参考书目也拉长了，方便有兴趣的读者检索；前言则换成一篇追忆师恩的文章（代序）。\n初版文字的电脑输入，是内子的功劳。她还站在普通读者的角度，提了不少修改建议。其中有一条未能完全采纳，就是补一篇论述史诗的长文。其实已经写了，但不太满意，觉得阐释过细，像烦琐的专业论文，便拆散了放在注评里了。希望这样注评会变得更有趣些。\n\nRockwell Kent绘《贝奥武甫》插图，平版印刷画，1931年。\n\n现代西方的许多思想同社会文化观念，主流宗教和政法制度，根子在中世纪而非希腊罗马。盎格鲁-撒克逊英国（449-1066）的文学遗产，便是西方中世纪的一个重要传统。这一领域在中国仍是冷门，关注和研究不多。有历史的原因，不赘述了。但《贝奥武甫》是个例外，在Z世代（网生代）中间知名度颇高。这个我原先不知道，是回国服务以后学生告诉我的。他们都看过一位名叫“贝奥武夫”的中洲英雄的连环漫画和数码电影，或者打过他搏巨魔屠火龙的电子游戏。\n今天是世界读书日。读书写书是我的工作。然而我想，若是可以年轻“五十个冬天”，恐怕也会忍不住看一天动漫、体验会儿电游吧——如果人必须去到那儿才能破解魔咒，寻出金环的宝藏，如老托尔金那样，流连忘返在少年人的心里面，那一片古剑与火龙的故乡。\n二零二三年四月二十三日于铁盆斋\n《贝奥武甫：古英语史诗》，冯象译注，生活·读书·新知三联书店，1992。",
+          "link": "https://www.thepaper.cn/newsDetail_forward_23077710",
+          "publishedOn": "2023-05-15T03:02:08.000Z",
+          "wordCount": null,
+          "title": "冯象｜《贝奥武甫》增订版缀言",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.thepaper.cn/newsDetail_forward_23039649",
           "author": null,
           "description": "布莱恩·塔玛纳哈（章静绘）\n\n法律秩序的多样性遍及我们考察的每一个社会领域。国家法、国际法、跨国法、习惯法、宗教法、原住民法等多重法律形态的彼此共存，亦即法律多元主义（legal pluralism）现象，是人类社会从古至今的一个重要事实。但在法理学特别是法哲学研究中，占据主导地位的理论范式，对此现象往往视而不见。近日，国际知名法理学家、美国圣路易斯华盛顿大学（Washington University in St. Louis）校级教授布莱恩·塔玛纳哈（Brian Z. Tamanaha）有关这一主题的集大成之作《法律多元主义阐释：历史、理论与影响》（Legal Pluralism Explained: History, Theory, Consequences, Oxford University Press, 2021）的中译本由商务印书馆推出。《上海书评》邀请该书译者同济大学法学院助理教授赵英男采访了布莱恩·塔玛纳哈教授，请他谈谈有关法律多元主义、法律现实主义以及一般法理学研究等议题。\n\n《法律多元主义阐释》，[美]布莱恩·塔玛纳哈著，赵英男译，商务印书馆，2023年3月出版，368页，85.00元\n\n您在《法律多元主义阐释》中提到，此书的写作已逾三十年之久，您最具影响力的文章中也有多篇与法律多元主义相关。您可否谈谈为何这个话题令人着迷？\n布莱恩·塔玛纳哈：法律多元主义令人着迷的原因主要有两个。首先，一切社会中都包含着某种形态的法律多元主义，都包含着内在于或外在于其国家法律体系的法律多元主义。多重法律体系的共存带来了机会以及问题。其次，直到近来，法哲学家都一直基于统一的国家法体系（外加对于国际法的一些思考）这一范式来阐述法律理论，这在很大程度上忽略了法律多元主义的存在。由于法律理论的目标是理解法律是什么以及法律做了什么，并且每个社会中都存在着法律的多元性，法律理论就…",
@@ -11102,16 +11152,6 @@
           "wordCount": 1304,
           "title": "王丁｜《劳费尔著作集》目录的汉译与劳费尔其人其学",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.thepaper.cn/newsDetail_forward_22689055",
-          "author": null,
-          "description": "刘奕（章静绘）\n\n上海大学中文系教授刘奕多年来潜心于陶渊明研究，近日，其论著《诚与真——陶渊明考论》的新版由上海古籍出版社出版，该书就陶渊明的生平、作品、精神世界、文学风貌中“重要而又文献足征”的问题进行了全面深入的探讨。刘奕认为该书与其说是他的陶渊明研究，毋宁视为他对陶渊明的理解，而“诚之以求真”就是他对陶渊明人生哲学及实践的概括。在接受《上海书评》的专访中，他说：“我认为陶渊明所思所行始终围绕如何安顿身心，如何获得自由展开。我想知道的是，他究竟是如何从思想资源中汲取所需，如何去实践，最后才能安顿身心，在作品中呈现出一个既笃实诚悫，又真率潇洒的形象。”\n\n《诚与真：陶渊明考论》，刘奕著，上海古籍出版社2023年2月出版，538页，108.00元\n\n先从书名说起吧，这本《陶渊明考论》的主书名“诚与真”来自特里林的《诚与真》，在那本书里讨论到了关于作者在作品中表达出来的情感与实际情感之间是否一致的问题，而在您对陶渊明的考论里我是不是可以理解为您觉得他其人其文都是“诚且真”的？\n刘奕：如果要更准确地表达，这本书的名字应该叫“诚之以求真”。我很喜欢特里林的《诚与真》，喜欢他在保守与自由之间博通圆融的手眼，于是借用这个书名，有向特里林“致敬”的意思。在特里林那里，诚是真诚，真是真实，他认为二者在西方语境中其实是贯穿现代性“自我”的基本问题。在十六十七世纪，社会性自我最初被认识到之后，人们希望保持外在的社会自我与内在的精神自我的统一，这种内外统一就是真诚。到了十八世纪，这种内外统一产生了冲突与分裂，精神自我开始渴望突破社会的束缚。于是一种新的卢梭式的真诚观出现，它要忠于的是那个不变的精神自我。但这个不变的灵魂式的自我却有惺惺作态的嫌疑。于是到了十九世纪，文学家开始在生命和生活的真实状态中去发掘一个真实的自我，去揭示出包裹生命的种种虚饰，以此完成文化上的自我重塑。这个重塑的自我既是觉醒…",
-          "link": "https://www.thepaper.cn/newsDetail_forward_22689055",
-          "publishedOn": "2023-04-16T05:02:09.000Z",
-          "wordCount": 55,
-          "title": "刘奕谈陶渊明的真诚与自由",
-          "imageUrl": null
         }
       ]
     },
@@ -11139,16 +11179,6 @@
           "wordCount": 523,
           "title": "书见：自由地上传、整理和导出书摘",
           "imageUrl": null
-        },
-        {
-          "id": "https://bookfere.com/?p=48802",
-          "author": "书伴",
-          "description": "前面探索过 Kindle 阅读器增加罕见生僻字及替换原生系统字体过程，最近我又探索了多看阅读安卓 APP 及小米多看电纸书阅读器的原生字体运行原理及替换过程，下面略写一二。",
-          "link": "https://bookfere.com/post/1061.html",
-          "publishedOn": "2023-04-16T13:09:36.000Z",
-          "wordCount": 555,
-          "title": "[网友投稿] 多看未root下增加罕见生僻字及替换系统字体",
-          "imageUrl": null
         }
       ]
     },
@@ -11174,6 +11204,36 @@
       "feedUrl": "https://linux.cn/rss.xml",
       "siteUrl": "https://linux.cn/",
       "articles": [
+        {
+          "id": "https://linux.cn/article-15816-1.html?utm_source=rss&utm_medium=rss",
+          "author": "linux@linux.cn (linux)",
+          "description": "某种程度上亚马逊 OpenSearch 成功了\n\r\n2021 年，开发 Elasticsearch 和 Kibana 的 Elastic 公司宣布更改许可证，此举旨在禁止云服务商如 AWS 使用它的软件作为一种服务提供给客户，但这也意味着这两个软件不再是开源软件。发生此事的原因是，Elastic 认为云服务商只使用开源软件，而不向开源软件做贡献。AWS 随后宣布创建 ElasticSearch 开源分支 OpenSearch，承诺会向其提交贡献。如今，OpenSearch 下载量突破 1 亿，包括 AWS 员工在内的 496 名贡献者递交了 8760 个拉取请求，Adobe 也决定在其套件中用 OpenSearch 取代 Elasticsearch，它甚至还进入了 DB-Engines 数据库流行度排名前五十。\n\r\n\r\n消息来源：Info World\n\r\n\r\n\r\n老王点评：我是没想到 OpenSearch 能成功。当时在我看来，以 AWS 对开源主要是利用的态度来看，这必然是一个失败的产品。但是，没想到 AWS 在悄悄变化。之前，我们报道过，AWS 已经是 Postgresql 前四的贡献者。所以，这不是 AWS 的胜利，而是开源的胜利。当然，另一面，Elastic 的境况似乎也不错，虽然它的许可证导致它的产品不再是符合定义的“开源”产品，但是其实还是公开源代码的。\n\r\n\r\n\n\r\nKDE Plasma 6 修改默认设置，默认双击打开\n\r\nKDE 开发者发布的一篇博文描述了为 Plasma 桌面环境所做的工作。其中一个重点是更好的默认设置，以改善开箱即用的用户体验。博文中提到，Plasma 6 将默认用双击而不是单击来打开文件和文件夹，尽管 Linux 用户已经习惯了单击，但这对从 Windows 迁移过来的用户更友好；Wayland 成为 Plasma 6 的默认会话类型；默认使用缩略图网格任务切换器等等。此外，KDE 开发者还吐槽了微软在 Windows 11 中公然抄袭了 Plasma 的浮动面板，但是，人们把 Plasma 看作是 Windows 的廉价克隆。\n\r\n\r\n消息来源：Slashdot\n\r\n\r\n\r\n老王点评：对于 Linux 上的桌面环境，就有这样的两难处境：像 Windows 吧，被人说仿品；不像吧，被人说用户体验糟糕。先提出创新吧，被嫌弃，Windows 用了，反而成了抄袭者。唉，真是难啊。\n\r\n\r\n\n\r\n人工智能可以比医生早 3 年预测出胰腺癌\n\r\n根据发表在《自然》杂志上的研究，人工智能比人类医生做出同样的诊断要早三年时间。胰腺癌是致命的；五年的存活率平均为 12%。癌症在人体中逐渐发展，往往经过多年，而且相当缓慢，直到疾病发生。人工智能系统试图从人体中可能与这种逐渐变化有关的迹象中学习。研究人员在数百万份医疗记录上训练了人工智能算法。该研究仍处于早期阶段，而且该软件还不能用于进行筛查。在进行试验之前，还需要进行改进，人工智能在未来可能会成为一种有价值的筛查工具。\n\r\n\r\n消息来源：The Register\n\r\n\r\n\r\n老王点评：人工智能不只是一个对话机器人，它真正改变世界的地方是它能在浩如烟海的数据中找到人类发现不了的规律。十来年前，我曾经做过根据先验数据给出健康和疾病预测评估的工作，要是有现在的人工智能的研究，可能会有更有价值的评估结果吧。",
+          "link": "https://linux.cn/article-15816-1.html?utm_source=rss&utm_medium=rss",
+          "publishedOn": "2023-05-15T12:31:00.000Z",
+          "wordCount": 518,
+          "title": "硬核观察 | 硬核观察 #1002 某种程度上亚马逊 OpenSearch 成功了",
+          "imageUrl": null
+        },
+        {
+          "id": "https://linux.cn/article-15815-1.html?utm_source=rss&utm_medium=rss",
+          "author": "linux@linux.cn (linux)",
+          "description": "在本指南中，你将了解如何在 Ubuntu/Debian Linux 发行版中为 apt 命令设置代理。\n\r\n\r\n代理服务器是位于请求资源的客户端系统或最终用户与资源本身之间的中间服务器。在大多数情况下，代理服务器充当最终用户和互联网之间的网关。\n\r\n对于组织和企业环境，代理服务器提供了许多好处。它通过阻止被认为会影响员工工作效率的网站来控制互联网的使用。它还通过数据加密增强隐私并提高组织的安全性。\n\r\n有几种方法可以为 apt 命令设置代理，让我们直接进入。\n\r\n注意：为了演示，我们将使用 Ubuntu 22.04。\n\r\n使用代理文件为 APT 配置代理\n\r\n为 apt 命令配置代理的最简单方法是创建一个 proxy.conf 文件，如下：\n\r\n$ sudo vi /etc/apt/apt.conf.d/proxy.conf\r\n\n\r\n对于没有用户名和密码的代理服务器，添加以下条目，如下：\n\r\n对于 HTTP 代理，添加以下条目：\n\r\nAcquire::http::Proxy \"http://proxy-IP-address:proxyport/\";\r\n\n\r\n对 HTTPS 代理执行相同的操作：\n\r\nAcquire::https::Proxy \"http://proxy-IP-address:proxyport/\";\r\n\n\r\n例子：\n\r\n$ cat  /etc/apt/apt.conf.d/proxy.conf\r\nAcquire::http::Proxy \"http://192.168.56.102:3128/\";\r\nAcquire::https::Proxy \"http://192.168.56.102:3128/\";\r\n\n\r\n如果你的代理服务器需要用户名和密码详细信息，请按以下方式添加：\n\r\nAcquire::http::Proxy \"http://username:pa…",
+          "link": "https://linux.cn/article-15815-1.html?utm_source=rss&utm_medium=rss",
+          "publishedOn": "2023-05-15T10:45:00.000Z",
+          "wordCount": 575,
+          "title": "技术 | 如何为 APT 命令设置代理",
+          "imageUrl": null
+        },
+        {
+          "id": "https://linux.cn/article-15814-1.html?utm_source=rss&utm_medium=rss",
+          "author": "linux@linux.cn (linux)",
+          "description": "为你的终端安装最好的字体，以改善外观和可读性，并让你的终端体验变得有趣。\n\r\n\r\n选择完美的字体对很多事情都至关重要，无论你是程序员、系统管理员，还是喜欢终端的 Linux 用户。\n\r\n更改终端字体 可帮助你实现以下目标：\n\r\n\r\n美观的终端外观\n\r\n增强可读性\n\r\n减少眼睛疲劳\n\r\n\r\n听起来不错。但是如何选择完美的字体呢？这里有成百上千种选择。\n\r\n对于初学者，你可以选择 针对技术文档或编码优化的字体，因为它们具有良好的可读性。接下来，你可以筛选出 FOSS 项目（如果这对你很重要）并检查这些 字体是否可以在高分辨率显示器上很好地缩放（根据你的需求）。\n\r\n不要担心，为了让你有一个良好的开端，我们选择了一些最适合编码的字体，提供良好的可读性，同时看起来也不错。\n\r\n1、Cascadia\n\r\n\n\r\nCascadia 是微软提供的一种字体，默认用于 最好的开源编辑器 之一 VSCode。\n\r\n它包括编码连字支持，并提供三种变体：标准、等宽和支持嵌入式 PowerLine 符号的版本。\n\r\n2、Fira Code\n\r\n\n\r\nFira Code 是一种等宽字体，具有编码连字和 ASCII 支持。\n\r\n它会定期进行微调以支持字母对和更好的标点符号输出。\n\r\n3、Hack\n\r\n\n\r\nHack 是另一种为源代码量身定制的等宽字体。\n\r\n你可以获得 ASCII、PowerLine 支持以及粗体、斜体和粗斜体等常用样式。\n\r\n如果你注意到它的 GitHub 页面，它们为某些 Linux 发行版提供了改进字体渲染的说明。\n\r\n4、Inconsolata\n\r\n\n\r\nInconsolata 是一种清晰的等宽字体，具有出色的可读性。它是谷歌字体系列之一。\n\r\n对于 终端仿真器 和编码用途，该字体提供了几种有用的样式。\n\r\n5、Iosevka\n\r\n\n\r\nIosevka 是一种外观简洁的多功能开源字体，用于编写代码并在终端和技术文档中使用。\n\r\n你可以从它的 GitHub 页面获取其他平台（包括 Linux）的安装说明。\n\r\n6、JetBrains Mono\n\r\n\n\r\nJetBrains Mono 是专为开发人员量身定制的自由开源字体。\n\r\n顾名思义，它是流行的开发者工具 JetBrains 使用的默认字体。\n\r\n7、Meslo NF\n\r\n\n\r\nMeslo NF 是一种可以在终端中很好地支持 ASCII 和图标的字体。\n\r\n作为 GitHub 上 Nerd Fonts 集的一部分，它提供了用于编码和终端的漂亮字体。你可以在它的 GitHub 发布页 的资源列表中找到该字体。\n\r\n它在 Zsh、Fish 和其他 Shell 中看起来很棒。\n\r\n8、Monoid\n\r\n\n\r\nMonoid 是另一种旨在用于编码的开源字体。有通常的连字支持和深色浅色变体，它应该是终端的不错选择。\n\r\n9、Ubuntu Monospace\n\r\n\n\r\n我们都喜欢 Ubuntu 的默认字体 Ubuntu Monospace。它针对多种语言、高分辨率屏幕和良好的可读性进行了优化。\n\r\n如果你已经使用 Ubuntu，则无需单独安装它。\n\r\n10、SourceCode Pro\n\r\n\n\r\nSource Code Pro 很好地融合了一切需求。虽然它针对编码环境进行了优化，并由 Adobe 开发，但它也为终端提供了具体良好可读性和美观性。\n\r\n如何安装这些字体？\n\r\n你可以通过下载 TTF 或 OTF 文件轻松安装字体，然后双击它们以使用字体查看器打开它进行安装。\n\r\n\n\r\n要同时安装多种字体，你可以在主目录中新建一个 .fonts 文件夹，并将字体文件放在那里。你可以查看我们关于 安装新字体 的指南，了解更多详细信息。\n\r\n更多自定义终端的方法\n\r\n这里有一些自定义终端外观的 方法。\n\r\n还有一个有趣的 工具，可以根据你的桌面墙纸自动更改终端的配色方案。多么酷啊！\n\r\n💬 名单上你最喜欢的是什么？你使用什么终端字体？\n\r\n（题图：MJ/e5ae0ee3-9ea2-4136-a000-8fe681480356）\n\r\n\r\nvia: https://itsfoss.com/fonts-linux-terminal/\n\r\n作者：Ankush Das 选题：lkxed 译者：geekpi 校对：wxy\n\r\n本文由 LCTT 原创编译，Linux中国 荣誉推出",
+          "link": "https://linux.cn/article-15814-1.html?utm_source=rss&utm_medium=rss",
+          "publishedOn": "2023-05-15T10:25:04.000Z",
+          "wordCount": 565,
+          "title": "技术 | 10 种漂亮的 Linux 终端字体",
+          "imageUrl": null
+        },
         {
           "id": "https://linux.cn/article-15813-1.html?utm_source=rss&utm_medium=rss",
           "author": "linux@linux.cn (linux)",
@@ -12023,36 +12083,6 @@
           "wordCount": 667,
           "title": "TUXEDO Stellaris 16（Gen5）是目前所能找到的终极 Linux 笔记本电脑",
           "imageUrl": null
-        },
-        {
-          "id": "https://linux.cn/article-15728-1.html?utm_source=rss&utm_medium=rss",
-          "author": "linux@linux.cn (linux)",
-          "description": "马斯克已经成立了一家新的人工智能公司 X.AI\n\r\n据报道，在 倡议暂停 AI 研究之前，埃隆·马斯克上个月已经注册了一个新的公司，X.AI，并购买了数千块高端 GPU 以开展研究。在被问及他购买的 GPU 时，他没有提及他建立一个人工智能公司的计划，他说：“在这一点上，似乎每个人和他们的狗都在购买 GPU”。\n\r\n\r\n消息来源：The Verge\n\r\n\r\n\r\n老王点评：这就真不太地道了。\n\r\n\r\n\n\r\nFSF 暗指谷歌为了自己的专有格式而放弃 JEPG-XL\n\r\n自由软件基金会（FSF）撰文称，“谷歌决定废除 JPEG-XL 强调了浏览器选择的必要性”。谷歌于 2 月份废弃了 JPEG-XL 图像格式，转而支持它自己的专利 AVIF 格式。谷歌的理由是“整个生态系统没有足够的兴趣来继续试验 JPEG-XL”，而无视社区的恳请，并没有对用户的担忧做出回应。JPEG-XL 的删除问题已经成为 Chromium 项目历史上第二大 “明星” 问题。\n\r\n\r\n消息来源：FSF\n\r\n\r\n\r\n老王点评：任何浏览器一家独大都会变得邪恶，IE 如此、Chrome 如此、Safari 如此。\n\r\n\r\n\n\r\nPython 基金会对欧盟拟议的网络安全法案表示担忧\n\r\nPython 基金会（PSF）审查了欧盟拟议的《网络弹性法》和《产品责任法》，并报告说 “这些问题使我们组织的使命和开源软件社区的健康受到威胁”。PSF 执行董事认为这些法案“没有区分从未因提供软件而获得报酬的独立作者，和销售产品以换取最终用户付款的企业技术巨头”，“如果拟议的法律按目前的条款执行，开源组件的作者可能要为他们的组件被应用于别人的商业产品的方式承担法律和财务责任。&rdquoSF 认为，欧盟立法者应该为服务于公共利益的公共软件库以及在公共资源库上托管软件包的组织和开发者提供明确的豁免。\n\r\n\r\n消息来源：The Register\n\r\n\r\n\r\n老王点评：虽然只是欧盟的法案，但是却可能损坏了开源社区的根基。",
-          "link": "https://linux.cn/article-15728-1.html?utm_source=rss&utm_medium=rss",
-          "publishedOn": "2023-04-16T09:46:05.000Z",
-          "wordCount": 472,
-          "title": "硬核观察 #973 马斯克已经成立了一家新的人工智能公司 X.AI",
-          "imageUrl": null
-        },
-        {
-          "id": "https://linux.cn/article-15727-1.html?utm_source=rss&utm_medium=rss",
-          "author": "linux@linux.cn (linux)",
-          "description": "让我们点评一些最好的 Arch Linux GUI 包管理器。选择最符合你需求的。\n\r\n\r\n由于其可定制性、灵活性和尖端功能，Arch Linux 是高级用户和开发人员中最受欢迎和使用最广泛的 Linux 发行版之一。\n\r\n由于其极简设计，在 Arch Linux 中安装软件的主要方式是使用终端通过命令行界面 （CLI）。\n\r\n但并不是每个人都喜欢使用终端。基于图形用户界面（GUI）的包管理器是这些人的必备程序。有几个可选的包管理器。让我们了解一些比较流行的。\n\r\n在 Arch Linux 上寻找基于 GUI 的包管理器要考虑什么？\n\r\n在为 Arch Linux 选择基于 GUI 的包管理器时，必须考虑几个因素：\n\r\n首先，它应该有一个干净易用的界面，对初学者来说很直观。\n\r\n其次，它应该支持所有包管理操作，例如安装、删除、更新和搜索包。\n\r\n第三，它应该具有高级功能，例如依赖项解析和对 AUR 包的支持。\n\r\n最后，它应该是轻量级的，不会占用太多的系统资源。\n\r\nArch Linux 的最佳 GUI 包管理器\n\r\n1、Pamac\n\r\n此列表中的第一个 GUI 包管理器是 Pamac，它由 Manjaro Linux 团队开发。具有漂亮且用户友好的界面，使其超级易于使用。\n\r\n其直观的界面使用户可以轻松安装、删除和更新软件包。它建立在支持 AUR 的 libalpm 之上。Pamac 还支持 Snap 和 Flatpak 的 appstream:/// 协议。因此，你可以直接从 appstream 链接启动该应用安装程序。此外，它还具有高级功能，例如依赖项解析和对 AUR 包的支持。此外，Pamac 是轻量级的，不会占用太多系统资源。\n\r\n\n\r\n使用其 GUI，你可以浏览 Arch 仓库，还可以根据其功能查看应用。Pamac GUI 中有单独的部分，可以使你能够删除和卸载…",
-          "link": "https://linux.cn/article-15727-1.html?utm_source=rss&utm_medium=rss",
-          "publishedOn": "2023-04-16T07:28:00.000Z",
-          "wordCount": 689,
-          "title": "Arch Linux 的最佳 GUI 包管理器",
-          "imageUrl": null
-        },
-        {
-          "id": "https://linux.cn/article-15726-1.html?utm_source=rss&utm_medium=rss",
-          "author": "linux@linux.cn (linux)",
-          "description": "OpenBSD 7.3 正式发布，有大量的软件包更新和改进。\n\r\n\r\n\n\r\nOpenBSD 7.3 已经正式 发布，这是该系统的第 54 个版本。这个最新的版本建立在 OpenBSD 令人印象深刻的傲人记录之上 —— 它是一个安全可靠的操作系统，在二十多年的使用过程中，在默认安装中只发现了两个远程漏洞。\n\r\n与以前的版本一样，OpenBSD 7.3 在广泛的系统领域提供了显著的改进。其中包括内核的改进，如增加了 waitid(2)、pinsyscall(2)、 getthrname(2) 和 setthrname(2) 函数，以及 waitid(2) 的 WTRAPPED 选项，等等。此外，新的内核 autoconf_serial sysctl(8) 允许用户区监控内核设备树状态的变化。\n\r\n直接渲染管理器和图形驱动已经更新，引入了对 Ryzen 7000 “Raphael” 和 Ryzen 7020 和 7045 系列处理器以及 Radeon RX 7900 XT/XTX “Navi 31” 的支持，并改进了苹果芯片笔记本电脑和联想 x13s 的问题的解决方案。\n\r\n此外，还改进了对网络硬件的支持，例如启用了 em(4) IPv4、 TCP 和 UDP 校验卸载，以及 82575、 82576、 i350 和 i210 芯片组设备上的硬件 VLAN 标记， 以及改进了 mcx(4) 性能。\n\r\n\n\r\n除了上述的改进，OpenBSD 7.3 还包括一系列新的或改进的硬件和软件对 端口源码包Port 和 二进制软件包Package 的支持。一些来自外部供应商的主要组件包括 Xenocara、LLVM/Clang、GCC、Perl、NSD、Unbound、Ncurses、Binutils、Gdb、Awk 和 Expat。\n\r\nOpenBSD 以最安全、最可靠的操作系统之一而闻名…",
-          "link": "https://linux.cn/article-15726-1.html?utm_source=rss&utm_medium=rss",
-          "publishedOn": "2023-04-16T07:06:00.000Z",
-          "wordCount": 652,
-          "title": "OpenBSD 7.3 发布，包含新功能和更新",
-          "imageUrl": null
         }
       ]
     },
@@ -12278,6 +12308,66 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/931662/",
+          "author": "corbet",
+          "description": "In a remotely presented, memory-management-track session at the 2023 Linux Storage, Filesystem,\nMemory-Management and BPF Summit, Frank van der Linden pointed out that\nthe line dividing resources controlled by the kernel from those managed by\nuser space has moved back and forth over the years.  He is currently\ninterested in making it possible for user space to take more control over\nthe management of memory resources.  A proposal was discussed in general\nterms, but it will require some real scrutiny on its way toward the\nmainline, if it ever gets there.",
+          "link": "https://lwn.net/Articles/931662/",
+          "publishedOn": "2023-05-15T20:14:09.000Z",
+          "wordCount": null,
+          "title": "[$] User-space control of memory management",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/931930/",
+          "author": "corbet",
+          "description": "Sourceware.org, which has long played host to many important projects, has\nannounced that it has become a member project of the Software Freedom\nConservancy — a move that has been in the\nworks for some time.\n\n\n\tRecent discussions have inspired the Sourceware volunteers to think\n\tcarefully about the future and succession of the leadership for\n\tthis important hosting project. By joining SFC, Sourceware gains\n\taccess to strategic advice and governance expertise to recruit new\n\tvolunteers and raise funds to support work on Sourceware\n\tinfrastructure.\n\n\nSee this article for more background on\nthose recent discussions.",
+          "link": "https://lwn.net/Articles/931930/",
+          "publishedOn": "2023-05-15T18:51:15.000Z",
+          "wordCount": 1080,
+          "title": "Sourceware becomes an SFC member project",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/931658/",
+          "author": "corbet",
+          "description": "Overcommitting  memory is a longstanding tradition in the Linux world\n(and beyond); it is rare that an application uses all of the memory\nallocated to it, so overcommitting can help to improve overall memory\nutilization.  In situations where memory has been overcommitted, though, it\nmay be necessary to respond quickly to ensure that applications have the\nmemory they actually need, even when those needs change.  At the 2023 Linux Storage, Filesystem,\nMemory-Management and BPF Summit, T.J. Alumbaugh (in the room) and\nYuanchu Xie (remotely)\npresented a new mechanism intended to help hosts provide containerized\nguests with the memory resources they need.",
+          "link": "https://lwn.net/Articles/931658/",
+          "publishedOn": "2023-05-15T15:43:44.000Z",
+          "wordCount": null,
+          "title": "[$] Memory overcommit in containerized environments",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/931528/",
+          "author": "corbet",
+          "description": "Virtual-machine hosting can be a fickle business; once a virtual machine\nhas been placed on a physical host, there may arise a desire to move it to\na different host.  The problem with migrating virtual machines, though, is\nthat there is a period during which the machine is not running; that can be\ndisruptive even if it is brief.  At the 2023 Linux Storage, Filesystem,\nMemory-Management and BPF Summit, Dragan Stancevic, presenting\nremotely, showed how CXL\nshared memory can be used to migrate virtual machines with no offline time.",
+          "link": "https://lwn.net/Articles/931528/",
+          "publishedOn": "2023-05-15T15:39:45.000Z",
+          "wordCount": null,
+          "title": "[$] Live migration of virtual machines over CXL",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/931892/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (golang-websocket, kernel, postgresql-11, and thunderbird), Fedora (firefox, kernel, libreswan, libssh, tcpreplay, and thunderbird), SUSE (dcmtk, gradle, libraw, postgresql12, postgresql13, postgresql14, and postgresql15), and Ubuntu (firefox, nova, and thunderbird).",
+          "link": "https://lwn.net/Articles/931892/",
+          "publishedOn": "2023-05-15T14:11:36.000Z",
+          "wordCount": 307,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/931829/",
+          "author": "corbet",
+          "description": "The second 6.4 kernel prepatch is out for\ntesting.  \"This being rc2, it's been a fairly calm week as people are\nonly starting to find any issues from the merge window, but it all looks\nfine.\"",
+          "link": "https://lwn.net/Articles/931829/",
+          "publishedOn": "2023-05-15T01:30:03.000Z",
+          "wordCount": 149,
+          "title": "Kernel prepatch 6.4-rc2",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/931789/",
           "author": "corbet",
@@ -13085,6 +13175,56 @@
       "feedUrl": "https://rsshub.app/github/file/guanguans/favorite-link/master/README.md",
       "siteUrl": "https://github.com/guanguans/favorite-link/commits/master/README.md",
       "articles": [
+        {
+          "id": "https://github.com/guanguans/favorite-link/commit/d05758c1305e7ddbaeca3a6ff093852663167d11",
+          "author": "guanguans",
+          "description": "Soyhuce/next-ide-helper: Laravel ide helper rebuilt under steroids",
+          "link": "https://github.com/guanguans/favorite-link/commit/d05758c1305e7ddbaeca3a6ff093852663167d11",
+          "publishedOn": "2023-05-15T02:36:56.000Z",
+          "wordCount": 436,
+          "title": "Soyhuce/next-ide-helper: Laravel ide helper rebuilt under steroids",
+          "imageUrl": "https://opengraph.githubassets.com/a5d178856a0d6e0cfa433c16ca30e92140d1b5b3eb0b3c74cfaddbd617f16d42/guanguans/favorite-link/commit/d05758c1305e7ddbaeca3a6ff093852663167d11"
+        },
+        {
+          "id": "https://github.com/guanguans/favorite-link/commit/85eb49eece34290c3be0f34c12155a0eaa744b23",
+          "author": "guanguans",
+          "description": "boz/kail: kubernetes 日志查看器",
+          "link": "https://github.com/guanguans/favorite-link/commit/85eb49eece34290c3be0f34c12155a0eaa744b23",
+          "publishedOn": "2023-05-15T02:04:53.000Z",
+          "wordCount": 423,
+          "title": "boz/kail: kubernetes 日志查看器",
+          "imageUrl": "https://opengraph.githubassets.com/532d8fa831cae2ca2cf5268dafc9054ec2efddbd9282ce20e8bbf8d76a663334/guanguans/favorite-link/commit/85eb49eece34290c3be0f34c12155a0eaa744b23"
+        },
+        {
+          "id": "https://github.com/guanguans/favorite-link/commit/56bc050009df2eabf01764e7d36d053b837e89a9",
+          "author": "guanguans",
+          "description": "pxp-lang/statan: PHP 和 PXP 的静态分析器。",
+          "link": "https://github.com/guanguans/favorite-link/commit/56bc050009df2eabf01764e7d36d053b837e89a9",
+          "publishedOn": "2023-05-15T02:02:57.000Z",
+          "wordCount": 427,
+          "title": "pxp-lang/statan: PHP 和 PXP 的静态分析器。",
+          "imageUrl": "https://opengraph.githubassets.com/309e1196d3dafe5445fc64273246263c3e8d54677df3c63b9797110a3497bd9a/guanguans/favorite-link/commit/56bc050009df2eabf01764e7d36d053b837e89a9"
+        },
+        {
+          "id": "https://github.com/guanguans/favorite-link/commit/bf11270149c39b6a918d72bfc6755c9836b760b2",
+          "author": "guanguans",
+          "description": "ferranfg/midjourney-discord-api-php: 通过 Discord API 使用 Midjourney Bot 生成图像。",
+          "link": "https://github.com/guanguans/favorite-link/commit/bf11270149c39b6a918d72bfc6755c9836b760b2",
+          "publishedOn": "2023-05-15T02:02:00.000Z",
+          "wordCount": 427,
+          "title": "ferranfg/midjourney-discord-api-php: 通过 Discord API 使用 Midjourney Bot 生成图像。",
+          "imageUrl": "https://opengraph.githubassets.com/bfec6ccc80c29b7674a91fcd5feceab323dda76107ea31988250b678f1f1e5ec/guanguans/favorite-link/commit/bf11270149c39b6a918d72bfc6755c9836b760b2"
+        },
+        {
+          "id": "https://github.com/guanguans/favorite-link/commit/4d4dac4a651be0d5e66e25bb58790ada458193f1",
+          "author": "guanguans",
+          "description": "phpactor/language-server: 通用语言服务器",
+          "link": "https://github.com/guanguans/favorite-link/commit/4d4dac4a651be0d5e66e25bb58790ada458193f1",
+          "publishedOn": "2023-05-15T02:01:14.000Z",
+          "wordCount": 406,
+          "title": "phpactor/language-server: 通用语言服务器",
+          "imageUrl": "https://opengraph.githubassets.com/1c26a84e496019eb34d658c807af53304cbb1bdb3f55e3e543a8612fa046bba8/guanguans/favorite-link/commit/4d4dac4a651be0d5e66e25bb58790ada458193f1"
+        },
         {
           "id": "https://github.com/guanguans/favorite-link/commit/56f3f0cd1404da3ad1f9ad6cb9d6170deba4ca5e",
           "author": "guanguans",
