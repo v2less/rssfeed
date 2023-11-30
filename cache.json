@@ -23,6 +23,206 @@
       "siteUrl": "https://news.ycombinator.com/",
       "articles": [
         {
+          "id": "https://news.ycombinator.com/item?id=38467079",
+          "author": "geox",
+          "description": "Article URL: https://bioengineer.org/understanding-rapid-tendon-regeneration-in-newts-may-one-day-help-human-athletes/\nComments URL: https://news.ycombinator.com/item?id=38467079\nPoints: 6\n# Comments: 1",
+          "link": "https://bioengineer.org/understanding-rapid-tendon-regeneration-in-newts-may-one-day-help-human-athletes/",
+          "publishedOn": "2023-11-29T23:46:02.000Z",
+          "wordCount": 4443,
+          "title": "Understanding rapid tendon regeneration in newts may one day help human athletes",
+          "imageUrl": "https://i0.wp.com/bioengineer.org/wp-content/uploads/2023/11/Understanding-rapid-tendon-regeneration-in-newts-may-one-day-help.jpeg?fit=700%2C462&ssl=1"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=38465895",
+          "author": "martinlaz",
+          "description": "Article URL: https://www.ecns.cn/news/sci-tech/2023-11-29/detail-ihcvixpi0428703.shtml\nComments URL: https://news.ycombinator.com/item?id=38465895\nPoints: 28\n# Comments: 5",
+          "link": "https://www.ecns.cn/news/sci-tech/2023-11-29/detail-ihcvixpi0428703.shtml",
+          "publishedOn": "2023-11-29T21:58:13.000Z",
+          "wordCount": 1180,
+          "title": "Loongson releases next-generation CPU",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=38465736",
+          "author": "mikece",
+          "description": "Article URL: https://www.anandtech.com/show/21172/amazon-unveils-graviton4-a-96core-cpu-with-5367-gbs-memory-bandwidth\nComments URL: https://news.ycombinator.com/item?id=38465736\nPoints: 77\n# Comments: 14",
+          "link": "https://www.anandtech.com/show/21172/amazon-unveils-graviton4-a-96core-cpu-with-5367-gbs-memory-bandwidth",
+          "publishedOn": "2023-11-29T21:44:24.000Z",
+          "wordCount": 3142,
+          "title": "Amazon Unveils Graviton4: A 96-Core ARM CPU with 536.7 GBps Memory Bandwidth",
+          "imageUrl": "https://images.anandtech.com/doci/21172/amazon-aws-trainium-graviton-678_678x452.jpg"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=38465693",
+          "author": "linaz",
+          "description": "Article URL: https://jobs.ashbyhq.com/Jerry/921d3846-04e1-4430-a515-b91192a4993c\nComments URL: https://news.ycombinator.com/item?id=38465693\nPoints: 0\n# Comments: 0",
+          "link": "https://jobs.ashbyhq.com/Jerry/921d3846-04e1-4430-a515-b91192a4993c",
+          "publishedOn": "2023-11-29T21:39:11.000Z",
+          "wordCount": 1824,
+          "title": "Jerry (YC S17) Is Hiring VP Product (& Other Engineer and PM Roles)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=38464057",
+          "author": "tfinch",
+          "description": "Article URL: https://github.com/Mozilla-Ocho/llamafile\nComments URL: https://news.ycombinator.com/item?id=38464057\nPoints: 352\n# Comments: 82",
+          "link": "https://github.com/Mozilla-Ocho/llamafile",
+          "publishedOn": "2023-11-29T19:29:49.000Z",
+          "wordCount": 2805,
+          "title": "Llamafile lets you distribute and run LLMs with a single file",
+          "imageUrl": "https://opengraph.githubassets.com/20a54b6c02a140763120178d15973329639436f7c790dabec656d219a656f352/Mozilla-Ocho/llamafile"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=38463832",
+          "author": "jjwiseman",
+          "description": "Article URL: https://whenistheweekend.com/theSphere.html\nComments URL: https://news.ycombinator.com/item?id=38463832\nPoints: 205\n# Comments: 40",
+          "link": "https://whenistheweekend.com/theSphere.html",
+          "publishedOn": "2023-11-29T19:14:42.000Z",
+          "wordCount": 1800,
+          "title": "Write shaders for the (sim) Vegas sphere",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=38463731",
+          "author": "coatue",
+          "description": "pgxman is npm for Postgres extensions, simplifying the discovery and use of extensions so you can easily enhance your applications.\nInstalling and updating Postgres extensions is an uphill battle. You're left searching for the right build tools and grappling with often unclear and incomplete compiling instructions to even try one out. But with pgxman, we've streamlined the process to one simple step: pgxman install [extension name].\nFor example, to build parquet_s3_fdw manually, you'd need to:\n1. Download the parquet_s3_fdw source code;\n2. Figure out how to build it by looking at README. When unclear, look at the source code how to build it. The README of parquet_s3_fdw says it needs libarrow, libparquet & aws_sdk. Readme doesn’t say where to get them.\n3. Make sure all dependencies are available to build the project. Either install them from apt, if available, or build them manually if not. For parquet_s3_fdw aws_sdk has to be built manually — it’s not available in any apt repos\n4. Build the extension targeting the correct OS, CPU architecture and Postgres version.\n5. Determine and build to the right path /usr/lib/postgresql/15/lib - otherwise, Postgres wouldn’t be able to find them.\n6. Repeat across all relevant Postgres instances. Hopefully, these Postgres versions are recent or else you’ll have to update postgres, set maintenance window, etc.\n* Added friction: Since parquet_s3_fdw is not designed to use in a cloud environment, and we forked it to make changes to make it possible to use.\nUsing pgxman, you can just do:\n  pgxman install s3_parquet_fdw\n\nTo install pgxman, you can do\n  brew install pgxman/tap/pgxman\n\n  curl -sfl https://install.pgx.sh | sh -\n\nhttps://www.hydra.so/blog-posts/the-design-of-postgres-exten....\nComments URL: https://news.ycombinator.com/item?id=38463731\nPoints: 50\n# Comments: 5",
+          "link": "https://pgxman.com/",
+          "publishedOn": "2023-11-29T19:08:15.000Z",
+          "wordCount": 2507,
+          "title": "Show HN: pgxman – npm for Postgres extensions",
+          "imageUrl": "https://pgxman.com/og.png"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=38463355",
+          "author": "deletionist",
+          "description": "Article URL: https://www.consumerreports.org/cars/car-reliability-owner-satisfaction/who-makes-the-most-reliable-cars-a7824554938/\nComments URL: https://news.ycombinator.com/item?id=38463355\nPoints: 163\n# Comments: 399",
+          "link": "https://www.consumerreports.org/cars/car-reliability-owner-satisfaction/who-makes-the-most-reliable-cars-a7824554938/",
+          "publishedOn": "2023-11-29T18:42:34.000Z",
+          "wordCount": 6857,
+          "title": "Who makes the most reliable new cars?",
+          "imageUrl": "https://article.images.consumerreports.org/image/upload/t_article_tout/v1699554174/prod/content/dam/CRO-Images-2023/11November/Cars/CR-Cars-Who-Makes-the-Most-Reliable-Cars-1123"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=38463195",
+          "author": "feross",
+          "description": "Article URL: https://rootsofprogress.org/steam-engine-origins\nComments URL: https://news.ycombinator.com/item?id=38463195\nPoints: 39\n# Comments: 14",
+          "link": "https://rootsofprogress.org/steam-engine-origins",
+          "publishedOn": "2023-11-29T18:32:09.000Z",
+          "wordCount": 3157,
+          "title": "The origins of the steam engine",
+          "imageUrl": "https://rootsofprogress.org/img/steam-origins-diagram.jpg"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=38462318",
+          "author": "clessg",
+          "description": "Article URL: http://peterhajas.com/blog/pokemon_rb_connections.html\nComments URL: https://news.ycombinator.com/item?id=38462318\nPoints: 121\n# Comments: 17",
+          "link": "http://peterhajas.com/blog/pokemon_rb_connections.html",
+          "publishedOn": "2023-11-29T17:32:54.000Z",
+          "wordCount": 1320,
+          "title": "Visualizing Pokémon Red and Blue Connections (2020)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=38461344",
+          "author": "RCitronsBroker",
+          "description": "Article URL: https://www.ri.cmu.edu/app/uploads/2019/09/Person_in_WiFi_ICCV2019.pdf\nComments URL: https://news.ycombinator.com/item?id=38461344\nPoints: 102\n# Comments: 41",
+          "link": "https://www.ri.cmu.edu/app/uploads/2019/09/Person_in_WiFi_ICCV2019.pdf",
+          "publishedOn": "2023-11-29T16:19:33.000Z",
+          "wordCount": 83262,
+          "title": "Person-in-WiFi: Fine-Grained Person Perception Using WiFi [pdf]",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=38461323",
+          "author": "reqo",
+          "description": "Article URL: https://deepmind.google/discover/blog/millions-of-new-materials-discovered-with-deep-learning/\nComments URL: https://news.ycombinator.com/item?id=38461323\nPoints: 156\n# Comments: 36",
+          "link": "https://deepmind.google/discover/blog/millions-of-new-materials-discovered-with-deep-learning/",
+          "publishedOn": "2023-11-29T16:17:56.000Z",
+          "wordCount": 1548,
+          "title": "Graph Networks for Materials Exploration",
+          "imageUrl": "https://lh3.googleusercontent.com/mq3mFiVHSVuszhJMt-Nz4jckN5qy3cAckEIdNYDPhy8UHjxk4VkGFriqo8sA76teioNQ2fC3qgMH7FJfPc0L5JJPppXiZzHP7Rl3UodlU4IC4TWw=w1200-h630-n-nu"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=38461249",
+          "author": "tmcneal",
+          "description": "Article URL: https://github.com/01mf02/jaq\nComments URL: https://news.ycombinator.com/item?id=38461249\nPoints: 288\n# Comments: 155",
+          "link": "https://github.com/01mf02/jaq",
+          "publishedOn": "2023-11-29T16:13:23.000Z",
+          "wordCount": 4315,
+          "title": "Jaq – A jq clone focused on correctness, speed, and simplicity",
+          "imageUrl": "https://opengraph.githubassets.com/a99a4afa0da901df4cea62cd6e9a4f09be63c9cd8de6e12248d19852f732e7eb/01mf02/jaq"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=38461121",
+          "author": "0xedb",
+          "description": "Article URL: https://deno.com/blog/cron\nComments URL: https://news.ycombinator.com/item?id=38461121\nPoints: 203\n# Comments: 141",
+          "link": "https://deno.com/blog/cron",
+          "publishedOn": "2023-11-29T16:03:10.000Z",
+          "wordCount": 1451,
+          "title": "Deno Cron",
+          "imageUrl": "https://deno.com/blog/cron/og-image.png"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=38459090",
+          "author": "bookofjoe",
+          "description": "Article URL: https://spectrum.ieee.org/bci-ultrasound\nComments URL: https://news.ycombinator.com/item?id=38459090\nPoints: 51\n# Comments: 8",
+          "link": "https://spectrum.ieee.org/bci-ultrasound",
+          "publishedOn": "2023-11-29T13:31:14.000Z",
+          "wordCount": 9245,
+          "title": "New neurotech eschews electricity for ultrasound",
+          "imageUrl": "https://spectrum.ieee.org/media-library/gray-lines-in-the-shape-of-a-brain-s-blood-vessels-against-a-white-background-two-devices-on-the-skull-sends-sound-waves-into-t.jpg?id=50464036&width=1200&height=600&coordinates=0%2C266%2C0%2C267"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=38458802",
+          "author": "abhinavg",
+          "description": "Article URL: https://github.com/bracesdev/errtrace\nComments URL: https://news.ycombinator.com/item?id=38458802\nPoints: 86\n# Comments: 64",
+          "link": "https://github.com/bracesdev/errtrace",
+          "publishedOn": "2023-11-29T13:01:28.000Z",
+          "wordCount": 2385,
+          "title": "Show HN: Error return traces for Go, inspired by Zig",
+          "imageUrl": "https://opengraph.githubassets.com/314c5cef0d9889fc67e76588fda583d197da3074ddb2f4d384e928fc430991e1/bracesdev/errtrace"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=38458683",
+          "author": "Deeg9rie9usi",
+          "description": "Article URL: https://not-just-memorization.github.io/extracting-training-data-from-chatgpt.html\nComments URL: https://news.ycombinator.com/item?id=38458683\nPoints: 157\n# Comments: 84",
+          "link": "https://not-just-memorization.github.io/extracting-training-data-from-chatgpt.html",
+          "publishedOn": "2023-11-29T12:46:36.000Z",
+          "wordCount": 4199,
+          "title": "Extracting training data from ChatGPT",
+          "imageUrl": "images/chatgpt-extract_fig1poem.png"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=38458093",
+          "author": "doener",
+          "description": "Article URL: https://www.youtube.com/watch?v=2VFNEhab_lk\nComments URL: https://news.ycombinator.com/item?id=38458093\nPoints: 14\n# Comments: 8",
+          "link": "https://www.youtube.com/watch?v=2VFNEhab_lk",
+          "publishedOn": "2023-11-29T11:24:03.000Z",
+          "wordCount": null,
+          "title": "Poor Broken and Battered Amiga A2000 – Can We Fix It? [video]",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=38457953",
+          "author": "mikece",
+          "description": "Article URL: https://www.phoronix.com/news/Roundcube-Nextcloud\nComments URL: https://news.ycombinator.com/item?id=38457953\nPoints: 280\n# Comments: 205",
+          "link": "https://www.phoronix.com/news/Roundcube-Nextcloud",
+          "publishedOn": "2023-11-29T11:03:47.000Z",
+          "wordCount": 1364,
+          "title": "Roundcube open-source webmail software merges with Nextcloud",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=38457926",
+          "author": "weinzierl",
+          "description": "Article URL: https://github.com/pwnwriter/hysp\nComments URL: https://news.ycombinator.com/item?id=38457926\nPoints: 10\n# Comments: 0",
+          "link": "https://github.com/pwnwriter/hysp",
+          "publishedOn": "2023-11-29T10:59:52.000Z",
+          "wordCount": 1354,
+          "title": "Hysp – An independent package manager",
+          "imageUrl": "https://repository-images.githubusercontent.com/720027182/5545bef3-8963-47cb-9d2f-ceec00fc95d7"
+        },
+        {
           "id": "https://news.ycombinator.com/item?id=38453430",
           "author": "webmaven",
           "description": "Article URL: https://www.npr.org/2023/11/28/1215513285/how-scientists-are-trying-to-save-the-insects-that-make-life-possible\nComments URL: https://news.ycombinator.com/item?id=38453430\nPoints: 10\n# Comments: 2",
@@ -5821,206 +6021,6 @@
           "wordCount": 1166,
           "title": "Vendor lock-in in the observability space",
           "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=38078143",
-          "author": "josephcsible",
-          "description": "Article URL: https://www.nme.com/news/gaming-news/xbox-will-block-third-party-controllers-to-preserve-the-console-experience-3525752\nComments URL: https://news.ycombinator.com/item?id=38078143\nPoints: 12\n# Comments: 7",
-          "link": "https://www.nme.com/news/gaming-news/xbox-will-block-third-party-controllers-to-preserve-the-console-experience-3525752",
-          "publishedOn": "2023-10-31T00:35:15.000Z",
-          "wordCount": 12999,
-          "title": "Xbox will block third-party controllers to \"preserve the console experience\"",
-          "imageUrl": "https://www.nme.com/wp-content/uploads/2023/10/unauthorised-xbox-controllers-not-going-to-work-after-november.jpg"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=38078063",
-          "author": "ehPReth",
-          "description": "Article URL: https://www.apple.com/newsroom/2023/10/apple-unveils-m3-m3-pro-and-m3-max-the-most-advanced-chips-for-a-personal-computer/\nComments URL: https://news.ycombinator.com/item?id=38078063\nPoints: 101\n# Comments: 86",
-          "link": "https://www.apple.com/newsroom/2023/10/apple-unveils-m3-m3-pro-and-m3-max-the-most-advanced-chips-for-a-personal-computer/",
-          "publishedOn": "2023-10-31T00:30:14.000Z",
-          "wordCount": 6844,
-          "title": "Apple unveils M3, M3 Pro, and M3 Max, the most advanced chips for a PC",
-          "imageUrl": "https://www.apple.com/newsroom/images/2023/10/Apple-unveils-M3-M3-Pro-and-M3-Max/tile/Apple-M3-chip-series-231030.jpg.og.jpg?202310310029"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=38077889",
-          "author": "tormeh",
-          "description": "Article URL: https://opensource.googleblog.com/2023/10/android-and-risc-v-what-you-need-to-know.html\nComments URL: https://news.ycombinator.com/item?id=38077889\nPoints: 31\n# Comments: 4",
-          "link": "https://opensource.googleblog.com/2023/10/android-and-risc-v-what-you-need-to-know.html",
-          "publishedOn": "2023-10-31T00:12:08.000Z",
-          "wordCount": 6001,
-          "title": "Android and RISC-V: What you need to know to be ready",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNWkLqiiKr8EV8U963tdp3bsR5hWzKLp4OYTNEz98a4h5QZ7djoJ3XIYypMTIE_5LRY8KFsKE11L2ZBGOomzPAiFRlXpJFncNTpofay-_tomg89lXHvRs98OSCk6OQkjf6jVVzHVfPcME1D5NBwramBQFTwlfOktrzjQDQPXC91AytSeBrbhjLxLB6IWI/w1200-h630-p-k-no-nu/Social%20-%20OSS%20-%20Android%20and%20RISC-V%20What%20you%20need%20to%20know%20to%20be%20ready.png"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=38077684",
-          "author": "throw0101a",
-          "description": "Article URL: https://news.artnet.com/opinion/devon-rodriguez-parasocial-aesthetics-2380960\nComments URL: https://news.ycombinator.com/item?id=38077684\nPoints: 43\n# Comments: 18",
-          "link": "https://news.artnet.com/opinion/devon-rodriguez-parasocial-aesthetics-2380960",
-          "publishedOn": "2023-10-30T23:52:38.000Z",
-          "wordCount": 5079,
-          "title": "World's Most Popular Painter Sent His Followers After Me Because of My Review",
-          "imageUrl": "https://p-news-upload.storage.googleapis.com/2023/10/devon-rodriguez-1.jpg"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=38077521",
-          "author": "programd",
-          "description": "Article URL: https://together.ai/blog/redpajama-data-v2\nComments URL: https://news.ycombinator.com/item?id=38077521\nPoints: 4\n# Comments: 0",
-          "link": "https://together.ai/blog/redpajama-data-v2",
-          "publishedOn": "2023-10-30T23:38:01.000Z",
-          "wordCount": 5742,
-          "title": "RedPajama v2 Open Dataset with 30T Tokens for Training LLMs",
-          "imageUrl": "http://static1.squarespace.com/static/6358bea282189a0adf57fe16/t/653fe113f9293a5b86e3630c/1698685212155/rpv2.png?format=1500w"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=38077502",
-          "author": "omneity",
-          "description": "Article URL: https://omarkama.li/blog/web-scraping-data-for-everyone\nComments URL: https://news.ycombinator.com/item?id=38077502\nPoints: 4\n# Comments: 0",
-          "link": "https://omarkama.li/blog/web-scraping-data-for-everyone",
-          "publishedOn": "2023-10-30T23:36:21.000Z",
-          "wordCount": 22774,
-          "title": "Web Scraping: Data for Everyone",
-          "imageUrl": "https://iwwnvqzchtveeuzoiigl.supabase.co/storage/v1/object/public/posts/web-scraping-data-for-everyone-b9af80c0.png"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=38077315",
-          "author": "testingathing",
-          "description": "Article URL: https://www.publicbooks.org/i-began-with-sound/\nComments URL: https://news.ycombinator.com/item?id=38077315\nPoints: 9\n# Comments: 2",
-          "link": "https://www.publicbooks.org/i-began-with-sound/",
-          "publishedOn": "2023-10-30T23:17:07.000Z",
-          "wordCount": 4346,
-          "title": "I Began with Sound",
-          "imageUrl": "https://www.publicbooks.org/wp-content/uploads/2023/10/Cassandra_1885_by_Anthony_Frederick_Augustus_Sandys-scaled.jpg"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=38076903",
-          "author": "starshadowx2",
-          "description": "Article URL: https://www.reuters.com/legal/litigation/judge-pares-down-artists-ai-copyright-lawsuit-against-midjourney-stability-ai-2023-10-30/\nComments URL: https://news.ycombinator.com/item?id=38076903\nPoints: 47\n# Comments: 33",
-          "link": "https://www.reuters.com/legal/litigation/judge-pares-down-artists-ai-copyright-lawsuit-against-midjourney-stability-ai-2023-10-30/",
-          "publishedOn": "2023-10-30T22:35:49.000Z",
-          "wordCount": 5624,
-          "title": "Judge pares down artists' AI copyright lawsuit against Midjourney, Stability AI",
-          "imageUrl": "https://www.reuters.com/resizer/V6iT6BCFHRX5SVvZW0RTLETewYw=/728x381/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/2OFZNUCC7NKTTL77WA7JI23VXY.jpg"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=38076886",
-          "author": "simonsarris",
-          "description": "Article URL: https://grugbrain.dev/\nComments URL: https://news.ycombinator.com/item?id=38076886\nPoints: 133\n# Comments: 33",
-          "link": "https://grugbrain.dev/",
-          "publishedOn": "2023-10-30T22:33:26.000Z",
-          "wordCount": 4756,
-          "title": "The Grug Brained Developer (2022)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=38076636",
-          "author": "arkadiyt",
-          "description": "Article URL: https://www.sec.gov/news/press-release/2023-227\nComments URL: https://news.ycombinator.com/item?id=38076636\nPoints: 100\n# Comments: 38",
-          "link": "https://www.sec.gov/news/press-release/2023-227",
-          "publishedOn": "2023-10-30T22:08:52.000Z",
-          "wordCount": 2140,
-          "title": "SEC Charges SolarWinds and CISO with Fraud, Internal Control Failures",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=38075924",
-          "author": "randomlogin",
-          "description": "Article URL: https://knowingmachines.org/knowing-legal-machines/legal-explainer/questions/can-i-remove-my-personal-data-from-genai-training-datasets\nComments URL: https://news.ycombinator.com/item?id=38075924\nPoints: 30\n# Comments: 6",
-          "link": "https://knowingmachines.org/knowing-legal-machines/legal-explainer/questions/can-i-remove-my-personal-data-from-genai-training-datasets",
-          "publishedOn": "2023-10-30T21:12:55.000Z",
-          "wordCount": 6331,
-          "title": "Can I remove my personal data from GenAI training datasets?",
-          "imageUrl": "https://knowingmachines.org/img/legal/0.png"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=38074992",
-          "author": "ilamont",
-          "description": "Article URL: https://blog.google/products/gmail/gmail-security-authentication-spam-protection/\nComments URL: https://news.ycombinator.com/item?id=38074992\nPoints: 302\n# Comments: 224",
-          "link": "https://blog.google/products/gmail/gmail-security-authentication-spam-protection/",
-          "publishedOn": "2023-10-30T20:07:07.000Z",
-          "wordCount": 1752,
-          "title": "Gmail, Yahoo announce new 2024 authentication requirements for bulk senders",
-          "imageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gmail_security_policies_hero_2.width-1300.jpg"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=38074739",
-          "author": "jakey_bakey",
-          "description": "Article URL: https://jacobbartlett.substack.com/p/through-the-ages-apple-cpu-architecture\nComments URL: https://news.ycombinator.com/item?id=38074739\nPoints: 85\n# Comments: 50",
-          "link": "https://jacobbartlett.substack.com/p/through-the-ages-apple-cpu-architecture",
-          "publishedOn": "2023-10-30T19:51:03.000Z",
-          "wordCount": 13448,
-          "title": "Apple CPU Architecture Through the Ages",
-          "imageUrl": "https://substackcdn.com/image/fetch/w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fef56b4d8-b9c0-4766-98f4-ffebb24d9458_700x620.png"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=38074701",
-          "author": "vikrum",
-          "description": "Article URL: https://youglish.com/\nComments URL: https://news.ycombinator.com/item?id=38074701\nPoints: 278\n# Comments: 166",
-          "link": "https://youglish.com/",
-          "publishedOn": "2023-10-30T19:47:10.000Z",
-          "wordCount": 485,
-          "title": "Use YouTube to improve your English pronunciation",
-          "imageUrl": "https://youglish.com/images/fb6.jpg"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=38074406",
-          "author": "SandmanDZ",
-          "description": "Article URL: https://datenlord.github.io/xline-home/#/blog/2023-08-18-Introduction-to-CURP-Protocol\nComments URL: https://news.ycombinator.com/item?id=38074406\nPoints: 30\n# Comments: 8",
-          "link": "https://datenlord.github.io/xline-home/#/blog/2023-08-18-Introduction-to-CURP-Protocol",
-          "publishedOn": "2023-10-30T19:23:41.000Z",
-          "wordCount": 3,
-          "title": "Introduction to CURP Protocol",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=38073512",
-          "author": "starkparker",
-          "description": "Article URL: https://kartproject.org/\nComments URL: https://news.ycombinator.com/item?id=38073512\nPoints: 94\n# Comments: 31",
-          "link": "https://kartproject.org/",
-          "publishedOn": "2023-10-30T18:22:18.000Z",
-          "wordCount": 399,
-          "title": "Kart: DVC for geospatial and tabular data. Git for GIS",
-          "imageUrl": "https://kartproject.org/images/kart.jpg"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=38072278",
-          "author": "andrewla",
-          "description": "Article URL: http://recursivedrawing.com/\nComments URL: https://news.ycombinator.com/item?id=38072278\nPoints: 28\n# Comments: 6",
-          "link": "http://recursivedrawing.com/",
-          "publishedOn": "2023-10-30T17:06:28.000Z",
-          "wordCount": 108,
-          "title": "Recursive Drawing",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=38072277",
-          "author": "fzliu",
-          "description": "Article URL: https://zilliz.com/learn/approximate-nearest-neighbor-oh-yeah-ANNOY\nComments URL: https://news.ycombinator.com/item?id=38072277\nPoints: 109\n# Comments: 28",
-          "link": "https://zilliz.com/learn/approximate-nearest-neighbor-oh-yeah-ANNOY",
-          "publishedOn": "2023-10-30T17:06:28.000Z",
-          "wordCount": 6845,
-          "title": "Approximate Nearest Neighbor Oh Yeah (Annoy)",
-          "imageUrl": "https://assets.zilliz.com/Mar_25_Vector_Database_101_Hierarchical_Navigable_Small_Worlds_HNSW_20230524_055846_1735eba999.png"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=38072218",
-          "author": "emptysongglass",
-          "description": "Article URL: https://www.afr.com/technology/google-brain-founder-says-big-tech-is-lying-about-ai-human-extinction-danger-20231027-p5efnz\nComments URL: https://news.ycombinator.com/item?id=38072218\nPoints: 276\n# Comments: 309",
-          "link": "https://www.afr.com/technology/google-brain-founder-says-big-tech-is-lying-about-ai-human-extinction-danger-20231027-p5efnz",
-          "publishedOn": "2023-10-30T17:03:37.000Z",
-          "wordCount": 7544,
-          "title": "Google Brain founder says big tech is lying about AI danger",
-          "imageUrl": "https://static.ffx.io/images/$zoom_0.2648%2C$multiply_3%2C$ratio_1.777778%2C$width_1059%2C$x_0%2C$y_185/t_crop_custom/c_scale%2Cw_800%2Cq_88%2Cf_jpg/t_afr_exclusive_no_age_social_wm/c43cf57313a315a60b941d3ff111d60f3fda0278"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=38072012",
-          "author": "bookofjoe",
-          "description": "Article URL: https://www.nature.com/articles/s41565-023-01527-8\nComments URL: https://news.ycombinator.com/item?id=38072012\nPoints: 63\n# Comments: 18",
-          "link": "https://www.nature.com/articles/s41565-023-01527-8",
-          "publishedOn": "2023-10-30T16:49:30.000Z",
-          "wordCount": 11046,
-          "title": "DNA turbine powered by a transmembrane potential across a nanopore",
-          "imageUrl": "https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs41565-023-01527-8/MediaObjects/41565_2023_1527_Fig1_HTML.png"
         }
       ]
     },
@@ -6029,6 +6029,176 @@
       "feedUrl": "http://www.reddit.com/r/linux/top.rss?sort=top&t=day",
       "siteUrl": "https://www.reddit.com/r/linux/top?sort=top&t=day",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1875fia/fedora_workstation_39_update_blog_post/",
+          "author": null,
+          "description": "Given some of the conversations about Wayland and Pipewire. This seems pretty apropos. This post gives some update on those technologies and what the future is going to bring with Fedora, GNOME, and other things that I think will be interesting to talk about. https://blogs.gnome.org/uraeus/2023/11/29/fedora-workstation-39-and-beyond/\n    submitted by    /u/blackcain  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1875fia/fedora_workstation_39_update_blog_post/",
+          "publishedOn": "2023-11-30T00:59:49.000Z",
+          "wordCount": 2686,
+          "title": "Fedora Workstation 39 Update - blog post",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1871spv/oculink_and_thunderbolt_3usb4_egpu_on_linux_with/",
+          "author": null,
+          "description": "submitted by    /u/riklaunim  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1871spv/oculink_and_thunderbolt_3usb4_egpu_on_linux_with/",
+          "publishedOn": "2023-11-29T22:19:38.000Z",
+          "wordCount": 2656,
+          "title": "OCuLink and Thunderbolt 3/USB4 eGPU on Linux with GPD Win Max 2",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1871b5o/mesaannounce_announce_mesa_2330/",
+          "author": null,
+          "description": "submitted by    /u/ilep  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1871b5o/mesaannounce_announce_mesa_2330/",
+          "publishedOn": "2023-11-29T21:58:59.000Z",
+          "wordCount": 2638,
+          "title": "[Mesa-announce] [ANNOUNCE] mesa 23.3.0",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1870gs0/didnt_know_that_there_are_ads_for_ubuntu/",
+          "author": null,
+          "description": "submitted by    /u/ErenOnizuka  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1870gs0/didnt_know_that_there_are_ads_for_ubuntu/",
+          "publishedOn": "2023-11-29T21:23:03.000Z",
+          "wordCount": 2650,
+          "title": "Didn’t know that there are ads for Ubuntu",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1870a95/linux_is_a_rabbit_hole/",
+          "author": null,
+          "description": "not the linux itself, it's just an operating system you know, but the way it works and how you use it in conjunction with other devices emerging into a whole system with underlying infrastructure.\n goddamn yes when you go further everything breaks and by the time you fix the first issue the second and the third issues arise. however once you fix all of them you gain knowledge and that kind of issues won't bother you in future.\n I have no idea how deep I am able to delve in but every new feature I master boggles my consciousness my mind my soul. this is amazing how things are made in linux. so simple and so powerful.\n linux also helps me to understand technologies at their fundamental level and this is kinda power of knowledge. our world is getting insanely technological so now this power is relevant more than ever.\n I will never be the same again. linux is changing me, irrevocably.\n    submitted by    /u/DuzheDobzhe  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1870a95/linux_is_a_rabbit_hole/",
+          "publishedOn": "2023-11-29T21:15:27.000Z",
+          "wordCount": 2800,
+          "title": "linux is a rabbit hole",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/186uujq/run_macos_software_on_linux/",
+          "author": null,
+          "description": "submitted by    /u/modelop  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/186uujq/run_macos_software_on_linux/",
+          "publishedOn": "2023-11-29T17:24:42.000Z",
+          "wordCount": 2639,
+          "title": "run macOS software on Linux",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/186u8ne/benchmarking_five_linux_distros_against_windows/",
+          "author": null,
+          "description": "submitted by    /u/gabriel_3  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/186u8ne/benchmarking_five_linux_distros_against_windows/",
+          "publishedOn": "2023-11-29T17:00:14.000Z",
+          "wordCount": 2661,
+          "title": "Benchmarking Five Linux Distros Against Windows 11 On The Threadripper PRO 7995WX / HP Z6 G5 A",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/186u5yo/spirallinux_12231120_released/",
+          "author": null,
+          "description": "submitted by    /u/gabriel_3  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/186u5yo/spirallinux_12231120_released/",
+          "publishedOn": "2023-11-29T16:57:05.000Z",
+          "wordCount": 2648,
+          "title": "SpiralLinux 12.231120 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/186sjk5/libreoffice_project_and_community_recap_november/",
+          "author": null,
+          "description": "submitted by    /u/themikeosguy  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/186sjk5/libreoffice_project_and_community_recap_november/",
+          "publishedOn": "2023-11-29T15:49:50.000Z",
+          "wordCount": 2652,
+          "title": "LibreOffice project and community recap: November 2023",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/186ri8v/archboot_202311_arch_linux_isosukis_released/",
+          "author": null,
+          "description": "submitted by    /u/tobiaspowalowski  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/186ri8v/archboot_202311_arch_linux_isosukis_released/",
+          "publishedOn": "2023-11-29T15:05:12.000Z",
+          "wordCount": 2696,
+          "title": "Archboot 2023.11 - Arch Linux ISOs/UKIs released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/186qh9k/open_source_email_pioneer_roundcube_joins_the/",
+          "author": null,
+          "description": "submitted by    /u/FryBoyter  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/186qh9k/open_source_email_pioneer_roundcube_joins_the/",
+          "publishedOn": "2023-11-29T14:20:20.000Z",
+          "wordCount": 2653,
+          "title": "Open source email pioneer Roundcube joins the Nextcloud family",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/186nrrp/developing_new_cloud_service/",
+          "author": null,
+          "description": "Looking for feedback on a new project\n Hey, all! I'm working on a new project to upgrade our self-hosting capabilities. It's a cloud storage alternative to Nextcloud and Owncloud. They were too complex for my tastes so I wrote my own! It let's you choose your storage directory and upload/download to and from it over the internet. That's it!\n Right now I'm thinking $9.99 for a LIFETIME purchase DRM FREE. Is that reasonable?\n Alternatively I was wondering if maybe instead I should try to sell cloud storage itself? I'm really passionate about the cloud stuff I've been building and I'm looking for a way to finance getting deeper into it and further development.\n    submitted by    /u/DonstaTheMonsta  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/186nrrp/developing_new_cloud_service/",
+          "publishedOn": "2023-11-29T11:59:34.000Z",
+          "wordCount": 2750,
+          "title": "Developing new cloud service",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/186lw9n/btrfs_slated_to_make_use_of_new_mount_api_in/",
+          "author": null,
+          "description": "submitted by    /u/unixbhaskar  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/186lw9n/btrfs_slated_to_make_use_of_new_mount_api_in/",
+          "publishedOn": "2023-11-29T09:56:03.000Z",
+          "wordCount": 2656,
+          "title": "Btrfs Slated To Make Use Of New Mount API In Linux 6.8",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/186ldec/the_cost_of_maintaining_xorg_according_to_a/",
+          "author": null,
+          "description": "submitted by    /u/wiki_me  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/186ldec/the_cost_of_maintaining_xorg_according_to_a/",
+          "publishedOn": "2023-11-29T09:18:31.000Z",
+          "wordCount": 2649,
+          "title": "The cost of maintaining Xorg , according to a Engineering manager at Red Hat",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/186ksuh/42_touch_screen_ideas/",
+          "author": null,
+          "description": "Through good luck and good friends, I'll soon be receiving a 42 inch touch screen monitor. I am thinking it would mount vertically right near my back door and driving it with a RaspberryPi. I am wondering what applications I should run on it. That location has a full length mirror on the wall next to it so I wasn't thinking of turning it into a MajicMirror2 device. Looking for advice and ideas.\n    submitted by    /u/SpudWhitener  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/186ksuh/42_touch_screen_ideas/",
+          "publishedOn": "2023-11-29T08:34:54.000Z",
+          "wordCount": 2710,
+          "title": "42\" touch screen ideas",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/186kgu7/exploitation_of_critical_owncloud_vulnerability/",
+          "author": null,
+          "description": "submitted by    /u/MatchingTurret  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/186kgu7/exploitation_of_critical_owncloud_vulnerability/",
+          "publishedOn": "2023-11-29T08:10:45.000Z",
+          "wordCount": 2650,
+          "title": "Exploitation of Critical ownCloud Vulnerability Begins",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/186hvun/rfc_patch_06_supporting_gmem_generalized_memory/",
+          "author": null,
+          "description": "The problem:\n Accelerator driver developers are forced to reinvent external MM subsystems case by case, because Linux core MM only considers host memory resources.\n What GMEM (Generalized Memory Management [1]) does:\n GMEM extends Linux MM to share its machine-independent MM code. Only high-level interface is provided for device drivers. This prevents accelerator drivers from reinventing the wheel, but relies on drivers to implement their hardware-dependent functions declared by GMEM.\n  \n   submitted by    /u/gabriel_3  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/186hvun/rfc_patch_06_supporting_gmem_generalized_memory/",
+          "publishedOn": "2023-11-29T05:25:48.000Z",
+          "wordCount": 2716,
+          "title": "[RFC PATCH 0/6] Supporting GMEM (generalized memory management) for external memory devices",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/linux/comments/186byo2/is_there_a_distroagnostic_equivalent_to_nixshells/",
           "author": null,
@@ -8998,76 +9168,6 @@
           "wordCount": 2567,
           "title": "NVIDIA 545.29.02 Linux Driver Released With Much Better Wayland Support",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/17kki6q/storage_target_mode_inspired_by_target_disk_mode/",
-          "author": null,
-          "description": "submitted by    /u/gabriel_3  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/17kki6q/storage_target_mode_inspired_by_target_disk_mode/",
-          "publishedOn": "2023-10-31T13:01:20.000Z",
-          "wordCount": 2584,
-          "title": "Storage target mode, inspired by \"target disk mode\" á la MacOS, but with NVMe-TCP by poettering · Pull Request #29748 · systemd/systemd",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/17kgxnp/bcachefs_has_been_merged_into_linux_67/",
-          "author": null,
-          "description": "submitted by    /u/trougnouf  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/17kgxnp/bcachefs_has_been_merged_into_linux_67/",
-          "publishedOn": "2023-10-31T09:22:34.000Z",
-          "wordCount": 2558,
-          "title": "Bcachefs has been merged into Linux 6.7",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/17k1k47/linux_66_linux_kernel_newbies/",
-          "author": null,
-          "description": "submitted by    /u/pgen  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/17k1k47/linux_66_linux_kernel_newbies/",
-          "publishedOn": "2023-10-30T19:33:41.000Z",
-          "wordCount": 2557,
-          "title": "Linux_6.6 - Linux Kernel Newbies",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/17jzfti/wireplumber_exploring_lua_scripts_with_event/",
-          "author": null,
-          "description": "submitted by    /u/mfilion  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/17jzfti/wireplumber_exploring_lua_scripts_with_event/",
-          "publishedOn": "2023-10-30T18:00:02.000Z",
-          "wordCount": 2570,
-          "title": "WirePlumber: Exploring Lua scripts with Event Dispatcher",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/17jxx2j/linuxusing_autiesaspiesadhd_sufferers_what_tools/",
-          "author": null,
-          "description": "I want to build my own distro of Linux that is geared for these three groups. What would you want a) as defaults\n b) as options at OS install\n for the following categories: * Text editor * Browser * Office suite * Desktop manager * Focus implement (timers/Pomodoro/etc.)\n Please keep in mind that there's not one solution for everyone, and be civil.\n Edit: Also, please do keep in mind I want SPECIFICALLY workflows. \n    submitted by    /u/ComprehensiveAd5882  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/17jxx2j/linuxusing_autiesaspiesadhd_sufferers_what_tools/",
-          "publishedOn": "2023-10-30T16:53:05.000Z",
-          "wordCount": 2632,
-          "title": "Linux-using Auties/Aspies/ADHD sufferers— what tools do you use that help you focus?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/17jxvtm/announcing_incus_02/",
-          "author": null,
-          "description": "submitted by    /u/mariuz  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/17jxvtm/announcing_incus_02/",
-          "publishedOn": "2023-10-30T16:51:31.000Z",
-          "wordCount": 2555,
-          "title": "Announcing Incus 0.2",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/17ju3lg/weekly_project_thread/",
-          "author": null,
-          "description": "If you're working on an interesting Linux based project, here's the place to post it. Share what you've done.\n    submitted by    /u/AutoModerator  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/17ju3lg/weekly_project_thread/",
-          "publishedOn": "2023-10-30T14:01:49.000Z",
-          "wordCount": 2573,
-          "title": "Weekly Project Thread!",
-          "imageUrl": null
         }
       ]
     },
@@ -9076,6 +9176,46 @@
       "feedUrl": "https://sspai.com/feed",
       "siteUrl": "https://sspai.com",
       "articles": [
+        {
+          "id": "https://sspai.com/prime/story/lighting-design-for-rented-properties",
+          "author": "宛潼",
+          "description": "保留着一种期待的心情，随时等待着一束不期而遇的光。查看全文\n本文为会员文章，出自《单篇文章》，订阅后可阅读全文。",
+          "link": "https://sspai.com/prime/story/lighting-design-for-rented-properties",
+          "publishedOn": "2023-11-29T10:52:13.000Z",
+          "wordCount": 916,
+          "title": "在租来的房子里，我这样搭建怡人的光照",
+          "imageUrl": "https://cdn.sspai.com/2023/11/29/article/77b8f1ae-2510-7dbe-4145-43bc5cac0c8b.jpg"
+        },
+        {
+          "id": "https://sspai.com/post/84715",
+          "author": "Noah_Choi",
+          "description": "「One UI『说明书』2023 年 11 月增订版。」查看全文",
+          "link": "https://sspai.com/post/84715",
+          "publishedOn": "2023-11-29T09:30:00.000Z",
+          "wordCount": 921,
+          "title": "具透 | One UI 6.0 正式版更新，除了 Android 14 还有哪些新功能？",
+          "imageUrl": "https://cdn.sspai.com/2023/11/29/3fb3a44b6081e843c32b0983e2daaa23.png"
+        },
+        {
+          "id": "https://sspai.com/post/84581",
+          "author": "他山之石4961",
+          "description": "它不一定是你的下一台电脑，但它是你开始创作的第一种可能性。而这一切，终究还是需要我们自己一步又一步，带着对平凡生活的热情，坚定地走下去。查看全文",
+          "link": "https://sspai.com/post/84581",
+          "publishedOn": "2023-11-29T07:48:16.000Z",
+          "wordCount": 850,
+          "title": "从创造需求到满足需求：漫谈我的 iPad 十年体验",
+          "imageUrl": "https://cdn.sspai.com/2023/11/24/1a46d51d6ac0f4d5aeca781f7075fdb5.jpeg"
+        },
+        {
+          "id": "https://sspai.com/post/84060",
+          "author": "SIMON_",
+          "description": "一波三折的旅行笔者注：本文是《日本浮生录03：纵横北海道，1100公里的道东寻秋之旅》的前序章节，时间早于该文章时间。九月，我和朋友原本计划了一次前往印度尼西亚的火山探险之旅。就在机票和酒店都已经预订 ...查看全文",
+          "link": "https://sspai.com/post/84060",
+          "publishedOn": "2023-11-29T03:30:00.000Z",
+          "wordCount": 703,
+          "title": "日本浮生录 04：驶向日本最北，探寻北海道隐秘之境",
+          "imageUrl": "https://cdn.sspai.com/2023/11/20/ab77ff67259a92e0f1fbd676df620227.jpg"
+        },
         {
           "id": "https://sspai.com/post/84706",
           "author": "少数派编辑部",
@@ -10135,76 +10275,6 @@
           "wordCount": 804,
           "title": "派早报：微软推送 Windows 11 23H2 更新、多平台宣布推进「自媒体」账号实名等",
           "imageUrl": "https://cdn.sspai.com/2023/11/1/article/469181d6-8d57-6c60-a038-e1471db19973.png"
-        },
-        {
-          "id": "https://sspai.com/post/84005",
-          "author": "吃派的水獭",
-          "description": "音乐对我们有多重要？当你努力码字工作，身心疲惫之际，一首歌就能让你短暂逃离工作压力；当你在游戏世界驰骋沙场，和队友携手拿下胜利，一首歌就能表达你的振奋心情；当你独自在安静的深夜，用文字记录心情，一首歌 ...查看全文",
-          "link": "https://sspai.com/post/84005",
-          "publishedOn": "2023-10-31T12:30:44.000Z",
-          "wordCount": 736,
-          "title": "共创 | 飞傲 HiFi 音乐机械键盘：音乐体验该升级了！",
-          "imageUrl": "https://cdn.sspai.com/2023/10/31/article/b54bfb59-f609-eaa5-9d89-e387d9d76faa.jpg"
-        },
-        {
-          "id": "https://sspai.com/post/83933",
-          "author": "吃派的水獭",
-          "description": "双十一正好赶上万圣节，就让本獭给你表演一个「钱包消失术」！查看全文",
-          "link": "https://sspai.com/post/83933",
-          "publishedOn": "2023-10-31T10:01:05.000Z",
-          "wordCount": 868,
-          "title": "双十一 | 给你的钱包「加点魔法」，来看看派商店的双十一大促",
-          "imageUrl": "https://cdn.sspai.com/2023/10/29/8322afcc64eb94457b217cbcf7f1c230.jpg"
-        },
-        {
-          "id": "https://sspai.com/post/83994",
-          "author": "Matrix机器人",
-          "description": "除了首页时间流和侧栏的精选展位，少数派Matrix社区还有很多优秀内容因条件所限无法得到有效曝光，因此我们决定重启Matrix周报，并在此基础上添加更多社区内容、作者投稿新玩意以及社区产品动态呈现给大 ...查看全文",
-          "link": "https://sspai.com/post/83994",
-          "publishedOn": "2023-10-31T08:50:19.000Z",
-          "wordCount": 1157,
-          "title": "社区速递 018 | 秋日 EDC、自己做 App 和作者们的新玩意",
-          "imageUrl": "https://cdn.sspai.com/2023/10/31/article/d37ad598-ffc6-32e6-e91b-6bba023a9a9c.jpg"
-        },
-        {
-          "id": "https://sspai.com/post/83936",
-          "author": "waychane",
-          "description": "聊完如何选择智能家居的平台和品牌之后，我想再聊聊关于智能家居产品方面的选购及规划。再多聊几句自动化虽然许多关于智能家居话题的内容都会先聊产品、再聊场景和自动化，我却想反其道而行之，先继续接着上篇内容的 ...查看全文",
-          "link": "https://sspai.com/post/83936",
-          "publishedOn": "2023-10-31T07:11:53.000Z",
-          "wordCount": 845,
-          "title": "家的日志 | 如何构建智能家居系统，这些是我的经验和思考",
-          "imageUrl": "https://cdn.sspai.com/2023/10/30/article/f787ae98-75ed-f093-b1c6-af3c7b7db349.jpg"
-        },
-        {
-          "id": "https://sspai.com/post/83978",
-          "author": "少数派编辑部",
-          "description": "M3 芯片性能再度提升，MacBook Pro 迎来深空灰配色。查看全文",
-          "link": "https://sspai.com/post/83978",
-          "publishedOn": "2023-10-31T01:48:36.000Z",
-          "wordCount": 647,
-          "title": "一图流 | Apple 十月新品发布会回顾",
-          "imageUrl": "https://cdn.sspai.com/31/10/2023/article/f2af6ec5-2384-c92b-b4c0-14f28ff7938f.jpg"
-        },
-        {
-          "id": "https://sspai.com/post/83976",
-          "author": "少数派编辑部",
-          "description": "Apple 发布 M3 系列芯片，并推出首批搭载该系列芯片的 14 英寸和 16 英寸 MacBook Pro 系列以及 iMac 系列机型，来看看发布会上都说了啥。查看全文",
-          "link": "https://sspai.com/post/83976",
-          "publishedOn": "2023-10-31T01:32:03.000Z",
-          "wordCount": 935,
-          "title": "Apple 发布会回顾：M3 系列芯片亮相，Mac 推出新配色",
-          "imageUrl": "https://cdn.sspai.com/editor/u_/cl05gllb34takvr2ff1g"
-        },
-        {
-          "id": "https://sspai.com/post/83975",
-          "author": "少数派编辑部",
-          "description": "育碧将于 2024 年 1 月关闭多款游戏的在线服务，ChatGPT 新版本允许用户使用所有 GPT-4 工具等查看全文",
-          "link": "https://sspai.com/post/83975",
-          "publishedOn": "2023-10-31T01:16:36.000Z",
-          "wordCount": 995,
-          "title": "派早报：Apple 举办 Mac 新品特别活动，Windows 11 发布补丁等",
-          "imageUrl": "https://cdn.sspai.com/2023/10/31/article/41e3cb8e-c9b5-2cb1-2777-ceedb2089d3a.png"
         }
       ]
     },
@@ -10301,6 +10371,36 @@
       "feedUrl": "https://linux.cn/rss.xml",
       "siteUrl": "https://linux.cn/",
       "articles": [
+        {
+          "id": "https://linux.cn/article-16426-1.html?utm_source=rss&utm_medium=rss",
+          "author": "linux@linux.cn (linux)",
+          "description": "#1 微软开源树莓派使用的 RTOS 固件，树莓派软件有望完全开源\n\r\n微软正在开源其收购的 ThreadX 实时操作系统。该公司将其捐献给 Eclipse 基金会管理，它将被称为 Eclipse ThreadX，并在 MIT 许可证下开放。ThreadX 还是相当普及的。微软宣称有 120 亿台设备运行 ThreadX，而你可能就拥有一台。有一段时间，英特尔的片上管理引擎（ME）就是由它驱动的。它也是控制所有比 Pico 更大的树莓派的固件，如树莓派 1 到 4 和 400 等。它运行在树莓派的 VideoCore GPU 上，是启动树莓派并控制其硬件的部分。它也以不开源的二进制大对象（BLOB）的形式包含在 Debian 中。虽然目前还没有看到 VideoCore 版本的 ThreadX 固件，但树莓派基金会现在至少有希望获得发布其版本源代码的许可，这样整个树莓派的软件栈都是开源的了。\n\r\n\r\n消息来源：The Register\n\r\n\r\n\r\n老王点评：这东西对于微软来说或许是鸡肋，但是开源对整个生态很有好处。而且是以 MIT 开源的，这一次还要为微软点赞。期待看到树莓派向完全开源再进一步。\n\r\n\r\n\n\r\n#2 RHEL 10 将正式移除 X.org\n\r\n继 Fedora 之后，RHEL 10 也将移除 Xorg 默认使用 Wayland。从已有 30 多年历史的 X Window 系统向基于 Wayland 的新堆栈过渡已经有 15 年左右的时间。X11 协议和 Xorg 服务器存在一些亟待解决的根本问题，而 Wayland 正是解决之道。如今，Wayland 已被公认为事实上的窗口和显示基础架构解决方案。红帽从 RHEL 8 开始将 Wayland 设为默认设置，并决定从 RHEL 10 和后续版本中移除 Xorg 服务器和其他 X 服务器（Xwayland 除外）。\n\r\n\r\n消息来源：红帽\n\r\n\r\n\r\n老王点评：可能一两年后，X11 和 X.org 就成了历史遗迹了。\n\r\n\r\n\n\r\n#3 DeepMind 首次让人工智能代理具备社会学习能力\n\r\n“社会学习”是一个人通过复制，从另一个人那里获得技能和知识，这对人类和动物界的许多动物的发展过程至关重要。Deepmind 团队声称它们首次在人工智能中展示了这一过程。目前，从人类数据中向人工智能传授新技能一直依赖于从大量第一人称人类演示中进行监督学习，这会耗费实验室大量的时间和金钱。DeepMind 的研究人员称，他们已经证明，人工智能可以通过类似于人类和其他动物的社会学习过程来获得技能。他们的“新代理无需使用任何预先收集的人类数据，就能成功地在新环境中实时模仿人类。”研究人员还对人工智能代理的“代际”传承感兴趣，以研究它们的文化进化。\n\r\n\r\n消息来源：The Register\n\r\n\r\n\r\n老王点评：如果人工智能能够从人类或其它人工智能学习技能，还能传承和进化，这是真的要赋予人工智能以生命了。我感到不安。",
+          "link": "https://linux.cn/article-16426-1.html?utm_source=rss&utm_medium=rss",
+          "publishedOn": "2023-11-29T12:37:00.000Z",
+          "wordCount": 521,
+          "title": "硬核观察 | 硬核观察 #1200 微软开源树莓派使用的 RTOS 固件，树莓派软件有望完全开源",
+          "imageUrl": null
+        },
+        {
+          "id": "https://linux.cn/article-16425-1.html?utm_source=rss&utm_medium=rss",
+          "author": "linux@linux.cn (linux)",
+          "description": "这款视频转换工具带来了急需的改进。\n\r\n\r\n流行的开源视频转换器 HandBrake 发布了新的重要版本，并进行了一些重要升级。该版本是在 HandBrake 1.6 发布近一年后推布的。\n\r\n作为 Linux 上最好的开源视频转换器 之一，HandBrake 是许多人满足其视频转换/转码需求的首选选项。\n\r\n让我们看看这个版本提供了什么。\n\r\n🆕 HandBrake 1.7：有什么新功能？\n\r\n\n\r\nHandBrake 1.7 具有大量全面更新。\n\r\n一些关键亮点包括：\n\r\n\r\nLinux 特定的改进\n\r\n新的 AV1 编码器\n\r\n提高性能\n\r\n\r\nLinux 特定的改进\n\r\n视频摘要中添加了对位深度和 HDR 信息的支持，还有一个新选项可以在切换到电池电源或省电模式时暂停视频编码。\n\r\n然后添加了对本机文件选择器的支持、对视频扫描的拖放支持、设置自动文件命名选项、删除过时的更新检查器 等。\n\r\n新的 AV1 编码器\n\r\n这是此版本的主要亮点，HandBrake 现在支持两种新的 AV1 编码器，AMD VCN AV1 和 NVIDIA NVENC AV1。\n\r\n由于 SVT-AV1 的多通道 ABR 模式的实施，即使现有的 AV1 编码支持也得到了提升。\n\r\n提高性能\n\r\nHandBrake 的性能在 ARM64/AArch64 和 Apple Silicon 等 CPU 架构上得到了重大提升。\n\r\n现在，用户可以利用新的 SVT-AV1 汇编优化、更快的 HEVC 解码以及最新的 FFmpeg 库和快 30% 的 bwdif 过滤。\n\r\n🛠️ 其他更改和改进\n\r\n至于其他改进，以下是一些值得注意的改进：\n\r\n\r\n更新了许多第三方库。\n\r\n更新了 Creator 和 Social 的预设。\n\r\n添加了新的 Apple VideoToolbox 硬件预设。\n\r\n杜比视界和 HDR10+ 的动态范围元数据传递得到了改进。\n\r\n\r\n自从我上次使用 HandBrake 以来已经有一段时间了。但是，我很高兴看到它仍然得到应有的照顾。\n\r\n有关此版本的完整技术详细信息，你可以阅读 发行说明。\n\r\n📥 下载 HandBrake 1.7\n\r\nHandBrake 适用于 Linux、Windows 和 macOS。你可以前往官方网站获取你选择的包。\n\r\n\r\nHandBrake\n\r\n\r\n如果你不确定如何安装； 那么你可以通过我们的安装指南了解更多信息。\n\r\n如何升级？\n\r\nHandBrake 通常会让你知道 Windows 和 macOS 上是否有新更新。开发人员建议你备份在执行升级之前设置的所有自定义预设和应用首选项。\n\r\n对于 Windows 用户，开发人员建议安装 Microsoft .NET Desktop Runtime 6.0.x 版本，以便能够正确运行此程序。\n\r\n但是，对于 Linux 用户，他们必须通过 Flathub 商店进行更新，或者使用官方网站或 GitHub 仓库上提供的更新后的 Flatpak 包重新安装。\n\r\n\r\n📋 在撰写本文时，Flathub store 版本尚未发布 1.7 版本。你可以期待它很快出现。\n\r\n\r\n💬 你会尝试这个新版本的 HandBrake 吗？\n\r\n\r\nvia: https://news.itsfoss.com/handbrake-1-7-release/\n\r\n作者：Sourav Rudra 选题：lujun9972 译者：geekpi 校对：校对者ID\n\r\n本文由 LCTT 原创编译，Linux中国 荣誉推出",
+          "link": "https://linux.cn/article-16425-1.html?utm_source=rss&utm_medium=rss",
+          "publishedOn": "2023-11-29T00:46:39.000Z",
+          "wordCount": 580,
+          "title": "新闻 | HandBrake 1.7 发布",
+          "imageUrl": null
+        },
+        {
+          "id": "https://linux.cn/article-16424-1.html?utm_source=rss&utm_medium=rss",
+          "author": "linux@linux.cn (linux)",
+          "description": "微软，你在 GitHub 上的行为究竟是何目的？\n\r\n\r\n许多用户对 微软收购 GitHub 这一事实感到失望。当然，这并非用户能阻止的事情。\n\r\n因此，有些人选择转向 GitLab 或其他 GitHub 替代品，而部分人则决定坚守在 GitHub，不论他们的感受如何。\n\r\nGitHub 是无数开发者熟悉的地方。无论现在是谁拥有它，这个平台都有它的价值，所以用户仍然根据自己的需求来选择使用它。\n\r\n不幸的是，自微软加入之后，平台上才有了某些变化，两者之间似乎存在一些关联，而且部分改变让用户觉得不便。被关注起来的这个变化就是 2023 年 6 月实施的。\n\r\n现在需要登录才能搜索代码\n\r\n一位 GitHub 用户/贡献者 抱怨 在未登录的情况下无法在公开仓库中搜索代码，这让人非常失望。\n\r\n\r\n📋 在 GitHub 上进行全局代码搜索已经需要登录用户操作，这样已经好几年了。现在所讨论的是仓库内搜索的情况。\n\r\n\r\n下面是他的观点：\n\r\n\r\n这真是让人感到恶心，这是对开源运动的亵渎。我必须指出，微软在这里是在滥用开源运动。\n\r\n我们被告知这是出于安全考虑……但当我可以简单地克隆仓库，使用更专业的工具进行适当的搜索和分析时，那么这样的安全又是为了什么呢？\n\r\n那么到底是什么原因呢？！你们还没有获得我们足够的数据吗？只是靠每次上厕所就能赚点钱，你们还要追踪我在看哪一行代码？\n\r\n\r\n此外，他解释了在他认为应公开访问的仓库中搜索代码的不便。\n\r\n\r\n我正在老旧的机器上使用，需要在我们自己的仓库中搜索东西，结果却做不到。我其实希望人们能够搜索我们的代码库。\n\r\n那我该怎么做呢？我试过登录。但是我的密码管理器不在我手边，所以我不得不拿出我的手机。哦！现在我需要 2FA。然后我得回办公室拿我的 Yubi 密钥。旧的笔记本没有 USB-C 端口？好吧，现在我无能为力了。\n\r\n这个变化不仅没必要，而且对你们自己的客户来说，简直是敌意。猖獗的敌意！\n\r\n\r\n实际上，无法访问本应公开且对“所有人”开放的代码库让人极度不便。\n\r\n这就是开源代码应该如何访问的，对吗？\n\r\nMartin Woodward，GitHub 的开发者关系副总裁，对这个反馈简单地表示，这是一段时间以来的一个改变，主要是为了避免机器人。\n\r\n\r\n对 @koepnick 的不便感到抱歉，虽然在很长一段时间里，我们在全仓库范围内的搜索都要求用户登录，但是当我们在 2023 年提升了搜索能力后，我们不得不将这一要求扩大到仓库内（参看 https://github.blog/changelog/2023-06-07-code-search-now-requires-login/)。\n\r\n主要是确保我们的服务器能够支撑 GitHub 上的开发者负载，并帮助防止服务器被匿名请求等机器人行为压垮。\n\r\n\r\n当然，这是一个大公司的预期回应。不幸的是，这并没有说服为什么要在 GitHub 上做出这样的改变，而其他平台并没有这个限制。\n\r\n声明说的更多的是“何时实施了此项更改”。\n\r\n幸运的是，代码搜索团队的一员 试图阐述他们通过限制获得的优势。\n\r\n太长不看版：该策略可以减少滥用，但并不能阻止所有的机器人。\n\r\n那么，让我们思考一下，作为科技行业的重要参与者，微软没有足够的基础设施来抵御机器人，而不是通过限制访问代码来做到这一点吗？难道没有其他方式来保护代码免受机器人和其他恶意抓取器的侵袭，而不需要禁用搜索功能吗？\n\r\n此外，讨论中的一些用户指出，开源代码的全部意义就在于任何人，无论身份是已知还是未知，都应该可以访问。\n\r\n尽管代码关联到了开源许可证，但是这个限制似乎违反了开源的概念。\n\r\n微软是正在私下里试图控制 GitHub 上的开源利益吗？ 🤔\n\r\n💬 也许微软需要重新考虑这个变动，来让事情变得好一些？或者，也许他们可以提供一个比声明中更好的解释？\n\r\n（题图：MJ/d35ceb65-521d-4313-8e4c-60df0a898455）\n\r\n\r\nvia: https://news.itsfoss.com/microsoft-github-open-source-code/\n\r\n作者：Ankush Das 选题：lujun9972 译者：ChatGPT 校对：wxy\n\r\n本文由 LCTT 原创编译，Linux中国 荣誉推出",
+          "link": "https://linux.cn/article-16424-1.html?utm_source=rss&utm_medium=rss",
+          "publishedOn": "2023-11-29T00:28:00.000Z",
+          "wordCount": 512,
+          "title": "观点 | 微软加码对 GitHub 上的公开代码搜索的限制",
+          "imageUrl": null
+        },
         {
           "id": "https://linux.cn/article-16423-1.html?utm_source=rss&utm_medium=rss",
           "author": "linux@linux.cn (linux)",
@@ -11160,66 +11260,6 @@
           "wordCount": 504,
           "title": "硬核观察 | 硬核观察 #1172 德国法庭裁决浏览器的“请勿跟踪”具有法律约束力",
           "imageUrl": null
-        },
-        {
-          "id": "https://linux.cn/article-16337-1.html?utm_source=rss&utm_medium=rss",
-          "author": "linux@linux.cn (linux)",
-          "description": "在新的历史时刻，我们正在开启一个全新的编程纪元，推动这一进程的核心力量之一便是阿里云的 AI 产品 —— “通义灵码”。\n\r\n阿里云发布 AI 编程助手 “通义灵码”\n\r\n2023 年 10 月的最后一天，在杭州云栖大会上，阿里云对外展示了一款可自动编写代码的 AI 助手。在现场展示中，当在编码软件的对话窗口输入“帮我用 Python 写一个飞机游戏” 后，短短几秒，这款名为 “通义灵码” 的 AI 助手就自动生成了 100 多行代码，点击运行后一个充满儿时回忆的“飞机大战”游戏就成功跑起来了。\n\r\n云栖大会现场的 “通义灵码” 展区异常火爆，开发者体验后纷纷表示大受震撼：“不到 1 分钟居然生成了贪吃蛇的小程序”、“运营也能写前端页面啦”……甚至还有意犹未尽的观众们排队只为向 “通义灵码” 提一些棘手的问题 —— 比如 “帮我用代码解一个韦东奕出的奥数题”，而 “通义灵码” 也不负众望，不仅快速生成了函数代码还给出了相应的答案。\n\r\n你身边的辅助伙伴\n\r\n\n\r\n在这个日新月异的信息时代，“通义灵码” 担当着重要的角色，从业余爱好者到经验丰富的专业开发者，无论你在编程旅程的哪个阶段，都会发现 “通义灵码” 宛如一位随时待命、一路陪伴的编程伙伴。它能减少信息检索、工具切换、写单元测试等繁杂工作时间，更专注于技术设计。\n\r\n不仅如此，“通义灵码” 能够协助你完成各种编程相关的工作，如编写单元测试、写代码注释、代码解释等。这对于保证代码的质量，挖掘潜在的错误和漏洞具有巨大的价值。它的存在极大地提升了编程工作的效率，减少了沟通与理解上的摩擦，让编程变得更加流畅、高效。\n\r\n相较于人工编写测试耗时数分到数十分钟，“通义灵码” 能以毫秒级的速度生成测试代码，准确率和覆盖率都令人满意。\n\r\n总的来说，无论你是在解决一项复杂的编程任务，还是在探索一项新的技术挑战，“通义灵码” 能为你提供一…",
-          "link": "https://linux.cn/article-16337-1.html?utm_source=rss&utm_medium=rss",
-          "publishedOn": "2023-10-31T13:06:00.000Z",
-          "wordCount": 579,
-          "title": "观点 | 编程像说话一样简单！阿里云推出大模型编码助手 —— 灵码",
-          "imageUrl": null
-        },
-        {
-          "id": "https://linux.cn/article-16336-1.html?utm_source=rss&utm_medium=rss",
-          "author": "linux@linux.cn (linux)",
-          "description": "笔记本的支持得到了提升，服务器性能得到了改进，更多内容一一揭晓。\n\r\n\r\n又到了迎接 Linux 内核新版本发布的时刻！\n\r\nLinux 内核 6.6 的发布，是一次大规模更新，针对各类笔记本、网络硬件、处理器等提供了大量全方位的改良。\n\r\nLinus Torvalds 表示：\n\r\n\r\n各种各样的修复散布各处，除了针对 r8152 驱动的一些重要修复外，其它的都相当小型。下面是上周的简短日志，供所有想要一探究竟、了解更多细节的读者。日志篇幅短小，可以快速翻阅。\n\r\n\r\n🆕 Linux 内核 6.6：都有哪些新元素？\n\r\n在我们开始之前，需要提醒大家，这一次发布的是非长期支持版本，因此不是每个人都必须进行升级，除非你想要享受最新、最棒的版本。\n\r\n总的来说，让我们来看看这次发布版本的亮点：\n\r\n\r\n针对英特尔芯片的优化\n\r\n对笔记本的更佳支持\n\r\n网络改进\n\r\nAMD 芯片性能提升\n\r\n\r\n针对英特尔芯片的优化\n\r\n\n\r\nLinux 内核 6.6 版本新增了对英特尔的神经处理单元（NPU）的支持，这样的技术原先被称作通用处理器。\n\r\n这项技术预计将于今年晚些时候，随着英特尔的“Meteor Lake”芯片亮相而首次公开登场。这些 NPU 将被专门用于处理人工智能工作负载。\n\r\n英特尔甚至已经开始对即将发布的 “Arrow Lake”芯片进行NPU 支持的初步工作了！\n\r\n此外，还新增了对英特尔的 Shadow Stack 的支持，因为他们的 控制流执行技术（CET）被引入到了内核中。其主要目的是防止现代英特尔 CPU（从 Tiger Lake 起）上的返回导向编程（ROP）攻击。\n\r\n对笔记本的更佳支持\n\r\n\n\r\n对于惠普笔记本，现在你可以直接在 Linux 中对 BIOS 进行管理了，这要归功于 “HP-BIOSCFG” 驱动的实现。\n\r\n根据报道，从 2018 年起出产…",
-          "link": "https://linux.cn/article-16336-1.html?utm_source=rss&utm_medium=rss",
-          "publishedOn": "2023-10-31T12:46:32.000Z",
-          "wordCount": 618,
-          "title": "新闻 | Linux 内核 6.6 版本莅临，带来诸多变化",
-          "imageUrl": null
-        },
-        {
-          "id": "https://linux.cn/article-16335-1.html?utm_source=rss&utm_medium=rss",
-          "author": "linux@linux.cn (linux)",
-          "description": "10 月 31 日，阿里云正式发布千亿级参数大模型通义千问 2.0。在 10 个权威测评中，通义千问 2.0 综合性能超过 GPT-3.5，正在加速追赶 GPT-4。当天，通义千问 APP 在各大手机应用市场正式上线，所有人都可通过 APP 直接体验最新模型能力。\n\r\n\r\n\n\r\n过去 6 个月，通义千问 2.0 在性能上取得巨大飞跃，相比今年 4 月发布的 1.0 版本，通义千问 2.0 在复杂指令理解、文学创作、通用数学、知识记忆、幻觉抵御等能力上均有显著提升。目前，通义千问的综合性能已经超过 GPT-3.5，加速追赶 GPT-4。\n\r\n\n\r\n图：通义千问2.0综合性能超过 GPT-3.5，正在加速追赶 GPT-4\n\r\n在 MMLU、C-Eval、GSM8K、HumanEval、MATH 等 10 个主流 Benchmark 测评集上，通义千问 2.0 的得分整体超越 Meta 的 Llama-2-70B，相比 OpenAI 的 Chat-3.5 是九胜一负，相比 GPT-4 则是四胜六负，与 GPT-4 的差距进一步缩小。\n\r\n中英文理解能力是大语言模型的基本功。英语任务方面，通义千问 2.0 在 MMLU 基准的得分是 82.5，仅次于 GPT-4，通过大幅增加参数量，通义千问 2.0 能更好地理解和处理复杂的语言结构和概念；中文任务方面，通义千问 2.0 以明显优势在 C-Eval 基准获得最高得分，这是由于模型在训练中学习了更多中文语料，进一步强化了中文理解和表达能力。\n\r\n在数学推理、代码理解等领域，通义千问 2.0 进步明显。在推理基准测试 GSM8K 中，通义千问排名第二，展示了强大的计算和逻辑推理能力；在 HumanEval 测试中，通义千问得分紧跟 GPT-4 和 GPT-3.5，该测试主要衡量大模型理解和执行代码片段的能力，这一能力是大模型应用于编程辅助、自动代码修复等场景的基础。\n\r\n\n\r\n图：通义千问 2.0 发布\n\r\n通义千问更成熟了，也更好用了。通义千问 2.0 在指令遵循、工具使用、精细化创作等方面作了技术优化，能够更好地被下游应用场景集成。通义大模型官网上线了多模态和插件功能，支持图片输入、文档解析等细分任务。\n\r\n与此同时，基于通义大模型训练的 8 大行业模型组团上线，他们分别是：\n\r\n\r\n通义灵码：智能编码助手\n\r\n通义智文：AI 阅读助手\n\r\n通义听悟：工作学习 AI 助手\n\r\n通义星尘：个性化角色创作平台\n\r\n通义点金：智能投研助手\n\r\n通义晓蜜：智能客服\n\r\n通义仁心：个人专属健康助手\n\r\n通义法睿：AI 法律顾问。\n\r\n\r\n8 大行业模型面向当下最受欢迎的多个垂直场景，使用领域数据进行专门训练。用户可以在官网直接体验模型功能，开发者可以通过网页嵌入、API/SDK 调用等方式，将模型能力集成到自己的大模型应用和服务中。\n\r\n\n\r\n图：通义大模型家族全面升级，8 大行业模型组团上线\n\r\n截至 10 月，阿里云已与 60 多个行业头部伙伴进行深度合作，推动通义千问在办公、文旅、电力、政务、医保、交通、制造、金融、软件开发等领域的落地。 \n\r\n周靖人透露，阿里云计划近期开源通义千问 72B 版本，此前，阿里云已先后开源 7B 和 14B 版本模型，模型累计下载量超过 100 万。阿里云将持续支持千行百业的开发者基于通义千问开源模型进行模型和应用创新。",
-          "link": "https://linux.cn/article-16335-1.html?utm_source=rss&utm_medium=rss",
-          "publishedOn": "2023-10-31T07:58:53.000Z",
-          "wordCount": 537,
-          "title": "新闻 | 阿里云发布通义千问 2.0，性能超 GPT-3.5，加速追赶 GPT-4",
-          "imageUrl": null
-        },
-        {
-          "id": "https://linux.cn/article-16334-1.html?utm_source=rss&utm_medium=rss",
-          "author": "linux@linux.cn (linux)",
-          "description": "马斯克希望 X 接管用户全部财务活动，超越微信\n\r\n在埃隆·马斯克入主 X 公司一年后，这个前身名为 Twitter 的平台的财务状况仍不稳定，但持续的资金问题并没有阻止马斯克继续推进将 X 转变为银行的计划。在财报电话会议上，马斯克告诉 X 的员工，他预测 X 的支付系统将于 2024 年底推出，这将包括用户的“整个财务活动”，用户将“不再需要银行账户”。作为 PayPal 的联合创始人之一，马斯克重申，他对 X 的计划是全面实现他最初在 2000 年为 PayPal 写的路线图。马斯克说，他努力将 Twitter 打造成一个无所不能的应用程序，有朝一日将超过中国的微信。\n\r\n\r\n消息来源：Ars Technica\n\r\n\r\n\r\n老王点评：即便有珠玉在前，也未必能实现。\n\r\n\r\n\n\r\n近 80% 的开发人员在考虑换工作\n\r\n根据 Stack Overflow 的一份调查，与过去两年相比，现在有更多的开发人员正在寻找或愿意接受新工作。超过 1000 名开发人员参加了该调查，79% 的人即使没有积极寻找，也至少在考虑新的机会。更好的薪水是他们寻找新工作的首要原因。其次是对其他公司的好奇心，如新技术和发展机会。此外，8% 的开发人员已退出技术行业，越来越多地在制造和供应链公司任职。\n\r\n\r\n消息来源：Stack Overflow\n\r\n\r\n\r\n老王点评：IT 行业的“活力”也体现在频繁换工作方面。\n\r\n\r\n\n\r\n印度 Infosys 联合创始人呼吁年轻人每周工作 70 小时\n\r\nInfosys 联合创始人、前 CEO 纳拉亚纳·穆尔西Narayana Murthy 在接受采访时表示，他认为印度拥有巨大的经济潜力，但其生产率仍然很低。他要求年轻人必须说“这是我的国家，我想每周工作 70 小时”，他要求印度所有优秀青年“在未来 20 年、50 年（无论长短）每天工作 12 小时，使印度成为国内生产总值排名第一或第二的国家。”具有讽刺意味的是，Infosys 最近报告称，其员工利用率目前为 81.8%，还不到 70 小时的一半。\n\r\n\r\n消息来源：The Register\n\r\n\r\n\r\n老王点评：天下老板的想法都是一样（黑）的。",
-          "link": "https://linux.cn/article-16334-1.html?utm_source=rss&utm_medium=rss",
-          "publishedOn": "2023-10-30T23:01:00.000Z",
-          "wordCount": 496,
-          "title": "硬核观察 | 硬核观察 #1171 马斯克希望 X 接管用户全部财务活动，超越微信",
-          "imageUrl": null
-        },
-        {
-          "id": "https://linux.cn/article-16333-1.html?utm_source=rss&utm_medium=rss",
-          "author": "linux@linux.cn (linux)",
-          "description": "KDE Plasma 6 进行了一些修改，需要小部件作者进行调整。开发人员，移植时间到了！\n\r\n\r\nKDE Plasma 6 是备受期待的桌面环境版本升级版本。\n\r\n最近，其发布时间表公布，第一个 Alpha 版本将于 2023 年 11 月 8 日上线，最终 Beta 版本于 2023 年 1 月 31 日上线，稳定版计划于 2024 年 2 月 28 日上线。\n\r\n考虑到 KDE Plasma 5.x 系列包含多项改进和功能添加，许多用户对 KDE Plasma 6 带来的功能感到期待。\n\r\n如果你好奇，我们已经介绍了 KDE Plasma 6 的主要变化。因此，它会发生重大变化也就不足为奇了。\n\r\n然而，在进行重大修改后，可能会出现一些破坏体验的改动，例如无法在 Plasma 6 上运行任何旧版小部件。\n\r\n给小部件开发者的移植通知\n\r\n在 KDE 的 Nate Graham 最近发表的一篇 博客文章 中，向 Plasma 5 小部件作者发出了正式的警告。\n\r\n其重点指出的信息是：\n\r\n\r\n你需要将你的小部件移植到更新的 API，以使它们与 Plasma 6 兼容！\n\r\n\r\nPlasma 小部件 API 已随着即将发布的版本进行了修改。而且，为了适应这种变化并保持运行，小部件开发人员必须将他们的创作移植到更新的 API。\n\r\n如果开发人员不移植小部件以使用更新的 API，它将无法在 KDE Plasma 6 中运行。\n\r\n当然，流行的小部件开发人员很可能会进行移植。但是，如果你使用的小部件虽然还能使用，但没有积极维护，那么你将不得不在 KDE Plasma 6 中放弃它。\n\r\n他们已提供了一份 移植指南 供开发人员遵循。\n\r\n你可以在 “Plasma 6 扩展” 下找到与 Plasma 6 兼容的小部件。在撰写本文时，只能看到列出了两个第三方小部件。\n\r\n\n\r\n因此，当你喜欢的小部件被移植到 KDE Plasma 6 并由相关开发者上传后，你就会发现它们的踪迹。\n\r\n💬 你期待移植哪些 KDE 小部件？ 你认为你会错过某些不再维护的小部件吗？在下面的评论中分享你的想法。\n\r\n\r\nvia: https://news.itsfoss.com/kde-plasma-6-widgets/\n\r\n作者：Ankush Das 选题：lujun9972 译者：geekpi 校对：wxy\n\r\n本文由 LCTT 原创编译，Linux中国 荣誉推出",
-          "link": "https://linux.cn/article-16333-1.html?utm_source=rss&utm_medium=rss",
-          "publishedOn": "2023-10-30T14:52:07.000Z",
-          "wordCount": 544,
-          "title": "新闻 | KDE Plasma 6 将不支持较旧的桌面小部件",
-          "imageUrl": null
-        },
-        {
-          "id": "https://linux.cn/article-16332-1.html?utm_source=rss&utm_medium=rss",
-          "author": "linux@linux.cn (linux)",
-          "description": "最近，我首次尝试了 Mac。直至现在，我注意到的最大缺点是其软件包管理比 Linux 差很多。一段时间以来，我对于 homebrew 感到相当不满，因为每次我安装新的软件包时，它大部分时间都花在了升级上。于是，我萌生了试试 nix 包管理器的想法！\n\r\n公认的，nix 的使用存在一定困惑性（甚至它有自己单独的编程语言！），因此，我一直在努力以最简洁的方式掌握使用 nix，避开复杂的配置文件管理和新编程语言学习。以下是我至今为止学习到的内容, 敬请期待如何进行：\n\r\n\r\n使用 nix 安装软件包\n\r\n为一个名为 paperjam 的 C++ 程序构建一个自定义的 nix 包\n\r\n用 nix 安装五年前的 hugo 版本\n\r\n\r\n如同以往，由于我对 nix 的了解还停留在入门阶段，本篇文章可能存在一些表述不准确的地方。甚至我自己也对于我是否真的喜欢上 nix 感到模棱两可 —— 它的使用真的让人相当困惑！但是，它帮我成功编译了一些以前总是难以编译的软件，并且通常来说，它比 homebrew 的安装速度要快。\n\r\nnix 为何引人关注？\n\r\n通常，人们把 nix 定义为一种“声明式的包管理”。尽管我对此并不太感兴趣，但以下是我对 nix 的两个主要欣赏之处：\n\r\n\r\n它提供了二进制包（托管在 https://cache.nixos.org/ 上），你可以迅速下载并安装\n\r\n对于那些没有二进制包的软件，nix 使编译它们变得更容易\n\r\n\r\n我认为 nix 之所以擅长于编译软件，主要有以下两个原因：\n\r\n\r\n在你的系统中，可以安装同一库或程序的多个版本（例如，你可能有两个不同版本的 libc）。举个例子，我当前的计算机上就存在两个版本的 node，一个位于 /nix/store/4ykq0lpvmskdlhrvz1j3kwslgc6c7pnv-nodejs-16.17.1，另一个位于…",
-          "link": "https://linux.cn/article-16332-1.html?utm_source=rss&utm_medium=rss",
-          "publishedOn": "2023-10-30T13:54:00.000Z",
-          "wordCount": 1117,
-          "title": "技术 | 我的一些 nix 学习经验：安装和打包",
-          "imageUrl": null
         }
       ]
     },
@@ -11455,6 +11495,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/951631/",
+          "author": "corbet",
+          "description": "The LWN.net Weekly Edition for November 30, 2023 is available.",
+          "link": "https://lwn.net/Articles/951631/",
+          "publishedOn": "2023-11-30T00:18:12.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for November 30, 2023",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/953286/",
+          "author": "corbet",
+          "description": "The LibreQoS project\ndescribes itself as:\n\n\n\tLibreQoS is a Quality of Experience (QoE) Smart Queue Management\n\t(SQM) system designed for Internet Service Providers to optimize\n\tthe flow of their network traffic and thus reduce bufferbloat, keep\n\tthe network responsive, and improve the end-user experience.\n\n\nVersion\n1.4 of LibreQoS was released on November 17.  \"Version 1.4 is a\nhuge milestone. A whole new back-end, new GUI, 30%+ performance\nimprovements, support for single-interface mode.\"",
+          "link": "https://lwn.net/Articles/953286/",
+          "publishedOn": "2023-11-29T22:05:33.000Z",
+          "wordCount": 255,
+          "title": "LibreQoS 1.4 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/953141/",
+          "author": "jake",
+          "description": "In the Kernel Summit\ntrack at the 2023 Linux\nPlumbers Conference (LPC), Stefan Roesch led a session on kernel\nsamepage merging (KSM).  He gave an overview of the feature and described\nsome recent changes to KSM.  He showed how\nan application can enable KSM to deduplicate its memory and how the feature\ncan be evaluated to  determine whether it is a good fit for new workloads.\nIn addition, he provided some real-world data of the benefits from his\nworkplace at Meta.",
+          "link": "https://lwn.net/Articles/953141/",
+          "publishedOn": "2023-11-29T21:45:22.000Z",
+          "wordCount": null,
+          "title": "[$] An overview of kernel samepage merging (KSM)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/953228/",
+          "author": "corbet",
+          "description": "Nextcloud has announced\nthe \"acquisition\" of the Roundcube webmail system.\n\n\n\tAs a product, Roundcube has an established path to success on its\n\town. With opportunities remaining to be explored, a direct merger\n\tbetween Roundcube and Nextcloud is not planned. Neither will\n\tRoundcube replace Nextcloud Mail or the other way around. The\n\tproducts both have strengths and weaknesses and as open source\n\tproducts they already do share some underlying libraries and tools,\n\tbut remain independent offerings for overlapping but different use\n\tscenarios. Nextcloud Mail will evolve as it is, focused on being\n\tused naturally within Nextcloud. Roundcube will continue to serve\n\tits active and new users as a stand-alone secure mail client.",
+          "link": "https://lwn.net/Articles/953228/",
+          "publishedOn": "2023-11-29T15:11:37.000Z",
+          "wordCount": 322,
+          "title": "Roundcube becomes part of Nextcloud",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/953226/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (gst-plugins-bad1.0 and postgresql-multicorn), Fedora (golang-github-nats-io, golang-github-nats-io-jwt-2, golang-github-nats-io-nkeys, golang-github-nats-io-streaming-server, libcap, nats-server, openvpn, and python-geopandas), Mageia (kernel), Red Hat (c-ares, curl, fence-agents, firefox, kernel, kernel-rt, kpatch-patch, libxml2, pixman, postgresql, and tigervnc), SUSE (python-azure-storage-queue, python-Twisted, and python3-Twisted), and Ubuntu (afflib, ec2-hibinit-agent, linux-nvidia-6.2, linux-starfive-6.2, and poppler).",
+          "link": "https://lwn.net/Articles/953226/",
+          "publishedOn": "2023-11-29T14:47:17.000Z",
+          "wordCount": 361,
+          "title": "Security updates for Wednesday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/952942/",
           "author": "jake",
@@ -12204,36 +12294,6 @@
           "wordCount": 457,
           "title": "Security updates for Tuesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/949269/",
-          "author": "corbet",
-          "description": "The New Stack covers\na conference talk by Bjarne Stroustrup on turning C++ into a safer\nlanguage.\n\n\n\tStroustrup has arrived at his solution: profiles. (That is, a set\n\tof rules which, when followed, achieve specific safety guarantees.)\n\tThey’d be defined by the ISO C++ standard, addressing common safety\n\tissues like pointers and array ranges. In response to a later\n\tquestion from the audience about the difficulty of adding new\n\ttooling, Stroustrup pointed out that the C++ compiler itself is now\n\ta pretty sophisticated static analyzer, and could also be tasked\n\twith meeting the profile's requirements.",
-          "link": "https://lwn.net/Articles/949269/",
-          "publishedOn": "2023-10-30T16:43:13.000Z",
-          "wordCount": 2724,
-          "title": "Bjarne Stroustrup’s Plan for Bringing Safety to C++  (The New Stack)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/948970/",
-          "author": "corbet",
-          "description": "The 6.6 kernel was released,\nright on schedule, on October 29.  This development cycle saw the\naddition of 14,069 non-merge changesets from 1,978 developers — fairly\ntypical numbers for recent releases.  The time has come for LWN's\ntraditional look at where the changes in this release came from, along with\na look at the longer development \"supercycle\" that (probably) ends with\n6.6.",
-          "link": "https://lwn.net/Articles/948970/",
-          "publishedOn": "2023-10-30T16:18:08.000Z",
-          "wordCount": null,
-          "title": "[$] Some 6.6 development statistics",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/949238/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (distro-info, distro-info-data, gst-plugins-bad1.0, node-browserify-sign, nss, openjdk-11, and thunderbird), Fedora (chromium, curl, nghttp2, and xorg-x11-server-Xwayland), Gentoo (Dovecot, Rack, rxvt-unicode, and UnZip), Mageia (apache, bind, and vim), Red Hat (varnish:6), SUSE (nodejs12, opera, python-bugzilla, python-Django, and vorbis-tools), and Ubuntu (exim4, firefox, nodejs, and slurm-llnl, slurm-wlm).",
-          "link": "https://lwn.net/Articles/949238/",
-          "publishedOn": "2023-10-30T13:46:50.000Z",
-          "wordCount": 287,
-          "title": "Security updates for Monday",
-          "imageUrl": null
         }
       ]
     },
@@ -12242,6 +12302,76 @@
       "feedUrl": "https://rsshub.app/github/file/guanguans/favorite-link/master/README.md",
       "siteUrl": "https://github.com/guanguans/favorite-link/commits/master/README.md",
       "articles": [
+        {
+          "id": "https://github.com/guanguans/favorite-link/commit/acb1c3aafee014f1e7990cf90b1cffa94a7c7752",
+          "author": "guanguans",
+          "description": "gokcehan/lf: 终端文件管理器",
+          "link": "https://github.com/guanguans/favorite-link/commit/acb1c3aafee014f1e7990cf90b1cffa94a7c7752",
+          "publishedOn": "2023-11-29T08:55:09.000Z",
+          "wordCount": 468,
+          "title": "gokcehan/lf: 终端文件管理器",
+          "imageUrl": "https://opengraph.githubassets.com/2490134b12b1f80f1e3cf85e8225c1c16b6156659910c128074ac94b6c0c9d9a/guanguans/favorite-link/commit/acb1c3aafee014f1e7990cf90b1cffa94a7c7752"
+        },
+        {
+          "id": "https://github.com/guanguans/favorite-link/commit/224c309d9e334fab948114de0e091649c35223d7",
+          "author": "guanguans",
+          "description": "cheat/cheat: cheat 允许您在命令行上创建和查看交互式备忘单。它旨在帮助提醒 *nix 系统管理员他们经常使用但不够频繁而难以记住的命令选项。",
+          "link": "https://github.com/guanguans/favorite-link/commit/224c309d9e334fab948114de0e091649c35223d7",
+          "publishedOn": "2023-11-29T07:06:58.000Z",
+          "wordCount": 477,
+          "title": "cheat/cheat: cheat 允许您在命令行上创建和查看交互式备忘单。它旨在帮助提醒 *nix 系统管理员他们经常使用但不够频繁而难以记住的命令选项。",
+          "imageUrl": "https://opengraph.githubassets.com/6cb5c9240a6cc48906b115fcca730221e78395d504ed4546b730b71a32783bae/guanguans/favorite-link/commit/224c309d9e334fab948114de0e091649c35223d7"
+        },
+        {
+          "id": "https://github.com/guanguans/favorite-link/commit/1f9208d4914718dbd2cec9435f8968c69b7d77d5",
+          "author": "guanguans",
+          "description": "ruanyf/fortunes: 为中国用户提供的财富数据库文件合集。",
+          "link": "https://github.com/guanguans/favorite-link/commit/1f9208d4914718dbd2cec9435f8968c69b7d77d5",
+          "publishedOn": "2023-11-29T03:26:57.000Z",
+          "wordCount": 471,
+          "title": "ruanyf/fortunes: 为中国用户提供的财富数据库文件合集。",
+          "imageUrl": "https://opengraph.githubassets.com/fca1ce1795849ea3acd838239906c8f6a106dc7a7c718e1ea502a94246b03db0/guanguans/favorite-link/commit/1f9208d4914718dbd2cec9435f8968c69b7d77d5"
+        },
+        {
+          "id": "https://github.com/guanguans/favorite-link/commit/f6ee6dd4c2a32796ac9a62894e9c85ef346d4fe5",
+          "author": "guanguans",
+          "description": "fastfetch-cli/fastfetch: 与 neofetch 类似，但速度更快，因为是用 C 编写的。",
+          "link": "https://github.com/guanguans/favorite-link/commit/f6ee6dd4c2a32796ac9a62894e9c85ef346d4fe5",
+          "publishedOn": "2023-11-29T03:04:59.000Z",
+          "wordCount": 481,
+          "title": "fastfetch-cli/fastfetch: 与 neofetch 类似，但速度更快，因为是用 C 编写的。",
+          "imageUrl": "https://opengraph.githubassets.com/c84bd420b2c78e923a3e0e9f24bbc2022f6c7e683a1aec7dcdf620782671924e/guanguans/favorite-link/commit/f6ee6dd4c2a32796ac9a62894e9c85ef346d4fe5"
+        },
+        {
+          "id": "https://github.com/guanguans/favorite-link/commit/a0e8ed75fc504a958d5ff20a3efc65f69f749aa5",
+          "author": "guanguans",
+          "description": "MichaelAquilina/zsh-you-should-use: 📎 ZSH 插件，提醒您为刚刚键入的命令使用现有别名",
+          "link": "https://github.com/guanguans/favorite-link/commit/a0e8ed75fc504a958d5ff20a3efc65f69f749aa5",
+          "publishedOn": "2023-11-29T02:50:16.000Z",
+          "wordCount": 474,
+          "title": "MichaelAquilina/zsh-you-should-use: 📎 ZSH 插件，提醒您为刚刚键入的命令使用现有别名",
+          "imageUrl": "https://opengraph.githubassets.com/5d0a77fcfdddfe8e740443a097d7cd2bc59dcdfdbad21194b286722a00f9d2f1/guanguans/favorite-link/commit/a0e8ed75fc504a958d5ff20a3efc65f69f749aa5"
+        },
+        {
+          "id": "https://github.com/guanguans/favorite-link/commit/ea90785419985c26a93cff0956cd44e970cf2594",
+          "author": "guanguans",
+          "description": "gobuffalo/buffalo: 使用 Go 进行快速 Web 开发",
+          "link": "https://github.com/guanguans/favorite-link/commit/ea90785419985c26a93cff0956cd44e970cf2594",
+          "publishedOn": "2023-11-29T01:38:43.000Z",
+          "wordCount": 473,
+          "title": "gobuffalo/buffalo: 使用 Go 进行快速 Web 开发",
+          "imageUrl": "https://opengraph.githubassets.com/702780b07e1f56c46a18eecd2f5c8eb5e7cbe9ca135b7c5ef2e203c08ba12c6e/guanguans/favorite-link/commit/ea90785419985c26a93cff0956cd44e970cf2594"
+        },
+        {
+          "id": "https://github.com/guanguans/favorite-link/commit/c29ab2a63e76ce999705cf7133a5becfbe233d06",
+          "author": "guanguans",
+          "description": "TomasVotruba/tryml: 将 YAML 文件修剪到最少",
+          "link": "https://github.com/guanguans/favorite-link/commit/c29ab2a63e76ce999705cf7133a5becfbe233d06",
+          "publishedOn": "2023-11-29T01:36:35.000Z",
+          "wordCount": 462,
+          "title": "TomasVotruba/tryml: 将 YAML 文件修剪到最少",
+          "imageUrl": "https://opengraph.githubassets.com/bc2009ffdc412f3fbea64f5c46a90ad0de5a6cc198b1e39d573686d0d8238c1d/guanguans/favorite-link/commit/c29ab2a63e76ce999705cf7133a5becfbe233d06"
+        },
         {
           "id": "https://github.com/guanguans/favorite-link/commit/209af7aedcda0283396b923b516b356284a05a38",
           "author": "guanguans",
@@ -12981,56 +13111,6 @@
           "wordCount": 471,
           "title": "NicoNex/echotron: Go 中用于 Telegram bot API 的优雅并发库。",
           "imageUrl": "https://opengraph.githubassets.com/fed25cb4807064602558a25b58bcb37c49d823d795e99a7bbf8d49014e6a29ba/guanguans/favorite-link/commit/a2e66057487cc786185e29cca596fd67b6357549"
-        },
-        {
-          "id": "https://github.com/guanguans/favorite-link/commit/9096381ce97b9cfa78a66e3687b9e0b5f19fa0ed",
-          "author": "guanguans",
-          "description": "benholmen/defrag: PHPUnit 测试的磁盘碎片整理输出",
-          "link": "https://github.com/guanguans/favorite-link/commit/9096381ce97b9cfa78a66e3687b9e0b5f19fa0ed",
-          "publishedOn": "2023-10-31T01:41:35.000Z",
-          "wordCount": 471,
-          "title": "benholmen/defrag: PHPUnit 测试的磁盘碎片整理输出",
-          "imageUrl": "https://opengraph.githubassets.com/4738b50874a7c1874a3ed683f660a320f4b07a44beaf4ef2642a48146ad6e42f/guanguans/favorite-link/commit/9096381ce97b9cfa78a66e3687b9e0b5f19fa0ed"
-        },
-        {
-          "id": "https://github.com/guanguans/favorite-link/commit/9df7b48b3000754e548c417c36bf7c569a5a3de4",
-          "author": "guanguans",
-          "description": "stevebauman/hypertext: PHP HTML 到纯文本转换器。",
-          "link": "https://github.com/guanguans/favorite-link/commit/9df7b48b3000754e548c417c36bf7c569a5a3de4",
-          "publishedOn": "2023-10-31T01:40:12.000Z",
-          "wordCount": 474,
-          "title": "stevebauman/hypertext: PHP HTML 到纯文本转换器。",
-          "imageUrl": "https://opengraph.githubassets.com/22ac3c320b3fa8bf86282dcb592ec5d8e852ce0f918ddf136746627ceddfbdf1/guanguans/favorite-link/commit/9df7b48b3000754e548c417c36bf7c569a5a3de4"
-        },
-        {
-          "id": "https://github.com/guanguans/favorite-link/commit/fd4390f48531ecd9edc404a9bd72e6043a700d66",
-          "author": "guanguans",
-          "description": "snowlyg/iris-admin: Go 框架的 Web 管理 [gin/iris]",
-          "link": "https://github.com/guanguans/favorite-link/commit/fd4390f48531ecd9edc404a9bd72e6043a700d66",
-          "publishedOn": "2023-10-31T01:39:18.000Z",
-          "wordCount": 477,
-          "title": "snowlyg/iris-admin: Go 框架的 Web 管理 [gin/iris]",
-          "imageUrl": "https://opengraph.githubassets.com/d5ee163fe34d1f745a13f77f93546eb4993b025db03fb93f91ff2e435b1c4259/guanguans/favorite-link/commit/fd4390f48531ecd9edc404a9bd72e6043a700d66"
-        },
-        {
-          "id": "https://github.com/guanguans/favorite-link/commit/a5e69e25fa10168df56c85766b6c1f0404ac996b",
-          "author": "guanguans",
-          "description": "Crell/fp: PHP 中用于功能性任务的实用程序。预计该列表会随着时间的推移而增长。",
-          "link": "https://github.com/guanguans/favorite-link/commit/a5e69e25fa10168df56c85766b6c1f0404ac996b",
-          "publishedOn": "2023-10-31T01:35:50.000Z",
-          "wordCount": 464,
-          "title": "Crell/fp: PHP 中用于功能性任务的实用程序。预计该列表会随着时间的推移而增长。",
-          "imageUrl": "https://opengraph.githubassets.com/3a7135a3faccb351d477f8c67d8fffbe2667a934d68e9603ea6f503f2872b53c/guanguans/favorite-link/commit/a5e69e25fa10168df56c85766b6c1f0404ac996b"
-        },
-        {
-          "id": "https://github.com/guanguans/favorite-link/commit/e1624bcca9e4efd087884843bae9ede91674f7b9",
-          "author": "guanguans",
-          "description": "flavioheleno/watchr: 用于检查域名和 TLS 证书过期日期的命令行实用程序",
-          "link": "https://github.com/guanguans/favorite-link/commit/e1624bcca9e4efd087884843bae9ede91674f7b9",
-          "publishedOn": "2023-10-31T01:34:58.000Z",
-          "wordCount": 462,
-          "title": "flavioheleno/watchr: 用于检查域名和 TLS 证书过期日期的命令行实用程序",
-          "imageUrl": "https://opengraph.githubassets.com/9916da46f325bc6af2c723ffde046886383a16487bd8ebfc845c5dd32c5088f8/guanguans/favorite-link/commit/e1624bcca9e4efd087884843bae9ede91674f7b9"
         }
       ]
     }
