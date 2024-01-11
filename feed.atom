@@ -2,10 +2,895 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://v2less.github.io/rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2024-01-10T01:09:09.422Z</updated>
+    <updated>2024-01-11T01:09:05.880Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://v2less.github.io/rssfeed/index.html"/>
     <link rel="self" href="https://v2less.github.io/rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[[$] LWN.net Weekly Edition for January 11, 2024]]></title>
+        <id>https://lwn.net/Articles/956868/</id>
+        <link href="https://lwn.net/Articles/956868/"/>
+        <updated>2024-01-11T00:16:39.000Z</updated>
+        <summary type="html"><![CDATA[The LWN.net Weekly Edition for January 11, 2024 is available.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Software Engineers Say the Job Market Is Getting Much Worse]]></title>
+        <id>https://news.ycombinator.com/item?id=38945437</id>
+        <link href="https://www.vice.com/en/article/g5y37j/thousands-of-software-engineers-say-the-job-market-is-getting-much-worse"/>
+        <updated>2024-01-11T00:02:52.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.vice.com/en/article/g5y37j/thousands-of-software-engineers-say-the-job-market-is-getting-much-worse
+Comments URL: https://news.ycombinator.com/item?id=38945437
+Points: 47
+# Comments: 16]]></summary>
+        <author>
+            <name>UncleOxidant</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[技术 | 现在你可以在 Wayland 上运行 Shutter 了！]]></title>
+        <id>https://linux.cn/article-16549-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-16549-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2024-01-10T23:39:46.000Z</updated>
+        <summary type="html"><![CDATA[你无需在 Wayland 上放弃使用 Shutter！
+
+
+哎，我一直在担心有一天我得切换到只支持 Wayland 的 Linux 发行版，结果发现 Shutter 不工作。
+
+它是 Linux 中用于捕捉和编辑 屏幕截图的最佳工具 之一，我每天都会使用它来为这里和其他地方的工作捕捉各种截图。
+
+我知道 GNOME 的屏幕截图工具已经有了很大的进步，但是就像人们所说的，“旧习难改”。所以，当我发现有一种方法可以在所有的 Wayland 上运行 Shutter 时，我自然是相当兴奋。
+
+请跟随我一起了解这个精彩的开源项目。这个项目由一位热心的 Shutter 爱好者发起，他的目标就是让 Shutter 能在配备 Wayland 的发行版上顺利运行。
+
+在 Wayland 上使用 Shutter：有何期待？
+
+这个项目由来自意大利的 IT 开发者 Maurizio 发起，他热衷于 Linux，因为他不能接受 Shutter 无法在他的 Ubuntu 系统上正常运行，因此这个项目应运而生。。
+
+因此，他复刻了 Shutter 的代码仓库，并利用 GNOME 的屏幕截图工具 的命令行工具进行开发，同时尽力保持用户界面和以往的操作习惯不变。
+
+如下图所示，这个项目与你从 Shutter 那里期待的体验几乎无二，你可以在界面上发现所有熟悉的选项。在运行着 Ubuntu 23.10 的虚拟机上用这个工具截图时，我并未感到有什么两样。
+
+
+
+我还发现，按只截图窗口或选取特定区域也变得容易了。只是那个通常用来截图特定窗口或桌面的下拉菜单似乎并未起到应有的功能，反而变得有点挪作他用。
+
+
+📋 这是我在 Ubuntu 23.10 的 Wayland 上进行选区捕捉的结果。
+
+
+
+
+如果你想截图你系统中特定的桌面空间，你需要切换到那个桌面，使 Shutter 转到同一屏幕，然后使用“桌面Desktop”选项进行截图。
+
+
+
+对于只截图窗口也是类似，只要将应用和 Shutter 切到同一屏幕，使用“窗口Window”选项就能够截取窗口的截图。
+
+至此已经足够了。我真心期待 Shutter 的开发更上层楼，希望我们能看到此类改进被融入原有的项目中。
+
+📥 如何下载运行于 Wayland 的 Shutter?
+
+在开始下载和安装之前，请确保你已经彻底卸载了你之前安装的任何版本的 Shutter。
+
+接下来，你有两种获取这个 Shutter 变体的方法可选。第一种方法是直接访问它的 GitHub 仓库，下载提供的 “.deb” 文件。
+
+
+在 Wayland 上的 Shutter（GitHub）
+
+
+而我更为推荐的是第二种方法，尤其适用于 Ubuntu 23.10 或者更高的版本，因为它可以自动处理所有的依赖关系。你只需要运行以下的命令即可：
+
+setfacl -m u:_apt:rx .
+wget https://github.com/mvivarelli/shutter-on-wayland/raw/master/shutter-on-wayland_0.99.4-6_all.deb
+sudo apt -f install ./shutter-on-wayland_0.99.4-6_all.deb
+
+
+如果安装后你在启动 Shutter 时遇到了卡顿或者延迟的问题，那么你可以通过重启你的系统来解决此类问题。
+
+💬 对于这个项目，你有什么样的想法呢？你会考虑使用它吗？
+
+
+via: https://news.itsfoss.com/shutter-wayland-linux/
+
+作者：Sourav Rudra 选题：lujun9972 译者：ChatGPT 校对：wxy
+
+本文由 LCTT 原创编译，Linux中国 荣誉推出]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Notes on Emacs Org mode]]></title>
+        <id>https://lwn.net/Articles/957316/</id>
+        <link href="https://lwn.net/Articles/957316/"/>
+        <updated>2024-01-10T23:32:46.000Z</updated>
+        <summary type="html"><![CDATA[As part of my quest to master Emacs, which
+is sort of a sub-quest on the way toward learning more about Lisp, I have
+spent a fair amount of time discovering various corners of the Emacs
+world.  One of those is the famous "Org
+mode" that is used for a wide variety of organizational tasks within
+the editor—and not just Emacs, but  for Vim and others too.
+Org mode can be 
+used for to-do lists, notes with interconnections between them, literate
+programming, web sites, and more.  Now my quests are growing quests of
+their own and digging into Org mode is one of those.]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Drawing.garden]]></title>
+        <id>https://news.ycombinator.com/item?id=38945125</id>
+        <link href="https://drawing.garden/"/>
+        <updated>2024-01-10T23:32:27.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://drawing.garden/
+Comments URL: https://news.ycombinator.com/item?id=38945125
+Points: 76
+# Comments: 20]]></summary>
+        <author>
+            <name>nivethan</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Franz Morat KG TV-computersystem 6800]]></title>
+        <id>https://news.ycombinator.com/item?id=38945030</id>
+        <link href="https://randoc.wordpress.com/2024/01/03/franz-morat-kg-tv-computersystem-6800/"/>
+        <updated>2024-01-10T23:23:32.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://randoc.wordpress.com/2024/01/03/franz-morat-kg-tv-computersystem-6800/
+Comments URL: https://news.ycombinator.com/item?id=38945030
+Points: 5
+# Comments: 0]]></summary>
+        <author>
+            <name>PaulHoule</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The memory remains: Permanent memory with systemd and a Rust allocator]]></title>
+        <id>https://news.ycombinator.com/item?id=38944147</id>
+        <link href="https://darkcoding.net/software/rust-systemd-memory-remains/"/>
+        <updated>2024-01-10T22:16:21.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://darkcoding.net/software/rust-systemd-memory-remains/
+Comments URL: https://news.ycombinator.com/item?id=38944147
+Points: 29
+# Comments: 5]]></summary>
+        <author>
+            <name>petercooper</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Has Red Hat's decision to restrict access to the full source code to customers only had any practical impact on the downstream distributions?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/193jvb0/has_red_hats_decision_to_restrict_access_to_the/</id>
+        <link href="https://www.reddit.com/r/linux/comments/193jvb0/has_red_hats_decision_to_restrict_access_to_the/"/>
+        <updated>2024-01-10T21:34:40.000Z</updated>
+        <summary type="html"><![CDATA[I've never used RHEL as a server distro (my homelab runs Debian, btw) but now that roughly 6 months separates us from the kerfuffle, has the decision to limit access to source code had any practical impact on downstream distributions Red Hat was trying to strangle?
+ For example, has the delay between RHEL releasing a critical security patch and Rocky/Alma patching the same CVE increased? Has there been any organisations who have backed away from using Rocky/Alma in production due to this? Has RHEL made any attempts to further harm downstreams distros? Have any customers/accounts been actually terminated for sharing the source code?
+ I'd appreciate it if any RHEL watchers could chime in. Thanks.
+    submitted by    /u/JimmyRecard  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Metahead – An enterprise-grade, Git-based metarepo]]></title>
+        <id>https://news.ycombinator.com/item?id=38943420</id>
+        <link href="https://www.metahead.dev/"/>
+        <updated>2024-01-10T21:27:28.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.metahead.dev/
+Comments URL: https://news.ycombinator.com/item?id=38943420
+Points: 31
+# Comments: 20]]></summary>
+        <author>
+            <name>grokx</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Spot Bitcoin ETF receives official approval from the SEC]]></title>
+        <id>https://news.ycombinator.com/item?id=38943291</id>
+        <link href="https://cointelegraph.com/news/sec-spot-bitcoin-etf-approvals"/>
+        <updated>2024-01-10T21:16:58.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://cointelegraph.com/news/sec-spot-bitcoin-etf-approvals
+Comments URL: https://news.ycombinator.com/item?id=38943291
+Points: 119
+# Comments: 153]]></summary>
+        <author>
+            <name>talboren</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Signs that it's time to leave a company]]></title>
+        <id>https://news.ycombinator.com/item?id=38943040</id>
+        <link href="https://adrianco.medium.com/signs-that-its-time-to-leave-a-company-5f8759ad018e"/>
+        <updated>2024-01-10T20:59:25.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://adrianco.medium.com/signs-that-its-time-to-leave-a-company-5f8759ad018e
+Comments URL: https://news.ycombinator.com/item?id=38943040
+Points: 353
+# Comments: 221]]></summary>
+        <author>
+            <name>bezeee</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Show HN: Dbeel – A distributed thread-per-core db]]></title>
+        <id>https://news.ycombinator.com/item?id=38942960</id>
+        <link href="https://github.com/tontinton/dbeel"/>
+        <updated>2024-01-10T20:53:16.000Z</updated>
+        <summary type="html"><![CDATA[For a while now I had the urge to learn how to pick the "right" database for projects, I looked around online at different databases to try to understand their different traits, and was bombarded with marketing instead of actual info on the advantages and drawbacks.
+The only solution for me was to learn some database internals (I read the wonderful book written by Alex Petrov), and the problems seemed so interesting, I could not fight the urge and went ahead with trying to write my own db.
+Anyway, ~9 months have passed and I feel like I'm "done", I have learned a ton, and really proud of dbeel.
+Now I can pick a database and way more easily understand what are its most defining traits.
+Some short time in the future, I will release a blog post or something, where I will write about the fundamental problems you need to solve when writing a performant data system like a database, so stay tuned :)
+Comments URL: https://news.ycombinator.com/item?id=38942960
+Points: 30
+# Comments: 6]]></summary>
+        <author>
+            <name>tontinton</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Big Dummy's Guide to Fidonet (1992)]]></title>
+        <id>https://news.ycombinator.com/item?id=38942928</id>
+        <link href="http://www.fidonet.us/dummyguide.html"/>
+        <updated>2024-01-10T20:51:51.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: http://www.fidonet.us/dummyguide.html
+Comments URL: https://news.ycombinator.com/item?id=38942928
+Points: 32
+# Comments: 3]]></summary>
+        <author>
+            <name>myth_drannon</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The case for better watch typography (2021)]]></title>
+        <id>https://news.ycombinator.com/item?id=38942912</id>
+        <link href="https://www.hodinkee.com/articles/the-case-for-better-watch-typography"/>
+        <updated>2024-01-10T20:51:18.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.hodinkee.com/articles/the-case-for-better-watch-typography
+Comments URL: https://news.ycombinator.com/item?id=38942912
+Points: 32
+# Comments: 11]]></summary>
+        <author>
+            <name>nequo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[An Approach to Sound Synthesis with L-Systems]]></title>
+        <id>https://news.ycombinator.com/item?id=38942905</id>
+        <link href="https://nathan.ho.name/posts/sound-synthesis-with-l-systems/"/>
+        <updated>2024-01-10T20:50:21.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://nathan.ho.name/posts/sound-synthesis-with-l-systems/
+Comments URL: https://news.ycombinator.com/item?id=38942905
+Points: 39
+# Comments: 6]]></summary>
+        <author>
+            <name>sargstuff</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Conditional Git Configuration]]></title>
+        <id>https://news.ycombinator.com/item?id=38942892</id>
+        <link href="https://blog.scottlowe.org/2023/12/15/conditional-git-configuration/"/>
+        <updated>2024-01-10T20:49:35.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://blog.scottlowe.org/2023/12/15/conditional-git-configuration/
+Comments URL: https://news.ycombinator.com/item?id=38942892
+Points: 116
+# Comments: 25]]></summary>
+        <author>
+            <name>djha-skin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Netflix never used its $1M algorithm (2012)]]></title>
+        <id>https://news.ycombinator.com/item?id=38942867</id>
+        <link href="https://thenextweb.com/news/remember-netflixs-1m-algorithm-contest-well-heres-why-it-didnt-use-the-winning-entry"/>
+        <updated>2024-01-10T20:48:05.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://thenextweb.com/news/remember-netflixs-1m-algorithm-contest-well-heres-why-it-didnt-use-the-winning-entry
+Comments URL: https://news.ycombinator.com/item?id=38942867
+Points: 194
+# Comments: 208]]></summary>
+        <author>
+            <name>reqo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Shoelace: A library of web components]]></title>
+        <id>https://news.ycombinator.com/item?id=38942847</id>
+        <link href="https://shoelace.style/"/>
+        <updated>2024-01-10T20:46:33.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://shoelace.style/
+Comments URL: https://news.ycombinator.com/item?id=38942847
+Points: 99
+# Comments: 26]]></summary>
+        <author>
+            <name>alexzeitler</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Notes on a few abnormalities in analysis (2022)]]></title>
+        <id>https://news.ycombinator.com/item?id=38942777</id>
+        <link href="https://www.carsengrote.com/2022/12/notes-on-few-abnormalities-in-analysis.html"/>
+        <updated>2024-01-10T20:40:59.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.carsengrote.com/2022/12/notes-on-few-abnormalities-in-analysis.html
+Comments URL: https://news.ycombinator.com/item?id=38942777
+Points: 18
+# Comments: 1]]></summary>
+        <author>
+            <name>dante44</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Has RHEL become a second class distro ?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/193ib7v/has_rhel_become_a_second_class_distro/</id>
+        <link href="https://www.reddit.com/r/linux/comments/193ib7v/has_rhel_become_a_second_class_distro/"/>
+        <updated>2024-01-10T20:31:28.000Z</updated>
+        <summary type="html"><![CDATA[Hello to all I have distro hopped a lot for my own laptop over the past 10 years, but I have always been on redhat derivatives at work. 
+ My company recently updated from centos 7 to RHEL9 and, personal opinions about the company itself aside, I feel like I'm dealing with a niche closed source distro - stackoverflow and tutorials have become basically useless : all help seem stuck on the centos 7 era - most of the actual info is only official stuff from redhat, a lot of it behind a paywall (which my big corporation pays but the login accounts have not trickled down to us lowly devs) - i feel like many packages have gone away - others are behind a second paywal
+ I feel crippled setting up work VMs for my team in a way I have never felt before. 
+ How did you perceive the mutation ? Any tips to ease my transition ?
+    submitted by    /u/Horrih  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Attempting to engineer microscopic insulin pumps out of a skin bacterium]]></title>
+        <id>https://news.ycombinator.com/item?id=38942516</id>
+        <link href="https://www.growbyginkgo.com/2024/01/09/getting-under-the-skin/"/>
+        <updated>2024-01-10T20:13:54.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.growbyginkgo.com/2024/01/09/getting-under-the-skin/
+Comments URL: https://news.ycombinator.com/item?id=38942516
+Points: 58
+# Comments: 6]]></summary>
+        <author>
+            <name>lobbly</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[New Clues (2015)]]></title>
+        <id>https://news.ycombinator.com/item?id=38942508</id>
+        <link href="https://www.cluetrain.com/newclues/"/>
+        <updated>2024-01-10T20:12:39.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.cluetrain.com/newclues/
+Comments URL: https://news.ycombinator.com/item?id=38942508
+Points: 38
+# Comments: 7]]></summary>
+        <author>
+            <name>florgy</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Flo Control Project (2000)]]></title>
+        <id>https://news.ycombinator.com/item?id=38942438</id>
+        <link href="https://web.archive.org/web/20000229222350/http://www.quantumpicture.com/Flo_Control/flo_control.htm"/>
+        <updated>2024-01-10T20:03:45.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://web.archive.org/web/20000229222350/http://www.quantumpicture.com/Flo_Control/flo_control.htm
+Comments URL: https://news.ycombinator.com/item?id=38942438
+Points: 36
+# Comments: 3]]></summary>
+        <author>
+            <name>jackwilsdon</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Tidy First?]]></title>
+        <id>https://news.ycombinator.com/item?id=38942400</id>
+        <link href="https://henrikwarne.com/2024/01/10/tidy-first/"/>
+        <updated>2024-01-10T19:59:33.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://henrikwarne.com/2024/01/10/tidy-first/
+Comments URL: https://news.ycombinator.com/item?id=38942400
+Points: 30
+# Comments: 7]]></summary>
+        <author>
+            <name>ingve</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Free MIT Course: Performance Engineering of Software Systems]]></title>
+        <id>https://news.ycombinator.com/item?id=38942206</id>
+        <link href="https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/download/"/>
+        <updated>2024-01-10T19:39:45.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/download/
+Comments URL: https://news.ycombinator.com/item?id=38942206
+Points: 169
+# Comments: 16]]></summary>
+        <author>
+            <name>danielovichdk</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Okay so I saw some people disliking Artix. Could someone elaborate?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/193gzbe/okay_so_i_saw_some_people_disliking_artix_could/</id>
+        <link href="https://www.reddit.com/r/linux/comments/193gzbe/okay_so_i_saw_some_people_disliking_artix_could/"/>
+        <updated>2024-01-10T19:38:10.000Z</updated>
+        <summary type="html"><![CDATA[I wanted to understand the criticism more. It was very rare but a few people mentioned that they "barely knew how the thing could even work" bc of what they did with the init systems and how they replaced systemd with them, probably they saw what they did as something lazy. Could someone please elaborate? Ty in advance.
+    submitted by    /u/Velascu  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Libreboot adds HP EliteBook 820 G2 support!]]></title>
+        <id>https://www.reddit.com/r/linux/comments/193erka/libreboot_adds_hp_elitebook_820_g2_support/</id>
+        <link href="https://www.reddit.com/r/linux/comments/193erka/libreboot_adds_hp_elitebook_820_g2_support/"/>
+        <updated>2024-01-10T18:09:02.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/libreleah  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Much neglected use of Linux - schools / small offices..]]></title>
+        <id>https://www.reddit.com/r/linux/comments/193c0xy/much_neglected_use_of_linux_schools_small_offices/</id>
+        <link href="https://www.reddit.com/r/linux/comments/193c0xy/much_neglected_use_of_linux_schools_small_offices/"/>
+        <updated>2024-01-10T16:17:55.000Z</updated>
+        <summary type="html"><![CDATA[I tried terminal server with Latest Mint Linux in the school.
+ I could connect all 50 [ that much only available ] desktops.
+ I used a well behaved i5 with 24 GB ram 500 GB nvme + 1 TB SSD X 4 as a terminal server.
+ All client machines are i3-4th Gen- 4 GB booted over tftp
+ Working very well and not crashed since installed [ in use for 10 days ]
+ Applications - Libre Office suite, Firefox ..
+ This is success story of Linux but when checked with other schools, hardly any one exploring this bright side of Linux, hence this post.
+ Over a week end - planning to create a public repository on GITHUB step by step installation details.
+ If I get proper help, will post a video on YT as well.
+    submitted by    /u/Interesting_Ad_5676  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Stable kernel 4.14.336 (and others)]]></title>
+        <id>https://lwn.net/Articles/957351/</id>
+        <link href="https://lwn.net/Articles/957351/"/>
+        <updated>2024-01-10T16:03:44.000Z</updated>
+        <summary type="html"><![CDATA[The 4.14.336 stable kernel update has been
+released with a small handful of fixes; this is the end of the line for the
+4.14 stable series:
+
+
+	This is the LAST 4.14.y kernel to be released.  It is now
+	officially end-of-life.  Do NOT use this kernel version anymore,
+	please move to a newer one, as shown on the kernel.org releases
+	page.
+
+	All users of the 4.14 kernel series must upgrade.  But then, move
+	to a newer release.  If you are stuck at this version due to a
+	vendor requiring it, go get support from that vendor for this
+	obsolete kernel tree, as that is what you are paying them for :)
+
+
+Update: 6.6.11 and 6.1.72 have also now been released.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Plasma 6 Release Candidate 1 has landed. Release Candidate 2 will arrive on January 31st, and the final release will land on February 28]]></title>
+        <id>https://www.reddit.com/r/linux/comments/193bkhr/plasma_6_release_candidate_1_has_landed_release/</id>
+        <link href="https://www.reddit.com/r/linux/comments/193bkhr/plasma_6_release_candidate_1_has_landed_release/"/>
+        <updated>2024-01-10T15:58:34.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Bro666  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Draw2Img: draw on a canvas to instantly create beautiful & unique graphics/images for your project]]></title>
+        <id>https://www.reddit.com/r/linux/comments/193afiu/draw2img_draw_on_a_canvas_to_instantly_create/</id>
+        <link href="https://www.reddit.com/r/linux/comments/193afiu/draw2img_draw_on_a_canvas_to_instantly_create/"/>
+        <updated>2024-01-10T15:09:40.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/GradientSurfer  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Wednesday]]></title>
+        <id>https://lwn.net/Articles/957340/</id>
+        <link href="https://lwn.net/Articles/957340/"/>
+        <updated>2024-01-10T14:52:39.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Fedora (libssh), Gentoo (FAAD2 and RedCloth), Red Hat (kpatch-patch and nss), SUSE (hawk2, LibreOffice, opera, and tar), and Ubuntu (glibc, golang-1.13, golang-1.16, linux-azure, linux-gkeop, monit, and postgresql-9.5).]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What about Manjaro?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1939m9g/what_about_manjaro/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1939m9g/what_about_manjaro/"/>
+        <updated>2024-01-10T14:33:20.000Z</updated>
+        <summary type="html"><![CDATA[I have been using Manjaro for two months, and I had doubts about installing it because a lot of users said that it was crap. I’m using the KDE version and I haven’t had any issues with it. Previously, I was using Arch, and everything worked fine until the day that a simple pacman -Syu broke my OS. I mainly use VSCODE with Flutter, Android Studio and Docker. I used to be the user that was constantly changing my distro and trying new flavors, but since I met Manjaro, I don’t want anything else. Have you had any issues with this distro?
+    submitted by    /u/Substantial_Cake_582  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[李萍：职业分层与现代中国人的生死观]]></title>
+        <id>https://bookfere.com/?p=50792</id>
+        <link href="https://bookfere.com/post/1086.html"/>
+        <updated>2024-01-10T14:04:35.000Z</updated>
+        <summary type="html"><![CDATA[本文依据传统文化和社会惯例而将中国社会的职业分层大致归结为干部，知识分子，职员，工人，农民，依据这五个职业分层探讨现代中国人的生死观。]]></summary>
+        <author>
+            <name>书伴</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Book recommendations on the desktop developer ecosystem]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1938wf3/book_recommendations_on_the_desktop_developer/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1938wf3/book_recommendations_on_the_desktop_developer/"/>
+        <updated>2024-01-10T14:00:03.000Z</updated>
+        <summary type="html"><![CDATA[I would love to find a book that is more focused on describing the relevant abstractions/concepts in the desktop development problem space than on particular technologies, though a book which covers the large mosaic of tech would probably also work.
+ My goal is to find a high level book which familiarizes a developer with all the core elements of the environment of a modern Linux desktop application.
+ Such a book has proven surprisingly hard to find! Thanks in advance for any recs :)
+    submitted by    /u/lottspot  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A 2024 Discussion Whether To Convert The Linux Kernel From C To Modern C++]]></title>
+        <id>https://www.reddit.com/r/linux/comments/19379i4/a_2024_discussion_whether_to_convert_the_linux/</id>
+        <link href="https://www.reddit.com/r/linux/comments/19379i4/a_2024_discussion_whether_to_convert_the_linux/"/>
+        <updated>2024-01-10T12:33:44.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/unixbhaskar  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kodi 20.3 "Nexus" - Release]]></title>
+        <id>https://www.reddit.com/r/linux/comments/19377yi/kodi_203_nexus_release/</id>
+        <link href="https://www.reddit.com/r/linux/comments/19377yi/kodi_203_nexus_release/"/>
+        <updated>2024-01-10T12:31:16.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/B3_Kind_R3wind_  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenWRT wants to offer its own router]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1936i1j/openwrt_wants_to_offer_its_own_router/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1936i1j/openwrt_wants_to_offer_its_own_router/"/>
+        <updated>2024-01-10T11:49:29.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/FryBoyter  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Termux: Linux applications on Android]]></title>
+        <id>https://www.reddit.com/r/linux/comments/19362g0/termux_linux_applications_on_android/</id>
+        <link href="https://www.reddit.com/r/linux/comments/19362g0/termux_linux_applications_on_android/"/>
+        <updated>2024-01-10T11:22:09.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/throwaway16830261  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing Graphs 1.7]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1935dtr/introducing_graphs_17/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1935dtr/introducing_graphs_17/"/>
+        <updated>2024-01-10T10:37:00.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/DelusionalSocialist  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[硬核观察 | 硬核观察 #1242 苹果公司要求开发者将 Vision Pro 应用称为“空间计算应用”]]></title>
+        <id>https://linux.cn/article-16548-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-16548-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2024-01-10T10:16:01.000Z</updated>
+        <summary type="html"><![CDATA[#1 苹果公司要求开发者将 Vision Pro 应用称为“空间计算应用”
+
+随着苹果公司的 Vision Pro VR/AR 头显将于 2 月 2 日上市，在该公司为 visionOS 开发者发布的指导中，要求开发者在提及 Vision Pro 应用程序时不要使用 AR 和 VR 术语，要将其称为 “空间计算应用程序”，而不要将应用体验描述为增强现实（AR）、虚拟现实（VR）、扩展现实（XR）或混合现实（MR）。
+
+（插图：DA/8bde3f6c-df73-4055-8541-bc2e99d0051d）
+
+
+消息来源：Engadget
+
+
+
+老王点评：叫啥不重要，真能卖出去很多才行。
+
+
+
+
+#2 多邻国裁掉翻译人员，用 AI 替代
+
+语言学习平台多邻国裁掉了大量从事翻译的合同工，因为它发现 AI 能在短时间内完成翻译，而且省钱。随着 AI 接管了课程的内容生成和翻译工作，留下的人主要是检查 AI 的内容确保其翻译质量。多邻国称它裁掉了 10% 的合同工，但表示这不是裁员，而是合同工在项目于 2023 年结束后离开了。
+
+（插图：DA/65c0922f-9b05-40ea-8fd6-9d3a9a6a0944）
+
+
+消息来源：PCMag
+
+
+
+老王点评：看看，这些原本以为能一直干到老的工作都慢慢被 AI 取代了。
+
+
+
+
+#3 Linux 6.8 将提升 40% 多并发连接的 TCP 性能
+
+正在开发中的 Linux 6.8 内核对核心网络代码进行了一些关键改进，在遇到多个并发网络连接时，这些改进最多可将 TCP 性能提高约 40%。新的补丁系列试图重组核心网络协议栈变量，以尽量减少数据传输阶段的缓存行消耗。具体来说，来自谷歌的开发人员研究了 TCP/IP 协议栈和 TCP 中的快速路径定义。
+
+（插图：DA/4cf79d55-1340-4fca-8299-61de604cef88）
+
+
+消息来源：Phoronix
+
+
+
+老王点评：居然还能提升这么多，这是我没想到的，看来 Linux 的潜力还有很多。]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[定格影像记忆，我们给心中的 2023「年度最佳」颁了奖]]></title>
+        <id>https://sspai.com/post/85655</id>
+        <link href="https://sspai.com/post/85655"/>
+        <updated>2024-01-10T09:30:00.000Z</updated>
+        <summary type="html"><![CDATA[2023年是「本周看什么」栏目陪伴大家的第四年，这一年也有数百部影视作品进入大家的视野，既有好口碑、高热度的佳作，也有小众但能触动你我内心的作品。如果要选一部2023最喜欢的作品，你会选择谁？如果要选 ...查看全文]]></summary>
+        <author>
+            <name>少数派编辑部</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gtrash - a modern trash CLI manager for Linux system trash]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1934048/gtrash_a_modern_trash_cli_manager_for_linux/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1934048/gtrash_a_modern_trash_cli_manager_for_linux/"/>
+        <updated>2024-01-10T09:00:53.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/FryBoyter  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[新闻 | Linux 内核 6.7 发布，包含众多修复和新的文件系统]]></title>
+        <id>https://linux.cn/article-16547-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-16547-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2024-01-10T08:09:27.000Z</updated>
+        <summary type="html"><![CDATA[这是历来重大的 Linux 内核发布之一，集大量修复和新增功能于一身。
+
+
+新年伊始，全新 Linux 内核发布！ 🎉
+
+我们在 2024 年以 Linux 内核 6.7 版本 的推出开启了新的篇章，这一版本具备许多显著改进，其中包括上一版本遗漏的部分内容。
+
+Linus Torvalds 在 公告 中解释了假期引发的小幅延误：
+
+
+实际上，我们上周的工作量稍比假期前一周多些，但这不会让我觉得我们需要再进一步推迟发布。
+
+最后的结果：6.7 版本基于提交数量（超过 17k 的非合并提交，以及 1k+ 的合并提交）来看，已经是我们有史以来发布的最大规模的内核版本之一。然而，额外的第 8 个 rc 版本主要是由于圣诞节假期的时间安排，并非大规模发布所引发的。
+
+
+🆕 Linux 内核 6.7：新的变化
+
+由于 6.7 是非长期支持版本，你没有必须要升级到 Linux 内核 6.7 的压力，除非你急于体验 Linux 的尖端技术。
+
+有鉴于此，我们来看看这个版本关键的亮点包括了哪些内容：
+
+
+英特尔的优化
+
+增强的 RISC-V 支持
+
+针对 AMD 的特别增强
+
+众多存储功能的优化
+
+
+英特尔的优化
+
+
+
+首先要讲的是英特尔的 Meteor Lake 处理器。Linux 内核 6.7 对于英特尔 Meteor Lake 图形提供了原生支持。在此之前，此项支持还处在 实验性 阶段。但现在，你可以在装备有第一代 Core Ultra 处理器的笔记本上全面享受到它的优势了。
+
+另外，英特尔即将发布的 Arrow Lake 和 Lunar Lake 芯片在 Turbostat（一个用于监测处理器频率、空闲统计等信息的命令行工具）中也做好了规划。
+
+不过，也有一些支持功能被删除。
+
+在 Linux 内核 6.7 中，不再支持英特尔安腾 I…]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Execve Benchmark ....Linux kernel perspective]]></title>
+        <id>https://www.reddit.com/r/linux/comments/19333u6/execve_benchmark_linux_kernel_perspective/</id>
+        <link href="https://www.reddit.com/r/linux/comments/19333u6/execve_benchmark_linux_kernel_perspective/"/>
+        <updated>2024-01-10T07:58:08.000Z</updated>
+        <summary type="html"><![CDATA[Bloody hell! The entire thread, where Linus and Josh discuss things.... mind-boggle...whew! 
+ https://lore.kernel.org/all/CAHk-=whf9qLO8ipps4QhmS0BkM8mtWJhvnuDSdtw5gFjhzvKNA@mail.gmail.com/
+ ​
+    submitted by    /u/unixbhaskar  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[新闻 | Deepin 成为第一个为照片和 IDE 集成 AI 功能的 Linux 发行版]]></title>
+        <id>https://linux.cn/article-16546-1.html?utm_source=rss&amp;utm_medium=rss</id>
+        <link href="https://linux.cn/article-16546-1.html?utm_source=rss&amp;utm_medium=rss"/>
+        <updated>2024-01-10T07:25:00.000Z</updated>
+        <summary type="html"><![CDATA[Deepin Linux 抢占 AI 创新权？ 看起来是这样。
+
+
+Deepin 是一个神秘而美丽的发行版。
+
+当然，我们都在等待他们的 Deepin 23 稳定版。
+
+在那之前，我们继续期待 😔
+
+但是，等等，还有一些有趣的东西正在开发中，我认为，这值得等待...
+
+Deepin Linux 即将推出 AI 功能。你现在可以通过现有安装（deepin V20.9 及更高版本）访问它。不过，它应该会让未来的发布体验更加精彩。
+
+那么，那又怎样呢？ 让我在这里告诉你更多。
+
+AI 混合深度体验
+
+我们已经提到整合 AI 功能是我们的 2024 年预测 之一。
+
+我想，我们可以看到未来吗？ 😉
+
+嗯，看来 Deepin Linux 在 2024 年拉开了序幕，推出了一款新的 IDE，其中包含 AI 编程助手。
+
+
+
+你可以在深度应用商店中找到它。我们还没有尝试过，但这听起来很有趣。
+
+不仅限于此，他们还开始通过 “看图 AI 插件” 将 AI 功能集成到图像查看器应用中。
+
+
+
+你可以通过图像查看器使用插件重新修饰或增强现有图像。
+
+
+
+你可以使用它执行的一些功能包括：
+
+
+背景模糊：降低图像背景的清晰度，使主体更加突出
+
+删除背景：删除图像背景，使主体独立或替换新背景
+
+手绘：将真实图像转换为手绘漫画风格
+
+2D 漫画：将真实图像转换为 2D 漫画风格
+
+3D 漫画：将真实图像转变成 3D 漫画风格
+
+素描：将真实图像转换为素描风格
+
+
+这是 2D 转换图像的另一个示例：
+
+
+
+而且，所有这一切都发生在你本地的计算机上。它不需要互联网连接。
+
+除此之外，开发人员正在探索更多方法来整合和增强该发行版的 AI 功能。
+
+💬你对此有何看法？ 请在下面的评论中告诉我你的想法。
+
+
+via: https://news.itsfoss.com/deepin-linux-distro-ai/
+
+作者：Ankush Das 选题：lujun9972 译者：geekpi 校对：wxy
+
+本文由 LCTT 原创编译，Linux中国 荣誉推出]]></summary>
+        <author>
+            <name>linux@linux.cn (linux)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[播客 | 开一家自己的出版社，再出一本自己写的书]]></title>
+        <id>https://sspai.com/post/85675</id>
+        <link href="https://sspai.com/post/85675"/>
+        <updated>2024-01-10T07:21:55.000Z</updated>
+        <summary type="html"><![CDATA[本期节目的主角跑到台湾开了一家出版社，并在这个过程中完整体验了一本书从策划、立项、创作到校订、排版、印刷、上架电子书平台的全流程，还揭开了图书出版界不为大众所知的一角。查看全文]]></summary>
+        <author>
+            <name>少数派播客</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LibreOffice 24.2 RC1 is available for testing]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1932bp7/libreoffice_242_rc1_is_available_for_testing/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1932bp7/libreoffice_242_rc1_is_available_for_testing/"/>
+        <updated>2024-01-10T07:05:05.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/gabriel_3  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[willphp/yiyu: 是一个轻量级php开发框架]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/7329a2077017de8bbadf4ef5feb323370e595890</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/7329a2077017de8bbadf4ef5feb323370e595890"/>
+        <updated>2024-01-10T06:28:35.000Z</updated>
+        <summary type="html"><![CDATA[willphp/yiyu: 是一个轻量级php开发框架]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Heptabase：重塑知识管理与学习的未来]]></title>
+        <id>https://sspai.com/post/85171</id>
+        <link href="https://sspai.com/post/85171"/>
+        <updated>2024-01-10T03:00:00.000Z</updated>
+        <summary type="html"><![CDATA[当你深入了解这款产品以及它背后的逻辑之后，它有可能成为你的终极知识管理工具。查看全文]]></summary>
+        <author>
+            <name>南山居氪</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ShellOracle: command your shell with natural language]]></title>
+        <id>https://www.reddit.com/r/linux/comments/192wwmu/shelloracle_command_your_shell_with_natural/</id>
+        <link href="https://www.reddit.com/r/linux/comments/192wwmu/shelloracle_command_your_shell_with_natural/"/>
+        <updated>2024-01-10T02:15:25.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/LibertySupreme  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Linux 6.8 Landing A Tantalizing Optimization For Common $PATH-Based Searches]]></title>
+        <id>https://www.reddit.com/r/linux/comments/192wa4s/linux_68_landing_a_tantalizing_optimization_for/</id>
+        <link href="https://www.reddit.com/r/linux/comments/192wa4s/linux_68_landing_a_tantalizing_optimization_for/"/>
+        <updated>2024-01-10T01:45:52.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/unixbhaskar  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[199ocero/activity-timeline: 活动时间轴插件可以方便地呈现即将发生的、正在进行的和过去的活动，提供事件的全面视图。]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/754619783c93e31aded14cd4a6712ff96583504f</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/754619783c93e31aded14cd4a6712ff96583504f"/>
+        <updated>2024-01-10T01:37:16.000Z</updated>
+        <summary type="html"><![CDATA[199ocero/activity-timeline: 活动时间轴插件可以方便地呈现即将发生的、正在进行的和过去的活动，提供事件的全面视图。]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Spomky-Labs/phpwa: 用于生成全功能 PWA 清单的 PHP 库]]></title>
+        <id>https://github.com/guanguans/favorite-link/commit/3534b0fbd01d16beb1fc9d066f38e09b40e84a03</id>
+        <link href="https://github.com/guanguans/favorite-link/commit/3534b0fbd01d16beb1fc9d066f38e09b40e84a03"/>
+        <updated>2024-01-10T01:33:40.000Z</updated>
+        <summary type="html"><![CDATA[Spomky-Labs/phpwa: 用于生成全功能 PWA 清单的 PHP 库]]></summary>
+        <author>
+            <name>guanguans</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[$] The odd saga of CVE-2012-5639]]></title>
         <id>https://lwn.net/Articles/957219/</id>
@@ -18839,838 +19724,6 @@ Points: 464
 # Comments: 154]]></summary>
         <author>
             <name>worble</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[新闻 | Linux 爱好者线下沙龙：LLUG 2023·收官在北京]]></title>
-        <id>https://linux.cn/article-16465-1.html?utm_source=rss&amp;utm_medium=rss</id>
-        <link href="https://linux.cn/article-16465-1.html?utm_source=rss&amp;utm_medium=rss"/>
-        <updated>2023-12-12T10:27:00.000Z</updated>
-        <summary type="html"><![CDATA[经历了半年的全国巡游，Linux 爱好者沙龙走过了北京、上海、杭州、深圳、成都等五个城市，而在 2023 年的最后一个月，我们又再次回到了北京，与你在北京相见。
-
-2023 年 12 月 16 日下午，我们将在北京市阿里中心·望京 A 座举办 LLUG 2023 · 北京收官场，欢迎广大的 Linux 爱好者来到现场，与我们一同交流技术，分享自己工作过程中的所思所想。
-
-本次活动依然由 Linux 中国和龙蜥社区（OpenAnolis）联合主办，博文视点（Broadview）和阿里巴巴协办。
-
-龙蜥社区（OpenAnolis）是国内的顶尖 Linux 发行版社区，我们希望在普及 Linux 知识的同时，也能让中国的 Linux 发行版，为更多人知晓，推动国产发行版的发展和进步。
-
-博文视点（Broadview）是电子工业出版社下属旗舰级子公司。多年来，博文视点深耕专业出版，以敏锐眼光、独特视角密切关注技术发展趋势及变化，致力于将技术大师之优秀思想、一线专家之一流经验集结成书。
-
-
-
-
-
-时间
-
-
-
-议题
-
-
-
-分享简介
-
-
-
-分享者
-
-
-
-
-14:00~14:20
-签到
-
-
-14:20~14:30
-LLUG 2023 年度总结
-硬核老王
-
-
-14:30~15:00
-《UOS AI 在 deepin 中的应用及规划》
-UOS AI 对接国内多家主流大模型，与deepin 深度结合，以多款常用应用为载体为广大用户赋能，有效提升了用户办公、日常使用效率。UOS AI 的 AI 模型框架亦可为应用开发赋能，可有效提高生态伙伴的应用开发效率，降低生态伙伴的应用开发成本。
-张鹏，从业 10+ 年产品人，曾任高思教育、微博产品经理，中科院软件所某项目部产品负责人，现任统信软件资深产品市场经理。
-
-
-15:00~15:45
-《运维小姐姐的十年冲突管理经验》
-一个 Linuxer 的职场生存经验，面对冲突该如何保护自己、如何应对、如何让自己保持竞争力。
-宋贺，从业十年 Linux 运维人，曾任职中国电信、中信国安运维工程师，在某国产数据库创业公司担任过产品经理，现就职于一线互联网公司业务运维岗位。
-
-
-15:50~16:20
-《Developer Nation 程序员调查报告解读》
-Developer Nation 是一个全球性的开发者社区，通过每年两次的开发者生态有奖问卷调查，洞察行业新趋势，打造更好的开发工具，并服务于软件开发者们。
-Ashley Au（远程）
- 
-
- 
-
-
-
-
-16:20~17:00
-闪电演讲（短分享）
-
-
-17:00 ~ 18:00
-线下交流
-
-
-
-《UOS AI 在 deepin 中的应用及规划》
-
-
-
-张鹏，统信软件研发工程师
-
-UOS AI 对接国内多家主流大模型，与 deepin 深度结合，以多款常用应用为载体为广大用户赋能，有效提升了用户办公、日常使用效率。UOS AI 的 AI 模型框架亦可为应用开发赋能，可有效提高生态伙伴的应用开发效率，降低生态伙伴的应用开发成本。
-
-
-
-宋贺，一线互联网公司业务运维岗位
-
-作为一个 Linuxer，面对冲突该如何保护自己、如何应对、如何让自己保持竞争力
-
-闪电演讲
-
-本次线下活动依旧保留闪电演讲环节，作为最受欢迎的线下活动，本次活动依旧继续举办闪电演讲。每位演讲者有 5 分钟时间参与现场活动，可以提前报名，也可即兴上台演讲。时间一满，马上结束～强制大家控制自己的分享时间，用最短的时间，向大家发出你的声音～
-
-上海场闪电演讲照片：
-
-
-
-胡张治分享自己从 GNU/Linux 小白到 ArchLinuxCN 贡献者的旅程
-
-
-
-李伟光现场介绍 neovim 的使用
-
-活动地点及到达信息
-
-阿里中心·望京A座 5F-14 岳麓书院
-
-（由于阿里中心需要登记才能进入，请务必填写表单报名。现场直接空降可能是进不来的哦～）
-
-抵达方式：
-
-【自驾】
-
-
-导航到“阿里中心望京-A座”，按照入园指引图办理入园。
-
-
-【公共交通】
-
-
-地铁：乘坐 15 号线，望京东站 C 口出，步行 500 米到。
-
-
-如果你因为有事，没办法来到线下，那也没问题，我们的活动也会在 Linux 中国视频号、Linux 中国 B 站、龙蜥 B 站、龙蜥钉钉群等开启同步直播。 
-
-当然，我们更希望你能亲自来到线下，和我们一起聊聊开源，聊聊技术～
-
-活动报名地址：
-
-
-
-扫码报名
-
-此外，也可以在问卷中反馈你想听的内容，我们将竭尽所能，邀请行业专家，针对大家感兴趣的话题进行分享。 
-
-（题图：DA/44ceac16-9e39-45f4-9e04-2b7c150ed260）]]></summary>
-        <author>
-            <name>linux@linux.cn (linux)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[硬核观察 | 硬核观察 #1213 Linux 内核直呼 666~]]></title>
-        <id>https://linux.cn/article-16464-1.html?utm_source=rss&amp;utm_medium=rss</id>
-        <link href="https://linux.cn/article-16464-1.html?utm_source=rss&amp;utm_medium=rss"/>
-        <updated>2023-12-12T09:46:33.000Z</updated>
-        <summary type="html"><![CDATA[#1 Linux 内核直呼 666~
-
-Linux 6.6.6 版本发布了，这个版本只是处理了另一个令人头疼的 WiFi 回归问题：IWD 无线守护进程在关机时出现死锁，用户空间的网络管理器也出现相关问题。与几天前发布的 Linux 6.6.5 相比，它唯一的改动就是撤销了一个 WiFi 补丁。该补丁被从 Linux 6.7 反向移植到了 6.6，在 Linux 6.7 Git 内核中不会出现这个问题，因为 6.6 缺少了 6.7 Git 内核中的一个关键元素。而就在之前的周末，由于从 Linux 6.5 回传的补丁存在问题，导致 EXT4 数据损坏，进而影响到了使用 Linux 6.1 LTS 点版本的 Debian 12.3 延迟发布计划。
-
-（插图：DA/3f9b3a5c-c228-4d10-81d7-4be2ee0a4cb4）
-
-
-消息来源：Phoronix
-
-
-
-老王点评：Linux 内核越来越复杂了，回传的补丁经常难以照顾周全。所以，知道做 LTS 支持有多难了吧。
-
-
-
-
-#2 中国发布新一代超算“天河星逸”
-
-据报道，“天河星逸”系统以应用为中心，采用国产先进计算架构、高性能多核处理器、高速互连网络、大规模存储等关键技术构建，在通用 CPU 计算能力、网络能力、存储能力以及应用服务能力等多方面较“天河二号”实现倍增。天河二号系统从 2013 年开始一直到 2015 年底 6 次位居世界 500 强榜首，但自从中国不再披露超算基准数据，一直没有关于天河三号的官方公开细节，也没有消息可以确认 “天河星逸” 是否就是天河三号。
-
-（插图：DA/0a9772cd-cb5b-4e26-be85-06f6cb99e743）
-
-
-消息来源：广州外事
-
-
-
-老王点评：中国超算现在已经是隐藏的实力了。
-
-
-
-
-#3 英伟达今年投资了二十多家人工智能公司
-
-这些被投资的公司，其中既有估值数十亿美元的大型新人工智能平台，也有将人工智能应用于医疗保健或能源等行业的小型初创公司。根据追踪风险投资的 Dealroom 估算，英伟达在 2023 年参与了 35 笔交易，几乎是去年的六倍。
-
-（插图：DA/01d805e5-98bb-4f75-8391-4dc2748a267f）
-
-
-消息来源：金融时报
-
-
-
-老王点评：英伟达是直接用显卡投资的吧。]]></summary>
-        <author>
-            <name>linux@linux.cn (linux)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[社区速递 024 | NotebookLM、AI 整活以及绍兴之旅]]></title>
-        <id>https://sspai.com/post/85007</id>
-        <link href="https://sspai.com/post/85007"/>
-        <updated>2023-12-12T09:32:50.000Z</updated>
-        <summary type="html"><![CDATA[除了首页时间流和侧栏的精选展位，少数派Matrix社区还有很多优秀内容因条件所限无法得到有效曝光，因此我们决定重启Matrix周报，并在此基础上添加更多社区内容、作者投稿新玩意以及社区产品动态呈现给大 ...查看全文]]></summary>
-        <author>
-            <name>Matrix机器人</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TESTV 与少数派，理想主义团队的创业怎么就这么难？]]></title>
-        <id>https://sspai.com/post/84563</id>
-        <link href="https://sspai.com/post/84563"/>
-        <updated>2023-12-12T07:59:45.000Z</updated>
-        <summary type="html"><![CDATA[感谢铁丝朋友们的支持，这里是摆龙门阵的第一期播客。在这期播客里，少数派创始人老麦和 TESTV 创始人配音君，一起聊了聊两家团队的创业故事；TESTV 如何从前身的广告公司到完全不恰饭的数码频道；老麦做过最艰难的决定和 TESTV 相当类似；创业者的窘境：人性、道德、经济……以及两个人如何看待当下互联网和社交网络的：一个选择线下，一个选择禅修……
-[......]
-查看全文
-本文为付费栏目文章，出自《铁丝俱乐部》，订阅后可阅读全文。]]></summary>
-        <author>
-            <name>糕级冻雾</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[讨论 TGA 和年度游戏时，我们还可以聊些什么？]]></title>
-        <id>https://sspai.com/post/84976</id>
-        <link href="https://sspai.com/post/84976"/>
-        <updated>2023-12-12T06:30:00.000Z</updated>
-        <summary type="html"><![CDATA[通过这篇文章，我们将进一步深入 TGA 的诞生、发展与现状，从更多批判性视角探讨 TGA。查看全文]]></summary>
-        <author>
-            <name>板斧</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[新闻 | Kali Linux 2023.4 发布：首度支持树莓派 5，并搭载 GNOME 45]]></title>
-        <id>https://linux.cn/article-16463-1.html?utm_source=rss&amp;utm_medium=rss</id>
-        <link href="https://linux.cn/article-16463-1.html?utm_source=rss&amp;utm_medium=rss"/>
-        <updated>2023-12-12T04:24:30.000Z</updated>
-        <summary type="html"><![CDATA[2023 年最后的 Kali Linux 更新已经来临。
-
-
-作为众所周知的专注于网络安全的 Linux 发行版，Kali Linux 推出了新版本 Kali Linux 2023.4，其中带有一些重大更新。
-
-这一新版距离 Kali 2023.3 版本 发布不过数月，让我们一起探讨一下此次更新都带来了哪些内容。
-
-🆕 Kali Linux 2023.4: 新增了什么？
-
-作为 2023 年度 Kali 的压轴版本，Kali Linux 2023.4 专注于提供一些新的平台选项，以及它们基础架构的一些更新。
-
-几个关键亮点包括:
-
-
-支持树莓派 5
-
-集成 GNOME 45
-
-Vagrant 中加入了对 Hyper-V 的支持
-
-
-支持树莓派 5
-
-Kali Linux 2023.4 版本已经支持 树莓派 5 单板计算机。
-
-你既可以 手动构建镜像，也可以下载新提供的 专用镜像，甚至可以使用 Raspberry Pi Imager 软件自动处理。
-
-开发者也提到，Nexmon 支持的内置 Wi-Fi 芯片上尚不能使用，他们建议用户使用外部设备进行模式监控或帧注入。
-
-集成 GNOME 45
-
-Kali Linux 2023.4 版本引入了全新的 GNOME 45。你可以尝试使用全新的药丸形工作区切换器，更优化的系统设置，以及新的或已更新的核心应用程序，等等。
-
-Kali Linux 团队也进行了自定义的调整，以进一步改善用户体验。他们采用了改进的 Nautilus 搜索功能，在许多应用中实现了全高侧边栏，并且还更新了多种主题。
-
-Vagrant 中的 Hyper-V 支持
-
-Kali Linux 的 Vagrant 版本 现在含有一个 Hyper-V 环境。如果你对此不熟悉，Vagrant 是一个开源的 Docker 替代方案，可以帮助你构建和管理便携式的虚拟机环境。
-
-🛠️ 其他改变与提升
-
-除了上述的特点外，还有一些其他显著的变化：
-
-
-在日本和塞尔维亚设置了新的下载镜像。
-
-启用 Mirrorbits 来进行 Kali 的镜像重定向。
-
-在 AWS 和 Azure 市场上提供了新的 Kali Linux ARM64/AMD64 版本。
-
-在网络仓库中添加了大量新的工具。
-
-
-你可以查阅官方 发布博客，获取更多信息。
-
-📥 如何获取 Kali Linux 2023.4
-
-你可以在 官方网站 下载到 Kali Linux 2023.4 版本。
-
-
-Kali Linux 2023.4
-
-
-对于现有的用户，可以通过运行下述命令来升级到最新版本：
-
-sudo apt update && sudo apt full-upgrade
-
-
-💬 期待尝试这个版本的新特性吗？欢迎在下方分享你的感受！
-
-（题图：DA/a3379b67-99cc-4962-a8f2-cc46b831255c）
-
-
-via: https://news.itsfoss.com/kali-linux-2023-4-release/
-
-作者：Sourav Rudra 选题：lujun9972 译者：ChatGPT 校对：wxy
-
-本文由 LCTT 原创编译，Linux中国 荣誉推出]]></summary>
-        <author>
-            <name>linux@linux.cn (linux)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[软件开发 | 利用 Vely 在 Linux 构建你自己的 SaaS]]></title>
-        <id>https://linux.cn/article-16462-1.html?utm_source=rss&amp;utm_medium=rss</id>
-        <link href="https://linux.cn/article-16462-1.html?utm_source=rss&amp;utm_medium=rss"/>
-        <updated>2023-12-12T03:09:46.000Z</updated>
-        <summary type="html"><![CDATA[Vely 可让你在网络应用程序中利用 C 语言的强大功能。
-
-
-Vely 将 C 语言的高性能和低内存占用与 PHP 等语言的易用性和安全性相结合。作为自由开源软件，它以 GPLv3 和 LGPL 3 授权，所以你甚至可以用它来构建商业软件。
-
-利用 Vely 构建 SaaS
-
-你可以使用 Vely 创建一个多租户网络应用程序，它可以作为软件即服务模式（SaaS）在互联网上运行。每个用户都有一个完全独立的数据空间。
-
-在这个网络应用程序示例中，用户可以注册一个笔记本服务来创建笔记，然后查看和删除它们。它仅用了 7 个源文件，310 行代码，就展示了如何集成多项技术:
-
-
-MariaDB
-
-网络浏览器
-
-Apache
-
-Unix 套接字
-
-
-运作原理
-
-以下是从用户的角度来看应用程序是如何工作的。下图是代码演示。
-
-该应用允许用户通过指定电子邮件地址和密码创建新的登录名。你可以用任何你喜欢的方式设置它们，例如运用 CSS：
-
-
-
-验证用户的电子邮件:
-
-
-
-每个用户使用自己独有的用户名和密码登录：
-
-
-
-一旦登录，用户就可以添加笔记：
-
-
-
-用户可以获取笔记列表：
-
-
-
-删除笔记之前，应用会申请确认信息：
-
-
-
-用户确认后，笔记被删除：
-
-
-
-设置先决条件
-
-遵照 Vely.dev 上的安装指示。这是一个使用 DNF、APT、Pacman 或者 Zypper 等标准工具包的快速流程。
-
-由于它们都是这个范例的一部分，你必须安装 Apache 作为网络服务器，安装 MariaDB 作为数据库。
-
-安装 Vely 后，如使用 Vim，打开里面的“语法高亮显示”：
-
-vv -m
-
-
-获取源代码
-
-这个演示 SaaS 应用程序的源代码是 Vely 安装的一部分。为每个应用程序创建一个单独的源代码目录不失为一个好主意…]]></summary>
-        <author>
-            <name>linux@linux.cn (linux)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[有奖征文 | 为负面情绪找个出口，「放轻松」这件事其实很重要]]></title>
-        <id>https://sspai.com/post/84979</id>
-        <link href="https://sspai.com/post/84979"/>
-        <updated>2023-12-12T03:00:00.000Z</updated>
-        <summary type="html"><![CDATA[年关将至，「想回家种地，因为玉米不会跟我说他想结芒果」这类表情包似乎越来越受欢迎，虽然不是每个人回家都有地可种，种地也不见得就比在大城市工作轻松多少，但却能表达出人们对工作的幽默嘲讽和自我调侃，我们日 ...查看全文]]></summary>
-        <author>
-            <name>少数派编辑部</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[eusonlito/LaravelPulse-AppsLoad: Laravel Pulse 卡显示内存和 CPU 使用情况]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/2c014827d66bca77ef18c4060ba74a09e91221d6</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/2c014827d66bca77ef18c4060ba74a09e91221d6"/>
-        <updated>2023-12-12T02:05:31.000Z</updated>
-        <summary type="html"><![CDATA[eusonlito/LaravelPulse-AppsLoad: Laravel Pulse 卡显示内存和 CPU 使用情况]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[denniseilander/pulse-log-files: 一个轻量级的 Laravel Pulse 包，用于轻松查看当前项目中的可用日志文件。]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/de01b09f2bcac5d2738bc15b7e1ae7a2207a7c3c</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/de01b09f2bcac5d2738bc15b7e1ae7a2207a7c3c"/>
-        <updated>2023-12-12T02:04:30.000Z</updated>
-        <summary type="html"><![CDATA[denniseilander/pulse-log-files: 一个轻量级的 Laravel Pulse 包，用于轻松查看当前项目中的可用日志文件。]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[pion/sctp: SCTP 的 Go 实现]]></title>
-        <id>https://github.com/guanguans/favorite-link/commit/210dffed61184ce4c7385ee5dcbd445286ba6287</id>
-        <link href="https://github.com/guanguans/favorite-link/commit/210dffed61184ce4c7385ee5dcbd445286ba6287"/>
-        <updated>2023-12-12T02:03:43.000Z</updated>
-        <summary type="html"><![CDATA[pion/sctp: SCTP 的 Go 实现]]></summary>
-        <author>
-            <name>guanguans</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[派早报：外卖 App 个人信息收集情况测试报告出炉等]]></title>
-        <id>https://sspai.com/post/84995</id>
-        <link href="https://sspai.com/post/84995"/>
-        <updated>2023-12-12T00:51:47.000Z</updated>
-        <summary type="html"><![CDATA[理想召开智能软件发布会，国行 Nintendo Switch 延长保修计划暂停销售等查看全文]]></summary>
-        <author>
-            <name>少数派编辑部</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Epic win: Jury decides Google has illegal monopoly in app store fight]]></title>
-        <id>https://news.ycombinator.com/item?id=38607474</id>
-        <link href="https://www.theverge.com/23994174/epic-google-trial-jury-verdict-monopoly-google-play"/>
-        <updated>2023-12-12T00:25:34.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.theverge.com/23994174/epic-google-trial-jury-verdict-monopoly-google-play
-Comments URL: https://news.ycombinator.com/item?id=38607474
-Points: 37
-# Comments: 8]]></summary>
-        <author>
-            <name>ganlaw</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Epic vs. Google: Google Loses]]></title>
-        <id>https://news.ycombinator.com/item?id=38607424</id>
-        <link href="https://www.theverge.com/23945184/epic-v-google-fortnite-play-store-antitrust-trial-updates"/>
-        <updated>2023-12-12T00:21:07.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.theverge.com/23945184/epic-v-google-fortnite-play-store-antitrust-trial-updates
-Comments URL: https://news.ycombinator.com/item?id=38607424
-Points: 67
-# Comments: 19]]></summary>
-        <author>
-            <name>modeless</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The House Intelligence Committee's Surveillance 'Reform' Bill Is a Farce]]></title>
-        <id>https://news.ycombinator.com/item?id=38607071</id>
-        <link href="https://www.eff.org/deeplinks/2023/12/section-702-needs-reform-and-oversight-not-expansion-congress-should-oppose-hpsci"/>
-        <updated>2023-12-11T23:45:29.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.eff.org/deeplinks/2023/12/section-702-needs-reform-and-oversight-not-expansion-congress-should-oppose-hpsci
-Comments URL: https://news.ycombinator.com/item?id=38607071
-Points: 23
-# Comments: 0]]></summary>
-        <author>
-            <name>harporoeder</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Behavior Belongs in the HTML]]></title>
-        <id>https://news.ycombinator.com/item?id=38607038</id>
-        <link href="https://unplannedobsolescence.com/blog/behavior-belongs-in-html/"/>
-        <updated>2023-12-11T23:41:13.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://unplannedobsolescence.com/blog/behavior-belongs-in-html/
-Comments URL: https://news.ycombinator.com/item?id=38607038
-Points: 25
-# Comments: 2]]></summary>
-        <author>
-            <name>alexpetros</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Deep in the Wilderness, the Largest Beaver Dam Endures]]></title>
-        <id>https://news.ycombinator.com/item?id=38606804</id>
-        <link href="https://e360.yale.edu/features/worlds-largest-beaver-dam"/>
-        <updated>2023-12-11T23:14:30.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://e360.yale.edu/features/worlds-largest-beaver-dam
-Comments URL: https://news.ycombinator.com/item?id=38606804
-Points: 6
-# Comments: 0]]></summary>
-        <author>
-            <name>geox</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AdaptNet: Policy Adaptation for Physics-Based Character Control]]></title>
-        <id>https://news.ycombinator.com/item?id=38606667</id>
-        <link href="https://arxiv.org/abs/2310.00239"/>
-        <updated>2023-12-11T22:57:50.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://arxiv.org/abs/2310.00239
-Comments URL: https://news.ycombinator.com/item?id=38606667
-Points: 14
-# Comments: 1]]></summary>
-        <author>
-            <name>moneil971</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Mamba outperforms transformers "everywhere we tried"]]></title>
-        <id>https://news.ycombinator.com/item?id=38606590</id>
-        <link href="https://old.reddit.com/r/singularity/comments/18asto2/announcing_mamba_a_new_ssm_arch_that_has/"/>
-        <updated>2023-12-11T22:51:26.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://old.reddit.com/r/singularity/comments/18asto2/announcing_mamba_a_new_ssm_arch_that_has/
-Comments URL: https://news.ycombinator.com/item?id=38606590
-Points: 43
-# Comments: 8]]></summary>
-        <author>
-            <name>behnamoh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The Secret Behind Qualcomm's Margins? Patents]]></title>
-        <id>https://news.ycombinator.com/item?id=38606488</id>
-        <link href="https://blog.withedge.com/p/the-secret-behind-qualcomms-margins"/>
-        <updated>2023-12-11T22:43:12.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://blog.withedge.com/p/the-secret-behind-qualcomms-margins
-Comments URL: https://news.ycombinator.com/item?id=38606488
-Points: 65
-# Comments: 35]]></summary>
-        <author>
-            <name>ejz</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[What if an SQL statement returned a database?]]></title>
-        <id>https://news.ycombinator.com/item?id=38606146</id>
-        <link href="https://arxiv.org/abs/2312.00638"/>
-        <updated>2023-12-11T22:05:52.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://arxiv.org/abs/2312.00638
-Comments URL: https://news.ycombinator.com/item?id=38606146
-Points: 111
-# Comments: 66]]></summary>
-        <author>
-            <name>matt_d</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[To revive Portland, officials seek to ban public drug use]]></title>
-        <id>https://news.ycombinator.com/item?id=38605643</id>
-        <link href="https://www.nytimes.com/2023/12/11/us/portland-oregon-drug-laws.html"/>
-        <updated>2023-12-11T21:21:17.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.nytimes.com/2023/12/11/us/portland-oregon-drug-laws.html
-Comments URL: https://news.ycombinator.com/item?id=38605643
-Points: 82
-# Comments: 240]]></summary>
-        <author>
-            <name>mikhael</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[FISA "reform" bill would greatly expand the entities forced to surveil users]]></title>
-        <id>https://news.ycombinator.com/item?id=38605525</id>
-        <link href="https://www.zwillgen.com/law-enforcement/fisa-reform-bill-702-surveillance/"/>
-        <updated>2023-12-11T21:10:03.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.zwillgen.com/law-enforcement/fisa-reform-bill-702-surveillance/
-Comments URL: https://news.ycombinator.com/item?id=38605525
-Points: 151
-# Comments: 34]]></summary>
-        <author>
-            <name>jacooper</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Terminal Trove – A collection of CLIs, TUIs and all things in the terminal]]></title>
-        <id>https://news.ycombinator.com/item?id=38605466</id>
-        <link href="https://terminaltrove.com/"/>
-        <updated>2023-12-11T21:02:20.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://terminaltrove.com/
-Comments URL: https://news.ycombinator.com/item?id=38605466
-Points: 55
-# Comments: 7]]></summary>
-        <author>
-            <name>diazc</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Deep Learning – Foundations and Concepts (Chris Bishop)]]></title>
-        <id>https://news.ycombinator.com/item?id=38605453</id>
-        <link href="https://www.bishopbook.com/"/>
-        <updated>2023-12-11T21:01:05.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.bishopbook.com/
-Comments URL: https://news.ycombinator.com/item?id=38605453
-Points: 81
-# Comments: 8]]></summary>
-        <author>
-            <name>armcat</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Bottomley: Solving the Looming Developer Liability Problem]]></title>
-        <id>https://lwn.net/Articles/954528/</id>
-        <link href="https://lwn.net/Articles/954528/"/>
-        <updated>2023-12-11T19:55:53.000Z</updated>
-        <summary type="html"><![CDATA[James Bottomley writes
-that open-source developers are increasingly likely to be held liable for
-flaws in their code and suggests a solution:
-
-
-	Indemnification means one party, in particular circumstances,
-	agreeing to be on the hook for the legal responsibilities of
-	another party. This is actually a well known way not of avoiding
-	liability but transferring it to where it belongs. As such, it’s
-	easily sellable in the court of public opinion: we’re not looking
-	to avoid liability, merely trying to make sure it lands on those
-	who are making all the money from the code.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[New kselftest for verifying driver probe of Devicetree-based platforms]]></title>
-        <id>https://www.reddit.com/r/linux/comments/18g2g0k/new_kselftest_for_verifying_driver_probe_of/</id>
-        <link href="https://www.reddit.com/r/linux/comments/18g2g0k/new_kselftest_for_verifying_driver_probe_of/"/>
-        <updated>2023-12-11T19:53:34.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/mfilion  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Useless CLI tools]]></title>
-        <id>https://www.reddit.com/r/linux/comments/18g2dqm/useless_cli_tools/</id>
-        <link href="https://www.reddit.com/r/linux/comments/18g2dqm/useless_cli_tools/"/>
-        <updated>2023-12-11T19:51:01.000Z</updated>
-        <summary type="html"><![CDATA[I'm looking for dumb, useless and fun cli tools like cowsay or Hollywood
- Maybe some that are actually useful, who knows?
-    submitted by    /u/Redneckia  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Show HN: I built an OSS alternative to Azure OpenAI services]]></title>
-        <id>https://news.ycombinator.com/item?id=38603853</id>
-        <link href="https://github.com/bricks-cloud/BricksLLM"/>
-        <updated>2023-12-11T18:56:23.000Z</updated>
-        <summary type="html"><![CDATA[Hey HN, I am proud to show you guys that I have built an open source alternative to Azure OpenAI services.
-Azure OpenAI services was born out of companies needing enhanced security and access control for using different GPT models. I want to build an OSS version of Azure OpenAI services that people could self host in their own infrastructure.
-"How can I track LLM spend per API key?"
-"Can I create a development OpenAI API key with limited access for Bob?"
-"Can I see my LLM spend breakdown by models and endpoints?"
-"Can I create 100 OpenAI API keys that my students could use in a classroom setting?"
-These are questions that BricksLLM helps you answer.
-BricksLLM is an API gateway that let you create API keys with rate limit, cost control and ttl that could be used to access all OpenAI and Ant…]]></summary>
-        <author>
-            <name>luyuanxin1995</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TSA introducing self-service screening technology in Las Vegas]]></title>
-        <id>https://news.ycombinator.com/item?id=38603440</id>
-        <link href="https://upgradedpoints.com/news/tsa-self-service-screening/"/>
-        <updated>2023-12-11T18:29:28.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://upgradedpoints.com/news/tsa-self-service-screening/
-Comments URL: https://news.ycombinator.com/item?id=38603440
-Points: 32
-# Comments: 78]]></summary>
-        <author>
-            <name>mji</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[probonopd/wayland-x11-compat-protocols: The missing Wayland protocols]]></title>
-        <id>https://www.reddit.com/r/linux/comments/18fzyxn/probonopdwaylandx11compatprotocols_the_missing/</id>
-        <link href="https://www.reddit.com/r/linux/comments/18fzyxn/probonopdwaylandx11compatprotocols_the_missing/"/>
-        <updated>2023-12-11T17:48:38.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/that_leaflet  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The best WebAssembly runtime may be no runtime]]></title>
-        <id>https://news.ycombinator.com/item?id=38602750</id>
-        <link href="https://00f.net/2023/12/11/webassembly-compilation-to-c/"/>
-        <updated>2023-12-11T17:44:26.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://00f.net/2023/12/11/webassembly-compilation-to-c/
-Comments URL: https://news.ycombinator.com/item?id=38602750
-Points: 108
-# Comments: 90]]></summary>
-        <author>
-            <name>jedisct1</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] Some recent and notable changes to Rust]]></title>
-        <id>https://lwn.net/Articles/954033/</id>
-        <link href="https://lwn.net/Articles/954033/"/>
-        <updated>2023-12-11T17:35:12.000Z</updated>
-        <summary type="html"><![CDATA[The Rust project makes incremental releases every six
-weeks, a fact that makes it easy to overlook some of the
-interesting changes coming to the language, such as new
-ABIs, better debugger support, asynchronous traits, and
-support for C strings.
-The end of the year provides an opportunity to look back
-over the past several months of updates, and to look
-forward to what to expect in 2024.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Beeper Mini is back]]></title>
-        <id>https://news.ycombinator.com/item?id=38602575</id>
-        <link href="https://blog.beeper.com/p/beeper-mini-is-back"/>
-        <updated>2023-12-11T17:30:14.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://blog.beeper.com/p/beeper-mini-is-back
-Comments URL: https://news.ycombinator.com/item?id=38602575
-Points: 800
-# Comments: 1033]]></summary>
-        <author>
-            <name>erohead</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Patterns (YC S21) is hiring to automate analytics with LLMs]]></title>
-        <id>https://news.ycombinator.com/item?id=38602281</id>
-        <link href="https://patterns.app/"/>
-        <updated>2023-12-11T17:00:41.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://patterns.app/
-Comments URL: https://news.ycombinator.com/item?id=38602281
-Points: 0
-# Comments: 0]]></summary>
-        <author>
-            <name>cstanley</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA['Glacier mice' baffle scientists]]></title>
-        <id>https://news.ycombinator.com/item?id=38602228</id>
-        <link href="https://www.atlasobscura.com/articles/herds-of-glacier-mice-baffle-scientists"/>
-        <updated>2023-12-11T16:53:58.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.atlasobscura.com/articles/herds-of-glacier-mice-baffle-scientists
-Comments URL: https://news.ycombinator.com/item?id=38602228
-Points: 91
-# Comments: 17]]></summary>
-        <author>
-            <name>janandonly</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Text Editor Data Structures: Rethinking Undo]]></title>
-        <id>https://news.ycombinator.com/item?id=38601435</id>
-        <link href="https://cdacamar.github.io/data%20structures/algorithms/benchmarking/text%20editors/c++/rethinking-undo/"/>
-        <updated>2023-12-11T15:27:42.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://cdacamar.github.io/data%20structures/algorithms/benchmarking/text%20editors/c++/rethinking-undo/
-Comments URL: https://news.ycombinator.com/item?id=38601435
-Points: 128
-# Comments: 43]]></summary>
-        <author>
-            <name>starfreakclone</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Kernel prepatch 6.7-rc5]]></title>
-        <id>https://lwn.net/Articles/954469/</id>
-        <link href="https://lwn.net/Articles/954469/"/>
-        <updated>2023-12-11T14:51:59.000Z</updated>
-        <summary type="html"><![CDATA[The 6.7-rc5 kernel prepatch is out for
-testing.
-
-
-	Nothing looks particularly scary, which is good, because if it had
-	been, I wouldn't have had the capacity to deal with it last week.
-
-	Let's hope it stays that way even as I am getting better. Because the
-	holidays are almost upon us, and I'm woefully underprepared.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Two stable kernels]]></title>
-        <id>https://lwn.net/Articles/954454/</id>
-        <link href="https://lwn.net/Articles/954454/"/>
-        <updated>2023-12-11T14:13:27.000Z</updated>
-        <summary type="html"><![CDATA[Greg Kroah-Hartman has announced the release of the 6.6.6 and 6.1.67 stable kernels.  Both contain a single
-reversion of the "wifi: cfg80211: fix CQM for non-range use" patch.]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Monday]]></title>
-        <id>https://lwn.net/Articles/954449/</id>
-        <link href="https://lwn.net/Articles/954449/"/>
-        <updated>2023-12-11T14:02:19.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Debian (chromium), Fedora (bluez, chromium, and curl), Red Hat (apr), Slackware (libxml2), and Ubuntu (squid3 and tar).]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[distinstall-python : Universal Linux Distribution Installation Framework/Library with CLI utility]]></title>
-        <id>https://www.reddit.com/r/linux/comments/18fv4c8/distinstallpython_universal_linux_distribution/</id>
-        <link href="https://www.reddit.com/r/linux/comments/18fv4c8/distinstallpython_universal_linux_distribution/"/>
-        <updated>2023-12-11T13:57:31.000Z</updated>
-        <summary type="html"><![CDATA[Hello everyone!
- It's been awhile, first of all, I just pushed v0.4.0 of distinstall-python (Name is temporary and still a WIP, hence I am accepting any naming suggestions! please feel free to suggest, thank you!)
- As I mentioned in the README, this is a complete rewrite of my previous portable linux distribution install script - named distro-installscript-arch - which was using ArchLinux as its base development concept and was written in Bash shellscripting, as you might recall previously
- This is now rewritten in python (might give golang a shot if it is better for the project, feel free to tell me what you think), and as of v0.4.0, the following feature changes, additions include, but not limited to:
-  
-Multi-distribution support based on the availability of a distribution's implemented…]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
         </author>
     </entry>
 </feed>
