@@ -12,6 +12,206 @@
       "siteUrl": "https://news.ycombinator.com/",
       "articles": [
         {
+          "id": "https://news.ycombinator.com/item?id=43393079",
+          "author": "05bmckay",
+          "description": "Article URL: https://techstartups.com/2025/03/17/amazon-to-lay-off-14000-managerial-positions-to-save-3-5-billion-annually/\nComments URL: https://news.ycombinator.com/item?id=43393079\nPoints: 64\n# Comments: 23",
+          "link": "https://techstartups.com/2025/03/17/amazon-to-lay-off-14000-managerial-positions-to-save-3-5-billion-annually/",
+          "publishedOn": "2025-03-17T21:50:22.000Z",
+          "wordCount": 2343,
+          "title": "Amazon plans to lay off 14,000 managerial positions to save $3.5B yearly",
+          "imageUrl": "https://techstartups.com/wp-content/uploads/2024/02/Jeff-Bezos-sells-about-2-billion-of-Amazon-shares-960x565.jpg"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=43392696",
+          "author": "gxespino",
+          "description": "Article URL: https://www.ycombinator.com/companies/luthor/jobs/HKrdhp0-staff-senior-software-engineer-backend-fullstack\nComments URL: https://news.ycombinator.com/item?id=43392696\nPoints: 0\n# Comments: 0",
+          "link": "https://www.ycombinator.com/companies/luthor/jobs/HKrdhp0-staff-senior-software-engineer-backend-fullstack",
+          "publishedOn": "2025-03-17T21:00:28.000Z",
+          "wordCount": 1560,
+          "title": "Luthor (YC F24) Is Hiring Ruby on Rails Engineers in San Francisco",
+          "imageUrl": "https://yc-workatastartup-production.s3.amazonaws.com/jobs_company_jobs/images/70999/f27f434ce4a9276e461b7cbc3852fb9dedc1806a.png?1732352747"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=43392549",
+          "author": "lehi",
+          "description": "Article URL: https://simonschreibt.de/gat/the-high-heel-problem/\nComments URL: https://news.ycombinator.com/item?id=43392549\nPoints: 34\n# Comments: 4",
+          "link": "https://simonschreibt.de/gat/the-high-heel-problem/",
+          "publishedOn": "2025-03-17T20:43:35.000Z",
+          "wordCount": 3350,
+          "title": "The High Heel Problem",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=43392521",
+          "author": "dfsnow",
+          "description": "Hi HN! Today I'm launching OpenTimes, a free database of roughly 150 billion pre-computed, point-to-point travel times between United States Census geographies. In addition to letting you visualize travel isochrones on the homepage, OpenTimes also lets you download massive amounts of travel time data for free and with no limits.\nThe primary goal here is to enable research and fill a gap I noticed in the open-source spatial ecosystem. Researchers (social scientists, economists, etc.) use large travel time matrices to quantify things like access to healthcare, but they often end up paying Google or Esri for the necessary data. By pre-calculating times between commonly-used research geographies (i.e. Census) and then making those times easily accessible via SQL, I hope to make large-scale accessibility research cheaper and simpler.\nSome technical bits that may be of interest to HN folks:\n- The entire OpenTimes backend is just static Parquet files on R2. There's no RDBMS or running service. The whole thing costs about $10/month to host and is free to serve.\n- All travel times were calculated by pre-building the inputs (OSM, OSRM networks) and then distributing the compute over hundreds of GitHub Actions jobs.\n- The query/SQL layer uses a setup I haven't seen before: a single DuckDB database file with views that point to static Parquet files via HTTP.\nFinally, the driving times are optimistic since they don't (yet) account for traffic. This is something I hope to work on in the near future. Enjoy!\nComments URL: https://news.ycombinator.com/item?id=43392521\nPoints: 50\n# Comments: 15",
+          "link": "https://opentimes.org/",
+          "publishedOn": "2025-03-17T20:40:52.000Z",
+          "wordCount": 3,
+          "title": "Show HN: OpenTimes – Free travel times between U.S. Census geographies",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=43392303",
+          "author": "jason_archmint",
+          "description": "Article URL: https://occupry.com\nComments URL: https://news.ycombinator.com/item?id=43392303\nPoints: 27\n# Comments: 49",
+          "link": "https://occupry.com/",
+          "publishedOn": "2025-03-17T20:12:40.000Z",
+          "wordCount": 517,
+          "title": "Occupry your next lease to negotiate a better deal",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=43391459",
+          "author": "rbanffy",
+          "description": "Article URL: https://blog.dshr.org/2025/03/archival-storage.html\nComments URL: https://news.ycombinator.com/item?id=43391459\nPoints: 133\n# Comments: 71",
+          "link": "https://blog.dshr.org/2025/03/archival-storage.html",
+          "publishedOn": "2025-03-17T18:36:21.000Z",
+          "wordCount": 6842,
+          "title": "Archival Storage",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXKlNGhJKcHdX4_k6tqmciQHF7bSn3qg5ytFYOIkZhGgB-fsJC3G5qdJQA2Lfni9EsxDaM5s5CDDjPb3t1o6MqhTn2iY7nz3bsL_MDlIR6hX0PE25SbGdCVE7AFOaxe6nsaW2RxVWsUSeDb7mnrJF24Tz_nR-QPzwbuqV3rDcKFEz7BIV_EYKuJ4RZZk-k/w1200-h630-p-k-no-nu/Backups.JPG"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=43390823",
+          "author": "tillahoffmann",
+          "description": "localscope is a small Python package that disassembles functions to check if they access global variables they shouldn't. I wrote this a few years ago to detect scope bugs which are common in Jupyter notebooks. It's recently come in handy writing jax code (https://github.com/jax-ml/jax) because it requires pure functions. Thought I'd share.\nComments URL: https://news.ycombinator.com/item?id=43390823\nPoints: 50\n# Comments: 21",
+          "link": "https://localscope.readthedocs.io/en/latest/",
+          "publishedOn": "2025-03-17T17:33:14.000Z",
+          "wordCount": 852,
+          "title": "Show HN: Localscope–Limit scope of Python functions for reproducible execution",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=43390747",
+          "author": "jbegley",
+          "description": "Article URL: https://theintercept.com/2025/03/17/lapd-surveillance-gaza-palestine-protests-dataminr/\nComments URL: https://news.ycombinator.com/item?id=43390747\nPoints: 104\n# Comments: 100",
+          "link": "https://theintercept.com/2025/03/17/lapd-surveillance-gaza-palestine-protests-dataminr/",
+          "publishedOn": "2025-03-17T17:25:35.000Z",
+          "wordCount": 3410,
+          "title": "Dataminr tracked Gaza-related protests",
+          "imageUrl": "https://theintercept.com/wp-content/uploads/2025/03/LAPD-Surveilling-Social-Media-Talk-of-Gaza-Protests-in-LA-and-Beyond_v2.jpg?fit=2000%2C1000&w=1200&h=800"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=43390595",
+          "author": "SirLJ",
+          "description": "Article URL: https://www.bloomberg.com/news/features/2025-03-16/wall-street-s-dark-pools-grow-murkier-with-private-rooms\nComments URL: https://news.ycombinator.com/item?id=43390595\nPoints: 72\n# Comments: 72",
+          "link": "https://www.bloomberg.com/news/features/2025-03-16/wall-street-s-dark-pools-grow-murkier-with-private-rooms",
+          "publishedOn": "2025-03-17T17:10:59.000Z",
+          "wordCount": null,
+          "title": "Wall Street’s ‘Private Rooms’",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=43390467",
+          "author": "tadeegan",
+          "description": "Article URL: https://x.company/blog/posts/taara-graduation/\nComments URL: https://news.ycombinator.com/item?id=43390467\nPoints: 74\n# Comments: 84",
+          "link": "https://x.company/blog/posts/taara-graduation/",
+          "publishedOn": "2025-03-17T16:55:17.000Z",
+          "wordCount": 972,
+          "title": "Alphabet spins out Taara – Internet over lasers",
+          "imageUrl": "https://lh3.googleusercontent.com/yXpCVH3d-_hSPv05gFVux_qRo3f3qZDul92-BNMlNSWH3CoqQbKaksGnxJUtYXoWJHgulXL6hAi-CvSVdwhey3q6i287XCO1eMK5Fg=e365-pa-nu-w1200"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=43390400",
+          "author": "wuubuu",
+          "description": "Article URL: https://arxiv.org/abs/2503.02113\nComments URL: https://news.ycombinator.com/item?id=43390400\nPoints: 212\n# Comments: 54",
+          "link": "https://arxiv.org/abs/2503.02113",
+          "publishedOn": "2025-03-17T16:47:02.000Z",
+          "wordCount": 692,
+          "title": "Deep Learning Is Not So Mysterious or Different",
+          "imageUrl": "/static/browse/0.3.4/images/arxiv-logo-fb.png"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=43389064",
+          "author": "jgrahamc",
+          "description": "Article URL: https://blog.cloudflare.com/chaos-in-cloudflare-lisbon-office-securing-the-internet-with-wave-motion/\nComments URL: https://news.ycombinator.com/item?id=43389064\nPoints: 232\n# Comments: 112",
+          "link": "https://blog.cloudflare.com/chaos-in-cloudflare-lisbon-office-securing-the-internet-with-wave-motion/",
+          "publishedOn": "2025-03-17T14:38:18.000Z",
+          "wordCount": 2055,
+          "title": "Chaos in the Cloudflare Lisbon Office",
+          "imageUrl": "https://cf-assets.www.cloudflare.com/zkvhlag99gkb/5zVwiJfEq7HxM29NnVMZ3m/84cf2f635e424dc2656415c55560dc27/OG_Share_2024__8_.png"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=43388296",
+          "author": "robin_reala",
+          "description": "Article URL: https://www.wired.com/story/undergraduate-upends-a-40-year-old-data-science-conjecture/\nComments URL: https://news.ycombinator.com/item?id=43388296\nPoints: 197\n# Comments: 94",
+          "link": "https://www.wired.com/story/undergraduate-upends-a-40-year-old-data-science-conjecture/",
+          "publishedOn": "2025-03-17T13:19:37.000Z",
+          "wordCount": 26350,
+          "title": "Undergraduate Disproves 40-Year-Old Conjecture, Invents New Kind of Hash Table",
+          "imageUrl": "https://media.wired.com/photos/67d1a33f957eeb91ce82a5c6/191:100/w_1280,c_limit/Hash-Tables-Redux_cr_Nash-Weerasekera-Lede.jpeg"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=43387834",
+          "author": "mehrant",
+          "description": "we've been working on a KV store for the past year or so which is 2-6x faster than Redis (benchmark link below) yet disk persisted! so you get the speed of in-memory KV stores but with disk persistence.\nTo achieve this we've created our custom filesystem that is optimized for our special usecase and we're doing smart batching for writes and predictive fetching for reads.\nIn addition to basic operations, it also provides atomic inc/dec, atomic json patch, range scans and a unique key monitoring mechanism (pub-sub) over WebSockets which essentially allows you to receive notification on registered key changes directly from the KV store. so for example in a realtime web application, you can receive notifications directly in your front-end, with no back-end implementation (no WebSocket server management, no relay etc.) and still be secure and not expose your API keys on front-end. \nWe have REST, WebSocket and RIOC API and we can't wait to hear your feedback.\nWe're only providing the free tier for now but let us know and we can increase the limits for you, if have a specific case. please either send us an email to support@hpkv.io or use http://hpkv.io/contact if you prefer that way.\nsign up: http://hpkv.io/signup\ndocumentation: http://hpkv.io/docs\nrealtime pub-sub: http://hpkv.io/blog/2025/03/real-time-pub-sub\nbenchmark vs Redis: http://hpkv.io/blog/2025/02/redis-vs-hpkv-benchmark\nlooking forward to hear your feedback :)\nComments URL: https://news.ycombinator.com/item?id=43387834\nPoints: 32\n# Comments: 53",
+          "link": "https://hpkv.io/",
+          "publishedOn": "2025-03-17T12:35:16.000Z",
+          "wordCount": 101,
+          "title": "Show HN: A bi-directional, persisted KV store that is faster than Redis",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=43387334",
+          "author": "seansh",
+          "description": "Article URL: http://blog.kevinalbs.com/stupid_smart_pointers\nComments URL: https://news.ycombinator.com/item?id=43387334\nPoints: 57\n# Comments: 99",
+          "link": "http://blog.kevinalbs.com/stupid_smart_pointers",
+          "publishedOn": "2025-03-17T11:29:04.000Z",
+          "wordCount": 2163,
+          "title": "Stupid Smart Pointers in C",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=43386578",
+          "author": "reimertz",
+          "description": "Article URL: https://makerworld.com/en/models/783010-underware-2-0-infinite-cable-management\nComments URL: https://news.ycombinator.com/item?id=43386578\nPoints: 119\n# Comments: 35",
+          "link": "https://makerworld.com/en/models/783010-underware-2-0-infinite-cable-management",
+          "publishedOn": "2025-03-17T09:29:33.000Z",
+          "wordCount": null,
+          "title": "Underware 2.0 – Open Source Infinite Cable Management",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=43386004",
+          "author": "gone35",
+          "description": "Article URL: https://cp4space.hatsya.com/2020/10/28/the-exceptional-jordan-algebra/\nComments URL: https://news.ycombinator.com/item?id=43386004\nPoints: 101\n# Comments: 11",
+          "link": "https://cp4space.hatsya.com/2020/10/28/the-exceptional-jordan-algebra/",
+          "publishedOn": "2025-03-17T07:30:26.000Z",
+          "wordCount": 3036,
+          "title": "The exceptional Jordan algebra (2020)",
+          "imageUrl": "https://cp4space.hatsya.com/wp-content/uploads/2020/10/jordan.png"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=43385268",
+          "author": "luu",
+          "description": "Article URL: https://discuss.systems/@dev/114161826926246661\nComments URL: https://news.ycombinator.com/item?id=43385268\nPoints: 852\n# Comments: 603",
+          "link": "https://discuss.systems/@dev/114161826926246661",
+          "publishedOn": "2025-03-17T04:41:49.000Z",
+          "wordCount": 117,
+          "title": "The Alexa feature \"do not send voice recordings\" you enabled no longer available",
+          "imageUrl": "https://fd.discuss.systems/media_attachments/files/114/161/826/694/724/108/original/1040ba79ebc096bf.png"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=43384894",
+          "author": "34679",
+          "description": "Article URL: https://github.com/mvt-project/mvt\nComments URL: https://news.ycombinator.com/item?id=43384894\nPoints: 135\n# Comments: 45",
+          "link": "https://github.com/mvt-project/mvt",
+          "publishedOn": "2025-03-17T03:25:26.000Z",
+          "wordCount": 2053,
+          "title": "Conducting forensics of mobile devices to find signs of a potential compromise",
+          "imageUrl": "https://opengraph.githubassets.com/ea4fde429e256b30f1d808cc0f7a33beca739ab316fb7b0612616824d58f1236/mvt-project/mvt"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=43384826",
+          "author": "wglb",
+          "description": "Article URL: https://phys.org/news/2025-03-genomic-capacity-language-emerged-years.html\nComments URL: https://news.ycombinator.com/item?id=43384826\nPoints: 99\n# Comments: 59",
+          "link": "https://phys.org/news/2025-03-genomic-capacity-language-emerged-years.html",
+          "publishedOn": "2025-03-17T03:09:28.000Z",
+          "wordCount": 2763,
+          "title": "Genomic study: our capacity for language emerged at least 135k years ago",
+          "imageUrl": "https://scx2.b-cdn.net/gfx/news/hires/2019/cavepainting.jpg"
+        },
+        {
           "id": "https://news.ycombinator.com/item?id=43382392",
           "author": "billybuckwheat",
           "description": "Article URL: https://www.pcworld.com/article/2614943/microsoft-is-paywalling-these-features-in-notepad-and-paint.html\nComments URL: https://news.ycombinator.com/item?id=43382392\nPoints: 18\n# Comments: 10",
@@ -5670,256 +5870,6 @@
           "wordCount": 3067,
           "title": "Finding Flow: Escaping digital distractions through deep work and slow living",
           "imageUrl": "https://www.ssp.sh/blog/finding-flow/featured-image.png"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43066953",
-          "author": "pie_flavor",
-          "description": "Article URL: https://chadnauseam.com/coding/random/calculator-app\nComments URL: https://news.ycombinator.com/item?id=43066953\nPoints: 1036\n# Comments: 264",
-          "link": "https://chadnauseam.com/coding/random/calculator-app",
-          "publishedOn": "2025-02-16T10:16:49.000Z",
-          "wordCount": 24,
-          "title": "“A calculator app? Anyone could make that”",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43066842",
-          "author": "clemo_ra",
-          "description": "Article URL: https://langfuse.com/careers\nComments URL: https://news.ycombinator.com/item?id=43066842\nPoints: 0\n# Comments: 0",
-          "link": "https://langfuse.com/careers",
-          "publishedOn": "2025-02-16T09:55:58.000Z",
-          "wordCount": 995,
-          "title": "Langfuse (YC W23) Is Hiring Product Engineers in Berlin",
-          "imageUrl": "https://langfuse.com/api/og?title=Join%20Us!&description=Join%20the%20Langfuse%20team%20to%20build%20the%20leading%20open-source%20LLM%20engineering%20platform&section="
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43066720",
-          "author": "marban",
-          "description": "Article URL: https://kk.org/thetechnium/50-years-of-travel-tips/\nComments URL: https://news.ycombinator.com/item?id=43066720\nPoints: 202\n# Comments: 158",
-          "link": "https://kk.org/thetechnium/50-years-of-travel-tips/",
-          "publishedOn": "2025-02-16T09:31:02.000Z",
-          "wordCount": 4086,
-          "title": "50 Years of Travel Tips",
-          "imageUrl": "https://kk.org/wp-content/themes/kkdotorg/inc/images/og_default_1200.png"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43065217",
-          "author": "mmsc",
-          "description": "Article URL: https://github.com/dvershinin/gixy\nComments URL: https://news.ycombinator.com/item?id=43065217\nPoints: 145\n# Comments: 27",
-          "link": "https://github.com/dvershinin/gixy",
-          "publishedOn": "2025-02-16T04:06:04.000Z",
-          "wordCount": 3137,
-          "title": "Gixy: Nginx Configuration Static Analyzer",
-          "imageUrl": "https://opengraph.githubassets.com/cbd43562f1919bb5c187e097b68cdfd28948b4de4bea0847570360a5ee52fd13/dvershinin/gixy"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43064273",
-          "author": "krykp",
-          "description": "Article URL: https://donhopkins.com/home/TheSimsDesignDocuments/\nComments URL: https://news.ycombinator.com/item?id=43064273\nPoints: 389\n# Comments: 55",
-          "link": "https://donhopkins.com/home/TheSimsDesignDocuments/",
-          "publishedOn": "2025-02-16T01:06:11.000Z",
-          "wordCount": 350,
-          "title": "The Sims Game Design Documents (1997)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43062546",
-          "author": "h43z",
-          "description": "Article URL: https://h.43z.one/blog/2025-02-12/\nComments URL: https://news.ycombinator.com/item?id=43062546\nPoints: 17\n# Comments: 3",
-          "link": "https://h.43z.one/blog/2025-02-12/",
-          "publishedOn": "2025-02-15T21:32:13.000Z",
-          "wordCount": 1251,
-          "title": "Watt The Fox?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43062457",
-          "author": "dzogchen",
-          "description": "Article URL: https://taxfoundation.org/blog/trump-reciprocal-tariffs-eu-vat-discriminatory/\nComments URL: https://news.ycombinator.com/item?id=43062457\nPoints: 102\n# Comments: 84",
-          "link": "https://taxfoundation.org/blog/trump-reciprocal-tariffs-eu-vat-discriminatory/",
-          "publishedOn": "2025-02-15T21:20:34.000Z",
-          "wordCount": 3214,
-          "title": "The European Vat Is Not a Discriminatory Tax Against US Exports",
-          "imageUrl": "https://taxfoundation.org/wp-content/uploads/2025/02/AdobeStock_530786434-scaled.jpeg"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43061977",
-          "author": "vyrotek",
-          "description": "Article URL: https://www.cs.otago.ac.nz/cosc345/resources/nasa-10-rules.htm\nComments URL: https://news.ycombinator.com/item?id=43061977\nPoints: 39\n# Comments: 16",
-          "link": "https://www.cs.otago.ac.nz/cosc345/resources/nasa-10-rules.htm",
-          "publishedOn": "2025-02-15T20:24:13.000Z",
-          "wordCount": 3677,
-          "title": "NASA has a list of 10 rules for software development",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43061608",
-          "author": "gfysfm",
-          "description": "Article URL: https://www.seangoedecke.com/what-llms-cant-do/\nComments URL: https://news.ycombinator.com/item?id=43061608\nPoints: 19\n# Comments: 5",
-          "link": "https://www.seangoedecke.com/what-llms-cant-do/",
-          "publishedOn": "2025-02-15T19:44:57.000Z",
-          "wordCount": 1021,
-          "title": "To avoid being replaced by LLMs, do what they can't",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43061498",
-          "author": "bookofjoe",
-          "description": "Article URL: https://weeks.ginatrapani.org/\nComments URL: https://news.ycombinator.com/item?id=43061498\nPoints: 201\n# Comments: 54",
-          "link": "https://weeks.ginatrapani.org/",
-          "publishedOn": "2025-02-15T19:34:29.000Z",
-          "wordCount": 862,
-          "title": "My Life in Weeks",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43061482",
-          "author": "iancmceachern",
-          "description": "Article URL: https://sfstandard.com/2025/02/14/san-francisco-department-public-health-daniel-tsai-opioids-mckinsey/\nComments URL: https://news.ycombinator.com/item?id=43061482\nPoints: 116\n# Comments: 35",
-          "link": "https://sfstandard.com/2025/02/14/san-francisco-department-public-health-daniel-tsai-opioids-mckinsey/",
-          "publishedOn": "2025-02-15T19:32:16.000Z",
-          "wordCount": 10862,
-          "title": "New SF public health chief was part of McKinsey opioid-marketing operation",
-          "imageUrl": "https://content.sfstandard.com/wp-content/uploads/2025/02/8449058998_publichealthdirector_0291_de94f3.jpg?crop=0px%2C82px%2C4719px%2C2477px&w=1200"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43061423",
-          "author": "punnerud",
-          "description": "Article URL: https://github.com/microsoft/OmniParser\nComments URL: https://news.ycombinator.com/item?id=43061423\nPoints: 30\n# Comments: 3",
-          "link": "https://github.com/microsoft/OmniParser",
-          "publishedOn": "2025-02-15T19:26:26.000Z",
-          "wordCount": 2579,
-          "title": "OmniParser V2 – A simple screen parsing tool towards pure vision based GUI agent",
-          "imageUrl": "https://opengraph.githubassets.com/fd43766108e792034079739d5f06f88b5724ada757d4489a50f0cb114916bf24/microsoft/OmniParser"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43061183",
-          "author": "cosmos0072",
-          "description": "Article URL: https://github.com/cosmos72/schemesh\nComments URL: https://news.ycombinator.com/item?id=43061183\nPoints: 50\n# Comments: 9",
-          "link": "https://github.com/cosmos72/schemesh",
-          "publishedOn": "2025-02-15T19:00:38.000Z",
-          "wordCount": 4316,
-          "title": "Schemesh: Fusion between Unix shell and Lisp REPL",
-          "imageUrl": "https://opengraph.githubassets.com/9ae7640c3c1a720d7b3175ce10c0491743cb5a5353d9683374f319f138dcd471/cosmos72/schemesh"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43061173",
-          "author": "ChrisArchitect",
-          "description": "Article URL: https://www.volexity.com/blog/2025/02/13/multiple-russian-threat-actors-targeting-microsoft-device-code-authentication/\nComments URL: https://news.ycombinator.com/item?id=43061173\nPoints: 68\n# Comments: 9",
-          "link": "https://www.volexity.com/blog/2025/02/13/multiple-russian-threat-actors-targeting-microsoft-device-code-authentication/",
-          "publishedOn": "2025-02-15T18:59:39.000Z",
-          "wordCount": 4718,
-          "title": "Multiple Russian Threat Actors Targeting Microsoft Device Code Authentication",
-          "imageUrl": "https://www.volexity.com/wp-content/uploads/2025/02/Volexity-Blog-Multiple-Russian-Threat-Actors-Targeting-Microsoft-Device-Code-Authentication-300x157.png"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43060818",
-          "author": "bo0tzz",
-          "description": "Article URL: https://source-robotics.github.io/PAROL-docs/\nComments URL: https://news.ycombinator.com/item?id=43060818\nPoints: 46\n# Comments: 7",
-          "link": "https://source-robotics.github.io/PAROL-docs/",
-          "publishedOn": "2025-02-15T18:26:49.000Z",
-          "wordCount": 428,
-          "title": "PAROL6: 3D-printed desktop robotic arm",
-          "imageUrl": "https://PCrnjak.github.io/PAROL6_DOCS/assets/images/social/index.png"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43060769",
-          "author": "nabaraz",
-          "description": "Article URL: https://nabraj.com/blog/basketball-solved-sport/\nComments URL: https://news.ycombinator.com/item?id=43060769\nPoints: 51\n# Comments: 121",
-          "link": "https://nabraj.com/blog/basketball-solved-sport/",
-          "publishedOn": "2025-02-15T18:21:10.000Z",
-          "wordCount": 950,
-          "title": "Basketball has evolved into a game of calculated decision-making",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43060636",
-          "author": "WolfOliver",
-          "description": "Article URL: https://linkedrecords.com/the-big-tdd-misunderstanding-8e22c2f1fc21\nComments URL: https://news.ycombinator.com/item?id=43060636\nPoints: 18\n# Comments: 6",
-          "link": "https://linkedrecords.com/the-big-tdd-misunderstanding-8e22c2f1fc21",
-          "publishedOn": "2025-02-15T18:08:04.000Z",
-          "wordCount": 2695,
-          "title": "The Big TDD Misunderstanding (2022)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43060603",
-          "author": "mailgolub",
-          "description": "Article URL: https://github.com/mpatajac/jillc\nComments URL: https://news.ycombinator.com/item?id=43060603\nPoints: 53\n# Comments: 5",
-          "link": "https://github.com/mpatajac/jillc",
-          "publishedOn": "2025-02-15T18:04:12.000Z",
-          "wordCount": 2821,
-          "title": "Jill – a functional programming language for the Nand2Tetris platform",
-          "imageUrl": "https://opengraph.githubassets.com/08aede496ac3f74378dfc72b102466f976137b6d0f205b63a5b621e155417132/mpatajac/jillc"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43060587",
-          "author": "01-_-",
-          "description": "Article URL: https://newatlas.com/brain/alzheimers-dementia/alzheimers-biomarkers-visible-decade-before-symptoms/\nComments URL: https://news.ycombinator.com/item?id=43060587\nPoints: 86\n# Comments: 27",
-          "link": "https://newatlas.com/brain/alzheimers-dementia/alzheimers-biomarkers-visible-decade-before-symptoms/",
-          "publishedOn": "2025-02-15T18:02:17.000Z",
-          "wordCount": 4650,
-          "title": "Alzheimer's biomarkers now visible up to a decade ahead of symptoms",
-          "imageUrl": "https://assets.newatlas.com/dims4/default/d7afa2b/2147483647/strip/true/crop/1400x735+0+99/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2F93%2Fbb%2F55ab5dbe470aa43a5fc7a0dab8fa%2Ftau-proteins-can-malfunction-and-disrupt-the-microtubules-that-help-transport-nutrients-and-information-through-brain-cells-causing-alzheimers-disease.jpg&na.image_optimisation=0"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43059826",
-          "author": "indigodaddy",
-          "description": "Article URL: https://insideclimatenews.org/news/10022025/solar-battery-storage-texas-grid/\nComments URL: https://news.ycombinator.com/item?id=43059826\nPoints: 94\n# Comments: 65",
-          "link": "https://insideclimatenews.org/news/10022025/solar-battery-storage-texas-grid/",
-          "publishedOn": "2025-02-15T16:37:04.000Z",
-          "wordCount": 3688,
-          "title": "More Solar and Battery Storage Added to TX Grid Than Other Power Src Last Year",
-          "imageUrl": "https://insideclimatenews.org/wp-content/uploads/2025/02/GettyImages-2167569571-1024x683.jpg"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43059579",
-          "author": "b4rtazz",
-          "description": "Article URL: https://github.com/b4rtaz/distributed-llama/discussions/162\nComments URL: https://news.ycombinator.com/item?id=43059579\nPoints: 252\n# Comments: 119",
-          "link": "https://github.com/b4rtaz/distributed-llama/discussions/162",
-          "publishedOn": "2025-02-15T16:11:29.000Z",
-          "wordCount": 927,
-          "title": "Deepseek R1 Distill 8B Q40 on 4 x Raspberry Pi 5",
-          "imageUrl": "https://opengraph.githubassets.com/c3f34506924431f73077c15a7db91827a9485cec9fc6e3d1e4fe72a7eb57b685/b4rtaz/distributed-llama/discussions/162"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43058997",
-          "author": "Brajeshwar",
-          "description": "Article URL: https://techxplore.com/news/2025-02-carbon-capture-renewables.html\nComments URL: https://news.ycombinator.com/item?id=43058997\nPoints: 340\n# Comments: 252",
-          "link": "https://techxplore.com/news/2025-02-carbon-capture-renewables.html",
-          "publishedOn": "2025-02-15T15:06:30.000Z",
-          "wordCount": 2327,
-          "title": "Carbon capture more costly than switching to renewables, researchers find",
-          "imageUrl": "https://scx2.b-cdn.net/gfx/news/hires/2021/wind-farm.jpg"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43058993",
-          "author": "Brajeshwar",
-          "description": "Article URL: https://e360.yale.edu/digest/brake-pads-lung-damage-study\nComments URL: https://news.ycombinator.com/item?id=43058993\nPoints: 308\n# Comments: 286",
-          "link": "https://e360.yale.edu/digest/brake-pads-lung-damage-study",
-          "publishedOn": "2025-02-15T15:06:15.000Z",
-          "wordCount": 707,
-          "title": "Dust from car brakes more harmful than exhaust, study finds",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43058522",
-          "author": "pitwin",
-          "description": "Article URL: https://arstechnica.com/gaming/2025/02/the-diablo-hackers-that-debunked-a-record-speedrun/\nComments URL: https://news.ycombinator.com/item?id=43058522\nPoints: 136\n# Comments: 75",
-          "link": "https://arstechnica.com/gaming/2025/02/the-diablo-hackers-that-debunked-a-record-speedrun/",
-          "publishedOn": "2025-02-15T14:00:00.000Z",
-          "wordCount": 3139,
-          "title": "Diablo hackers uncovered a speedrun scandal",
-          "imageUrl": "https://cdn.arstechnica.net/wp-content/uploads/2025/02/diablo-debunk-1152x648.jpg"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=43058299",
-          "author": "khokao",
-          "description": "We’ve built Synergetica, an open-source desktop app for end-to-end genetic circuit design. It supports node-based or code-based editing, interactive simulations, and automated DNA sequence generation.\nYou can find the repo and docs here:\n- GitHub: https://github.com/khokao/synergetica\n- Docs: https://khokao.github.io/synergetica/\nComments URL: https://news.ycombinator.com/item?id=43058299\nPoints: 36\n# Comments: 7",
-          "link": "https://github.com/khokao/synergetica",
-          "publishedOn": "2025-02-15T13:22:09.000Z",
-          "wordCount": 1601,
-          "title": "Show HN: Synergetica – A Modern, End-to-End Genetic Circuit Design Desktop App",
-          "imageUrl": "https://opengraph.githubassets.com/250d9ee117dcb5c1235b579651fb0bd3734d190f9813d6d14bf86c26088b5318/khokao/synergetica"
         }
       ]
     },
@@ -5928,6 +5878,136 @@
       "feedUrl": "https://www.reddit.com/r/linux/top.rss?sort=top&t=day",
       "siteUrl": "https://www.reddit.com/r/linux/top?sort=top&t=day",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1jdor4g/is_it_unpopular_in_linux_to_use_icon_sets_that/",
+          "author": null,
+          "description": "Hey guys,\n I am very new to the Linux community and have little experience with the distributions themselves (I currently use Mint) nor the Linux community itself.\n But among the many posts or YouTube videos that show how to recreate the design of Windows 10 / 11 on Linux (insert any distribution), I have noticed that many are directly hostile to the idea. Then you read something like \n  \n\"I'm not using Linux to imitate Microsoft, why do you need to?\n  \nAre these designs simply unpopular because Windows is also partly seen as Linux's more successful, but also limited, unwanted brother? Will you be excluded from Linux if you recreate these designs, or are you okay with it so far?\n REGARDS\n    submitted by    /u/Chawkean  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1jdor4g/is_it_unpopular_in_linux_to_use_icon_sets_that/",
+          "publishedOn": "2025-03-17T21:44:32.000Z",
+          "wordCount": null,
+          "title": "Is it unpopular in Linux to use icon sets that mimic Windows 10/11?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1jdopgo/resurrected_an_11_year_old_acer_aspire_es1512/",
+          "author": null,
+          "description": "submitted by    /u/rocketmike12  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1jdopgo/resurrected_an_11_year_old_acer_aspire_es1512/",
+          "publishedOn": "2025-03-17T21:42:35.000Z",
+          "wordCount": null,
+          "title": "Resurrected an ~11 year old ACER Aspire ES1-512 with MX Linux! [Repost with proper tag]",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1jdnmag/linux_on_lunar_lake_review_intel_core_ultra_5_226v/",
+          "author": null,
+          "description": "I recently bought the Best Buy version of the Asus Vivobook S14 Q423 with the Intel Core Ultra 5 226V, and I thought I'd write a review of Linux on Lunar Lake because I couldn't find a lot of up-to-date information on it. I'm running KDE Wayland on Arch, but I also tried XFCE.\n Battery life: My laptop has a 75 watt-hour battery and I installed TLP and thermald with most battery-saving optimizations enabled. I consistently get 24hrs of battery life idle, 15hrs web browsing or streaming youtube, and 9hrs doing some light gaming. Extremely impressive considering my last laptop (AMD Ryzen 7 5800HS) could only manage 5 hours of youtube streaming on its 50 watt-hour battery.\n CPU performance: Multicore performance is crap, singlecore is fine. If for some reason you enjoy compiling the Linux kern…",
+          "link": "https://www.reddit.com/r/linux/comments/1jdnmag/linux_on_lunar_lake_review_intel_core_ultra_5_226v/",
+          "publishedOn": "2025-03-17T20:58:07.000Z",
+          "wordCount": null,
+          "title": "Linux on Lunar Lake review (Intel Core Ultra 5 226V)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1jdnd84/linux_users_whats_one_reason_why_you_switched/",
+          "author": null,
+          "description": "For me it was the stability, windows always bugged out to where i had to reset my PC every other month and also there were a LOT of bugs in general. I Switched because of stability issues; now i have been using linux for 3 years now.\n    submitted by    /u/Alarming_Map_3784  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1jdnd84/linux_users_whats_one_reason_why_you_switched/",
+          "publishedOn": "2025-03-17T20:47:51.000Z",
+          "wordCount": null,
+          "title": "Linux Users. Whats one reason why you switched?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1jdkhbc/gimp_3_is_officially_released/",
+          "author": null,
+          "description": "submitted by    /u/CinnamonCajaCrunch  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1jdkhbc/gimp_3_is_officially_released/",
+          "publishedOn": "2025-03-17T18:52:15.000Z",
+          "wordCount": null,
+          "title": "GIMP 3 is officially released - https://www.gimp.org/news/2025/03/16/gimp-3-0-released/ check comments for more info",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1jdi0wv/carefully_but_purposefully_oxidising_ubuntu/",
+          "author": null,
+          "description": "submitted by    /u/evilpies  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1jdi0wv/carefully_but_purposefully_oxidising_ubuntu/",
+          "publishedOn": "2025-03-17T17:14:59.000Z",
+          "wordCount": null,
+          "title": "Carefully But Purposefully Oxidising Ubuntu",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1jdi0qb/the_atrocious_state_of_binary_compatibility_on/",
+          "author": null,
+          "description": "submitted by    /u/begota98  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1jdi0qb/the_atrocious_state_of_binary_compatibility_on/",
+          "publishedOn": "2025-03-17T17:14:47.000Z",
+          "wordCount": null,
+          "title": "The atrocious state of binary compatibility on Linux",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1jdelf0/linux_a_modular_dream_until_you_try_customizing/",
+          "author": null,
+          "description": "I use a custom keyboard layout, as I'm a native Lithuanian speaker, who knows Romanian at around B1 level.\n On Windows, I made an elegant AutoHotkey script.\n On Linux, I made:\n  \nA version of my AutoHotkey script using a fan-made port of Windows AutoHotkey from 2005, however it was too buggy and from my use, I decided that it works as a proof-of-concept rather than a reliable end-product. Oh, also it works only on bare metal and not on a VM for some reason.\n Two .XCompose files that can't be switched besides restarting session (WTF?) or input method like IBus\n When it comes to IBus, IBus interprets .XCompose files differently, like so I don't have exactly functionality. I implemented a script that kills IBus process, copies over .XCompose_lt and .XCompose_ro to .XCompose and restarts it, as such switching them between, but apparently it works only on Xubuntu for some reason – it doesn't work on Fedora\n I tried making a Python script with keyboard library that was said to be cross-platform. I wrote the script on Windows, and then when I ran it on Linux, it didn't work.\n I ended up rewriting the Python script, that used xdotool instead of keyboard.write and .Xmodmap + .XCompose instead of keyboard.hook for reassigning keys and for keyboard.hook(on_key_event, suppress=True) equivalent respectively. It ended up conflicting with .XCompose – some key presses were being lost.\n I don't use Wayland, but solutions for Wayland are virtually impossible without low-level development; I don't think after all that my AutoHotkey script can be implemented without any low-level programming to work at all.\n  \nYou can see the project for what it is here:\n https://github.com/Tomurisk/Euromak\n TL;DR – Linux has modular design, sure, but when it comes to more-specific tweaks on the GUI userland, the ship sinks right there. While I appreciate Linux for what it is, I'll need to appreciate the project from sidelines while using Windows. And that's a shame.\n    submitted by    /u/Tomurisk  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1jdelf0/linux_a_modular_dream_until_you_try_customizing/",
+          "publishedOn": "2025-03-17T14:56:48.000Z",
+          "wordCount": null,
+          "title": "Linux: A modular dream until you try customizing keyboard layouts",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1jde454/akira_ransomware_encryption_cracked_using_cloud/",
+          "author": null,
+          "description": "submitted by    /u/goki7  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1jde454/akira_ransomware_encryption_cracked_using_cloud/",
+          "publishedOn": "2025-03-17T14:35:50.000Z",
+          "wordCount": null,
+          "title": "Akira Ransomware Encryption Cracked Using Cloud GPU Power",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1jdd4ak/bcachefs_racing_to_track_down_new_upgrade_bug_in/",
+          "author": null,
+          "description": "submitted by    /u/ehempel  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1jdd4ak/bcachefs_racing_to_track_down_new_upgrade_bug_in/",
+          "publishedOn": "2025-03-17T13:51:40.000Z",
+          "wordCount": null,
+          "title": "Bcachefs Racing To Track Down New Upgrade Bug In Linux 6.14",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1jd6oso/gimp_30_is_released_on_flathub/",
+          "author": null,
+          "description": "submitted by    /u/Petrol_Street_0  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1jd6oso/gimp_30_is_released_on_flathub/",
+          "publishedOn": "2025-03-17T06:56:51.000Z",
+          "wordCount": null,
+          "title": "GIMP 3.0 is released on Flathub",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1jd5d0k/virtual_machine_as_a_core_android_primitive_by/",
+          "author": null,
+          "description": "submitted by    /u/throwaway16830261  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1jd5d0k/virtual_machine_as_a_core_android_primitive_by/",
+          "publishedOn": "2025-03-17T05:20:19.000Z",
+          "wordCount": null,
+          "title": "\"Virtual Machine as a core Android Primitive\" by Sandeep Patil and Irene Ang (December 5, 2023)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1jd0lb2/o1_aegis_beta_seeking_feedback_from_linux/",
+          "author": null,
+          "description": "TLDR: O1 Aegis Beta – AI-Powered Security for Linux (MIT License) AI-assisted security tool for system integrity verification, threat detection, and logging. Passive AI learning, no automation or self-healing in this beta. Seeking feedback from Linux professionals on effectiveness and usability. GitHub: https://github.com/Pax-AI-ops/O1-Aegis \n I’ve been developing O1 Aegis, an AI-driven security platform for Linux, and I’m looking for honest feedback from experienced users. This is a beta release meant for testing and improvement, not a full product launch.\n I want to know what works, what doesn’t, and how it could be improved for real Linux users.\n What is O1 Aegis?\n O1 Aegis is an AI-assisted security tool designed to monitor, log, and analyze system integrity while providing basic threa…",
+          "link": "https://www.reddit.com/r/linux/comments/1jd0lb2/o1_aegis_beta_seeking_feedback_from_linux/",
+          "publishedOn": "2025-03-17T00:51:41.000Z",
+          "wordCount": null,
+          "title": "O1 Aegis Beta – Seeking Feedback from Linux & Security Professionals",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/linux/comments/1jcti6c/o1_aegis_beta_aipowered_security_for_linux/",
           "author": null,
@@ -9157,146 +9237,6 @@
           "wordCount": null,
           "title": "I created a CLI trash command",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/1iqlqy0/the_effectiveness_of_irqbalance/",
-          "author": null,
-          "description": "During the years I've tried many times irqbalance: is recommended as improvement by various distros.\n But honestly I didn't noticed any improvement with irqbalance, but also nor neagative effects. I also modified the config file /etc/irqbalance.env, by editing the line IRQBALANCE_ARGS= in various modalities.\n By various research, I've read that is mostly recommended for servers.\n What I've done instead, has been to add the kernel parameter acpi_irq_balance in grub, taken from here:\n https://docs.kernel.org/admin-guide/kernel-parameters.html\n So: what do you think about irq balancing, done by irqbalance or done by the kernel itself?\n    submitted by    /u/D_Dave  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/1iqlqy0/the_effectiveness_of_irqbalance/",
-          "publishedOn": "2025-02-16T06:03:09.000Z",
-          "wordCount": null,
-          "title": "The effectiveness of irqbalance",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/1iqhdwo/here_is_a_tip_for_easier_installation_of_linux/",
-          "author": null,
-          "description": "I was checking out this post here on this subreddit: https://www.reddit.com/r/linux/comments/1ipyc1o/linux_in_any_distribution_is_unobtainable_for/\n There is talk about how creating the boot media is beyond many new users and people were talking about creating boot flash drives and downloading tools to do it etc. I've found that this stuff is not even necessary.\n In the past I would just burn a dvd because I didn't want to bother using some 3rd party boot drive creator from who knows who. Well several versions ago of Linux Mint, I decided to just try something different instead of doing the dvd and not using a boot drive creator, I found something that worked even easier.\n Basically the steps are this:\n Download the Linux ISO image. (I always verify it but some don't bother)\n Format your u…",
-          "link": "https://www.reddit.com/r/linux/comments/1iqhdwo/here_is_a_tip_for_easier_installation_of_linux/",
-          "publishedOn": "2025-02-16T01:50:34.000Z",
-          "wordCount": null,
-          "title": "Here is a tip for easier installation of Linux that people don't seem to know about.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/1iqfveo/is_it_normal_for_clamav_to_false_flag_wine/",
-          "author": null,
-          "description": "I setup clamav just some hour ago using the arch wiki and have also gotten false positives in carla, xterm and uxterm. All these false positives are from the background scanner, or whatever it is called.\n Here you have my manual scan. I also reinstalled wine, oh and it flagged wine/mtree as containing credit card numbers...\n [user@system ~]$ clamscan /usr/lib/wine/x86_64-windows/kernel32.dll Loading: 16s, ETA: 0s [========================>] 8.70M/8.70M sigs Compiling: 3s, ETA: 0s [========================>] 41/41 tasks /usr/lib/wine/x86_64-windows/kernel32.dll: OK ----------- SCAN SUMMARY ----------- Known viruses: 8704732 Engine version: 1.4.2 Scanned directories: 0 Scanned files: 1 Infected files: 0 Data scanned: 2.46 MB Data read: 2.32 MB (ratio 1.06:1) Time: 22.854 sec (0 m 22 s) Start Date: 2025:02:16 01:16:50 End Date: 2025:02:16 01:17:13 [user@system ~]$ clamscan /usr/lib32/wine/i386-windows/kernel32.dll Loading: 15s, ETA: 0s [========================>] 8.70M/8.70M sigs Compiling: 3s, ETA: 0s [========================>] 41/41 tasks /usr/lib32/wine/i386-windows/kernel32.dll: OK ----------- SCAN SUMMARY ----------- Known viruses: 8704732 Engine version: 1.4.2 Scanned directories: 0 Scanned files: 1 Infected files: 0 Data scanned: 2.05 MB Data read: 1.93 MB (ratio 1.06:1) Time: 22.764 sec (0 m 22 s) Start Date: 2025:02:16 01:23:21 End Date: 2025:02:16 01:23:44 [user@system ~]$ pacman -Qkk wine wine: 4177 total files, 0 altered files [user@system ~]$ \n Edit: Here you have the messages clamav keeps spamming:\n Virus found! Signature detected by clamav: PUA.Win.Packer.Embedpe-3 in /usr/lib/wine/x86_64-windows/kernel32.dll Virus found! Signature detected by clamav: PUA.Win.Packer.Embedpe-3 in /usr/lib32/wine/i386-windows/kernel32.dll \n Edit2: Here you have what I mentioned about the credit card number:\n Virus found! Signature detected by clamav: Heuristics.Structured.CreditCardNumber in /var/lib/pacman/local/wine-10.1-1/mtree \n    submitted by    /u/OutrageousFarm9757  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/1iqfveo/is_it_normal_for_clamav_to_false_flag_wine/",
-          "publishedOn": "2025-02-16T00:31:35.000Z",
-          "wordCount": null,
-          "title": "Is it normal for clamav to false flag wine kernel32.dll?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/1iqe3ma/new_arabic_playlist_your_linux_journey_from_zero/",
-          "author": null,
-          "description": "Hey everyone! 👋\n I’m excited to share my new YouTube playlist: \"Your Linux Journey: From Zero to Hero [Arabic]\"! Whether you’re a beginner or an experienced developer, this series will teach you everything you need to know about Linux, from the basics to installation and customization.\n What’s on the Playlist?\n ✅ What is Linux? - An introduction to the operating system and its features.\n ✅ Why Linux is Essential for Developers - Benefits of Linux in programming and development.\n ✅ Linux Distributions - A comparison of Ubuntu and Fedora to help you choose the right one.\n ✅ Before Installing Linux - Tips to prepare your system and keep your data safe.\n ✅ Installing Ubuntu and Fedora - Step-by-step installation guides.\n ✅ After Installation - How to customize your system and install essential software.\n Do you know who this is for?\n  \nBeginners who want to learn Linux from scratch.\n Developers looking to improve their skills with Linux.\n Is anyone interested in switching to a powerful, open-source operating system?\n  \nWhy Linux?\n Linux is the go-to operating system for developers and tech professionals worldwide. Whether you’re working on software development, server management, or learning to code, Linux will help you achieve your goals more efficiently.\n Check out the playlist here: https://youtube.com/playlist?list=PL-aLh5gc6xE0mT8uniNNAgug9FU5vcppD&si=3yserhG33HUeRMvQ\n About Me:\n I’m a software engineer passionate about teaching and sharing knowledge. My goal is to make Linux and programming accessible to Arabic-speaking audiences.\n Let me know in the comments:\n  \nWhat topics would you like me to cover in future videos?\n Are there any specific Linux distros or tools you’d like me to explore?\n  \nConnect with Me:\n  \nPortfolio: https://mos3ab.tech/\n GitHub: https://github.com/Mos3aB696\n LinkedIn: https://www.linkedin.com/in/mosaab-abdelkawy/\n  \n#Linux #بالعربي #تعلم_Linux #Ubuntu #Fedora #برمجة #تطوير_البرمجيات \n    submitted by    /u/Mos3aB696  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/1iqe3ma/new_arabic_playlist_your_linux_journey_from_zero/",
-          "publishedOn": "2025-02-15T23:06:46.000Z",
-          "wordCount": null,
-          "title": "New Arabic Playlist: Your Linux Journey: From Zero to Hero [Arabic]",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/1iqaxku/creating_my_os/",
-          "author": null,
-          "description": "Now, I know it sounds absurd, but I just want to understand the general workflow of how do you design a linux, or a unix-based OS.\n I have a fair knowledge of computer architecture and can understand low level language of the computer.\n I am just an enthusiast who wants to just make a functional os, with just a terminal that is able to execute things.\n Any advice is greatly appreciated!\n    submitted by    /u/zainali28  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/1iqaxku/creating_my_os/",
-          "publishedOn": "2025-02-15T20:46:12.000Z",
-          "wordCount": null,
-          "title": "Creating my OS",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/1iqajfh/i_tried_to_rank_linux_distros_by_popularity_linux/",
-          "author": null,
-          "description": "The spreadsheet. Apparently Linux Mint is the most popular. That kinda tracks?\n Some notes:\n  \nSelecting the 25 distros was hard and will always lead to some being left out\n I left out immutable distros cause i just suck like that\n \"# of Wikipedia Articles\" means how many languages the article for the distro is available in\n The combined value was calculated with the performance against the average, and added for all 4 categories\n The website backlink number was fetched with https://openlinkprofiler.org/ using the official distro website\n I tried to find categories with centralized data available, so number of iso downloads etc... doesnt work sadly\n Distrowatch alone obviously cannot tell the whole story\n  \nI think most of the ranking works pretty well, what are your thoughts?\n Edit: Ive listened: Here is an updates spreadsheet using the median value and putting a 0.5 weight on distrowatch.com!\n imgur\n    submitted by    /u/lassenym  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/1iqajfh/i_tried_to_rank_linux_distros_by_popularity_linux/",
-          "publishedOn": "2025-02-15T20:28:55.000Z",
-          "wordCount": null,
-          "title": "I Tried to Rank Linux Distros by Popularity. Linux Mint won!",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/1iqa197/found_a_linux_terminal_that_runs_in_a_pdf/",
-          "author": null,
-          "description": "This is not made by me but I found it. \n Linux in a PDF file. \n    submitted by    /u/Potential_Compote675  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/1iqa197/found_a_linux_terminal_that_runs_in_a_pdf/",
-          "publishedOn": "2025-02-15T20:07:20.000Z",
-          "wordCount": null,
-          "title": "Found a Linux Terminal that runs in a PDF",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/1iq5v75/my_experience_with_tails_os_vs_puppy_rant/",
-          "author": null,
-          "description": "Recently I began to be security concious for some reason and I decided to create a USB thumb drive with TailsOs in it. From what I read Tails is ran entirely in the RAM, but I now believe there are some nuances to it.\n Firstly, the apps may be running in only RAM and never written to the disk, but the os is not fully loaded into the RAM like how puppy linux does and so, if you unplug the USB after boot, tails will crash with error stating failed to read from the squashfile and puppy doesn't do this. This alone doesn't sit right with me. My next issue with tails is how it decided to not operate from a single partition on a USB, rather they made it such a way that you have to write it to the whole USB disk to make it work. Instead of having a standard ISO file with CDROM type, tails is an im…",
-          "link": "https://www.reddit.com/r/linux/comments/1iq5v75/my_experience_with_tails_os_vs_puppy_rant/",
-          "publishedOn": "2025-02-15T17:04:50.000Z",
-          "wordCount": null,
-          "title": "My experience with Tails os vs Puppy (rant)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/1iq5p1p/til_there_is_a_minorplanet_called_linux/",
-          "author": null,
-          "description": "submitted by    /u/forvirringssirkel  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/1iq5p1p/til_there_is_a_minorplanet_called_linux/",
-          "publishedOn": "2025-02-15T16:57:50.000Z",
-          "wordCount": null,
-          "title": "TIL There is a minor-planet called Linux",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/1iq16im/richard_stallman_on_riscv_and_free_hardware/",
-          "author": null,
-          "description": "submitted by    /u/ShockleyTransistor  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/1iq16im/richard_stallman_on_riscv_and_free_hardware/",
-          "publishedOn": "2025-02-15T13:20:02.000Z",
-          "wordCount": null,
-          "title": "Richard Stallman on RISC-V and Free Hardware",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/1iq0py4/hello_is_there_a_brotherhood_of_linuxeros/",
-          "author": null,
-          "description": "submitted by    /u/jode124  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/1iq0py4/hello_is_there_a_brotherhood_of_linuxeros/",
-          "publishedOn": "2025-02-15T12:53:33.000Z",
-          "wordCount": null,
-          "title": "hello, is there a brotherhood of linuxeros?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/1iq09g6/karol_herbst_steps_down_as_nouveau_maintainer_due/",
-          "author": null,
-          "description": "From https://lists.freedesktop.org/archives/nouveau/2025-February/046677.html\n  \n\"I was pondering with myself for a while if I should just make it official that I'm not really involved in the kernel community anymore, neither as a reviewer, nor as a maintainer.\n Most of the time I simply excused myself with \"if something urgent comes up, I can chime in and help out\". Lyude and Danilo are doing a wonderful job and I've put all my trust into them.\n However, there is one thing I can't stand and it's hurting me the most. I'm convinced, no, my core believe is, that inclusivity and respect, working with others as equals, no power plays involved, is how we should work together within the Free and Open Source community.\n I can understand maintainers needing to learn, being concerned on technical p…",
-          "link": "https://www.reddit.com/r/linux/comments/1iq09g6/karol_herbst_steps_down_as_nouveau_maintainer_due/",
-          "publishedOn": "2025-02-15T12:24:10.000Z",
-          "wordCount": null,
-          "title": "Karol Herbst steps down as Nouveau maintainer due to “thin blue line comment”",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/1ipz4wy/richard_stallman_in_polytechnic_university_of/",
-          "author": null,
-          "description": "submitted by    /u/ShockleyTransistor  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/1ipz4wy/richard_stallman_in_polytechnic_university_of/",
-          "publishedOn": "2025-02-15T11:05:38.000Z",
-          "wordCount": null,
-          "title": "Richard Stallman in Polytechnic University of Turin, Italy",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/1ipyrkr/is_there_a_gtk_3_fork/",
-          "author": null,
-          "description": "I feel GNOME has been pretty hostile to classic app developers.\n  \nThey're way too obsessed with Fedora and Flatpak and bleeding-edge tech. GNOME Software may remove RPM, and the X11 backend is deprecated already. I feel GNOME distros are turning into an Android.\n You can't make generic apps anymore, they want you to use a \"platform library\" - so only GNOME or elementary.\n No other desktop is migrating to GTK 4.\n Glade was discontinued.\n GTK 4 lacks menus and toolbars. Menus were good as they were declarative, how am I now supposed to make a menu, using the crippled popovers?\n Qt looks uglier and is harder to make a layout for.\n  \nBasically, I think their developers think only GNOME and KDE exist and have a \"my way or the highway\" vision which they call \"simple by default\" or something but a default doesn't mean forced.\n    submitted by    /u/Gugalcrom123  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/linux/comments/1ipyrkr/is_there_a_gtk_3_fork/",
-          "publishedOn": "2025-02-15T10:38:23.000Z",
-          "wordCount": null,
-          "title": "Is there a GTK 3 fork?",
-          "imageUrl": null
         }
       ]
     },
@@ -9305,6 +9245,76 @@
       "feedUrl": "https://www.reddit.com/r/Android/top.rss?sort=top&t=day",
       "siteUrl": "https://www.reddit.com/r/Android/top?sort=top&t=day",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/Android/comments/1jdonzc/reactive_haptics_googler_blog_post_on_the_new/",
+          "author": null,
+          "description": "submitted by    /u/MishaalRahman  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/Android/comments/1jdonzc/reactive_haptics_googler_blog_post_on_the_new/",
+          "publishedOn": "2025-03-17T21:40:51.000Z",
+          "wordCount": null,
+          "title": "Reactive Haptics (Googler blog post on the new Quick Settings tile expansion animation)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/Android/comments/1jdcdcn/android_could_soon_summarize_your_notifications/",
+          "author": null,
+          "description": "submitted by    /u/MishaalRahman  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/Android/comments/1jdcdcn/android_could_soon_summarize_your_notifications/",
+          "publishedOn": "2025-03-17T13:15:55.000Z",
+          "wordCount": null,
+          "title": "Android could soon summarize your notifications for you, similar to iOS",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/Android/comments/1jdccoz/microsoft_just_integrated_android_into_windows/",
+          "author": null,
+          "description": "submitted by    /u/MishaalRahman  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/Android/comments/1jdccoz/microsoft_just_integrated_android_into_windows/",
+          "publishedOn": "2025-03-17T13:15:02.000Z",
+          "wordCount": null,
+          "title": "Microsoft just integrated Android into Windows 11's new Copilot AI app, now rolling out",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/Android/comments/1jdcc5s/google_assistant_losing_7_more_features_across/",
+          "author": null,
+          "description": "submitted by    /u/MishaalRahman  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/Android/comments/1jdcc5s/google_assistant_losing_7_more_features_across/",
+          "publishedOn": "2025-03-17T13:14:18.000Z",
+          "wordCount": null,
+          "title": "Google Assistant losing 7 more features across Android, Nest Hub/speakers",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/Android/comments/1jdcbel/next_generation_snapdragon_g_series_portfolio/",
+          "author": null,
+          "description": "submitted by    /u/MishaalRahman  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/Android/comments/1jdcbel/next_generation_snapdragon_g_series_portfolio/",
+          "publishedOn": "2025-03-17T13:13:15.000Z",
+          "wordCount": null,
+          "title": "Next Generation Snapdragon G Series Portfolio Uplevels Handheld Gaming Experiences | Qualcomm",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/Android/comments/1jd9s3m/i_built_an_app_to_bring_apple_intelligence/",
+          "author": null,
+          "description": "I’m the dev behind AInput - AI Writing Tools for Android, and I’m stoked to share what I’ve been pouring my heart into. Imagine Apple Intelligence Writing Tools—those fancy AI features Apple rolled out in October 2024—but now picture them on Android, launched a month earlier in September 2024, and cranked up to be even more powerful. That’s AInput in a nutshell!\n I built AInput to solve a problem we’ve all faced: staring at a blank text field, struggling to find the right words. Whether it’s a snappy comeback on Twitter, a flirty message on Tinder, or a polished email for work, AInput’s got your back. AInput can understand your on-screen chat context and/or the text you typed in your input field. Here’s what it brings to the table:\n  \nAI Reply: Instant, creative suggestions in over 10 styl…",
+          "link": "https://www.reddit.com/r/Android/comments/1jd9s3m/i_built_an_app_to_bring_apple_intelligence/",
+          "publishedOn": "2025-03-17T10:50:15.000Z",
+          "wordCount": null,
+          "title": "I built an App to bring Apple Intelligence Writing Tools feature to all of Android!",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/Android/comments/1jd6v5k/stay_put_a_simple_app_that_arms_your_phone_with/",
+          "author": null,
+          "description": "submitted by    /u/Sysiphus_Love  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/Android/comments/1jd6v5k/stay_put_a_simple_app_that_arms_your_phone_with/",
+          "publishedOn": "2025-03-17T07:09:52.000Z",
+          "wordCount": null,
+          "title": "Stay Put - a simple app that arms your phone with an alarm for public charging",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/Android/comments/1jcv5ie/exclusive_google_pixel_9a_unboxing_with_benchmark/",
           "author": null,
@@ -11404,46 +11414,6 @@
           "wordCount": null,
           "title": "S25 Ultra vs OnePlus 13 - Samsung has no Excuse! (Heavy Workload Test)",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1iqgfih/mediatek_releases_dimensity_6400_its_just_the/",
-          "author": null,
-          "description": "submitted by    /u/xzibit_b  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1iqgfih/mediatek_releases_dimensity_6400_its_just_the/",
-          "publishedOn": "2025-02-16T01:00:00.000Z",
-          "wordCount": null,
-          "title": "Mediatek releases Dimensity 6400 - It's just the Dimensity 6300 with a 0.1 GHz overclock from 2.4 GHz to 2.5 GHz on the Cortex A76 cores",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1iq5qvp/the_best_nintendo_ds_emulator_on_android_drastic/",
-          "author": null,
-          "description": "submitted by    /u/MishaalRahman  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1iq5qvp/the_best_nintendo_ds_emulator_on_android_drastic/",
-          "publishedOn": "2025-02-15T17:00:04.000Z",
-          "wordCount": null,
-          "title": "The best Nintendo DS emulator on Android (DraStic) has been pulled from the Play Store",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1iq5jb8/google_deactivates_androids_earthquake_alerts/",
-          "author": null,
-          "description": "submitted by    /u/MishaalRahman  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1iq5jb8/google_deactivates_androids_earthquake_alerts/",
-          "publishedOn": "2025-02-15T16:50:41.000Z",
-          "wordCount": null,
-          "title": "Google deactivates Android's earthquake alerts after false alarm in Brazil",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1iq4rjz/xiaomi_redmi_note_14_4g_review/",
-          "author": null,
-          "description": "submitted by    /u/UnionSlavStanRepublk  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1iq4rjz/xiaomi_redmi_note_14_4g_review/",
-          "publishedOn": "2025-02-15T16:15:24.000Z",
-          "wordCount": null,
-          "title": "Xiaomi Redmi Note 14 4G review",
-          "imageUrl": null
         }
       ]
     },
@@ -11452,6 +11422,506 @@
       "feedUrl": "https://v2ex.com/index.xml",
       "siteUrl": "https://www.v2ex.com/",
       "articles": [
+        {
+          "id": "https://www.v2ex.com/t/1119189#reply6",
+          "author": null,
+          "description": "楼主家庭情况：\n\n\n家里基本上不能给我任何帮助，只能靠自己。所以很纠结到底要去上海继续闯一闯，挣点快钱短期内也能改善家庭，还是图安稳直接回老家。 \n去上海的好处显而易见，钱多、机会大、生活丰富。我很享受赚钱的感觉，自己大学靠着家教和炒股攒了将近 3 万块。不过也不知道大厂这个钱能挣几年，自己能熬得住加几年的班。\n但是一提到照顾父母，我更纠结了。目前父母都没有养老金，以后肯定也是靠我来养老，很担心公务员的收入扛得住未来的支出。虽然父母说了以后老了回农村住，养养鸡鸭种种菜，不花啥钱。但是他们以后的医疗支出肯定也是少不了的。  \n就我本人而言，我性格相对外向，比较会来事，口才比较好（不是自夸，身边的人都这么说），感觉可能在体制内会混得开，但没天线也真不好往上爬。而且回了家估计找对象是个大问题，虽然自己之前谈过几次恋爱，但是都是在校园里，现在出了社会，家庭条件太差，公务员又是个寒酸工作，自己兜里掏不出几个子，有几个女孩子会看得上。\n如果先去大厂挣几年钱，然后等 35 岁前回来，再考公务员，是否是个更好的选择？（我应试水平相对比较强，现在国考能考 135+，但是也不知道年纪上来之后还能不能考得上）\n纠结了将近一个月了，也没想出个所以然来，感觉自己赌输不起，只能尽量考虑周全，然后做个最佳选择（虽然我晓得怎么选都会后悔），所以发了这个帖子，希望听听大家的建议（求轻骂）",
+          "link": "https://www.v2ex.com/t/1119189#reply6",
+          "publishedOn": "2025-03-17T18:45:42.000Z",
+          "wordCount": 459,
+          "title": "[职场话题] 求指点迷津：老家年到手十万公务员 vs 大厂年包 30w",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119188#reply1",
+          "author": null,
+          "description": "tldr;\n职位\n私有云工程师\n要求\n. 5+年私有云 虚拟化相关经验\n. 熟悉(是真的熟悉） vmware(esxi,vsphere,vmotion,vcenter,vcf,vsan,nsx)\n. 熟悉 bash python 大量自动化\n. 带团队负责整个银行的私有云部署\n. 收入可观（是真的可观） \n. 英语工作语言 直线老板英国人\n福利\n. 薪资 dm 详谈\n. 20 天带薪年假\n. 远程工作 人在广州 弹性时间\n联系\n电报：@elaijuh",
+          "link": "https://www.v2ex.com/t/1119188#reply1",
+          "publishedOn": "2025-03-17T17:49:48.000Z",
+          "wordCount": 393,
+          "title": "[酷工作] [广州][外资银行]私有云工程师",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119187#reply1",
+          "author": null,
+          "description": "前几天找免费的 pr 软件，下到一个 setup.exe 的文件当时看文件结构有什么 liscense 什么的也就没在意。但是发现运行了两遍都没有反应，本身也不是很熟悉 win11 系统就没太当回事。第二天早上被邮件轰炸起来，ins reddit steam 等游戏账号都被改密码改邮箱了。奇怪的是都没有异地登录的邮箱提示。\n唉 真是防不胜防，前几年看 linus 和电玩 ak 的视频还以为这种事离我挺远的，都是针对 youtuber 的。现在没想到真的发生在自己身上了。不过总的来说没有什么损失，大部分账号都找回来了，就是挺费时间的。",
+          "link": "https://www.v2ex.com/t/1119187#reply1",
+          "publishedOn": "2025-03-17T17:37:47.000Z",
+          "wordCount": 369,
+          "title": "[分享发现] 下到木马了，给我浏览器 cookie 全部偷走了",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119186#reply0",
+          "author": null,
+          "description": "由于在本节点某热帖中发现有很多法盲缺乏最起码的交通事故处理经验和法律常识，特发几个贴强调一下。",
+          "link": "https://www.v2ex.com/t/1119186#reply0",
+          "publishedOn": "2025-03-17T16:42:18.000Z",
+          "wordCount": 346,
+          "title": "[生活] 给 V 友普法 重点强调 1: 交通事故中，事故责任划分比例不等于事故损失赔偿比例",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119185#reply1",
+          "author": null,
+          "description": "发出来给大家玩玩\nhttps://devinterview.org/\n项目使用 Next.js + Tailwind CSS + shadcn/ui 构建。\n使用 V0 做的页面原型，然后就是 Cursor 一路 Tab 出来的，但是也没有说“三小时内我做了 xxx”那么夸张。\n不过大家可以点一点右上角的 pr 按钮，多丰富一下八股文题库，AI 生成的题目还是有点脱离实际了。\n有任何建议或想法欢迎讨论！\n主要特点:\n🍎 完全遵循 Apple 设计风格的精美 UI\n🤖 使用 GPT-4o 生成高质量的编码题和技术问题\n⚙️ 内置 Monaco 编辑器(同 VS Code 一样的体验)\n📊 AI 评分反馈，分析代码正确性、效率和可读性\n🎯 智能学习系统，追踪弱点并优先安排你需要加强的问题类型\n🌐 支持中英双语\n如果你正在准备面试，或者只是想保持技术敏锐度，欢迎尝试并提供反馈。\n项目地址: https://github.com/peanut996/random-interview-platform",
+          "link": "https://www.v2ex.com/t/1119185#reply1",
+          "publishedOn": "2025-03-17T16:31:23.000Z",
+          "wordCount": 429,
+          "title": "[程序员] 用 AI 写了一个随机八股文生成器",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119184#reply1",
+          "author": null,
+          "description": "一款适用于群晖 Download Station 客户端的 iOS/macOS App ，现代、原生、凭直觉再设计\n刚公开测试没多久，轻点骂 🙏\nTestFlight 链接，请移步官网获取 👉 https://swads.app\n应用平台\niOS\nmacOS\n主要功能\n现代应用，完全使用 Swift 编程语言构建\n改进的 QuickConnect 策略带来真正神奇的体验\n轻松切换或编辑多个实例，无论是 QuickConnect 还是主机地址\n随时查看任务状态，包括活动、Trackers 、Peers 、文件、预览、可选项目\n一站式管理 Download Station 所有设置选项\nSynology NAS 概览\nQuickConnect 数据中心\n用户配额\n推送通知（规划中）\niCloud 同步\n切换外观\n个性化应用图标",
+          "link": "https://www.v2ex.com/t/1119184#reply1",
+          "publishedOn": "2025-03-17T16:12:52.000Z",
+          "wordCount": 424,
+          "title": "[分享创造] [TestFlight] Swads - 群晖 Download Station 客户端",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119183#reply2",
+          "author": null,
+          "description": "97 年出生，大专学历，目前在深圳从事电商运营工作，身高 158 ，体重 45kg ，年收入 13w ，江西农村家庭，有一弟弟，但不是扶弟魔，家庭氛围和谐。希望找一个江西省内的或者江西人在深圳附近工作的，性格阳光一点，非话痨，身高 175 左右，不要太胖，年薪 15-20 万，大专及以上学历，年龄 26-31 岁之间，家庭氛围良好的男性。特别说明一下，彩礼不高于 18 ，且除了办酒席钱基本全部返还给小家庭。附上照片 https://imgur.com/a/1IqWBQ3 ，如有意可加联系方式，加好友的时候麻烦做一下详细的自我介绍。联系方式 wx(base64):eWFsajc3",
+          "link": "https://www.v2ex.com/t/1119183#reply2",
+          "publishedOn": "2025-03-17T16:06:34.000Z",
+          "wordCount": 380,
+          "title": "[生活] 借 V 站替姐姐相亲一下，走过路过别错过。",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119182#reply6",
+          "author": null,
+          "description": "如题，😢",
+          "link": "https://www.v2ex.com/t/1119182#reply6",
+          "publishedOn": "2025-03-17T15:54:39.000Z",
+          "wordCount": 404,
+          "title": "[职场话题] 人就必须一直工作吗？因为两年前的空窗期反手被拒了",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119181#reply2",
+          "author": null,
+          "description": "y 高刷是用來打遊戲的\n給 macbook 用肯定要有 usb c 一線通\n希望有 usba 或者 c 口 但不要 usb b(upstream)的那種\n有了解 2725qe ,但想問問還有其他推薦嗎\n就是想連 macbook 時能在顯示器那接個外接硬盤這樣每次就能自動備份時光機了",
+          "link": "https://www.v2ex.com/t/1119181#reply2",
+          "publishedOn": "2025-03-17T15:51:21.000Z",
+          "wordCount": 407,
+          "title": "[买买买] 各位帥哥 想找一款 4k 高刷， usb hub 顯示器 有推薦嗎",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119180#reply0",
+          "author": null,
+          "description": "低配版，512G ，本来以为够了，高估了，太难受了。想扩容，貌似风险不高，但想找个靠谱的店铺，求推荐",
+          "link": "https://www.v2ex.com/t/1119180#reply0",
+          "publishedOn": "2025-03-17T15:50:43.000Z",
+          "wordCount": 368,
+          "title": "[程序员] macbook 扩容硬盘，如何找靠谱的店铺",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119179#reply1",
+          "author": null,
+          "description": "人才画像\n对 Kubernetes/DevOps/Infra 有经验，希望走向 TL 岗\n公司介绍\n我们是一家来自杭州的泛工业领域 AI SaaS 初创企业。去年完成 A 轮融资，今年 B 轮正在进行中，预计估值 3 亿+。我们有丰富的行业积累，强大的研发实力（目前研发团队博士率 60 ％，主要来自浙大、阿里云）。\n目前业务增长迅猛，我们正在组建 infra 团队，负责建设以 Kubernetes 为基础的研发和交付底座。如果你有 Kubernetes/DevOps/Infra 经验，且希望走向 TL 岗，欢迎与我联系\n有意投递或希望详聊请加 wechat：dGVybmFyaW8=  （备注：v2ex infra 岗位）\n岗位描述\n负责箴理科技技术底座建设，实现基于 Kubernetes 的技术基础设施\n使用云原生架构，定义和实现 AI 时代的平台工程（ Platform Engineering ）\n建立技术梯队，培养务实/高效的团队技术氛围\n以高度的产品视角与客户视角，协同上下游各个角色，完成高质量的 ToB 产品能力交付\n岗位要求\n统招本科及以上学历，3 年及以上工作经验，计算机基础扎实，工程经验丰富\n精通至少一门后端编程语言（ Golang/Python/Java/NodeJS 等），具有丰富的大型 Web 系统架构与研发经验\n了解分布式系统设计与实现，熟练掌握常见中间件的原理与应用\n有较深入的容器化开发经验，有 Kubernetes 使用经验，熟悉云原生技术生态\n有客户视角和 Owner 意识，对技术有热情，有好奇心\n满足以下任意一项可加分：\n具有前后端全栈研发能力或经验\n熟悉 Golang 与 Kubernetes Operator 开发\n有 Infra 层/MLOps 基建经验，熟悉 CICD 系统的设计与实现\n有机器学习模型推理与部署经验\n有一定的项目管理与团队管理经验\n了解 AI 应用层技术动态与趋势，如：LLMOps/MCP/Multi － Agent/RAG\n在 ToB/SaaS 领域有过较深入的产品研发经验",
+          "link": "https://www.v2ex.com/t/1119179#reply1",
+          "publishedOn": "2025-03-17T15:35:43.000Z",
+          "wordCount": 479,
+          "title": "[酷工作] [杭州] 总包 50-60w / 基础平台工程师 / 2-6 年经验 / Kubernetes DevOps / 直招",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119178#reply6",
+          "author": null,
+          "description": "目前在计划做一个 SaaS 或者 BaaS 的 AI 服务，但是感觉跟 coze 重复性比较高，调研一下你们比较心仪的功能有哪些？\n举例：\nChatGPT 个性化相关的偏好、记忆力？\n更多元的知识库方案？（比如语雀、飞书、Notion 、Confluence ）\n开箱即用？或者提供定制化开发？",
+          "link": "https://www.v2ex.com/t/1119178#reply6",
+          "publishedOn": "2025-03-17T15:31:14.000Z",
+          "wordCount": 466,
+          "title": "[程序员] 你们愿意为什么程度的 AI 功能付费呢？",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119177#reply3",
+          "author": null,
+          "description": "代码提交到了本地仓库，使用 github desktop 的 add local repository 添加本地仓库，点击 pulish repository ，设置仓库名以及可见性都没问题，但推送代码发现无法点击，发现分支可以切换（但我本地只有一个分支），切换后推送上去了，此时再打开 vscode ，就发现本地仓库最近一周的提交记录都没了，github 上也没有，怎么找回呢？",
+          "link": "https://www.v2ex.com/t/1119177#reply3",
+          "publishedOn": "2025-03-17T15:29:30.000Z",
+          "wordCount": 1433,
+          "title": "[git] 推送远程仓库导致本地提交记录消失，如何找回",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119176#reply6",
+          "author": null,
+          "description": "经常听人说, iphone 的屏幕等组件, 有不同的供应商.\n我现在打算购入的商家说可以帮忙挑选钟意的组件厂家,比如屏幕可以选三星或者 LG\n但是呢, 我对这些不是很了解, 不知道有哪些组件是应该去挑选的, 以及应该选什么厂家\n希望有果粉可以指导一二\n然后顺便, 壳的话, 如果把新的那一个按键包起来, 使用上会不会不灵敏?\n官方店的贴膜服务, 有没有什么优惠的办法呢?",
+          "link": "https://www.v2ex.com/t/1119176#reply6",
+          "publishedOn": "2025-03-17T15:26:50.000Z",
+          "wordCount": 436,
+          "title": "[iPhone] iPhone 16 pro 各组件 应该选 哪个厂家?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119175#reply0",
+          "author": null,
+          "description": "问与答 - @shuiguomayi -",
+          "link": "https://www.v2ex.com/t/1119175#reply0",
+          "publishedOn": "2025-03-17T15:15:42.000Z",
+          "wordCount": 380,
+          "title": "[问与答] asus zenfone 9 android 14 无法设置勿扰模式的时长?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119174#reply2",
+          "author": null,
+          "description": "AI 创作\nYouTube 视频下载工具\n网址: https://www.maotools.org \n简介: 一个简单易用的工具，帮助用户快速下载 YouTube 视频，方便离线观看或存档。\n加密货币各种计算器\n网址: https://www.cryptotoolhub.com \n简介: 提供多种加密货币相关的计算功能，适合投资者和爱好者使用，助力分析和决策。\n创作心得\n从选域名到写代码，整个过程都在 AI 的辅助下完成。体验创作的乐趣挺好玩的，既能提升技能，又能享受成果带来的成就感！",
+          "link": "https://www.v2ex.com/t/1119174#reply2",
+          "publishedOn": "2025-03-17T15:13:56.000Z",
+          "wordCount": 404,
+          "title": "[分享创造] 分享一下最近我使用 AI 创作的 2 个网站。",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119172#reply1",
+          "author": null,
+          "description": "之前看不是很完善就没收藏起来.\n他还有类似于 vue 的双向数据绑定功能, 实在忘记是啥了",
+          "link": "https://www.v2ex.com/t/1119172#reply1",
+          "publishedOn": "2025-03-17T15:10:22.000Z",
+          "wordCount": 394,
+          "title": "[问与答] 记忆中好像在论坛看到有款专门在 iframe 中做前端的 js 库/框架?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119171#reply10",
+          "author": null,
+          "description": "我用两台机器，一台 5600X 一台 7950X 。\n5600X 那台装的是 Ubuntu 24.04 ，7950X 那台装的是 Windows 10 。\n两个系统都已经更新到最新补丁，已经尽可能清空后台程序，且内存存储非常富裕。\n对公司项目使用命令行工具构建出 release 版本的 APK 并且计时。\n结果测速发现 7950X 构建花了 7 分 8 秒，5600X 花了 5 分 12 秒。是的你没看错，测了三次都差不多这结果。\n更离谱的是 5600X 我甚至还把项目文件放在机械硬盘上的，没想到还是被碾压了。\n公司项目也没啥特别的：AGP 8.9 代码规模也就 6w 行左右 过八成 java+不足两成 kotlin ，没有 native 代码，就这个样子。\n构建任务：构建一个大的 app 模块的 3 个 variant （全 java ）和两个小的 app 模块（全 kotlin ），总共 5 个 APK 文件。这三个模块除了共享了定义数据协议结构的库以外基本独立。测试之前已经预先构建过，用于把依赖下载完整，所以不存在网络波动导致的时间差异。\n原本以为 7950X 的构建速度上理应碾压 5600X 的，就算系统不同，也不应该有这么大的差距。\n实在想不出为什么会有这样的结果。\n在 Windows 上我还特意用了Microsoft Build of OpenJDK 21的。",
+          "link": "https://www.v2ex.com/t/1119171#reply10",
+          "publishedOn": "2025-03-17T15:03:05.000Z",
+          "wordCount": 585,
+          "title": "[Android] 为什么在 Linux 下构建 APK 比用 Windows 快非常多",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119169#reply0",
+          "author": null,
+          "description": "5800 的 MBA 虽然挺香，但是 256g 还是捉襟见肘啊。\n看到 B 站有视频拆机换装 2T 硬盘的，估计等过保了会考虑一下吧",
+          "link": "https://www.v2ex.com/t/1119169#reply0",
+          "publishedOn": "2025-03-17T14:53:18.000Z",
+          "wordCount": 361,
+          "title": "[MacBook Air] 新入 MBA 丐版，有什么办法破除 256g 硬盘焦虑？",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119168#reply0",
+          "author": null,
+          "description": "坐标深圳宝安区，线下可以两个叠加，出一个教育优惠资格，一起线下提货。\n联系方式：Chicagoake",
+          "link": "https://www.v2ex.com/t/1119168#reply0",
+          "publishedOn": "2025-03-17T14:43:20.000Z",
+          "wordCount": 362,
+          "title": "[Apple] Mac mini / MacBook Air 教育优惠叠加国补",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119167#reply4",
+          "author": null,
+          "description": "用 magsafe 无线隔夜充，早上起来一看有时候就是 100%。\n完全看不出是什么规律。",
+          "link": "https://www.v2ex.com/t/1119167#reply4",
+          "publishedOn": "2025-03-17T14:31:50.000Z",
+          "wordCount": 406,
+          "title": "[Apple] iPhone 16 Pro，设置了充电上限 80%，有时候还是会充到 100%是怎么回事？",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119166#reply7",
+          "author": null,
+          "description": "简历： http://www.whereismytelecaster.fun/jianli\n本人情况：确实是自己的原因，现在春招时技术、项目、实习都没有。又因为挂过科，国企也进不了。学校内的招聘会和校招的推荐码都有细大不捐地线上线下地投，但基本都没有结果。最近也在招聘软件海投，只敢投小的，但大多数 0-20 和 20-99 的看完简历或者问完成绩都没有回复。这种情况除了做外包还有其他出路么……？求大佬指点",
+          "link": "https://www.v2ex.com/t/1119166#reply7",
+          "publishedOn": "2025-03-17T14:29:17.000Z",
+          "wordCount": 424,
+          "title": "[职场话题] Java 春招，求大佬指点迷津",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119165#reply0",
+          "author": null,
+          "description": "👋 各位好，给大家分享一个我开发的插件 - EditorJumper\n🔍 因为我经常要开发 python ，java ，前端等多技术栈的项目，我又超喜欢多体验不同的 AI IDE ，开发调试的时候需要在 AI IDE 和 JetBrains IDE 之间频繁切换，非常麻烦。\n希望在不同编辑器间能自由选择切换\n希望能保持编辑位置、一键直达目标文件\n之前看到有 v 友做了一个切换 Cursor 和 IDEA 的，但不支持多个 idea 自由切换。\n因此自己萌生了自己从头全部靠 Cursor 来开发一个属于自己插件，小试牛刀一下。\n✨ EditorJumper 就是为解决这些痛点而生：\n- 一键从 VS Code 类 IDE 跳转到 JetBrains IDE （支持 IDEA/WebStorm/PyCharm 等）\n- 完美保持光标位置和编辑上下文\n- 支持从文件浏览器或编辑器中右键快速跳转\n- 支持自定义快捷键\n- 配合 JetBrains 插件，实现双向无缝切换\n操作方式：\n快捷键：shift+alt/option +O\n编辑器里右击：选择 open in 对应的 ide\n🎬 效果演示：\n切换效果\n\nvscode 中\n\nidea 中\n\n🚀 安装简单：\n插件商店搜索\"EditorJumper\"即可\n📦 开源地址：\nhttps://github.com/wanniwa/EditorJumper\nhttps://github.com/wanniwa/EditorJumper-V\n欢迎各位试用反馈，如果觉得好用请给个 Star⭐️",
+          "link": "https://www.v2ex.com/t/1119165#reply0",
+          "publishedOn": "2025-03-17T14:26:14.000Z",
+          "wordCount": 422,
+          "title": "[分享创造] EditorJumper: 让 Cursor、VS Code、trae、Windsurf 和 JetBrains IDE 切换如丝般顺滑",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119163#reply3",
+          "author": null,
+          "description": "今天看到 gitlab 的通知，开始不对中国大陆服务了，要删号了，兄弟们注意了。",
+          "link": "https://www.v2ex.com/t/1119163#reply3",
+          "publishedOn": "2025-03-17T14:20:01.000Z",
+          "wordCount": 370,
+          "title": "[分享发现] Gitlab 不对大陆服务了，要删号了",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119162#reply0",
+          "author": null,
+          "description": "Lazada 推荐招 C++推荐&大模型推理优化方向 P6 的同学，有相关经验加分，无经验能力强即可，团队直招流程快\n感兴趣的 email ljt1343@gmail.com",
+          "link": "https://www.v2ex.com/t/1119162#reply0",
+          "publishedOn": "2025-03-17T14:14:44.000Z",
+          "wordCount": 366,
+          "title": "[酷工作] [广州] C++推荐&大模型推理优化方向",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119161#reply1",
+          "author": null,
+          "description": "最大 1000v * 1000I = 1mw 。对蔚来打击蛮大的。",
+          "link": "https://www.v2ex.com/t/1119161#reply1",
+          "publishedOn": "2025-03-17T14:13:25.000Z",
+          "wordCount": 369,
+          "title": "[汽车] 比亚迪发布的这个兆瓦闪充怎么看",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119160#reply1",
+          "author": null,
+          "description": "地址是 https://localfileencrypt.com/\n特性：\n纯本地加密，您的数据不上传，不外发\n支持对整个文件夹进行加密\nAES-256-GCM 高强度加密\n欢迎各位体验，提提意见～",
+          "link": "https://www.v2ex.com/t/1119160#reply1",
+          "publishedOn": "2025-03-17T14:05:16.000Z",
+          "wordCount": 378,
+          "title": "[分享创造] 我开发了一个在线加密网站 localfileencrypt.com，在本地使用 AES-256 加密您的文本/文件/文件夹，欢迎体验~",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119159#reply9",
+          "author": null,
+          "description": "已经收到了 manus 的邀请码，验证了一些案例，小游戏、生成 ppt 、股票预测、信息查询等，表现都很好！\n这么看，通过 docker + k8s 容器启动任务编排 + sota （数据引擎、监督微调过程、策略） + deepsearch （ deepresearch 回溯搜索） + mcp （调用各种服务） + browser-use （启动模拟执行结果） + 聚合各种类库？\n任务拆解为：\n1 、搜索几十种网页（知道为啥优先出海外版了）\n2 、根据网页查询执行任务编码\n3 、列出 todolist\n4 、每一项 todo 拆解执行\n4 、test\n5 、聚合信息，结果展示\n大概分位这些步骤？\nmanus 展示了 Agent 该有的水平，确实不错",
+          "link": "https://www.v2ex.com/t/1119159#reply9",
+          "publishedOn": "2025-03-17T13:52:52.000Z",
+          "wordCount": 492,
+          "title": "[程序员] manus 比我想的要强",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119158#reply1",
+          "author": null,
+          "description": "带简历和目标岗位来，guzhizi123@163.com ，广告技术相关职位可顺便帮打听。\nP.S. 商业化这边整体上大概 11h 的节奏，周五 18:00 可下班\n链接： https://zhaopin.kuaishou.cn/#/official/social/?workLocationCode=domestic",
+          "link": "https://www.v2ex.com/t/1119158#reply1",
+          "publishedOn": "2025-03-17T13:50:19.000Z",
+          "wordCount": 378,
+          "title": "[酷工作] [快手] [内推] 商业化技术各方向、低中高级别均有 hc",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119156#reply1",
+          "author": null,
+          "description": "要求显示器也能用于 windows 玩游戏。\n换了 mini m4 ，我原先的戴尔 U3818DW 显示器感觉特别的糊。我还有个 macbook pro 2019 款用同样的显示器都不会有糊的感觉，不知道为什么？",
+          "link": "https://www.v2ex.com/t/1119156#reply1",
+          "publishedOn": "2025-03-17T13:47:08.000Z",
+          "wordCount": 368,
+          "title": "[Mac mini] 有推荐用于 mini m4 的 4k 显示器吗",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119153#reply2",
+          "author": null,
+          "description": "博客名：从不说安全词\n地址： https://jt26wzz.com/\nRSS 地址： https://jt26wzz.com/atom.xml",
+          "link": "https://www.v2ex.com/t/1119153#reply2",
+          "publishedOn": "2025-03-17T13:16:11.000Z",
+          "wordCount": 373,
+          "title": "[VXNA] 申请收录个人博客： 从不说安全词",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119152#reply4",
+          "author": null,
+          "description": "是这样的，我毕设搞了一个 AI 对话，但是呢，这个 AI 对话返回的字符串是 markdown 格式，但是我前端无法正确解析，最后字符串格式就会变成下面这样\n\n这里显然没有正确解析出样式来，我试了很多方法都没能解决这个问题，各个 ai 问了个遍了，然后去网上找了好多方法，还是没搞定，下面是我这个页面的源码，有没有大佬帮我看看到底该怎么解决这个问题啊？小弟我感激不尽啊\n<template>\n  <div class=\"layout\">\n    <div class=\"menu\">\n      <RouterLink to=\"/\" class=\"re-home\">返回首页</RouterLink>\n      <!-- Logo -->\n      <div class=\"logo\">\n        <img :src=\"logo\" draggable=\"false\" alt=\"logo\" class=\"logo-img\" />\n        <span class=\"logo-span\">柑橘智能问答</span>\n      </div>\n    </div>\n    <div class=\"chat\">\n      <!-- 消息列表 -->\n      <Bubble.List\n        :items=\"messages\"\n        class=\"messages\"\n        style=\"flex: 1\"\n        :messageRender=\"renderMarkdown\"\n        :roles=\"{\n          ai: {\n            placement: 'start',\n            typing: { step: 5, interval: 20 },\n            styles: …",
+          "link": "https://www.v2ex.com/t/1119152#reply4",
+          "publishedOn": "2025-03-17T13:09:07.000Z",
+          "wordCount": 1033,
+          "title": "[Vue.js] 使用 Ant design X vue 组件库怎么解决无法正确展示 MarkDown 格式字符串的问题？",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119151#reply1",
+          "author": null,
+          "description": "想在当前业务功能上，把当前页面丢给 AI ，然后在接下来的对话中，做数据分析， 但是这些接口都会有上下文长度限制，有没有啥办法？还是我方式不对？",
+          "link": "https://www.v2ex.com/t/1119151#reply1",
+          "publishedOn": "2025-03-17T13:01:07.000Z",
+          "wordCount": 357,
+          "title": "[OpenAI] 请问数据多，可以做数据分析吗",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119150#reply1",
+          "author": null,
+          "description": "谢谢。\n背景\n1 、理科生，数学、物理比较好；\n2 、已经有 \n\ta) 3D 打印。创想三维，调平太麻烦很久没用了，有点想再买个拓竹。\n\tb) VR\n\tc) 无人机\n\td) PS5 Xbox Switch 都有，PS5 后来卖了。\n目前主要考虑机器狗，考虑点他毕业后可能机器人行业会发展起来，提前培养兴趣；疑虑是貌似完全没用，几乎 100% 吃灰。",
+          "link": "https://www.v2ex.com/t/1119150#reply1",
+          "publishedOn": "2025-03-17T13:00:11.000Z",
+          "wordCount": 399,
+          "title": "[问与答] 想给一个高一学生送生日礼物，想让他了解目前最前沿的科技，有什么推荐？预算在 2 万元人民币以内，特别有意义的可以突破预算。",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119149#reply0",
+          "author": null,
+          "description": "Hot/New Jobs：\nPosition 一：高级 Java 技术专家\nJob Type：Full-Time, Onsite （ Hangzhou ） \nIndustry:  Fintech/Web3\nPS：\n1 、本科 985 计算机相关专业，3-8 年工作经验，\n2 、负责公司终端交易分析平台服务的架构和研发，\n3 、有开源项目贡献，github 地址，\n4 、具备较强中间件产品开发经验，\n5 、具备链上项目经验，底层搭建的不用。\nPosition 二：大数据开发工程师\nJob Type：Full-Time, Onsite （ Singapore ）\nIndustry:  Web3/Exchange\nPS：\n1 、211 计算机相关专业本科，至少 3 年的大数据开发和数据处理经验。\n2 、精通 Hadoop 、Flink 、Kafka 和其他大数据技术。\n3 、具有数据建模和数据库设计经验。\n4 、具有丰富的数据安全性、合规性知识，以及解决问题和排除故障的技能。\n5 、当前持有新加坡身份。\n另，\n产品以及 DevOps 也有在招聘（新加坡现场办公，须持有新加坡身份）。\nTG：@jtx_2023",
+          "link": "https://www.v2ex.com/t/1119149#reply0",
+          "publishedOn": "2025-03-17T12:54:56.000Z",
+          "wordCount": 406,
+          "title": "[酷工作] Hot/New Jobs：\r\n高级 Java 技术专家\r\n大数据开发",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119148#reply3",
+          "author": null,
+          "description": "# 西湖机器人科技（杭州）有限公司介绍\n西湖机器人科技（杭州）有限公司是国内知名的 AI 派机器人具身智能公司，是西湖大学人工智能和机器人领域第一个自主优质成果产业转化落地项目。公司以 “原创驱动、精益求精、优质服务” 的理念，着力于提高机器人行为通用智能 AGI ，打造服务机器人新科技。\n# Linux C++ 应用软件工程师\n## 职位描述\n1. 负责机器人嵌入式应用软件的全生命周期管理，涵盖需求分析、架构设计、编码实现、调试优化等环节，确保软件的高质量交付。\n2. 深入参与机器人系统（ ROS/ROS2 ）及通信框架的开发工作，负责机器人本体相关算法的部署、移植、模型压缩与性能优化，提升系统整体性能。\n3. 积极参与机器人系统的需求分析与系统设计阶段，凭借专业知识与丰富经验提出技术建议与改进方案，为系统优化提供有力支持。\n4. 参与流媒体系统的架构设计工作，聚焦视频编解码业务的开发，致力于为用户提供流畅、高清的流媒体体验。\n5. 与硬件工程师、软件工程师及项目经理等跨部门团队紧密合作，确保中间件与机器人硬件、软件的无缝兼容与高效集成，实现系统协同工作的最佳效果。\n6. 负责编写与维护技术文档，包括 API 文档、系统架构图及开发指南等，为团队成员提供详尽的技术参考资料，促进团队技术交流与知识共享。\n## 基本要求\n1. 精通 C++ 基本语法，熟练掌握数据结构与算法，具备扎实的编程功底。\n2. 熟悉 Linux 系统编程与网络编程，深入理解 TCP/IP 、UDP 、MQTT 等网络协议，能够高效进行网络通信开发。\n3. 熟练运用 C++11/14/17/20 等现代 C++ 特性，紧跟语言发展潮流，提升代码质量与开发效率。\n4. 具备良好的学习能力与沟通能力，对新技术充满热情，与团队成员有效沟通协作。\n5. 本科及以上学历，计算机科学、电子通信工程、自动化等相关专业优先考虑。\n6. 拥有机器人操作系统（ ROS ）实践经验者优先，熟悉机器人开发流程与生态，能够快速融入团队开展工作。\n7. 熟悉自动化部署流程，掌握 Docker 容器技术。\n\n# 薪资待遇：\n可以对标大厂\n# 工作地点\n杭州西湖区三墩镇振华路 298 号\n\n# 联系方式\nVX: hzgrong",
+          "link": "https://www.v2ex.com/t/1119148#reply3",
+          "publishedOn": "2025-03-17T12:53:18.000Z",
+          "wordCount": 440,
+          "title": "[酷工作] 上过央视的杭州机器人公司招 Linux C++ 应用软件工程师",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119147#reply2",
+          "author": null,
+          "description": "上次发帖讲了一下换 M4 Pro 的感受，感觉反响不错，这次再来发表个观点：\n2025 年了，请大家给 Mac 配显示器时尽量考虑高刷屏。不要一上来就红米 4K……\n（我知道有很多 60Hz 够用论者，但我相信更多数人是能感到高刷的好处的）\n其实应该说给任何电脑配显示器都是如此，Mac 均价高一些，更应该这样。理由如下：\n1. 现在的 27 寸 4k 高刷屏价格已经很好，2000 甚至 1500 以下都能挑到不错的。相比 Mac 本身的价格，并不是一个很贵的附件。\n2. 很多人觉得高刷的作用只是游戏或者滚屏时看起来更流畅，其实不只是这样，高刷让你每次操作呈现到屏幕上的时间都更短了（这里先忽略显示器输入延迟等问题）。比如移动鼠标、打字、移动窗口这种操作都会觉得更跟手一些。总体上就会觉得电脑更流畅了。这变化绝对比 M1 换 M2 ，M3 换 M4 感知明显，更比把 M4 Pro 从 12 核升级到 14 核明显（这要加 1500rmb 呢）。\n3. 如果是 MBP 用户，高刷屏能让你内外屏的刷新率体验是一致的。\n4. 个人觉得刷新率高了眼睛更不容易累。\n个人不太推荐考虑的特性是 HDR ，这方面能做好的显示器价格都起飞。低价显示器的 HDR 硬件和调教都不行，既不能日常开，哪怕是看视频时开也总感觉色彩不对劲。尤其是 MBP 用户，使用低价 HDR 显示器只会感受到和内屏的巨大落差感。\n其实从产品因素我想不到高刷有什么坏处，毕竟现在办公设计屏都开始做高刷了。只是在考虑价格时要取舍一下。\n叠甲，本帖面对大众用户。对显示器某方面性能有明确要求或者电脑纯当计算农场的用户请忽略。楼主也不做显示器推荐。",
+          "link": "https://www.v2ex.com/t/1119147#reply2",
+          "publishedOn": "2025-03-17T12:47:16.000Z",
+          "wordCount": 428,
+          "title": "[Apple] 建议各位 Mac 用户在买显示器时考虑高刷屏",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119146#reply8",
+          "author": null,
+          "description": "问与答 - @wionch -",
+          "link": "https://www.v2ex.com/t/1119146#reply8",
+          "publishedOn": "2025-03-17T12:38:00.000Z",
+          "wordCount": 441,
+          "title": "[问与答] 2025 年了,flutter 还是 react",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119145#reply2",
+          "author": null,
+          "description": "这个电影很多年前看了，看完后久久不能平复，抑郁了半个多月，现在想起来依然觉得愤然难平，也不敢看第二遍。\n千万不要被片名给误导，一定要看到最后。",
+          "link": "https://www.v2ex.com/t/1119145#reply2",
+          "publishedOn": "2025-03-17T12:33:50.000Z",
+          "wordCount": 369,
+          "title": "[电影] 有看过《万能钥匙》的么",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119143#reply0",
+          "author": null,
+          "description": "问与答 - @me15000 -",
+          "link": "https://www.v2ex.com/t/1119143#reply0",
+          "publishedOn": "2025-03-17T12:26:05.000Z",
+          "wordCount": 373,
+          "title": "[问与答] 国内有哪些做代理 ip 比较稳定价格实惠的？看到一家厉害的 oxylabs 有点贵",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119142#reply2",
+          "author": null,
+          "description": "本人多年前，在 V 站得遇好心人发送了一个 office 365 账号，一直用到现在。\n但是意外的是，因为之前绑定了 authenticator 应用，但是更换手机的时候，没有及时手动操作切换（从 13 pro 换为 15 Pro Max ），现在即使从 iCloud 恢复，也需要联系管理者提供验证，无奈的是🤷🏻‍♀️，我似乎无法联系到 之前给我发送账号的好心人。\n目前的状况是，mac 上已经在 mail 登录的账户依然可以收到邮件，但是在其他设备上均无法薪登录。鉴于保存了资料在上面，还是希望能够通过发布新帖子看有没有希望找回。（查过历史记录，原先的帖子似乎已经不在了）。\n好心人发送给我的组织 前缀是  wikiw*****.onmicrosoft.com . 我个人的用户名和 V 站用户名一致（ YoYoLikecici ），碰碰运气，希望能联系到原来的组织管理者以重新验证账号吧。",
+          "link": "https://www.v2ex.com/t/1119142#reply2",
+          "publishedOn": "2025-03-17T12:13:20.000Z",
+          "wordCount": 396,
+          "title": "[微软] Office 365 账号求助。",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119140#reply1",
+          "author": null,
+          "description": "首面结束时说领导不在让我先回去，隔天 boss 职位没了，默认 gg\n两天后又说面试通过，让复试，但是很奇怪约在了下周\n周末又说部门负责人有事，在延迟一天。\n面试当天进来一个产品，说交叉面试，当场我就想直接走了，后面应付了下草草结束，部门负责人一直没出现。\n前后一共耗时 2 周，感觉心力憔悴。要不是现在行情差，搁在以前早就不鸟他了。",
+          "link": "https://www.v2ex.com/t/1119140#reply1",
+          "publishedOn": "2025-03-17T11:57:39.000Z",
+          "wordCount": 370,
+          "title": "[职场话题] 复试说是部门负责人，等了好几天，结果进来一个产品交叉面试说是",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119139#reply3",
+          "author": null,
+          "description": "去年狗东买了个 15 Pro 和一个 AC+。这个月，手上买了两年的 14 和 15 Pro 同时提示我 AC+ 到期，可续。\n还以为京东买的 AC+ 出啥问题了，怎么也不能一年就到期啊。查了订单，付了 729 ，写的是官方 AC+，一年。\n正好昨天序列号查保修的服务在维护，本来还以为是什么系统出 bug 了。今天直接打苹果客服，也称 15 Pro 的确实到期了。才知道之前在官网或者店里买 AC+ 默认是两年，不知道什么时候开始可以一年一年买了。去年买的狗东一年 AC+ 就是从购买之日起算一年，今年到期。\n今天从手机上再续一年，价格 899... 早知道还不如去年直接买两年的 AC+.\n另外就是有些经销商在宣传 AC+ 的时候会说，不买的话，是保修一年，买的话是延保一年，共计两年。实际上并不是这样，比如我在京东只买一年 AC+，那今年就是一起双双到期。这也是我今天打电话和苹果客服确认的内容之一，苹果官方是不认可这种说法的，他们的说法就是 AC+ 额外保意外，但是可以拆开一年年买，也可以一次买两年。\n总结：\nAC+ 购买选项的变化\n过去 AC+ 只提供两年期选项\n现在可以选择一年一年购买或一次性购买两年，到期后还可以继续购买。\n价格差异\n京东购买一年期 AC+：729 元\n续保第二年价格：899 元\n直接购买两年期更划算\n保修期说明\n关于一些经销商的错误宣传：\n❌ 错误说法：不买 AC+ 保修一年，买了延保一年变成两年\n✓ 正确说法：AC+ 主要是为了保意外损坏，可以选择购买一年或两年\n一年期 AC+ 到期后，保修和 AC+ 会同时结束\n建议购买 iPhone 时直接选择两年期 AC+，这样更经济实惠。",
+          "link": "https://www.v2ex.com/t/1119139#reply3",
+          "publishedOn": "2025-03-17T11:54:45.000Z",
+          "wordCount": 461,
+          "title": "[Apple] AppleCare+ 的一点误解",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119138#reply13",
+          "author": null,
+          "description": "说他们强，他们经常整出一些迷幻操作；说他们菜，他们的用户体量、业务规模和获利能力又很大。",
+          "link": "https://www.v2ex.com/t/1119138#reply13",
+          "publishedOn": "2025-03-17T11:47:27.000Z",
+          "wordCount": 510,
+          "title": "[问与答] 国内科技大厂的综合实力和美国同行比到底是强还弱？",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119136#reply1",
+          "author": null,
+          "description": "系统版本：sequoia 15.3 (24D60)\n无法正常执行",
+          "link": "https://www.v2ex.com/t/1119136#reply1",
+          "publishedOn": "2025-03-17T11:37:35.000Z",
+          "wordCount": 356,
+          "title": "[macOS] AirPods 降噪 快捷指令无法在 sequoia 系统上运行",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119135#reply0",
+          "author": null,
+          "description": "求职意向\n偏向于远程，如果是长沙/深圳 onsite ，特别合适的话，也可以详细了解一下。\n技术栈\n8 年 Laravel 使用经验，有较深的理解\nComposer 模块化开发经验\nMysql\n前端方面原生 js 和浏览器端的组件用的比较多，可以实现各种复杂交互需求\n深度代码洁癖，致力于写出面向对象的易拓展、易维护、基于 SOLID 原则的代码。日常使用 phpcs 以及 phpdoc 来保证代码质量\nChatgpt/Gemeni 的 API 调用调试，RAG 模块开发经验\n无障碍英文读写，简单的英语口语，可参与技术类型的英文会议\n做过多个从 0 到 1 项目的主程，有项目管理经验，有远程经验\n还有一些经验较少但能快速上手的：\nphp 的其他主流框架：yii/ci/thinkphp/hyperf\n基于 swoole 的异步开发\n基于 Node.js 的 web 后端\nVue\n乐意接触新的技术栈（公司给机会的话）\n其他的\n看了一圈求职帖子，不是大厂出来的，就是很厉害的应届\n今年就要 30 了，也没啥大厂经验，PHP 感觉也渐显颓势了，再加上现在的环境，压力真的好大啊\n希望有大佬能捞一捞吧，感恩！\n联系方式\nwxBase64:ZG1wdHk=\nEmailBase64:ZG1wdHl5QGdtYWlsLmNvbQ==\n麻烦备注 v2ex",
+          "link": "https://www.v2ex.com/t/1119135#reply0",
+          "publishedOn": "2025-03-17T11:35:59.000Z",
+          "wordCount": 413,
+          "title": "[求职] 8 年经验 PHP 求个远程岗位",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119134#reply0",
+          "author": null,
+          "description": "AI 图片生成网站，调用的图片生成 api 使用的是 flux 的服务，生成的图片效果还可以\n网站目前所有的工具全部免费使用，欢迎大家反馈提出改进意见\n网站已经做好了多语言，移动手机端的适配还需要优化。\nAI 生图用英文提示词效果会非常不错，后续准备做这方面的优化。\nAi Image BG： https://aiimagebg.com/",
+          "link": "https://www.v2ex.com/t/1119134#reply0",
+          "publishedOn": "2025-03-17T11:28:44.000Z",
+          "wordCount": 369,
+          "title": "[分享创造] 完全免费的 AI 生成图片网站，蹲一个蹲",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119133#reply3",
+          "author": null,
+          "description": "人在香港开户,\n有邀请的发过来...\n需要对半分奖励...\n打算把能开的卡和券商都开掉去...",
+          "link": "https://www.v2ex.com/t/1119133#reply3",
+          "publishedOn": "2025-03-17T11:24:32.000Z",
+          "wordCount": 391,
+          "title": "[香港] 人在香港开户,有邀请的发过来...",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119132#reply0",
+          "author": null,
+          "description": "刚刚上线，功能还不多，可以免费使用。\n目前主要有以下 AI 功能，移除背景，移除物体，黑白照片上色，智能图像放大，还有一些批量图片处理功能，批量 resize ，批量裁剪，批量转换图像格式。\n访问地址： https://www.imggood.com\n欢迎大家提建议和反馈 BUG ，后续还会陆续添加其他的 AI 图像功能。",
+          "link": "https://www.v2ex.com/t/1119132#reply0",
+          "publishedOn": "2025-03-17T11:10:51.000Z",
+          "wordCount": 368,
+          "title": "[分享创造] 独立开发的免费 AI 图片处理网站，求吐槽",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1119131#reply0",
+          "author": null,
+          "description": "用的一台国产安卓手机，144HZ 和 60HZ 互相切换时感觉可明显了。切到 60HZ 时感觉卡得没法用了，但是我用的显示器啊平板啊另一台手机啊全是 60Hz ，用起来却不觉得卡，这是为什么？",
+          "link": "https://www.v2ex.com/t/1119131#reply0",
+          "publishedOn": "2025-03-17T11:09:46.000Z",
+          "wordCount": 341,
+          "title": "[分享发现] 关于屏幕刷新率",
+          "imageUrl": null
+        },
         {
           "id": "https://www.v2ex.com/t/1118896#reply0",
           "author": null,
@@ -25881,416 +26351,6 @@
           "wordCount": 795,
           "title": "[macOS] [福利] 抢先体验 Xactions - macOS 平台强大的自动化执行者！",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111804#reply12",
-          "author": null,
-          "description": "张麻子杀死县长之后，自己当了县长\n刘嘉玲说：我不在乎谁是县长，我是县长夫人就行\n女人爱的不是皇帝本人 爱的是坐在皇帝宝座上的那个人\n为什么奶茶妹妹要嫁给大东子\n因为大东子拥有京东的控制权 他是京东名义上的“皇帝”\n权力是男人的春药 拥有权力 就拥有大棍子\n如果我们是上班的 其实就只剩下小棍子和香蕉了\n我们最大的皇帝 拥有全自动棍子 所以能够控制整片土地\n权力 其实就是猴王的棍子 他能够用棍子驱使底下的猴子 采香蕉\n我们看猴王 都很有钱，是因为猴子们采香蕉之后 都要上贡一份给拿棍子的猴王\n黄毛 他只是外观是黄毛 其实他是小孩子王 小孩子们都听他的 他拥有这个小孩子的领导力 所以漂亮女孩都对黄毛趋之若鹜\n进了社会之后 黄毛不行了 因为小孩们跑了 黄毛没有权力了\n猴王变成了拥有权力的企业主 厂长 有实权的部门领导 或者是体制内的官员\n他们是猴王啊 所以漂亮妹妹对他们比较倾慕\n作为采香蕉的猴子 我们一定要想办法拿到棍子 成为猴王\n这个棍子 比较贵 除了要和其他猴子 厮杀争夺更多的香蕉之外\n最最关键的就是 要拿香蕉 换棍子\n最简单的方法 其实就写在刑法里 咱们要想办法\n往老板口袋里 塞香蕉\n只要塞的进去 老板就会心领神会 认为咱们也想当猴王\n就会给咱们棍子 拥有了这根棍子 就和别的只有香蕉和小棍子的猴子不一样了\n漂亮妹妹 就会另眼相看\n----------------------------------------------------------------------\n关于棍子和香蕉\n我们本身 是拥有整个人自我的棍子\n但是我们需要香蕉 于是出让了大部分棍子 留一个小棍子\n那根小棍子 企业不需要 企业拿走我们的大部分棍子 给我们足够多的香蕉 留一小部分香蕉 上贡给我们上一级的猴王\n我们拥有了香蕉 和 小棍子 其实就能搞定绝大部分女人\n但是 漂亮妹妹 她不缺香蕉和小棍子\n因为经济比较发达 香蕉 她们上班就能搞定 至于小棍子 那太多了 简直是满地爬\n稀缺的是拿着棍子的猴王\n只有拥有棍子 才能驱使别的猴子 给你上贡香蕉\n但是这个 需要比较强大的魄力和野心\n我们看有钱人 其实他们的钱 是拥有了权力之后的附属品\n他们的钱 是别人让他驱使猴子的香蕉\n马云说 自己不在乎钱, 也许他说的是真的\n因为他需要钱 让别人来帮他实现阿里巴巴的野心 (因为能做成 根本就不需要关心钱的事\n孙正义给他香蕉给他棍子 是因为他们有领导力 感染力 野心 目标 才干\n不是说拿着钱 让他去娶漂亮媳妇\n我们成为大猴王 可能比较难 研究如何成为小猴王 看起来 比较实在\n----------------------------------------------------------------------\n我们要竞争资源的所有权 谁拥有了资源的所有权 就拥有这片资源的产出",
-          "link": "https://www.v2ex.com/t/1111804#reply12",
-          "publishedOn": "2025-02-16T10:22:37.000Z",
-          "wordCount": 554,
-          "title": "[电影] 从《让子弹飞》看，权力才是利益的来源",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111802#reply16",
-          "author": null,
-          "description": "淘宝这种算吗",
-          "link": "https://www.v2ex.com/t/1111802#reply16",
-          "publishedOn": "2025-02-16T10:19:25.000Z",
-          "wordCount": 527,
-          "title": "[Web Dev] 什么样的网站算设计精良的",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111801#reply0",
-          "author": null,
-          "description": "公司有一台算力服务器，配置还可以，我想着装个 ragflow 玩玩，好不容易镜像都拉下来了，启动后各个容器都正常启动，但是 ragflow-server 服务一直报 ES 集群连接失败，我使用的是下面的 yml 文件启动：\ndocker-compose-gpu-CN-oc9.yml\n\n报错内容：\nTraceback (most recent call last):\n  File \"/ragflow/rag/svr/task_broker.py\", line 21, in <module>\n    from api.db.db_models import Task\n  File \"/ragflow/api/db/db_models.py\", line 33, in <module>\n    from api.settings import DATABASE, stat_logger, SECRET_KEY\n  File \"/ragflow/api/settings.py\", line 35, in <module>\n    from rag.utils import ELASTICSEARCH\n  File \"/ragflow/rag/utils/__init__.py\", line 19, in <module>\n    from .es_conn import ELASTICSEARCH\n  File \"/ragflow/rag/utils/es_conn.py\", line 457, in <module>\n    ELASTICSEARCH = HuEs()\n                    ^^^^^^\n  File \"/ragflow/rag/utils/__init__.py\", line 12, in _singleton\n    instances[key] = cls(*args, **kw)\n                     ^^^^^^^^^^^^^^^^\n  File \"/ragflow/rag/utils/es_conn.py\", line 24, in __init__\n    raise Exception(\"Can't connect to ES cluster\")\nException: Can't connect to ES cluster\n\n网上说可以把认证关掉，但我觉得治标不治本，有没有遇到相同问题的小伙伴解决了这个问题的",
-          "link": "https://www.v2ex.com/t/1111801#reply0",
-          "publishedOn": "2025-02-16T10:12:39.000Z",
-          "wordCount": 466,
-          "title": "[问与答] ragflow 安装报错，折磨我一天了",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111800#reply2",
-          "author": null,
-          "description": "问与答 - @aeucon -",
-          "link": "https://www.v2ex.com/t/1111800#reply2",
-          "publishedOn": "2025-02-16T10:11:14.000Z",
-          "wordCount": 402,
-          "title": "[问与答] 求问两个 BGM，都是 B 站里边的，一个是恒大歌舞团这类视频的 BGM 和北韩太阳相关视频的 BGM",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111799#reply0",
-          "author": null,
-          "description": "线下面了几个，被工作时间恶心到了，想找个远程全职。\nC/C++：音视频（ RTC ，直播），网络协议（ QUIC ），Chromium 等\nPython：AIGC(LLM+RAG)，Django\nNodejs：Koa ，Napi （ V8 ，nan ）\nGo：Web Server\n其他\n日语 N2\nVX：YmVoYXBweTEyMjM=",
-          "link": "https://www.v2ex.com/t/1111799#reply0",
-          "publishedOn": "2025-02-16T10:11:09.000Z",
-          "wordCount": 375,
-          "title": "[求职] 求一份远程开发, C/C++， AIGC， Web",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111798#reply18",
-          "author": null,
-          "description": "RT, 之前的 UPS 买了好几年了, 最近停电两次都没切换备用电源(以前是好的, 停电可以切换), 可能是坏了(有人知道怎么修或是什么问题也可以提供帮助)\n已经买了个新的, 考虑把旧的扔了, 但直接扔楼下垃圾桶似乎对环境不太好? 卖二手这玩意应该也没人要吧, 所以怎么处理比较合适?",
-          "link": "https://www.v2ex.com/t/1111798#reply18",
-          "publishedOn": "2025-02-16T09:54:42.000Z",
-          "wordCount": 549,
-          "title": "[问与答] 废旧的 UPS 怎么处理比较好?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111797#reply8",
-          "author": null,
-          "description": "目前在广州工作，但是公司缴纳的社保在深圳。\n然后计划是今年生小孩，想咨询下能在广州进行报销吗？  \n对了，重点是媳妇生小孩，能刷我的吧？ \n 报销有什么硬性条件吗？",
-          "link": "https://www.v2ex.com/t/1111797#reply8",
-          "publishedOn": "2025-02-16T09:42:32.000Z",
-          "wordCount": 413,
-          "title": "[广州] 深圳医保如何在广州刷（生孩子）",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111716#reply0",
-          "author": null,
-          "description": "这个框架我在一些小项目用过一段时间了，我记得前年年初刚开始用这个框架的时候经常会出现 5s 以上的连接被提前关掉的 Bug ，去年年中的版本里面他们终于修复了。不知道还有没有别的坑。",
-          "link": "https://www.v2ex.com/t/1111716#reply0",
-          "publishedOn": "2025-02-15T21:35:03.000Z",
-          "wordCount": 433,
-          "title": "[Python] 有人在生产环境用 Sanic 吗？有什么需要注意的坑吗？看起来性能很强还轻量。我记得以前这个框架有乱关闭长连接的 Bug，花了一年多才修复",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111715#reply0",
-          "author": null,
-          "description": "哦 看看我的大华国 想起几周前看老沈战情室里面讲华国的教授总是把学生当马仔用，总是让学生难以毕业\n有感而发\n前人做过导师评价网，如今只有 GitHub 存档\n是什么让这些网站都河蟹了，在草泥马戈壁\n是主机不抗投诉吗？\n是名字没有打马子吗？\n有什么有效应对隐私？投诉？问题 的 办法\n有什么抗投诉主机？\n有什么办法规避投诉？\n我总不能 css 防爬的方式来规避\n说这名字复制下来是星星和月亮，而不是\n你的名字\n爱死了神奇的世界\n1.希望引发技术性对抗法武器非正义使用的情况\n2.鉴于不是所有学生都爱计算机技术下 / 学生爱在校园网下游走刷帖\n作为研究机构通常可能有以下两个情况透明发帖：\n- 了解到有机构启用 EDR 联网准入，我觉得你应该知道驱动加持的 system 应用什么都可以干。url 审计成熟产品多极易实现\n- 注意到 Btrust 在 edge 受信任证书颁发机构拉了泡屎\n3.希望技术性讨论\n- 如何使评价留言更接近真实 假设人机验证已做\n- 如何类似“打码”的手段避免指名道姓引来的投诉之争\n- 海外有什么抗投诉主机或者其他需要考虑的问题",
-          "link": "https://www.v2ex.com/t/1111715#reply0",
-          "publishedOn": "2025-02-15T19:25:29.000Z",
-          "wordCount": 391,
-          "title": "[问与答] 导师评价网为何难以建立，是有什么不好规避的法规问题吗？补充",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111714#reply7",
-          "author": null,
-          "description": "信息安全 - @drymonfidelia -",
-          "link": "https://www.v2ex.com/t/1111714#reply7",
-          "publishedOn": "2025-02-15T19:25:10.000Z",
-          "wordCount": 449,
-          "title": "[信息安全] 为什么 iOS 有很多能越狱的漏洞， Android 却比较少有能在不解锁 BL 的情况下 ROOT 的洞？只是因为没人愿意挖吗？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111713#reply7",
-          "author": null,
-          "description": "哦 看看我的大华国 想起几周前看老沈战情室里面讲华国的教授总是把学生当马仔用，总是让学生难以毕业\n有感而发\n前人做过导师评价网，如今只有 GitHub 存档\n是什么让这些网站都河蟹了，在草泥马戈壁\n是主机不抗投诉吗？\n是名字没有打马子吗？\n有什么有效应对隐私？投诉？问题 的 办法\n有什么抗投诉主机？\n有什么办法规避投诉？\n我总不能 css 防爬的方式来规避\n说这名字复制下来是星星和月亮，而不是\n你的名字\n爱死了神奇的世界，希望引发技术性对抗法武器非正义使用的情况",
-          "link": "https://www.v2ex.com/t/1111713#reply7",
-          "publishedOn": "2025-02-15T18:20:28.000Z",
-          "wordCount": 456,
-          "title": "[问与答] 导师评价网为何难以建立，是有什么不好规避的法规问题吗？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111712#reply0",
-          "author": null,
-          "description": "1.我的家宽到国内服务器 UDP 没有 QOS 。  \n2.我的家宽到国外服务器 UDP 有少量丢包，但能跑满上下行（ 1G 下行，120M 上行）  \n3.海外服务器搭建了一个 HTTP3/QUIC 的服务器，测试是否 HTTP3/QUIC 被阻断，结果是 HTTP3/QUIC 的网页正常访问。但 hy2 协议就是不通。\n综上所述，我感觉应该是内蒙联通家宽精准识别 hy2 并封掉了。\n如果话题有问题可以删帖或移动到其他节点。无需通知我。",
-          "link": "https://www.v2ex.com/t/1111712#reply0",
-          "publishedOn": "2025-02-15T17:46:35.000Z",
-          "wordCount": 358,
-          "title": "[宽带症候群] 我这边的家宽开始阻断 hy 协议了。",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111711#reply0",
-          "author": null,
-          "description": "RT\nnas 里存了很多原盘电影，以前都是用投影+专业播放器看的，最近买了个 HDR 显示器，想用电脑看，还斥巨资买了根光纤线，结果感觉声音不对，一看输出的是立体声。在网上转了半天发现这么张图 https://static.chiphell.com/forum/202407/07/223204xqel334epkk1wkqx.png\n但是我电脑这个页面没有后面两个东西，甚至没有 Spdif out 的设备，只有 Realtek Digital Output 。\n找了几个驱动都装不上 显示 error code -0001\n电脑主板华硕 B550 ，声卡型号 ALC1200",
-          "link": "https://www.v2ex.com/t/1111711#reply0",
-          "publishedOn": "2025-02-15T17:30:03.000Z",
-          "wordCount": 368,
-          "title": "[Windows] 有好兄弟知道电脑 spdif 接口不能输出 5.1 声道是什么情况吗",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111710#reply0",
-          "author": null,
-          "description": "公司要在本地部署 ds ，搞了一台服务器，让我部署一下，内存 DDR5 2T ，显存 640G ，我现在 llamacpp 部署的 q4 量化版，并发设置了 4 ，但是 4 个人同时用的时候输出就会很慢。求推荐个可以支持 10 个并发的推理框架。vllm 我试了说是不支持 deepseek2 ，我是下载的 gguf 文件",
-          "link": "https://www.v2ex.com/t/1111710#reply0",
-          "publishedOn": "2025-02-15T17:04:55.000Z",
-          "wordCount": 399,
-          "title": "[程序员] 8 卡 H100 部署 DeepSeekR1 求助",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111709#reply4",
-          "author": null,
-          "description": "RT, 交流分享一下.",
-          "link": "https://www.v2ex.com/t/1111709#reply4",
-          "publishedOn": "2025-02-15T15:54:14.000Z",
-          "wordCount": 433,
-          "title": "[程序员] 之前一直在终端设备上做去广告, 最近部署了 Adguard Home 发现是真好用啊, 大伙还在自己的 NAS/服务器上部署了什么有用或者有趣的东西吗?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111708#reply8",
-          "author": null,
-          "description": "对于 docker ，因为我实际工作中用的少，所以有一些小疑问，谢邀各位大佬们，能帮我解惑，感谢大佬们。\n假设我现在有一个项目，依赖 redis ，mysql ，nginx ，php ，那么我们是把这些都放在一个容器中，还是每个单独作为一个容器。\nnginx 是 web 服务，可以一对多。也应该做为容器吗？\n数据库是该用云服务，还是自己搭呢？ 如果自己搭，是和项目放在一台服务器上，还是应该单独放一台服务器上呢？\n假设我一个项目同时要部署多套，是一个服务器就包含一整套服务， 还是应该把数据库分离开呢？",
-          "link": "https://www.v2ex.com/t/1111708#reply8",
-          "publishedOn": "2025-02-15T15:44:21.000Z",
-          "wordCount": 499,
-          "title": "[程序员] 关于 docker 的一些问题？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111707#reply5",
-          "author": null,
-          "description": "代写专利交底书，只需提供所需领域，通过代理机构给钱，不通过不要钱。\n如果您自己写也可以免费指导。本人资深程序员，目前转行写专利，自己名下国内专利 100+，国际专利 1 件。\nVX:MTg1MDA5NzQ5NDM=",
-          "link": "https://www.v2ex.com/t/1111707#reply5",
-          "publishedOn": "2025-02-15T15:25:50.000Z",
-          "wordCount": 404,
-          "title": "[职场话题] 代写专利交底书，顺便出售几篇写好的",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111706#reply2",
-          "author": null,
-          "description": "年前买了一个新设备，懒猫微服。\n他的设计理念还是挺有意思的，自建 IPv6 的虚拟局域网，并维护一个自己的局域网 DNS 服务，所有自有应用跑在这个私有局域网里。\n其他零碎的描述在我的这篇文章里了：\nhttps://mp.weixin.qq.com/s/AsmRqfZEUrUOP0DrzXq7Gg\n总体来讲，可玩度很高。",
-          "link": "https://www.v2ex.com/t/1111706#reply2",
-          "publishedOn": "2025-02-15T15:20:03.000Z",
-          "wordCount": 380,
-          "title": "[分享发现] 分享新买的设备 -- 懒猫微服",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111705#reply18",
-          "author": null,
-          "description": "人生遭遇大挫败，缓不过劲来了，需要一点绝望缝隙的光。\n稍微知名一点的我都看过了，希望来点冷门佳片。",
-          "link": "https://www.v2ex.com/t/1111705#reply18",
-          "publishedOn": "2025-02-15T15:19:31.000Z",
-          "wordCount": 505,
-          "title": "[电影] 有没有治愈电影或者电视推荐",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111704#reply20",
-          "author": null,
-          "description": "事情是这样的，我认识的一位 50 岁的阿姨和我妈妈说，她说她借了大几十万，说要去开通量化，用「 AI 」炒股\n然后我妈天天在抖音刷到什么量化，说量化多好多好，用「 AI 」炒股比人要好，刚开始可能跌，之后行情稳定了就可以一直赚了\n她身边也有很多朋友炒股，摸爬滚打了这么多年也赚了点小钱，大概 20w 吧\n有没有实际做过量化的或者在机构里面工作的朋友可以客观说一说",
-          "link": "https://www.v2ex.com/t/1111704#reply20",
-          "publishedOn": "2025-02-15T15:10:02.000Z",
-          "wordCount": 577,
-          "title": "[程序员] 有没有做股票量化的朋友",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111703#reply8",
-          "author": null,
-          "description": "这个问题真的困扰我太久太久了，我是真的搞不懂到底该怎么解决他，下面是我的项目源码，我把无用的内容全部删除了，剩下的就是只保留出现问题的部分，也就 30K 的大小\nJDK 版本是 21 、maven 版本是 3.8.8 、数据库是 mysql5.6 、spring 版本是 3.4.2\n源码地址：\n通过网盘分享的文件：OrangeSmart.zip\n链接: https://pan.baidu.com/s/1gbXks4EaG27p8w5MMEaa5Q?pwd=3t4n 提取码: 3t4n\n--来自百度网盘超级会员 v5 的分享\nBug 本身很简单，调用/upload/clear 方法报无效的绑定错误，我感觉我哪里都没问题，但是就是有这个错误，复现这个错误很简单，只要运行我 db 文件夹中的 sql 并在配置文件中指定数据库地址即可\n\n希望有大佬可以帮帮忙啊，小弟我真的是没办法了才出此下策",
-          "link": "https://www.v2ex.com/t/1111703#reply8",
-          "publishedOn": "2025-02-15T15:04:47.000Z",
-          "wordCount": 451,
-          "title": "[Java] 我公开了我的项目，有大佬可以帮忙解决无效的绑定问题吗？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111702#reply0",
-          "author": null,
-          "description": "比如把整个项目导进去， 让 AI 来检测代码中的语法错误、逻辑漏洞、潜在的安全风险，并提供改进建议，还可以分析代码的执行效率和资源占用情况，提出优化策略，如算法优化、内存管理优化等，提升软件性能。",
-          "link": "https://www.v2ex.com/t/1111702#reply0",
-          "publishedOn": "2025-02-15T15:00:28.000Z",
-          "wordCount": 374,
-          "title": "[问与答] 请问有没有分析软件代码库的 AI 应用",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111701#reply2",
-          "author": null,
-          "description": "背景：\nNAS：威联通 TS-464C （ CPU:N5105 ，内存：16G ）\n硬盘：2 个西数 HA340 8T, 2 个希捷 VX015 4T\n现在想这样：\n2 个西数 HA340 组 RAID1 ，存放照片和工作资料；\n1 个希捷 VX015 放电影音乐等；\n1 个希捷 VX015 做备份。\n疑问：\n使用哪两个盘位来组 RAID1 比较合适？\n考虑到散热的话，是不是把两个西数 HA340 错开，比如 1/3 或者 2/4 这样的组合比较好？不懂我的理解有没有什么问题，请大佬赐教。",
-          "link": "https://www.v2ex.com/t/1111701#reply2",
-          "publishedOn": "2025-02-15T14:57:45.000Z",
-          "wordCount": 491,
-          "title": "[NAS] 4 盘位的 NAS（TS-464C），使用哪两个盘位来组 RAID1 比较合适？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111700#reply4",
-          "author": null,
-          "description": "前言\n上次在 V2EX 发公布了原研汇小程序上线的话题（原研汇：原研药信息查询小程序上线，欢迎体验！），受到不少好朋友的支持和鼓励，也有不少朋友提出了宝贵的意见，在此一并十分感谢。\n其中收到大家最多反馈的就是药品的图片加上，由于 V1.0 上线的比较仓促，所有药品图片都共用的是同一张图片，因此就要把各个页面的图片都进行一下替换。于是这些天在着手这些方面的工作。\n由于本人不想草草应付，因此既然要做就打算做好一点，这就产生了这几方面的工作：\n1 、收集和整理图片：\n由于有上千个药品，工作量确实比较大，目前本人没有其他更好的办法，只能在网上一个个收集图片，并按药品名称进行整理，目前计划先就一些常用药先整理一波。\n\n2 、图片风格统一：\n网上下载的药品图片背景不一，大小不一，这就会导致上传上去的药品图片杂乱无章。需要统一图片，就需要对每个图片抠图和裁切。所以这些天再利用 cursor 写了个本地抠图的 web 应用，用来批量对图片进行抠图处理。\n\n3 、把前端页面再美化一下\n由于非专业设计师，整个页面看起来虽然是比较简洁，但有点太素了，因此接下来也会做一些小细节上的美化。\n\n\n这个小程序是本人的第一个作品，也有点像自己的孩子，因此一定会维持免费、无广、同时保持页面的干净整洁。\n欢迎有需要的朋友可以帮忙转发给好朋友，如果有好的建议和想法，欢迎留言补充。",
-          "link": "https://www.v2ex.com/t/1111700#reply4",
-          "publishedOn": "2025-02-15T14:56:26.000Z",
-          "wordCount": 415,
-          "title": "[分享创造] 原研药查询小程序：原研汇 v1.1 更新计划",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111699#reply5",
-          "author": null,
-          "description": "如题，楼主戴入耳式耳机非常容易出现耳道瘙痒的症状，即使经常清洗耳机也是如此。头戴式则夏天非常闷热，而且侧躺休息时用不了。\n后面发现了开放式耳机这一类型，先后使用过 fill gs 和积速轻巧腔，体验都非常满意。之前最让我担心的漏音问题它们都能控制得很好，正常办公环境、社交距离下都完全听不到。音质方面和入耳式确实有差异，但是听一些常见的流行音乐还是合格的。\n但是蓝牙耳机有一个最大的通病的延迟，在游戏场景，尤其是需要听声辨位的 3d 游戏中影响很大。积速轻巧腔还有一个自带麦拾音能力极差的问题，导致开麦、电话等功能几乎不可用。\n因此希望找一些有线的开放式耳机，主要在意声音表现、佩戴体验和隔音，至少整体不比轻巧腔差。另外如果它的麦克风比 iPad pro 差，最好有不带麦版本，省一个屏蔽转接头。\n目前考虑中的几个耳机：\nntt nwm wired：日产的耳机，折合人民币四百多。看官方介绍主打佩戴、隔音、麦。但是没找到靠谱的第三方评测，不知道音质方面表现，以及官方的宣传有没有过度夸大，希望有买过的用户可以分享一下体验。另外这个从日本运过来时间也特别长。\nambie am02：大法子品牌，价格三百多，国内现货比较常见。这款耳夹式的，担心侧躺会比耳挂难受。另外看到过它的蓝牙版本评测，漏音严重、体感不如华强北。\nambie am02a：应该是上一款的高配版，价格到了八百。没找到更多信息。",
-          "link": "https://www.v2ex.com/t/1111699#reply5",
-          "publishedOn": "2025-02-15T14:31:34.000Z",
-          "wordCount": 391,
-          "title": "[耳机] 求推荐有线的开放式耳机。",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111696#reply8",
-          "author": null,
-          "description": "有知道具体情况的不",
-          "link": "https://www.v2ex.com/t/1111696#reply8",
-          "publishedOn": "2025-02-15T14:15:26.000Z",
-          "wordCount": 459,
-          "title": "[程序员] taro 好像烂尾了",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111695#reply0",
-          "author": null,
-          "description": "引言\n在深入学习和阅读智能体（ Agent ）相关的英文技术文章时，我发现传统的翻译软件和方法往往难以将这些文章准确、流畅地转换成地道的中文。逐字逐句的直译不仅导致\"翻译腔\"严重，还会使句子结构生硬，专业术语处理不当，这让读者理解起来非常吃力。\n为了解决这个问题，我开始探索各种 AI 工具，并借鉴了分段翻译再合并、反思改进、使用\"改写\"而非\"翻译\"等技巧，不断优化翻译流程。经过多次实验，我最终基于 Dify 平台构建了一个 AI 驱动的多轮评审润色 Workflow ，成功实现了将英文技术文章（涵盖 AI 、编程、产品、商业等领域，尤其是智能体相关内容）高质量地改写为中文的目标。\n这个 Workflow 不仅能准确传达原文信息，还能使改写后的文章语言流畅自然，完全符合中文表达习惯和技术领域的专业规范。更重要的是，它能同时兼顾技术人员和普通读者的阅读体验，让不同背景的读者都能轻松理解文章内容。\n本文将详细分享我的实践经验，包括 Workflow 的整体设计、Prompt Engineering 的技巧、模型选择以及后续的排版和发布流程。希望我的经验能帮助大家更好地利用 AI 提升内容创作的效率和质量，也希望能为那些和我一样在阅读英文技术资料时遇到困难的读者提供一些帮助。最终的目标是，通过这个流程，我可以高效地产出和分享高质量的中文技术博客，与更多人一起学习和交流。\n为什么需要多轮评审润色？\n单纯的\"翻译\"或\"改写\"往往难以满足高质量内容的要求。即使是初步改写后的文本，也可能存在以下问题：\n语言层面： 表达不够地道、用词欠准确、句式结构不符合中文习惯。\n内容层面： 信息存在缺失或偏差、逻辑不够清晰、专业术语处理不当。\n风格层面： 语气前后不一致、不符合目标读者（技术人员和普通读者）的阅读习惯。\n为了解决这些问题，我设计了一个多轮评审润色流程，通过多个 LLM 从不同维度对改写后…",
-          "link": "https://www.v2ex.com/t/1111695#reply0",
-          "publishedOn": "2025-02-15T14:05:52.000Z",
-          "wordCount": 652,
-          "title": "[分享创造] 分享一个基于大语言模型驱动的多轮评审的高质量英文文章翻译方案",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111693#reply3",
-          "author": null,
-          "description": "目前是自己的第一个小程序,欢迎各位大佬访问\n小程序名称\n随机选食物吃\n小程序码\n\n玩法\n可以使用系统的默认食物组，来每次随机。也可以自己定义食物组，然后自己个性化随机食物\n前端\n用的 vant 组件，本来想用 taro-ui 的，但是不知道咋回事，环境搭建总是有问题;\n样式是最后用 deepseek 给我优化的，话说，优化样式确实不错，对于后端选手来说，写的比我强多了。给出样式后，自己再微调一点就行，很不错。\n后端\n用的煎鱼的一个 blog 的 golang 的脚手架（ gin+redis+mysql ）\n目前困惑\n小程序如何推广呀",
-          "link": "https://www.v2ex.com/t/1111693#reply3",
-          "publishedOn": "2025-02-15T13:32:50.000Z",
-          "wordCount": 407,
-          "title": "[分享创造] 随机食物小程序",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111691#reply2",
-          "author": null,
-          "description": "背景：最近几个月 bybit 澳区卡放水，简单 kyc 即可开卡，每笔返利最高可达 15%，币圈人狂喜？\n注意事项：\n听说 bybit 是没计划给国区用户用的，所以如果长期使用该卡在 cn 可能后期会锁卡，或要求提供对应的地址证明（当然也可能啥也没事）\n国区用户无法直接买或换法币，每次消费都会扣除 1.9%损耗，消费卡对应币种的商品为 0.9%（澳区卡为 USD ）\n欧区的卡质量比澳区的好，能开欧区的最好开欧区的，当然也可以全开\n由于开闸放水，开卡人太多，如果掺入点洗钱的，后面可能卡会被部分商家禁用（参考上一代 u 卡，onekey 同时期的卡）\n注意诈骗，最近非常多人发 bybit 的邀请链接，建议新手谨慎入场，交易请走平台，避免大额交易",
-          "link": "https://www.v2ex.com/t/1111691#reply2",
-          "publishedOn": "2025-02-15T13:11:11.000Z",
-          "wordCount": 389,
-          "title": "[分享发现] bybitCard 最近挺火的，但请注意",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111690#reply6",
-          "author": null,
-          "description": "今天在学习如何计算投资的年化收益率，了解到通常使用 XIRR 来计算，但是遇到一个问题，没想明白，V 站卧虎藏龙，来请教大佬了。\n日期\n行为\n金额\n\n\n\n\n2020/1/1\n投入\n100\n\n\n2021/1/1\n赎回\n1000\n\n\n2022/1/1\n投入\n1000\n\n\n2023/1/1\n赎回\n120\n\n\n从最初投入 100 元，到最后到手 120 元，所以总共盈利了 20 元，但是使用 XIRR 来计算年化收益率，结果是 -2.94%，该如何理解这件事？",
-          "link": "https://www.v2ex.com/t/1111690#reply6",
-          "publishedOn": "2025-02-15T13:07:01.000Z",
-          "wordCount": 516,
-          "title": "[投资] XIRR 计算年化收益率为负，但总收益金额为正，该如何理解？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111688#reply2",
-          "author": null,
-          "description": "小米公司成立于 2010 年 4 月。",
-          "link": "https://www.v2ex.com/t/1111688#reply2",
-          "publishedOn": "2025-02-15T12:59:55.000Z",
-          "wordCount": 367,
-          "title": "[分享发现] 小米公司创立 15 年了",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111687#reply14",
-          "author": null,
-          "description": "之前看的医疗类和破案类就很有意思，能坚持看下去，求推荐能更新日剧比较新的渠道",
-          "link": "https://www.v2ex.com/t/1111687#reply14",
-          "publishedOn": "2025-02-15T12:56:33.000Z",
-          "wordCount": 509,
-          "title": "[问与答] 请教下各位看日剧有哪些渠道？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111686#reply3",
-          "author": null,
-          "description": "我在学习使用 cursor 编辑器，chat 和 composer 确实很好用，但是我怎样才能删除问询的记录呢？\n还是 cursor 的产品设计就是这样的用意？",
-          "link": "https://www.v2ex.com/t/1111686#reply3",
-          "publishedOn": "2025-02-15T12:51:04.000Z",
-          "wordCount": 412,
-          "title": "[程序员] Cursor 编辑器，如何删除 chat 和 composer 的记录？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111685#reply0",
-          "author": null,
-          "description": "最近在做一些数字内容创作时，我发现了一个挺有意思的工具，叫做 Animate Anyone ，它使用 AI 技术把静态人物图像转化成动态的角色动画。原本我以为这类工具效果不怎么样，但试用了一下，感觉还挺惊艳的，尤其是在做虚拟偶像和游戏角色时，能大大节省时间。\n这款工具的核心是基于图像到视频的转换，能够保持人物的外观一致性，同时通过姿势引导器对动画的动作进行精准控制。我特别喜欢它平滑过渡的功能，动作过渡非常自然。感觉它不仅适用于时尚视频、舞蹈动作合成，甚至在电影、游戏开发中都能派上用场。\n如果你也是做创作的，尤其是在做角色动画，强烈推荐试试看。个人觉得这个工具能在一定程度上改变我们制作角色动画的方式，可能会帮你节省不少时间和精力。\n顺便分享一下这个链接： https://animateanyoneai.ai ，有兴趣的可以去了解一下。",
-          "link": "https://www.v2ex.com/t/1111685#reply0",
-          "publishedOn": "2025-02-15T12:17:15.000Z",
-          "wordCount": 349,
-          "title": "[分享发现] 有没有人试过用 AI 来生成角色动画？我发现了一个有趣的工具",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111684#reply65",
-          "author": null,
-          "description": "我先来吧:  \n雅尼的 Nightingale 和 with an orchid  \nThe truth that you leave\nAnnie's Wonderland\n风居住的街道\nWindy hill",
-          "link": "https://www.v2ex.com/t/1111684#reply65",
-          "publishedOn": "2025-02-15T12:10:04.000Z",
-          "wordCount": 1018,
-          "title": "[音乐] 你们心中可以封神的音乐有哪些?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111683#reply4",
-          "author": null,
-          "description": "＃ 背景\n楼主在广州，25 应届生，还没毕业，最近接了一个广州的 offer （ ai 应用相关的岗），公司不算小，全国有分公司，估计有几百人，互联网行业。\n薪资构成是：基础薪资 2.3k ＋项目奖金＝ 9k 。\n然后 HR 说公司没有其他的绩效考核，意思好像就是 9k 基本是能拿满的。\n＃ 楼主的问题\n这个薪资结构在广州互联网公司是常见的吗？我知道很多公司都想少交五险一金，这样设置的一大目的也是这个。如果大部分公司都是这样设置薪资结构，那楼主再等其他 offer （可能也是这样的薪资结构）就没啥必要了。\n2.hr 说公司是没有绩效考核的。这里会有坑吗，如果没有具体的绩效制度，那剩下的那些项目奖金是一定得发的，还是公司还能找到其他理由扣呢？\n3.如果是没有按事先约定好的具体评定规则扣我的薪资，这种行为再后续和公司谈或者仲裁中对我有利吗？\n＃最后最后\n楼主目前也是年后投了简历之后面试了一个星期，对这家的印象还行，按他们的说法加班也不严重（起码不像其他一些游戏公司直接挑明就是加班严重，甚至通宵）,就只是这个薪资结构有点膈应人。有别的 offer 楼主肯定选了，目前就是因为其他的 offer 没回可能也要到下周一才有消息，卡在一个尴尬的位置。\n如果后面进去一边实习一边再找 offer ，骑驴找马这样可行吗。\n望 v 站各位经验老道，尤其是广州这边的哥们指点一下。🥰🥰",
-          "link": "https://www.v2ex.com/t/1111683#reply4",
-          "publishedOn": "2025-02-15T12:10:00.000Z",
-          "wordCount": 419,
-          "title": "[广州] 广州 薪酬结构",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111682#reply1",
-          "author": null,
-          "description": "晚上想带着孩子一起运动，外面太冷又在下雨，想带着孩子晚上玩一些体感游戏。目前在用《天天跳绳》 APP 里面的体感游戏，但是广告无处不在，多到令人发指的地步了。所以想换个 APP 试试看，所以来问问大家。\n诉求如下：\n1.游戏好玩\n2.广告少\n3.动作识别准确\n有这方面经验的小伙伴，欢迎来分享一下经验！非常感谢！",
-          "link": "https://www.v2ex.com/t/1111682#reply1",
-          "publishedOn": "2025-02-15T11:54:50.000Z",
-          "wordCount": 392,
-          "title": "[问与答] 各位，求推荐好玩的体感游戏 APP",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111681#reply4",
-          "author": null,
-          "description": "现在的中文 AppleIntelligence 还没上线，但是经常有照片消除的需求，而醒图、美图秀秀等软件又都需要会员。\n所以想问一下大家有没有推荐的照片消除工具呢？我可以接受买断制付费。",
-          "link": "https://www.v2ex.com/t/1111681#reply4",
-          "publishedOn": "2025-02-15T11:31:07.000Z",
-          "wordCount": 397,
-          "title": "[Apple] 求推荐 iOS 中的照片消除软件",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111680#reply13",
-          "author": null,
-          "description": "之前一直在 mac 端使用 Raycast 这款启动器，觉得挺好用也挺好看的，特别是里面的快捷链接功能，非常的好用。\n后面每次用自己的 Windows 的时候，总是感觉少了点什么，于是开始在网上搜寻 Windows 端的启动器软件方案。\n大概都看了个遍，被 Raycast 的 UI 惯坏的我基本都觉得 UI 太丑了，utools 算是其中看得过去的一款，不过采用 Electron 开发的，感觉这种轻量化的软件用 Electron 太重了，而且界面也只是看得过去，并不是非常好看。\n刚好刷视频的时候刷到一个叫 Tauri 的框架，说是可以不带 Chrome 内核，并且基于 Rust 开发（当时正好想学 Rust ），于是我就干脆自己用 Tauri 开发了一款 UI 酷似 Raycast 的启动器软件，取名也长得很像 Raycast：Sofast 。\n同时，我发现这类启动器软件的名字一般都是英文名，即使是国内开发者开发的，大多也只有英文名，我还是想给它起个中文名的，于是简单把 Sofast 直译为 “如此快”，同时为了更好听，省去了 ”此“ 字，虽然从名字上来讲好像跟原意相反了，不过想到能和之前的热梗 ”他来了吗，如来“ 联动，于是就叫他 ”如快“ 了。\n\n就不多介绍了，感兴趣可以去这篇帖子看看\n目前开发了接近五个月左右，各位有兴趣可以试试，欢迎反馈交流。\n相关链接：\n官网：如快启动器\n开发者文档：如快插件开发者文档\n反馈群：QQ 群",
-          "link": "https://www.v2ex.com/t/1111680#reply13",
-          "publishedOn": "2025-02-15T11:14:47.000Z",
-          "wordCount": 605,
-          "title": "[分享创造] 用 Tauri 开发了一个跟 Raycast 长得一样的跨平台启动器",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111678#reply2",
-          "author": null,
-          "description": "用的是 orico-tb4 雷电四扩展坞，之所以怀疑是扩展坞的问题是因为我的两个 mac 使用这个扩展坞时都会有这个问题，问题表现如下：\n电脑睡眠后，会无规律地突然开始自动播放音乐，并且将音量开到最大；\n这时候如果解锁进入系统把音量调小，神秘的力量又会把音量拉满。。\ncmd+q 退出 music ，也会重新启动 music 并播放音乐。\n毫无头绪，求有过类似经历的大佬们给个排查思路",
-          "link": "https://www.v2ex.com/t/1111678#reply2",
-          "publishedOn": "2025-02-15T11:03:19.000Z",
-          "wordCount": 375,
-          "title": "[macOS] 求助一个很诡异的扩展坞问题",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1111677#reply1",
-          "author": null,
-          "description": "分享一个写的网页 online 魔方。可以操作魔方\nhttps://rustpoint.com/blog/cube\n还有博客新写的一篇交互式魔方复原博客。https://rustpoint.com/blog/read/%2F%E9%AD%94%E6%96%B9%E5%A4%8D%E5%8E%9F%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%20-%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8.md\n主要是想吸引一波关注，交换下友链。",
-          "link": "https://www.v2ex.com/t/1111677#reply1",
-          "publishedOn": "2025-02-15T10:54:40.000Z",
-          "wordCount": 369,
-          "title": "[分享创造] 小工具，交互式魔方，在线玩魔方",
-          "imageUrl": null
         }
       ]
     },
@@ -26305,6 +26365,56 @@
       "feedUrl": "https://sspai.com/feed",
       "siteUrl": "https://sspai.com",
       "articles": [
+        {
+          "id": "https://sspai.com/post/97452",
+          "author": "少数派编辑部",
+          "description": "欢迎收看本期《派评》。你可以通过文章目录快速跳转到你感兴趣的内容。如果发现了其它感兴趣的App或者关注的话题，也欢迎在评论区和我们讨论，也提前祝各位新春快乐。值得关注的新App虽然少数派一直在为大家发 ...查看全文",
+          "link": "https://sspai.com/post/97452",
+          "publishedOn": "2025-03-17T10:09:35.000Z",
+          "wordCount": 791,
+          "title": "派评 | 近期值得关注的 App",
+          "imageUrl": "https://cdnfile.sspai.com/2025/3/17/article/6b80845e-967f-d939-3be5-74def8421b84.png"
+        },
+        {
+          "id": "https://sspai.com/post/96626",
+          "author": "洛世",
+          "description": "在我看来，新车确实更好更棒，但最好用的车就是已出发上路、能够满足自己出行需求的车。与其盲目追求最新款，不如选择一款适合自己、性价比高的车型，让车真正成为生活的好帮手。查看全文",
+          "link": "https://sspai.com/post/96626",
+          "publishedOn": "2025-03-17T09:09:02.000Z",
+          "wordCount": 875,
+          "title": "五万公里的陪伴，小鹏 P7 使用体验分享",
+          "imageUrl": "https://cdnfile.sspai.com/2025/03/09/17851403441eb59026895d926e665fd8.jpg"
+        },
+        {
+          "id": "https://sspai.com/post/97408",
+          "author": "水獭Store",
+          "description": "如果你最近有关注我派的共创项目，可能已经对GAMEBABY这款手机壳有所了解，我们上周五也在@BitmoLab的小红书账号开启了直播，对GAMEBABY进行了首批的抢先发售。如果你恰好错过了直播，也对 ...查看全文",
+          "link": "https://sspai.com/post/97408",
+          "publishedOn": "2025-03-17T08:00:25.000Z",
+          "wordCount": 637,
+          "title": "在 iPhone 上畅玩复古游戏，GAMEBABY 手机壳",
+          "imageUrl": "https://cdnfile.sspai.com/2025/3/17/article/4c1d69cb-6faa-c442-04a3-62f68dcc4946.png"
+        },
+        {
+          "id": "https://sspai.com/post/97101",
+          "author": "宛潼",
+          "description": "以极低的成本，获得一个能在 Apple 家庭 app 控制的彩光灯带设备。查看全文",
+          "link": "https://sspai.com/post/97101",
+          "publishedOn": "2025-03-17T03:00:56.000Z",
+          "wordCount": 1225,
+          "title": "兑现一个两年前的承诺：流光溢彩显示器氛围灯更新小记",
+          "imageUrl": "https://cdnfile.sspai.com/2025/03/07/9b45bc39efe6691a10719316fe1388c3.jpg"
+        },
+        {
+          "id": "https://sspai.com/post/97417",
+          "author": "少数派编辑部",
+          "description": "你可能错过的新鲜事市场监管总局公布3·15晚会曝光问题初步核查处置情况据澎湃新闻报道，针对中央广播电视总台3·15晚会曝光的市场监管领域违法行为，市场监管总局连夜部署各地开展执法行动，依法从严从快处置 ...查看全文",
+          "link": "https://sspai.com/post/97417",
+          "publishedOn": "2025-03-17T00:04:27.000Z",
+          "wordCount": 788,
+          "title": "派早报：3·15 晚会曝光问题初步核查处置情况公布",
+          "imageUrl": "https://cdnfile.sspai.com/3/17/2025/article/73f9bbec-ddfb-16d0-292c-e3cac4cc01fe.png"
+        },
         {
           "id": "https://sspai.com/post/96945",
           "author": "Xcbyao",
@@ -27324,16 +27434,6 @@
           "wordCount": 842,
           "title": "派早报：微信、百度接入 DeepSeek",
           "imageUrl": "https://cdnfile.sspai.com/2/17/2025/article/34c20432-15cb-7182-010a-88a0e27ca363.png"
-        },
-        {
-          "id": "https://sspai.com/post/96156",
-          "author": "午夜煎饼",
-          "description": "这是一篇对猫好人好都特好的文章，我们将详细介绍如何更好地撸猫。查看全文",
-          "link": "https://sspai.com/post/96156",
-          "publishedOn": "2025-02-16T07:00:00.000Z",
-          "wordCount": 567,
-          "title": "做合格「猫奴」，从学会正确撸猫开始",
-          "imageUrl": "https://cdnfile.sspai.com/2025/02/08/f2351a8f10d28f7c38ed49990e2fd8f6.jpg"
         }
       ]
     },
@@ -27452,6 +27552,16 @@
       "feedUrl": "https://github.com/shenweiyan/Knowledge-Garden/discussions.atom",
       "siteUrl": "https://github.com/shenweiyan/Digital-Garden/discussions",
       "articles": [
+        {
+          "id": "https://github.com/shenweiyan/Digital-Garden/discussions/104",
+          "author": null,
+          "description": "一次性代理\ngit clone -c http.proxy=\"http://127.0.0.1:1080\" https://github.com/\n\n全局设置代理\ngit config --global https.proxy http://127.0.0.1:1080\ngit config --global https.proxy https://127.0.0.1:1080\ngit config --global --unset http.proxy\ngit config --global --unset https.proxy\n\n参考资料\ngit 设置和取消代理",
+          "link": "https://github.com/shenweiyan/Digital-Garden/discussions/104",
+          "publishedOn": "2025-03-17T01:49:33.000Z",
+          "wordCount": 563,
+          "title": "git clone 设置临时代理",
+          "imageUrl": "https://opengraph.githubassets.com/6911732954055aeaa11ba91c6a9205a7933f06f3c20e7f78b68c5a0b9b3e5fe0/shenweiyan/Digital-Garden/discussions/104"
+        },
         {
           "id": "https://github.com/shenweiyan/Digital-Garden/discussions/102",
           "author": null,
