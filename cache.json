@@ -12,6 +12,206 @@
       "siteUrl": "https://news.ycombinator.com/",
       "articles": [
         {
+          "id": "https://news.ycombinator.com/item?id=48999291",
+          "author": "piotrgrabowski",
+          "description": "Article URL: https://fireworks.ai/blog/kimik3-fable\nComments URL: https://news.ycombinator.com/item?id=48999291\nPoints: 9\n# Comments: 0",
+          "link": "https://fireworks.ai/blog/kimik3-fable",
+          "publishedOn": "2026-07-21T22:35:24.000Z",
+          "wordCount": 6505,
+          "title": "Kimi K3 Is Competitive with Fable; Kimi K3 and Fable Is SoTA",
+          "imageUrl": "https://cdn.sanity.io/images/pv37i0yn/production/20f8c70f38eafef67a612b55a1f242a291eee1a9-1600x900.png"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=48998828",
+          "author": "yuansong98",
+          "description": "Hey we are Computable. We spent years building trading infrastructure at Jump Trading and Coinbase. From that point of view, compute looks like energy markets before 2000: everything trades through private bilateral leases, there’s no visible price, and nothing can be resold. The same H100 rents at a 2x spread depending on who’s asking, and once you sign a 24-month lease, it can never change hands.\nSo we built a market for GPU nodes, sold by the calendar week. Here are three things you can do on it that you can’t do anywhere else:\n- Buy exactly the weeks you need. Three nodes for the last two weeks of October means you pay for those two weeks and walk away when the run is done. You don't have to commit to 6-24 months, and there's no flexibility premium.\n- Sell back what you don’t use. If your plans change, unused weeks turn back into cash: we keep a market quote posted on every position, so there’s always a price to hit.\n- Buy (or sell) the future. Lock January in July at a price you set, so the cost of a future run is known before another 40% H100 rate jump makes it not.\nThe first auction is live now at https://market.getcomputable.com: a block of nodes, August through the end of January. Bidding closes July 31. The bids are sealed. You bid how many nodes, which weeks, and your price. Every clearing price gets published after settlement, because nobody knows what a GPU week is worth and we want the prints to exist in public.\nHappy to go deep in the comments on anything, including the clearing mechanism, which is a packing problem and was fun to design!\nComments URL: https://news.ycombinator.com/item?id=48998828\nPoints: 7\n# Comments: 4",
+          "link": "https://www.getcomputable.com/",
+          "publishedOn": "2026-07-21T21:48:19.000Z",
+          "wordCount": 1025,
+          "title": "Show HN: Computable – Buy, sell, and redeem GPU for the exact weeks you want",
+          "imageUrl": "https://computable-site.vercel.app/assets/computable-pfp.png"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=48998404",
+          "author": "hershyb_",
+          "description": "Article URL: https://www.tryai.dev/blog/ai-drawing-arena-colored-pencils-claude-gpt-grok\nComments URL: https://news.ycombinator.com/item?id=48998404\nPoints: 35\n# Comments: 11",
+          "link": "https://www.tryai.dev/blog/ai-drawing-arena-colored-pencils-claude-gpt-grok",
+          "publishedOn": "2026-07-21T21:13:20.000Z",
+          "wordCount": 4418,
+          "title": "\"Drawing\" the Mona Lisa with GPT-5.6, Claude, Gemini, and Grok",
+          "imageUrl": "https://www.tryai.dev/blog/ai-drawing-arena-colored-pencils-claude-gpt-grok/opengraph-image-yqks0s?3313ef8f7f360358"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=48998362",
+          "author": "jeremyscanvic",
+          "description": "Article URL: https://terrytao.wordpress.com/2026/07/21/a-digestion-of-the-jacobian-conjecture-counterexample/\nComments URL: https://news.ycombinator.com/item?id=48998362\nPoints: 76\n# Comments: 19",
+          "link": "https://terrytao.wordpress.com/2026/07/21/a-digestion-of-the-jacobian-conjecture-counterexample/",
+          "publishedOn": "2026-07-21T21:09:25.000Z",
+          "wordCount": 6053,
+          "title": "A digestion of the Jacobian conjecture counterexample",
+          "imageUrl": "https://secure.gravatar.com/blavatar/bd4bda4207561b6998f10dec44b570f04ff4072b20f89162d525b186dfca3e49?s=200&ts=1784673657"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=48998262",
+          "author": "tanishqkanc",
+          "description": "We’re open-sourcing Browser Tools SDK: a small TypeScript package to give any AI agent a reliable way to control a real browser. With just a few lines of code, you can give any agent a production-ready browser harness\n  import { createAiSdkBrowserTools } from \"libretto-browser-tools/ai-sdk\";\n  import { LocalBrowserProvider } from \"libretto-browser-tools\";\n\n  const { tools } = createAiSdkBrowserTools(new LocalBrowserProvider());\n\n  const result = await generateText({\n    model: anthropic(\"claude-sonnet-4-5\"),\n    tools,\n    prompt: \"Go to Hacker News and tell me the top story\",\n  });\n\nWe compared Browser Tools SDK against agent-browser, playwright-cli, and dev-browser on 26 live-site tasks with GPT 5.6 Sol (best results from 3 runs). Browser Tools tied for the best pass rate at 24/26 and came in about 55% cheaper per successful task than the next alternative ($0.106 vs $0.235) while also using far fewer tokens (1.45M vs 2.29M+). Benchmark methodology is in the repo.\nThe Browser Tools SDK only exposes 6 tools, of which only 2 are really important: `browser_snapshot` and `browser_exec`. The snapshot tool was designed from the ground up to be extremely context-efficient and provide agents the overview they need to know what to try next. The exec tool takes and executes raw Playwright code, of which the models have been trained on heaps of, and know how to use without much direction.\nWorks with AI SDK and Pi out of the box, plus a custom path for anything else. More frameworks are coming soon. You can also use any browser infra provider (Libretto Cloud, Kernel, Browserbase, etc.) or use `LocalBrowserProvider` to run Chromium locally (although that will have less anti-bot protections).\nMIT licensed. Check out the docs: https://libretto.sh/docs/browser-tools/quickstart and join the Discord: https://discord.gg/NYrG56hVDt.\nWe’d love any and all feedback.\nComments URL: https://news.ycombinator.com/item?id=48998262\nPoints: 6\n# Comments: 1",
+          "link": "https://libretto.sh/browser-tools",
+          "publishedOn": "2026-07-21T21:01:57.000Z",
+          "wordCount": 491,
+          "title": "Show HN: Browser Tools SDK – an optimal browser harness for agents",
+          "imageUrl": "https://libretto.sh/og/browser-tools.png"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=48997548",
+          "author": "mfiguiere",
+          "description": "https://www.axios.com/2026/07/21/openai-says-hugging-face-br...\nSee also Security incident disclosure – July 2026 - https://news.ycombinator.com/item?id=48956248 (9 comments)\nComments URL: https://news.ycombinator.com/item?id=48997548\nPoints: 453\n# Comments: 294",
+          "link": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+          "publishedOn": "2026-07-21T20:09:52.000Z",
+          "wordCount": null,
+          "title": "OpenAI and Hugging Face address security incident during model evaluation",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=48997221",
+          "author": "healsdata",
+          "description": "Article URL: https://www.techradar.com/vpn/vpn-privacy-security/vpns-are-lawful-technical-tools-says-eu-court-in-landmark-anne-frank-copyright-ruling\nComments URL: https://news.ycombinator.com/item?id=48997221\nPoints: 261\n# Comments: 46",
+          "link": "https://www.techradar.com/vpn/vpn-privacy-security/vpns-are-lawful-technical-tools-says-eu-court-in-landmark-anne-frank-copyright-ruling",
+          "publishedOn": "2026-07-21T19:43:59.000Z",
+          "wordCount": 49091,
+          "title": "'VPNs are lawful technical tools,' says EU Court in landmark copyright ruling",
+          "imageUrl": "https://cdn.mos.cms.futurecdn.net/5NsvMB6arEjzGkWxkstoDj-1920-80.jpg"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=48996571",
+          "author": "montecarl",
+          "description": "Article URL: https://ads.openai.com/\nComments URL: https://news.ycombinator.com/item?id=48996571\nPoints: 240\n# Comments: 233",
+          "link": "https://ads.openai.com/",
+          "publishedOn": "2026-07-21T18:58:44.000Z",
+          "wordCount": null,
+          "title": "Advertise in ChatGPT",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=48996364",
+          "author": "andyjohnson0",
+          "description": "Article URL: https://happiness-science.org/price-of-happiness/\nComments URL: https://news.ycombinator.com/item?id=48996364\nPoints: 45\n# Comments: 17",
+          "link": "https://happiness-science.org/price-of-happiness/",
+          "publishedOn": "2026-07-21T18:42:46.000Z",
+          "wordCount": 8969,
+          "title": "The Price of Happiness (2024)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=48996325",
+          "author": "rickkjp",
+          "description": "Article URL: https://github.com/Hikari-Systems/slater\nComments URL: https://news.ycombinator.com/item?id=48996325\nPoints: 32\n# Comments: 9",
+          "link": "https://github.com/Hikari-Systems/slater",
+          "publishedOn": "2026-07-21T18:39:41.000Z",
+          "wordCount": 21500,
+          "title": "Slater – Low-memory graphdb designed for read-heavy graphs",
+          "imageUrl": "https://opengraph.githubassets.com/6c23063df83d311ee0d3e526f03c21568a4f2bbbb9faeaaa046e38d10cfb1d88/Hikari-Systems/slater"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=48996318",
+          "author": "FriedPickles",
+          "description": "Article URL: https://freeink.org/\nComments URL: https://news.ycombinator.com/item?id=48996318\nPoints: 313\n# Comments: 70",
+          "link": "https://freeink.org/",
+          "publishedOn": "2026-07-21T18:39:06.000Z",
+          "wordCount": 10,
+          "title": "FreeInk: Open ecosystem for e-readers",
+          "imageUrl": "https://freeink.org/og-image.png"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=48996236",
+          "author": "joeyespo",
+          "description": "Article URL: https://help.trmnl.com/en/articles/14130438-ai-agent\nComments URL: https://news.ycombinator.com/item?id=48996236\nPoints: 36\n# Comments: 20",
+          "link": "https://help.trmnl.com/en/articles/14130438-ai-agent",
+          "publishedOn": "2026-07-21T18:32:21.000Z",
+          "wordCount": 2784,
+          "title": "AI Agent – TRMNL",
+          "imageUrl": "https://downloads.intercomcdn.com/i/o/v9ws3u2x/617860/0719b051b2786587572435169af6/15dbde1828ef9f85e25740f9aad788d4.jpg"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=48996187",
+          "author": "kalcode",
+          "description": "I built this with Claude cause I always wanted to tinker with a simulation economoy and I love space themes.\nA space-economy sim where nothing is scripted. A few hundred autonomous ships each run their own planner. Some chase the best trade route, take a delivery contract, refuel, retrofit at a shipyard, or dock so the crew can rest before morale tanks.\nMarkets price everything off supply with shortage-urgency multipliers, factions tax and subsidize, populations migrate when they're unhappy, and stations that go broke get abandoned and rot.\nIt started as an Elixir/Phoenix prototype, but the BEAM scheduler struggled on Windows gaming PCs, so I had Claude rewrite the engine in Rust.\nThe sim core is pure, synchronous, IO-free (its own hecs ECS), and the Bevy client embeds it directly as a library, sim and renderer share one world with zero marshalling. Ship AI is a GOAP planner over a world state; ships replan mid-flight when a better option appears. ~485 agents today at p50 ~10-20ms/tick, architected to push toward 100k+. Single native binary, bundled SQLite, no runtime deps. Getting into 100k has been a struggle, but I have pushed it into the thousand and it was running fine.\nIt's a sandbox, not a game yet, there's no objective yet, and I'm not actively pushing it toward \"shippable.\" Anyone can fork it and take it over. Or it can stay as some type of AI slop, but part of me thinks it is already in a pretty good shape for a simulation use for various games or ideas.\n(Full disclosure: a lot of this was built pairing with Claude. That's how I had the bandwidth to take it this far. Happy to talk about what that workflow actually looked like.)\nComments URL: https://news.ycombinator.com/item?id=48996187\nPoints: 66\n# Comments: 23",
+          "link": "https://github.com/Kalcode/spaceprojectsim",
+          "publishedOn": "2026-07-21T18:29:57.000Z",
+          "wordCount": 5152,
+          "title": "Show HN: A self-running space economy SIM in Rust and Bevy",
+          "imageUrl": "https://opengraph.githubassets.com/7c5af9d576ec1846a9a913edc0a496a9775ec38aaf0693ab856234512c8c7ebe/Kalcode/spaceprojectsim"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=48995796",
+          "author": "throwfaraway4",
+          "description": "Article URL: https://support.apple.com/guide/certifications/apple-private-cloud-compute-soc-3-audit-apc95a31b9d8/web\nComments URL: https://news.ycombinator.com/item?id=48995796\nPoints: 76\n# Comments: 32",
+          "link": "https://support.apple.com/guide/certifications/apple-private-cloud-compute-soc-3-audit-apc95a31b9d8/web",
+          "publishedOn": "2026-07-21T17:58:21.000Z",
+          "wordCount": 21246,
+          "title": "Apple Private Cloud Compute SoC 3 audit reports",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=48995261",
+          "author": "rexledesma",
+          "description": "Article URL: https://poolside.ai/blog/introducing-laguna-s-2-1\nComments URL: https://news.ycombinator.com/item?id=48995261\nPoints: 191\n# Comments: 41",
+          "link": "https://poolside.ai/blog/introducing-laguna-s-2-1",
+          "publishedOn": "2026-07-21T17:17:06.000Z",
+          "wordCount": 7636,
+          "title": "Laguna S 2.1",
+          "imageUrl": "https://cdn.sanity.io/images/n259s8jk/production/58719108368a357e8825d9ff7d40e46242edce3a-1200x628.png"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=48995213",
+          "author": "ryanmerket",
+          "description": "https://x.com/jack/status/2079605800998146171, https://xcancel.com/jack/status/2079605800998146171\nhttps://buzz.xyz/\nComments URL: https://news.ycombinator.com/item?id=48995213\nPoints: 189\n# Comments: 179",
+          "link": "https://runtimewire.com/article/jack-dorsey-block-buzz-team-chat-ai-agents-git",
+          "publishedOn": "2026-07-21T17:14:06.000Z",
+          "wordCount": 1854,
+          "title": "Jack Dorsey launches Buzz to combine team chat, AI agents and Git hosting",
+          "imageUrl": "https://runtimewire.com/og/jack-dorsey-block-buzz-team-chat-ai-agents-git.jpg"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=48995074",
+          "author": "surprisetalk",
+          "description": "https://www.energy.gov/undersecretaryforscience/genesis-miss...\nComments URL: https://news.ycombinator.com/item?id=48995074\nPoints: 87\n# Comments: 62",
+          "link": "https://ai.meta.com/blog/genesis-mission-lawrence-berkeley-national-laboratory-segment-anything-dino/?_fb_noscript=1",
+          "publishedOn": "2026-07-21T17:03:18.000Z",
+          "wordCount": 1321,
+          "title": "Meta's AI models are powering the first wave of Genesis Mission projects",
+          "imageUrl": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.2365-6/752631850_918439901272497_2117962010845605116_n.png?_nc_cat=103&ccb=1-7&_nc_sid=e280be&_nc_ohc=pryaHqlei_cQ7kNvwFWHUJG&_nc_oc=Adq5WgNQ9Xtq5zPcR8pKA47COdaiGMCd5CXSbWEgbgxHNbnoILa7T7838XCwCNH0Uy8&_nc_zt=14&_nc_ht=scontent-sjc3-1.xx&_nc_gid=pu2XkJHrsADzm2BQwMrWSg&_nc_ss=7320f&oh=00_AQDMjWbkFnqRxfd6WM03HE8aFiQRInhy1kysDzEKAVGofg&oe=6A7A287E"
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=48995037",
+          "author": "alexsouthmayd",
+          "description": "Comments URL: https://news.ycombinator.com/item?id=48995037\nPoints: 0\n# Comments: 0",
+          "link": "https://news.ycombinator.com/item?id=48995037",
+          "publishedOn": "2026-07-21T17:00:20.000Z",
+          "wordCount": 793,
+          "title": "Bloomy (YC S26) is hiring a founding engineer",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=48994716",
+          "author": "Cider9986",
+          "description": "Article URL: https://en.help.roblox.com/hc/en-us/articles/49648939984916-Android-Remote-Attestation\nComments URL: https://news.ycombinator.com/item?id=48994716\nPoints: 66\n# Comments: 9",
+          "link": "https://en.help.roblox.com/hc/en-us/articles/49648939984916-Android-Remote-Attestation",
+          "publishedOn": "2026-07-21T16:39:30.000Z",
+          "wordCount": null,
+          "title": "Roblox Officially Supports GrapheneOS",
+          "imageUrl": null
+        },
+        {
+          "id": "https://news.ycombinator.com/item?id=48994116",
+          "author": "Sami_Lehtinen",
+          "description": "Article URL: https://postquantum.com/security-pqc/anssi-pqc-certification-2027/\nComments URL: https://news.ycombinator.com/item?id=48994116\nPoints: 80\n# Comments: 38",
+          "link": "https://postquantum.com/security-pqc/anssi-pqc-certification-2027/",
+          "publishedOn": "2026-07-21T16:02:04.000Z",
+          "wordCount": 3459,
+          "title": "France's Anssi Will Block PQC-Free Products from Certification Starting 2027",
+          "imageUrl": "https://postquantum.com/wp-content/uploads/2026/06/ANSSI_Logo-1170x745.png"
+        },
+        {
           "id": "https://news.ycombinator.com/item?id=48985249",
           "author": "Cider9986",
           "description": "Article URL: https://mullvad.net/en/blog/donation-controversy\nComments URL: https://news.ycombinator.com/item?id=48985249\nPoints: 24\n# Comments: 13",
@@ -4600,186 +4800,6 @@
           "wordCount": 696,
           "title": "Moebius: 0.2B image inpainting model with 10B-level performance",
           "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=48622987",
-          "author": "JumpCrisscross",
-          "description": "Article URL: https://www.politico.com/news/2026/06/21/rent-collections-are-down-in-new-york-and-no-ones-sure-why-00966982\nComments URL: https://news.ycombinator.com/item?id=48622987\nPoints: 21\n# Comments: 15",
-          "link": "https://www.politico.com/news/2026/06/21/rent-collections-are-down-in-new-york-and-no-ones-sure-why-00966982",
-          "publishedOn": "2026-06-21T21:54:34.000Z",
-          "wordCount": null,
-          "title": "Rent collections are down in New York – and no one's sure why",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=48622867",
-          "author": "advisedwang",
-          "description": "Article URL: https://david.newgas.net/did-my-old-job-only-exist-because-of-fraud/\nComments URL: https://news.ycombinator.com/item?id=48622867\nPoints: 72\n# Comments: 17",
-          "link": "https://david.newgas.net/did-my-old-job-only-exist-because-of-fraud/",
-          "publishedOn": "2026-06-21T21:40:53.000Z",
-          "wordCount": null,
-          "title": "Did my old job only exist because of fraud?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=48622788",
-          "author": "worik",
-          "description": "Article URL: https://arstechnica.com/health/2026/06/fda-advisors-unanimously-vote-to-approve-modernas-mrna-after-agency-drama/\nComments URL: https://news.ycombinator.com/item?id=48622788\nPoints: 53\n# Comments: 27",
-          "link": "https://arstechnica.com/health/2026/06/fda-advisors-unanimously-vote-to-approve-modernas-mrna-after-agency-drama/",
-          "publishedOn": "2026-06-21T21:30:25.000Z",
-          "wordCount": 3440,
-          "title": "FDA advisors unanimously vote to approve Moderna's mRNA after agency drama",
-          "imageUrl": "https://cdn.arstechnica.net/wp-content/uploads/2020/12/GettyImages-1290558683.jpg"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=48622778",
-          "author": "T-A",
-          "description": "Article URL: https://apertvs.ai/\nComments URL: https://news.ycombinator.com/item?id=48622778\nPoints: 96\n# Comments: 24",
-          "link": "https://apertvs.ai/",
-          "publishedOn": "2026-06-21T21:29:43.000Z",
-          "wordCount": 346,
-          "title": "Apertus – Open Foundation Model for Sovereign AI",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=48622731",
-          "author": "thisislife2",
-          "description": "Article URL: https://powerfox.jazzzny.me/\nComments URL: https://news.ycombinator.com/item?id=48622731\nPoints: 33\n# Comments: 11",
-          "link": "https://powerfox.jazzzny.me/",
-          "publishedOn": "2026-06-21T21:23:13.000Z",
-          "wordCount": 291,
-          "title": "PowerFox Browser",
-          "imageUrl": "https://powerfox.jazzzny.me/assets/img/prodimg.png"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=48622626",
-          "author": "E-Reverance",
-          "description": "Article URL: https://alexkritchevsky.com/2026/05/25/everything-is-logarithms.html\nComments URL: https://news.ycombinator.com/item?id=48622626\nPoints: 64\n# Comments: 5",
-          "link": "https://alexkritchevsky.com/2026/05/25/everything-is-logarithms.html",
-          "publishedOn": "2026-06-21T21:10:32.000Z",
-          "wordCount": 7915,
-          "title": "Everything Is Logarithms",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=48622590",
-          "author": "mateenah",
-          "description": "Article URL: https://github.com/raiyanyahya/recall\nComments URL: https://news.ycombinator.com/item?id=48622590\nPoints: 43\n# Comments: 30",
-          "link": "https://github.com/raiyanyahya/recall",
-          "publishedOn": "2026-06-21T21:05:37.000Z",
-          "wordCount": 5548,
-          "title": "Stop wasting tokens and re explaining your project between sessions",
-          "imageUrl": "https://opengraph.githubassets.com/cf363a6502582faf10075fca279efff82c87928558b7481b7af269af284e6e0e/raiyanyahya/recall"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=48622234",
-          "author": "skogstokig",
-          "description": "Article URL: https://www.mooreds.com/wordpress/archives/3518\nComments URL: https://news.ycombinator.com/item?id=48622234\nPoints: 78\n# Comments: 36",
-          "link": "https://www.mooreds.com/wordpress/archives/3518",
-          "publishedOn": "2026-06-21T20:17:48.000Z",
-          "wordCount": 2609,
-          "title": "Ask for no, don't ask for yes (2022)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=48621645",
-          "author": "zhubert",
-          "description": "Howdy all. I'm Zack :wave:. I've been thinking about the problem of misguided AI pull requests and figured I'd throw a possible solution out there for feedback. Basically, CleverCrow lets supporters give tokens to a GitHub repo (or set of issues in that repo) for the maintainers to use to build/fix stuff. The fun implementation challenges have been around implementing the pooling dynamics and keeping the maintainers in charge while the backers are motivated to support their work.\nComments URL: https://news.ycombinator.com/item?id=48621645\nPoints: 27\n# Comments: 37",
-          "link": "https://clevercrow.io/",
-          "publishedOn": "2026-06-21T19:06:07.000Z",
-          "wordCount": 9253,
-          "title": "Show HN: CleverCrow: give tokens to your favorite projects",
-          "imageUrl": "https://clevercrow.io/og-card.png"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=48621517",
-          "author": "ethanhawksley",
-          "description": "Article URL: https://hawksley.dev/blog/json-ld-explained-for-personal-websites/\nComments URL: https://news.ycombinator.com/item?id=48621517\nPoints: 129\n# Comments: 34",
-          "link": "https://hawksley.dev/blog/json-ld-explained-for-personal-websites/",
-          "publishedOn": "2026-06-21T18:51:47.000Z",
-          "wordCount": 2343,
-          "title": "JSON-LD Explained for Personal Websites",
-          "imageUrl": "https://hawksley.dev/og/blog/json-ld-explained-for-personal-websites.png"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=48620504",
-          "author": "kaushikmahorker",
-          "description": "Article URL: https://www.ycombinator.com/companies/wildcard/jobs/SEmo4di-founding-applied-ml-engineer\nComments URL: https://news.ycombinator.com/item?id=48620504\nPoints: 0\n# Comments: 0",
-          "link": "https://www.ycombinator.com/companies/wildcard/jobs/SEmo4di-founding-applied-ml-engineer",
-          "publishedOn": "2026-06-21T17:00:28.000Z",
-          "wordCount": 2162,
-          "title": "Wildcard (YC W25) is hiring an applied ML engineer",
-          "imageUrl": "https://bookface-images.s3.amazonaws.com/logos/ded9c49e4caae76b5466102e61073e6b370cb326.png?1738308671"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=48620502",
-          "author": "consumer451",
-          "description": "My shortened story: due to factors in Soviet controlled Poland, my uncle played my dad role.\nHe took me to a quarry to fire Estes-style rocket cars, and all that.. he also managed to steal a Milicja (military police) siren from work, and put it on the back of my banana style bike. As an EE, he made it actually function.\nThanks to all the hackers who made us who we are.\nComments URL: https://news.ycombinator.com/item?id=48620502\nPoints: 216\n# Comments: 28",
-          "link": "https://news.ycombinator.com/item?id=48620502",
-          "publishedOn": "2026-06-21T17:00:26.000Z",
-          "wordCount": 1874,
-          "title": "Tell HN: Happy Fathers Day",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=48620342",
-          "author": "brandur",
-          "description": "Article URL: https://brandur.org/minimum-viable-unit\nComments URL: https://news.ycombinator.com/item?id=48620342\nPoints: 104\n# Comments: 46",
-          "link": "https://brandur.org/minimum-viable-unit",
-          "publishedOn": "2026-06-21T16:41:21.000Z",
-          "wordCount": 1818,
-          "title": "The minimum viable unit of saleable software",
-          "imageUrl": "https://brandur.org/assets/images/minimum-viable-unit/twitter@2x.jpg"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=48620090",
-          "author": "rafaepta",
-          "description": "Article URL: https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction\nComments URL: https://news.ycombinator.com/item?id=48620090\nPoints: 401\n# Comments: 271",
-          "link": "https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction",
-          "publishedOn": "2026-06-21T16:08:23.000Z",
-          "wordCount": 2859,
-          "title": "Prefer duplication over the wrong abstraction (2016)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=48619831",
-          "author": "tosh",
-          "description": "Article URL: https://norvig.com/lispy.html\nComments URL: https://news.ycombinator.com/item?id=48619831\nPoints: 159\n# Comments: 47",
-          "link": "https://norvig.com/lispy.html",
-          "publishedOn": "2026-06-21T15:36:33.000Z",
-          "wordCount": 4362,
-          "title": "(How to Write a (Lisp) Interpreter (In Python)) (2010)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=48618488",
-          "author": "paytonjjones",
-          "description": "Article URL: https://github.com/paytonjjones/bsharp\nComments URL: https://news.ycombinator.com/item?id=48618488\nPoints: 29\n# Comments: 13",
-          "link": "https://github.com/paytonjjones/bsharp",
-          "publishedOn": "2026-06-21T12:49:48.000Z",
-          "wordCount": 2042,
-          "title": "Show HN: Teach your kids perfect pitch",
-          "imageUrl": "https://opengraph.githubassets.com/7f1dbaca8c3dbb2e3668d09d7a4edb861a634c8995d648616ddaabcf4de5210a/paytonjjones/bsharp"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=48618455",
-          "author": "bathory",
-          "description": "https://old.reddit.com/r/ClaudeAI/comments/1ubm53n/official_...\nComments URL: https://news.ycombinator.com/item?id=48618455\nPoints: 491\n# Comments: 454",
-          "link": "https://support.claude.com/en/articles/14328960-identity-verification-on-claude",
-          "publishedOn": "2026-06-21T12:44:13.000Z",
-          "wordCount": 3574,
-          "title": "Identity verification on Claude",
-          "imageUrl": "https://downloads.intercomcdn.com/i/o/lupk8zyo/792494/717b10d3ebd874823db64841659b/76f3062d78ebbb04863fb1de3ef9cca0.png"
-        },
-        {
-          "id": "https://news.ycombinator.com/item?id=48617990",
-          "author": "mosiuerbarso",
-          "description": "Article URL: https://www.beyondallreason.info\nComments URL: https://news.ycombinator.com/item?id=48617990\nPoints: 413\n# Comments: 243",
-          "link": "https://www.beyondallreason.info/",
-          "publishedOn": "2026-06-21T11:38:01.000Z",
-          "wordCount": 2753,
-          "title": "Beyond All Reason (Free Total Annihilation Inspired RTS)",
-          "imageUrl": "https://cdn.prod.website-files.com/5c68622246b367adf6f3041d/60d97aab6fdf2731bde767e8_BAR_Web_OG-media-2021_1200_V2.png"
         }
       ]
     },
@@ -7006,6 +7026,56 @@
       "siteUrl": "https://www.reddit.com/r/Android/top?sort=top&t=day",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/Android/comments/1v2u5aq/android_17_qpr2_beta_1_new_hidden_features/",
+          "author": null,
+          "description": "submitted by    /u/DexLeMaffo  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/Android/comments/1v2u5aq/android_17_qpr2_beta_1_new_hidden_features/",
+          "publishedOn": "2026-07-21T20:24:12.000Z",
+          "wordCount": null,
+          "title": "Android 17 QPR2 Beta 1 – New & Hidden Features + Performance & Stability",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/Android/comments/1v2qk10/they_came_for_the_king_motorola_g_stylus_2026/",
+          "author": null,
+          "description": "submitted by    /u/ControlCAD  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/Android/comments/1v2qk10/they_came_for_the_king_motorola_g_stylus_2026/",
+          "publishedOn": "2026-07-21T18:17:55.000Z",
+          "wordCount": null,
+          "title": "They came for the King... - Motorola G Stylus 2026 Teardown & Durability Test - JerryRigEverything",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/Android/comments/1v2ge73/daily_superthread_jul_21_2026_your_daily_thread/",
+          "author": null,
+          "description": "Note 1. You can search for previous daily threads.\n Note 2. Join our IRC and Telegram chat-rooms! Please see our wiki for instructions.\n Please post your questions here. Feel free to use this thread for general questions/discussion as well.\n    submitted by    /u/curated_android  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/Android/comments/1v2ge73/daily_superthread_jul_21_2026_your_daily_thread/",
+          "publishedOn": "2026-07-21T12:01:12.000Z",
+          "wordCount": null,
+          "title": "Daily Superthread (Jul 21 2026) - Your daily thread for questions, device recommendations and general discussions!",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/Android/comments/1v291yb/volkswagen_blocks_custom_rom_users_from_vw_app/",
+          "author": null,
+          "description": "submitted by    /u/Taddy84  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/Android/comments/1v291yb/volkswagen_blocks_custom_rom_users_from_vw_app/",
+          "publishedOn": "2026-07-21T05:18:46.000Z",
+          "wordCount": null,
+          "title": "Volkswagen blocks custom ROM users from VW app",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/Android/comments/1v28fd8/xiaomi_officially_teases_new_poco_phone_in_orange/",
+          "author": null,
+          "description": "submitted by    /u/ximi-moment  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/Android/comments/1v28fd8/xiaomi_officially_teases_new_poco_phone_in_orange/",
+          "publishedOn": "2026-07-21T04:46:06.000Z",
+          "wordCount": null,
+          "title": "Xiaomi officially teases new Poco phone in orange finish",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/Android/comments/1uydlq2/google_ordered_to_open_android_and_search_to/",
           "author": null,
           "description": "submitted by    /u/BcuzRacecar  \n [link]   [comments]",
@@ -7634,416 +7704,6 @@
           "wordCount": null,
           "title": "Daily Superthread (Jun 22 2026) - Your daily thread for questions, device recommendations and general discussions!",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1uccl4i/redmagic_reveals_new_lenovo_legion_tab_get_5/",
-          "author": null,
-          "description": "submitted by    /u/ControlCAD  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1uccl4i/redmagic_reveals_new_lenovo_legion_tab_get_5/",
-          "publishedOn": "2026-06-22T06:13:25.000Z",
-          "wordCount": null,
-          "title": "RedMagic reveals new Lenovo Legion Tab Get 5 rival with OLED display",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1uc6dlc/the_future_is_now_playstation_4_emulation_arrives/",
-          "author": null,
-          "description": "submitted by    /u/NXGZ  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1uc6dlc/the_future_is_now_playstation_4_emulation_arrives/",
-          "publishedOn": "2026-06-22T00:56:02.000Z",
-          "wordCount": null,
-          "title": "The Future is Now: PlayStation 4 Emulation Arrives on Android with shadPS4",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1ub5rt0/sony_xperia_1_viii_vs_samsung_galaxy_s26_ultra/",
-          "author": null,
-          "description": "submitted by    /u/ControlCAD  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1ub5rt0/sony_xperia_1_viii_vs_samsung_galaxy_s26_ultra/",
-          "publishedOn": "2026-06-20T19:50:52.000Z",
-          "wordCount": null,
-          "title": "Sony Xperia 1 VIII vs Samsung Galaxy S26 Ultra - Don't Waste Your Money! - Techmo",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1ub4xjx/best_opensource_android_app_stores_google_play/",
-          "author": null,
-          "description": "submitted by    /u/ezsou  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1ub4xjx/best_opensource_android_app_stores_google_play/",
-          "publishedOn": "2026-06-20T19:16:11.000Z",
-          "wordCount": null,
-          "title": "Best Open-Source Android App Stores (Google Play Alternatives)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1ub4j3k/galaxy_watch_9_and_ultra_2_leaks_reveal_more/",
-          "author": null,
-          "description": "submitted by    /u/deckolem  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1ub4j3k/galaxy_watch_9_and_ultra_2_leaks_reveal_more/",
-          "publishedOn": "2026-06-20T18:59:46.000Z",
-          "wordCount": null,
-          "title": "Galaxy Watch 9 and Ultra 2 leaks reveal more changes, no Classic after all [Gallery]",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1ub2ael/samsungs_exynos_2700_progresses_smoothly_despite/",
-          "author": null,
-          "description": "submitted by    /u/self-fix2  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1ub2ael/samsungs_exynos_2700_progresses_smoothly_despite/",
-          "publishedOn": "2026-06-20T17:28:03.000Z",
-          "wordCount": null,
-          "title": "Samsung’s Exynos 2700 Progresses Smoothly Despite Heavy Losses, Set to Power 50% of Galaxy S27",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1uaz0s3/samsung_confirms_the_galaxy_m47_is_coming_soon/",
-          "author": null,
-          "description": "submitted by    /u/ControlCAD  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1uaz0s3/samsung_confirms_the_galaxy_m47_is_coming_soon/",
-          "publishedOn": "2026-06-20T15:12:23.000Z",
-          "wordCount": null,
-          "title": "Samsung confirms the Galaxy M47 is coming soon, design teased",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1uauv4x/saturday_appreciation_thread_jun_20_2026_your/",
-          "author": null,
-          "description": "Note 1. You can search for previous [weekly Saturday threads](https://www.reddit.com/r/Android/search/?q=Saturday+APPreciation+thread&type=posts&sort=new)\n Note 2. You can also search for previous [daily threads](https://www.reddit.com/r/Android/search/?q=daily+superthread&include_over_18=on&restrict_sr=on&t=all&sort=new).\n Note 3. Join our IRC and Telegram chat-rooms! Please see our wiki for instructions.\n This weekly Saturday thread is for:\n * App promotion,\n * App praise/sharing\n If you are a developer, you may promote your own app ONLY under the bolded, distinguished moderator comment. Users: if you think someone is trying to bypass this rule by promoting their app in the general thread, click the report button so we can take a look!\n    submitted by    /u/curated_android  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1uauv4x/saturday_appreciation_thread_jun_20_2026_your/",
-          "publishedOn": "2026-06-20T12:00:47.000Z",
-          "wordCount": null,
-          "title": "Saturday APPreciation thread (Jun 20 2026) - Your weekly app recommendation/request thread!",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1uauv4e/daily_superthread_jun_20_2026_your_daily_thread/",
-          "author": null,
-          "description": "Note 1. You can search for previous daily threads.\n Note 2. Join our IRC and Telegram chat-rooms! Please see our wiki for instructions.\n Please post your questions here. Feel free to use this thread for general questions/discussion as well.\n    submitted by    /u/curated_android  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1uauv4e/daily_superthread_jun_20_2026_your_daily_thread/",
-          "publishedOn": "2026-06-20T12:00:46.000Z",
-          "wordCount": null,
-          "title": "Daily Superthread (Jun 20 2026) - Your daily thread for questions, device recommendations and general discussions!",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1uam6xf/motorola_razr_2026_unboxing_first_impressions/",
-          "author": null,
-          "description": "submitted by    /u/ControlCAD  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1uam6xf/motorola_razr_2026_unboxing_first_impressions/",
-          "publishedOn": "2026-06-20T03:42:04.000Z",
-          "wordCount": null,
-          "title": "Motorola Razr (2026) Unboxing & First Impressions! - TechRight",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1uaiw74/whats_the_most_underrated_android_phone_right_now/",
-          "author": null,
-          "description": "Everyone talks about Samsung, Google Pixel, and iPhone.\n Which Android phone do you think deserves more attention than it gets?\n It can be a flagship, mid-range device, or even an older model.\n    submitted by    /u/CrackTheCable  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1uaiw74/whats_the_most_underrated_android_phone_right_now/",
-          "publishedOn": "2026-06-20T00:55:13.000Z",
-          "wordCount": null,
-          "title": "What's the most underrated Android phone right now?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1uadbxe/what_are_the_most_reliable_android_phones_in_the/",
-          "author": null,
-          "description": "I have an s22 and as of yesterday it started boot-looping. It's still some what usable but I think it's on it's last legs. This is frustrating and it don't even feel like I've had it for that long. Are there any android phone available in the US that I won't have to worry about running into this issue or at least not have to worry about it for 10 years?\n    submitted by    /u/deletbait  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1uadbxe/what_are_the_most_reliable_android_phones_in_the/",
-          "publishedOn": "2026-06-19T20:48:49.000Z",
-          "wordCount": null,
-          "title": "What are the most reliable android phones in the US?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1ua8eyg/android_17_desktop_also_runs_the_linux_desktop/",
-          "author": null,
-          "description": "Hi,\n We make a Debian based desktop distribution that runs as an application on top of any Android device. The only requirement is that the Android device needs to be rooted and use Google's standardized GKI kernel. The latest Android 17 release has excellent support for desktop mode and will be the basis for Googlebook laptops. Here is video of Linux desktop running on an Android 17 phone: https://youtu.be/LD9A024yAgc?si=XmkvfRpmwv_Lsf7H\n Our latest Linux desktop is now based on Debian Trixie (13.5). You can download a free evaluation version from www.volkspc.org. \n VolksPC\n    submitted by    /u/VolksPC  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1ua8eyg/android_17_desktop_also_runs_the_linux_desktop/",
-          "publishedOn": "2026-06-19T17:36:48.000Z",
-          "wordCount": null,
-          "title": "Android 17 desktop also runs the Linux desktop",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1ua84w6/how_come_back_in_the_days_android_23_cyanogen_mod/",
-          "author": null,
-          "description": "I remember that my hotspot would show me all the connected devices and I could manage them. Today, I can't even see how many devices are connected to my Android hotspot.\n    submitted by    /u/Grande_Mangiattore  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1ua84w6/how_come_back_in_the_days_android_23_cyanogen_mod/",
-          "publishedOn": "2026-06-19T17:26:10.000Z",
-          "wordCount": null,
-          "title": "How come back in the days (Android 2.3 - Cyanogen mod) I had much more possibilities than today?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1ua7zj7/the_true_future_of_android_desktop_why_google/",
-          "author": null,
-          "description": "Introduction Google's recent move to merge ChromeOS into Android proves that the company finally understands what users wanted all along. However, tailoring this new OS strictly for low-end, ARM-integrated laptops is a massive strategic oversight. Android possesses the brand power and user base required to break the Windows monopoly on desktop PCs and gaming, provided Google drops its rigid corporate mindset.\n The ChromeOS Failure vs. Android's Dominance The traditional ChromeOS missed the mark because it felt like a \"Frankenstein\" OS, forcing Android apps into heavy, clunky containers. Android, conversely, is the most recognizable software on earth. People live on it. If Google delivers a native Desktop OS focused on high-performance and hardware freedom, mass user migration will follow o…",
-          "link": "https://www.reddit.com/r/Android/comments/1ua7zj7/the_true_future_of_android_desktop_why_google/",
-          "publishedOn": "2026-06-19T17:20:30.000Z",
-          "wordCount": null,
-          "title": "The True Future of \"Android Desktop\": Why Google Must Challenge Windows in the Desktop and Gaming Market",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1ua7wxk/ai_vs_human_i_tested_both_to_fix_my_1yearold/",
-          "author": null,
-          "description": "​\n ‎After 1 year my phone went from 100% to 20% by 4pm and felt like a hand warmer. \n ‎\n ‎So I tested 2 solutions:\n ‎\n ‎1. AI Solution - ChatGPT/Google Advice:\n ‎Turn on Battery Saver \n ‎Lower screen brightness\n ‎Close background apps\n ‎Turn off Bluetooth when not using\n ‎\n ‎Result: Battery lasted 1 extra hour. Phone still hot. Battery health dropped to 88% after 14 months.\n ‎\n ‎2. Human Solution - My tech brother who repairs phones:\n ‎He said \"Your battery drain isn’t from brightness. It’s from 3 hidden settings draining power 24/7\"\n ‎\n ‎The 3 Real Settings That Fixed It:\n ‎\n ‎For iPhone:\n ‎Settings → Privacy & Security → Motion & Fitness → Turn OFF \n ‎ Why: Tracks your steps 24/7 even when locked. Kills 15% battery daily.\n ‎\n ‎Settings → General → Background App Refresh → Turn OFF for Fa…",
-          "link": "https://www.reddit.com/r/Android/comments/1ua7wxk/ai_vs_human_i_tested_both_to_fix_my_1yearold/",
-          "publishedOn": "2026-06-19T17:17:50.000Z",
-          "wordCount": null,
-          "title": "AI vs Human: I tested both to fix my 1-year-old phone battery drain. Human won by 6 hours [Android + iPhone] ‎",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1ua5xtz/google_will_fix_android_17_bug_that_deletes/",
-          "author": null,
-          "description": "submitted by    /u/ControlCAD  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1ua5xtz/google_will_fix_android_17_bug_that_deletes/",
-          "publishedOn": "2026-06-19T16:02:52.000Z",
-          "wordCount": null,
-          "title": "Google will fix Android 17 bug that deletes homescreen widgets for some Pixel owners",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1ua4g8v/made_a_mods_browser_for_minecraft_android_that/",
-          "author": null,
-          "description": "every time someone searches for minecraft mods on android they land on some site with fake download buttons and malware-adjacent garbage. thats the actual problem i was trying to fix. pulls from legitimate sources via open APIs, no shady redirects.\n took about 6 months of evenings as a solo project. queries mod metadata from known APIs, caches aggressively so it doesnt fall apart on slower connections, and handles the .mcpack import flow that android makes unnecessarily annoying.\n wrote it in native kotlin, no cross-platform frameworks. that let me do proper intent handling for file types but also meant every single feature took way longer than it should have.\n there are two versions, one for bedrock addons and one for java mods. same codebase, different content sources.\n biggest thing im unsure about is search UX. filtering by category works fine, multi-tag filtering is still clunky. idk if thats a dealbreaker for most people or just something that bothers me.\n link in the comments if you want to try it.\n    submitted by    /u/Sufficient-Cup4705  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1ua4g8v/made_a_mods_browser_for_minecraft_android_that/",
-          "publishedOn": "2026-06-19T15:05:36.000Z",
-          "wordCount": null,
-          "title": "made a mods browser for minecraft android that doesnt route you through sketchy apk sites",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1ua368t/questai_app/",
-          "author": null,
-          "description": "Just published QuestAI on the Play Store. Stuck in a game? Snap a photo of your screen and it identifies the boss/item and tells you exactly what to do. Also handles achievement routes, walkthroughs, and strategy for any game — just ask in plain language.\n No paywall to try it. Comment a game + the boss you're stuck on and I'll post what it says.\n https://preview.redd.it/vt1chl4mz88h1.png?width=978&format=png&auto=webp&s=c796cb521b1e8426b577e99aaeba19f2327e52b5\n    submitted by    /u/One_Entertainer4450  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1ua368t/questai_app/",
-          "publishedOn": "2026-06-19T14:15:19.000Z",
-          "wordCount": null,
-          "title": "QuestAI - app",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1ua1n94/google_reveals_new_timeline_for_androids_app/",
-          "author": null,
-          "description": "submitted by    /u/NagitoKomaeda_1  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1ua1n94/google_reveals_new_timeline_for_androids_app/",
-          "publishedOn": "2026-06-19T13:11:55.000Z",
-          "wordCount": null,
-          "title": "Google reveals new timeline for Android's app sideloading changes | September in certain markets and 2027 globally | Beginning of the end?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1ua052k/oneplus_pad_3_pro_unveiled_in_china_with_132/",
-          "author": null,
-          "description": "submitted by    /u/ControlCAD  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1ua052k/oneplus_pad_3_pro_unveiled_in_china_with_132/",
-          "publishedOn": "2026-06-19T12:02:41.000Z",
-          "wordCount": null,
-          "title": "OnePlus Pad 3 Pro unveiled in China with 13.2\" 144Hz LCD, Snapdragon 8 Elite Gen 5 chipset",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1ua03w4/daily_superthread_jun_19_2026_your_daily_thread/",
-          "author": null,
-          "description": "Note 1. You can search for previous daily threads.\n Note 2. Join our IRC and Telegram chat-rooms! Please see our wiki for instructions.\n Please post your questions here. Feel free to use this thread for general questions/discussion as well.\n    submitted by    /u/curated_android  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1ua03w4/daily_superthread_jun_19_2026_your_daily_thread/",
-          "publishedOn": "2026-06-19T12:01:12.000Z",
-          "wordCount": null,
-          "title": "Daily Superthread (Jun 19 2026) - Your daily thread for questions, device recommendations and general discussions!",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1u9xrbj/do_android_players_still_pay_for_small_offline/",
-          "author": null,
-          "description": "I’m curious how Android players feel about small premium puzzle games now.\n A lot of mobile games are free but include ads, subscriptions, coins, energy systems, or account requirements. On the other side, some small puzzle games still use the old model: pay once, no ads, no account, offline play.\n For people who play puzzle games on Android:\n - Do you still consider paid puzzle games if they are cheap and ad-free?\n - Is “no ads, no account, offline” enough of a reason to pay?\n - What makes you trust a new puzzle game from an unknown developer?\n - Do screenshots matter more, or reviews?\n - Would you rather try a free lite version first?\n For example, Galaxies is the kind of logic puzzle format where the player solves calm board puzzles by drawing borders around stars and dividing the board into balanced regions. It is more about quiet logic solving than timers, rewards, or fast reactions.\n I’m especially interested in logic puzzle games where the focus is calm solving rather than action, timers, or daily rewards.\n    submitted by    /u/Remote_Statement1181  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1u9xrbj/do_android_players_still_pay_for_small_offline/",
-          "publishedOn": "2026-06-19T09:55:36.000Z",
-          "wordCount": null,
-          "title": "Do Android players still pay for small offline puzzle games with no ads?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1u9whhz/murine_launcher_im_looking_for_feedback_for_my/",
-          "author": null,
-          "description": "Hello guys, I am a solo dev and made this launcher a while ago, it's a free open source launcher I developed in order to provide users yet another free alternative to some paid or ad-ridden ones.\n It has recently been published on the Play Store, but you can look it up on F-Droid too or download it from the website (to be honest though, right now I need some Play Store visibility so if you'd be so kind to get it there and leave a review I'd appreciate it :3)\n It takes a bit of inspiration from the launchers you can find preinstalled on some custom ROMs, I wanted it to look unbranded and be a close to stock experience with extra customizations. Most importantly, it uses as few permissions as it can, only those required for it to function, so no network (internet) permissions and no storage permissions :P\n A few notable features:\n  \nModern UI (based on latest Launcher3) + blur effects\n Icon pack support + icon shape customization + per-app icon pack chooser\n Private space support\n Custom Material Expressive search box with your favourite search engine\n 3 app drawer modes (Frosted, Mica and Translucent)\n Weights 7MB and it's pretty close to stock\n It's free open source\n  \nI'd be happy to answer any question, If you have any issues, you can post them on GitHub\n    submitted by    /u/G3nghisKang  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1u9whhz/murine_launcher_im_looking_for_feedback_for_my/",
-          "publishedOn": "2026-06-19T08:39:12.000Z",
-          "wordCount": null,
-          "title": "Murine Launcher - I'm looking for feedback for my new Android Launcher",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1u9v707/whats_getting_worse_even_though_brands_keep/",
-          "author": null,
-          "description": "Throw some light please\n    submitted by    /u/Tasty_Nature4083  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1u9v707/whats_getting_worse_even_though_brands_keep/",
-          "publishedOn": "2026-06-19T07:20:19.000Z",
-          "wordCount": null,
-          "title": "What's getting worse even though brands keep saying it's getting better?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1u9t6vv/who_actually_wins_camera_comparison_test_sony/",
-          "author": null,
-          "description": "submitted by    /u/ControlCAD  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1u9t6vv/who_actually_wins_camera_comparison_test_sony/",
-          "publishedOn": "2026-06-19T05:27:05.000Z",
-          "wordCount": null,
-          "title": "Who Actually Wins? (Camera Comparison test) Sony Xperia 1 VIII vs 17 Pro Max vs Samsung Galaxy S26 Ultra vs Vivo X300 Ultra vs Oppo Find X9 Ultra vs Xiaomi 17 Ultra vs Honor Magic 8 Pro - FlashingDroid",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1u9opku/fix_for_android_widget_disappearing_on_android_17/",
-          "author": null,
-          "description": "Hey guys \n ​\n ​\n If you have a work profile installed and updated to android 17 it might break your widgets setup like it did to mine.\n ​\n ​\n Unfortunately so far the workaround is archive/restore or disable/enable apps and readd the widgets \n ​\n ​\n ​\n Fix for intune: Fix is to set 'Allow widgets from work profile apps' to 'Not configured' in the Android Enterprise device restrictions profile, ideally scoped to Android 17 devices via a device filter.\n ​\n Ref: issuetracker.google.com/issues/488125748.\n ​\n ​\n Good luck!\n    submitted by    /u/xxqxpxx1  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1u9opku/fix_for_android_widget_disappearing_on_android_17/",
-          "publishedOn": "2026-06-19T01:41:18.000Z",
-          "wordCount": null,
-          "title": "Fix for Android widget disappearing on Android 17",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1u9hgdj/android_developer_verification_building_a_safer/",
-          "author": null,
-          "description": "submitted by    /u/ControlCAD  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1u9hgdj/android_developer_verification_building_a_safer/",
-          "publishedOn": "2026-06-18T20:28:12.000Z",
-          "wordCount": null,
-          "title": "Android developer verification: Building a safer ecosystem together",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1u9f3c8/oppo_find_x9_ultra_review_1600_enthusiast_import/",
-          "author": null,
-          "description": "submitted by    /u/ControlCAD  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1u9f3c8/oppo_find_x9_ultra_review_1600_enthusiast_import/",
-          "publishedOn": "2026-06-18T18:58:56.000Z",
-          "wordCount": null,
-          "title": "Oppo Find X9 Ultra Review - $1,600 Enthusiast Import Trap - Drew Lipps",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1u96wbd/phones_are_about_to_get_worse_android_police/",
-          "author": null,
-          "description": "submitted by    /u/ControlCAD  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1u96wbd/phones_are_about_to_get_worse_android_police/",
-          "publishedOn": "2026-06-18T13:52:59.000Z",
-          "wordCount": null,
-          "title": "Phones are about to get worse. - Android Police",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1u94brj/daily_superthread_jun_18_2026_your_daily_thread/",
-          "author": null,
-          "description": "Note 1. You can search for previous daily threads.\n Note 2. Join our IRC and Telegram chat-rooms! Please see our wiki for instructions.\n Please post your questions here. Feel free to use this thread for general questions/discussion as well.\n    submitted by    /u/curated_android  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1u94brj/daily_superthread_jun_18_2026_your_daily_thread/",
-          "publishedOn": "2026-06-18T12:00:53.000Z",
-          "wordCount": null,
-          "title": "Daily Superthread (Jun 18 2026) - Your daily thread for questions, device recommendations and general discussions!",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1u927k7/base_galaxy_s27_may_disappoint_with_no_major/",
-          "author": null,
-          "description": "submitted by    /u/DazzlingpAd134  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1u927k7/base_galaxy_s27_may_disappoint_with_no_major/",
-          "publishedOn": "2026-06-18T10:06:23.000Z",
-          "wordCount": null,
-          "title": "Base Galaxy S27 may disappoint with no major display or camera upgrades",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1u91tz0/sony_unveils_the_lytia_910_its_first_lofic_sensor/",
-          "author": null,
-          "description": "submitted by    /u/DazzlingpAd134  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1u91tz0/sony_unveils_the_lytia_910_its_first_lofic_sensor/",
-          "publishedOn": "2026-06-18T09:43:49.000Z",
-          "wordCount": null,
-          "title": "Sony unveils the Lytia 910, its first LOFIC sensor, and it boasts 100dB dynamic range",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1u90cxt/any_games_that_use_the_actual_physical_boundaries/",
-          "author": null,
-          "description": "I'm looking for some games meant to be played on a tablet that use the actual physical boundaries of the tablet....like for example, say an air hockey game where if the puck hits the edge of the tablet that it reacts to having hit the edge of the tablet....Anything like this? Thanks guys!\n    submitted by    /u/CamaroLover2020  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1u90cxt/any_games_that_use_the_actual_physical_boundaries/",
-          "publishedOn": "2026-06-18T08:13:59.000Z",
-          "wordCount": null,
-          "title": "Any games that use the actual physical boundaries of an Android tablet?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1u8ylyv/android_xrs_second_device_already_looks/",
-          "author": null,
-          "description": "Saw Project Aura and, weirdly, Android XR got a lot more interesting to me.\n Not because I trust Google. I’ve been using Android since the Nexus days. I know the drill.\n Glass died. Daydream died. Half of Google’s “future” platforms die. And now Android itself is getting more annoying with sideloading restrictions and AI bloat.\n So yeah, I’m not exactly all-in on Google here.\n But I do want Android XR to work.\n Mostly because the alternative is Meta owning XR, and 🙄 that.\n I never believed the whole “Horizon OS is opening up” thing. Meta’s version of “open” always feels like: open, as long as they still control the store, accounts, rules, and money.\n That’s not Android. That’s just a cheaper walled garden.\n Aura caught my eye because it’s not another Quest clone. It’s glasses + puck. Different shape, different use case, different assumptions.\n That alone makes Android XR feel more interesting than Horizon OS to me.\n Google can still screw this up. They probably will, in some very Google way.\n But I’d still rather gamble on messy Android XR than let Meta own the whole category.\n I don’t need Google to be perfect.\n I just need them to be less Meta.\n    submitted by    /u/NoImagination8375  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1u8ylyv/android_xrs_second_device_already_looks/",
-          "publishedOn": "2026-06-18T06:29:06.000Z",
-          "wordCount": null,
-          "title": "Android XR’s second device already looks interesting",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1u8vff8/pixel_screenshots_no_longer_exclusively_uses/",
-          "author": null,
-          "description": "submitted by    /u/ControlCAD  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1u8vff8/pixel_screenshots_no_longer_exclusively_uses/",
-          "publishedOn": "2026-06-18T03:35:12.000Z",
-          "wordCount": null,
-          "title": "Pixel Screenshots no longer exclusively uses on-device AI",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1u8cmca/samsung_galaxy_xr_arrives_in_the_uk/",
-          "author": null,
-          "description": "submitted by    /u/FragmentedChicken  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1u8cmca/samsung_galaxy_xr_arrives_in_the_uk/",
-          "publishedOn": "2026-06-17T15:01:04.000Z",
-          "wordCount": null,
-          "title": "Samsung Galaxy XR Arrives in the UK",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1u8c7g4/paul_dunlop_android_onboardingsettings_product/",
-          "author": null,
-          "description": "submitted by    /u/wickedplayer494  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1u8c7g4/paul_dunlop_android_onboardingsettings_product/",
-          "publishedOn": "2026-06-17T14:45:35.000Z",
-          "wordCount": null,
-          "title": "Paul Dunlop (Android Onboarding/Settings Product Lead) details Android Switch improvements in Android 17, including direct migration of signed-in Google accounts between iOS and Android, cross-platform app data migration APIs, seamless eSIM transfers, & more",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1u89w3l/building_computer_vision_apps_for_android_in_2026/",
-          "author": null,
-          "description": "I've been reading case studies and following discussions around Android apps that use Computer Vision for OCR, object detection, image segmentation, quality inspection, and video analytics.\n A few years ago, most conversations focused on model accuracy and training. But now it seems like the bigger challenges are:\n  \nRunning models efficiently on-device with TensorFlow Lite or MediaPipe.\n Balancing latency, battery usage, and model size.\n Handling fragmented Android hardware and varying NPUs.\n Building reliable pipelines for image/video processing in production.\n Deciding when to use on-device inference vs cloud inference.\n  \nInterestingly, many successful products seem to rely as much on strong mobile engineering and UX as on the AI model itself.\n I'm curious if other Android developers feel the same way.\n For people who have built or worked on Computer Vision apps:\n  \nWhat has been the hardest problem for you?\n Has model development become easier while deployment remains the real challenge?\n Which frameworks or approaches have worked best in production?\n  \nWould love to hear real-world experiences and lessons learned.\n    submitted by    /u/wakhfi3940  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1u89w3l/building_computer_vision_apps_for_android_in_2026/",
-          "publishedOn": "2026-06-17T13:15:19.000Z",
-          "wordCount": null,
-          "title": "Building Computer Vision apps for Android in 2026: Has the bottleneck shifted from AI models to mobile engineering?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1u88qli/moto_g_stylus_2026_review_motorolas_most/",
-          "author": null,
-          "description": "submitted by    /u/ControlCAD  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1u88qli/moto_g_stylus_2026_review_motorolas_most/",
-          "publishedOn": "2026-06-17T12:25:06.000Z",
-          "wordCount": null,
-          "title": "Moto G Stylus 2026 Review: Motorola's most complicated phone! - StevealiciousTech",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/Android/comments/1u8879s/daily_superthread_jun_17_2026_your_daily_thread/",
-          "author": null,
-          "description": "Note 1. You can search for previous daily threads.\n Note 2. Join our IRC and Telegram chat-rooms! Please see our wiki for instructions.\n Please post your questions here. Feel free to use this thread for general questions/discussion as well.\n    submitted by    /u/curated_android  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/Android/comments/1u8879s/daily_superthread_jun_17_2026_your_daily_thread/",
-          "publishedOn": "2026-06-17T12:00:31.000Z",
-          "wordCount": null,
-          "title": "Daily Superthread (Jun 17 2026) - Your daily thread for questions, device recommendations and general discussions!",
-          "imageUrl": null
         }
       ]
     },
@@ -8109,6 +7769,506 @@
       "feedUrl": "https://v2ex.com/index.xml",
       "siteUrl": "https://www.v2ex.com/",
       "articles": [
+        {
+          "id": "https://www.v2ex.com/t/1228945#reply1",
+          "author": null,
+          "description": "免费下载： https://apps.microsoft.com/detail/9nmsj50f8m88?ocid=webpdpshare\ncrPDF 是纯 C++实现 基于源代码 chromium 150.0.7871.91\n1. 基于 chromium PDFium 内核代码，支持对 PDF 的文本和 Stamp 格式标注\n2. 使用 chromium 的跨平台 UI 框架设计的应用界面，提供了一致且优秀的使用体验\n3. 通过 boringSSL 实现对 PDF 证书签名，以及证书信息的验证",
+          "link": "https://www.v2ex.com/t/1228945#reply1",
+          "publishedOn": "2026-07-21T21:58:27.000Z",
+          "wordCount": 1320,
+          "title": "[分享创造] crPDF 1.6.0 windows 版本 已上架 微软应用市场",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228944#reply0",
+          "author": null,
+          "description": "以前这功能打给别人会显示原号码（ WeChat 绑定的澳门号），现在变成中东号码了。",
+          "link": "https://www.v2ex.com/t/1228944#reply0",
+          "publishedOn": "2026-07-21T21:51:48.000Z",
+          "wordCount": 1007,
+          "title": "[微信] 有人用澳门 WeChat 的 WeChat Out 功能吗",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228943#reply0",
+          "author": null,
+          "description": "OpenAI - @SayHelloHi - ![]( https://i.imgur.com/ffUxNW2.png)",
+          "link": "https://www.v2ex.com/t/1228943#reply0",
+          "publishedOn": "2026-07-21T21:33:16.000Z",
+          "wordCount": 988,
+          "title": "[OpenAI] Codex 重置了",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228941#reply0",
+          "author": null,
+          "description": "我在 Codex CLI 上做了 280+ 次 GPT-5.6 Sol 测试。当前版本似乎仍有会增加 token 消耗的问题。\n在多数基准中，GPT-5.6 Sol 的成本效益优于 GPT-5.5 。以 DeepSWE 为例：5.5 High 平均每任务 5.1 美元，5.6 Sol High 为 3.5 美元；但在 Codex CLI 0.144.1 ，我测到 5.6 Sol High 反而比 5.5 High 高约 21%。\nhttps://preview.redd.it/how-gpt-5-6-sol-token-is-used-in-codex-v0-pghf32p14meh1.png?width=1080&crop=smart&auto=webp&s=1b501ae165714278d0e824a224f72fcb4dc730be\nhttps://preview.redd.it/how-gpt-5-6-sol-token-is-used-in-codex-v0-esic3oac7meh1.png?width=1080&crop=smart&auto=webp&s=ffc29d6fdd8f3123f5eaec520889b470f1a9c406\n可能原因是：5.5 明确使用 multi_tool_use.parallel，一轮可发出多个顶层工具调用； 5.6 多以单一顶层 exec 编排，因此每次 LLM 调用运行的命令更少（ 0.97 vs 2.5 ），同一任务的轮次却约为 1.84 倍。5.6 Sol High 的花费中约 66.5% 是缓存输入 token 。\n代码位置：\nhttps://github.com/openai/codex/blob/rust-v0.144.1/codex-rs/core/src/tools/code_mode/execute_handler.rs#L20-L72\n我也测试了 Ponytail 、Caveman 、RTK 等省 token 插件，几乎没有降低消耗。真正有效的是在不损失结果的前提下减少 LLM 轮次。\n完整报告：\nhttps://turaai.net/docs#benchmark-current-test-set-record",
+          "link": "https://www.v2ex.com/t/1228941#reply0",
+          "publishedOn": "2026-07-21T18:26:09.000Z",
+          "wordCount": 1179,
+          "title": "[程序员] How GPT-5.6 sol token is used in Codex",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228940#reply0",
+          "author": null,
+          "description": "看到 Qwen Image 3 发布了，稍微测试了下，提示词是从网上找的\n下面的图片分别是用 gpt-image-2 和 Qwen Image 3 生成，效果看起来都还不错. 分别在 codex 和千问网页端生成\n下载再上传后发现好像有些图片清晰度较差，可能是被压缩了\n提示词：\n一位 22—26 岁的成年东方女性，原创电影感人物，真实亚洲女性长相，精致鹅蛋脸，五官柔和耐看，眼睛修长微圆，眼尾自然下垂，Half-lidded Eyes （半睁眼神），眼眶微微泛红，眼底带细微水光，目光轻轻低垂望向自己怀抱的位置，不看镜头，不流泪，神情空洞而安静，嘴唇轻轻闭合，失落、疲惫、释然交织，真实成年女性，不幼态，不动漫脸，不网红脸。\n\n皮肤呈自然冷白肤色，真实皮肤纹理，雨水覆盖肩膀、锁骨、手臂与发丝，皮肤形成自然湿润高光，细小水珠附着肌肤，不磨皮，不塑料，不 AI 质感。\n\n妆容采用电影级生活淡妆，远山眉自然柔和，浅棕眼妆轻微晕染，睫毛因雨水略微湿润，下眼睑带极淡粉色与自然湿润感，嘴唇采用低饱和豆沙玫瑰色，妆容经过雨水冲刷后仍保持真实质感，没有浓妆痕迹。\n\n发型采用自然黑色长发，七分侧分，长发完全被雨水浸湿，发丝自然贴附肩颈与锁骨，少量碎发贴在额头和脸颊，真实重量感，没有任何头饰。\n\n服饰采用原创高级缎面婚纱，象牙白与月白渐变色，抹胸设计，肩部自然裸露，轻薄欧根纱层层堆叠，裙摆宽大自然铺展开来，被雨水浸湿后形成真实重量感与透明层次，布料紧贴地面，局部散落少量深红玫瑰花瓣，整体典雅克制，不出现皇冠、头纱、珠宝堆砌或婚礼现场元素。\n\n人物独自坐在现代城市人行天桥中央，双腿自然收拢，身体蜷缩，双臂紧紧环抱自己，一侧脸轻轻贴近手臂，下巴微收，肩膀自然内扣形成保护姿态，整个人缩成一个安静的轮廓，表现自我拥抱、自我安慰的情绪，不哭喊，不夸张表演。\n\n场景设定于深夜雨中的现代城市跨江大桥，人行步道空无…",
+          "link": "https://www.v2ex.com/t/1228940#reply0",
+          "publishedOn": "2026-07-21T17:59:21.000Z",
+          "wordCount": 2143,
+          "title": "[分享创造] 怎么评价新发布的 Qwen Image 3 的水平",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228939#reply5",
+          "author": null,
+          "description": "准备开蹬",
+          "link": "https://www.v2ex.com/t/1228939#reply5",
+          "publishedOn": "2026-07-21T17:29:14.000Z",
+          "wordCount": 1374,
+          "title": "[程序员] codex 又又又又又又重置了",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228938#reply0",
+          "author": null,
+          "description": "✅ 已验证 Upwork ✅ + PAYONEER + WHATSAPP + TELEGRAM | 24/7 在线访问 | 长期支持 [全方位技术支持]\n🗃️内容包括：\n• 独享电脑（ 24/7 全天候访问）\n• 独享固定 IP• 我将提供 24/7 全力技术支持\n• 完美的电力和网络保障（笔记本电脑 24/7 保持在线，不受停电影响）\n支持的服务/平台：\n• Upwork• LinkedIn\n• Freelancer\n• Payoneer\n• PayPal\n• Telegram\n• WhatsApp\n• 我可以根据您的需求全力配合\n📩 联系方式：Telegram: @UP_rent_ua",
+          "link": "https://www.v2ex.com/t/1228938#reply0",
+          "publishedOn": "2026-07-21T17:11:56.000Z",
+          "wordCount": 1311,
+          "title": "[程序员] 提供欧洲自由职业平台远程工作机会。",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228937#reply0",
+          "author": null,
+          "description": "llms.txt:\nhttps://qwenimage3.co/llms.txt\nproject:\nen: https://qwenimage3.co/\nzh: https://qwenimage3.co/zh",
+          "link": "https://www.v2ex.com/t/1228937#reply0",
+          "publishedOn": "2026-07-21T17:01:38.000Z",
+          "wordCount": 992,
+          "title": "[llms.txt] qwenimage3.co llms.txt",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228936#reply3",
+          "author": null,
+          "description": "Codex - @Ming1995 -",
+          "link": "https://www.v2ex.com/t/1228936#reply3",
+          "publishedOn": "2026-07-21T17:00:29.000Z",
+          "wordCount": 1071,
+          "title": "[Codex] 1000W 用户，一小时内要重置，快蹬！",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228935#reply0",
+          "author": null,
+          "description": "用 Cloudflare WARP (1.1.1.1 那个)，一个免费的 VPN\n也就是 Claude Code -> Cloudflare WARP -> 你的梯子的出口（ Claude Code 支持的国家的节点）-> CF 出口服务器 -> Anthropic 服务器\n我直接用我梯子的各国的节点，Claude Code 都报国家不支持，怀疑这些 IP 都被拉黑了，外面套一层 CF WARP ，相当稳。\n而且感觉 Anthropic 应该不太容易封 CF WARP ，挺多海外的正常用户开着它用的。",
+          "link": "https://www.v2ex.com/t/1228935#reply0",
+          "publishedOn": "2026-07-21T16:56:19.000Z",
+          "wordCount": 1062,
+          "title": "[Claude] 一个获得干净的 IP 来连 Claude Code 的方法",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228934#reply2",
+          "author": null,
+          "description": "最近在整理 Kimi K3 的公开资料，顺手做了一个独立资源站，主要把入口、上手信息、API 成本、本地部署和硬件要求放在一起，查起来更方便。\nhttps://kimik3.club/?utm_source=v2ex&utm_medium=community&utm_campaign=kimik3_club&utm_content=topic\n如果你也在评估 Kimi K3 ，或者想快速了解它的能力、部署方式和适用场景，可以看看。内容我会继续补充，也欢迎指出不准确的地方。",
+          "link": "https://www.v2ex.com/t/1228934#reply2",
+          "publishedOn": "2026-07-21T16:33:33.000Z",
+          "wordCount": 1172,
+          "title": "[Local LLM] 做了一个 Kimi K3 资料站，整理入口和上手信息",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228933#reply5",
+          "author": null,
+          "description": "评论区用 base64 写下邮箱，随机抽取 10 位小伙伴送出！\n\n咔咔找 - MacOS 本地 AI 素材搜索引擎\n下载地址：\nhttps://www.kacut.app/\n你的电脑里有几万张图片、数千个视频，却总是找不到想要的素材？\nKaCutAI 是一款专为创作者打造的 MacOS 本地 AI 素材搜索引擎。它理解你的自然语言需求，让你像和助手聊天一样，用一句话找到电脑里的图片、视频、片段和创作素材。\n无需手动整理文件夹，无需上传云端，所有 AI 分析和搜索都在本地完成，让你的素材库真正变得智能。\n核心功能\n✨ 自然语言搜索\n不用记文件名，只需要描述你想找的内容：\n「找到去年拍摄的海边日落视频」\n「找包含人物讲话的片段」\n「找到有咖啡包装的产品素材」\nKaCutAI 会理解你的描述，并快速定位相关素材。\n\n\n\n\n\n✨ AI 理解视频内容\n自动分析视频画面、字幕、语音内容，让你可以搜索：\n视频中的人物\n场景和物体\n画面文字\n对话内容\n视频时间片段\n✨ 本地 AI ，保护隐私\n所有素材分析都在你的 Mac 上完成：\n不上传你的素材\n不依赖云端服务器\n数据完全属于你\n✨ 为创作者设计\n适用于：\n视频剪辑师\n摄影师\n自媒体创作者\n电商运营团队\n设计师\n面对海量素材时，不再花时间翻找文件，而是直接告诉 AI 你需要什么。\n常见问题 FAQ\nQ：需要上传我的视频到云端吗？\nA：不需要。KaCutAI 使用本地 AI 模型处理素材，文件始终保存在你的 Mac 中。\nQ：支持搜索哪些内容？\nA：支持图片、视频画面、字幕、语音内容、文件信息等多维度搜索。\nQ：和普通文件搜索有什么区别？\nA：普通搜索只能匹配文件名，而 KaCutAI 可以理解素材内容和语义，例如「穿红色衣服的人」「会议现场」「产品展示视频」。\nQ：适合什么设备？\nA：针对 Apple Silicon Mac （ M 系列芯片）优化，提供更流畅的本地 AI 体验。",
+          "link": "https://www.v2ex.com/t/1228933#reply5",
+          "publishedOn": "2026-07-21T16:23:02.000Z",
+          "wordCount": 1243,
+          "title": "[分享创造] [抽兑换码] MacOS 本地 AI 素材搜索引擎，让你像聊天一样找到图片和视频",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228932#reply3",
+          "author": null,
+          "description": "你是否也有过这样的时刻：脑子里每天都有各种天马行空的想法，想做类似 Photoshop 、Figma 、Notion 这样兼具实用与美感的伟大工具，但每次一想到跨语言、跨平台的庞大工程量，就被复杂的现实劝退？\n在 AI Coding 的时代，这个限制被彻底打破了。\n借力 AI ，个人和微型团队的生产力被无限放大。现在的我们，拥有了前所未有的交付速度，正是去把那些“听起来很酷”的想法变成现实的最好时机。\n我想组建一个 5–8 人的高浓度创作小组（如果碰撞出成熟方向，随时准备真刀真枪创业）。\n💡 我们可能探索的方向\n我们不限制思路，主打快速验证、敏捷迭代。潜在的方向包括但不限于：\nAI 视频编辑器（探索全新的 AI 剪辑/生成交互与管线）\nAI 智能笔记本 / 知识库（重塑下一代 Thinking Tool ）\n各类图形/设计/跨平台协同工具\n...以及任何我们共同脑洞出来的酷产品！\n🎯 寻找怎样的你？\n核心是能够下场动手、真正有执行力的伙伴：\n极客精神 & AI Coding： 能够熟练运用 AI Coding 工具快速交付，有强烈的创造欲望。\n多维背景大加分： 纯研发非常欢迎！但如果你除了写代码，还懂产品逻辑、推销/流量增长，或者有合规过审、独立 App 上架等全流程经验，那就更棒了。\n极高的 Passion： 你对“创造”这件事本身充满激情，想真正下场折腾，而不是只来听听热闹。\n💻 关于发起人（我是谁）\n大厂经验： 10 年，互联网经验，目前在大厂担任业务方向负责人（带 10 人左右团队），主导过比较多复杂的业务与架构系统。\n极客基因： 几年前凭灵感独立手搓过一些开源项目，GitHub 累计 2k+ Star（账号：github.com/bobiscool，不算高，但是我希望你也是有相应的作品）。\n⚠️ 关于成本与未来（丑话说在前面）\n关于报酬： 目前无薪酬/无工资，这是一个纯粹由兴趣、野心和极客精神驱动的早期创作小组。\n关于成本： 大家的 AI Coding 工具 / API 费用自行承担；服务器等公共资源费用初期平摊。\n关于未来： 如果我们真的碰撞出了极具潜力的方向、或者做出了爆款产品，届时我们再深入协商股权、收益分配以及正式创业融资事宜。\n📬 如何联系我？\n如果你也是那种喜欢折腾、想用 AI 打造优秀产品的创作者，欢迎把你的个人介绍、作品集、GitHub 或上架产品链接发给我，咱们直接沟通！\n🔑 联系邮箱： dmljZW50a2FybEBnbWFpbC5jb20=\n期待遇到敢折腾、有激情的你，我们一起在 AI 浪潮里搞点真正有意思的事！",
+          "link": "https://www.v2ex.com/t/1228932#reply3",
+          "publishedOn": "2026-07-21T16:18:13.000Z",
+          "wordCount": 1277,
+          "title": "[程序员] [PromptX 极客团队招募] 寻找 5-8 位极客伙伴，在 AI Coding 时代一起做点酷东西！",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228931#reply2",
+          "author": null,
+          "description": "初衷\n做这个项目的出发点是为了满足自己的几个需求：\n便捷地修改配置，实时生效\n频繁切换节点\n观察节点流量情况\n监控节点延迟情况\n没做这个项目之前，自己频繁在 MetaCubeXD 和 Neko Master 来回切换，而且改配置很麻烦（自己在一台旁路由部署的 Mihomo ，需要 ssh 进去机器改配置然后手动重启），所以索性自己用 Codex Vibe Coding 了一个 All in one 的程序，常驻运行在旁路由上，让我能够直接在这个程序上便捷地完成 Mihomo 的所有操作。\n如果大家是在旁路由部署 Mihomo/Clash 的话，那相信这个工具应该会挺有用的。希望能帮到大家：）\n功能介绍\n聚合订阅与节点管理：统一拉取多个代理订阅，解析、去重并按地区或关键词自动归类节点。\n可视化策略编排：管理代理组、分流规则、Rule Provider 、自定义节点和静态 YAML 配置片段。\nMihomo 配置全流程管理：支持配置预览、校验、编译、写入与热重载，并为不同设备生成独立订阅入口。\n实时运行控制：查看实时流量、活动连接和运行日志，直接完成节点测速、策略组切换与故障排查。\n流量与节点质量分析：从规则、域名、地区、代理和设备等维度分析历史流量，并持续评估节点延迟、抖动、成功率和稳定性。\n一些截图\n\n\n\n\n\n项目地址\nhttps://github.com/serenader2014/neko-cube （走过路过希望帮忙点个 star ）\nPS：这个项目大量借鉴了 MetaCubeXD 和 Neko Master ，感谢这两个仓库作者的无私奉献～",
+          "link": "https://www.v2ex.com/t/1228931#reply2",
+          "publishedOn": "2026-07-21T16:05:35.000Z",
+          "wordCount": 1378,
+          "title": "[分享创造] 开源了一个管理 Mihomo/Clash 配置以及监控节点流量的工具： NekoCube",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228930#reply0",
+          "author": null,
+          "description": "利益相关：chonggrok.com 这个站是我自己维护的，发在推广节点，欢迎拍砖。\n大家好啊，最近一段时间一直在整理 AI 会员订阅相关的问题，尤其是 Grok / SuperGrok 。\n先说结论：Grok 并不是所有人都必须订阅的，但如果你的工作经常涉及下面这些场景，它确实值得认真看一下：\n追海外技术圈和产品圈热点；\n需要快速整理 X 上的一手讨论；\n做内容选题、舆情观察、竞品动态跟踪；\n用 AI 辅助写作、代码解释、长资料拆解；\n想把实时信息整理成可复用的结论。\n我自己观察下来，Grok 跟 ChatGPT / Claude / Gemini 最大的差异，不是简单的“谁更聪明”，而是信息来源和产品定位不太一样。Grok 更适合围绕 X 生态做实时信息观察，这一点在追热点、看海外开发者讨论、找产品反馈时比较明显。\n但国内用户想开通 SuperGrok ，常见卡点其实不在“值不值得”，而是在付款链路上。\n国内用户常见卡点\n这几类问题出现得比较多：\nYour credit card was declined\nunable to authenticate payment\ncard declined\n付款成功但 Grok 仍显示 Free\n不知道 Grok User ID 在哪里找\ngrok.com 、X 、iOS 、Google Play 几个入口混在一起，不知道该看哪个订阅状态\n很多人遇到付款失败后会下意识反复换卡、换网络、重复提交。但这通常不是最好的处理方式。更稳一点的做法是先判断问题出在哪一层：\n现象\n更可能的问题方向\n\n\n\n\nYour credit card was declined\n卡片、发卡行、境外订阅扣款权限、账单地址或支付风控\n\n\nunable to authenticate payment\n3D Secure 、银行验证、支付认证流程失败\n\n\n付款成功但仍…",
+          "link": "https://www.v2ex.com/t/1228930#reply0",
+          "publishedOn": "2026-07-21T16:05:21.000Z",
+          "wordCount": 1323,
+          "title": "[推广] Grok / SuperGrok 国内开通与付款失败排查",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228929#reply2",
+          "author": null,
+          "description": "用着用着突然刷出个 3.6",
+          "link": "https://www.v2ex.com/t/1228929#reply2",
+          "publishedOn": "2026-07-21T15:59:29.000Z",
+          "wordCount": 1056,
+          "title": "[分享发现] Gemini 3.6 flash 可用了",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228927#reply0",
+          "author": null,
+          "description": "最近把自己在排查 Codex CLI 登录、/usage 和 /status、429 、Windows / WSL2 、config.toml，以及 ChatGPT 订阅和账单问题时积累的笔记，整理成了一个中文站：Hi Codex 。\n我主要想解决两个问题：\n搜索结果里不少文章把 ChatGPT Plus 、OpenAI API Billing 和 Codex 的两种登录方式混在一起，错误入口选对之前，后面的排查都容易跑偏；\n充值和代充内容经常只写“怎么买”，很少说明账号归属、密码 / Session 、退款、掉订阅和售后边界。\n现在站里有 60 多篇中文指南，尽量引用官方资料、标注核对日期，并按“先自助排查，仍然需要人工时再进入服务”的顺序组织。商业关系也直接披露：这个站是我维护的，站内提供第三方人工充值协助，不是 OpenAI 官方服务；不卖共享账号，不提供 API 中转或地区绕过。具备官方支付条件时，官方渠道应当优先。\n地址：https://hi-codex.com/?utm_source=v2ex&utm_medium=topic&utm_campaign=product_feedback\n这次最想听到的不是夸奖，而是三个方面的挑错：\n首页现在更像“服务页”还是“知识库”，第一次进入能不能快速看懂？\nCodex 和 ChatGPT 充值内容放在同一站，会不会让信息架构显得混乱？\n哪些安全说明仍然不够明确，或者哪些内容看起来像营销话术？\n如果大家指出具体页面或表述，我会按问题逐项改，更新记录也会保留在页面上。",
+          "link": "https://www.v2ex.com/t/1228927#reply0",
+          "publishedOn": "2026-07-21T15:43:02.000Z",
+          "wordCount": 1090,
+          "title": "[分享创造] 做了一个 Codex / ChatGPT 中文排障站，想听听大家对内容结构的意见",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228926#reply2",
+          "author": null,
+          "description": "大早上的一些随拍，下次要拍鸟非得要 4 点半就起床了，不然都躲起来了\n栗背短脚鹎\n\n\n松鼠\n\n\n准备捕猎的夜师傅\n\n\n蓝莓\n\n\n红耳鹎",
+          "link": "https://www.v2ex.com/t/1228926#reply2",
+          "publishedOn": "2026-07-21T15:23:55.000Z",
+          "wordCount": 1063,
+          "title": "[观鸟] 最近一次拍的鸟，实在鸟荒了",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228925#reply1",
+          "author": null,
+          "description": "大家好，最近在搞一个 Hyperliquid 链上交易数据分析站，聊聊为什么做这个东西，以及开发过程里踩过的一些坑。\n做这个东西的初衷是因为我自己也在做交易，但是之前交过一些学费（亏损），目前能保持小的稳定盈利，想要提高方向性判断，所以做了这个工具。欢迎各位大佬体验和提意见！\n为什么选 Hyperliquid\nHyperliquid 目前在永续合约 DEX 里面算是头部的，日交易量经常有几十亿美元，上面也有不少大户和机构用户在交易。\n而且官方有 API ，交易数据也比较透明。刚开始我觉得，既然数据都能拿到，那做个统计分析站应该不会太难。\n实际做下来发现，数据“能拿到”和“能低成本地整理出来”，完全是两回事。\nHyperliquid 上涉及的钱包地址有两百多万个。如果把所有地址的历史成交都拉下来，数据量预估会到 TB 级，存储和计算成本都不低。\n更麻烦的是，里面很多地址早就不活跃了。花钱把这些数据全部存下来，实际意义也不大。\n所以我就不做全量地址，而是先找出相对有分析价值的地址，比如高盈利、高资金量、最近比较活跃的用户，然后重点采集这些人的成交数据，做排行榜和交易者画像。\n我想解决的问题就是：\n在 Hyperliquid 上，怎么找到一些相对靠谱、高盈亏比，值得长期观察的交易者？\n官方现在主要是原始数据和一个比较基础的排行榜。第三方工具也有一些，但有的评级规则不透明，有的历史数据不太完整。\n如下图官方只有 PNL：\n\n而且如果只是按照 PnL 排序，问题其实挺明显的。\n有些人可能就是重仓赌对了一次，赚得很多，但不代表他长期有稳定的交易能力，有一些是马丁策略画像，是大户有很大的资金支撑，没有可跟性；但是有些人的收益没那么夸张，但回撤小、交易时间长、风格也比较稳定，想把这些用户识别筛选出来。\n所以我不太想再做一个简单的 PnL 榜，而是想尽量区分：\n哪些人可能真的有比较稳定的交易优势；\n哪些人只是某一把运气比较好，刚好行情适合他；\n哪些账户的行为像做市商；\n哪些人喜欢扛单、亏损后不断补仓；\n一笔亏损通常会在水下待多久；\n有没有比较明显的马丁策略特征；\n历史胜率、盈亏比和最大回撤怎么样。\n数据这块是目前最麻烦的，主要踩了几个坑\n第一个坑是，全量历史成交没办法直接靠 WebSocket 拿\nHyperliquid 的 WebSocket 更适合订阅单个钱包的实时数据。如果有几万个地址，一个个订阅显然不太现实，更别说靠它还原完整历史数据了。\n最后历史数据回填走的是官方 S3 归档里的 node_fills。先批量把历史成交导进来，再按地址整理。\n实时增量则是另一套逻辑。筛选出来的重点地址，通过 WebSocket 持续订阅。这样历史数据从 S3 回填，后面的新成交再通过 WebSocket 补上。\n第二个坑是，fills 的数据增长速度比我预想的快\n现在存储用的是 TimescaleDB ，主要靠时序分区、列压缩和滚动保留策略来控制成本。原始成交、聚合数据和评分结果也会分开存，不然每次查排行榜或者用户画像都去扫原始 fills ，查询压力会非常大。\n在这些数据的基础上，每天会跑一次筛选和评分，过滤出一批交易风格发生飘逸的用户。\n除了 PnL ，还会看最大回撤、交易时长、样本数量、持仓一致性和资金变化等指标。\n最终想筛出的是一批盈利不错、交易时间够长、样本也比较充足，而且风格相对稳定的用户。\n此外我认为最有价值，对我帮助很大的是一组筛选过后的用户，对他们实时持仓的共性分析，一个用户可能会判断失误，但是一组用户提升方向性判断的正确性。\n还在加的功能补充\nAI 分析能力，加上提示词，归纳总结交易行为，做出评价\n历史交易回测，加上滑点\n模拟跟单组合，跑一下收益曲线\n项目地址： https://app.hyperinteldata.com/zh/home",
+          "link": "https://www.v2ex.com/t/1228925#reply1",
+          "publishedOn": "2026-07-21T14:54:30.000Z",
+          "wordCount": 1202,
+          "title": "[程序员] 最近做了个 Hyperliquid 数据分析站，聊聊数据开发里踩的坑",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228924#reply2",
+          "author": null,
+          "description": "后端测试需要用到 Excel 大文件，测试导入、导出。\n这个工具用来测试是很顺手了。\n生成指定行数的 Excel 文件, 输入行数, 快速下载 xlsx 表格文件\n看了背后的技术：\n使用了 WebAssembly  Web Worker\n能支持生成一百万行的 Excel 文件，还是有点猛，只是 100w 行，要等几十秒。\n还能按规则填充列的数据，也支持插值表达式和随机数，自由度还是不错的。",
+          "link": "https://www.v2ex.com/t/1228924#reply2",
+          "publishedOn": "2026-07-21T14:47:49.000Z",
+          "wordCount": 1157,
+          "title": "[分享创造] 生成指定行数的 Excel 文件, 输入行数, 就能快速下载 xlsx 表格文件",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228923#reply4",
+          "author": null,
+          "description": "有一些数据需要长期保存,打算专门新购一台电脑\n最好是“软”方法?即使用程序/代码来主动“制造混乱”,而不需要引入额外硬件?\n我的天真想法:\n①随机(此时可能是低质量随机源)生成不存在的 1000 条命令抛给 PS 执行\n②滚键盘输入乱码(可视为高质量随机源?)作为密码,随机选择系统中某一个文件,嵌套加密它 10 次\n这俩动作应该能增加大量 I/O+系统中断+CPU 抖动吧?\n或者说,执行 openssl rand 命令能够正常输出结果,是不是说明 CSPRNG 已经初始化成功了?",
+          "link": "https://www.v2ex.com/t/1228923#reply4",
+          "publishedOn": "2026-07-21T14:43:54.000Z",
+          "wordCount": 1116,
+          "title": "[Windows] 一台[物理断网]+[加密解密专用]的 WIN 电脑,如何在开机后“主动补熵”呢?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228922#reply2",
+          "author": null,
+          "description": "和 cloudcone 亲兄弟轮番倒地",
+          "link": "https://www.v2ex.com/t/1228922#reply2",
+          "publishedOn": "2026-07-21T14:32:32.000Z",
+          "wordCount": 1073,
+          "title": "[VPS] racknerd San Jose 停机了",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228921#reply1",
+          "author": null,
+          "description": "摄影 - @Geeksun2021 - https://i.imgur.com/J7rc8kk.jpeghttps://i.imgur.com/EapBnb6.jpeghttps://i.imgur.com/iRYqIzE.jpeg",
+          "link": "https://www.v2ex.com/t/1228921#reply1",
+          "publishedOn": "2026-07-21T14:29:03.000Z",
+          "wordCount": 1043,
+          "title": "[摄影] 久等了，俺满血复活了！请看这组在 Codex 协助下完成的尼尔机械纪元调色风格照片集！",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228918#reply2",
+          "author": null,
+          "description": "背景是女方全款在新一线城市 028 买房了，男方出家电，家居那些。现在只能说两个人很要好，没有订婚，没有就彩礼达成一致，也没有商量婚礼细节。 这个房子女方全款，女方的外婆，父母都搬过来住。\n主卧说的是婚后和男方一起住，家里面的布置，摆设，需要完全按照女方家里面生活习惯来。\n我感觉到这个就是要借男方家的运势去冲什么\n仪式是下面这样的：“\n一，时间：2026 年 农历六月初十四，星期一  上午 9：00 一一 10：59\n二，准备的材料\n1 ，6 对烛、香。客厅中间茶机上一对，客厅四个角各一对，橱房一对。一对烟花，入宅当天打开房门后，先由女儿在门口对着房间放。\n2 ，米桶（米缸），装八分满的米，中间放一个 120 元的红包。寓意衣食无忧，财源广进。\n3 ，木块，12 块木块用红纸包成一捆，放在电视柜下，另四块木块分别用红纸包好，放在客厅四个角。招财进宝。\n4 ，新碗筷（ 6 一 8 套），用红绳捆好。象征人丁兴旺，家庭和睦。\n5 ，水桶（水壶）装七分满清水。寓意风生水起，细水长流。\n6 ，新扫帚，撮箕，用红绳拥好。进屋后象征性从内向门口扫一下，寓意除旧迎新，扫除晦气，留下福气。\n7 ，新枕头（每人一个），寓意高枕无忧，从头开始。\n8 ，活鱼一条（年年有余），芹菜、猪肝、猪腰，油、盐、酱、醋、茶，寓意开伙大吉，生活富足。一袋汤圆，中午煮着大家吃，寓意团团圆圆。\n9 ，苹果、橙子、火龙果、红枣、开心果、桂圆、花生。寓意平平安安，开开心心，好事发生。\n10 ，绿植，发财树、金钱树、富贵竹。\n11 ，一些硬币，进门后撒在客厅。\n三，当天早上现买的东西\n27 日早上，女儿、女方的男友 9 点前赶到小区外面，现购买一条活鱼、一袋米、一桶油和盐、酱油，两根长萝卜（切成六块，点香烛用）\n四，开门入宅程序。\n1 ，10：18 分，打开房门，由女儿、女方的男友两人各人拿一支礼花，朝着屋内放礼花。放礼花时说：吉日良时，开门大吉，万事昌隆，平安顺遂，福满门庭，阖家安康。\n2 ，房主女儿抱米桶（装八分米）第一个进门。进门时说几句吉祥的话：乔迁之喜，大吉大利，福满新居，阖家安康！\n2 ，婆婆第二个进门，拿木块。说：入宅大吉，好运常在。\n3 ，然后，女儿母亲，女方的男友母亲，女方的男友父亲，女儿父亲，女方的男友每人拿些东西，依次进门。进门时说几句祝福的话。\n如，门迎百福，户纳千祥，财丁两旺，平安喜乐！\n吉星高照，富贵吉祥，万事如意，福寿绵长！\n双脚跨进门，富贵带进来，金银堆满屋，财源滚滚来！\n良辰迁吉宅，瑞气满华堂，合家添喜乐，福寿伴天长！\n春风入新宅，福气满门庭，前程皆似锦，岁岁享安宁！\n家门兴旺福满堂，入宅大吉万事昌，阳光满屋人安康，和气致祥岁岁安！\n4 ，进屋后开灯，上香烛（橱房一对、客厅四个角各一对，茶机上一对）放木块，钱币。象征性扫一下屋子，主要是把礼花扫了。\n5 ，中午煮汤圆吃，圆圆满满！\n表面上看着很自然，但细细品是完全把男方家踩在脚下，矮化男方家里。",
+          "link": "https://www.v2ex.com/t/1228918#reply2",
+          "publishedOn": "2026-07-21T13:47:24.000Z",
+          "wordCount": 1148,
+          "title": "[成都] [求助道友] 一场诡异的入宅仪式",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228916#reply7",
+          "author": null,
+          "description": "做个小调查.jpg 大概是，如果没有重置的话，跟 Codex 最近送了一堆重置比起来，有哪些蹬出来的东西，如果没有重置的话，可能原来就不一定会做或者不一定想到去做的？",
+          "link": "https://www.v2ex.com/t/1228916#reply7",
+          "publishedOn": "2026-07-21T13:33:22.000Z",
+          "wordCount": 1361,
+          "title": "[程序员] 有点好奇，大家在 Codex 送重置的时候都蹬出了啥呢？",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228915#reply3",
+          "author": null,
+          "description": "给大家送上 5 个 1024proxy 的动态住宅 IP 体验流量包，尤其是做跨境电商、舆情监控和数据采集的朋友，这波羊毛不薅血亏。\n🎁兑换码\nB68J-GWYB-Q3HZ\nC5RL-9QD4-7JXY\n9TCT-UNZJ-G3LM\nCLCL-P9DM-CWY9\n2RHB-UJ8X-HDFL\n📝使用流程\n1 点击 https://1024proxy.com/?kwd=cym-v2ex ，注册登录\n2.进入控制台，点击 CDKey\n3.输入上方任意一个兑换码，后台自动到账\n📌为什么选 1024proxy ？\n纯净住宅池：覆盖全球多个城市，支持市/区级定位\n稳定性拉满：可用率≥99.6%，平均延时＜ 0.5s ，断线自动重连\n全协议兼容：HTTP/HTTPS/SOCKS5 一键切换，指纹浏览器完美适配\n注意事项：仅限新注册用户参与，单账号限领 1 次!\n👉 领到的朋友麻烦回帖顶一下，让更多朋友看到福利！",
+          "link": "https://www.v2ex.com/t/1228915#reply3",
+          "publishedOn": "2026-07-21T13:30:48.000Z",
+          "wordCount": 1122,
+          "title": "[推广] 优质住宅 IP 限时免费！运营/爬虫党专属福利，手慢无",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228914#reply0",
+          "author": null,
+          "description": "看了这篇文章，突然激发了我的讲话欲，使用 AI 深度参与开发的时间也有快一年的时间了，心中真有一些话，不吐不快！\n首先声明，我开发的软件都是中小型的软件。此种软件的 token 消耗量暂且不谈，如果是那种极复杂的大型软件，放开手脚使用商用的高级模型来开发的话，到最后核算一下成本，可能比用程序员成本都高（这段是我的一个猜测，我也没参与过这种极复杂的软件开发，有懂行的可以出来说两句）。\n关于开发治理问题，过去我们有一整套成熟的软件开发模式来保证我们程序员的开发的代码质量，但是引入 AI 之后，我私以为整个开发治理的难度比之前要大得多，且需要不断摸索。\n先抛一个观点：我认为最好的思路就是当成现有每个程序员的提效工具，可以调整开发模式，但是别总想着颠覆这个颠覆那个的，颠覆到最后还剩什么呢？\n引入新的工具，必然会引入新的问题，此消彼长……AI 深度参与开发，确实提效了，但是引入的新的问题也是不容忽视的。驾驭工程也不是万能的，软件开发没有银弹！程序员究竟在哪个环节进行把控和干预，怎么寻找这个平衡点，目前我没还看到成熟的案例。对于这种成熟的案例，我想短时间内人家也不会放到网上给大家学习的，只会在小范围内传播。\n尤其是长期大量使用公开的商业模型，我们软件最核心的资产之一代码已经被“窃取”了，某天出现一个模仿者，想要复刻这个长期使用公开商业模型来开发的软件应该不是难事，复刻成本会大大降低……\n关于怎么“正确”使用 AI 辅助软件开发的问题，留给大家来解答哈。本人也有一些实践经验，但是不提也罢，哈哈。\n再补充一点，这些 AI 巨头有技术是真的，但是吹牛逼的能力也是无人能及，投入了这么多的研发经费，啥时候能挣回来？别被他们忽悠瘸了。",
+          "link": "https://www.v2ex.com/t/1228914#reply0",
+          "publishedOn": "2026-07-21T13:25:24.000Z",
+          "wordCount": 1051,
+          "title": "[程序员] 观新智元最新关于 AI 使用成本文章有感",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228913#reply8",
+          "author": null,
+          "description": "在 Trae 、Qoder 下，分别用 Deepseek-v4 和 Kimi-K3 跑编程任务。Kimi-K3 挺让人失望的\nAI Coding 测评准备\n测试项目：桌面端知识库工具\n用户导入本地文档，系统建立分块索引，支持自然语言提问并返回带引用来源的回答\n初始脚手架\n运行时：Electron 33 （主进程 Node.js+Chromium ）\n前端：React 18 + TypeScript （ Vite 构建）\n后端：TypeScript 服务层\n\n大家如果想要自己完整测评一下，可以评论区留言，把原项目开源出来\nVibe Coding 工具和大模型\n编程工具分别用 字节 Trae 、阿里 Qoder\n大模型选择 deepseek-v4-pro、kimi-3 \nhttps://platform.deepseek.com/\nplatform.kimi.com\n\n知识库工具项目代码，项目名叫starter\n用 Harness 加持原starter项目下，新项目叫solution_log\n为什么要用到 Harness 的原理，可以阅读下我的文章\nhttps://mp.weixin.qq.com/s/-9Jfwv2SqswbvwZJx5D5bQ\n开始测评\n将 知识库 和 Harness + 知识库 两个项目通过 Vibe Coding 完成同样功能开发，相同的需求提示词是这样的\n# 任务：构建知识库问答工具\n## 产品描述\n开发一个桌面端个人知识库问答工具。用户可以导入本地文档，系统对文档建立索引，然后用户可以用自然语言提问，系统从文档中检索相关内容并给出有依据的回答。\n\n## 核心功能需求\n### 1. 文档导入\n- 用户点击\"导入文档\"按钮，选择本地 `.txt` 或 `.md` 文件\n- 导入后文档显示在左侧文档列表中，包含文件名、大小、导入状态\n- 文件大小限制 10MB\n\n### 2. 文档索引\n- 导入后，用户点击\"建立索引\"将文档分块存储\n- 索引按段落切分，每块约 500 字\n- 索引完成后文档状态变为\"已索引\"，显示分块数量\n\n### 3. 问答功能\n- 底部输入框输入问题，点击\"提问\"按钮\n- 系统用关键词匹配方式在已索引分块中检索相关内容\n- 返回回答文本 + 引用来源（文档名、分块位置、摘录内容）\n- 显示置信度（有引用：0.8 ，无引用：0.2 ）\n- 每次问答自动保存到历史记录\n\n### 4. 历史记录\n- 点击\"历史记录\"按钮查看所有历史问答\n- 以对话气泡形式展示（用户问题在右，系统回答在左）\n- 显示时间戳和置信度\n\n## 验收标准\n\n1. 可以导入 `.txt` 或 `.md` 文件，文档出现在列表中\n2. 点击\"建立索引\"后文档状态变为\"已索引\"\n3. 提问后能返回含引用的回答\n4. 历史记录中能看到所有问答\n5. 重启应用后数据依然存在\n\n在原来的客户端上，一口气开发 \"文档导入\"、\"文档索引\"、\"问答功能\"、\"历史记录\"四个新功能，并希望 AI 自动化测试验收\n测评的结果\n项目\nCoding 环境\n费用时间\n成功\n\n\n\n\n知识库\nQoder + Deepseek-V4\n4 分钟  1RMB\n是\n\n\n知识库\nQoder + Kimi-K3\n15 分钟  8RMB\n否\n\n\n知识库\nTrae + Deepseek-V4\n5 分钟  1RMB\n是\n\n\n知识库\nTrae + Kimi-K3\n15 分钟 9RMB\n否\n\n\n知识库+harness\nTrae + Deepseek-V4\n2 分钟 0.5RMB\n是\n\n\n知识库+harness\nTrae + Kimi-K3\n18 分钟 8RMB\n是\n\n\n知识库+harness\nQoder + Deepseek-V4\n2 分钟 0.6RMB\n是\n\n\n知识库+harness\nQoder + Kimi-K3\n12 分钟 9RMB\n是\n\n\nKimi-K3 总结\n价格比较贵，对比 deepseek-v4-pro ，可能是 Kimi-K3 定价较贵缘故，同样的结果 Token 开销查了近 10 倍左右\n在 Qoder 、Trae 集成上编程能力整体表现不如 deepseek-v4-pro ，而且执行时间远远增加\n完整案例实操视频和完整原文  https://mp.weixin.qq.com/s/k92i1_ORy5mDE1bOdRG-kw",
+          "link": "https://www.v2ex.com/t/1228913#reply8",
+          "publishedOn": "2026-07-21T13:14:49.000Z",
+          "wordCount": 1588,
+          "title": "[程序员] 感觉又慢又贵：实测 Kimi-K3 编码能力",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228912#reply6",
+          "author": null,
+          "description": "之前一直用的 cursor ，老用户的 500 次\n爽用了一段时间之后，犹豫 cursor 的政策修改，现在没法用了。\n本来打算直接 cursor 开个 200 刀的会员，但是我先用新用户，开了一个 20 刀的 pro\n发现，如果用 fable5 的话，也就几次对话，20 刀就用完了\n那如果开 cursor pro 的话，即使 200 刀的 5x ，我感觉也不够用，可能一两天就用完了\n然后我转战了 codex ，20 刀开了个 plus ，但是我主要是开发，感觉 codex 很难用，没有目录树，然后也没有办法指定代码对话，整体还是喜欢 cursor 这种基于 vscode 的模式\n有考虑过转 cc ，打算买个账号，但是搜了下，封号的太多了，担心用不了多久就被封了\n所以，如果一个月愿意支出 200 刀的话，有什么办法可以使用到满血的 fable5 吗？\n有考虑过中转站，但是似乎很多可能都有黑科技！\n目前全职独立开发，吸过一段时间 fable5 ，感觉其他的都不香了！",
+          "link": "https://www.v2ex.com/t/1228912#reply6",
+          "publishedOn": "2026-07-21T13:11:14.000Z",
+          "wordCount": 1324,
+          "title": "[问与答] 一个月 200 刀，能爽用 fable5 吗？",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228911#reply2",
+          "author": null,
+          "description": "东西是做好了，部署了，没有商用，纯技术流，目前打造 AI 产品矩阵中....\nAI 智能小说创作，注册免费用： https://www.jtx15.top/\n企业 AI 智能体平台，注册也免费用： https://sale.jtx15.top/",
+          "link": "https://www.v2ex.com/t/1228911#reply2",
+          "publishedOn": "2026-07-21T13:10:20.000Z",
+          "wordCount": 1096,
+          "title": "[分享创造] 分享程序员我自己开发的 AI 产品",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228910#reply1",
+          "author": null,
+          "description": "做了个 Chrome 扩展叫 AltG ，给经常开一堆标签页做调研、归档网页的人用。\n核心思路很简单：我经常会在研究某个东西的时候，打开一堆 tab ，然后一个一个地看，这样很低效。所以我搞了一个浏览器插件，可以把你所有的 tab 都变成 markdown 存到本地，然后让 AI 去看就好了。\n如果你用 Obsidian 的话，跟 Obsidian 搭配起来建设知识库的时候，AltG 会是个神器。\n还有一种场景就是：如果你打开了很多 tab ，你肯定不会在看完之前就把它们关掉。所以这个插件还能够把你打开的所有 tab 的链接都保存成本地 TXT ，下次再想打开它们的时候，把这个 TXT 文件丢给 AltG 就能再次一键打开所有 tab 了。\n最后还有一个截图功能。因为打开了很多 tab 嘛，所以一个一个切过去截全图也是比较麻烦的（例如我要截图给 AI 让它仿照一下风格啥的）。所以 AltG 就可以自动切 tab ，自动滚动页面截图，自动拼接截图为网页的长截图。这就很方便了。你也可以设置滚动的最多次数，防止有些页面是无限滚动的设计导致它一直一直在截图。😂\n还有就是，截图里面支持水印，水印的设置里支持变量。这样的话，截图的时候就能自动记录当前截图的网页地址是啥了，免得到时候忘记这个截图是来自于哪里的。\n下面给几个链接：\n官网： https://altg.reka.cc\nChrome 商店的插件详情页\nYoutube 上的演示视频\n欢迎试用和提意见，尤其是多标签的工作流和 Obsidian 工作流，有 bug 或功能想法的话欢迎喷😁",
+          "link": "https://www.v2ex.com/t/1228910#reply1",
+          "publishedOn": "2026-07-21T13:04:03.000Z",
+          "wordCount": 1165,
+          "title": "[分享创造] 做了个 Chrome 扩展叫 AltG，给经常开一堆标签页做调研、归档网页的人用。",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228909#reply23",
+          "author": null,
+          "description": "跌跌撞撞的摸索了一个多月，终于把烤面筋做起来了\n这玩意确实累，但是赚钱赚的还是比较踏实，只要自己把控好品质就能稳定的赚一点收入",
+          "link": "https://www.v2ex.com/t/1228909#reply23",
+          "publishedOn": "2026-07-21T12:53:25.000Z",
+          "wordCount": 1509,
+          "title": "[职场话题] 兄弟们我不是口嗨真转行做这个了烤面筋了",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228908#reply0",
+          "author": null,
+          "description": "从 2021 年 https://reviews.llvm.org/D112911 提交第一个 LLVM 补丁开始，我在业余时间逐渐扩展到 rustc MIR 优化、LLVM IR 优化和代码审查。我的所有贡献都在工作之外时间完成，最近修复这个 rustc 优化正确性问题时，我发现回到家已经非常疲惫，还要肝到了深夜：https://github.com/rust-lang/rust/pull/159608。\n随着年龄和生活节奏的变化，身体有点肝不动了，这很不利于更持续的贡献工作。我尝试通过 GitHub Sponsors 为长期参与 Rust 和 LLVM 贡献寻找更多可能性：\nhttps://github.com/sponsors/dianqk\n如果你对我做的事情感兴趣，可以请我喝一杯瑞幸 :p",
+          "link": "https://www.v2ex.com/t/1228908#reply0",
+          "publishedOn": "2026-07-21T12:37:35.000Z",
+          "wordCount": 1081,
+          "title": "[推广] 通过 GitHub Sponsors 支持我的 Rust & LLVM 工作",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228907#reply1",
+          "author": null,
+          "description": "https://arrowgo.net/zh-cn\n箭头消除游戏\n有独立的闯关模式\n有每日挑战\n有无尽模式\n还支持自己编辑地图",
+          "link": "https://www.v2ex.com/t/1228907#reply1",
+          "publishedOn": "2026-07-21T12:36:10.000Z",
+          "wordCount": 1249,
+          "title": "[分享创造] 搞了个摸鱼小游戏",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228905#reply4",
+          "author": null,
+          "description": "深化互联网协议第六版（ IPv6 ）技术创新和融合应用实施方案（ 2026—2030 年）\n网信中国-网信发布栏目新发的。和宽带相关的大概就下面这些吧\nhttps://i.imgur.com/a/5f45mqe.png",
+          "link": "https://www.v2ex.com/t/1228905#reply4",
+          "publishedOn": "2026-07-21T11:58:22.000Z",
+          "wordCount": 1123,
+          "title": "[宽带症候群] 原来 IPV6 还是要推的啊，还以为就保持现状了",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228903#reply3",
+          "author": null,
+          "description": "之前手机一直用小火箭没有任何问题，迁移到 macbook 发现，在公司内网环境下（分配 10.x 地址）开启代理可以正常访问国外网站，但是访问不了内网网站，关闭代理就可以访问内网。\n已经在配置文件中设置了内网域名不走代理。\n搞了一个小时，有点崩溃。求大神解决。",
+          "link": "https://www.v2ex.com/t/1228903#reply3",
+          "publishedOn": "2026-07-21T11:55:35.000Z",
+          "wordCount": 1134,
+          "title": "[问与答] macbook 使用 shadowrocket 上网时，无法访问公司内网",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228902#reply7",
+          "author": null,
+          "description": "去了趟 waic ，薅了各个 token 工厂大几千的额度，\n每家国内模型都是全覆盖，中转站送那三瓜两枣真看不上了，\n我才知道比如 glm  官方部分算力也是来自这些 token 工厂。",
+          "link": "https://www.v2ex.com/t/1228902#reply7",
+          "publishedOn": "2026-07-21T11:49:26.000Z",
+          "wordCount": 1219,
+          "title": "[问与答] 没人发现“Token 工厂”越来越多了吗，今年国内模型我算自由了。",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228900#reply4",
+          "author": null,
+          "description": "自己做号 + 帮朋友管号一段时间，被 135 、秀米、壹伴 轮流坑过——最典型的两个：\n• 同步到公号后台图片打叉 / 样式崩，得回去再修一遍\n• 收费套娃：9.9 引流 → 单功能 19.9 → V3 年费 499 ，想用完整体验得上千\n于是花了两周撸了个 MVP ，方向很窄：不做 50 平台分发，就死磕微信生态——一个用户绑多个公号，文章写好选中 → 一键同步到指定公号的草稿箱（标题 / 封面 / 正文图+文），过去点发布就行。\nMVP 现阶段长这样（单 HTML ，浏览器打开即用，移动端也适配了）：\n👉 https://wx.ithuajiao.site( https://wx.ithuajiao.site)\n功能极简，就一条链路：写 → 选号 → 同步到草稿箱，其余全砍了。编辑器用的 Tiptap ，图片先走公号素材接口拿到微信内链再嵌正文——这是竞品最容易翻车的点，我从第一天走对路。\n\n定价想走透明路线（还没最终定，Beta 期免费）：\n• 免费版：2 个号，每月 20 篇\n• 成长版：按账号数单维度收，不搞功能套娃\nBeta 期留邮箱预约的，给个 8 折码（ WE-2026-EARLY20 ），邮箱入口在 MVP 定价弹窗里，POST 到我自己的 443 服务落文件（ Python 写的，监听域名根路径，顺手也算个小轮子）。\n现阶段最想要的反馈：\n1. 同步保真度——你们用过竞品的，觉得最崩的是哪环？我这边图片内链 + 行内样式过滤，实测 135 那篇\"图片打叉\"的 case 能过，但覆盖不全\n2. MVP 那条链路跑通没？ HTML 里\"写文章 → 选号 → 同步弹窗\"是 mock 的（公号授权那块要用户自己绑，我没法替他调），但流程走完了，看看有没有反直觉的地方\n3. 定价维度——按账号数 / 按文章数 / 按\"功能解锁\"，你们更吃哪种？\n谢过，骂也行 👇",
+          "link": "https://www.v2ex.com/t/1228900#reply4",
+          "publishedOn": "2026-07-21T11:30:39.000Z",
+          "wordCount": 1286,
+          "title": "[分享创造] 做了个微信公号图文同步工具，调研了 135/秀米/壹伴 的差评，发现机会在\"同步保真度\"—— MVP 出来了，求喷",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228898#reply4",
+          "author": null,
+          "description": "任职要求\n熟练掌握 Rust / Go / Python / Next.js 等相关技术栈，具备独立负责模块设计、开发、调试和交付的能力。\n欢迎熟练掌握 Java 等主流后端语言、并愿意转向 Go 语言技术栈的优秀工程师。\n具备良好的后端工程能力，理解接口设计、服务拆分、并发处理、异常处理、日志追踪、性能优化等常见工程实践。\n数据库与中间件\n精通 PostgreSQL 或其他主流关系型数据库，具备较强的数据建模、SQL 优化和问题排查能力。\n对高并发场景下的 事务隔离级别、锁机制、并发控制、数据一致性 有实战经验。\n熟练使用 Redis ，理解缓存、分布式锁、队列、限流等常见使用场景及风险边界。\nAI 工程化能力\n熟练使用 Claude Code 、Codex 、Cursor 、GitHub Copilot 等 AI 编程工具，能够将 AI 深度融入日常研发流程。\n理解 AI 辅助开发的正确使用方式，能够通过清晰的需求拆解、上下文整理、提示词设计和代码审查，提高研发效率与交付质量。\n具备 All in AI 的工作理念，愿意主动探索 AI 在需求分析、架构设计、代码生成、重构、测试、文档编写、Code Review 等环节中的应用。\n能够判断 AI 生成代码的质量与风险，不盲目信任生成结果，具备必要的人工审查、调试和工程落地能力。\n有使用 AI 工具完成真实项目开发、重构、自动化测试、文档生成或工程提效经验者优先。\n代码质量\n开发态度严谨认真，对代码质量、代码结构、命名规范和排版风格有较高要求。\n注重代码可读性、可维护性和可测试性，能够主动进行自测、边界条件验证和问题复盘。\n不接受“能跑就行”的开发方式，要求具备工程化思维和长期维护意识。\n综合素质\n具备良好的网络安全意识，理解常见的防刷、防注入、防篡改、权限控制、接口鉴权等安全实践。\n具备良好的文档编写习惯，能够清晰输出技术方案、接口说明、部署说明和问题记录。\n具备较强的自驱力和责任心，适合远程协作，能够对结果负责。\n薪资待遇与工作模式\n薪资：15K-20K RMB / 月 （双休，国家法定均休，13 薪）\n工作模式：广州坐班 或 全远程办公\n弹性工作制，不以打卡为核心考核标准，更关注实际产出、代码质量和交付结果。\n如您对本职位感兴趣，请携带简历投递邮件\n请在投递时一并提供以下信息：\n1 ，您从哪里了解到我们\n2 ，简要的自我介绍（包括相关经验、技术栈和参与过的项目）\n3 ，个人最新简历（建议 PDF 格式）\nEmail： Globalhub168@gmail.com",
+          "link": "https://www.v2ex.com/t/1228898#reply4",
+          "publishedOn": "2026-07-21T11:13:53.000Z",
+          "wordCount": 1248,
+          "title": "[酷工作] 招全栈 / AI Native Developer / Go 后端方向",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228897#reply8",
+          "author": null,
+          "description": "我需要在开发中接入 SQL MCP 服务器，让 AI 自动建表、执行 SQL 、查表，同时我又担心 AI 会执行类似：DELETE FROM TABLE;的这种危险的 SQL 命令。\n有什么好的 SQL MCP 服务器，支持多种常用的数据库（主用 Oracle ）、部署简单、占用小，并且可以支持危险 SQL 管控（尽量配置简单）？",
+          "link": "https://www.v2ex.com/t/1228897#reply8",
+          "publishedOn": "2026-07-21T11:12:49.000Z",
+          "wordCount": 1311,
+          "title": "[问与答] 有没有什么好用的 SQL MCP 服务器",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228896#reply0",
+          "author": null,
+          "description": "🎁充 2 刀到账 4 刀\n产品价格：\n🌐 动态住宅 $2/GB\n📱 动态手机 $9/GB\n⚡ 动态机房 $0.8/GB\n🏠 全球静态住宅 $4/月起\n🖥️ 美国静态机房 $2/月\n先体验再充值。\n链接：member.jibaoproxy.com/#/login?formType=regist&code=2f809633",
+          "link": "https://www.v2ex.com/t/1228896#reply0",
+          "publishedOn": "2026-07-21T11:12:18.000Z",
+          "wordCount": 1310,
+          "title": "[推广] 新用户送： 0.5g 动态住宅流量 首充 2 刀到账 4 刀 静态住宅等于 2 刀/月 美国机房 1 刀/月",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228895#reply3",
+          "author": null,
+          "description": "深圳地铁安检加码争议：基于 V2EX 讨论的舆情与论据质量调查\n调查时间：2026 年 7 月 21 日  \n材料来源：V2EX 社区主题帖「恶心你，还得说是为你好，深圳地铁」（用户 SilenceLL 发起，345 条回复；链接：https://www.v2ex.com/t/1228444 ）及关联主题帖「想带刀带硫酸带炸弹的随随便便都能过」（用户 shrimpDumpling 发起，约 83 条回复；链接：https://www.v2ex.com/t/1228549）  \n调查性质：基于 V2EX 公开讨论文本的舆情与论据质量调查（非全市/全国代表性抽样）\n摘要\n2026 年 7 月，深圳地铁将进站安检由「部分小包、饭盒可手检」调整为「一律过安检机」，导致部分站点排队时间显著延长，并在 V2EX 等网络社区引发集中讨论。本报告在导言中还原事件背景与基本事实，比较中国内地与日本、韩国、中国香港、中国台湾、美国、欧洲、新加坡等地城市轨道交通安检制度及 2021–2026 年公开恶性案件，再对讨论中的立场加以辨析，并在第四章作综合评判。\n调查表明：本次争议的实质并非「地铁应否设置安检」，而是既有安检体系下执行强度的加码是否过度。国际比较不支持「有安检则恶性案件显著更少」的简单判断；安检对无意携带与机会型风险具有有限作用，对预谋绕过、合规刀具及安检覆盖范围外袭击作用有限。在可见回复中，反对「全包过机」者居多，但多数并不主张取消安检；较具共识的方向是分层安检与流程优化。\n抽样局限： 主材料为 V2EX 两帖。该社区用户高度偏技术从业者与城市中产，讨论语汇与立场结构不能外推为「深圳市民」或「全国舆情」；本报告结论仅对该讨论场域成立。\n一、导言：事件背景、经过与调查说明\n1.1 事件背景与政策调整\n内地地铁进站安检自 2008 年前后常态化。深圳长期「分层」：大件过机，部分小包、饭盒…",
+          "link": "https://www.v2ex.com/t/1228895#reply3",
+          "publishedOn": "2026-07-21T11:04:01.000Z",
+          "wordCount": 3198,
+          "title": "[生活] 深圳地铁安检加码争议：基于 V2EX 讨论的舆情与论据质量调查",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228894#reply0",
+          "author": null,
+          "description": "你有没有遇到这种情况：\n在 ChatGPT 里问过的那个人的生日，换到 Claude Code 写代码时又得重新说一遍。Cursor 里收藏了一篇好文章，回到 Kun 里完全想不起来。你的知识跟着工具走，不是跟着你走。\n每个 Agent 都有自己的\"记忆孤岛\"。\n为什么会出现这个问题？\n主流 AI Agent 的记忆方案都是工具内闭环：\n工具\n记忆方式\n范围\n\n\n\n\nChatGPT Memory\n内置\nChatGPT 内，跨会话\n\n\nClaude Projects\nProject 内知识库\nClaude 内，跨对话\n\n\nCursor\n.cursorrules + Codebase\n项目级\n\n\nKun / Codex\nmemory_create API\nKun 内\n\n\n没有一个方案能让你的知识跟着你走。换工具 = 记忆归零。\n我做了什么？\n写了一个叫 MarkAI 的开源 Agent Skill 。核心思路很简单：用一个 SQLite 文件作为所有 Agent 的共享记忆层。\n~/.markai/\n└── brain.db    ← 所有 Agent 读同一个文件\n\n存一次，到处用。Opencode 里记住的事，Claude Code 写代码时自动能查到。Cursor 里收藏的链接，回到 Codex 也能搜到。\n技术栈（极简）\nPython 3 stdlib + SQLite FTS5 — 零依赖，macOS/Linux 自带\nSKILL.md — Agent Skill 通用格式，主流 Agent 都支持\n纯本地 — 不上传云端，不调 API ，不传遥测\n它不只是\"共享\"，还会变聪明\n存得多了，MarkAI 会根据内容类型主动猜你的意图：\n存了电话号码 → 问你要不要存到通讯录\n存了地址 → 问你要不要打开地图\n存了生日且快到了 → 问你要不要礼物建议\n存了价格 → 问你要不要设提醒\n怎么用？\n# 安装\nnpx skills add brickhu/markai\n\n# 存\n记住：莉莉喜欢的花是牡丹\n\n# 查（换了个 Agent 也不用重新说）\n莉莉喜欢什么花？\n\n# 管理\nmarkai stats\nmarkai search \"关键词\"\n\n隐私？控制权？\n一个 .db 文件，全在你的硬盘上。备份就是复制它，迁移就是移动它。删掉 skill 不影响数据——数据存在 ~/.markai/，不在 skill 目录里。\n开源\n🔗 https://github.com/brickhu/markai\n📦 npx skills add brickhu/markai\n欢迎试用、提 issue 、拍砖。",
+          "link": "https://www.v2ex.com/t/1228894#reply0",
+          "publishedOn": "2026-07-21T10:58:17.000Z",
+          "wordCount": 1265,
+          "title": "[分享创造] 🧠 如何让你的所有 AI Agent 共享同一个记忆？—— 一个开源方案",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228893#reply2",
+          "author": null,
+          "description": "这次版本拖了挺久。。。中间工作比较忙，改了很多东西没有立即发版，自己也测试了很久，今天补上了服务器通过代理连接（卧槽这功能太重要了）的支持\ngithub: https://github.com/langtongxue/winssh\n官网: https://winssh.net\n具体更新日志如下：\nFeatures\nmacos 和 linux 更新暂时手动打开页面下载安装包\nSFTP 管理面板增加搜索功能\n增加会话标签中：SFTP 资源管理面板、端口转发面板、命令面板的位置记忆和宽度记忆\n增加服务器代理支持\n顶部工具栏增加[新增]服务器按钮\nBug Fixes\n优化安全提醒逻辑：必须有服务器连接了才触发提醒\n修复在凭据保险柜中编辑凭据时弹出表单没有填充对应值的问题\n修复资源监控报错\n关于在发布 v1.2.3 的时候说要彻底解决 macOS 上自动更新的问题也没解决，最优解需要 apple 开发者证书才行，这个问题先搁置吧。。\n如果在 macos 下打不开，请在终端执行以下命令\nsudo xattr -d com.apple.quarantine /Applications/WinSSH.app",
+          "link": "https://www.v2ex.com/t/1228893#reply2",
+          "publishedOn": "2026-07-21T10:50:30.000Z",
+          "wordCount": 1128,
+          "title": "[分享创造] [开源] WinSSH v1.2.4 正式发布",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228892#reply0",
+          "author": null,
+          "description": "远程资深后端工程师 / 后端技术专家（ Go+PHP / AI 效能方向） 30-60K\n\"##  [岗位定位] \n我们正在寻找一位技术过硬、具备架构重构经验，且对 AI 赋能研发有深度实践的资深后端研发专家。你将加入核心后端团队，主导高并发业务的底层架构演进，推进历史系统平滑重构，并带领团队探索 AI 技术在研发工作流中的深度落地。\n##  [岗位职责] \n* 架构演进与重构： 主导核心业务从历史 PHP 架构向 Go 语言生态的平滑迁移与重构，确保高并发流量下的业务 0 故障过渡。\n* 核心业务维稳： 深入理解并接管现存核心系统（基于 PHP / Yaf 等框架），负责日常高优业务迭代、性能调优及技术死锁排查。\n* AI 效能落地： 担当团队的“AI 效能引擎”，探索并落地大模型在研发全生命周期的应用。编写内部复用的 AI Agent 、脚本或自动化工具，大幅提升团队代码编写、代码审查与排错的整体效能。\n* 质量与规范把控： 参与核心模块的技术方案评审与代码审计，解决海量数据、复杂业务场景下的系统瓶颈。\n##  [任职要求] \n* 开发经验：5 年以上后端研发经验，具备扎实的计算机基础、数据结构与算法功底。\n* 双语栈能力： * 精通 **Go 语言**，熟悉微服务架构设计、高并发处理及内存管理机制，有独立负责 Go 核心项目落地的经验。\n* 熟悉 PHP 生态及主流框架（熟练掌握 Yaf 框架者优先），具备跨语言系统解耦和重构的实战经验，能够从容应对和改造历史遗留代码。\n\n* AI 实践能力（硬性要求）： 极客精神，熟练将大模型（如 ChatGPT / Gemini / GitHub Copilot 等）深度融入日常开发。有实际开发过 AI 工作流辅助工具、Prompt 调优或集成过 LLM API 的实战经验。\n* 中间件与存储： 熟练掌握 MySQL 、Redis 、Elasticsearch 等数据库与中间件的底层原理与调优方案。\n* 综合素质： 适应纯远程协作模式，极强的自我驱动力与责任心（ Owner 意识），具备良好的跨部门（前端、测试、产品）沟通排障能力。\n##  [加分项] \n* 有带队经验，曾在团队中担任过技术负责或敏捷落地推动者。\n* 有高并发流媒体、大规模数据并发处理业务经验者优先。\n* 拥有个人开源项目，或对前沿 AI 研发工具有持续追踪和独立见解。\"\n简历投递 TG @dx031",
+          "link": "https://www.v2ex.com/t/1228892#reply0",
+          "publishedOn": "2026-07-21T10:48:07.000Z",
+          "wordCount": 1201,
+          "title": "[酷工作] 远程资深后端工程师 / 后端技术专家（Go+ PHP / AI 效能方向）30-60K",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228891#reply0",
+          "author": null,
+          "description": "字节的旗舰图像模型 Seedream 5.0 Pro ，在 ReAPI 上目前有官方 7 折优惠，\n$0.031/张\n平台上还有 GPT Image 2 、Google Imagen 这些模型。\n适合做 AI 设计工具、电商图、营销素材生成这类需求的独立开发者或小团队。\n👉 https://reapi.ai/\n👉 https://reapi.ai/models/seedream-5-0-pro",
+          "link": "https://www.v2ex.com/t/1228891#reply0",
+          "publishedOn": "2026-07-21T10:29:41.000Z",
+          "wordCount": 1291,
+          "title": "[程序员] Seedream 5.0 Pro 官方 7 折",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228890#reply2",
+          "author": null,
+          "description": "先说说更新特性：\n苹果在今天凌晨（ 7 月 21 日）推送了 iOS 27 Beta 4 ，iPhone14 pro Max 已经更新，主力机还没敢升，\n目前测试一切顺滑，看来有 AI 加持，底层架构改的很彻底，耗电量也有提升，之前 Beta 的 Xcode 连接编译问题，也修复。还在测试，有问题 可以此贴汇总一下，方便佬友参考。\niOS 27 支持设备如下：",
+          "link": "https://www.v2ex.com/t/1228890#reply2",
+          "publishedOn": "2026-07-21T10:28:09.000Z",
+          "wordCount": 1146,
+          "title": "[程序员] iOS 27 Beta 4 今日正式推送，新机老机 BUG 问题汇总",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228889#reply5",
+          "author": null,
+          "description": "快蹬完了还不重置只能用卡了。。。话说送卡有固定时间送卡吗，月底过了会自动送一张？",
+          "link": "https://www.v2ex.com/t/1228889#reply5",
+          "publishedOn": "2026-07-21T10:23:04.000Z",
+          "wordCount": 1101,
+          "title": "[OpenAI] Codex 邀请新用户不送卡那这个邀请何意味啊",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228888#reply9",
+          "author": null,
+          "description": "下面这版可以直接发到 V2EX 的「分享创造」或「程序员」节点。\n标题\n一个 AI 写作工具从 Next.js 迁移到 TanStack Start ，并改用 Gemini Batch API 的记录\n正文\n最近做了一个 AI 内容生成工具 WriteGeniuses：\nhttps://writegeniuses.com\n它目前支持两种内容：\n长篇 Blog Article\nX Thread\n和常见的“输入一句话，直接返回整篇文章”不太一样。WriteGeniuses 会先生成结构化 Plan ，再拆成多个 Unit ，分别生成正文。用户可以单独编辑或重新生成某个段落，不需要每次都重跑整篇内容。\n项目最初是 Next.js + Convex ，后来前端迁移到了 TanStack Start 。迁移过程中顺便把生成架构也重做了一遍。\n目前主要技术栈是：\nTanStack Start / TanStack Router\nReact 19\nConvex\nGoogle Gemini Batch API\nCloudflare\nTailwind CSS + shadcn/ui\nStreamdown\nCreem\n这次改动比较大的地方主要有这些。\n1. 从 Next.js 迁移到 TanStack Start\n迁移后，文件路由、beforeLoad 路由保护和路由参数都由 TanStack Router 管理。\n一开始虽然页面看起来能正常打开，但禁用 JavaScript 后只能看到骨架屏。原因是列表数据仍然完全依赖客户端的 Convex useQuery，服务端并没有真正拿到内容。\n后来把需要首屏展示的数据放进 route loader：\n服务端读取登录状态\n服务端查询 Convex\n通过 loaderData 输出到 HTML\n客户端启动后再由 useQuery 接管实时更新\n这样即使…",
+          "link": "https://www.v2ex.com/t/1228888#reply9",
+          "publishedOn": "2026-07-21T10:22:49.000Z",
+          "wordCount": 1930,
+          "title": "[程序员] 一个 AI 写作工具从 Next.js 迁移到 TanStack Start，并改用 Gemini Batch API 的记录",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.v2ex.com/t/1228887#reply0",
+          "author": null,
+          "description": "rt ，有佬了解这个吗？想搞一个入金 ibkr 的。\n好像是现在内地门槛算低的见证开户了，没时间去香港。20w ，6 个月定期。或者 20w 买 A 类基金，没时间限制。 有佬开过这个吗？这个卡开完了，可以跨境支付通么？问了网点的人，这个也不懂，那个也不懂。但是看官方名单是支持的。但是内地南商是不在跨境支付通的名单商的，还是建行，兴业那些。不过说内地南商转香港南商是不收费用的。\n见证开户费用 500 元人民币/户，您可向我行受理个人业务的营业网点提供如下资料：\n（ 1 ）身份证明材料：身份证；\n（ 2 ）地址证明材料：如近 3 个月的信用卡账单/近 3 个月水电燃的缴费单；\n（ 3 ）签证证明文件及相应要求：已取得国外（境外）长期签证（连续居住三个月以上）（包括逗留期限小于 90 天但多次往返的签证；签证/签注在申请时有效期应不少于 30 个自然日）；\n（ 4 ）办理见证服务需要成为我行理财客户，具体条件以网点要求为准。",
+          "link": "https://www.v2ex.com/t/1228887#reply0",
+          "publishedOn": "2026-07-21T10:18:24.000Z",
+          "wordCount": 1266,
+          "title": "[投资] 南洋商业银行内地见证港卡。",
+          "imageUrl": null
+        },
         {
           "id": "https://www.v2ex.com/t/1228689#reply0",
           "author": null,
@@ -22608,356 +22768,6 @@
           "wordCount": 1067,
           "title": "[摄影] 我宣布，深圳湾公园在我的扫街排行榜位列第一名！",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221834#reply0",
-          "author": null,
-          "description": "PokePay 虚拟卡申请开卡充值全攻略！\n2026 年 6 月双福利活动：首笔消费返现 3% + 免费领取虚拟卡。\n美国 MSB+香港 MSO 双金融牌照",
-          "link": "https://www.v2ex.com/t/1221834#reply0",
-          "publishedOn": "2026-06-21T22:45:50.000Z",
-          "wordCount": 1045,
-          "title": "[推广] 玩转香港 PokePay 虚拟卡：申请开卡、充值全攻略+返现活动 | 零成本开卡教程",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221833#reply0",
-          "author": null,
-          "description": "阿里云开学校发票跟 tmd 打仗一样，受够了，还有哪家的云可以开票的？长期用",
-          "link": "https://www.v2ex.com/t/1221833#reply0",
-          "publishedOn": "2026-06-21T22:21:16.000Z",
-          "wordCount": 1018,
-          "title": "[问与答] 求一个国内长期稳定使用的云服务，要能开票的",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221832#reply3",
-          "author": null,
-          "description": "Android app 偶发性遇到，只需要强制停止，然后重新打开一般就可以了，不知道是什么原因造成的🙁\nhttps://i.imgur.com/ZBObnth.jpeg",
-          "link": "https://www.v2ex.com/t/1221832#reply3",
-          "publishedOn": "2026-06-21T22:17:24.000Z",
-          "wordCount": 1132,
-          "title": "[问与答] ChatGPT app 提示 ssl 证书错误有遇到的么？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221831#reply0",
-          "author": null,
-          "description": "fmtlib就是std::format的前身关联库，早在 C++20 出现前就已经十分受欢迎。\n这个库大量使用可变参数模板特性，想要给“传统”C 语言（指 C99 及之前的版本）做包装可以说是没什么好办法。但 C11 有_Generic，退而求其次妥协一下（指参数的数量限制），起码能用。\n包装接口的源码很简洁，头文件也就两百行上下：\nhttps://github.com/fmtlib/fmt/blob/main/include/fmt/fmt-c.h\n实现文件更简单，一百行不到：\nhttps://github.com/fmtlib/fmt/blob/main/src/fmt-c.cc\nReddit 有人已经试过，由于语言限制，目前似乎只能做到运行期检查\nThe {fmt} library has added a C11 interface.\n\n而且参数的数量也有限制，最多 16 个，毕竟是简单粗暴地把 16 个参数 Macro 全部写出来（至于那些代码是手写还是机器生成的，天知道）\n虽然不是很优雅，但至少能覆盖大部份用途了",
-          "link": "https://www.v2ex.com/t/1221831#reply0",
-          "publishedOn": "2026-06-21T22:10:33.000Z",
-          "wordCount": 1053,
-          "title": "[C++] 真是意想不到的操作：有好几个人一起协作向 C++库 fmtlib 加上了 C11 包装接口，确实能用",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221829#reply0",
-          "author": null,
-          "description": "背景:我不是法务,但凡公司数据要出境(出海、跨国协作、多地部署),「数据合规」这四个字就来烦我。拆开就是三件事:脱敏、加密、出合规材料。\n我以前的\"方案\":正则脱敏一坨 + openssl 加密一坨 + Excel 手搓合规文档一坨,靠 shell 和祈祷连起来,每次跑完都怕漏个手机号没盖住。\n于是写了个工具把它压成一条命令:\npip install cloakpii\ncloakpii migrate --source ./data --output ./safe --compliance-profile pdpa --compliance-report\n进去一个文件夹,出来一个「脱敏 + AES-256-GCM 加密 + 带合规报告」的副本。支持 CSV / JSON / Excel / Parquet / SQLite 等 8 种格式、11 种 PII;默认不可逆掩码,也能可逆令牌化(脱敏后还能 join)。\n本来想低调发的。结果上 PyPI 没几天,一个陌生人给我提了个 PR:SQL 注入、XXE 、还有个 SQLite bug 。一个做「数据安全」的工具被路人当场抓仨漏洞,属实社死。我心虚地把自己代码又审了一遍,果然还藏着个更丢人的——数字类型存的手机号/证件号直接漏过去了。现在修完焊上了 233 个测试。\nGitHub:https://github.com/Hellotravisss/cloakpii\n想问问大家:你们做跨境数据 / 合规这块,现在最头疼的是哪一步?是脱敏准确率,还是合规材料?欢迎拍砖,尤其欢迎再来抓 bug 的。",
-          "link": "https://www.v2ex.com/t/1221829#reply0",
-          "publishedOn": "2026-06-21T20:31:12.000Z",
-          "wordCount": 1318,
-          "title": "[分享创造] 我做了个数据脱敏工具,结果被陌生人当场抓了仨安全漏洞",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221827#reply8",
-          "author": null,
-          "description": "不思进取也就算了, 没有 mac 客户端也就算了, 浏览器查看还有这种提示: \n暂不支持此浏览器，请使用 IE 浏览器\n暂不支持此浏览器，请使用 IE 或版本 52.0 之前的 32 位火狐浏览器\n为啥这么拉垮啊, 浏览器直接观看难度这么大??? 有懂行的说说吗?\n我有 tp 的摄像头和 nvr 以及 hk 的 nvr.... 都是让我用 IE.....",
-          "link": "https://www.v2ex.com/t/1221827#reply8",
-          "publishedOn": "2026-06-21T17:07:28.000Z",
-          "wordCount": 1355,
-          "title": "[问与答] 2026 年了, 为啥国产监控 NVR 或者摄像头还要 IE 浏览器才能观看?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221826#reply0",
-          "author": null,
-          "description": "和大家分享一下我的开源项目——muselab：一个基于 Claude Agent SDK 构建的自托管 AI 工作台，包含文件管理区域、markdown 和 HTML 预览区，以及 AI 对话区。\n\n\n\n\n\n\n\n移动端文件区\n移动端预览区\n移动端对话区\n\n\n解决的核心问题是——现在的 chatbot （豆包 / GPT / Gemini / Claude ）往往是一个会话处理一个比较独立的问题，用户信息散落在一个个孤立的 session 里，既不能互相增强，也难以沉淀。Agent = context + harness + model ，muselab 的设计理念：\ncontext：用文件区域纳管上下文，结构清晰，把上下文沉淀为文件。\nharness：采用 Claude Agent SDK ，是公认领先的 harness 之一。\nmodel：支持 Claude 以及所有主流国产模型，灵活切换。\n下面是几个核心特性：\n复用 Claude 订阅额度：muselab 基于 Claude Agent SDK 构建，可以直接复用 Claude 订阅额度。\n多模型接入：muselab 支持 DeepSeek 、GLM 、MiMo 、Qwen 、Kimi 、MiniMax 等主流国产基础模型。\n完整用户上下文：Agent 总览你的完整上下文，同时清楚你的家庭背景、职业规划、投资情况，多领域交叉，发挥出更强大的 Agent 能力。\n原生预览能力：中间的预览区可以直接渲染 markdown 、HTML 文件，也支持简单的内容编辑、代码预览。\n多端会话同步：muselab 是一个 web 服务，支持任何端设备接入，并且多端会话保持同步，出门在外也可以在手机上操作 muselab 。\n其他：除了以上核心特性，muselab 还提供了定时任务、消息排队、文件树操作、模糊全局搜索、会话管理、护眼/黑夜/浅色多主题等重要特性。\n项目地址： https://github.com/hesorchen/muselab\n项目介绍页： https://hesorchen.github.io/muselab/promo\n欢迎大家使用和 star~",
-          "link": "https://www.v2ex.com/t/1221826#reply0",
-          "publishedOn": "2026-06-21T17:03:53.000Z",
-          "wordCount": 1172,
-          "title": "[分享创造] 分享我的开源项目 muselab：一个包含文件区、预览区，以及对话区的 Agent 工作台",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221825#reply0",
-          "author": null,
-          "description": "LG 电视上一直没有好用的 B 站,自己撸了一个,开源放出来了。\n- 纯本地运行:内置一个 JS 服务在电视上代理 B 站接口/媒体(绕过 CORS 和地区 cookie),不用电脑、也不用额外服务器\n- 从零实现的零重渲染 D-pad 焦点导航(直接改 DOM class 、不走 React state,遥控器体验顺)\n- DASH 播放(Shaka Player),最高 4K/8K,支持 HDR/杜比视界;实时弹幕;番剧整季剧集列表;直播带弹幕;搜索;扫码登录;历史续播\n- 兼容 2020 年及以后的 webOS(构建目标 Chromium 68)\n装好 webOS Homebrew Channel 后搜 BiliTV 一键安装。\nGitHub:https://github.com/asdf17128/bili-webos (MIT,欢迎 issue / PR / star)\n注:B 站接口和 CDN 仅大陆可用。",
-          "link": "https://www.v2ex.com/t/1221825#reply0",
-          "publishedOn": "2026-06-21T16:58:16.000Z",
-          "wordCount": 1099,
-          "title": "[分享创造] BiliTV:给 LG(webOS)电视写的开源哔哩哔哩客户端,弹幕/番剧/直播都有",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221823#reply1",
-          "author": null,
-          "description": "如图所示\n\n是我一个人碰到这个问题吗",
-          "link": "https://www.v2ex.com/t/1221823#reply1",
-          "publishedOn": "2026-06-21T16:52:23.000Z",
-          "wordCount": 1045,
-          "title": "[全球工单系统] WSL 更新到 2.7.8 版本都图标消失了？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221822#reply0",
-          "author": null,
-          "description": "现在写代码大半交给 AI 了（ Claude Code / Cursor 之类），但每次发现一个 UI bug 想让它修，\n流程都挺割裂的：截图 → 找个工具圈一下哪里不对 → 再打字把问题描述一遍 → 贴到 issue 或者\n直接糊给 AI 。一套下来很打断心流。最烦的是「描述」这步：懒得打字，但说不清楚 AI 又改不对。\n于是做了个 Chrome 插件 shot2issue ，把这套流程压扁成：\n截图当前页 → 在图上圈一下 / 给敏感信息打码 → 对着麦克风把问题吐槽出来\n→ AI 把语音整理成结构化 issue （标题 + 复现步骤 + 正文），截图自动内联进去\n→ 一键提到 GitHub / GitLab / YouTrack （我喜欢这个 w ）\n最后把这个 issue 丢给 coding agent ，它拿到的是带图、有结构的描述，而不是我语无伦次的一句话。\n几个点：\n标注工具齐全：矩形 / 编号框 / 箭头 / 画笔 / 文字 / 马赛克打码 / 裁剪，也支持直接 Ctrl+V 粘贴图片\n语音听写支持多语言，还能配「词典」纠正识别（项目名、专有名词那种）\nAI 用的是你自己的 ChatGPT / Codex 账号（ OAuth 登录），不经过我的任何服务器\n所有设置只存在你本地浏览器里，不上传\n界面中 / 英 / 日，免费、开源\nGitHub （含截图和安装说明）： https://github.com/wa-otomia/shot2issue\nChrome 插件市场： 不想交钱\n刚做完不久还在迭代，欢迎来点个 Star 或者提 issue —— 毕竟这就是个用来提 bug 的工具，用它给它提 bug 最合适（笑）。",
-          "link": "https://www.v2ex.com/t/1221822#reply0",
-          "publishedOn": "2026-06-21T16:37:17.000Z",
-          "wordCount": 1239,
-          "title": "[分享创造] 为了少打字给 AI 提 bug，撸了个「截图标注 + 语音转 issue」的 Chrome 插件",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221820#reply1",
-          "author": null,
-          "description": "更新：腾讯云 618 年中活动将在下周结束，考虑到现在服务器类产品越来越贵，可能有使用服务器需求的 V 友可以考虑趁着活动买一台或者对现有机器续费。\n腾讯云现已上线 618 年中促销活动，本次活动终于重新推出 99 元境外服务器，对于此前比较热门的 528 元 3 年版 VPS 现在也重新上线，追求长期稳定使用的开发者可以直接购买 3 年版，免除后面续费价格上涨的问题。\n活动主页：腾讯云 618 年中促销活动（新用户有 AFF ，感谢支持）\n特别提醒：活动页提供拼团选项，但拼团产品不支持退款，其他正常活动页购买的产品如果不满意可以申请退款，因此不建议进行拼团。\n99 元版境外 VPS 回归\n这段时间因为 AI 导致的硬件价格上涨，腾讯云此前提供的 99 元服务器长期无货，没想到这次活动重新上架 99 元特惠促销款。\n2 核心 2GB 内存 30M 带宽\n硅谷采用 CN2 线路，延迟有些高但稳定性还可以\n首尔延迟较低，但高峰期丢包率有些高\n购买入口： 腾讯云 618 活动页\n栏目路径：出海优选 → 业务出海境外云服务器 → 99 元轻量应用服务器\n199 元版境外 VPS\n2 核心 4GB 内存 30M 带宽\n区域与 99 元版相同\n适合需要更大内存的用户\n支持同价续费，次年可继续以 199 元续费 1 年\n购买入口： 腾讯云 618 活动页\n栏目路径：同价续费专区 → 境外地域 → 轻量应用服务器 2 核 4GB 内存 30M 带宽版\n境内低延迟 VPS 99 元/年起\n配置 1\n2 核心 2GB 内存\n4M 带宽\n99 元/年\n上海、广州、北京、成都可选\n支持同价续费\n配置 2\n2 核心 4GB 内存\n5M 带宽\n188 元/年\n上海、广州、北京、成都可选\n支持同价续费\n配置 3\n2 核心 4GB 内存\n6M 带宽\n199 元/年\n上海、广州、北京、成都可选\n支持同价续费\n购买入口： 腾讯云 618 活动页\n栏目路径：同价续费专区 → 轻量应用服务器国内地域\n同价续费指服务器到期后仍可按当前购买价格续费 1 年。\n3 年 528 元版 6M 服务器\n2 核心 4GB 内存\n6M 带宽\n528 元/3 年\n平均每年仅 176 元\n购买入口： 腾讯云 618 活动页\n栏目路径：热卖服务器 → 服务器专区 → 轻量应用服务器\n更多热卖产品\n腾讯云 618 活动还提供：\nCDN 流量包优惠\nCOS 对象存储优惠\nToken Plan AI 套餐优惠\nGPU 服务器优惠\n企业高性能服务器优惠\n代金券\n代金券不可用于活动产品，但可用于常规服务器的新购、续费及升级，最高支持抵扣 36 个月订单。\n个人版代金券包括：\n200-60\n500-150\n1500-500\n3000-1200\n如果准备购买或续费升级正价服务器，达到对应金额后可直接使用代金券抵扣。\n活动说明：因库存或产品调整等原因，具体价格和产品供应情况请以活动页面实际展示为准。本次活动截止时间为 2026 年 6 月 30 日。",
-          "link": "https://www.v2ex.com/t/1221820#reply1",
-          "publishedOn": "2026-06-21T16:29:10.000Z",
-          "wordCount": 1423,
-          "title": "[推广] 活动即将结束： 99 元 CN2 硅谷 VPS 3 年/528 元国内 VPS 另有续费代金券",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221819#reply3",
-          "author": null,
-          "description": "观鸟 - @Olivia - https://i.v2ex.co/LZOWmsej.jpeghttps://i.v2ex.co/D949mkp4.jpeghttps://i.v2ex.co/114lvYUG",
-          "link": "https://www.v2ex.com/t/1221819#reply3",
-          "publishedOn": "2026-06-21T16:20:45.000Z",
-          "wordCount": 1293,
-          "title": "[观鸟] 离巢不久的游隼",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221818#reply0",
-          "author": null,
-          "description": "刷抖音看到那边两房一厅的小区，才 1500 ，小区也很新，在白云区上班感觉很不错哎",
-          "link": "https://www.v2ex.com/t/1221818#reply0",
-          "publishedOn": "2026-06-21T15:41:33.000Z",
-          "wordCount": 986,
-          "title": "[广州] 人和的明星雅苑租房怎么样？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221816#reply0",
-          "author": null,
-          "description": "阿里云 7 折 腾讯云 7 折 华为云 7 折\n阿里 CDN 4000U/P 腾讯 CDN 4000U/P 火山 CDN 4000U/P\n谷歌云 GCP7 折 亚马逊云 AWS7 折\n腾讯云国际 65 折 阿里云国际 7 折 华为云国际 7 折\nAWS 全球节点 CDN 加速 1 折 3500 刀/P Ai 模型低至 2 折 火山国际 7 折\nTG 详聊：@Tiangua7",
-          "link": "https://www.v2ex.com/t/1221816#reply0",
-          "publishedOn": "2026-06-21T15:15:12.000Z",
-          "wordCount": 1136,
-          "title": "[推广] 阿里腾讯华为火山国内国际站 AWS/GCP 全部 7 折 CDN4000U/P Ai 模型最低到 2 折",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221813#reply0",
-          "author": null,
-          "description": "这个端午节弄的和清明节一样，天天下雨，哪哪都去不了，所以在家继续 vibe coding ，这次挑战一个高难度的小游戏，从开始构思到完全上线花了有两天左右时间。\n这次没用 codex ，改用 claude sonnet 4.7 完成了全部的开发任务。倒不是对 codex 没信心，而是因为 codex 的 token 消耗太快，这个月的额度已经花完了，实属无奈，不过最后发现还是 claude 更懂我，还特地增加了游戏搜索的功能，方便快速找到自己想玩的游戏。\n接下来简单介绍下这个游戏吧，其实就是通过点击鼠标左键或者空格键来让箭头保持往上移动，松手的时候箭头就会往下掉，这样来绕过机关，完成关卡。\n游戏地址：space waves",
-          "link": "https://www.v2ex.com/t/1221813#reply0",
-          "publishedOn": "2026-06-21T15:02:15.000Z",
-          "wordCount": 1059,
-          "title": "[推广] 端午节哪哪都在下雨，在家受搓了一个网页小游戏 space waves",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221812#reply0",
-          "author": null,
-          "description": "Got fooled by an AI-generated image today.\nThought it was a real photo.\nMade me curious how often that happens now.\nhttps://imageaichecker.com/",
-          "link": "https://www.v2ex.com/t/1221812#reply0",
-          "publishedOn": "2026-06-21T14:42:22.000Z",
-          "wordCount": 1063,
-          "title": "[分享创造] AI images are getting harder to spot.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221811#reply6",
-          "author": null,
-          "description": "不用翻墙、不用装 App 、不用切窗口。 在钉钉群里 @机器人，就能写代码、审 PR 、跑命令、设定时任务。一行命令接入，GitHub 开源。\n\n一句话介绍\ncc-ding 把 Claude Code / Codex 等 AI 编码助手接入钉钉群——团队成员不用任何额外配置，在熟悉的钉钉群里发消息就能用 AI 写代码、审代码、跑命令。支持 Claude 、Codex 等多模型，自由切换。\n\n特点\n大厂实战打磨：真实钉钉群场景验证，不是玩具项目\n支持 Claude / Codex 等多模型：接入 Anthropic Claude 、OpenAI Codex 等，自由切换\n跨平台：macOS / Linux / Windows 都能跑\n接入极简：一行安装 + 一行初始化，3 分钟上线\n简单实用：没有复杂配置，上手就能用\n3 分钟接入\n安装\nnpm i cc-ding -g\n\n初始化\ncc-ding init \\\n  -ci {钉钉 ClientId} \\\n  -cs {钉钉 Stream 密钥} \\\n  -u {管理员手机号} \\\n  -dt {兜底机器人 Token}\n\n启动\npm2 start --name \"cc-ding\" npx -- -p cc-ding cc-ding run -ci {clientId}\n\n群里 @cc 助手，就能用了。\n使用演示\n群里写代码\n👤 帮我写一个 Python 脚本，把 CSV 转成 JSON\n🤖 3 秒后返回完整代码，支持中文编码，直接能用。\n截图排障\n👤 发一张终端报错截图\n🤖 识别图片，分析原因，给出修复命令。\n定时任务\n👤 每个工作日 18 点总结今天群里的任务完成情况发到群里\n🤖 自动生成 cron 表达式 0 18 * * 1-5，定时执行。\n代码审查\n👤 审查这个 PR ，重点关注安全性和性能（附链接）\n🤖 发现 SQL 注入风险、N+1 查询等问题，逐条列出。\n多轮对话 & 任务队列\n支持上下文多轮对话，AI 记得前面聊了什么\n/task 派任务自动排队，多人同时用不打架\n会话自动持久化，重启无缝恢复\n为什么好用？\n以前\n现在\n\n\n\n\n开终端 → 切 Claude → 复制粘贴 → 等结果 → 截图回群\n钉钉群里一句话\n\n\n配 Jenkins/脚本搞定时任务\n/cron 自然语言 3 秒搞定\n\n\n新人要熟悉一堆工具\n会用钉钉就行\n\n\n问答散落在各处，事后找不到\n会话自动持久化，随时恢复\n\n\n\n安全\n可私有化部署：数据跑在自己服务器\n白名单机制：群级 + 全局双层，只让授权的人用\n命令审计：/bash 执行记录记入日志，可追溯\n密钥不写死：支持环境变量引用\n权限分级：owner / 管理员 / 普通用户\n项目信息\n项目\n信息\n\n\n\n\nGitHub\nhttps://github.com/yihuineng/cc-ding\n\n\nnpm\nhttps://www.npmjs.com/package/cc-ding\n\n\n协议\nMIT\n\n\n\n⭐ 顺手点个 Star ，支持开源！",
-          "link": "https://www.v2ex.com/t/1221811#reply6",
-          "publishedOn": "2026-06-21T14:33:11.000Z",
-          "wordCount": 1495,
-          "title": "[Claude Code] 手机指挥 AI 干活 — 把 Claude Code 装进钉钉",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221810#reply1",
-          "author": null,
-          "description": "https://jiaoyuan.app/",
-          "link": "https://www.v2ex.com/t/1221810#reply1",
-          "publishedOn": "2026-06-21T14:28:08.000Z",
-          "wordCount": 1021,
-          "title": "[分享发现] 「已删除」做了个问答小站",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221809#reply0",
-          "author": null,
-          "description": "[分享创造] 我用 Uber H3 做了一个跑步版「地图涂色」：跑过一格，点亮一城\n大家好，我最近给自己开发的「快乐跑团」小程序做了一个新功能：城市点亮计划。\n它有点像现实世界里的地图涂色：\n跑友可以在地图上圈定一片公园、街区或江边路线，创建一个限时挑战。参与者实际跑到某个区域后，就能点亮对应的六边形网格，最后按照点亮数量进行排行。\n一句话概括就是：\n跑过一格，点亮一城。\n为什么选择 H3 ？\n这个功能使用了 Uber 开源的地理空间索引库 H3，项目中对应的 JavaScript 依赖是 h3-js。\nH3 可以把地球表面划分成不同精度的六边形网格。获取定位后，不需要自己编写复杂的“点是否落在多边形内”判断，只需把经纬度转换成 H3 Cell ID，就能确定用户当前进入了哪一格。\n这套模型很适合跑步探索场景：\n每个网格都有稳定、唯一的 Cell ID ；\n可以根据活动范围选择不同的网格精度；\n相邻网格关系清晰，方便继续扩展路线与区域玩法；\n客户端可以根据 Cell ID 还原六边形边界。\n当前实现方式\n1. 根据挑战范围动态选择网格精度\n创建挑战时，用户可以选择 100m 到 2000m 的覆盖半径。\n系统会从较细到较粗尝试多个 H3 分辨率，优先选择网格数量不超过 300 格的最细方案，在探索精度、数据量和地图渲染性能之间做平衡。\n2. 客户端只根据 Cell ID 还原边界\n云端保存挑战所包含的 H3 Cell ID 。客户端拿到数据后，通过 cellToBoundary 计算六边形边界，再交给地图组件绘制。\n这样不需要为每个网格保存和传输完整的多边形坐标。\n3. 点亮结果由云端校验\n客户端上传 GPS 位置，uniCloud 云函数负责：\n校验经纬度和坐标类型；\n过滤定位精度过低的数据；\n过滤明显异常的移动速度；\n将位置转换成 H3 Cell ID ；\n判断该 Cell ID 是否属于当前挑战；\n写入用户的点亮记录。\n基础校验放在云端，避免由客户端直接决定点亮结果。当然，这目前只是基础异常过滤，还不敢称为完整的反作弊系统。\n4. 使用确定性 ID 避免重复计分\n点亮记录使用以下信息组合成确定性文档 ID：\n挑战 ID + 用户 ID + H3 Cell ID\n\n同一个用户在同一个挑战中重复经过同一格时，不会重复计分。这个设计也让重复请求的处理更简单。\n踩坑最多的地方：WGS84 与 GCJ-02\n真正让我折腾最久的，其实不是六边形，而是国内地图坐标系。\nH3 使用 WGS84；\n腾讯地图展示使用 GCJ-02；\nH5 原生定位和小程序定位返回的坐标类型还可能不同。\n如果直接把 H3 网格画到腾讯地图上，网格会出现明显偏移。\n目前采用的处理方式是：\nGPS 定位\n   ↓\n识别原始坐标类型\n   ↓\n统一转换为 WGS84 进行 H3 计算\n   ↓\n生成 Cell ID 与六边形边界\n   ↓\n转换为 GCJ-02 后绘制到腾讯地图\n\n具体原则是：\nH3 网格计算统一使用 WGS84 ；\n地图展示前转换为 GCJ-02 ；\n客户端上报时明确标记原始坐标类型；\n服务端只进行一次标准化转换，避免重复纠偏。\n项目技术栈\n前端： uni-app + Vue 3\n地图： 腾讯地图\n空间索引： h3-js\n后端： 阿里云 uniCloud 云函数\n数据库： 阿里云 NoSQL\n目标平台： 微信小程序、H5 、Android 、iOS 、鸿蒙 NEXT\n目前还实现了挑战创建、网格预览、实时点亮、进度展示、在线参与者提示、排行榜和分享等功能。\n想听听 V 友的意见\n这个功能还在继续打磨，比较想听听大家对下面几个问题的看法：\n六边形网格用在跑步探索场景里，大家觉得是否有趣？\n除了定位精度和速度限制，还有哪些成本不太高的防作弊方案？\nH3 网格与国产地图坐标系的处理，还有没有更优雅的做法？\n如果是你，会更愿意点亮家附近的街区、公园，还是参加全城范围的长期挑战？\n体验入口\n小程序名称：快乐跑团\n微信小程序搜索“快乐跑团渝你同行”首页 banner 就能看到。\n如果大家感兴趣，我后面也可以单独整理一篇 H3 、GCJ-02 与腾讯地图叠加网格的踩坑记录。\n感谢阅读，也欢迎直接拍砖。🙂",
-          "link": "https://www.v2ex.com/t/1221809#reply0",
-          "publishedOn": "2026-06-21T14:17:01.000Z",
-          "wordCount": 1275,
-          "title": "[跑步] [分享创造] 我用 Uber H3 做了一个跑步版「地图涂色」：跑过一格，点亮一城",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221808#reply2",
-          "author": null,
-          "description": "当前 AI Agent 处在爆发期恰逢企业降本增效，这个领域没有太多已公开的优秀技术实践，所以企业可以通过面试/收集简历来收集多个候选人的项目，然后拿去校准人才画像或者给技术团队参考，每个人获取一点方案再用 Vibe Coding 即可组装成一个产品，违法成本非常低，证实虚假招聘最高罚 1 千，超范围使用个人信息也会受到处罚，但对年入几亿的公司来说威慑力不足，我们走司法程序的代价又很大还可能被反诉“侵犯名誉权”。\n企业套取的不是代码和功能，而是系统架构、Issue 、PR 、Commit 、部署指南、本地开发指南、Release 。对于那些不知道做什么或者不知道如何下手的团队有极高的参考价值，issue 是“避坑指南”，Release 是迭代计划。项目里有这些内容，迭代时间比较长的伙伴们考虑闭源，仅提供演示地址。\n对此，我们需要采取以下措施：\n为项目添加开源协议（ Apache 、AGPL 3.0 均可）。\n不公开核心代码。\nREADME 不要写得太详细，做简要概述，不写项目目录结构，简化架构图。\n简历加水印，写“该简历仅用于 XX 公司应聘 XX 岗位时使用，不得用于其他用途”。\n项目经验描述“做了什么，起到什么效果”，不提实施细节。\n面试官询问细节时，若涉及原创内容/核心实现机制则简要概括。\n面试结束后，若企业以非能力因素为由拒发 offer ，同时发布多个岗位，涉及你简历里的内容，此时应向涉事企业发送邮件质问，面对大公司也要这么做，要求其给出合理解释，侵权严重的考虑走司法程序。\n以上内容仅代表个人观点，大家根据实际需要选择合适的防护措施。所有人都要警惕这种套方案的行为，个人项目无论做的好不好属于智力成果，简历目的只能用于评估候选人是否胜任工作，拿去校准候选人画像属于超范围使用个人信息。可以查阅《个人信息保护法》。",
-          "link": "https://www.v2ex.com/t/1221808#reply2",
-          "publishedOn": "2026-06-21T13:54:10.000Z",
-          "wordCount": 1128,
-          "title": "[职场话题] 应聘 AI Agent 岗位前请保护好自己的代码",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221805#reply0",
-          "author": null,
-          "description": "最近发现了一个很不错的国内 AI 模型 API 平台 —— AI 太空站，分享一下使用体验。\n核心亮点：\n国内直连，无需科学上网\n接入 13 个顶级 AI 模型：GPT-5.5 、Claude Opus 4.8 、Gemini 3.5 等\n超低价格：¥1.5 起 / 百万 token\n微信支付即充即用，按量计费\nOpenAI 兼容 API ，支持所有主流客户端\nDeepSeek 免费使用\n个人感受：\n之前一直用各种中转站，要么不稳定要么价格贵。这个平台响应速度很快，API 兼容性也不错，换了个 base_url 就能直接用。价格确实便宜，适合个人开发者和做 AI 应用的朋友。\n有需要的可以试试： https://aispacestation.com.cn/",
-          "link": "https://www.v2ex.com/t/1221805#reply0",
-          "publishedOn": "2026-06-21T13:31:29.000Z",
-          "wordCount": 1076,
-          "title": "[分享发现] 分享一个国内直连的 AI 模型 API 平台 - AI 太空站",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221804#reply0",
-          "author": null,
-          "description": "www.fkclaude.xyz\n欢迎老板尝尝鲜\nkiro 0.5 倍率\n美滋滋",
-          "link": "https://www.v2ex.com/t/1221804#reply0",
-          "publishedOn": "2026-06-21T13:27:43.000Z",
-          "wordCount": 1024,
-          "title": "[推广] FK Claude 「Kiro 0.5 倍率」",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221803#reply8",
-          "author": null,
-          "description": "手机是 pixel fold ，买之前以为小问题，应该刷个机就好了，没想到刷机后还是有问题。按 gpt 的指引 adb 读取到日志如下。google 好像没搜到 PMUCAL 相关关键词的 bug ，gpt 说 PMUCAL 是三星的电源框架的异常，我对硬件不懂，也没法确认是否正确。\ncat last_kmsg.txt \n[ 598.276585][ T2256] PMUCAL: pmucal_local_disable: error on handling disable sequence. (pd: blkpwr_hsi0) \n[ 598.276918][ T2256] debug-snapshot dss: WDT Caller: pmucal_local_disable+0x16c/0x230 [cmupmucal] PMUCAL: pmucal_local_disable: error on handling disable sequence. (pd: blkpwr_hsi0) [PRE] reset message: PMUCAL: pmucal_local_disable: error on handling disable sequence. (pd: blkpwr_hsi0) \n[ 2.960369] [I] Last AVB: avb_error_parts= reset message: PMUCAL: pmucal_local_disable: error on handling disable sequence. (pd: blkpwr_hsi0)\n\n目前在测试后台播放音乐能否不触发自动重启，如果能超过 24 小时不重启我怀疑可能因为 pixel 深度睡眠导致系统崩溃的自动重启，不知道有没有办法禁用深度睡眠，还是说只能写一个 app 后台静默播放音频来阻止手机陷入休眠？",
-          "link": "https://www.v2ex.com/t/1221803#reply8",
-          "publishedOn": "2026-06-21T13:16:18.000Z",
-          "wordCount": 1642,
-          "title": "[问与答] 咸鱼买了一个 pixel 炸弹机，卖家描述是熄屏手机就自动重启，各位有解决思路吗",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221802#reply2",
-          "author": null,
-          "description": "幻影忍者前情提要\n（ Linux DO 版）：Vibe Coding 了两年，分享一下自己对于这个圈子的感想。\n（ V2EX 版）：Vibe Coding 了两年，分享一下自己对于这个圈子的感想。\n嗨嗨嗨伙计们我又来继续分享了，不好意思这个饭吃得有点慢（迫真）\n现在刚好在火车站等火车，闲着也是闲着，那就开写！\n以下为个人观点，基本上全是暴论，不喜勿喷，给孩子留点面子吧😭\n首先来解答一下很多伙计们问我的问题：\nVibe Coding 真的适合所有人吗？\n我看不见得。\n毋庸置疑，Vibe Coding 拉低了创造产品的门槛。但是请不要盲目跟风。\n记住一个原则：当你的工作流能跑通并且效率能符合你的需求的时候，尽量不要动它。因为每引入一项流程都会让整个工作流变得不可控，流程规模和工作流的维护难度之间的关系可能达到甚至超越 O(n^2)。\n于是在生产环境使用 Vibe Coding 只能有两种情况：\n你的工作流跑不通，需要用 Vibe 一个新工具补全一下你的工作流\n工作流效率太特喵的慢了，只能勉强用甚至几乎不可用\n这两种情况下要想很好地使用 Vibe Coding 基本上都是需要你对工作流有很深入的了解。\n怎么增进对自己工作流的了解呢？我这里有一个我摸索出来的办法——让 AI 帮你进行脑暴。脑暴真的是一个很好用的方法，上篇帖子给伙计们的回复已经提到过原理，不再赘述。\n具体操作方法是找一个综合能力接近或强于 DeepSeek V4 Pro 的 LLM （ Flash 不行，世界知识有所欠缺），把你的工作和工作流详细讲给它听，让它调用 Skill 进行脑暴。它会在这个阶段不断提问你它认为你没表述清楚的片段。然后它就会把它认为有所欠缺的地方总结一下输出给你。\n过几天我会做一个 Skill 来分享给大家，大家可以对自己的工作流进行自查。配合 Superpowers Brainstorming 食用更佳（）\n但是还有两类人，他们跟工作流这个概念基本沾不到边，但我认为他们使用 Vibe 也是应当的：\n一是在 Vibe 过程中学习工程思维和计算机知识的学生。\n正如我说，国内 CS 高等教育实在还是太抽象了，Vibe Coding 就相当于让他们在就业前就提前接触先进的生产工具，让他们更好迎接未来，而不是被困在每天只能 Dev C++ 的课堂里，用着学校祖传的比自己年纪还大的、并发一多就乱报 WA 的 OJ 系统。而且不建议他们纯 Vibe ，一定要结合自己所学（比如控制论、工程思维）来进行 Vibe 。\n二是拿 Vibe Coding 来进行娱乐的人。这类人基本属于跳出了开发者的评价体系，不在五行之中了。毕竟 Vibe 是真的好玩，在我看来超越大多数游戏的娱乐性，达到星露谷的上头水平了。\n什么，你说二游？拜托，二游全是靠故事和设定撑起来的，这年头的二游的游戏性只要不为负数就算赢了（悲）\n所以把 Vibe 当成新时代游戏也并非不可，只是要给万恶的 LLM 提供商交保护费这点太难蚌了😠\n就先写到这里吧，上火车之后继续写，毕竟火车上有 24 小时 3 分钟可以让我往死里写（）",
-          "link": "https://www.v2ex.com/t/1221802#reply2",
-          "publishedOn": "2026-06-21T13:07:29.000Z",
-          "wordCount": 1591,
-          "title": "[程序员] Agentic Coding 两年，分享一下对圈内的看法（第二部分，有干货）",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221801#reply10",
-          "author": null,
-          "description": "背景：最近在家搞了一个 jellyfin 转播家里 nas 上的电影出去，通过阿里云 ddns 解析，我家的宽带套餐是电信的下行 1000M 上行 5oM\n触发条件：可能是在外面请求家里的上行带宽得太多了，触发了电信的上行带宽监控，直接给我上行带宽限流\n问题：现在上行速度直接给我限制到很慢了，网段也是 171.213.x.x ，电信还很鸡贼，瞬时给得很高，后面就只有零星流量，而且貌似他们会对主流的测速网站做白名单，测出来是正常的\n求助：大家都是怎么和电信 battle 的，去年遇到过一次，报到电信说给我处理了，管了不到一年又出现这个情况，要是到了一定流量就限速，每次去申请也太麻烦了，有什么好的解决办法把我拉到白名单",
-          "link": "https://www.v2ex.com/t/1221801#reply10",
-          "publishedOn": "2026-06-21T13:05:49.000Z",
-          "wordCount": 1321,
-          "title": "[宽带症候群] 关于成都电信按条件限制上传带宽",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221799#reply0",
-          "author": null,
-          "description": "压力是一个常态，不要有压力人就灭亡了；压力是现实和目标之间的差距，应该用动力（行动的能力）来减小这个距离。",
-          "link": "https://www.v2ex.com/t/1221799#reply0",
-          "publishedOn": "2026-06-21T13:01:07.000Z",
-          "wordCount": 1007,
-          "title": "[天黑以后] 20260621 午夜俱乐部",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221798#reply13",
-          "author": null,
-          "description": "我记得之前有个大数据时代隐私保护帖子回复火热，有个兄弟说他取快递都花钱雇人取，自己在快递点附近等着，能不能雇我啊 :) ，5 块我也觉得不少。",
-          "link": "https://www.v2ex.com/t/1221798#reply13",
-          "publishedOn": "2026-06-21T12:57:19.000Z",
-          "wordCount": 1388,
-          "title": "[问与答] 大数据时代，炫下你们保护隐私的方法",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221797#reply5",
-          "author": null,
-          "description": "欢迎各路佬友发表一下各大模型的，各种应用场景用哪种模型比较合适",
-          "link": "https://www.v2ex.com/t/1221797#reply5",
-          "publishedOn": "2026-06-21T12:54:45.000Z",
-          "wordCount": 1450,
-          "title": "[程序员] AI 算力大模型优逆讨论",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221796#reply2",
-          "author": null,
-          "description": "一开始我是在 pve 里装了 immortalwrt 25.12.0 来运行 daed 的，这两天休息就开始折腾 debian 13 ，daed 也是很顺利的装上，也能进 2023 端口进行配置，一样的节点，immortalwrt 运行没问题，但网关一切换成 debian 就没网。没网的状态就是解释不了域名。\n也问了 AI ，什么 ip 转发，关网卡的 offloading 也试过，也是不行。\n我看这里也有人安装过 daed 的，特来请教。",
-          "link": "https://www.v2ex.com/t/1221796#reply2",
-          "publishedOn": "2026-06-21T12:53:40.000Z",
-          "wordCount": 1188,
-          "title": "[Debian] PVE 9 里装了个 kvm debian 13， Docker 方式安装了 Daed ，竟然无法通网！",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221795#reply2",
-          "author": null,
-          "description": "我忽然想到用漫画方式来做可能更好玩\n花了 2 个小时就完工了\n一本全图解、零基础到亲手构建的 AI 通识书 —— 永久免费\nhttps://github.com/dvbs2000/visible-ai\nhttps://github.com/dvbs2000/visible-ai/blob/main/images/hero.jpg",
-          "link": "https://www.v2ex.com/t/1221795#reply2",
-          "publishedOn": "2026-06-21T12:42:51.000Z",
-          "wordCount": 1093,
-          "title": "[分享创造] 参考前几天 v 站看到的一个思路，做一个普通人能看懂的 AI 入门书",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221794#reply13",
-          "author": null,
-          "description": "1.不知道香港那边做互联网技术怎么样？\n2.有咩有什么靠谱的公司？\n3.以及大家都是在哪看香港招聘的信息？\n欢迎有经验的分享分享",
-          "link": "https://www.v2ex.com/t/1221794#reply13",
-          "publishedOn": "2026-06-21T12:42:45.000Z",
-          "wordCount": 1311,
-          "title": "[职场话题] 国内各大厂大裁员，有没有去香港做技术的？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221793#reply4",
-          "author": null,
-          "description": "前几天订阅的 Plus 刚刚额度用完了\n准备升级到 Pro\n咨询下老铁们 \n从 Plus 升级到 Pro 是补差价，还是升级到 Pro 再退 Plus 的费用？",
-          "link": "https://www.v2ex.com/t/1221793#reply4",
-          "publishedOn": "2026-06-21T12:25:47.000Z",
-          "wordCount": 1199,
-          "title": "[问与答] ChatGPT Plus 升级到 Pro 是补差价 还是 ？ Google Play 渠道订阅",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221792#reply4",
-          "author": null,
-          "description": "最近在做一个小验证：很多重复办公问题其实不值得做成完整产品，但如果能在 1-2 小时内解决，可能有人愿意为省时间付 99-199 元。\n我准备测试的范围：\n1. Excel/CSV 数据清洗、去重、分类汇总、图表和简单看板。\n2. PPT/Word 结构整理、排版优化、汇报材料快速处理。\n3. 网页样式、JS 脚本、小 bug 定位。\n4. 批量文件处理、重复办公流程自动化。\n我已经准备了一个 Excel 数据清洗 + 汇总看板样例，实际接单时可以替换成客户自己的表格/CSV ，并按需求补透视、图表或脚本。\n今天想做一次市场验证：如果你刚好有这类小问题，可以私信我截图或样例数据，我先判断能不能当天交付。简单任务 99 元起，复杂任务看范围报价。\n边界也提前说清楚：不接违法违规、刷量、绕风控、破解、隐私数据抓取；不处理密码、身份证件、银行卡、医疗、法律、未公开商业秘密等高敏信息。\n也欢迎拍砖：这类小单在 V2EX 上应该放在哪个节点更合适，或者你觉得 99-199 元这个价格是否合理？",
-          "link": "https://www.v2ex.com/t/1221792#reply4",
-          "publishedOn": "2026-06-21T12:21:13.000Z",
-          "wordCount": 1215,
-          "title": "[问与答] 想验证一个 99 元办公自动化小单： Excel/PPT/脚本类需求有人需要吗？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221790#reply0",
-          "author": null,
-          "description": "请问下，鸿蒙手机，claude app 内订阅 Max 5x ，调起 google play 支付，支付失败，显示 [发生意外错误，请稍后再试[OR-BPC-11]] ，这是为什么？\n另外，我试了下，在 google play 商店，买个付费应用，是可以正常支付成功的。\ngoogle play 的地区也是美国。\n购买 claude 时用的也是美国固定私人住宅 IP 。\n\n手机截图链接",
-          "link": "https://www.v2ex.com/t/1221790#reply0",
-          "publishedOn": "2026-06-21T11:56:39.000Z",
-          "wordCount": 1028,
-          "title": "[Claude] OR-BPC-11",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.v2ex.com/t/1221789#reply0",
-          "author": null,
-          "description": "最近突然又开始看番了\n但是作为老二次元，苦于没有懂我的推荐动漫的东西\n于是做了个 skill ，懂你的推荐优质动漫的 skill：\nnpx clawhub --workdir ~/.codex --dir skills install anime-semantic-recommender\nhttps://github.com/KAMIENDER/anime-semantic-recommender",
-          "link": "https://www.v2ex.com/t/1221789#reply0",
-          "publishedOn": "2026-06-21T11:53:43.000Z",
-          "wordCount": 1028,
-          "title": "[分享创造] 番剧推荐 skill",
-          "imageUrl": null
         }
       ]
     },
@@ -22972,6 +22782,46 @@
       "feedUrl": "https://sspai.com/feed",
       "siteUrl": "https://sspai.com",
       "articles": [
+        {
+          "id": "https://sspai.com/post/112582",
+          "author": "Matrix机器人",
+          "description": "除了首页时间流和侧栏的精选展位，少数派Matrix社区还有很多优秀内容因条件所限无法得到有效曝光，因此我们决定重启Matrix周报，并在此基础上添加更多社区内容、作者投稿新玩意呈现给大家。上周社区速递 ...查看全文",
+          "link": "https://sspai.com/post/112582",
+          "publishedOn": "2026-07-21T09:00:00.000Z",
+          "wordCount": 455,
+          "title": "社区速递 150｜派友热议磁吸配件、拯救呼吸通气鼻贴与国产三折叠自行车",
+          "imageUrl": null
+        },
+        {
+          "id": "https://sspai.com/post/112200",
+          "author": "StephenFang",
+          "description": "给 Surface Pro 5 安装上仍在积极更新的 Linux 发行版，它会成为一台更可用的设备吗？查看全文",
+          "link": "https://sspai.com/post/112200",
+          "publishedOn": "2026-07-21T07:00:00.000Z",
+          "wordCount": 979,
+          "title": "装上 Fedora 的 Surface Pro：一台老设备的新可能",
+          "imageUrl": null
+        },
+        {
+          "id": "https://sspai.com/post/111569",
+          "author": "Bleaker",
+          "description": "作为有多年专业音视频开发经验的技术工作者，我给自己，以及可能也有类似需求的你，做了一个把「从长视频里截取片段」这件事做到极致的产品。查看全文",
+          "link": "https://sspai.com/post/111569",
+          "publishedOn": "2026-07-21T03:00:02.000Z",
+          "wordCount": 387,
+          "title": "App+1 | 把「从长视频截取片段」做到极致：Trimly",
+          "imageUrl": null
+        },
+        {
+          "id": "https://sspai.com/post/112565",
+          "author": "少数派编辑部",
+          "description": "少数派的近期动态那个让你放松娱乐、拥抱心流、逃离纷扰或找回真我的角落，是如何构建起来的？「角落新声」征文活动火热征稿中少数派×AKKO灵犀Linx68键盘预售开启。看看新键盘你可能错过的文章2026年 ...查看全文",
+          "link": "https://sspai.com/post/112565",
+          "publishedOn": "2026-07-21T00:02:09.000Z",
+          "wordCount": 560,
+          "title": "派早报：京沪高铁与京沪铁路试点提前 60 天预约购票等",
+          "imageUrl": null
+        },
         {
           "id": "https://sspai.com/post/112543",
           "author": "少数派编辑部",
@@ -23911,56 +23761,6 @@
           "wordCount": 503,
           "title": "派早报：荣耀发布 X80 Pro Max 等新品等",
           "imageUrl": null
-        },
-        {
-          "id": "https://sspai.com/post/111360",
-          "author": "少数派编辑部",
-          "description": ">下载少数派2.0客户端、关注少数派公众号，解锁全新阅读体验📰>实用、好用的正版软件，少数派为你呈现🚀查看全文",
-          "link": "https://sspai.com/post/111360",
-          "publishedOn": "2026-06-22T10:04:48.000Z",
-          "wordCount": 503,
-          "title": "派评 | 近期值得关注的 App",
-          "imageUrl": null
-        },
-        {
-          "id": "https://sspai.com/post/108899",
-          "author": "克莱德",
-          "description": "越来越不新鲜了呐我的山景城朋友！查看全文",
-          "link": "https://sspai.com/post/108899",
-          "publishedOn": "2026-06-22T08:23:24.000Z",
-          "wordCount": 593,
-          "title": "具透｜Android 17 正式版：大屏体验，先看 Google？",
-          "imageUrl": null
-        },
-        {
-          "id": "https://sspai.com/post/111081",
-          "author": "少数派播客",
-          "description": "一直以来，Apple 和 Nike 之间的商业关系在公众视野里简单明了。但在两者中间，Apple 的前任 CEO Tim Cook 一直扮演着连接者的角色，他和 Nike 之间的关系也因此而显得十分微妙。在本期节目中，我们就来一起深入 Apple、Nike 和 Tim Cook 之间的商业三角关系。查看全文",
-          "link": "https://sspai.com/post/111081",
-          "publishedOn": "2026-06-22T06:30:00.000Z",
-          "wordCount": 359,
-          "title": "线索若隐若现：深入 Tim Cook 和 Nike 的商业连接",
-          "imageUrl": null
-        },
-        {
-          "id": "https://sspai.com/post/110742",
-          "author": "PJHubs",
-          "description": "恩施的峡谷之美在全国甚至全球都是一绝。查看全文",
-          "link": "https://sspai.com/post/110742",
-          "publishedOn": "2026-06-22T03:07:02.000Z",
-          "wordCount": 290,
-          "title": "恩施龙船调，游土随川流",
-          "imageUrl": null
-        },
-        {
-          "id": "https://sspai.com/post/111343",
-          "author": "少数派编辑部",
-          "description": "英特尔将为苹果代工芯片\n库克称 iPhone 涨价不可避免\n美国科技公司政策转向，限制员工 AI 成本\nModos 推出开源 13.3 寸彩色墨水屏\nManus 原投资人计划将其原价购回\nCMF 已取消今年发布计划\n看看就行的简讯\n少数派的近期动态\n你可能错过的好文章\n查看全文",
-          "link": "https://sspai.com/post/111343",
-          "publishedOn": "2026-06-21T23:13:32.000Z",
-          "wordCount": 527,
-          "title": "派早报：英特尔将为苹果代工芯片",
-          "imageUrl": null
         }
       ]
     },
@@ -24292,6 +24092,76 @@
       "feedUrl": "https://plink.anyfeeder.com/idaily/today",
       "siteUrl": "https://idai.ly",
       "articles": [
+        {
+          "id": "idaily-255235",
+          "author": "荷兰 · 诺德韦克",
+          "description": "欧空局「柏拉图号」（PLATO）空间望远镜正在接受电磁兼容性测试，荷兰诺德韦克。7月20日，欧空局宣布 PLATO 空间望远镜成功通过电磁兼容性测试，确认所有搭载电子仪器在真空环境下能够正常协同运行，不会产生电磁信号干扰。「柏拉图」号全称为「行星凌日和恒星振荡探测器」，长3.5米，宽3.1米，高3.7米，重约2300千克，共搭载26台光学望远镜和104枚感光元件，拍摄图像分辨率可达20亿像素以上，主要任务是寻找具有宜居性的类地行星，预计2027年3月发射升空。摄影师：ESA",
+          "link": "https://m.idai.ly/se/6f7UdG",
+          "publishedOn": "2026-07-21T09:59:00.000Z",
+          "wordCount": 249,
+          "title": "欧空局柏拉图望远镜测试 - July 21, 2026",
+          "enclosure": {
+            "url": "http://pic.yupoo.com/fotomag/5b30595da4/a1406f75.jpg",
+            "type": "image/jpg"
+          },
+          "imageUrl": "http://pic.yupoo.com/fotomag/5b30595da4/a1406f75.jpg"
+        },
+        {
+          "id": "idaily-255234",
+          "author": "英国 · 伦敦",
+          "description": "英国新任首相 Andy Burnham 抵达唐宁街10号首相府，伦敦。7月20日，英国国王查尔斯三世正式任命工党领袖 Andy Burnham 为英国第59任首相并授权其组建新政府。现年56岁的 Burnham 是英国10年来的第7位首相，他出生于英国工薪阶层家庭，拥有剑桥大学文学硕士学位，曾任财政部首席秘书、文化大臣、卫生大臣等职务，并担任3届大曼彻斯特市长。他在就职演讲中承诺将开启英国40年来最大规模的政治与经济改革，包括将公共事业收归国有、降低生活和住房成本、改革教育体制等。摄影师：Neil Hall",
+          "link": "https://m.idai.ly/se/7faYrm",
+          "publishedOn": "2026-07-21T08:58:00.000Z",
+          "wordCount": 249,
+          "title": "英国新首相正式上任 - July 21, 2026",
+          "enclosure": {
+            "url": "http://pic.yupoo.com/fotomag/f6db26342a/8c60dab4.jpg",
+            "type": "image/jpg"
+          },
+          "imageUrl": "http://pic.yupoo.com/fotomag/f6db26342a/8c60dab4.jpg"
+        },
+        {
+          "id": "idaily-255232",
+          "author": "韩国 · 首尔",
+          "description": "韩亚银行屏幕上显示韩国综合股价指数（KOSPI）收盘数据，首尔。7月20日，韩国 KOSPI 指数收盘暴跌-304.33点至6516.27点，单日跌幅达到-4.46%并触发熔断机制，创下自4月24日以来的最低收盘点位，其中三星电子股价下跌-4.31%，SK 海力士股价下跌-4.23%。本轮韩国股市下跌主要受半导体股回调和中东冲突局势升级影响，7月以来总市值已缩水20%，其中三星电子市值比上月底缩水20%，SK海力士缩水近30%。摄影师：Jeon Heon-Kyun",
+          "link": "https://m.idai.ly/se/e529PF",
+          "publishedOn": "2026-07-21T07:57:00.000Z",
+          "wordCount": 249,
+          "title": "韩国股市7月迄今跌-20% - July 21, 2026",
+          "enclosure": {
+            "url": "http://pic.yupoo.com/fotomag/7c2291863a/48e243a6.jpg",
+            "type": "image/jpg"
+          },
+          "imageUrl": "http://pic.yupoo.com/fotomag/7c2291863a/48e243a6.jpg"
+        },
+        {
+          "id": "idaily-255231",
+          "author": "中国 · 上海",
+          "description": "2026年世界人工智能大会，一款比亚迪6英寸碳化硅晶圆正在公开展出，中国上海。7月20日，中国机电商会公布2026年上半年中国集成电路出口总额达1772.8亿美元，同比增长96.1%；出口总量达1794.4亿块，同比增长7%；出口单价达到1.206美元，同比增长83.3%；其中6月集成电路出口382.1亿美元，同比增长122.2%，连续32个月实现同比增长，主要受全球人工智能（AI）服务器、数据中心、高性能计算等需求持续旺盛推动。摄影师：iDaily Media",
+          "link": "https://m.idai.ly/se/b7cf84",
+          "publishedOn": "2026-07-21T07:55:00.000Z",
+          "wordCount": 258,
+          "title": "中国上半年芯片出口增96.1% - July 21, 2026",
+          "enclosure": {
+            "url": "http://pic.yupoo.com/fotomag/de737d142a/41bbbb57.jpg",
+            "type": "image/jpg"
+          },
+          "imageUrl": "http://pic.yupoo.com/fotomag/de737d142a/41bbbb57.jpg"
+        },
+        {
+          "id": "idaily-255230",
+          "author": "加拿大 · 安大略省",
+          "description": "加拿大尼亚加拉瀑布城海洋世界的一只白鲸正在被转运至其他水族馆，安大略省。7月20日，加拿大渔业部启动一项白鲸跨国转运行动，计划将30只白鲸从已倒闭的尼亚加拉瀑布海洋世界转移至美国和西班牙的多家水族馆。首批被转运的白鲸共有6只，其中4只由芝加哥谢德水族馆接收，2只由得克萨斯州圣安东尼奥海洋世界接收。尼亚加拉瀑布海洋世界于1961年开业，因经营不善导致饲养海洋动物生活环境恶劣，2019年以来共有19只白鲸和1只虎鲸死亡。该水族馆已于2024年永久停业，馆内白鲸将在未来数周内转移至其他水族馆。摄影师：Carlos Osorio",
+          "link": "https://m.idai.ly/se/b2ak2G",
+          "publishedOn": "2026-07-21T07:53:00.000Z",
+          "wordCount": 249,
+          "title": "加拿大圈养白鲸转移安置 - July 21, 2026",
+          "enclosure": {
+            "url": "http://pic.yupoo.com/fotomag/7244194d1a/17a06772.jpg",
+            "type": "image/jpg"
+          },
+          "imageUrl": "http://pic.yupoo.com/fotomag/7244194d1a/17a06772.jpg"
+        },
         {
           "id": "idaily-255178",
           "author": "法国 · 巴黎",
@@ -27189,90 +27059,6 @@
             "type": "image/jpg"
           },
           "imageUrl": "http://pic.yupoo.com/fotomag/ef881a3b27/83a7dee8.jpg"
-        },
-        {
-          "id": "idaily-253501",
-          "author": "英国 · 威尔特郡",
-          "description": "人们在史前遗迹巨石阵前迎接夏至日出，威尔特郡。6月21日，英国巨石阵夏至日出共吸引超过2万人现场观看。夏至日是北半球一年中白昼最长、黑夜最短的一天，2026年夏至日起始时间为格林威治标准时间8时24分。英国国家统计局最新数据显示4月 GDP 环比下降-0.1%，为2025年8月以来首次录得负值，主要受中东战争引发能源价格上涨的负面因素影响。摄影师：Finnbarr Webster",
-          "link": "https://m.idai.ly/se/bb5svv",
-          "publishedOn": "2026-06-22T10:49:00.000Z",
-          "wordCount": 276,
-          "title": "英国巨石阵庆祝夏至 - June 22, 2026",
-          "enclosure": {
-            "url": "http://pic.yupoo.com/fotomag/1f35eea117/b39c01a1.jpg",
-            "type": "image/jpg"
-          },
-          "imageUrl": "http://pic.yupoo.com/fotomag/1f35eea117/b39c01a1.jpg"
-        },
-        {
-          "id": "idaily-253500",
-          "author": "中国 · 北京",
-          "description": "游客们在端午假期参观天坛祈年殿，北京。6月22日，中国交通运输部公布2026年端午假期3天全社会跨区域人员流动量为6.479亿人次，日均2.16亿人次，同比下降-0.9%；其中铁路客运量增长2.93%至4943.2万人次，公路人员流动量下降-1.21%至59007万人次，民航客运量增长0.62%至567.7万人次。北京文旅局数据显示端午假期全市累计接待游客846.6万人次，实现旅游总花费113.5亿元。摄影师：Yang Yuran",
-          "link": "https://m.idai.ly/se/dfbp2L",
-          "publishedOn": "2026-06-22T09:58:00.000Z",
-          "wordCount": 276,
-          "title": "中国端午假期6.5亿人出行 - June 22, 2026",
-          "enclosure": {
-            "url": "http://pic.yupoo.com/fotomag/ae9159b3bc/d7a60540.jpg",
-            "type": "image/jpg"
-          },
-          "imageUrl": "http://pic.yupoo.com/fotomag/ae9159b3bc/d7a60540.jpg"
-        },
-        {
-          "id": "idaily-253499",
-          "author": "瑞士 · 比尔根山",
-          "description": "美国副总统 JD Vance、巴基斯坦总理 Shehbaz Sharif 和卡塔尔首相 Mohammed bin Abdulrahman Al Thani 出席四方会谈前合影，瑞士比尔根山度假村。6月21日，美国和伊朗在调解方斡旋下举行首轮技术性会谈，历时18小时达成一份初步共识文件。根据调解方发布的联合声明，美伊双方同意在60天内达成最终协议，建立负责监督调解工作的高级别委员会，设立霍尔木兹海峡航运安全沟通渠道，并启动结束黎巴嫩冲突的机制。美国媒体报道称，伊朗代表团在谈判前拒绝与美方合影，双方谈判过程主要通过调解方传递意见。摄影师：Fabrice Coffrini",
-          "link": "https://m.idai.ly/se/1a7VTD",
-          "publishedOn": "2026-06-22T08:57:00.000Z",
-          "wordCount": 276,
-          "title": "美伊启动首轮技术谈判 - June 22, 2026",
-          "enclosure": {
-            "url": "http://pic.yupoo.com/fotomag/6e999e25cf/1d5e7427.jpg",
-            "type": "image/jpg"
-          },
-          "imageUrl": "http://pic.yupoo.com/fotomag/6e999e25cf/1d5e7427.jpg"
-        },
-        {
-          "id": "idaily-253498",
-          "author": "德国 · 科隆",
-          "description": "游客们正在参观科隆大教堂，德国。科隆大教堂将从2026年7月1日起停止免费向公众开放，游客进入教堂需要购买12欧元门票，参加礼拜的教徒、儿童及残障人士可以免票入场。科隆大教堂管理机构表示该教堂自2019年起连续6年亏损，运营储备金已耗尽，新门票政策旨在补贴教堂运营资金。科隆大教堂是世界第三大哥特式教堂，亦是德国最受欢迎的旅游景点之一，每年吸引超过600万访客，其中游客占比达到99%。摄影师：Ina Fassbender",
-          "link": "https://m.idai.ly/se/eb70OS",
-          "publishedOn": "2026-06-22T08:55:00.000Z",
-          "wordCount": 276,
-          "title": "科隆大教堂将售票入场 - June 22, 2026",
-          "enclosure": {
-            "url": "http://pic.yupoo.com/fotomag/ca49e78169/e6862645.jpg",
-            "type": "image/jpg"
-          },
-          "imageUrl": "http://pic.yupoo.com/fotomag/ca49e78169/e6862645.jpg"
-        },
-        {
-          "id": "idaily-253497",
-          "author": "印度 · 加尔各答",
-          "description": "加尔各答维多利亚纪念堂举行集体瑜伽活动庆祝「国际瑜伽日」，印度。6月21日是联合国设立的第12个「国际瑜伽日」，本年度主题为「瑜伽助力健康老龄化」，强调练习瑜伽对各年龄段人群健康的重要性。印度总理 Narendra Modi 当天在加尔各答与3.5万名印度民众一同练瑜伽进行庆祝。市场调研报告显示2025年全球瑜伽市场规模约为1258.2亿美元，预计未来10年复合年增长率达9%。摄影师：Debarchan Chatterjee",
-          "link": "https://m.idai.ly/se/b08Kes",
-          "publishedOn": "2026-06-22T08:53:00.000Z",
-          "wordCount": 276,
-          "title": "第12个国际瑜伽日 - June 22, 2026",
-          "enclosure": {
-            "url": "http://pic.yupoo.com/fotomag/7dfc2736a3/1b5bc825.jpg",
-            "type": "image/jpg"
-          },
-          "imageUrl": "http://pic.yupoo.com/fotomag/7dfc2736a3/1b5bc825.jpg"
-        },
-        {
-          "id": "idaily-253496",
-          "author": "意大利 · 米兰",
-          "description": "米兰 2027 春夏男装周 Prada 秀场，模特们正在展示品牌联合创意总监 Miuccia Prada 和 Raf Simons 的新一季男装作品。本季 Prada 男装作品以「一片澄明」（Clarity）为主题，设计师以精准裁剪的廓形重塑牛仔裤、皮夹克、T恤、西装等经典单品，通过修身剪裁、比例重构、材质更迭等手法颠覆传统服装范式，探讨在充斥复杂资讯的时代，如何通过自主选择和清醒决断，在「留白」之中创造新意。摄影师：Alessandro Garofalo",
-          "link": "https://m.idai.ly/se/37cknT",
-          "publishedOn": "2026-06-22T08:51:00.000Z",
-          "wordCount": 277,
-          "title": "Prada 2027春夏男装秀 - June 22, 2026",
-          "enclosure": {
-            "url": "http://pic.yupoo.com/fotomag/fc80db9e71/3ac6e1e4.jpg",
-            "type": "image/jpg"
-          },
-          "imageUrl": "http://pic.yupoo.com/fotomag/fc80db9e71/3ac6e1e4.jpg"
         }
       ]
     },
