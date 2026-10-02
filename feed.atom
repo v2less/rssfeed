@@ -2,10 +2,1431 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://v2less.github.io/rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2026-10-01T01:10:47.427Z</updated>
+    <updated>2026-10-02T01:30:03.373Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://v2less.github.io/rssfeed/index.html"/>
     <link rel="self" href="https://v2less.github.io/rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[[随想] 想起 @angelshq 老哥了]]></title>
+        <id>https://www.v2ex.com/t/1246087#reply0</id>
+        <link href="https://www.v2ex.com/t/1246087#reply0"/>
+        <updated>2026-10-02T01:18:29.000Z</updated>
+        <summary type="html"><![CDATA[上回看他说找到投资人，在找合伙人。
+现在都 AI 时代，不知道他的客服平台如何。
+前文 /t/833951]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[推广] [AIask]Grok 视频 720P 分辨率 15 秒仅需$0.3，生成 GPT 生图 2 分钱一张，另有赛博鸡蛋自动发放。]]></title>
+        <id>https://www.v2ex.com/t/1246086#reply0</id>
+        <link href="https://www.v2ex.com/t/1246086#reply0"/>
+        <updated>2026-10-02T01:10:57.000Z</updated>
+        <summary type="html"><![CDATA[[AIask]Grok 视频 720P 分辨率 15 秒仅需$0.3 ，生成 GPT 生图 2 分钱一张，另有赛博鸡蛋自动发放。
+工作台，可测试 AI 图片和视频生成能力。
+请先注册： https://aiask.me/
+生图开通方法：API 密钥 -> 创建密钥 -> 分组选择“GPT 生图限时特惠 2 分一张”
+视频开通方法：API 密钥 -> 创建密钥 -> 分组选择“Grok 视频-openAI 接口”
+测试方法：AIask.me 网站后台 -> 工作台 -> AI 生图 或 AI 视频生成]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[分享创造] 做 YouTube 评论分析踩到的坑：配额、分页，和 searchTerms]]></title>
+        <id>https://www.v2ex.com/t/1246085#reply0</id>
+        <link href="https://www.v2ex.com/t/1246085#reply0"/>
+        <updated>2026-10-02T01:07:48.000Z</updated>
+        <summary type="html"><![CDATA[最近在做 YouTube 评论相关的工具，API 这块踩了几个坑，记录一下。
+1. 配额的账要提前算
+YouTube Data API v3 免费额度是 10000 units/天，太平洋时间午夜重置。官方配额表里：
+方法
+每次消耗
+作用
+
+
+
+
+commentThreads.list
+1
+拉顶级评论，一页最多 100 条
+
+
+comments.list
+1
+拉某条评论下的回复
+
+
+search.list
+100
+按关键词找视频
+
+
+看起来挺宽裕：1 unit 换 100 条评论，一天理论上能拉 100 万条。
+但 search.list 一次 100 units ，而且它有自己独立的额度桶，每天只有 100 次。
+所以如果你靠关键词去发现视频，配额会先从那儿炸掉，而不是先炸在拉评论上。
+[这里写一句你自己实际怎么处理的：视频 ID 是从哪来的、有没有撞过配额上限] 
+2. 搜索评论不该在前端做
+我最初的想法是把评论拉下来，前端 filter 。后来发现 commentThreads.list 本身就有个 searchTerms 参数：
+GET /youtube/v3/commentThreads?part=snippet&videoId=VIDEO_ID&searchTerms=关键词
+这是 YouTube 在服务端搜整条线程，不是只搜你当前已经加载的那一页。省带宽，也省延迟。
+两个容易踩的限制：
+searchTerms 不能和 id 参数一起用，只能配合 videoId 或 allThreadsRelatedToChannelId
+它只匹配顶级评论的文本，回复里的内容搜不到，要另外走 comments.list
+[这里可以写你遇到的某个具体现象，比如搜不到某条回复、或者某类关键词没结果] 
+3. 分页和回复是两个 endpoint ，请求数不是页数
+commentThreads.list 一页最多 100 条（ maxResults 上限就是 100 ），翻页靠 nextPageToken 。
+但它返回的 replies 字段只是个预览，不是该评论下的全部回复。要拿完整的得再调 comments.list 。
+所以评论多的视频，实际请求数约等于「顶级评论的页数 + 有回复的评论条数」，不是页数。
+4. 读不需要 OAuth
+读公开评论，API key 就够了，不用走 OAuth 。写操作才需要。这点比想象中省事。
+我把上面这些做成了个网站： https://apriocity.com
+能按关键词搜整条评论线程、按发帖人名字找某条评论、导出 CSV 。前端 Next.js ，后端 Flask + Redis 。
+问一个我一直没想好的：热门视频评论几十万条的时候，你们一般怎么处理配额？
+开多个 GCP 项目轮换，还是干脆不上官方 API ？想听听有实际经验的怎么做的。]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[分享创造] 使用 GPT 6.1 Sol 和 Opus 5.5 制作的 Did Codex Reset 介绍视频，效果简直是天差地别]]></title>
+        <id>https://www.v2ex.com/t/1246083#reply2</id>
+        <link href="https://www.v2ex.com/t/1246083#reply2"/>
+        <updated>2026-10-02T00:49:29.000Z</updated>
+        <summary type="html"><![CDATA[为 didcodexreset.com 制作的介绍视频，两者都是使用的 xhigh 的思考等级，其中 GPT-6.1 Sol 耗时 35 分钟，Opus 5.5 耗时 53 分钟，效果见如下：
+Opus 5.5
+https://www.bilibili.com/video/BV1CbaZ6nE9W
+GPT-6.1 Sol
+https://www.bilibili.com/video/BV11xaZ6pEfD]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[分享发现] 拿 OpenAI 新玩具 Dots，来做产品宣传视频，效果超出预期]]></title>
+        <id>https://www.v2ex.com/t/1246082#reply7</id>
+        <link href="https://www.v2ex.com/t/1246082#reply7"/>
+        <updated>2026-10-02T00:42:14.000Z</updated>
+        <summary type="html"><![CDATA[前两天开源了个 SayKuku ，想着做个宣传视频来着，然后刚好 Dots 上线，就试了试，结果效果超出预期。
+结果演示
+https://youtu.be/8r0BkCFpVWw
+视频源码
+https://github.com/UllrAI/SayKuku/tree/main/marketing/video/voice-workflow
+官网传送门 SayKuku]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Linux in my phone]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1wvfzy1/linux_in_my_phone/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1wvfzy1/linux_in_my_phone/"/>
+        <updated>2026-10-02T00:36:32.000Z</updated>
+        <summary type="html"><![CDATA[I'm thinking of buying a new phone. I currently use a Xiaomi because of the customization options, but it has bugs. That's why I was considering a phone I could install Linux on and completely customize. Which one do you recommend?
+    submitted by    /u/ANDR3Y_345  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[服务器] 服务器自己关机]]></title>
+        <id>https://www.v2ex.com/t/1246079#reply4</id>
+        <link href="https://www.v2ex.com/t/1246079#reply4"/>
+        <updated>2026-10-01T23:53:05.000Z</updated>
+        <summary type="html"><![CDATA[一台中科曙光的 R6240HS ，安装的银河麒麟系统，过段时间就关机了，登进 BMC 无任何报错，BMC 看运行时间还是最开始安装时的时间，是不是说明不是硬件的事情而是系统自身的原因。]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[arxy – minimal Arch subsystem to run glibc binaries (incl. Steam) on musl distros, at native speed]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1wver7r/arxy_minimal_arch_subsystem_to_run_glibc_binaries/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1wver7r/arxy_minimal_arch_subsystem_to_run_glibc_binaries/"/>
+        <updated>2026-10-01T23:38:06.000Z</updated>
+        <summary type="html"><![CDATA[Hi everyone. I want to show you a project that honestly I'm pretty embarrassed to share, because it's the first time I share something with the general public. Sorry if I sound nervous. I just think it could be useful to someone, so here it is.
+ I collaborate on Neko Void, specifically on the part that makes images for musl, for the musl C library. And we all know how this goes: stuff made for glibc doesn't work on musl, you have to rebuild it. And proprietary software is hard to build because the source is not free. So most of those apps just don't work. Steam doesn't work by default either, and that's what makes a lot of users run away from musl distros.
+ There are alternatives. AppImage bundles glibc inside, but when you have a lot of AppImages you end up duplicating deps everywhere and…]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[System 76's COSMIC Desktop Environment will no longer accept LLM-generated content in PRs]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1wvefhy/system_76s_cosmic_desktop_environment_will_no/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1wvefhy/system_76s_cosmic_desktop_environment_will_no/"/>
+        <updated>2026-10-01T23:23:05.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/RatherNott  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[分享创造] （古法编程）做了一款全平台掼蛋游戏， flutter, flame 和 soloud。]]></title>
+        <id>https://www.v2ex.com/t/1246078#reply1</id>
+        <link href="https://www.v2ex.com/t/1246078#reply1"/>
+        <updated>2026-10-01T23:19:55.000Z</updated>
+        <summary type="html"><![CDATA[首先这不是 AI vibe 的创作。是真的古法编程，走了很多弯路，很多债现在都在还。现在有了 AI ，希望以后会轻松些，并且逐渐提高服务质量，不再受限我个人的能力。
+
+历史：不是我要重复造轮子，是现有的轮子太糟：
+疫情刚结束时，时隔 7 年终于回老家一次。发现以前只有部分本地人玩的掼蛋火了，家乡淮安处处是掼蛋，我妈迷的不行。但是我妈不喜欢用手机玩，不仅是我妈，小区大爷大妈都一样。我研究了一下为什么：
+打开应用先来各种活动，老人打开应用不知道该干嘛。
+有的 bug 满天飞，收费项目倒是很齐全。
+大厂不看好，比如腾讯掼蛋。属于只能说有，将就用，不能说好。感觉腾讯不指望这个赚钱，就是占个坑。
+所以那时候我决定，我要做一个以掼蛋为中心的掼蛋应用，我要真心的注重掼蛋的体验。让我的家人更方便的玩掼蛋，而不是一个捞金应用。
+我从 2024 年开始做，进行了大量研究，最终选择 flutter, flame 和 soloud 作为技术栈。借此顺便分享一下：
+Flutter 我觉得还是很好的生态，希望谷歌加把力，别老是把核心功能交给第三方库。
+我对 Flame 最大的槽点：两个 move_to(x,y) 竟然可以叠加？！ 两个 move_by(delta_x,delta_y) 叠加还说得通，两个 move_to(x,y) 什么鬼。导致很多高级的动画效果我特么写不出来。
+Soloud 特别是 Flutter Soloud 解决了很多现实问题。我作为早期用户之一，跟 Flutter Soloud 作者也有一定交流，挺努力的小哥。不过小哥爱折腾，建议直接用相对稳定的版本。
+2024 年开始做，半天上班晚上做，周末做，假期做。
+2025 年初开始网页版测试。
+2026 年初上架 iOS ，并且陆续上架了 macOS ，Windows ，最后终于折腾上了 Google Play 。
+游戏增长方面，缓慢但乐观，这一路没有做任何商业广告。主要靠自增长。
+因为我觉得游戏现在只有功能，界面太土，打广告反而有负面效果。
+我不看虚的数字，比如多少下载，多少查看。我只关心用户是否还在玩，是否在天天玩？所以我有相对严格的 DAU （这个用户必须在这一天完整的完成一个游戏，才算是这一天的活跃用户），DAU 从第一个月的不到 10 ，到目前的 500 左右。虽然缓慢，但稳定的直线，算是一点安慰。
+网页版入口
+https://guandan.app/
+其他客户端下载
+Apple https://apps.apple.com/cn/app/%E6%8E%BC%E8%9B%8B-guandan/id6757966323
+Google https://play.google.com/store/apps/details?id=org.rockstudio.guandan
+Microsoft https://apps.microsoft.com/detail/9pbv1xp2lc50
+我对 V2EX 有点特殊情结。早年一些作品在 V2EX 获得的肯定是我一直以来继续创作的动力之一。虽然 V2EX 跟以前很不一样了，但我总是希望来 V2EX 分享，总觉得差这么个仪式感。
+AI 时代，祝愿大家都挺住。]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Butterflies use optical illusions to dodge predators]]></title>
+        <id>https://news.ycombinator.com/item?id=49928152</id>
+        <link href="https://www.essex.ac.uk/news/2026/09/30/butterflies-use-optical-illusions-to-dodge-predators"/>
+        <updated>2026-10-01T23:15:24.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.essex.ac.uk/news/2026/09/30/butterflies-use-optical-illusions-to-dodge-predators
+Comments URL: https://news.ycombinator.com/item?id=49928152
+Points: 9
+# Comments: 3]]></summary>
+        <author>
+            <name>gmays</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Several vulnerabilities have been discovered in the Linux kernel]]></title>
+        <id>https://news.ycombinator.com/item?id=49928121</id>
+        <link href="https://lwn.net/Articles/1097401/"/>
+        <updated>2026-10-01T23:10:44.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://lwn.net/Articles/1097401/
+Comments URL: https://news.ycombinator.com/item?id=49928121
+Points: 61
+# Comments: 32]]></summary>
+        <author>
+            <name>luispa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[生活] 你们家里日常衣服晾晒到室外直接接触阳光吗？]]></title>
+        <id>https://www.v2ex.com/t/1246077#reply6</id>
+        <link href="https://www.v2ex.com/t/1246077#reply6"/>
+        <updated>2026-10-01T23:10:11.000Z</updated>
+        <summary type="html"><![CDATA[我们家现在小区，阳台外面是没有那种晾衣杆的，物业原则上不让装，但是小区也有些年份了，外立面管理没有那么严，有几家装了。
+我以前的房子是有那种晾衣杆的，然后现在就挂在阳台里面的晾衣架上，每天接触阳光时间少了，虽然日常还是可以干的，但是吧，隔着玻璃和纱窗，家里也装了烘干机，但是总感觉少了些什么。
+我考虑装一个的，有点纠结，因为现在封阳台的立柱是圆形的（小区的统一设计风格），网购了一个，回来研究了一下安装固定方式，怕不稳定。
+但是现在新房，尤其是那种科技房，基本上都是不允许室外晾晒的吧，冬天晒棉被怎么操的呢？统一到楼顶？
+有没有什么专业论文讨论过这个的？]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Apple's smart home camera reportedly won't record video]]></title>
+        <id>https://news.ycombinator.com/item?id=49928054</id>
+        <link href="https://www.theapplepost.com/2026/10/01/72882/apples-smart-home-camera-reportedly-wont-record-video/"/>
+        <updated>2026-10-01T23:00:10.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.theapplepost.com/2026/10/01/72882/apples-smart-home-camera-reportedly-wont-record-video/
+Comments URL: https://news.ycombinator.com/item?id=49928054
+Points: 11
+# Comments: 19]]></summary>
+        <author>
+            <name>mikelgan</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2026 International Utility Locate Rodeo]]></title>
+        <id>https://news.ycombinator.com/item?id=49927844</id>
+        <link href="https://locaterodeo.net/"/>
+        <updated>2026-10-01T22:33:23.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://locaterodeo.net/
+Comments URL: https://news.ycombinator.com/item?id=49927844
+Points: 11
+# Comments: 0]]></summary>
+        <author>
+            <name>K7PJP</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[推广] 做了个软考备考网站，厚着脸皮来求点反馈（考前送 VIP）]]></title>
+        <id>https://www.v2ex.com/t/1246076#reply1</id>
+        <link href="https://www.v2ex.com/t/1246076#reply1"/>
+        <updated>2026-10-01T22:27:15.000Z</updated>
+        <summary type="html"><![CDATA[各位 V 友好，国庆快乐。
+我们做了一套软考备考系统，主要面向软考中高级。不只是纯刷题，可以根据个人学习时长偏好生成每天的学习计划。
+目前主要有这些功能：
+每日学习计划，可根据实际进度调整
+章节知识点学习、知识点练习、每日一练、历年真题和模拟考试
+错题本、收藏、默写复习
+案例和论文专项练习
+AI 辅助批改案例、论文，并给出修改建议（仅供参考）
+产品还在持续完善，肯定有不少不成熟的地方。厚着脸皮来 V 站 发一次，希望有备考需求的朋友帮忙试试，功能不好用可以直接说，轻喷就行 😂
+目前正在开展 VIP 免费体验活动，欢迎大家来领取 VIP ！
+体验地址：https://www.yuejxt.cn/specials/invite/?uid=jDcHUx4jxJDs
+智能备考管家
+
+感谢各位，打扰了。]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Aweb – Communication for AI Agents]]></title>
+        <id>https://news.ycombinator.com/item?id=49927587</id>
+        <link href="https://aweb.ai/"/>
+        <updated>2026-10-01T22:02:31.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://aweb.ai
+Comments URL: https://news.ycombinator.com/item?id=49927587
+Points: 18
+# Comments: 12]]></summary>
+        <author>
+            <name>gurjeet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CSS Bed: Classless CSS themes to use as starting points in web development]]></title>
+        <id>https://news.ycombinator.com/item?id=49927212</id>
+        <link href="https://www.cssbed.com/"/>
+        <updated>2026-10-01T21:21:32.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://www.cssbed.com
+Comments URL: https://news.ycombinator.com/item?id=49927212
+Points: 55
+# Comments: 11]]></summary>
+        <author>
+            <name>sea-gold</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The death of web development education]]></title>
+        <id>https://news.ycombinator.com/item?id=49927100</id>
+        <link href="https://molily.de/web-dev-education/"/>
+        <updated>2026-10-01T21:07:37.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://molily.de/web-dev-education/
+Comments URL: https://news.ycombinator.com/item?id=49927100
+Points: 157
+# Comments: 118]]></summary>
+        <author>
+            <name>ibobev</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Using Opus 5.5 to discover a new eyewitness record of the dodo]]></title>
+        <id>https://news.ycombinator.com/item?id=49926917</id>
+        <link href="https://resobscura.substack.com/p/using-opus-55-to-discover-a-new-eyewitness"/>
+        <updated>2026-10-01T20:48:37.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://resobscura.substack.com/p/using-opus-55-to-discover-a-new-eyewitness
+Comments URL: https://news.ycombinator.com/item?id=49926917
+Points: 60
+# Comments: 6]]></summary>
+        <author>
+            <name>benbreen</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Show HN: Janus – Go binary that runs GGUF models via Vulkan on AMD/Intel/Nvidia]]></title>
+        <id>https://news.ycombinator.com/item?id=49926773</id>
+        <link href="https://github.com/Vibra-Ingenn/Janus"/>
+        <updated>2026-10-01T20:36:47.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://github.com/Vibra-Ingenn/Janus
+Comments URL: https://news.ycombinator.com/item?id=49926773
+Points: 48
+# Comments: 5]]></summary>
+        <author>
+            <name>Maverick617</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Automatic Transmission – a data-privacy study of connected vehicles]]></title>
+        <id>https://news.ycombinator.com/item?id=49926628</id>
+        <link href="https://automatictransmission.khoury.northeastern.edu/index.html"/>
+        <updated>2026-10-01T20:23:27.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://automatictransmission.khoury.northeastern.edu/index.html
+Comments URL: https://news.ycombinator.com/item?id=49926628
+Points: 140
+# Comments: 135]]></summary>
+        <author>
+            <name>rafaelc</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SvelteKit 3]]></title>
+        <id>https://news.ycombinator.com/item?id=49926536</id>
+        <link href="https://svelte.dev/blog/sveltekit-3-is-here"/>
+        <updated>2026-10-01T20:14:23.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://svelte.dev/blog/sveltekit-3-is-here
+Comments URL: https://news.ycombinator.com/item?id=49926536
+Points: 110
+# Comments: 40]]></summary>
+        <author>
+            <name>sampsn</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ArXiv's Updated Rate Limit Policy]]></title>
+        <id>https://news.ycombinator.com/item?id=49926512</id>
+        <link href="https://blog.arxiv.org/2026/10/01/updated-rate-limit-policy/"/>
+        <updated>2026-10-01T20:12:15.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://blog.arxiv.org/2026/10/01/updated-rate-limit-policy/
+Comments URL: https://news.ycombinator.com/item?id=49926512
+Points: 65
+# Comments: 27]]></summary>
+        <author>
+            <name>50kIters</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Escape Motions announces future linux support for Rebelle 8]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1wv9itb/escape_motions_announces_future_linux_support_for/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1wv9itb/escape_motions_announces_future_linux_support_for/"/>
+        <updated>2026-10-01T19:54:57.000Z</updated>
+        <summary type="html"><![CDATA[Rebelle is an awesome painting simulation programme from Slovakia. it's one of the best painting software I've tried (way better than Corel Painter or Krita)
+ But they also announces optional paid update access... which is not really appreciated by the community, as you can see in the comments.
+    submitted by    /u/Cleobule  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pi 1.0]]></title>
+        <id>https://news.ycombinator.com/item?id=49926069</id>
+        <link href="https://earendil.com/posts/pi-1-0/"/>
+        <updated>2026-10-01T19:33:05.000Z</updated>
+        <summary type="html"><![CDATA[Related: Pi Durable - https://news.ycombinator.com/item?id=49925969
+Comments URL: https://news.ycombinator.com/item?id=49926069
+Points: 730
+# Comments: 252]]></summary>
+        <author>
+            <name>sergiotapia</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pi Durable]]></title>
+        <id>https://news.ycombinator.com/item?id=49925969</id>
+        <link href="https://earendil.com/posts/pi-durable/"/>
+        <updated>2026-10-01T19:24:08.000Z</updated>
+        <summary type="html"><![CDATA[Related: Pi 1.0 - https://news.ycombinator.com/item?id=49926069 - Oct 2026 (184 comments)
+Comments URL: https://news.ycombinator.com/item?id=49925969
+Points: 216
+# Comments: 23]]></summary>
+        <author>
+            <name>paulsmith</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[分享创造] Herduck 迭代：在 Herdr 上面补「这项活做到哪了」（自动归类 / 闲着就睡 / herduck 命令）— 求 Herdr 用户拍砖]]></title>
+        <id>https://www.v2ex.com/t/1246075#reply0</id>
+        <link href="https://www.v2ex.com/t/1246075#reply0"/>
+        <updated>2026-10-01T19:21:58.000Z</updated>
+        <summary type="html"><![CDATA[一句话分工：
+Herdr = 让 Agent 一直跑着、并排管理
+Herduck = 记住一项活的目标 / 做到哪了 / 卡在哪 / 下一步，以及能翻回去的记录
+互补，不替代。
+官网 https://www.herduck.com
+仓库 https://github.com/wenhanweime/herduck
+上一帖 https://www.v2ex.com/t/1243952
+GitHub Discussion （求反馈） https://github.com/wenhanweime/herduck/discussions/2
+也在 Herdr Show and tell 发了一帖： https://github.com/herdrdev/herdr/discussions/4822
+已有能力（还很早期）：
+工作 / Agents / 项目 / 会话 四个入口
+相关对话尽量自动收拢到同一项活（可配置；也有偏本地关键词的路径）
+Agent 会话自动起名；闲置一段时间可睡眠，释放内存
+herduck 命令让 Agent 读 / 更新工作计划
+兼容 Claude Code / Codex / OpenCode / Pi / Gemini CLI / Cursor ；快捷键尽量跟 Herdr 对齐
+本轮对外动作：
+仓库 homepage 指向 herduck.com
+README 首屏补了官网链接和 Demo 占位
+开了反馈 Discussion
+仍已知的坑：源码安装需要 Rust / Zig / just ； macOS 需按文档重签名；早期不稳定点欢迎 Issue 。
+求反馈：
+自动把对话归到同一项活，误伤多不多？
+闲着就睡的阈值是否合理？
+和纯 Herdr 并用时，哪些界面显得重复？
+安装最短路径：
+git clone https://github.com/wenhanweime/herduck.git
+cd herduck
+just install
+herduck
+
+欢迎 star / Issue / 一起维护。给 Herdr 用户补「隔天接得上」，不是抢跑 Agent 那一层。
+少数派长文已投稿待审（大白话版）：多开 Agent 几天后，最烦的是隔天接不上]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Oxygen-deprived underwater zones may not be “dead zones” but clue to early life]]></title>
+        <id>https://news.ycombinator.com/item?id=49925742</id>
+        <link href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2026AV002570"/>
+        <updated>2026-10-01T19:03:42.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2026AV002570
+Comments URL: https://news.ycombinator.com/item?id=49925742
+Points: 78
+# Comments: 3]]></summary>
+        <author>
+            <name>gumby</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[分享创造] 单词消消乐]]></title>
+        <id>https://www.v2ex.com/t/1246074#reply1</id>
+        <link href="https://www.v2ex.com/t/1246074#reply1"/>
+        <updated>2026-10-01T18:56:33.000Z</updated>
+        <summary type="html"><![CDATA[简介：结合背单词和消消乐玩法的学习小游戏，背单词再也不枯燥啦，哈哈哈，欢迎来玩
+游戏地址：
+https://m1besyalsgeo.meoo.pub/]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Bez: Generating a browser engine from specs and tests]]></title>
+        <id>https://news.ycombinator.com/item?id=49925036</id>
+        <link href="https://tangled.org/burrito.space/bez"/>
+        <updated>2026-10-01T18:08:03.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://tangled.org/burrito.space/bez
+Comments URL: https://news.ycombinator.com/item?id=49925036
+Points: 86
+# Comments: 35]]></summary>
+        <author>
+            <name>nerdypepper</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why did Docker take off, but Nspawn didn't?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1wv6feo/why_did_docker_take_off_but_nspawn_didnt/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1wv6feo/why_did_docker_take_off_but_nspawn_didnt/"/>
+        <updated>2026-10-01T17:58:14.000Z</updated>
+        <summary type="html"><![CDATA[Topic title. Docker is so ubiquitous these days in the public dev space that it's almost unreal to me. It seems like a good 70% of FOSS requires it - and with it all the loquaciousness of YAML and Docker compose. I use it, because I have to.
+ But whatever happened to the humble systemd-nspawn container? It gives you roughly comparable size to most Docker containers, is (IMO) a heck of a lot easier to configure and run, is portable across systemd systems everywhere, and has been a native part of the Linux ecosystem for over a decade. Was it just Kubernetes coming out the gate swinging that caused Docker to take over the world? I still prefer nspawn, and use "full stack" containers for deployments of things like edge ingress nodes because its fast, simple, intuitive, and hard to screw up.
+    submitted by    /u/AcidOverlord  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vote on which of Hacker News' challenges for AI have been met]]></title>
+        <id>https://news.ycombinator.com/item?id=49924618</id>
+        <link href="https://stoppels.ch/goalposts/"/>
+        <updated>2026-10-01T17:32:43.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://stoppels.ch/goalposts/
+Comments URL: https://news.ycombinator.com/item?id=49924618
+Points: 86
+# Comments: 93]]></summary>
+        <author>
+            <name>stabbles</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Interview with Liam Quin (2017, GIMP Contributor and Artist)]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1wv52nt/interview_with_liam_quin_2017_gimp_contributor/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1wv52nt/interview_with_liam_quin_2017_gimp_contributor/"/>
+        <updated>2026-10-01T17:07:19.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/CMYK-Student  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Git 3.0's upcoming SHA-256 default will be a costly mistake]]></title>
+        <id>https://news.ycombinator.com/item?id=49924179</id>
+        <link href="https://blog.gitbutler.com/git-3-sha-256"/>
+        <updated>2026-10-01T16:57:03.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://blog.gitbutler.com/git-3-sha-256
+Comments URL: https://news.ycombinator.com/item?id=49924179
+Points: 198
+# Comments: 215]]></summary>
+        <author>
+            <name>chmaynard</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[游戏] 《CONTROL Resonant》一款第三人称超自然动作 RPG]]></title>
+        <id>https://www.v2ex.com/t/1246072#reply0</id>
+        <link href="https://www.v2ex.com/t/1246072#reply0"/>
+        <updated>2026-10-01T16:52:07.000Z</updated>
+        <summary type="html"><![CDATA[https://controlresonantguide.app/ 这个游戏有人玩过吗？这个支线反而比主线任务还好玩，The Last Taxi  不是整个游戏都在开出租车。玩家要找到七辆异常出租车，接听 Mila 的电话，再根据车灯、顶灯、路灯、阴影等变化选出正确车辆。]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[分享创造] 最近真的被 Opus 5.5 惊艳到了，特别是做视频，异常勇猛。]]></title>
+        <id>https://www.v2ex.com/t/1246071#reply2</id>
+        <link href="https://www.v2ex.com/t/1246071#reply2"/>
+        <updated>2026-10-01T16:39:51.000Z</updated>
+        <summary type="html"><![CDATA[一句话丢给它，动效、排版、转场全是它自己写代码画出来的，效果经常比我想的还好。
+弄了个站，无需 Claude 账号就能直接玩 👉 opus6.video]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[程序员] B 站用微软浏览器 看不到弹幕，是太卡还是插件作祟？]]></title>
+        <id>https://www.v2ex.com/t/1246070#reply0</id>
+        <link href="https://www.v2ex.com/t/1246070#reply0"/>
+        <updated>2026-10-01T16:29:41.000Z</updated>
+        <summary type="html"><![CDATA[如题，插件装太多 弹幕看不到]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[推广] Azalea Photo：把手机照片原图备份到你自己的硬盘、NAS 或对象存储]]></title>
+        <id>https://www.v2ex.com/t/1246069#reply3</id>
+        <link href="https://www.v2ex.com/t/1246069#reply3"/>
+        <updated>2026-10-01T16:22:59.000Z</updated>
+        <summary type="html"><![CDATA[做了一个照片备份工具 Azalea Photo，想分享给有类似痛点的人。
+它解决什么问题
+手机相册越来越大，但"照片放哪"一直很别扭：
+iCloud 开了「优化 iPhone 储存空间」后，本地原图会被替换成占位图，想拿回原图得联网下载；
+Google Photos 有压缩，而且数据在别人手里；
+Immich / Nextcloud 这类自托管方案不错，但需要一直养一台服务器。
+Azalea 的思路很简单：备份介质由你自己选，原图直接写进去，我们的服务器不存任何一张照片。
+支持的后端
+腾讯云 COS / 阿里云 OSS / Amazon S3 （访问密钥只存在设备钥匙串里，不上传给我们）
+USB / 移动硬盘 / SSD （ macOS 走安全域书签，Android 走 SAF + OTG ）
+Samba NAS （局域网）
+几个比较在意的细节
+写入的是原始文件，不是"优化"后的替身；增量备份，重跑不会重复传
+iPhone ↔ Android 可以互相认领同一个 bucket 或同一块盘，换机不用经过 iCloud / Google Photos
+断点续传：拔线、锁屏、后台被杀，下次启动接着传
+exFAT 不允许冒号、星号、问号这类字符，遇到会做可逆转义，不会中断整个任务
+一次实测（ 2026 年 3 月的 lab log ）：iPhone 15 ，18432 项 / 86.4 GB 写入 1 TB 移动硬盘，耗时 4 小时 17 分钟，其中 23 个带冒号的文件名被转义，零丢失。
+官网（含与 Google Photos / Immich 的对比页）： https://photos.duguying.net
+欢迎试用，也欢迎在回复里提需求和吐槽。
+iOS App 兑换码（ 10 个，先到先得）
+ARNLAWKN39RT
+HF9THL9YJXJN
+3MRLW6TYFNR4
+AT63YJHE7X77
+YL7J6EWHPPM9
+K3K64KY7NJR7
+AAEN9PRWFF7Y
+PLPMM7EKERAH
+TY6MP3TL7F96
+KKJKA7JEW9EY
+
+兑换方式：App Store → 右上角头像 → 兑换充值卡或代码，输入上面的码即可。
+用掉的同学可以在回复里说一声，免得后面的人白试。]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Clef: Open-weight decision models, and new RL fine-tuning platform]]></title>
+        <id>https://news.ycombinator.com/item?id=49923692</id>
+        <link href="https://blog.cloudflare.com/clef-decision-models/"/>
+        <updated>2026-10-01T16:18:57.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://blog.cloudflare.com/clef-decision-models/
+Comments URL: https://news.ycombinator.com/item?id=49923692
+Points: 425
+# Comments: 158]]></summary>
+        <author>
+            <name>jasondavies</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RIP, vector database]]></title>
+        <id>https://news.ycombinator.com/item?id=49923466</id>
+        <link href="https://turbopuffer.com/blog/rip-vector-database"/>
+        <updated>2026-10-01T16:01:56.000Z</updated>
+        <summary type="html"><![CDATA[Article URL: https://turbopuffer.com/blog/rip-vector-database
+Comments URL: https://news.ycombinator.com/item?id=49923466
+Points: 271
+# Comments: 78]]></summary>
+        <author>
+            <name>razin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[问与答] 改套餐白送了张副卡，但是不知道怎么利用这张卡]]></title>
+        <id>https://www.v2ex.com/t/1246068#reply1</id>
+        <link href="https://www.v2ex.com/t/1246068#reply1"/>
+        <updated>2026-10-01T15:39:31.000Z</updated>
+        <summary type="html"><![CDATA[本人目前单持，没有用备用机的习惯。iPad mini 还是蜂窝的，没法插卡。
+dji 的那个 4G 模块好像只能给 mac 用，而且还要配合软件折腾。
+买 cpe 的话，emmmm...感觉成本还有点高（毕竟一个差不多的好像都要五百块钱以上，感觉这样有点买椟还珠了）
+求各位给给意见，感激不尽]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[MUSE] Muse 记得关闭这个允许训练开关]]></title>
+        <id>https://www.v2ex.com/t/1246067#reply0</id>
+        <link href="https://www.v2ex.com/t/1246067#reply0"/>
+        <updated>2026-10-01T15:39:19.000Z</updated>
+        <summary type="html"><![CDATA[MUSE - @isbase - https://i.v2ex.co/Z5CLKtr6.jpeg]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[分享创造] [免费测试] DockLens：鼠标停在 Dock 图标上，就能看到该 App 的所有窗口]]></title>
+        <id>https://www.v2ex.com/t/1246066#reply0</id>
+        <link href="https://www.v2ex.com/t/1246066#reply0"/>
+        <updated>2026-10-01T15:35:23.000Z</updated>
+        <summary type="html"><![CDATA[我是开发者。DockLens 是一个菜单栏小工具：鼠标停在 Dock 图标上，就会显示这个 App 所有窗口的实时缩略图，点一下切换；缩略图上的红黄绿按钮可以直接关闭、最小化、全屏。
+按 ✕ 关掉但 App 还开着的窗口（ Notion 、Slack 等）会保留在预览里，点一下重新打开
+其他桌面（ Space ）上的窗口也会列出来，点一下直接切过去
+Spotify ／音乐的预览上多一条播放列：播放／暂停、上一首、下一首，显示当前歌曲
+闲置时 CPU 0%、0 次唤醒，内存约 20–30MB （事件驱动，不轮询）
+完全不联网，缩略图只在本机处理
+Dock 放底部、左侧、右侧，自动隐藏、放大效果、多显示器都测过
+免费测试版，需要 macOS 26 以上。目前还没做 Apple 公证，第一次打开要到「系统设置 → 隐私与安全性」点「仍要打开」（ README 有步骤）。播放列第一次按播放时，系统会询问「自动化」权限，不用的话可以不允许，其他功能不受影响。
+最想听的是：你希望 Dock ／窗口管理工具做到、但现在没有任何工具做到的是什么？欢迎留言或开 Issue 。
+GitHub： https://github.com/firstfu/DockLens-app]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[macOS] libcr 项目组发布支持 macOS 平台的 crFiles 1.3.0, 多页签多分栏的文件管理应用]]></title>
+        <id>https://www.v2ex.com/t/1246064#reply0</id>
+        <link href="https://www.v2ex.com/t/1246064#reply0"/>
+        <updated>2026-10-01T15:15:03.000Z</updated>
+        <summary type="html"><![CDATA[crFiles 是一款 C++实现的多页签多分栏的文件管理应用，基于 chromium 154.0.8037.95        
+同时支持 macOS, Linux, Windows 等桌面平台
+1. 支持 Nearby sharing, 局域网快速文件分享      
+2. 支持多页签多分栏模式     
+3. 内置视频，图片和 PDF 等文件的预览    
+4. 独立进程实现文件快速查找
+免费下载： https://github.com/libcr/crFiles/releases]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[酷工作] 招聘｜后端开发工程师（ PHP + Go）]]></title>
+        <id>https://www.v2ex.com/t/1246063#reply0</id>
+        <link href="https://www.v2ex.com/t/1246063#reply0"/>
+        <updated>2026-10-01T15:14:54.000Z</updated>
+        <summary type="html"><![CDATA[目前在做一个持续运营中的互联网产品，现招聘一名后端开发工程师，主要负责服务端功能开发、接口维护以及后续业务迭代。
+项目已经有稳定的业务和基础架构，不是从零开始搭项目，希望找一位能够长期参与项目、独立解决问题的后端。
+一、技术栈
+目前主要使用：
+* PHP
+* Go
+* MySQL
+* Redis
+* Linux
+* RESTful API
+* Git
+有实际线上项目经验即可，不要求所有技术都精通。
+二、工作内容
+1. 负责后端 API 开发及维护
+2. 负责现有业务功能迭代
+3. 参与数据库设计及接口优化
+4. 处理线上 Bug 和异常问题
+5. 根据产品需求完成新功能开发
+6. 配合前端、客户端进行接口联调
+7. 对系统稳定性、性能和安全性进行持续优化
+三、岗位要求
+* 2 年以上后端开发经验
+* 熟悉 PHP ，有实际线上项目经验
+* 熟悉 Go ，有 Go 项目经验优先
+* 熟悉 MySQL 、Redis
+* 熟悉 Linux 环境及常用运维操作
+* 能独立完成接口开发、调试和问题排查
+* 有较好的代码规范和工程意识
+* 能够长期稳定合作
+如果你 PHP 很熟，Go 目前不是特别熟，但愿意接触，也可以聊。
+四、薪资待遇
+10K–15K/月，具体根据实际能力面谈。
+如果能力比较强、能够独立负责后端模块，薪资可以再谈。
+长期合作后，会根据项目贡献和实际情况提供额外激励。
+五、我们更看重什么
+相比学历和证书，我们更看重：
+能不能把事情做完、线上出了问题能不能解决、能不能长期稳定合作。
+项目目前已经在线运行，有真实业务，不是单纯写 Demo 。
+工作方式可以远程，具体合作方式面谈。
+六、应聘方式
+TG：ASWRTY25
+有兴趣可以私信我，简单介绍：
+* 工作年限
+* PHP / Go 使用年限
+* 做过的项目
+* 目前所在城市
+* 期望薪资
+* 是否接受远程]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[程序员] 有没有 token 信用合作社,蹬不完的 token 先给别人用,那天自己不够了再去取用]]></title>
+        <id>https://www.v2ex.com/t/1246062#reply16</id>
+        <link href="https://www.v2ex.com/t/1246062#reply16"/>
+        <updated>2026-10-01T15:09:55.000Z</updated>
+        <summary type="html"><![CDATA[总感觉有人干了....]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[程序员] Grok Bot/Muse/Dots 这些龙虾类产品卷土重来，我想给上一代产品说几句公道话]]></title>
+        <id>https://www.v2ex.com/t/1246061#reply9</id>
+        <link href="https://www.v2ex.com/t/1246061#reply9"/>
+        <updated>2026-10-01T15:01:46.000Z</updated>
+        <summary type="html"><![CDATA[说句公道话，上一代个人 Agent 大家忘啦？
+只要不追求主动让 AI 把自己开盒了，有限度地让 AI 干活，上一代其实完全不比各种 Bot/Muse/Dots/Cue 差啊。
+智谱 AgentMore ，完整持久云端环境，带记忆系统，有移动版有网页版，每天免费额度能干不少事。
+智谱 AutoClaw ，用户体验有点糟糕，但它甚至支持 BYOK ，网页读取工具还能翻墙，应用本身却不用翻墙，这么特殊的存在你找不到第二个。
+字节扣子，同样 BYOK ，虽然不订阅几乎没法用，但如果想要控制带 GUI 的机器，加钱就行，那和国外这一票也没区别了。
+这一代的个人 Agent ，连个模型都不让选，多数人真在乎那 VPS 配置啊？]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[程序员] 主力邮箱还是得选国内邮箱]]></title>
+        <id>https://www.v2ex.com/t/1246060#reply43</id>
+        <link href="https://www.v2ex.com/t/1246060#reply43"/>
+        <updated>2026-10-01T14:42:28.000Z</updated>
+        <summary type="html"><![CDATA[近期 Google 又扫号了，如果一直申诉不成功，跟 Google 关联的账号都废了，主力邮箱还是得国内邮箱，至少在国内还有投诉的渠道，Google 说封你就封你，根本没得商量]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[分享发现] DiPlay 是怎么做到的让 Android 车机直接可以 CarPlay...]]></title>
+        <id>https://www.v2ex.com/t/1246057#reply2</id>
+        <link href="https://www.v2ex.com/t/1246057#reply2"/>
+        <updated>2026-10-01T14:25:53.000Z</updated>
+        <summary type="html"><![CDATA[今天在 X 上刷到的一个开源项目DiPlay，好像是个海外开发者给比亚迪车机搞的，但是看起来大部分 Android 车机应该都能跑。
+之前不都是得 MFI 硬件么，现在居然不用硬件了？
+https://github.com/shihabal3amri/DiPlay]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[分享创造] 本地图片 agent 工具 Layerive 更新：加了批量改图、图片融合、抠图和局部删除等功能]]></title>
+        <id>https://www.v2ex.com/t/1246056#reply0</id>
+        <link href="https://www.v2ex.com/t/1246056#reply0"/>
+        <updated>2026-10-01T14:18:37.000Z</updated>
+        <summary type="html"><![CDATA[之前在 V2EX 分享过自己做的本地 AI 图片工作台 Layerive ，最近又加了一些功能，发个帖子汇报一下进展。
+GitHub：newljs/Layerive
+Releases
+原帖
+这次比较大的更新是批量生图和批量改图。
+可以把提示词一行一条粘贴进去，也可以导入 TXT ，支持一次处理 2–50 张。批量改图会从同一张原图出发，按每行的要求分别修改。
+另一个是图片融合。把参考图拖到主图想修改的位置，可以做融合、换装、动作迁移和合影。
+另外加了两个功能：
+删除元素：圈住想删的东西，识别目标后删除。帽子、眼镜这类人物身上的附件也可以单独处理。
+去除背景：判断图片里的主要人物或物体，输出透明 PNG 。
+项目开源，本地运行，不需要注册账号。图片、提示词和历史记录都保存在自己的电脑上，模型 API 需要自己配置，生成和识别按所用服务商计费。改图效果也取决于接入的模型。
+欢迎试试，有问题可以提 issue ，也可以直接在帖子里反馈。]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[分享创造] 基于 RIME 的开源 macOS 中文输入法： AIME 艾么输入法]]></title>
+        <id>https://www.v2ex.com/t/1246055#reply5</id>
+        <link href="https://www.v2ex.com/t/1246055#reply5"/>
+        <updated>2026-10-01T13:48:22.000Z</updated>
+        <summary type="html"><![CDATA[2026 年的今天，语音输入法已愈发普及，为什么我还要做一个新的键盘输入法？
+无他，就是为了那些依旧需要键盘打字的时刻。⌨️
+「 AIME 艾么输入法」 macOS 版发布。
+🌐 体验地址: aime.zool.app
+🔗 开源地址: https://github.com/zoolapp/aime
+特点
+🔓 开源，日常输入本地处理，注重隐私保护。
+📚 在线词库订阅更新，常用语快捷输入。
+✨ 打字过程中随手调用 AI 翻译、润色，原生交互。
+让键盘打字爱好者，依旧能享受指尖打字的乐趣。]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[优惠信息] AdGuard Family Plan 终身订阅优惠,9 设备永久授权家庭版 / 60 元]]></title>
+        <id>https://www.v2ex.com/t/1246054#reply7</id>
+        <link href="https://www.v2ex.com/t/1246054#reply7"/>
+        <updated>2026-10-01T13:43:05.000Z</updated>
+        <summary type="html"><![CDATA[AdGuard Family Plan 终身订阅优惠
+StackSocial 上 AdGuard 家庭版终身订阅：
+
+价格：¥74.00 CNY
+折扣码：LIFETIMEO，额外再减 20%
+最终到手价：¥59.20 CNY
+有需要的可以看看，无 aff
+🔗 https://www.stacksocial.com/sales/adguard-family-plan-lifetime-subscription]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[酷工作] 招聘｜商务负责人｜底薪 10K + KPI + 利润期权]]></title>
+        <id>https://www.v2ex.com/t/1246053#reply0</id>
+        <link href="https://www.v2ex.com/t/1246053#reply0"/>
+        <updated>2026-10-01T13:22:51.000Z</updated>
+        <summary type="html"><![CDATA[目前在做一个面向海外用户的互联网产品，现寻找一名商务负责人，主要负责渠道拓展、商务合作及整体增长。
+希望找的是能真正自己做渠道、谈资源、拿结果的人，而不是单纯维护现有渠道的商务。
+一、薪资待遇
+底薪：10K/月
+另外有两部分长期激励：
+1. KPI 绩效
+以日均有效首充人数作为核心指标：
+* 日均首充 100 人：绩效 +1K
+* 日均首充 200 人：绩效 +2K
+* 日均首充 300 人：绩效 +3K
+* 以此类推，不设上限
+也就是说，渠道做得越大，收入没有固定天花板。
+2. 利润期权分红
+以新增日均首充人数作为长期激励标准：
+* 日均增加 100 人：月利润分红 1%
+* 日均增加 200 人：月利润分红 2%
+* 日均增加 300 人：月利润分红 3%
+* ……
+* 日均增加 1000+ 人：月利润分红最高 10%
+具体合作方式及期权细则面谈。
+二、核心要求
+我们比较看重实际操盘能力：
+* 有互联网产品、流量平台、渠道商务、推广资源等相关经验
+* 有自己的渠道/商务资源更好
+* 能独立开发渠道、谈合作、推进落地
+* 对 ROI 、转化、首充、留存等数据有基本理解
+* 能自己拿结果，而不是单纯等公司分配资源
+三、ROI 要求
+为了保证渠道质量，对有效首充有明确要求：
+* 正式期：注册 ROI ≥ 80%
+* 试用期：注册 ROI ≥ 70%
+我们不单纯看注册量，更看真实付费和整体渠道质量。
+四、我们能提供
+* 固定底薪 10K
+* KPI 上不封顶
+* 长期利润分红
+* 已有产品和基础业务
+* 商务负责人有较大的渠道拓展空间
+* 不限制你只做某一种渠道，能够持续带来有效用户即可
+如果你只是想找一份固定底薪的商务工作，可能不太适合。
+如果你有渠道、有资源，或者过去确实做出过增长，希望通过结果拿到更高收入，可以聊聊。
+坐标：可远程
+联系方式 TG：ASWRTY25
+邮箱： qinm358@gmail.com
+有兴趣可以直接私信，简单介绍一下过往做过的项目、渠道类型以及大概成绩。]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[程序员] 时隔 3 年，终于更新了个人主页]]></title>
+        <id>https://www.v2ex.com/t/1246052#reply14</id>
+        <link href="https://www.v2ex.com/t/1246052#reply14"/>
+        <updated>2026-10-01T13:14:14.000Z</updated>
+        <summary type="html"><![CDATA[https://dejavu.moe/]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Claude] 如果 Google 账号被封了，关联的 Claude 是不是废了？]]></title>
+        <id>https://www.v2ex.com/t/1246051#reply8</id>
+        <link href="https://www.v2ex.com/t/1246051#reply8"/>
+        <updated>2026-10-01T13:06:22.000Z</updated>
+        <summary type="html"><![CDATA[目前 Google 账号被封了，连续申诉 3 次都失败了，感觉不一定能申诉回来，那关联的 Claude 是不是废了，我是不是得做好换号的准备，虽然说目前 Claude 还能正常使用，就怕保不准哪天就要重新登录。。]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[求职] [远程 / 苏州] 8 年多开发经验，找全栈或 AI 应用开发的机会]]></title>
+        <id>https://www.v2ex.com/t/1246048#reply0</id>
+        <link href="https://www.v2ex.com/t/1246048#reply0"/>
+        <updated>2026-10-01T12:47:27.000Z</updated>
+        <summary type="html"><![CDATA[大家好，最近在看新的工作机会，想在这里发个帖子试试。
+有 8 年多开发经验，做过金融业务、AI 对话产品和办公场景的应用，也有国内互联网公司和外企的工作经历。公司和个人信息先略去，感兴趣的话可以单独提供完整简历。
+主要用 Node.js 、Nuxt 和 Next.js 做全栈开发。做过贷款、支付、保险相关业务，负责过 SSR 应用和接口开发，也参与过基于 ELK + Node.js 的日志系统搭建。AI 产品方面，做过 Next.js 整体架构、登录和数据库设计、大模型接入，以及流式生成内容的表格渲染。
+日常会用 Codex 、Cursor 、Claude 辅助开发、排查问题和跑 E2E 测试，也会把重复流程整理成 Skills 和定时任务。比较喜欢把一个功能从需求到上线完整做下来。
+工作之外，对设计工具、组件库和交互动画也挺有兴趣，做过设计工具插件和浏览器插件，维护过开源组件库。看到做得好的产品，会忍不住研究一下它的细节。GitHub: zouhangwithsweet
+目前在苏州，远程、苏州的岗位都可以考虑，主要想找全栈或 AI 应用开发方向的机会。英文读写没问题，口语可以进行日常工作沟通。
+如果有合适的岗位或团队，欢迎留言交流，详细经历和联系方式可以再单独沟通。谢谢大家！]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[问与答] 公网拨号，几分钟就受限，无法建新连接，已有连接不受影响]]></title>
+        <id>https://www.v2ex.com/t/1246047#reply3</id>
+        <link href="https://www.v2ex.com/t/1246047#reply3"/>
+        <updated>2026-10-01T12:41:19.000Z</updated>
+        <summary type="html"><![CDATA[河北联通，当地运营商有拨号参数，加上就能拿公网 IP 。
+用拨号参数时，家中母亲使用快手约 5 分钟左右，会禁止建立新的连接，通常的已有连接通常还能保持(如跑在 UDP 的通话或远程桌面)，但无法建立新的连接，而且外边可以连进来，可以 ping 的通上级公网网关，但 ping 不通运营商 DNS/其他 DNS
+怀疑过上行速度，也怀疑过连接数问题，所以试着进行了 qos 和防火墙限制，并实际没有解决问题。
+因为联系人列表里有宽带师傅，把宽带师傅喊上门后确认非“PCDN 封禁(指那个限速)”，理由是只有千兆宽带才有资格被 PCDN 封禁，这边宽带 200M ，看起来是被直接封禁了
+几乎是上个月 1 号停止使用的公网，最近没有进行测试，想试试搁一个月能不能解决，也想让人帮忙看看
+在不用拨号参数时 网络一切正常，除了没有公网 IP 这个问题以外(((]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[分享创造] 我的第一个网站]]></title>
+        <id>https://www.v2ex.com/t/1246046#reply1</id>
+        <link href="https://www.v2ex.com/t/1246046#reply1"/>
+        <updated>2026-10-01T12:19:42.000Z</updated>
+        <summary type="html"><![CDATA[做了一个姓氏生成器 https://www.surnamegenerator.net/,分享一下，学习了网站的流程。]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[太平洋飓风数量创新高 - October 1, 2026]]></title>
+        <id>idaily-259249</id>
+        <link href="https://m.idai.ly/se/83cJ5e"/>
+        <updated>2026-10-01T11:59:00.000Z</updated>
+        <summary type="html"><![CDATA[NASA 公布一张「深空气候观测卫星」（DSCOVR）拍摄的地球照片，清晰呈现太平洋上空出现的多个热带气旋，分别为夏威夷沿海飓风「诺洛」（Nolo）、加利福尼亚半岛外海飓风「波洛」（Polo）、墨西哥沿岸的热带风暴「瑞秋」（Rachel）和美国西南部热带气旋「奥达利斯」（Odalys）。厄尔尼诺现象是本年度太平洋飓风数量增多的主要原因，美国国家飓风中心数据显示2026年迄今太平洋上已生成20个命名风暴，相当于同期平均值的1.5倍，其中9个达到飓风级别。摄影师：NASA]]></summary>
+        <author>
+            <name>太平洋</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[中华人民共和国成立77周年招待会 - October 1, 2026]]></title>
+        <id>idaily-259248</id>
+        <link href="https://m.idai.ly/se/a1dqOs"/>
+        <updated>2026-10-01T11:58:00.000Z</updated>
+        <summary type="html"><![CDATA[中国国家主席习近平在庆祝中华人民共和国成立77周年招待会上发表讲话，北京人民大会堂。9月30日，中国国家主席习近平在国庆招待会上向全国人民致以节日祝贺。习近平指出，今年以来中国经济顶压前行、展现出强大韧性和活力，面对错综复杂的国际国内形势，需要加快构建新发展格局，切实保障和改善民生，努力完成全年目标任务。习近平强调，要坚定不移贯彻「一国两制」方针，深化两岸交流合作，坚决打击「台独」分裂势力，推进祖国统一大业。习近平重申中国坚持独立自主的和平外交政策，要推动构建人类命运共同体，为变乱交织的世界注入更多确定性和正能量。摄影师：Florence Lo]]></summary>
+        <author>
+            <name>中国 · 北京</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[白宫人工智能午餐会 - October 1, 2026]]></title>
+        <id>idaily-259247</id>
+        <link href="https://m.idai.ly/se/2ffWAD"/>
+        <updated>2026-10-01T11:57:00.000Z</updated>
+        <summary type="html"><![CDATA[美国总统 Donald Trump 与英伟达首席执行官黄仁勋、特斯拉首席执行官 Elon Musk、Meta 创始人 Mark Zuckerberg、谷歌首席执行官 Sundar Pichai 等科技企业领袖在白宫举行午餐会，华盛顿特区。9月29日，美国总统 Trump 正式签署行政命令将联邦政府文件中的「人工智能」更名为「超级智能」（Super Intelligence），并宣布 Anthropic、谷歌、Meta、英伟达、OpenAI 及 xAI 6家美国头部AI企业已达成一份「具有道德约束力」的自愿协议，承诺通过内控制度、外部审计和董事会强化人工智能行业的自我监管。摄影师：Tierney L. Cross]]></summary>
+        <author>
+            <name>美国 · 华盛顿特区</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[俄罗斯第9届国家杜马开幕 - October 1, 2026]]></title>
+        <id>idaily-259246</id>
+        <link href="https://m.idai.ly/se/1705Jp"/>
+        <updated>2026-10-01T11:55:00.000Z</updated>
+        <summary type="html"><![CDATA[俄罗斯总统 Vladimir Putin 在第9届国家杜马首次会议上发表讲话，莫斯科。9月29日，俄罗斯第9届国家杜马召开首次全体会议，本届杜马近半数席位为新议员，执政党「统一俄罗斯党」占349个席位，俄罗斯联邦共产党占37席，自由民主党占23席，新人党占19席。俄总统 Putin 在讲话中指出，新一届国家杜马的主要任务包括审批未来三年联邦预算计划，实现经济长期稳健发展，解决人口问题，提高公民生活水平和质量，提升俄罗斯国防能力，完善针对特别军事行动战斗人员及其家属的支持体系等。摄影师：Alexander Kazakov]]></summary>
+        <author>
+            <name>俄罗斯 · 莫斯科</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[法国总统对西班牙国事访问 - October 1, 2026]]></title>
+        <id>idaily-259245</id>
+        <link href="https://m.idai.ly/se/4c06wF"/>
+        <updated>2026-10-01T11:53:00.000Z</updated>
+        <summary type="html"><![CDATA[西班牙国王费利佩六世举行国宴欢迎法国总统 Emmanuel Macron 访问，马德里王宫。9月29日，法国总统 Macron 开启对西班牙为期2天的国事访问，主要行程包括会见西班牙国王和首相、出席王室国宴、参加法西经济论坛开幕式等。这是法国总统2009年以来首次对西班牙进行国事访问。两国领导人就双边关系、欧盟合作、乌克兰问题、中东局势等议题举行会谈，并共同呼吁欧盟团结应对移民、经济和地缘政治挑战。法国是西班牙的第一大贸易伙伴，西班牙是法国的第五大贸易伙伴，两国2025年贸易额达1149亿美元，同比增长3.92%。摄影师：Juanjo Martin]]></summary>
+        <author>
+            <name>西班牙 · 马德里</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[英国国家美术馆雷诺阿展 - October 1, 2026]]></title>
+        <id>idaily-259243</id>
+        <link href="https://m.idai.ly/se/43e4RD"/>
+        <updated>2026-10-01T11:51:00.000Z</updated>
+        <summary type="html"><![CDATA[英国国家美术馆举办「雷诺阿与爱」特展，一组雷诺阿1883年画作《乡村舞会》与《布吉瓦的舞会》正在展出，伦敦。本次展览由法国奥赛博物馆、英国国家美术馆和美国波士顿美术馆合作策展，共汇集法国印象派画家 Pierre-Auguste Renoir 在1860至1890年创作巅峰时期的约40件作品，聚焦其关于爱情、友谊和日常情感的描绘，带领观众体会艺术家对人物情感关系的生动刻画。展期从10月3日持续至2027年1月底。摄影师：Neil Hall]]></summary>
+        <author>
+            <name>英国 · 伦敦</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[维也纳自然史博鸟类标本室重开 - October 1, 2026]]></title>
+        <id>idaily-259242</id>
+        <link href="https://m.idai.ly/se/eb1X5a"/>
+        <updated>2026-10-01T11:49:00.000Z</updated>
+        <summary type="html"><![CDATA[维也纳自然历史博物馆「鸟类标本陈列室」重新对公众开放，奥地利。9月30日，维也纳自然历史博物馆「鸟类标本陈列室」修缮改造后恢复向公众开放参观，新常设展以城市、山脉、森林、极地等不同栖息地为脉络，共展出1000余件馆藏鸟类标本，向访客重点介绍全球鸟类物种的多样性，以及不同鸟类的食物、习性、栖息地和生态地位。摄影师：Hans Klaus Techt]]></summary>
+        <author>
+            <name>奥地利 · 维也纳</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[分享发现] 怎么赚被裁码农的钱]]></title>
+        <id>https://www.v2ex.com/t/1246043#reply3</id>
+        <link href="https://www.v2ex.com/t/1246043#reply3"/>
+        <updated>2026-10-01T11:46:13.000Z</updated>
+        <summary type="html"><![CDATA[起初我只是想测试一下新的 moa 模型组效果，就随便找了个话题问了一句，没想到回答结果，大部分还都是我没想到过的角度，但是觉得有些方向似乎确实有些道理，而且时间窗口的提示也有些价值，所以就分享上来，给被输送到社会的兄弟姐妹们一点儿思路。
+以下主要是 AI 信息，介意忽略：
+我：
+/moa 在论坛上、社交媒体上，以前相关开发编码程序员工作的人，这一年多都大量在发被辞退的消息，年龄不一定很大，这类人主要以男性为主，年龄通常都不是很大，绝大部分都是 40 岁以下，集中在 30～40 岁中间，在以往属于高收入群体，但其实没有资本，也就是基本上没有资产性收入，一旦被辞退，基本上就失去了收入来源，而且再找工作，很难找到同等薪酬的工作，甚至有很多人都是很多个月都找不到工作，连面试机会都没有，针对这类人群，我们有什么商业机会呢？
+Agent:
+我先把这个题目当成一个商业判断做，而不是当成情绪共鸣题。上一轮跑完整流程超时了，这次我按 "先拿数据、再下结论" 的压缩路径走。数据到手了。我先补几个关键验证 ——谁付钱这件事决定成败，不能靠推测。数据里有几个数字很关键，我再钉死两个政策性事实，避免判断建在沙子上。数据够硬了。最后钉一件事 ——竞争格局，这决定我推荐的方向是不是已经有人占坑。数据够了。我先把结论落盘，再给你判断。
+重点部分：
+分析完了，报告已推送到 WebDAV（notes/商业产品思路/被裁资深程序员的商业机会.md，14.4KB，已校验）。下面是结论。
+先说最重要的一句
+别赚这群人的钱，去赚 "欠他们钱的人" 和 "必须花钱的甲方" 的钱。
+他们不是没有付费意愿，是没有付费能力。任何把 C 端失业者当付费主体的模型，本质是逆周期销售。
+底数：他们的现金流断成什么样:
+—— 一些数据 ——
+一个每月领 2160 元、房贷照还的人，你让他掏钱，他买的不是服务，是赌局 —— 而且他的理…]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[推广] 做跨境之后，我才分清收钱和花钱]]></title>
+        <id>https://www.v2ex.com/t/1246042#reply1</id>
+        <link href="https://www.v2ex.com/t/1246042#reply1"/>
+        <updated>2026-10-01T11:42:22.000Z</updated>
+        <summary type="html"><![CDATA[做线上业务时，你可能遇到两个完全不同的问题：
+客户想用一种货币付你，你需要另一种——这是兑换的问题。
+轮到你付 AI 工具、SaaS 或其他线上账单，商户要的是卡——这是付款的问题。
+所以能收到钱和能完成付款，其实要分开看。
+测试完 REYVO 后面发现了 JPM.us(just power money)不是摩根大通公司做虚拟币与法币之间的转换。
+它们是需求上的互补，不代表两个账户里的余额会自动互通。
+如果你正在找方案，先写下三件事，比先问“哪张卡最好用”更有帮助：
+① 钱现在在哪里、是什么币种？
+② 最后要付给谁，对方接受什么方式？
+③ 这笔钱是个人用，还是业务支出？
+先把需求说明白，再核对产品支持的路径、资格和费用。别先开户，后发现不是自己需要的功能。]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[分享创造] claude pro token 用不完怎么办]]></title>
+        <id>https://www.v2ex.com/t/1246041#reply3</id>
+        <link href="https://www.v2ex.com/t/1246041#reply3"/>
+        <updated>2026-10-01T11:33:09.000Z</updated>
+        <summary type="html"><![CDATA[我刚刚只想到用 ai 给相册做了一个检索，但是感觉这个功能有点鸡肋]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[分享创造] 做了个用 Claude Opus 5.5 生成动画视频的网站]]></title>
+        <id>https://www.v2ex.com/t/1246040#reply0</id>
+        <link href="https://www.v2ex.com/t/1246040#reply0"/>
+        <updated>2026-10-01T11:22:45.000Z</updated>
+        <summary type="html"><![CDATA[最近把 Claude 写动画代码、再渲染成视频这套流程做成了一个网站：
+https://opusvideogen.com
+输入想做的内容，就能生成 15–60 秒的 MP4 ，比较适合产品介绍、讲解动画和动态图表。支持横竖屏，不用自己装环境或准备 API Key 。
+首页有示例和免费回放，生成自己的视频按积分收费。有空可以看看，欢迎提意见。]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[问与答] 做个小调查 大家周围近几年大学毕业的人去了哪个行业？]]></title>
+        <id>https://www.v2ex.com/t/1246038#reply2</id>
+        <link href="https://www.v2ex.com/t/1246038#reply2"/>
+        <updated>2026-10-01T10:41:59.000Z</updated>
+        <summary type="html"><![CDATA[问与答 - @isbase -]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Encrypted Arch Linux on SATA-to-USB: A Practical Field Guide for Resisting Drive Seizure, Forensic Analysis, and State Coercion]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1wuw2y8/encrypted_arch_linux_on_satatousb_a_practical/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1wuw2y8/encrypted_arch_linux_on_satatousb_a_practical/"/>
+        <updated>2026-10-01T10:39:56.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/throwaway16830261  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[分享创造] [分享] 为什么用 AI 自动归类书签是个伪命题？一次 400+ 收藏夹的确定性排坑实录]]></title>
+        <id>https://www.v2ex.com/t/1246036#reply2</id>
+        <link href="https://www.v2ex.com/t/1246036#reply2"/>
+        <updated>2026-10-01T10:28:08.000Z</updated>
+        <summary type="html"><![CDATA[前几天我试着用本地 Agent （ Codex / Claude Code ）帮我清理堆积了 4 年、400 多个 Edge 书签，本来以为一句话的事情，结果踩了一裤裆的工程暗坑。
+今天把整个过程中的反直觉真相、工程死锁以及最终跑通的解决方案开源出来。
+项目开源地址： https://github.com/askofcc/chromium-bookmark-guardian
+（无需安装任何插件或第三方脚本，纯 Prompt 规范，丢给你的本地 Agent 即可现场执行）
+一、 两个反直觉的认知“打脸”
+1. 为什么“让 AI 自动整理书签目录”是个彻头彻尾的灾难？
+第一轮我让大模型根据 URL 和内容“智能重组分类”。结果它把属于我个人业务流的海外支付钱包 WebMoney，生硬地塞进了 常用站长与 SEO。
+后来我想明白了：书签本质上是人的「空间记忆」和「私人业务上下文」。
+当年我做站长要买外链，顺手需要办一张虚拟卡，所以虚拟卡自然在垂直业务目录下。AI 只有通识词向量，没有私人业务上下文。它自作聪明地按大词归类，看似整齐，实际把大脑建立了几年的空间肌肉记忆瞬间切碎，心理感受就是“东西全丢了”。
+结论：书签治理的第一铁律，是 AI 严禁触碰用户原有的目录结构。
+2. 传统死链工具（以及只查 HTTP 状态码的脚本）漏掉了 80% 的“假存活与黑产劫持”
+市面上的扩展（如 Bookmarks Clean Up ）通常只看返回码是不是 200 ，结果这几天深度复测发现：
+域名过期被黑灰产抢注（最恶劣）：当年存的正规电商/技术工具平台早已停业，域名过期后被黑产批量买走，变成了披着 200 状态码外衣的涉黄非法看片站、境外博彩下注平台、或盗版影视泛站群！
+表面 200 ，实际为伪装 403 / 挂马跳转：服务器 Nginx 返回 HTTP 200 ，但页面源码标题直接写着 <title>403 Forbidden</title>，正文是一段加密的博彩跳转脚本；
+SSL 证书域名不匹配：老站换理解析但证书过期或域名不匹配，浏览器打开直接弹红屏隐私拦截；
+Cloudflare 致命解析错误：如被查封的服务，返回 Cloudflare 的 Error 1000: DNS points to prohibited IP 错误说明页。
+如果不做语义级内容比对 + 严格证书校验，这些已经变质的毒性链接会永久潜伏在你的日常收藏夹中。
+二、 必须绕过的底层死锁：Chromium 云同步（ Sync ）反向覆写
+如果你在后台关闭 Edge/Chrome ，直接用 Python 修改磁盘上的 Default/Bookmarks JSON 文件：
+千万别这么干！
+因为开启了微软/谷歌账号云同步后，Chromium 内部遵循硬性冲突规则 「 Remote parent wins （云端归属优先）」。你离线改的文件没有同步事务凭证，浏览器启动联网瞬间，云同步引擎会把云端旧目录全量拉下来覆盖你的本地修改！
+有效解法：
+通过系统自动化管道（如 macOS AppleScript / CDP ），向浏览器内部打开的 edge://favorites 或 chrome://bookmarks 注入原生脚本，直接调用浏览器内部特权接口 chrome.bookmarks.move()。
+每一次移动都会作为原生事件被 Sync 引擎捕获并主动提交给云端，实现无感实时更新、零刷新生效、云端永久同步。
+三、 终极工程准绳与一键抄作业
+踩完坑后，我们总结出了一套 Chromium 书签无损治理的四大准绳：
+结构绝对不动，组内频次浮顶（原有业务分类 100% 保持，只在文件夹内部把近期高频项置顶）；
+四层穿透探针，清仓隐蔽伪存活（双通道测活 + SSL 验真 + 灰产词库对抗 + 标题防假死）；
+客观二元隔离，零物理删除（移入末尾隔离箱细分子类，确定死亡项随时一键清空）；
+宿主原生特权注入（解决 Edge/Chrome 云同步回滚）。
+如果你也有几百个吃灰的书签想清理，不用装任何扩展，也不用上传书签泄露隐私。
+直接去 GitHub 复制那份 PROMPT.md 丢给你的本地 Agent （ Codex 、Claude Code 、Cursor 等）：
+👉 GitHub 项目地址： https://github.com/askofcc/chromium-bookmark-guardian]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[薅羊毛] zfb 活动， 3 个 8.8 无门槛立减红包，香港节点+地址切香港，下滑境外消费笔笔省]]></title>
+        <id>https://www.v2ex.com/t/1246035#reply1</id>
+        <link href="https://www.v2ex.com/t/1246035#reply1"/>
+        <updated>2026-10-01T09:54:33.000Z</updated>
+        <summary type="html"><![CDATA[zfb 活动，3 个 8.8 无门槛立减红包，香港节点+地址切香港，下滑境外消费笔笔省]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[MUSE] Muse2api 反代，支持热会话， Agent 调用]]></title>
+        <id>https://www.v2ex.com/t/1246034#reply1</id>
+        <link href="https://www.v2ex.com/t/1246034#reply1"/>
+        <updated>2026-10-01T09:54:25.000Z</updated>
+        <summary type="html"><![CDATA[muse2api：把 muse.ai 网页版包装成 OpenAI 兼容 API 的异步网关
+发现一个刚创建几天的开源项目，思路挺有意思，分享一下。
+教程整理不易，大家多多支持我，邀请码：D3XYWA
+领取 10 亿 token ，部署此项目可以薅干赠送的 token
+项目简介
+muse2api 是一个异步网关，把 muse.ai 网页版的聊天、文生图、文生视频功能，暴露成标准的 OpenAI 接口（/v1/chat/completions、/v1/images/generations 等）。
+这意味着现有的 OpenAI 生态客户端——ChatGPT-Next-Web 、LobeChat 、Cherry Studio——只需要改个 base_url 就能直接用，OpenAI 的 Python SDK 也是一行代码的事：
+from openai import OpenAI
+client = OpenAI(base_url="http://localhost:18610/v1", api_key="<API_KEY>")
+
+架构亮点
+1. 可插拔驱动
+所有与上游 muse.ai 交互的方式被抽象在 MuseDriver 接口后面，目前有三种：
+mock：离线假数据，无需账号，方便联调和前端开发
+browser：Chromium + CDP ，一个账号一个 BrowserContext ，真实操作网页版
+http：直接协议驱动，预留位置（目前返回 501 ）
+2. 账号池
+调度策略：lru / round_robin / affinity
+单账号并发限制
+失败自动冷却、过期 session 自动下线
+请求还没开始吐流时失败，自动换账号重试
+3. 全异步
+FastAPI + asyncio ，CDP 客户端走 websockets ，没有任何请求会阻塞线程。流式请求会先拿到第一个 chunk 再返回 200 ，所以"无可用账号"这类错误会以正常 HTTP 状态码返回，而不是断在半截流里。
+分层也很干净：协议层 / 服务层 / 账号池 / 驱动层职责单一，TODO.md 里把后续工作按"验证测试 → 驱动 → 协议 → 运维"排好了，CONTRIBUTING 也有，一看就是想长期做的。
+快速上手
+bash
+
+
+git clone https://github.com/www222fff/muse2api.git
+cd muse2api
+cp .env.example .env
+docker compose up -d --build
+默认监听 127.0.0.1:18610 。用真实账号的话，把 .env 里的 MUSE2API_DRIVER 设为 browser ，从已登录 muse.ai 的浏览器导出 cookie （至少需要 hatch_sess 、hatch_gw 、hatch_vml 、hatch_native_auth_device ），再走 Admin API 导入账号。]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[宽带症候群] 宽带 trace，中间全是星号，完全看不到路线怎么破]]></title>
+        <id>https://www.v2ex.com/t/1246033#reply9</id>
+        <link href="https://www.v2ex.com/t/1246033#reply9"/>
+        <updated>2026-10-01T09:47:07.000Z</updated>
+        <summary type="html"><![CDATA[宽带症候群 - @liwei265 - https://i.imgur.com/sjYKw8A.png]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[程序员] 实测：目前 dot 跑任务，不扣我 Codex 的使用额度]]></title>
+        <id>https://www.v2ex.com/t/1246032#reply4</id>
+        <link href="https://www.v2ex.com/t/1246032#reply4"/>
+        <updated>2026-10-01T09:46:09.000Z</updated>
+        <summary type="html"><![CDATA[RT, 可能具体的计数还没有做好...
+我用的是 5x pro.
+今天把任务交给 dot ，在云端开了 6 个 Agent ，跑了约 4 小时 15 分钟，生成了 1,358 张图片，连提示词和来源记录一起保存，打包成 187 个 ZIP, 13G.
+开跑前，我的用量面板显示剩余 9%；跑完后，还是 9%.
+昨天本地 3 个 session, 大约也是用了 4 个小时,生成了 1300 多张, 用 Sol 都消耗了 20%
+Dots 短期内还是可以冲的, 我估计默认的还是 astra.]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[分享创造] 做了个逗比增量游戏，推荐大家都去试试 vibe game，很有意思哈哈]]></title>
+        <id>https://www.v2ex.com/t/1246031#reply4</id>
+        <link href="https://www.v2ex.com/t/1246031#reply4"/>
+        <updated>2026-10-01T09:45:38.000Z</updated>
+        <summary type="html"><![CDATA[https://needleinahaystack.online/
+最近那个大海捞针模拟器比较火，就做了个 h5 2d 版本
+用的中转站的 opus5.5 ，贵的一批，但是做游戏的过程很有趣
+而且真正的 5.5 真就是指哪打哪，但凡修半天没修好，那 5.5 绝对是掺水了。。。]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[分享创造] 做了一个免费 AI 图片工作台：一句话生图、修图、做海报，可以对话式修改]]></title>
+        <id>https://www.v2ex.com/t/1246030#reply3</id>
+        <link href="https://www.v2ex.com/t/1246030#reply3"/>
+        <updated>2026-10-01T09:41:02.000Z</updated>
+        <summary type="html"><![CDATA[分享创造 - @zxhwolfe -]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[创业组队] [横琴｜澳资初创｜ AI Agent] 寻找技术联合创始人，前期零薪， 16%股权（4 年归属）]]></title>
+        <id>https://www.v2ex.com/t/1246029#reply17</id>
+        <link href="https://www.v2ex.com/t/1246029#reply17"/>
+        <updated>2026-10-01T09:21:54.000Z</updated>
+        <summary type="html"><![CDATA[​ [联合创始人 & CTO 招募] 云端中立 AI Agent 消费智能体
+​一、 我们是谁 & 要做什么？
+​Meta 发布的 Muse 已经证实了移动端 UI Agent 的巨大前景。然而，国内淘宝、微信、京东、拼多多等生态高度封闭与严格风控，导致大厂（受广告业务绑架）无法做出真正“站在消费者立场、跨平台中立比价与自动履约”的产品。
+​我们正在打造一款 Cloud-First （云端优先）的移动端 AI 消费助手 App 。用户仅需发送一张图片或一句指令，云端 Agent 集群即可在数秒内完成跨平台数据抓取、优惠算法折算与品质风控过滤，帮用户一键找到全网实付最低价并辅助下单。
+​二、 你的核心挑战（ CTO 职责）
+​我们需要一位能够亲自动手打仗、具备大厂级工程能力的技术合伙人：
+​云端架构搭建：基于 Serverless + Playwright / Browserless 构建高并发无头浏览器容器池。
+​反爬虫与风控对抗：设计动态住宅 IP 路由、浏览器指纹伪装及 VLM （视觉大模型）自动化打码系统。
+​人机协同（ HITL ）引擎：设计极低延迟的屏幕流交互，在短信验证码/人脸识别节点实现手机端无缝接管。
+​三、 我（ CEO ）将带来什么？
+​商业闭环与产品设计：清晰的商业变现路径（订阅制 + 导购佣金 + 节约分成）。
+​琴澳政策资助与杠杆：以澳门公司主体撬动澳门科技发展基金（ FDCT ）研发资助、横琴深合区科技补贴与创业大赛奖金。
+​投融资与资源整合：主导风险投资（ Pre-Seed / Seed 轮）路演，负责法务合规、用户增长与团队运营，让技术团队无后顾之忧。
+​四、 股权与薪酬方案
+​联合创始人股权：16% 核心股权（附带国际标准的 4 年 Vesting 兑现期与 1 年 Cliff 门槛期）。
+​薪酬计划：Pre-Seed 融资完成（或资助到账）前，双方共同投入 Sweat Equity 快速打造 MVP ；融资金额到位后，立即转为市场化高薪全职。
+​寻找这样的你：熟悉 Python/Node.js 高并发架构，有无头浏览器、自动化爬虫或 AI Agent 研发经验。大湾区/澳门高校计算机硕士/博士或大厂背景优先。
+​联系方式：[邮箱 Jeffersontang28@gmail.com]]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[问与答] 出海盈利的产品回国宣传，是拓展市场还是自招抄袭？]]></title>
+        <id>https://www.v2ex.com/t/1246028#reply2</id>
+        <link href="https://www.v2ex.com/t/1246028#reply2"/>
+        <updated>2026-10-01T09:12:39.000Z</updated>
+        <summary type="html"><![CDATA[问了问小红书上几个独立开发的意见，和综合评论。看来他们都很抵制这点，给出的理由也很简单：
+抄袭门槛骤降：在当下 Vibe Coding 普及的环境下，复刻同类产品的成本极低；
+自曝盈利模式：一旦在国内分享一个已被验证且赚钱的产品，很容易引来大量像素级搬运工和内卷竞争；
+合规与转化成本：国内还有备案、支付接入以及客单价等现实问题。
+大家怎么看？真的会出现一宣传就出现好几个复制品卷的现象吗？]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[分享创造] 庆祝国庆节网站：天安门的一天]]></title>
+        <id>https://www.v2ex.com/t/1246026#reply6</id>
+        <link href="https://www.v2ex.com/t/1246026#reply6"/>
+        <updated>2026-10-01T09:06:23.000Z</updated>
+        <summary type="html"><![CDATA[简介：做了一个庆祝国庆节的网站，天安门的一天，从早上到升旗仪式到晚上到烟花汇演，场景实时变化，哈哈哈，大家节日快乐
+网站地址：
+https://oe24dldw0u8k.meoo.pub/]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Claude Code] 国内 Visa 卡里的余额取不出来，干脆拿去开了个 Claude Pro，看看能撑多久）]]></title>
+        <id>https://www.v2ex.com/t/1246025#reply9</id>
+        <link href="https://www.v2ex.com/t/1246025#reply9"/>
+        <updated>2026-10-01T09:05:49.000Z</updated>
+        <summary type="html"><![CDATA[事情是这样的：我手上有张国内的 Visa 卡，之前往里充了点钱，后来发现怎么都取不出来。钱放着也是放着，就想着干脆拿来试试能不能订阅 Claude Pro 。
+一开始在电脑上调起 Google Pay 付款，试了好几次都不行，一直提示卡号被拒。不死心，又在手机上装了 Claude App ，同样走 Google Pay 。本来没抱什么希望，结果一下就支付成功了。
+开通之后，我直接在本地登录了 Claude Code ，用的是 Opus 5 High ，速度是真的快：]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[分享创造] ClipSeek 成功上架 Microsoft Store 啦 ｜ 送码]]></title>
+        <id>https://www.v2ex.com/t/1246024#reply67</id>
+        <link href="https://www.v2ex.com/t/1246024#reply67"/>
+        <updated>2026-10-01T09:03:25.000Z</updated>
+        <summary type="html"><![CDATA[今天把 ClipSeek 的 Windows 版本上架到 Microsoft Store 了，折腾了一阵，总算顺利过审了。
+ClipSeek 是一款注重隐私、完全本地运行的 AI 素材搜索工具，它支持通过自然语言或参考图片，找到视频和照片中的特定画面。
+它内置了 MCP Server ，可以让 Claude 、Codex 、Cursor 等 AI Agent 直接搜索、整理、预览并导出你素材库中的内容。
+视频介绍：YouTube
+微软商店地址：ClipSeek
+今天在下方回复的朋友，都会送出永久激活码，同时祝大家国庆快乐！！]]></summary>
+        <author>
+            <name>V2EX</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LibreOffice project and community recap: September 2026]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1wuugvs/libreoffice_project_and_community_recap_september/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1wuugvs/libreoffice_project_and_community_recap_september/"/>
+        <updated>2026-10-01T08:59:24.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/buovjaga  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Part of Cern to debian]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1wusyvz/part_of_cern_to_debian/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1wusyvz/part_of_cern_to_debian/"/>
+        <updated>2026-10-01T07:20:07.000Z</updated>
+        <summary type="html"><![CDATA[Maybe I missed such a discussion here but, Cern used to be a very large "customer" of rhel/rhel-derivatives, and even had created/curated scientific linux for a while. Now though that the rhel/rhel-derivatives need x86-64-v2 to run, a lot of older hardware are becoming obsolete. 
+ ENTER DEBIAN. 
+ Do you believe that now that such an organization is going to use debian, things will change and become more professional/industry standard?
+    submitted by    /u/le_particle  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[hothello: A different piece of animated, colourful ASCII art every time you log in with a quick system summary, news headlines and an oh-my-posh-style header, all fitted to the size of your screen.]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1wuo88e/hothello_a_different_piece_of_animated_colourful/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1wuo88e/hothello_a_different_piece_of_animated_colourful/"/>
+        <updated>2026-10-01T02:48:24.000Z</updated>
+        <summary type="html"><![CDATA[https://github.com/vantfindthe/hothello
+ has a ui to control every piece.
+ it wont change your terminal, only the motd. utillzes oh-my-posh for themes, an open source ascii collection for a new picture every login, animations, rss reader, and you can pick and choose every single displayed item.
+ opensourceofcourse
+    submitted by    /u/imhousing  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[European Citizens' Initiative]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1wunkzi/european_citizens_initiative/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1wunkzi/european_citizens_initiative/"/>
+        <updated>2026-10-01T02:15:30.000Z</updated>
+        <summary type="html"><![CDATA[hello i apologize if this seem like out of nowhere in advance, but i think you may want to know this
+ there is a leaked legislation about the EU trying to pass the "EU kids act" which according to the [stop killing games video] the [document] mentioned which also appears on the description mentions "operating systems" several times which it could include Linux distributions and i think that might be a problem if true because the regulation seem quite extreme.
+ so im sharing it here because there is this petition for people on the EU which is about making it respect privacy among other things
+ the deadline is 25-Aug-2027 so there is still time 
+ again i apologize and i don't want to cause problems i thought you would like to know this 
+    submitted by    /u/Kindly-List-1886  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[分享创造] 香蕉 Pro / 香蕉 2 / GPT Image 2.5 API，官方渠道约 0.15 元/张]]></title>
         <id>https://www.v2ex.com/t/1245959#reply0</id>
@@ -37489,128 +38910,6 @@ Chrome 商店地址： https://chromewebstore.google.com/detail/flow-automator-a
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[[开源软件] [开源] realm-xwPF & 端口流量狗脚本｜爆肝清空全部 issue 更新]]></title>
-        <id>https://www.v2ex.com/t/1239031#reply0</id>
-        <link href="https://www.v2ex.com/t/1239031#reply0"/>
-        <updated>2026-09-02T13:29:10.000Z</updated>
-        <summary type="html"><![CDATA[碎碎念
-最近有点空，想着一口气把 issue 全清了。不知不觉过了 412 天，慢慢收获 1.2k star 。有兴趣的可以去仓库翻翻，README 介绍详细，场景原理都画了图。有问题欢迎提 issue 。
-🧭仓库地址： https://github.com/zywe03/realm-xwPF
-更新速览 20260902
-网络转发脚本 xwPF.sh
-转发协议能选纯 TCP / 纯 UDP / 双栈，状态栏标 [纯 TCP] [纯 UDP]
-systemd 和 OpenRC 双端都加了服务异常自动重启，带熔断，不会崩了之后疯狂刷屏
-端口流量狗 port-traffic-dog.sh
-新增整机流量监控，开机默认就开着，靠 /proc/net/dev 自安装起累计，重启或网卡重建自动校准
-端口 / 端口组能设截止日期，到期自动阻断，延期或填 0 取消就自动恢复
-多端口、端口段能组一起共享同一套统计 / 配额 / 限速
-通知支持每分钟 / 小时 / 天推送，Webhook （企业微信 / 飞书 / 钉钉）和 Telegram 可填 API Host 中转 api.telegram.org
-脚本介绍
-网络转发脚本：xwPF.sh
-同步 realm 最新版全部功能，终端 TUI 数字界面，点点点轻松管理网络转发。
-多发行版：Debian/Ubuntu 、Alpine 、CentOS/RHEL 都认，自动识别包管理器和 init 系统（ systemd / OpenRC ）
-服务自愈：双端服务异常自动重启，内置熔断防刷屏
-转发协议选择：每条规则可选纯 TCP / 纯 UDP / 双栈（ both 默认）；纯 UDP 自动降级 standard 并跳过 ws/tls ；状态标签显示 [纯 TCP] [纯 UDP]，both 不显
-搭建隧道：双端 realm 架构支持 TLS 、ws 、…]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[分享创造] Timers.my — 重要日子计时器。第 N 个全 Agent 实验，彼此拓宽边界。]]></title>
-        <id>https://www.v2ex.com/t/1239030#reply0</id>
-        <link href="https://www.v2ex.com/t/1239030#reply0"/>
-        <updated>2026-09-02T13:27:00.000Z</updated>
-        <summary type="html"><![CDATA[https://timers.my
-一边记录，一边和网友 PK
-不登录也能用 — 数据完全保存在本地，支持导入导出，隐私无忧
-注册登录更方便 — 云端同步，随时随地查看
-这个网站从域名注册到网站上线用了 9 个小时（今天 12:22 至 21:26 ）
-有很多同类产品是毋庸置疑的，只是一个免费的计时器网站，千万不要上来就给一堆建议，我相信你是好意，但我无意让它更好，不求大而全，只求小而美，满足极度垂直的需求，仅此而已。
-不过我确实还在琢磨好玩儿的功能，不是让它的功能多好，而是让它变的有趣，就像这个很多人可能觉得无聊的排行榜一样。哈哈😁
-
-
-
-https://timers.my]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[程序员] 云服务器特惠]]></title>
-        <id>https://www.v2ex.com/t/1239029#reply2</id>
-        <link href="https://www.v2ex.com/t/1239029#reply2"/>
-        <updated>2026-09-02T13:26:16.000Z</updated>
-        <summary type="html"><![CDATA[2C4G5M 带宽       三年 2844
-4C8G5M 带宽       三年 3430
-4C16G5M 带宽     三年 3902
-8C16G5M 带宽     三年 4601
-8C32G5M 带宽     三年 5545
-16C32G5M 带宽   三年 6943
-16C64G5M 带宽   三年 8831
-下单链接： https://account.huaweicloud.com/obmgr/invitation/invitation.html?id=c1c84107-e8b0-458f-aeba-f871bffe9a48
-可 V  jialan91588]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Mac mini] 苹果定价学]]></title>
-        <id>https://www.v2ex.com/t/1239028#reply1</id>
-        <link href="https://www.v2ex.com/t/1239028#reply1"/>
-        <updated>2026-09-02T13:23:06.000Z</updated>
-        <summary type="html"><![CDATA[6999 元只给 16GB 内存，用不了几年就得换；  
-想真正用得爽，起码 24GB 起步：8499 元。  
-256GB 硬盘更是捉襟见肘：9999 元。  
-再加 3000 就能把芯片、Thunderbolt 5 、Wi‑Fi 、蓝牙一起升级，这 3000 花得太值了：12999 元。  
-苹果的刀法，还是一如既往地精准。]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[程序员] 分享的免费截图工具更新：支持 Windows 和录屏了]]></title>
-        <id>https://www.v2ex.com/t/1239027#reply8</id>
-        <link href="https://www.v2ex.com/t/1239027#reply8"/>
-        <updated>2026-09-02T13:18:32.000Z</updated>
-        <summary type="html"><![CDATA[上次分享的截图工具 Clipture 后，按照大家的反馈陆续加了 Windows 版、MP4/GIF 录屏、贴图、截图二次编辑和录制历史预览。
-Mac 和 Windows 两个商店也都上架了，还是永久免费、没有广告和水印，所有内容只在本机处理。
-有兴趣可以试试： https://clipture.talkape.net
-> 上次的帖子： https://www.v2ex.com/t/1230821 （之前的帖子貌似不能 append 了）
-功能列表：
-- 窗口、区域、全屏、多窗口截图
-- 自动滚动长截图
-- MP4 / GIF 区域录制
-- 录制暂停、继续及画质配置
-- 矩形、圆形、箭头、文字、画笔、马赛克、序号标注
-- OCR 本地文字识别
-- 截图贴图置顶
-- 截图历史与二次编辑
-- 剪贴板历史、搜索与预览
-- GIF 动态预览、MP4 直接播放
-- 自定义全局快捷键
-- Codex / AI Agent 截图标注 Skill
-最后一点比较重要，我发现后面的软件不能只服务于人了，更应该提供给 AI 去自主调用的能力，全方面解放人的双手，提升效率。
-所以 Clipture 提供了完整的 Skill ，你可以让他给你写软件的说明书，绘制流程图，并且在关键位置给你标注，调用这个软件。
-比如 [![1788355052334.png]( https://picui.ogmua.cn/s1/2026/09/02/6a9821f831708.webp)]( https://picui.ogmua.cn/s1/2026/09/02/6a9821f831708.webp)]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Aging brains blend memories together instead of just forgetting them]]></title>
-        <id>https://news.ycombinator.com/item?id=49535548</id>
-        <link href="https://studyfinds.com/aging-brains-blend-memories-together-instead-of-forgetting-them-study-finds/"/>
-        <updated>2026-09-02T12:59:09.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://studyfinds.com/aging-brains-blend-memories-together-instead-of-forgetting-them-study-finds/
-Comments URL: https://news.ycombinator.com/item?id=49535548
-Points: 190
-# Comments: 86]]></summary>
-        <author>
-            <name>mdp2021</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[PlayLink phone apps on a current Android + PS5 (That's You, SingStar, Hidden Agenda, etc.)]]></title>
         <id>https://www.reddit.com/r/Android/comments/1w59mi7/playlink_phone_apps_on_a_current_android_ps5/</id>
         <link href="https://www.reddit.com/r/Android/comments/1w59mi7/playlink_phone_apps_on_a_current_android_ps5/"/>
@@ -37649,202 +38948,6 @@ https://github.com/SulidSanke/PlayLink_Patch
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[[问与答] 搭在 github 上的网站突然不能访问了]]></title>
-        <id>https://www.v2ex.com/t/1239025#reply6</id>
-        <link href="https://www.v2ex.com/t/1239025#reply6"/>
-        <updated>2026-09-02T12:47:10.000Z</updated>
-        <summary type="html"><![CDATA[就是这个 xxxxx.github.io 的静态网站
-之前我是能在国内访问的，但是今天看突然不行了
-有什么好的解决办法吗？
-网站内容就是自己的个人简介]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[生活] 这个逼下一篇不会是和初恋又续上了吧？]]></title>
-        <id>https://www.v2ex.com/t/1239023#reply2</id>
-        <link href="https://www.v2ex.com/t/1239023#reply2"/>
-        <updated>2026-09-02T12:29:08.000Z</updated>
-        <summary type="html"><![CDATA[https://www.v2ex.com/t/1238815
-😂🤣]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[问与答] 之前站内有人卖的激活的 skinny 电话卡，现在发现号码被封了。有没有什么解决办法]]></title>
-        <id>https://www.v2ex.com/t/1239022#reply5</id>
-        <link href="https://www.v2ex.com/t/1239022#reply5"/>
-        <updated>2026-09-02T12:25:31.000Z</updated>
-        <summary type="html"><![CDATA[RT 
-我的好多平台都是这个手机号，各大 U 卡平台等]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[分享发现] 是否所有同时带有实体卡槽与 eSIM 的手机都只能将 eSIM 置于 SIM2 的地位？]]></title>
-        <id>https://www.v2ex.com/t/1239021#reply8</id>
-        <link href="https://www.v2ex.com/t/1239021#reply8"/>
-        <updated>2026-09-02T12:20:11.000Z</updated>
-        <summary type="html"><![CDATA[是否所有同时带有实体卡槽与 eSIM 的手机都只能将 eSIM 置于 SIM2 的地位，而无法将 eSIM 置于 SIM1 的地位？]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[macOS] 有人知道这图片里的软件名字吗？]]></title>
-        <id>https://www.v2ex.com/t/1239019#reply2</id>
-        <link href="https://www.v2ex.com/t/1239019#reply2"/>
-        <updated>2026-09-02T11:48:25.000Z</updated>
-        <summary type="html"><![CDATA[有人知道图片里从左到右，第一个，第四个，和最后一个的软件名字吗？
-
-各位大神]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[macOS] 给 MAC 的备忘录做了个显示字数的状态栏小软件]]></title>
-        <id>https://www.v2ex.com/t/1239018#reply0</id>
-        <link href="https://www.v2ex.com/t/1239018#reply0"/>
-        <updated>2026-09-02T11:43:21.000Z</updated>
-        <summary type="html"><![CDATA[经常在 MAC 上使用备忘录写稿。一直苦于没有字数显示，在某些讲究字数的时候很难受，于是自己用 CodeX 做了个。
-https://github.com/gs666/WordCountNotebook
-一个只驻留在 macOS 菜单栏的小工具。当 Apple“备忘录”位于前台时，它会读取当前笔记，并在菜单栏显示字数；使用鼠标或键盘选中文字时，会改为显示选中区域的字数，取消选择后自动恢复全文字数。切换到其他应用后会立即停止计时器和内容读取，只监听系统的前台应用切换通知。
-构建
-./scripts/build-app.sh
-构建产物位于 dist/备忘录字数.app ，可发送给其他 M 芯片 Mac 用户的压缩包位于 dist/备忘录字数-v1.2.0-macOS-arm64.zip 。应用最低支持 macOS 11.0 。
-接收方解压后，将应用拖入“应用程序”。首次运行若被系统拦截，先尝试打开一次，再前往“系统设置 → 隐私与安全性”选择“仍要打开”。启动后按提示在“辅助功能”中授权。
-计数规则
-每个中日韩表意文字计为一个字；
-连续的英文、数字及其内部的撇号或连字符计为一个词；
-标点和空白不计入字数；
-字符数不包含空白。
-应用只通过 macOS 辅助功能接口在本机读取当前窗口，不联网，也不会修改笔记。]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[问与答] 为啥游戏有重制版，硬件就没有呢，要是诺基亚，黑莓的经典机型，能复刻该多好啊]]></title>
-        <id>https://www.v2ex.com/t/1239017#reply3</id>
-        <link href="https://www.v2ex.com/t/1239017#reply3"/>
-        <updated>2026-09-02T11:39:30.000Z</updated>
-        <summary type="html"><![CDATA[如题，而且现在有 ai ，还能把塞班贝拉和黑莓 10 系统改一下支持 flutter 和 react native ，这样软件开发门槛也降低了]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[分享创造] 做了一个拼图加水印的小程序，欢迎体验。]]></title>
-        <id>https://www.v2ex.com/t/1239016#reply0</id>
-        <link href="https://www.v2ex.com/t/1239016#reply0"/>
-        <updated>2026-09-02T11:29:12.000Z</updated>
-        <summary type="html"><![CDATA[可以自由拼长图，分割图片，自定义拼接数量，形状等。
-同时支持图片添加水印，支持超多水印参数。
-微信 搜索 拼图加水印工具]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[分享发现] 这次真要好好表扬下某东啊]]></title>
-        <id>https://www.v2ex.com/t/1239015#reply7</id>
-        <link href="https://www.v2ex.com/t/1239015#reply7"/>
-        <updated>2026-09-02T11:12:36.000Z</updated>
-        <summary type="html"><![CDATA[2020 年自营买了个西门子洗衣机,上个月搬完家,洗衣机脱水异常
-想着找西门子官方能售后能靠谱点 
-直接找西门子维修了, 380 块 换了 3 跟减震,给京东打电话说明情况,还给我补贴了 120 现金
-但洗衣机没出一周,再次出现相同故障,这次换了个西门子的人来,看来看去,解决不了.就走了
-当天联系西门子客服,京东客服,发故障视频后,第二天我就把洗衣机 100 块出掉了,在拖下去劳神伤财.直接买台新的
-第二天也收到京东回复,说帮我要回 380 维修费,退不了就从西门子货款里面扣.其实我没抱太大希望
-西门子今天早上才给我回消息,费用无法退还,给我送点小礼品,叫我考虑下???
-后面京东也没联系我,就刚刚直接收到京东消息推送 380 元到账了
-这事如果不是京东帮忙,怕真是难得搞.
-说回来相比其它平台,JD 贵是贵了点,但好几次出了问题,完全不需要操心,几乎都能顺利解决
-这次一台过保 5 年的机子,他们能这样跟进处理,是真不错啊.]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[生活] 回忆录]]></title>
-        <id>https://www.v2ex.com/t/1239014#reply1</id>
-        <link href="https://www.v2ex.com/t/1239014#reply1"/>
-        <updated>2026-09-02T11:11:54.000Z</updated>
-        <summary type="html"><![CDATA[我以为关于初恋的事情，已经忘得差不多了。
-毕竟已经过去十多年了。
-这十多年里，我工作、结婚、生孩子，以前那些觉得很重要的人和事，也慢慢被挤到了记忆的角落。
-但最近在 V 站看了不少情感类的文字，看到别人写自己的初恋、学生时代和那些没有结果的感情时，我才发现，有些事情其实并没有真正忘掉。
-只是平时想不起来而已。
-我和她是在初二的时候认识的。
-那一年，我们被分到了一个班。她是班上的学习委员，而我无官无职，成绩也只能算正常。
-后来有一次重新排座位，她被安排到了我的前面。
-我已经记不清最开始是怎么和她熟悉起来的，也忘了是谁先递出的第一张纸条。只记得不知道从什么时候开始，我们开始传纸条。
-上课的时候不能说话，很多事情又不能直接讲，所以一张小小的纸条，反而成了我们交流的方式。
-纸条传着传着，慢慢就变成了传笔记本。
-那不是一本专门用来写情书的本子，更像是一本两个人共同使用的日记。
-我写一点自己的日常，她写一点她的日常。写完以后，再交给对方看，然后在旁边留下几句评论。
-现在想想，其实都是些很普通的事情。
-今天发生了什么，最近在想什么，学校里有什么小事，可能还有一些当时觉得很有意思、现在已经完全想不起来的事情。
-但那时候，我们可以因为这些事情聊很久。
-我们之间最近的距离，其实也就是前后桌。
-没有约会，没有牵手，也没有互送过什么礼物。
-现在回头看，那时候的关系，大概就是友人之上，恋人未满。
-初三的时候，我们重新分班。
-这一次，我们没有分在一个班。
-我们没有大胆到可以互送情书，但我们都接触过一些互联网，因此我们变成了使用电子邮件来联系。
-她可以在家里的电脑上写邮件，而我如果想回复，通常要去网吧（成年后再没去过），或者借同学的手机。
-而且我是住宿生，她是走读生，所以我们也不可能天天联系。
-邮件最多一周一次。
-有时候可能隔得更久。
-但那时候，一周一次的邮件已经足够让我们知道对方最近过得怎么样。
-我现…]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[程序员] [开源] Subpool：面向团队的轻量化 Coding 订阅管理]]></title>
-        <id>https://www.v2ex.com/t/1239013#reply10</id>
-        <link href="https://www.v2ex.com/t/1239013#reply10"/>
-        <updated>2026-09-02T11:04:05.000Z</updated>
-        <summary type="html"><![CDATA[项目地址
-https://github.com/gesta-run/subpool
-, 兄弟们，求 Star, tar, ar, r...
-背景
-最近在做团队内部的 AI 订阅管理，遇到几个比较实际的问题：
-团队有多份 Codex 或 API 账号，缺少统一管理入口
-不清楚成员的被分配到了哪个账号
-账号额度、健康状态和使用情况比较分散
-部分成员用量较高时，需要人工切换账号
-因此做了 Subpool 。
-
-Subpool 是一个面向团队的轻量化 AI 订阅管理工具。管理员可以接入团队有权使用的 Codex 或 OpenAI-compatible 账号，组成 Pool ，再给成员分配独立 API Key 。
-目前支持：
-Codex Device Code 授权
-多订阅账号统一接入
-Pool 化管理和请求路由
-团队成员独立 API Key
-Key 与上游账号分配关系
-账号健康、额度和冷却状态
-Token 用量统计
-Responses 、Chat Completions 和 Models API
-Codex 与 API 账号混合池
-Docker Compose 自托管
-Subpool 不保存 Prompt 、回复或源代码，只记录账号分配、路由状态和 Token 用量。
-技术上是一个 Go 服务，内嵌 React 控制台，使用 PostgreSQL ，部署比较简单。
-市面上已经有 sub2api 。Subpool 不打算做功能上的重复竞争，定位更偏团队内部管理：不做支付、套餐和 Key 售卖，重点解决订阅接入、成员分配、容量治理和使用审计。
-简单来说：
-Subpool 想做的是团队 AI 订阅的管理层，而不是另一个卖 Key 平台。
-欢迎体验，也想听听大家的意见：团队订阅管理场景里，还缺哪些关键能力？]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Oukitel unveils a gaming phone with dual fan cooling, a phone with a built-in lighter and more]]></title>
         <id>https://www.reddit.com/r/Android/comments/1w574a0/oukitel_unveils_a_gaming_phone_with_dual_fan/</id>
         <link href="https://www.reddit.com/r/Android/comments/1w574a0/oukitel_unveils_a_gaming_phone_with_dual_fan/"/>
@@ -37853,52 +38956,6 @@ Subpool 想做的是团队 AI 订阅的管理层，而不是另一个卖 Key 平
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : Android</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[酷工作] 创作者 BD/市场推广(成人订阅网站这块的增长运营
-岗位名称： Creator BD / Creator Recruiter / Talent Acquisition (Adult Creator Economy)]]></title>
-        <id>https://www.v2ex.com/t/1239012#reply0</id>
-        <link href="https://www.v2ex.com/t/1239012#reply0"/>
-        <updated>2026-09-02T10:37:35.000Z</updated>
-        <summary type="html"><![CDATA[创作者 BD
-职位描述：
-成人订阅网站这块的增长运营
-我们正在打造一款基于区块链支付的创作者激励平台（类似 OnlyFans 模式，支持订阅、打赏、付费内容，纯加密货币结算）。现正积极招募有经验的创作者 BD ，负责平台早期核心创作者的招募与维护，帮助平台快速冷启动并建立优质内容供给。工作职责：
-请携带简历咨询，谢谢；
-TG：@dajidali2026
-E: ppllmm6868@gmail.com]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[推广] 🏩 Hotel Tales 色情游戏可购买了！这是一款带有视觉小说和角色扮演元素的冒险模拟游戏]]></title>
-        <id>https://www.v2ex.com/t/1239011#reply0</id>
-        <link href="https://www.v2ex.com/t/1239011#reply0"/>
-        <updated>2026-09-02T10:33:43.000Z</updated>
-        <summary type="html"><![CDATA[Hotel Tales 不仅仅是一款酒店模拟游戏，更是一场充满阴谋、诱惑和命运意外转折的沉浸式体验。你将扮演一名酒店经理，但要做好准备：在热情好客的表象之下，隐藏着不为人知的秘密，你的每一个决定不仅会影响酒店的盈利，还会左右住客们的命运。
-游戏最重要的特点是鲜明的成年人内容。这里的 18+ 场景真的不错，比很多其他游戏的赤裸裸。
-安排你的日程，选择班次，与形形色色的独特角色建立关系。从战争女神到神秘莫测的女酒保。但请记住，每个人都有自己的弱点和动机。收集关键台词，偷听对话，分析行为，从而揭开他们的秘密，并加以利用为己所用。做好准备迎接夜晚的事件、诡异的仪式和突如其来的发现。介入还是旁观？由你决定。
-你需要与主要角色阵容及神秘访客展开的多分支恋爱剧情。从甜蜜约会到支配与禁忌之欢，你的每一个选择都会影响关系的发展走向。但请务必谨慎，不当的行为可能导致分手、背叛，甚至触发只有在 “违反规则” 的游戏路线下才能解锁的独特黑暗场景。
-Hotel Tales 并非线性剧情，而是一个复杂多面的世界，高度自由的扮演方式让你可以选择成为体贴入微的管理者、强势的诱惑者，或是冷眼旁观的看客。得益于丰富多样的选择、关系发展和结局分支，游戏拥有极高的可重复游玩价值。此外，游戏还包含多个配有语音和流畅动画效果的动态场景，为你的游戏体验增添别样风味。
-游戏由 TopHouse Studio 开发，登陆 PC 平台。如果你已经准备好迎接黑色幽默、情色内容与道德灰色地带的挑战，Hotel Tales 正在等着你。
-在 ChinaPlay 上游戏只要 ¥37.14
-输入 V2PromoCP 优惠码并享受折扣。
-游戏页面： https://cnplay.io/ht18]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[分享创造] Vanilla OS 3 Reunion：不可变、可重现的桌面操作系统]]></title>
-        <id>https://www.v2ex.com/t/1239010#reply0</id>
-        <link href="https://www.v2ex.com/t/1239010#reply0"/>
-        <updated>2026-09-02T10:32:31.000Z</updated>
-        <summary type="html"><![CDATA[一款基于 Debian 的不可变 (immutable)、可重现 (reproducible) 的 Linux 操作系统发行版，新版本做了差不多一年时间，我们希望借此实现一个零信任、不依赖科技巨头、人人皆可开箱即用的桌面 Linux 系统。
-https://www.bilibili.com/opus/1240083970401501191]]></summary>
-        <author>
-            <name>V2EX</name>
         </author>
     </entry>
     <entry>
@@ -37917,86 +38974,6 @@ https://www.bilibili.com/opus/1240083970401501191]]></summary>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[折叠屏 iPhone、新款 HomePod…… Apple 发布会有哪些看点？]]></title>
-        <id>https://sspai.com/post/114084</id>
-        <link href="https://sspai.com/post/114084"/>
-        <updated>2026-09-02T09:40:56.000Z</updated>
-        <summary type="html"><![CDATA[上周，Apple公布了今年秋季发布会的时间和主题，这场名为「Surpriseandshine」的发布会将于北京时间9月10日凌晨一点在ApplePark举行。与过去两年的秋季发布会不同，今年的「科技春 ...查看全文]]></summary>
-        <author>
-            <name>Vanilla</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[智神星一号火箭首飞成功 - September 2, 2026]]></title>
-        <id>idaily-257611</id>
-        <link href="https://m.idai.ly/se/cf2N3c"/>
-        <updated>2026-09-02T08:19:00.000Z</updated>
-        <summary type="html"><![CDATA[中国「智神星一号」遥一运载火箭在东风商业航天创新试验区点火升空，甘肃酒泉。9月1日，中国航天私企星河动力研发的「智神星一号」运载火箭进行首次飞行，火箭按程序顺利进入预定轨道，发射取得圆满成功。「智神星一号」是一款中大型可重复使用液体运载火箭，全长52米，直径3.35米，近地轨道运载能力达7吨，火箭一子级配备7台可重复使用液氧/煤油发动机，设计重复使用次数为25次。摄影师：iDaily Media]]></summary>
-        <author>
-            <name>中国 · 内蒙古自治区</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[习近平访问埃及 - September 2, 2026]]></title>
-        <id>idaily-257610</id>
-        <link href="https://m.idai.ly/se/c4099O"/>
-        <updated>2026-09-02T07:58:00.000Z</updated>
-        <summary type="html"><![CDATA[埃及总统 Abdel Fattah al-Sisi 亲赴机场迎接中国国家主席习近平，开罗。9月1日，中国国家主席习近平应邀对埃及进行为期3天国事访问。这是习近平时隔10年再次访问埃及，主要行程包括会晤埃及总统、参观大埃及博物馆、访问苏伊士运河地区等。埃及是第一个与中国建交的阿拉伯和非洲国家，2026年为两国建交70周年。中国是埃及第一大贸易伙伴，2026年1至7月中埃双边贸易额达137.5亿美元，同比增长23.2%。摄影师：Khaled Desouki]]></summary>
-        <author>
-            <name>埃及 · 开罗</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[一日一技 | 借助 PowerShell 自定义 Windows 更新暂停时间]]></title>
-        <id>https://sspai.com/post/80562</id>
-        <link href="https://sspai.com/post/80562"/>
-        <updated>2026-09-02T07:22:27.000Z</updated>
-        <summary type="html"><![CDATA[Windows 下的累计更新会修复大量的安全漏洞，虽然可以暂停更新但是最长只能暂停 35 天，35 天后 Windows 电脑就要强行帮你更新了，而本文介绍了一种突破暂停最大时间的方法。查看全文]]></summary>
-        <author>
-            <name>Levinson</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2026年上合组织峰会闭幕 - September 2, 2026]]></title>
-        <id>idaily-257608</id>
-        <link href="https://m.idai.ly/se/10bezr"/>
-        <updated>2026-09-02T06:57:00.000Z</updated>
-        <summary type="html"><![CDATA[中国、俄罗斯、印度、伊朗等10国领导人出席2026年上海合作组织峰会，吉尔吉斯斯坦比什凯克。9月1日，上合组织成员国元首理事会第26次会议在比什凯克举行，各方会后发表《上海合作组织二十五周年比什凯克宣言》，批准修改和补充《上海合作组织宪章》议定书、应对安全威胁与挑战综合中心条例，通过加强安全、经济、人文合作和组织建设等28份成果文件。上海合作组织目前共有10个正式成员国，人口约占全球总人口的43%，经济总量约占全球的23%。巴基斯坦将担任2026至2027年度上海合作组织轮值主席国。摄影师：Petr Kovalev]]></summary>
-        <author>
-            <name>吉尔吉斯斯坦 · 比什凯克</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[挪威新国王宣誓登基 - September 2, 2026]]></title>
-        <id>idaily-257606</id>
-        <link href="https://m.idai.ly/se/0dbcRb"/>
-        <updated>2026-09-02T06:55:00.000Z</updated>
-        <summary type="html"><![CDATA[挪威新国王哈康八世（Haakon VIII）在议会宣誓登基，奥斯陆。9月1日，现年53岁的哈康八世正式宣誓成为第4任挪威国王，他在宣誓仪式上承诺将效忠宪法，竭尽全力为国家和人民服务，并延续王室与议会的良好关系。挪威实行议会君主立宪制，国王承担象征性和礼仪性职责，不具备实质行政权力。最新民调显示72%的挪威人支持君主制，较5月调查上升8个百分点；挪威民众对哈康八世的评分为8.8分，在王室成员中排名第二，仅次于其母亲索尼娅王后。摄影师：Lise Aserud]]></summary>
-        <author>
-            <name>挪威 · 奥斯陆</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[马斯克连线G20创新会议 - September 2, 2026]]></title>
-        <id>idaily-257604</id>
-        <link href="https://m.idai.ly/se/578P75"/>
-        <updated>2026-09-02T06:53:00.000Z</updated>
-        <summary type="html"><![CDATA[SpaceX 创始人 Elon Musk 通过视频连线出席二十国集团（G20）创新部长级会议，北卡罗莱纳州。9月1日，G20 创新部长级会议在美国北卡罗来纳州举行，本次会议主要聚焦人工智能、能源基础设施、经济增长等议题。Elon Musk 在视频连线中预测AI技术将推动全球经济规模增长20%至30%，但是新建AI算力面临严峻的电力供应瓶颈，全球2027年AI数据中心电力缺口将达到15吉瓦。摄影师：Matt Ramey]]></summary>
-        <author>
-            <name>美国 · 北卡罗来纳州</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[加拿大结束圈养白鲸 - September 2, 2026]]></title>
-        <id>idaily-257603</id>
-        <link href="https://m.idai.ly/se/0867KZ"/>
-        <updated>2026-09-02T06:51:00.000Z</updated>
-        <summary type="html"><![CDATA[加拿大境内最后一只圈养白鲸即将被转运至美国水族馆，尼亚加拉瀑布城海洋世界。8月31日，加拿大渔业部宣布完成迄今最大规模的白鲸跨国转运行动，共将尼亚加拉瀑布城海洋世界的30只白鲸和4只海豚转移至美国和西班牙的水族馆，其中1只23岁白鲸在转运过程中因脱水死亡。加拿大于2019年立法禁止圈养鲸鱼与海豚，并禁止使用鲸豚进行表演或繁殖。国际鲸豚保育协会（WDC）统计，全球现有超过3700只生活在圈养环境中的鲸豚。摄影师：Carlos Osorio]]></summary>
-        <author>
-            <name>加拿大 · 安大略省</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Android still doesn't have a simple "hide my email" option at sign-up. Saw this on my mom's iPad and it made sense]]></title>
         <id>https://www.reddit.com/r/Android/comments/1w4zuyh/android_still_doesnt_have_a_simple_hide_my_email/</id>
         <link href="https://www.reddit.com/r/Android/comments/1w4zuyh/android_still_doesnt_have_a_simple_hide_my_email/"/>
@@ -38010,16 +38987,6 @@ https://www.bilibili.com/opus/1240083970401501191]]></summary>
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : Android</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[众测招募 | 玩转音乐生态，体验 Sonos Play 便携智能音响]]></title>
-        <id>https://sspai.com/post/113581</id>
-        <link href="https://sspai.com/post/113581"/>
-        <updated>2026-09-02T03:00:00.000Z</updated>
-        <summary type="html"><![CDATA[近年来，智能音响正在从「放在客厅的固定设备」变为「跟随你移动的声音系统」。用户不再满足于单一房间的聆听，而是希望音乐能随着自己的脚步，从客厅到厨房、从书房到户外，无缝流转、不断联。这正是Sonos一直 ...查看全文]]></summary>
-        <author>
-            <name>听歌的水獭</name>
         </author>
     </entry>
     <entry>
@@ -38056,16 +39023,6 @@ https://www.bilibili.com/opus/1240083970401501191]]></summary>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[派早报：英伟达正式发布 DLSS 5、戴森发布智能电动牙刷 CameraJet 等]]></title>
-        <id>https://sspai.com/post/114093</id>
-        <link href="https://sspai.com/post/114093"/>
-        <updated>2026-09-01T23:58:40.000Z</updated>
-        <summary type="html"><![CDATA[索尼发布三款 ULT Tower 派对音箱，Starman Optical 收购 GoPro 等。查看全文]]></summary>
-        <author>
-            <name>少数派编辑部</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Samsung is randomly deactivating some accounts for 'security reasons']]></title>
         <id>https://www.reddit.com/r/Android/comments/1w4sf7i/samsung_is_randomly_deactivating_some_accounts/</id>
         <link href="https://www.reddit.com/r/Android/comments/1w4sf7i/samsung_is_randomly_deactivating_some_accounts/"/>
@@ -38074,142 +39031,6 @@ https://www.bilibili.com/opus/1240083970401501191]]></summary>
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : Android</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[My local model setup on an M4 Pro Mac Mini]]></title>
-        <id>https://news.ycombinator.com/item?id=49529132</id>
-        <link href="https://lws.io/blog/my-local-model-setup/"/>
-        <updated>2026-09-01T22:30:52.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://lws.io/blog/my-local-model-setup/
-Comments URL: https://news.ycombinator.com/item?id=49529132
-Points: 15
-# Comments: 0]]></summary>
-        <author>
-            <name>raybb</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[酷工作] 旧金山湾区职位： Agent Product Engineer, Full-stack]]></title>
-        <id>https://www.v2ex.com/t/1238803#reply0</id>
-        <link href="https://www.v2ex.com/t/1238803#reply0"/>
-        <updated>2026-09-01T22:28:51.000Z</updated>
-        <summary type="html"><![CDATA[旧金山湾区职位：Agent Product Engineer, Full-stack
-  说实话要求不低薪资也不低，重要性也很高
-  微信：fancyfrees
-定位； 创始团队早期产品工程师（不看年限，看产出）
-技术栈： 全栈（前端 + 后端）
-领域背景：AI 工具 /agent 工作流 / 复杂 SaaS
-职责边界： 端到端 owning 一个 agent 产品，而非只写 feature
-汇报对象： 直接与创始人和 PM 一起做决策
-#全栈 #招聘 #产品
-Must have
-强全栈工程师：前端、后端都能独立写出 production 级代码
-有实战作品：做过 AI 工具、agent 工作流或复杂 SaaS 产品（创始 / 早期工程师背景优先）
-懂 agent 架构：以 memory 、tools 、scheduling 、execution 、evaluation 的视角思考，而不是做一次性 feature
-深度使用 AI 工具但不盲从：会自己验证和判断 AI 的输出
-能在模糊中决策：习惯不确定性，会做可逆的决策，并能把 tradeoff 讲清楚
-想要真正的产品 ownership：愿意和 PM / 创始人一起推动方向，而不是等一份写好的 spec
-拿得出手的作品：你建过什么、建得多快、扛不扛得住 —— 用结果说话
-Strongly preferred
-对 AI-assisted vs. AI-first 有真实、成型的观点：一旦彻底转向 AI-first ，开发方式（写码、调试、测试、文档、调研）到底会怎么变
-有从 0 到 1 的创业经验
-我们不按工作年限定级别。衡量标准只有三个：你能建出什么、效率多高、迭代多快。
-What you'll do
-端到端、全栈地构建 agent 产品：创建、执行、记忆、工具调用、调度、人工审核
-交付让 agent 工作流真正跑在生产环境的后端服务和 API
-设计 "agent 自主决策 vs. 需要人工审批" 的边界，并让用户在界面上清楚感知
-在 AI-first 模型下重新定义 "开发本身" 如何完成 —— 写码、调试、测试、文档、研究 —— 而不是在旧流程上堆 AI 工具
-与创始人和其他工程师直接决定 "做什么、为什么做"
-把用户反馈和数据快速变成迭代，持续拉高可靠性、易用性和速度的上限
-Why this role matters
-还没有人真正解决 "AI agent 该如何被构建、被信任、被改进"。你在这里做的每一个决策，都会成为后续所有 agent 产品被衡量的基准。这个角色不适合想要 "边界清晰、范围干净" 问题的人 —— 它属于想离问题本身更近的工程师。]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[So Even Though Linux Has Gotten Better My Buddy Says it Still isn’t User Friendly And Doesn’t Have Appeal]]></title>
-        <id>https://www.reddit.com/r/linux/comments/1w4rvb3/so_even_though_linux_has_gotten_better_my_buddy/</id>
-        <link href="https://www.reddit.com/r/linux/comments/1w4rvb3/so_even_though_linux_has_gotten_better_my_buddy/"/>
-        <updated>2026-09-01T22:23:44.000Z</updated>
-        <summary type="html"><![CDATA[So how accurate is my buddy when he says Linux has no shot at growing (even though it’s more popular than it has ever been and was easier to set up than windows)? Like he hasn’t used goddamn Ubuntu since he was in high school so I don’t think he has a clue about what he’s talking about.
- What do you all think?
-    submitted by    /u/Romantic_Legion  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Show HN: Weedout – Safari extension that hides YouTube AI-labeled videos]]></title>
-        <id>https://news.ycombinator.com/item?id=49528895</id>
-        <link href="https://masteranza.github.io/weedout/"/>
-        <updated>2026-09-01T22:06:57.000Z</updated>
-        <summary type="html"><![CDATA[I'm the developer. I built this because AI-generated conspiracy videos were getting out of control in my own YouTube feed. Weedout is a $1.99 Safari extension for macOS that removes videos YouTube labels “Made with AI” from feed, search, related videos, playlists and Shorts. It uses YouTube's label rather than AI detection, runs locally, and does not catch unlabeled videos.
-Source for developers who want to fork or build: https://github.com/masteranza/weedout-for-youtube
-Pull requests are not accepted; the repository is for independent forks.
-Comments URL: https://news.ycombinator.com/item?id=49528895
-Points: 30
-# Comments: 9]]></summary>
-        <author>
-            <name>masteranza</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Can you turn a PSP into a cyber deck/similar?]]></title>
-        <id>https://www.reddit.com/r/linux/comments/1w4re4n/can_you_turn_a_psp_into_a_cyber_decksimilar/</id>
-        <link href="https://www.reddit.com/r/linux/comments/1w4re4n/can_you_turn_a_psp_into_a_cyber_decksimilar/"/>
-        <updated>2026-09-01T22:05:43.000Z</updated>
-        <summary type="html"><![CDATA[I have the PSP my dad got me since my thirteenth birthday and I’ve been getting into tech a lot recently. I was wondering if there was a way to use a PSP as a cyber deck/something similar or if it’s possible to connect other hardware and run Linux on it? I assume SteamOS would do wonders for PSP gaming!
-    submitted by    /u/priv_ish  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Fluorescent lamps (don't) have ears]]></title>
-        <id>https://news.ycombinator.com/item?id=49528366</id>
-        <link href="https://blog.coredump.cx/p/fluorescent-lamps-dont-have-ears"/>
-        <updated>2026-09-01T21:19:10.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://blog.coredump.cx/p/fluorescent-lamps-dont-have-ears
-Comments URL: https://news.ycombinator.com/item?id=49528366
-Points: 17
-# Comments: 3]]></summary>
-        <author>
-            <name>zdw</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Behold a Kobo Libre]]></title>
-        <id>https://www.reddit.com/r/linux/comments/1w4pxlh/behold_a_kobo_libre/</id>
-        <link href="https://www.reddit.com/r/linux/comments/1w4pxlh/behold_a_kobo_libre/"/>
-        <updated>2026-09-01T21:15:53.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/just_in_ian  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Show HN: HN Match Maker – Matching "Who Wants to Be Hired?" With "Who's Hiring?"]]></title>
-        <id>https://news.ycombinator.com/item?id=49528057</id>
-        <link href="https://hnmatchmaker.com/"/>
-        <updated>2026-09-01T20:53:35.000Z</updated>
-        <summary type="html"><![CDATA[Hi!
-Every month the "Who Wants to Be Hired?" and "Who's Hiring?" Threads come through I would think to myself, "there should be a match maker for these two threads".
-So I had abacus.ai whip one up. The methodology is pretty simple, data is extracted from posts using an LLM, score matches based on salary, domain experience, remote/onsite, etc., and then eliminate incompatible postings, like 'looking for remote work' and 'onsite only'. The result is two views: jobs-by-user and user-by-jobs.
-If you've submitted a post to this month's 'Who Wants to Be Hired?", you can find your matching job listings at https://hnmatchmaker.com/user/:user_name, for example https://hnmatchmaker.com/user/G4Vi
----
-Some observations when looking at the matches pair up right now:
-Poke around, let me know what you think!
-Ultimately, I hope this is actually helpful to some folks.
-Comments URL: https://news.ycombinator.com/item?id=49528057
-Points: 27
-# Comments: 12]]></summary>
-        <author>
-            <name>all2</name>
         </author>
     </entry>
     <entry>
@@ -38224,118 +39045,6 @@ Points: 27
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Hang on to Your Firefox]]></title>
-        <id>https://news.ycombinator.com/item?id=49527748</id>
-        <link href="https://www.newsonaut.com/articles/hang-on-to-your-firefox"/>
-        <updated>2026-09-01T20:30:51.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.newsonaut.com/articles/hang-on-to-your-firefox
-Comments URL: https://news.ycombinator.com/item?id=49527748
-Points: 203
-# Comments: 99]]></summary>
-        <author>
-            <name>speckx</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[问与答] 关于黄果短剧的一些想法]]></title>
-        <id>https://www.v2ex.com/t/1238802#reply2</id>
-        <link href="https://www.v2ex.com/t/1238802#reply2"/>
-        <updated>2026-09-01T20:27:43.000Z</updated>
-        <summary type="html"><![CDATA[目前外边各大黄色网站已经被 ai 成人短剧霸屏，我就在想，能不能搞一个定制化服务，毕竟年轻人谁没个男神女神的，通过这种方式给客户提供定制化的短剧需求，大家认为这种细分赛道如何？
-另外有意进入本行业或行业经验者欢迎多交流。]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Path to Astra: critical capabilities and frontier safeguards]]></title>
-        <id>https://news.ycombinator.com/item?id=49527595</id>
-        <link href="https://openai.com/index/path-to-astra/"/>
-        <updated>2026-09-01T20:20:41.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://openai.com/index/path-to-astra/
-Comments URL: https://news.ycombinator.com/item?id=49527595
-Points: 69
-# Comments: 24]]></summary>
-        <author>
-            <name>jithinraj</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Apple reveals 'shocking evidence' from ex-employee's MacBook in OpenAI suit]]></title>
-        <id>https://news.ycombinator.com/item?id=49527573</id>
-        <link href="https://9to5mac.com/2026/08/31/apple-openai-forensic-macbook-evidence/"/>
-        <updated>2026-09-01T20:19:11.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://9to5mac.com/2026/08/31/apple-openai-forensic-macbook-evidence/
-Comments URL: https://news.ycombinator.com/item?id=49527573
-Points: 155
-# Comments: 108]]></summary>
-        <author>
-            <name>colinprince</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The ChatGPT/Codex app bundles a full copy of LibreOffice]]></title>
-        <id>https://news.ycombinator.com/item?id=49527396</id>
-        <link href="https://simonwillison.net/2026/Sep/1/codex-libreoffice/"/>
-        <updated>2026-09-01T20:07:57.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://simonwillison.net/2026/Sep/1/codex-libreoffice/
-Comments URL: https://news.ycombinator.com/item?id=49527396
-Points: 201
-# Comments: 104]]></summary>
-        <author>
-            <name>timpera</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Refurbishing a Tektronix TDS7104 Oscilloscope]]></title>
-        <id>https://news.ycombinator.com/item?id=49527232</id>
-        <link href="https://tomverbeure.github.io/2026/08/23/Tektronix-TDS7104-Refurbishing.html"/>
-        <updated>2026-09-01T19:55:47.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://tomverbeure.github.io/2026/08/23/Tektronix-TDS7104-Refurbishing.html
-Comments URL: https://news.ycombinator.com/item?id=49527232
-Points: 69
-# Comments: 33]]></summary>
-        <author>
-            <name>jwise0</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How accurate have Ed Zitron's AI skeptic predictions been?]]></title>
-        <id>https://news.ycombinator.com/item?id=49526069</id>
-        <link href="https://danluu.com/zitron/"/>
-        <updated>2026-09-01T18:35:15.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://danluu.com/zitron/
-Comments URL: https://news.ycombinator.com/item?id=49526069
-Points: 323
-# Comments: 382]]></summary>
-        <author>
-            <name>jatins</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[推广] 整理了免费的大模型 API 的靠谱渠道,包括 DeepSeek V4， GLM 5.x 等 30+ 模型]]></title>
-        <id>https://www.v2ex.com/t/1238800#reply0</id>
-        <link href="https://www.v2ex.com/t/1238800#reply0"/>
-        <updated>2026-09-01T18:18:26.000Z</updated>
-        <summary type="html"><![CDATA[免费的大模型 API 的靠谱渠道,包括 DeepSeek V4 ，GLM 5.x 等 30+ 模型：
-https://github.com/peter123023/awesome-free-llm-api
-收录标准
-只收录能拿 API Key 、通过 endpoint 真调用的接口
-只收录永久免费 + 明确标注限时免费的
-注册赠送额度、网页对话免费、本地部署——都排除
-每条渠道都去官网核验过,写明免费额度和速率限制
-目前收录
-33 个模型、56 个免费调用渠道
-包括 DeepSeek V4(Pro / Flash / R1),GLM 、Qwen 国产优先排序
-为什么做这个
-免费额度信息过时很快,而且「永久免费」经常下季度就没了。这个列表会持续核验、补模型,过期的及时清掉(比如已退役的 GitHub Models 、转付费的渠道都删了)。
-欢迎 star,也欢迎把你发现的新免费渠道提 PR 补充进来。
-https://github.com/peter123023/awesome-free-llm-api]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[September Android Drop: Helping you keep track of important items, ease motion sickness, and more]]></title>
         <id>https://www.reddit.com/r/Android/comments/1w4jtwn/september_android_drop_helping_you_keep_track_of/</id>
         <link href="https://www.reddit.com/r/Android/comments/1w4jtwn/september_android_drop_helping_you_keep_track_of/"/>
@@ -38347,203 +39056,6 @@ https://github.com/peter123023/awesome-free-llm-api]]></summary>
  Soon, you’ll be able to keep track of important items, like your spare keys or passport, with the new remembered items tab in Find Hub. Just say, “Hey Google, remember in Find Hub that I put my passport in my bedroom drawer,” and it automatically logs the item and location. You can opt to add a photo to make it even easier to find your item later. When you need to find it later, just ask Gemini…]]></summary>
         <author>
             <name>top scoring links : Android</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Claude Fable 5.1 and Claude Mythos 5.1]]></title>
-        <id>https://news.ycombinator.com/item?id=49525378</id>
-        <link href="https://www.anthropic.com/claude-fable-and-mythos-5-1"/>
-        <updated>2026-09-01T17:53:53.000Z</updated>
-        <summary type="html"><![CDATA[What's new in Claude Fable 5.1
- – https://platform.claude.com/docs/en/models/fable-5-1/whats-n...
-System Card: https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32...
-Comments URL: https://news.ycombinator.com/item?id=49525378
-Points: 835
-# Comments: 797]]></summary>
-        <author>
-            <name>denysvitali</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The creator of Jujutsu has joined ERSC]]></title>
-        <id>https://news.ycombinator.com/item?id=49525297</id>
-        <link href="https://ersc.io/blog/martin-joins-ersc"/>
-        <updated>2026-09-01T17:46:21.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://ersc.io/blog/martin-joins-ersc
-Comments URL: https://news.ycombinator.com/item?id=49525297
-Points: 164
-# Comments: 133]]></summary>
-        <author>
-            <name>steveklabnik</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Atlas: A World Model for Spatial Intelligence]]></title>
-        <id>https://news.ycombinator.com/item?id=49525160</id>
-        <link href="https://www.worldlabs.ai/blog/atlas"/>
-        <updated>2026-09-01T17:36:02.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://www.worldlabs.ai/blog/atlas
-Comments URL: https://news.ycombinator.com/item?id=49525160
-Points: 130
-# Comments: 25]]></summary>
-        <author>
-            <name>johnsutor</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Launch HN: Nori Robotics (YC S26) – A low-cost humanoid robot for development]]></title>
-        <id>https://news.ycombinator.com/item?id=49525153</id>
-        <link href="https://www.norirobotics.com/"/>
-        <updated>2026-09-01T17:35:10.000Z</updated>
-        <summary type="html"><![CDATA[Hey HN, I’m Antonio from Nori Robotics (https://norirobotics.com). We build a $1,688 bimanual mobile robot in San Francisco for robotics developers and researchers.
-I started working on Nori while doing robotics research at Columbia. I was teaching robots through human demonstrations, but getting my hands on affordable hardware was difficult. Most labs have one or two expensive robots, which makes it hard to collect large datasets, run long experiments, or test across several robots.
-So I built my own. After seven iterations the latest Nori has:
-* 19 degrees of freedom
-* Two 7+1 DOF arms with a 1.5 kg payload per arm
-* A 55 kg telescoping lift
-* A differential wheeled base
-* Four 720p, 30 fps RGB cameras
-* 2D lidar
-* A dual microphone array with full-duplex voice communication
-* A 432 Wh b…]]></summary>
-        <author>
-            <name>AntonioLi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[分享发现] 原来网页版 codex 才是满血的 5.6 sol]]></title>
-        <id>https://www.v2ex.com/t/1238799#reply0</id>
-        <link href="https://www.v2ex.com/t/1238799#reply0"/>
-        <updated>2026-09-01T17:20:41.000Z</updated>
-        <summary type="html"><![CDATA[应该是 IP 不干净，用的是 5.6 sol ，实际上是 luna 。大半夜的，突然悟了...  
-网页版 codex 是满血版，让他做好计划到本地用 luna 跑
-前情提要：
-比如访问私有仓库，硬说我登录状态失效。但实际上我在记忆、知识库和项目说明里都明确表示这个仓库用密钥登录。codex 愣是看不到，半个钟一直在排错，和不存在的 bug 斗智斗勇]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[问与答] 菲律宾的节点有哪些支持的机场？]]></title>
-        <id>https://www.v2ex.com/t/1238798#reply0</id>
-        <link href="https://www.v2ex.com/t/1238798#reply0"/>
-        <updated>2026-09-01T17:08:44.000Z</updated>
-        <summary type="html"><![CDATA[想使用虚拟卡给 ChatGPT 充值,但是目前使用的机场节点虽然有菲律宾区，在访问 OpenAI 时会被重新定向到其他节点，导致没法在菲律宾区付款。
-V 友们有哪些推荐的机场可以使用的吗？]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Quill (YC W20) Is Hiring a Fullstack SWE]]></title>
-        <id>https://news.ycombinator.com/item?id=49524704</id>
-        <link href="https://news.ycombinator.com/item?id=49524704"/>
-        <updated>2026-09-01T17:00:14.000Z</updated>
-        <summary type="html"><![CDATA[Comments URL: https://news.ycombinator.com/item?id=49524704
-Points: 0
-# Comments: 0]]></summary>
-        <author>
-            <name>R_R</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[OpenAI] GPT 网页版疑似修复了降智会被发现的 bug]]></title>
-        <id>https://www.v2ex.com/t/1238797#reply1</id>
-        <link href="https://www.v2ex.com/t/1238797#reply1"/>
-        <updated>2026-09-01T16:51:30.000Z</updated>
-        <summary type="html"><![CDATA[问是什么模型，回答 sol
-结果糖果题、水杯题秒出答案，思考了 30 秒，答案自然是错的:(]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[酷工作] 北京，招 develops 工程师 和 Python 数据平台后端]]></title>
-        <id>https://www.v2ex.com/t/1238796#reply1</id>
-        <link href="https://www.v2ex.com/t/1238796#reply1"/>
-        <updated>2026-09-01T16:44:04.000Z</updated>
-        <summary type="html"><![CDATA[帮朋友内推岗位（靠谱,流程快），可发简历至邮箱： a3435677954@gmail.com
-devops 工程师
-岗位职责：
-负责软件研发、测试、发布、部署全流程的平台建设与持续优化。
-负责推动 AI 研发流程的建设。
-负责 Docker 、Kubernetes 等容器化平台的建设与运维，推进基础设施自动化和环境标准化。
-Python 后端开发工程师 （数据平台）
-岗位职责
-负责数据标注和管理平台的设计、开发、测试、上线和持续优化。
-使用 Python 构建稳定、可靠、可扩展的 API 和业务系统。
-参与系统架构、数据模型、接口协议、缓存、任务队列等后端模块设计。
-负责数据库设计与性能优化，保障数据一致性和服务稳定性。
-与前端、产品、算法、数据和基础设施团队协作，推动业务需求落地。
-参与线上问题排查、性能优化、监控告警和稳定性建设。
-参与代码评审、技术方案评审和后端工程规范建设。]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Show HN: Newton's Orchard – Browser-based space/gravity playground]]></title>
-        <id>https://news.ycombinator.com/item?id=49524469</id>
-        <link href="https://newtonsorchard.app/"/>
-        <updated>2026-09-01T16:43:40.000Z</updated>
-        <summary type="html"><![CDATA[Hi HN!
-My son spent a lot of time in 5th grade playing with the 2-dimensional PhET gravity/space sims[1]. His STEM class uses it, and he was playing with it at home, and has been looking for more. I found several space sims/playgrounds online, including NASA's Eyes on the Solar System[2], but nothing that seemed to offer a real progression from what he was getting out of the PhET sims, so I built Newton's Orchard over the summer for him.
-https://newtonsorchard.app
-The source is also published at https://github.com/andrewchilds/newtons-orchard
-It features deterministic time scrubbing, all bodies are editable, different preset systems and experiments, missions to complete (complete 3 to unlock the blackhole object type and mission), and a gallery for user submissions.
-I would very much appreciate feedback from HN - particularly from the lens of making it engaging and illuminating for students, and anyone that would like to just get a feel for how gravity works. Thank you!
-[1] https://phet.colorado.edu/sims/html/gravity-and-orbits/lates...
-[2] https://eyes.nasa.gov/apps/solar-system/
-Comments URL: https://news.ycombinator.com/item?id=49524469
-Points: 15
-# Comments: 1]]></summary>
-        <author>
-            <name>andrewchilds</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Show HN: Running 104GB Qwen3.8-Flash-Next on 48GB Mac with at ~12 tok/s]]></title>
-        <id>https://news.ycombinator.com/item?id=49524447</id>
-        <link href="https://github.com/carloslfu/slotstream"/>
-        <updated>2026-09-01T16:42:46.000Z</updated>
-        <summary type="html"><![CDATA[I built slotstream, a way to run Qwen3.8-Flash-Next 4-bit on a low-memory mac starting from 16GB, a 125B parameter model that would need 100GB+ memory/RAM, thanks to expert-offloading/ssd-streaming. Easy to install/update, and mac-native using MLX and Swift.
-It ships with auto-mode, which makes a good tradeoff between memory usage and speed. I'll be implementing and porting the MTP module for speculative decoding next
-Comments URL: https://news.ycombinator.com/item?id=49524447
-Points: 129
-# Comments: 82]]></summary>
-        <author>
-            <name>carloslfu</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Movie Scene Map – 13,312 films, series, games, anime and manga]]></title>
-        <id>https://news.ycombinator.com/item?id=49524320</id>
-        <link href="https://moviescenemap.com/"/>
-        <updated>2026-09-01T16:34:45.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://moviescenemap.com/
-Comments URL: https://news.ycombinator.com/item?id=49524320
-Points: 141
-# Comments: 28]]></summary>
-        <author>
-            <name>Flightmussy</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Behold: george, a TUI dashboard, or command center]]></title>
-        <id>https://www.reddit.com/r/linux/comments/1w4h1np/behold_george_a_tui_dashboard_or_command_center/</id>
-        <link href="https://www.reddit.com/r/linux/comments/1w4h1np/behold_george_a_tui_dashboard_or_command_center/"/>
-        <updated>2026-09-01T16:30:28.000Z</updated>
-        <summary type="html"><![CDATA[geroge is a TUI dashboard with a bunch or random and handy functionality built in, including a terminal. Runs in X (mine auto-runs from .xinitrc at login) and tty.
- https://preview.redd.it/euwl4g9qqxmh1.jpg?width=1920&format=pjpg&auto=webp&s=4466af96685e396c485979e5bcf3b0d494a42a8c
- You can use a terminal, take notes and or send scratch buffers off as an email. There's a launcher you can easily modify and a bunch of handy script action that you can easily modify, too.
- Listen to music 3 or 4 different ways including random Nina Simone. Heh, I thought it would be pretty funny to have a random Leave it to Beaver episode appear from nowhere on your desktop so that's included in george (CH 57), too, as well as another channel showing old funny stuff; cartoons, docs, shows, whathave you.
- You can pop off reminders and or events that will announce (hey, man, it's time).
- george isn't a very important app or life-changing, but, it's built-up pretty well and is handy. Try it out, leave some feedback, tear it up. Release 1.1.1 at github: https://github.com/rabmach/george
- Thanks for looking.
-    submitted by    /u/bronkish  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
         </author>
     </entry>
     <entry>
@@ -38569,17 +39081,6 @@ Points: 141
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[[llms.txt] h3-max.co llms.txt]]></title>
-        <id>https://www.v2ex.com/t/1238795#reply0</id>
-        <link href="https://www.v2ex.com/t/1238795#reply0"/>
-        <updated>2026-09-01T16:16:49.000Z</updated>
-        <summary type="html"><![CDATA[llms.txt: https://h3-max.co/llms.txt
-page: https://h3-max.co/]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[GSMArena - Poco F9 Ultra review]]></title>
         <id>https://www.reddit.com/r/Android/comments/1w4gd4a/gsmarena_poco_f9_ultra_review/</id>
         <link href="https://www.reddit.com/r/Android/comments/1w4gd4a/gsmarena_poco_f9_ultra_review/"/>
@@ -38588,453 +39089,6 @@ page: https://h3-max.co/]]></summary>
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : Android</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[问与答] UU 远程自定义码率设置大于 100 Mbps 实际只跑 10Mbps，自定义码率还不如原画]]></title>
-        <id>https://www.v2ex.com/t/1238794#reply2</id>
-        <link href="https://www.v2ex.com/t/1238794#reply2"/>
-        <updated>2026-09-01T16:02:09.000Z</updated>
-        <summary type="html"><![CDATA[局域网内用 UU 远程串流，碰到一个想不通的现象，排查了半天还是没结论，来请教一下。
-环境：
-- 被控端 Windows 11 + AMD RX 7900 XT
-- 被控端无物理显示器，接 HDMI 欺骗器，实际走 UU 的超级屏（虚拟显示器），3840x2160 @ 144Hz
-- 控制端 macOS
-- 同一局域网，UU 浮层显示 UDP LAN / 1ms / 11ms frm. / 0.0% loss
-测试内容统一用 webglsamples.org 的 WebGL Aquarium ，满屏鱼群高速运动，被控端本地稳定 120fps 。码率读数取自 UU 自带的网络状态浮层。
-实测：
-- 传输画质 = 原画 20M：实际约 50 Mbps
-- 传输画质 = 自定义码率，上限 100 Mbps：实际不到 20 Mbps
-- 传输画质 = 自定义码率，上限 200 Mbps：实际 11.0 Mbps
-也就是把上限拉高之后，实际码率反而比原画预设低了一大截，画面明显更糊。4K144 下 10 Mbps 大概是 0.0084 bit/像素，鱼群和水面全是块效应。
-已经排除的：
-- 同一台机器、同一块显卡、同一条局域网，换 Moonlight 串流可以正常跑高码率
-想请教下：
-1. 这个自定义码率设的到底是上限还是目标码率？从行为看更像是上限，而实际码率从来没接近过它。
-2. 切到“自定义”之后，是不是就丢掉了原画挡位自带的画质目标，控制器只按保底水位走？
-3. 如果确实是这样，那想在局域网里跑高画质，正确的设置方式是什么？有没有办法既保留原画挡位、又把码率往上提？
-另外想问下有没有人用 N 卡 + HDMI 欺骗器试过同样的场景？]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Play Store blocks AuroraStore, hurting GrapheneOS users]]></title>
-        <id>https://news.ycombinator.com/item?id=49523754</id>
-        <link href="https://gitlab.com/AuroraOSS/AuroraStore/-/work_items/1566"/>
-        <updated>2026-09-01T15:55:53.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://gitlab.com/AuroraOSS/AuroraStore/-/work_items/1566
-Comments URL: https://news.ycombinator.com/item?id=49523754
-Points: 450
-# Comments: 192]]></summary>
-        <author>
-            <name>erikvanoosten</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[分享创造] 「开源」GitPress，像用 WordPress 一样写作，而文章在你自己的 GitHub 上]]></title>
-        <id>https://www.v2ex.com/t/1238793#reply1</id>
-        <link href="https://www.v2ex.com/t/1238793#reply1"/>
-        <updated>2026-09-01T15:55:08.000Z</updated>
-        <summary type="html"><![CDATA[这是什么项目？
-GitPress 是一个博客后台。你可以像用 WordPress 一样登录、写文章，但正文存在你自己的 GitHub 仓库里。保存后自动编成静态网页，挂在 GitHub Pages 上，且你可以随时换上自己的域名。
-官网只是遥控器，哪天即便是 GitPress.net 关停了，你也可以自己通过开源项目自己使用 vercel 0 成本部署一个，然后继续写自己的博客。
-不过我还是建议您使用我们官网，因为官网部署更新的是最及时的。
-如果您怕数据或是账号安全问题的话，那大可放心，因为我这个仓库是直连 vercel 部署的，您可以用 ai 扫描这个仓库是否存在窃取您隐私的部分。
-官网地址： https://GitPress.net
-开源项目地址： https://github.com/tap6/GitPress.net
-如有 bug 请提交 issue
-项目示例：
-
-我为什么制作这个项目？
-我之前有一个 WordPress 个人博客，大概用了五六年。每年都要重新买服务器（新购服务器在价格上会便宜很多）、做迁移、再给域名做解析。 累，而且会一再发生。有一次忘了续服务器、也没做迁移。几年博客的数据全部遗失。如果没有更一劳永逸的办法，这种又累、又可能再来一次的事还会发生。于是我去找相关项目。Hugo 以及一系列 SSG （静态站点生成器）都能编出网站，但使用上的心智成本和操作成本都不低。后来遇到 Gridea 。数据保存在电脑上，必须坐在电脑前写，不能随时随地写，就弃用了。它后来出了网页版，但又收费、又有限制，还不如本地版。本质没变：文章数据依然不够安全。
-为了解决这个史诗级大难题——而现在市面上的开源工具已经够撑起这样一套——我开始做架构。用了单博客双仓库等设计。还有很多架构上的设计此处不展开细说，如果有需要可以把源码仓库 fork 下来让 AI 帮助你了解。
-首版用 Fable 5 写。仅第一次让 AI 跑 plan 就花了一两百元。有一说一，Fable 5 是真贵。后面又多轮加功能、改问题，才有现在这版。]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[问与答] 有移民想法的人还多吗？]]></title>
-        <id>https://www.v2ex.com/t/1238792#reply2</id>
-        <link href="https://www.v2ex.com/t/1238792#reply2"/>
-        <updated>2026-09-01T15:53:35.000Z</updated>
-        <summary type="html"><![CDATA[放在十年前，我对移民的想法确实非常强烈，诸如外面机会更多，更容易翻身啥的。然后十年之后，不知道是因为年纪大了还是被新闻洗脑了，一是感觉国内更安全，二是家人朋友都在身边。穷也好富也好，起码是自己熟悉的环境，有各种应对的技巧。或许是因为自己眼光阅历还是有限，已经固化成井底之蛙了吧。]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Ollama] Ollama 也改成 token 计费了]]></title>
-        <id>https://www.v2ex.com/t/1238791#reply0</id>
-        <link href="https://www.v2ex.com/t/1238791#reply0"/>
-        <updated>2026-09-01T15:44:17.000Z</updated>
-        <summary type="html"><![CDATA[Ollama 的 Pro 、Max 和 Team 计划现采用透明的按 token 计费模式。
-Pro：$20/月，包含 $60 月度使用额度。
-Max：$100/月，包含 $300 月度使用额。
-Team：$500/月，包含 $1,000 共享月度使用额度，适用于无限用户。
-如果您当前使用的是 Pro 、Max 或 Team 计划，您的计划将按原样继续运行。您可以随时在 Ollama 账户设置中升级至新定价方案。
-对于大一些模型（ qwen 3.8 和 k3 ），这是好事，对于不怎么吃算力小模型，使用量下降明显，继智谱后，又一个传家宝套餐诞生。算一下，现在最便宜的划算的的竟然是 Cursor 。
-信息来源： https://ollama.com/blog/transparent-pricing]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[分享创造] Image2Layer：用 AI 将图片转换为可编辑 PSD 图层]]></title>
-        <id>https://www.v2ex.com/t/1238790#reply0</id>
-        <link href="https://www.v2ex.com/t/1238790#reply0"/>
-        <updated>2026-09-01T15:41:05.000Z</updated>
-        <summary type="html"><![CDATA[最近在做设计和内容制作时，我发现一个很常见的问题：很多图片只有一张扁平化的 JPG 或 PNG 文件，想要修改其中的对象、背景或文字，往往需要重新抠图、建立蒙版，再手动整理图层。
-所以我们做了 Image2Layer，这是一个基于 AI 的图片图层处理工具，目标是帮助用户更快地把普通图片转换成可编辑的设计素材。
-Image2Layer 可以做什么？
-Image2Layer 的核心功能是 AI image layer separation 。用户上传一张图片后，系统会分析其中的主体、对象、背景和其他视觉元素，并尝试将它们拆分成独立图层，方便后续编辑和复用。
-如果你主要需要进行图片格式转换，也可以使用：
-Image to PSD：将图片转换为可编辑的 PSD 文件
-PNG to PSD：把 PNG 图片转换成 PSD 图层文件
-JPG to PSD：将 JPG 图片转换为可继续编辑的 PSD 文件
-PSD to PNG：将 PSD 文件导出为 PNG 图片
-PSD to JPG：将 PSD 文件转换为 JPG
-Text to PSD：根据文字内容创建 PSD 设计素材
-适合哪些场景？
-这个工具主要适合以下几类工作：
-产品图片编辑
-网站和社交媒体设计
-背景移除和对象隔离
-创意原型和概念设计
-为什么做这个工具？
-传统的图片分层通常需要熟悉 Photoshop 的选择、蒙版和路径工具。对于偶尔处理图片的用户来说，这个过程比较复杂，也很耗时。
-Image2Layer 希望把 image decomposition 和 image-to-PSD workflow 做得更简单。用户不需要先掌握复杂的设计软件，只需要上传图片，就可以获得一个适合继续编辑的图层化结果。
-目前 Image2Layer 主要面向设计师、内容创作者、营销人员、开发者和小型团队。我们也在持续改进复杂图片、透明区域和重叠对象的处理效果。
-欢迎大家体验 Image2Layer，如果你在图片分层、PSD 转换或背景移除方面有其他需求，也欢迎留言交流。]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Ambient CSS v3 – Blender meets CSS]]></title>
-        <id>https://news.ycombinator.com/item?id=49523387</id>
-        <link href="https://ambientcss.vercel.app/"/>
-        <updated>2026-09-01T15:35:11.000Z</updated>
-        <summary type="html"><![CDATA[Article URL: https://ambientcss.vercel.app/
-Comments URL: https://news.ycombinator.com/item?id=49523387
-Points: 180
-# Comments: 65]]></summary>
-        <author>
-            <name>kikkupico</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[分享创造] 提取 exe/快捷方式高清图标的小工具，导入原图]]></title>
-        <id>https://www.v2ex.com/t/1238789#reply4</id>
-        <link href="https://www.v2ex.com/t/1238789#reply4"/>
-        <updated>2026-09-01T15:28:43.000Z</updated>
-        <summary type="html"><![CDATA[提取 exe/快捷方式高清图标的小工具（纯 JS 解析）
-快速提取 Windows 软件（.exe、.lnk 快捷方式、.dll）的高清图标。
-JS 从二进制文件解析原始的 icon 图标、图片， 多尺寸的 icon 也能解析出来。
-常规的做法要么到处搜透明 PNG ，要么截图（容易有毛边且分辨率低），要么得在电脑里专门装一个臃肿的图标提取工具（如 Resource Hacker 等）。如果是 macOS/Linux 用户想提取 Windows 软件的图标更是麻烦。
-有这个轻量、免安装的网页端在线提取工具：提取 exe 快捷方式图片。
-🔗 在线体验
-提取 exe 快捷方式图片 在线工具
-✨ 核心特性
-纯前端本地解析，零隐私风险
-文件均在浏览器本地内存中直接解析二进制 PE 节区与资源，文件绝不上传至任何后端服务器，断网也能跑，大文件或企业内部软件可放心拖入。
-支持多种文件类型
-支持 Windows 可执行程序（.exe）、动态链接库（.dll）、快捷方式（.lnk）以及多规格图标（.ico）。
-全尺寸提取 & 高清无损导出
-自动解构出内置的所有分辨率（ 16x16 、32x32 、48x48 、64x64 、128x128 、256x256 等）。
-支持单张或一键批量导出为 PNG （保留透明通道）、ICO、WebP 格式。
-程序版本信息提取
-自动解析并展示 PE 文件内置的产品名称、版本号、公司名称、版权等元数据。
-跨平台免安装
-无论是 Windows 、macOS 还是 Linux ，只要有现代浏览器即可秒开即用。
-🛠️ 使用方法
-打开网站，把 .exe / .lnk / .dll / .ico 文件拖入页面（或点击上传）。
-工具会秒级解析出文件内含的所有图标组与各分辨率尺寸。
-勾选需要的尺寸/格式，点击单张下载或一键打包下载。
-欢迎大家体验和吐槽！如果有遇到解析失败的特殊格式或有新的功能建议，欢迎在评论区留言反馈交流 🍻
-English:
-A pure in-browser tool to extract multi-size high-res icons from .exe, .lnk, .dll, and .ico files.
-100% Client-side JS parsing (Zero server uploads, private & secure).
-Exports to transparent PNG, ICO, and WebP.
-Extract EXE / Shortcut Icon Online]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[问与答] 分享一个目前可以免费发布内容并带 dofollow 外链的平台： Listium（附实测）]]></title>
-        <id>https://www.v2ex.com/t/1238788#reply0</id>
-        <link href="https://www.v2ex.com/t/1238788#reply0"/>
-        <updated>2026-09-01T15:17:38.000Z</updated>
-        <summary type="html"><![CDATA[最近在给自己的 AI 视频工具做 SEO ，我发现了一个可以免费获得 dr 为 55 的 dofollow 外链网站： https://listium.com 。
-简单操作步骤
-注册 Listium ，点击 New List
-填写标题、简介并选择合适分类
-使用 Article View ，加入 3 ～ 5 个真正有用的章节
-在相关内容中自然提到自己的产品并加入链接
-点击 Publish ，确认页面状态是 Live
-打开公开页面，检查最终链接和页面收录状态
-不建议只建一个空页面放网址。内容越完整，页面对读者越有价值，也越不像纯粹的外链页。
-我的实测页面
-我写的是一篇“一条视频如何用 AI 做出 5 种再利用方式”的英文文章，包含广告本地化、人物替换、图片动作迁移、视频风格转换，以及版权和隐私检查：
-https://listium.com/cand/148025/5-practical-ways-to-repurpose-one-video-with-ai
-我自己的项目是 VideoSwap，主要做视频换脸、角色替换、AI 动作迁移和视频风格转换。在文章里，我把它放在“重新制作 talking-head 视频”的实际工作流中，而不是单独硬塞一个产品链接。
-目前这个 Listium 页面可以公开访问，正文里的 VideoSwap 链接也没有 nofollow。至于 Google 多久收录、最终能传递多少权重，还需要后续观察。]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Apple] [送码]做了个苹果验机小程序，欢迎 V 友来试用，送十个验机码]]></title>
-        <id>https://www.v2ex.com/t/1238787#reply4</id>
-        <link href="https://www.v2ex.com/t/1238787#reply4"/>
-        <updated>2026-09-01T15:17:04.000Z</updated>
-        <summary type="html"><![CDATA[大家好，最近做了一个苹果设备查询小程序，叫 「果知验机助手」。
-支持拍照识别或手动输入序列号、IMEI ，可以查询设备型号、激活保修、机器类型、MDM 、ID 锁、网络锁、黑名单，以及 GSX 维修换机等信息。
-小程序刚上线，报告内容和使用体验肯定还有不少需要调整的地方，想请 V 友们来体验一下。哪里看不懂、有没有漏项，或者和其他工具相比哪里做得不好，都欢迎直接提意见。
-验机码使用方法
-进入 「果知验机助手」小程序 → 我的 → 验机码验机，输入下面的验机码后，可以拍照识别或手动填写设备的序列号、IMEI 进行查询。
-这次一共准备了 10 个一次性验机码，每个码只能使用一次，先到先得。
-基础验机
-GZ-JC02-KZ59-5GWV
-GZ-JC02-AEH4-JNBS
-GZ-JC02-ADT4-MK6D
-GZ-JC02-N4TA-QKGM
-
-安全验机
-GZ-AQ03-5UCA-GRMF
-GZ-AQ03-EVYH-SSAD
-GZ-AQ03-BETG-9BU3
-
-GSX 深度验机
-GZ-GS04-QPK7-PWZ9
-GZ-GS04-AC2T-REB5
-GZ-GS04-8JW8-E46F
-
-如果大家平时有验机需求，也可以加我：REFZMTUwMjEy，备注 V2EX，可以给到目前的最低折扣。
-需要说明的是，这属于基于序列号或 IMEI 的在线信息查询，不能判断屏幕、电池等硬件是否原装，也不能代替当面验机。
-为了保护设备信息，请不要在帖子里公开序列号或 IMEI ，直接在小程序中拍照识别或手动输入即可。]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[OpenAI] OpenAI 也出礼品卡了，可以用礼品卡订阅 Plus 和 Pro 了？]]></title>
-        <id>https://www.v2ex.com/t/1238786#reply3</id>
-        <link href="https://www.v2ex.com/t/1238786#reply3"/>
-        <updated>2026-09-01T15:14:51.000Z</updated>
-        <summary type="html"><![CDATA[官方政策： https://help.openai.com/en/articles/20001491-buying-and-redeeming-openai-gift-cards
-说的有点模糊，看起来是 Gift Card → Wallet 余额 → 用 Wallet 余额购买 Pro ，和 credits 不是一个东西]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[分享创造] 捣鼓的一个安卓端壁纸 APP]]></title>
-        <id>https://www.v2ex.com/t/1238784#reply1</id>
-        <link href="https://www.v2ex.com/t/1238784#reply1"/>
-        <updated>2026-09-01T14:43:02.000Z</updated>
-        <summary type="html"><![CDATA[上班摸鱼时间，大概半天，使用 hbiulerx 软件，千问提供技术支持，第三方图片 API 提供图源，搞了一个安卓端的壁纸 APP ，非常简陋，但是可以下载图片，给手机换壁纸！自用可以了，只能说略懂！下载地址： https://eproall.lanzouq.com/ipPkD45ru4ri 另一个下载地址： https://eproall.lanzouq.com/iLX6o45rtssh 不知道哪个能用，都试试吧！]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[分享创造] 我的读书笔记 & 想法记录 & 随机回顾 App，已经支持 macOS 了｜ Booko]]></title>
-        <id>https://www.v2ex.com/t/1238783#reply0</id>
-        <link href="https://www.v2ex.com/t/1238783#reply0"/>
-        <updated>2026-09-01T14:38:49.000Z</updated>
-        <summary type="html"><![CDATA[花了一个多月时间做 Booko 的 Mac 版本，已经上线了。跟随 Mac 版本的发布，iPhone 和 iPad 也做了很多更新，三端通过 iCloud 同步。
-简单介绍下 Booko：这是一个支持把微信读书、Kindle 、苹果图书、得到、豆瓣阅读的划线笔记，导入识别成卡片笔记的产品，按书籍来整理。
-同时，它也是一个记录自己想法的产品，可以通过快捷指令、小组件在桌面快速记录，也能随机回顾和重温笔记。
-
-大部分类似 App 只做移动端，但我自己在用 Booko 的过程中，每天有超过 8 小时对着 Mac 。为了能快速在 Mac 上记录和浏览，就一起做了 Mac 版。
-
-虽然目前还没有单独的网页剪藏插件，但通过 Mac 系统 Services ，选中文本右键就能存入 Booko ，非常顺手。
-
-为了更好地管理书籍和笔记，这次也推出了「合集」功能：像 Playlist 一样支持多对多关系，一条笔记或一本书籍可以归入多个合集中，灵活整理。
-
-官网： https://booko.cc
-App Store：Booko 读书笔记（也可直接搜索「 Booko 读书笔记」）
-欢迎大家体验和反馈交流。]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[V2EX] 看了这个帖子后，希望官方可以出个投票的功能]]></title>
-        <id>https://www.v2ex.com/t/1238782#reply0</id>
-        <link href="https://www.v2ex.com/t/1238782#reply0"/>
-        <updated>2026-09-01T14:34:23.000Z</updated>
-        <summary type="html"><![CDATA[https://www.v2ex.com/t/1238570
-up 主人工统计，好麻烦。]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[分享创造] Mac M1 钉子户屏蔽 EDGE 浏览器更新]]></title>
-        <id>https://www.v2ex.com/t/1238780#reply4</id>
-        <link href="https://www.v2ex.com/t/1238780#reply4"/>
-        <updated>2026-09-01T14:29:49.000Z</updated>
-        <summary type="html"><![CDATA[起因 EDGE 浏览器强制更新会导致无法打开，需要不停的拿旧版本去覆盖才能继续使用 对于不想更新系统的人来说简直是折磨
-分享出来免得大家再浪费 token 让 ai 从头写一遍
-https://gist.github.com/ctro15547/1c1f50de59efcc7eacf9d1353cd97600
-全部 ai 写的，不放心可以 ai 再审一遍或者抄个方案]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[分享创造] 我妈要把我家猫绣成十字绣，找不到合适的图纸工具，于是自己写了一个]]></title>
-        <id>https://www.v2ex.com/t/1238779#reply4</id>
-        <link href="https://www.v2ex.com/t/1238779#reply4"/>
-        <updated>2026-09-01T14:28:19.000Z</updated>
-        <summary type="html"><![CDATA[起因：我妈绣了十几年十字绣，拿着我家猫的照片问我"这玩意能不能变成图纸"。找了一圈现成工具，不是要注册就是要订阅，导出还带水印，于是一怒之下自己撸了一个 → https://crossstitchpatternmaker.app
-先说原理，免得显得像个套壳：照片降采样到网格 → 用 CIELAB 空间的 Delta-E 色距匹配到 454 个真实 DMC 线号 → 输出带符号和绞数估算的 PDF 。
-技术栈：TanStack Start + Cloudflare Workers + D1/R2 。
-但我妈嫌自动配色不如她手挑的线准。程序员 vs 一线业务用户，果然是普世矛盾。
-欢迎拍砖，尤其是颜色匹配这块，总觉得还能再准一点，有大佬有相关图片转换算法的也欢迎分享讨论~]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[分享创造] 独立开发前线｜月落：从负债到月入 1w+，这个野路子开发者用垂直 SaaS 找到了自由]]></title>
-        <id>https://www.v2ex.com/t/1238778#reply0</id>
-        <link href="https://www.v2ex.com/t/1238778#reply0"/>
-        <updated>2026-09-01T14:10:54.000Z</updated>
-        <summary type="html"><![CDATA[美工、开实体店、零食电商……月落做过很多，但编程一直是热爱的那个。负债、朝九晚五、一次偶然抬头看天空，埋下了自由的种子。2024 年劳动节，他从杭州的公司离职，回到四川，成了一名全职独立开发者。
-这次，他聊了自己是怎么从零碎接单，一步步做出垂直 SaaS 、实现稳定盈利的。
-开发者介绍
-大家好，我是月落，一个自学但还未成才的野路子开发者，已经在外工作多年，也做过很多类型的工作（如：美工，开实体店，零食电商等），但是编程开发一直是热爱的，由于中途一些创业的原因导致了负债。
-在日复一日，固定的朝九晚五，终是产生了厌倦，在一个下早班的下午，偶然抬头看了看天空，发现已经很久没有好好的看过天空了，那一刻埋下了自由的种子，所以一边工作结清债务，一边在规划着未来自由职业的计划，因为我始终喜欢开发，最终选定了认为最适合的路，一名独立开发者。
-加上有一些开发基础，所以很顺利的就敲定了大致框架，所需的技术栈等，在距离正式自由职业的两年前，就开始在上班之余补技术栈缺的部分，核心思想是不求最新，最完善，先能跑起来就行，最终定了后端：LNMP + Python ，前端：Vue 生态。
-在正式自由开发之前，也做过很多零零碎碎的小项目，比如和 Pony 合作开发的 [抓鱼鸭] ——应该是不少朋友是通过这个知道我的，当然还有其他零碎尝试，都不温不火。
-
-在 2024 年 5 月 1 日（劳动节） 正式从杭州的公司离职，经过几次辗转，目前回到了老家四川，暂时安定在了成都的边边上。
-产品介绍
-产品：有星 Uoxn 上线时间：2024 年 8 月 定位：运营+营销工具 SaaS
-目前盈利的产品是一个小型的管理 SaaS ，很垂直的小领域，偏向给客户的深度定制，处于在游戏推广流程的中间部分，整合从推广、发行商、玩家、游戏研发的多个工作流程打通，因为不面向 C 端，所以客户基数不大，很多功能都是根据需求定制，然后托…]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[分享创造] 开发了一款轻量养车记账软件，欢迎油车电车高端人士体验]]></title>
-        <id>https://www.v2ex.com/t/1238775#reply2</id>
-        <link href="https://www.v2ex.com/t/1238775#reply2"/>
-        <updated>2026-09-01T13:59:50.000Z</updated>
-        <summary type="html"><![CDATA[📱 本地模式 · 数据在手机 — SQLite 存本机，不联网也能记。数据不上传，随时导出带走。
-🔗 在线模式 · 全家一本账 — 同一个 token = 同一本账。你和家人各记各的，数据实时互通，换机不丢。
-🚗 多车与统计 — 多车管理、分类排行、趋势与环比；电车算每度电成本，油车算每升油成本。
-⏱ 固定费用按月自动计入 — 车位月费这类固定支出只配一次，之后按月自动进统计，不脏明细。
-⚡ 长按图标直接记一笔 — 桌面长按 App 图标，冷启动直达记账表单，记完回到你原来的位置。
-🔄 应用内自动更新 — 不上应用商店：启动静默检查，下载校验后一键安装，支持断点续传。
-传不了图，下载地址： https://pitstops.top]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[宽带症候群] 陕西电信迷惑行为之不解白名单上传限速，没有原因]]></title>
-        <id>https://www.v2ex.com/t/1238773#reply0</id>
-        <link href="https://www.v2ex.com/t/1238773#reply0"/>
-        <updated>2026-09-01T13:50:58.000Z</updated>
-        <summary type="html"><![CDATA[陕西电信迷惑行为之不解白名单上传限速，没有原因。引援某新闻：铜川电信直播上传限速。
-楼主也是受害者之一，现在除了起诉的路都走过了。本地运维是不承认限速，后台也是非 pcdn 标签，只认他们自己的测速。多次投诉不知道是哪个级别的工作人员说是省上限速，只有文件下来，上报工单，回复是不给解，限速也是没有任何原因。真的是完蛋。]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Claude] Claude 送了 3 个 PRO 周卡 需要的请随意领取]]></title>
-        <id>https://www.v2ex.com/t/1238771#reply1</id>
-        <link href="https://www.v2ex.com/t/1238771#reply1"/>
-        <updated>2026-09-01T13:47:02.000Z</updated>
-        <summary type="html"><![CDATA[今天发现 Claude 送了我三个 PRO 周卡邀请 请大家领取使用
-https://claude.ai/referral/571jwmtq0A?s=cowork&v=apps]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[程序员] 现在还有人自己配主机跑本地大模型吗?]]></title>
-        <id>https://www.v2ex.com/t/1238769#reply3</id>
-        <link href="https://www.v2ex.com/t/1238769#reply3"/>
-        <updated>2026-09-01T13:38:38.000Z</updated>
-        <summary type="html"><![CDATA[因为手头有 3 条 32G 的 DDR5 内存想出掉, 不想咸鱼慢慢卖,也不想卖给贩子, 看看 V2 有没有人正好需要.]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[程序员] windows 10/11 下有哪些匿名(无需国内账号登录)的语音输入法，可以像 ios 语音输入法一样一边说一边出文字？]]></title>
-        <id>https://www.v2ex.com/t/1238768#reply1</id>
-        <link href="https://www.v2ex.com/t/1238768#reply1"/>
-        <updated>2026-09-01T13:32:48.000Z</updated>
-        <summary type="html"><![CDATA[微信输入法要登录，不匿名。
-讯飞太二了，要说一段，停一下才出文字。]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[中转站测评] 最近搞了一个中转站，看看大家有什么需求，支持测试]]></title>
-        <id>https://www.v2ex.com/t/1238767#reply0</id>
-        <link href="https://www.v2ex.com/t/1238767#reply0"/>
-        <updated>2026-09-01T13:31:11.000Z</updated>
-        <summary type="html"><![CDATA[最近搞了一个中转站，看看大家有什么需求，欢迎大家注册体验，每个注册用户送 1 美金，https://sub2api.ai-baby-dance.com 提供相关建议用户赠送额度，有渠道也欢迎大家提供，提供渠道赠送余额，该站支持订阅和余额，订阅倍率在 0.1-0.2 ，余额倍率在 0.3]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[推广] 牛逼的资源库，收录世间万物。]]></title>
-        <id>https://www.v2ex.com/t/1238766#reply0</id>
-        <link href="https://www.v2ex.com/t/1238766#reply0"/>
-        <updated>2026-09-01T13:22:03.000Z</updated>
-        <summary type="html"><![CDATA[这里面的资源真全
-收藏了
-https://lao1.me/knn_open]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[I've been building my own Debian-based distro for a few months to understand how a desktop actually works — 563 MB ISO, 232 MB idle RAM]]></title>
-        <id>https://www.reddit.com/r/linux/comments/1w4bstf/ive_been_building_my_own_debianbased_distro_for_a/</id>
-        <link href="https://www.reddit.com/r/linux/comments/1w4bstf/ive_been_building_my_own_debianbased_distro_for_a/"/>
-        <updated>2026-09-01T13:20:10.000Z</updated>
-        <summary type="html"><![CDATA[I'm a student, started programming with C++, and for the past few months I've been building my own Debian-based distro called Kavis. before this i was thinking how os works how kernel and other things works etc then it hit me why wouldn't i make a os that can play games and that I'd actually enjoy using
- What it is: Debian trixie base, X11 + Openbox, custom boot splash with the letter k, taskbar and start menu, settings app, and an app store. I don't compile my own kernel — I use Debian's signed one so Secure Boot can stay on and nobody has to go digging through UEFI settings trying to find it.
- Current numbers: 563 MB ISO, 232-240 MB idle RAM. im trying to make idle ram usage and iso as small as possible , and right now there's a lot of room left for gaming and things you want to do.
- Wha…]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[宽带症候群] 单条光纤不同运营商，用 wdm 设备，不通]]></title>
-        <id>https://www.v2ex.com/t/1238765#reply2</id>
-        <link href="https://www.v2ex.com/t/1238765#reply2"/>
-        <updated>2026-09-01T13:18:08.000Z</updated>
-        <summary type="html"><![CDATA[两家运营商弱电井放 WDM 设备，单光纤入户，只能通一条，参考中兴 OLT 原理和哪怕波长不等也兼容的。
-[img][/img]
-参考论坛 https://v2ex.com/t/1126721 帖子。]]></summary>
-        <author>
-            <name>V2EX</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[问与答] 突然发现家里的宽带竟然有公开固定静态 IPv4]]></title>
-        <id>https://www.v2ex.com/t/1238764#reply2</id>
-        <link href="https://www.v2ex.com/t/1238764#reply2"/>
-        <updated>2026-09-01T13:18:06.000Z</updated>
-        <summary type="html"><![CDATA[带宽有点低，300 多 M 。人在美国，这个可以用来做什么?]]></summary>
-        <author>
-            <name>V2EX</name>
         </author>
     </entry>
     <entry>
